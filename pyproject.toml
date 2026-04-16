@@ -28,10 +28,13 @@ dependencies = [
     "triton>=3.4.0",
     "transformers>=5.3.0",
     "accelerate",
+    "fastapi",
     "soundfile",
     "numpy",
     "omnivoice>=0.1.2",
+    "python-multipart",
     "sageattention",
+    "uvicorn",
     "huggingface-hub",
 ]
 
@@ -65,6 +68,9 @@ Homepage = "https://github.com/newgrit1004/omnivoice-triton"
 Repository = "https://github.com/newgrit1004/omnivoice-triton"
 Issues = "https://github.com/newgrit1004/omnivoice-triton/issues"
 Documentation = "https://github.com/newgrit1004/omnivoice-triton/tree/main/docs"
+
+[project.scripts]
+omnivoice-api = "omnivoice_triton.cli.api_server:main"
 
 [build-system]
 requires = ["hatchling"]
