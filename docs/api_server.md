@@ -14,8 +14,18 @@ It is intended for:
 - measuring latency and real-time factor
 - comparing `base`, `triton`, `faster`, and `hybrid`
 
-It is not a high-concurrency serving stack. It uses one in-process runner and
-serializes inference with a process-local lock.
+It now supports **in-process micro-batching** for concurrent requests.
+
+That means the server no longer runs every request under a single FIFO
+generation lock. Instead it:
+
+- prepares each request independently
+- caches prepared clone prompts in memory
+- queues compatible requests briefly
+- merges them into one batched `model.generate(...)` call
+
+It is still **one process with one in-flight merged batch at a time**, so this
+is a throughput improvement rather than a full multi-worker serving system.
 
 ## Overview
 
@@ -59,7 +69,8 @@ At startup, `create_app(...)`:
 2. creates the requested runner via `create_runner(...)`
 3. loads the OmniVoice model into that runner
 4. optionally loads ASR at startup unless `--no-asr` is used
-5. stores the runner and runtime settings in `app.state`
+5. starts the in-process generation batcher
+6. stores the runner and runtime settings in `app.state`
 
 Shutdown unloads the runner and frees GPU memory.
 
@@ -103,6 +114,12 @@ Main runtime flags:
 - `--no-asr`: skip loading Whisper ASR at startup
 - `--save-dir`: persist a copy of each generated WAV
 - `--sage-attention`: enable SageAttention on `triton` or `hybrid`
+- `--batch-collect-ms`: micro-batch collection window
+- `--max-batch-requests`: max requests per merged batch
+- `--max-batch-target-tokens`: cap on estimated generated audio tokens
+- `--max-batch-conditioning-tokens`: cap on estimated prompt/context tokens
+- `--max-batch-padding-ratio`: guardrail against inefficient padding-heavy batches
+- `--clone-prompt-cache-size`: number of prepared clone prompts to cache
 
 Typical startup:
 
@@ -193,6 +210,16 @@ Response:
 - `Content-Type: audio/wav`
 - inline WAV bytes in the response body
 
+Batch-aware response headers now also include:
+
+- `X-OmniVoice-Queue-Wait-Ms`
+- `X-OmniVoice-Batch-Exec-Ms`
+- `X-OmniVoice-Batch-Requests`
+- `X-OmniVoice-Batch-Target-Tokens`
+- `X-OmniVoice-Batch-Conditioning-Tokens`
+- `X-OmniVoice-Batch-Max-Sequence-Length`
+- `X-OmniVoice-Batch-Lane`
+
 ## Gradio Parity
 
 This API was checked against the upstream Gradio UI in:
@@ -218,6 +245,48 @@ Behavior parity notes:
 
 - `design` mode allows an empty `instruct`, matching Gradio's fallback behavior
   when no voice-design attributes are selected
+- clone prompt preparation can be reused across requests when the uploaded
+  reference audio bytes, `ref_text`, and `preprocess_prompt` match
+
+## Batching Behavior
+
+The server batches at the HTTP layer and relies on upstream OmniVoice's native
+list-based `generate(...)` path.
+
+Current lane split:
+
+- `short_noref`
+- `short_ref`
+- `long_noref`
+- `long_ref`
+
+Requests only batch together when these fields match:
+
+- `num_step`
+- `guidance_scale`
+- `t_shift`
+- `layer_penalty_factor`
+- `position_temperature`
+- `class_temperature`
+- `denoise`
+- `postprocess_output`
+- `audio_chunk_duration`
+- `audio_chunk_threshold`
+- batch lane
+
+Requests can still vary within a batch on:
+
+- `text`
+- `language`
+- `instruct`
+- clone prompt identity
+- `speed`
+- `duration`
+
+Current limitation:
+
+- batching is still single-process and anchor-based, so one long batch can still
+  delay later requests until that merged call finishes
 - `clone` mode allows optional `instruct`, matching the Gradio clone tab
 - `duration <= 0` is treated as unset, matching Gradio's behavior
 - `language="Auto"` or blank becomes `None`
