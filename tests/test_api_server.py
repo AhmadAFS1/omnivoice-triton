@@ -19,6 +19,9 @@ from omnivoice_triton.cli.api_server import create_app
 
 
 class _FakeTokenizer:
+    def __init__(self) -> None:
+        self.calls: list[tuple[str, bool]] = []
+
     def __call__(
         self,
         text: str,
@@ -26,10 +29,10 @@ class _FakeTokenizer:
         return_tensors: str = "pt",
         add_special_tokens: bool = True,
     ) -> SimpleNamespace:
+        del return_tensors
+        self.calls.append((text, add_special_tokens))
         token_count = max(1, len(text.split()))
-        return SimpleNamespace(
-            input_ids=torch.ones((1, token_count), dtype=torch.long)
-        )
+        return SimpleNamespace(input_ids=torch.ones((1, token_count), dtype=torch.long))
 
 
 def _fake_wav_bytes() -> bytes:
@@ -108,8 +111,7 @@ class _FakeModel:
         if self.generate_delay_s > 0:
             time.sleep(self.generate_delay_s)
         return [
-            np.full(2400, 0.1 + i * 0.05, dtype=np.float32)
-            for i, _ in enumerate(texts)
+            np.full(2400, 0.1 + i * 0.05, dtype=np.float32) for i, _ in enumerate(texts)
         ]
 
 
@@ -136,6 +138,9 @@ class _FakeRunner:
 
     def unload_model(self) -> None:
         self.unloaded = True
+
+    def get_cuda_graph_metrics(self) -> dict[str, Any]:
+        return {"capture_count": 0, "shapes": []}
 
 
 def _make_app(
@@ -181,6 +186,10 @@ def test_health_and_languages(tmp_path: Path) -> None:
         assert payload["sage_attention"] is True
         assert payload["batch_collect_ms"] == 10.0
         assert payload["max_batch_requests"] == 32
+        assert payload["registered_clone_prompt_count"] == 0
+        assert payload["token_estimate_cache_entries"] == 0
+        assert payload["batch_bucket_sizes"] == [1, 2, 4, 8, 16, 32]
+        assert payload["cuda_graph_capture_count"] == 0
         assert Path(payload["save_dir"]) == tmp_path
 
         languages = client.get("/languages")
@@ -216,8 +225,12 @@ def test_generate_design_returns_wav_and_saves_file(tmp_path: Path) -> None:
     assert response.status_code == 200
     assert response.headers["content-type"].startswith("audio/wav")
     assert response.headers["x-omnivoice-latency-ms"]
+    assert response.headers["x-omnivoice-pre-batch-ms"]
+    assert response.headers["x-omnivoice-batch-estimate-ms"]
+    assert response.headers["x-omnivoice-response-encode-ms"]
     assert response.headers["x-omnivoice-audio-duration-s"]
     assert response.headers["x-omnivoice-batch-requests"] == "1"
+    assert response.headers["x-omnivoice-prompt-source"] == "none"
     saved_path = Path(response.headers["x-omnivoice-saved-path"])
     assert saved_path.exists()
 
@@ -303,6 +316,69 @@ def test_generate_clone_reuses_cached_prompt(tmp_path: Path) -> None:
     model = created[0].model
     assert len(model.prompt_calls) == 1
     assert len(model.calls) == 2
+    assert first.headers["x-omnivoice-prompt-source"] == "upload_miss"
+    assert second.headers["x-omnivoice-prompt-source"] == "upload_hit"
+
+
+def test_register_clone_prompt_and_generate_with_prompt_id(tmp_path: Path) -> None:
+    created: list[_FakeRunner] = []
+    app = _make_app(tmp_path, created, load_asr=False)
+
+    with TestClient(app) as client:
+        register = client.post(
+            "/clone-prompts",
+            data={"ref_text": "Reference transcript.", "preprocess_prompt": "false"},
+            files={"ref_audio": ("ref.wav", _fake_wav_bytes(), "audio/wav")},
+        )
+        assert register.status_code == 200
+        payload = register.json()
+        prompt_id = payload["prompt_id"]
+
+        health = client.get("/health")
+        assert health.status_code == 200
+        assert health.json()["registered_clone_prompt_count"] == 1
+
+        response = client.post(
+            "/generate",
+            data={
+                "mode": "clone",
+                "text": "Use the registered prompt.",
+                "prompt_id": prompt_id,
+                "instruct": "steady",
+            },
+        )
+
+    assert response.status_code == 200
+    assert response.headers["x-omnivoice-prompt-source"] == "prompt_id"
+    assert response.headers["x-omnivoice-prompt-id"] == prompt_id
+    model = created[0].model
+    assert len(model.prompt_calls) == 1
+    assert len(model.calls) == 1
+    assert model.calls[0]["instruct"] == ["steady"]
+
+
+def test_token_estimate_cache_reuses_tokenizer_results(tmp_path: Path) -> None:
+    created: list[_FakeRunner] = []
+    app = _make_app(tmp_path, created, load_asr=False, token_estimate_cache_size=16)
+
+    with TestClient(app) as client:
+        for _ in range(2):
+            response = client.post(
+                "/generate",
+                data={
+                    "mode": "design",
+                    "text": "Cache the tokenizer work.",
+                    "instruct": "warm",
+                },
+            )
+            assert response.status_code == 200
+
+        health = client.get("/health")
+
+    tokenizer = created[0].model.text_tokenizer
+    assert len(tokenizer.calls) == 2
+    assert health.status_code == 200
+    assert health.json()["token_estimate_cache_entries"] == 2
 
 
 def test_generate_batches_concurrent_requests(tmp_path: Path) -> None:
@@ -352,6 +428,50 @@ def test_generate_batches_concurrent_requests(tmp_path: Path) -> None:
     assert sorted(flattened) == sorted(texts)
 
 
+def test_generate_uses_batch_buckets(tmp_path: Path) -> None:
+    created: list[_FakeRunner] = []
+    app = _make_app(
+        tmp_path,
+        created,
+        load_asr=False,
+        batch_collect_ms=50.0,
+        max_batch_requests=8,
+        max_batch_target_tokens=10000,
+        max_batch_conditioning_tokens=10000,
+        max_batch_padding_ratio=10.0,
+        batch_bucket_sizes=(1, 2, 4),
+        model_generate_delay_s=0.05,
+    )
+
+    texts = [
+        "Bucket request one.",
+        "Bucket request two.",
+        "Bucket request three.",
+        "Bucket request four.",
+        "Bucket request five.",
+        "Bucket request six.",
+    ]
+
+    with TestClient(app) as client:
+        start_barrier = threading.Barrier(len(texts))
+
+        def _send(text: str):
+            start_barrier.wait()
+            return client.post(
+                "/generate",
+                data={"mode": "design", "text": text, "instruct": "warm"},
+            )
+
+        with ThreadPoolExecutor(max_workers=len(texts)) as executor:
+            futures = [executor.submit(_send, text) for text in texts]
+            responses = [future.result() for future in futures]
+
+    assert all(response.status_code == 200 for response in responses)
+    model = created[0].model
+    batch_sizes = sorted(len(call["text"]) for call in model.calls)
+    assert batch_sizes == [2, 4]
+
+
 def test_generate_validation_errors(tmp_path: Path) -> None:
     created: list[_FakeRunner] = []
     app = _make_app(tmp_path, created, load_asr=False)
@@ -374,3 +494,21 @@ def test_generate_validation_errors(tmp_path: Path) -> None:
             data={"mode": "clone", "text": "hello"},
         )
         assert clone_missing_audio.status_code == 400
+
+        clone_both_prompt_and_audio = client.post(
+            "/generate",
+            data={"mode": "clone", "text": "hello", "prompt_id": "abc123"},
+            files={"ref_audio": ("ref.wav", _fake_wav_bytes(), "audio/wav")},
+        )
+        assert clone_both_prompt_and_audio.status_code == 400
+
+        clone_prompt_with_ref_text = client.post(
+            "/generate",
+            data={
+                "mode": "clone",
+                "text": "hello",
+                "prompt_id": "abc123",
+                "ref_text": "nope",
+            },
+        )
+        assert clone_prompt_with_ref_text.status_code == 400

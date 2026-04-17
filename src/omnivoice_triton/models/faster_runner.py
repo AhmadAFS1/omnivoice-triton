@@ -161,6 +161,13 @@ class _CUDAGraphForward:
         """Release all captured graphs."""
         self._graphs.clear()
 
+    def get_metrics(self) -> dict[str, Any]:
+        """Return summary metrics for captured CUDA Graph shapes."""
+        return {
+            "capture_count": len(self._graphs),
+            "shapes": [list(shape) for shape in sorted(self._graphs)],
+        }
+
 
 class FasterRunner(BaseRunner):
     """BaseRunner with CUDA Graph optimization for the forward pass.
@@ -197,3 +204,9 @@ class FasterRunner(BaseRunner):
             self._graph_forward.clear()
             self._graph_forward = None
         super().unload_model()
+
+    def get_cuda_graph_metrics(self) -> dict[str, Any]:
+        """Return current CUDA Graph capture metrics."""
+        if self._graph_forward is None:
+            return {"capture_count": 0, "shapes": []}
+        return self._graph_forward.get_metrics()

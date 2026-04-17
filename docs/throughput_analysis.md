@@ -110,9 +110,42 @@ So the right plan is:
 4. benchmark more aggressive model-side optimizations while keeping `num_step=16`
 5. only then decide whether a single model replica can meet the target
 
+## Implementation Status
+
+Implemented in repo on **2026-04-17**:
+
+- **Phase 0**
+  - per-request stage timing headers for:
+    - pre-batch work
+    - prompt preparation
+    - batch estimate work
+    - queue wait
+    - batch execution
+    - response encoding
+  - richer `scripts/load_test_api.py` summary output
+  - CUDA Graph capture metrics exposed from health checks
+- **Phase 1**
+  - request-count batch buckets in the batcher
+  - configurable `--batch-bucket-sizes`
+- **Phase 2**
+  - `POST /clone-prompts`
+  - `prompt_id` support on `POST /generate`
+  - reusable registered clone prompt store for throughput-sensitive clone traffic
+- **Phase 3**
+  - tokenizer estimate LRU cache for server-side batching estimates
+
+Still planned and not implemented yet:
+
+- **Phase 4** decode/postprocess reduction
+- **Phase 5** model-variant quality/performance benchmarking
+- **Phase 6** smarter scheduler / multi-worker drain logic
+- **Phase 7** multi-replica scaling
+
 ## Optimization Phases
 
 ## Phase 0: Lock Baseline And Instrumentation
+
+Status: **Implemented**
 
 Goal: make throughput work measurable and repeatable.
 
@@ -148,6 +181,8 @@ Success criteria:
 
 ## Phase 1: Stabilize Batch Shapes For CUDA Graph Reuse
 
+Status: **Implemented**
+
 Goal: stop paying graph-capture and shape-churn penalties during burst traffic.
 
 Changes:
@@ -182,6 +217,8 @@ Success criteria:
 
 ## Phase 2: Add A Fast Clone Prompt Path
 
+Status: **Implemented**
+
 Goal: remove repeated clone prompt prep from the request hot path.
 
 Changes:
@@ -214,6 +251,8 @@ Success criteria:
 
 ## Phase 3: Remove Duplicate Server-Side Tokenization
 
+Status: **Implemented**
+
 Goal: stop doing token-count estimation work twice.
 
 Changes:
@@ -239,6 +278,8 @@ Success criteria:
 - design and clone requests do not fully tokenize text twice before generation
 
 ## Phase 4: Reduce Decode And Postprocess Cost
+
+Status: **Planned**
 
 Goal: keep the GPU focused on generation and reduce serial tail work.
 
@@ -271,6 +312,8 @@ Success criteria:
 
 ## Phase 5: Benchmark The Fastest Safe Model Variant At `num_step=16`
 
+Status: **Planned**
+
 Goal: squeeze more speed out of the model path without dropping below your quality bar.
 
 Changes to benchmark:
@@ -294,6 +337,8 @@ Success criteria:
 - pick one serving preset that is fastest while preserving acceptable audio quality at `num_step=16`
 
 ## Phase 6: Smarter Scheduler Instead Of Bigger Batches
+
+Status: **Planned**
 
 Goal: improve drain time without creating giant slow batches.
 
@@ -321,6 +366,8 @@ Success criteria:
 - wall time improves without increasing p95 batch execution time
 
 ## Phase 7: Scale Beyond One In-Flight Generate
+
+Status: **Planned**
 
 Goal: decide whether the 3-5 second target is possible on one GPU, and if not, add the minimum necessary parallelism.
 
@@ -395,6 +442,34 @@ Do not call the target met unless all are true:
 - no on-demand ASR in the hot path
 - no graph captures during warmed steady-state runs
 - audio quality remains acceptable at `num_step=16`
+
+## Testing
+
+Server regression tests:
+
+- `.venv/bin/pytest tests/test_api_server.py -q`
+
+Recommended throughput validation commands after warm server startup:
+
+- design baseline:
+  - `.venv/bin/python scripts/load_test_api.py --mode design --num-step 16 --requests 100 --concurrency 100 --warmup-requests 8 --csv results_design_100.csv`
+- clone with raw upload path:
+  - `.venv/bin/python scripts/load_test_api.py --mode clone --num-step 16 --requests 100 --concurrency 100 --warmup-requests 4 --ref-audio clone.wav --ref-text "Reference text" --csv results_clone_upload_100.csv`
+- clone with registered prompt fast path:
+  - `.venv/bin/python scripts/load_test_api.py --mode clone --num-step 16 --requests 100 --concurrency 100 --warmup-requests 4 --register-clone-prompt --ref-audio clone.wav --ref-text "Reference text" --csv results_clone_prompt_id_100.csv`
+
+What to compare between runs:
+
+- wall time
+- latency p50/p95
+- `pre_batch_ms`
+- `prompt_prepare_ms`
+- `batch_estimate_ms`
+- `queue_wait_ms`
+- `batch_exec_ms`
+- `response_encode_ms`
+- batch-size distribution
+- prompt-source distribution
 
 ## Bottom Line
 

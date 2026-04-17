@@ -4,6 +4,9 @@ Examples:
     uv run python scripts/load_test_api.py --mode design --concurrency 8
     uv run python scripts/load_test_api.py --mode clone --concurrency 100 \
         --requests 100 --ref-audio clone.wav --ref-text "Reference text"
+    uv run python scripts/load_test_api.py --mode clone --concurrency 100 \
+        --requests 100 --register-clone-prompt --ref-audio clone.wav \
+        --ref-text "Reference text"
     uv run python scripts/load_test_api.py --mode clone --concurrency 32 \
         --requests 128 --ref-audio clone.wav --csv results.csv
 """
@@ -108,6 +111,22 @@ def _build_parser() -> argparse.ArgumentParser:
         help="Voice design / clone instruct string.",
     )
     parser.add_argument(
+        "--prompt-id",
+        default=None,
+        help="Reuse a previously registered clone prompt by prompt_id.",
+    )
+    parser.add_argument(
+        "--register-clone-prompt",
+        action="store_true",
+        default=False,
+        help="Register the clone prompt once before the timed run, then reuse it.",
+    )
+    parser.add_argument(
+        "--clone-prompt-url",
+        default=None,
+        help="Full /clone-prompts endpoint URL. Derived from --url when omitted.",
+    )
+    parser.add_argument(
         "--ref-audio",
         type=Path,
         default=None,
@@ -192,7 +211,9 @@ def _build_form_data(args: argparse.Namespace) -> dict[str, str]:
         data["instruct"] = args.instruct
     elif args.mode == "design":
         data["instruct"] = DEFAULT_INSTRUCT
-    if args.ref_text:
+    if args.prompt_id:
+        data["prompt_id"] = args.prompt_id
+    elif args.ref_text:
         data["ref_text"] = args.ref_text
     elif args.mode == "clone":
         data["ref_text"] = DEFAULT_REF_TEXT
@@ -216,10 +237,66 @@ def _validate_args(args: argparse.Namespace) -> None:
         raise ValueError("--warmup-requests must be >= 0.")
 
     if args.mode == "clone":
-        if args.ref_audio is None:
-            raise ValueError("--ref-audio is required for --mode clone.")
-        if not args.ref_audio.exists():
-            raise ValueError(f"Reference audio not found: {args.ref_audio}")
+        if args.prompt_id and args.register_clone_prompt:
+            raise ValueError(
+                "--prompt-id cannot be combined with --register-clone-prompt."
+            )
+        if args.prompt_id is None:
+            if args.ref_audio is None:
+                raise ValueError(
+                    "--ref-audio is required for --mode clone unless --prompt-id is used."
+                )
+            if not args.ref_audio.exists():
+                raise ValueError(f"Reference audio not found: {args.ref_audio}")
+        elif args.ref_audio is not None:
+            raise ValueError(
+                "--ref-audio cannot be combined with --prompt-id for generate requests."
+            )
+
+
+def _default_clone_prompt_url(generate_url: str) -> str:
+    if generate_url.endswith("/generate"):
+        return generate_url[: -len("/generate")] + "/clone-prompts"
+    return generate_url.rstrip("/") + "/clone-prompts"
+
+
+async def _register_clone_prompt(
+    *,
+    client: httpx.AsyncClient,
+    args: argparse.Namespace,
+    audio_name: str,
+    audio_bytes: bytes,
+    audio_content_type: str | None,
+) -> str:
+    clone_prompt_url = args.clone_prompt_url or _default_clone_prompt_url(args.url)
+    data = {
+        "preprocess_prompt": str(args.preprocess_prompt).lower(),
+        "ref_text": args.ref_text or DEFAULT_REF_TEXT,
+    }
+
+    response = await client.post(
+        clone_prompt_url,
+        data=data,
+        files={
+            "ref_audio": (
+                audio_name,
+                audio_bytes,
+                audio_content_type or "application/octet-stream",
+            )
+        },
+    )
+    response.raise_for_status()
+    payload = response.json()
+    prompt_id = payload.get("prompt_id")
+    if not prompt_id:
+        raise RuntimeError("Clone prompt registration succeeded without prompt_id.")
+    logger.info(
+        "Registered clone prompt prompt_id=%s duration_ms=%s stored_device=%s",
+        prompt_id,
+        payload.get("duration_ms", "n/a"),
+        payload.get("stored_device", "n/a"),
+    )
+    return str(prompt_id)
 
 
 def _extract_result(
@@ -241,8 +318,12 @@ def _extract_result(
         "started_at": headers.get("x-omnivoice-started-at"),
         "finished_at": headers.get("x-omnivoice-finished-at"),
         "latency_ms": headers.get("x-omnivoice-latency-ms"),
+        "pre_batch_ms": headers.get("x-omnivoice-pre-batch-ms"),
+        "prompt_prepare_ms": headers.get("x-omnivoice-prompt-prepare-ms"),
+        "batch_estimate_ms": headers.get("x-omnivoice-batch-estimate-ms"),
         "queue_wait_ms": headers.get("x-omnivoice-queue-wait-ms"),
         "batch_exec_ms": headers.get("x-omnivoice-batch-exec-ms"),
+        "response_encode_ms": headers.get("x-omnivoice-response-encode-ms"),
         "batch_requests": headers.get("x-omnivoice-batch-requests"),
         "batch_target_tokens": headers.get("x-omnivoice-batch-target-tokens"),
         "batch_conditioning_tokens": headers.get(
@@ -252,6 +333,8 @@ def _extract_result(
             "x-omnivoice-batch-max-sequence-length"
         ),
         "batch_lane": headers.get("x-omnivoice-batch-lane"),
+        "prompt_source": headers.get("x-omnivoice-prompt-source"),
+        "prompt_id": headers.get("x-omnivoice-prompt-id"),
         "audio_duration_s": headers.get("x-omnivoice-audio-duration-s"),
         "rtf": headers.get("x-omnivoice-rtf"),
         "content_bytes": len(response.content),
@@ -300,21 +383,25 @@ async def _run_request(
                 "index": index,
                 "status": 0,
                 "local_started_at": started_local.isoformat().replace("+00:00", "Z"),
-                "local_finished_at": finished_local.isoformat().replace(
-                    "+00:00", "Z"
-                ),
+                "local_finished_at": finished_local.isoformat().replace("+00:00", "Z"),
                 "elapsed_s": round(finished_perf - started_perf, 6),
                 "request_id": None,
                 "started_at": None,
                 "finished_at": None,
                 "latency_ms": None,
+                "pre_batch_ms": None,
+                "prompt_prepare_ms": None,
+                "batch_estimate_ms": None,
                 "queue_wait_ms": None,
                 "batch_exec_ms": None,
+                "response_encode_ms": None,
                 "batch_requests": None,
                 "batch_target_tokens": None,
                 "batch_conditioning_tokens": None,
                 "batch_max_sequence_length": None,
                 "batch_lane": None,
+                "prompt_source": None,
+                "prompt_id": None,
                 "audio_duration_s": None,
                 "rtf": None,
                 "content_bytes": 0,
@@ -329,13 +416,32 @@ async def _run_load_test(args: argparse.Namespace) -> list[dict[str, Any]]:
     audio_name: str | None = None
     audio_bytes: bytes | None = None
     audio_content_type: str | None = None
-    if args.mode == "clone":
+    if args.mode == "clone" and args.ref_audio is not None:
         assert args.ref_audio is not None
         audio_name = args.ref_audio.name
         audio_bytes = args.ref_audio.read_bytes()
         audio_content_type = mimetypes.guess_type(args.ref_audio.name)[0]
 
     async with httpx.AsyncClient(timeout=args.timeout) as client:
+        if args.mode == "clone" and args.register_clone_prompt:
+            if audio_name is None or audio_bytes is None:
+                raise RuntimeError(
+                    "--register-clone-prompt requires --ref-audio to prepare the prompt."
+                )
+            prompt_id = await _register_clone_prompt(
+                client=client,
+                args=args,
+                audio_name=audio_name,
+                audio_bytes=audio_bytes,
+                audio_content_type=audio_content_type,
+            )
+            args.prompt_id = prompt_id
+            data["prompt_id"] = prompt_id
+            data.pop("ref_text", None)
+            audio_name = None
+            audio_bytes = None
+            audio_content_type = None
+
         if args.warmup_requests:
             logger.info("Running %d warmup request(s)...", args.warmup_requests)
             warmup_tasks = [
@@ -410,6 +516,21 @@ def _summarize(
 
     if successes:
         latencies = [float(row["latency_ms"]) for row in successes if row["latency_ms"]]
+        pre_batch_times = [
+            float(row["pre_batch_ms"])
+            for row in successes
+            if row["pre_batch_ms"] is not None
+        ]
+        prompt_prepare_times = [
+            float(row["prompt_prepare_ms"])
+            for row in successes
+            if row["prompt_prepare_ms"] is not None
+        ]
+        batch_estimate_times = [
+            float(row["batch_estimate_ms"])
+            for row in successes
+            if row["batch_estimate_ms"] is not None
+        ]
         queue_waits = [
             float(row["queue_wait_ms"])
             for row in successes
@@ -420,10 +541,20 @@ def _summarize(
             for row in successes
             if row["batch_exec_ms"] is not None
         ]
+        response_encode_times = [
+            float(row["response_encode_ms"])
+            for row in successes
+            if row["response_encode_ms"] is not None
+        ]
         batch_sizes = Counter(
             int(row["batch_requests"])
             for row in successes
             if row["batch_requests"] is not None
+        )
+        prompt_sources = Counter(
+            str(row["prompt_source"])
+            for row in successes
+            if row["prompt_source"] is not None
         )
 
         logger.info(
@@ -433,6 +564,30 @@ def _summarize(
             _format_float(_percentile(latencies, 0.95)),
             _format_float(max(latencies)),
         )
+        if pre_batch_times:
+            logger.info(
+                "  prebatch_ms avg=%s p50=%s p95=%s max=%s",
+                _format_float(statistics.mean(pre_batch_times)),
+                _format_float(statistics.median(pre_batch_times)),
+                _format_float(_percentile(pre_batch_times, 0.95)),
+                _format_float(max(pre_batch_times)),
+            )
+        if prompt_prepare_times:
+            logger.info(
+                "  prompt_ms  avg=%s p50=%s p95=%s max=%s",
+                _format_float(statistics.mean(prompt_prepare_times)),
+                _format_float(statistics.median(prompt_prepare_times)),
+                _format_float(_percentile(prompt_prepare_times, 0.95)),
+                _format_float(max(prompt_prepare_times)),
+            )
+        if batch_estimate_times:
+            logger.info(
+                "  estimate_ms avg=%s p50=%s p95=%s max=%s",
+                _format_float(statistics.mean(batch_estimate_times)),
+                _format_float(statistics.median(batch_estimate_times)),
+                _format_float(_percentile(batch_estimate_times, 0.95)),
+                _format_float(max(batch_estimate_times)),
+            )
         if queue_waits:
             logger.info(
                 "  queue_ms   avg=%s p50=%s p95=%s max=%s",
@@ -449,11 +604,24 @@ def _summarize(
                 _format_float(_percentile(batch_execs, 0.95)),
                 _format_float(max(batch_execs)),
             )
+        if response_encode_times:
+            logger.info(
+                "  encode_ms  avg=%s p50=%s p95=%s max=%s",
+                _format_float(statistics.mean(response_encode_times)),
+                _format_float(statistics.median(response_encode_times)),
+                _format_float(_percentile(response_encode_times, 0.95)),
+                _format_float(max(response_encode_times)),
+            )
         if batch_sizes:
             distribution = ", ".join(
                 f"{size}=>{count}" for size, count in sorted(batch_sizes.items())
             )
             logger.info("  per-response batch sizes: %s", distribution)
+        if prompt_sources:
+            distribution = ", ".join(
+                f"{source}=>{count}" for source, count in sorted(prompt_sources.items())
+            )
+            logger.info("  prompt sources: %s", distribution)
 
         server_starts = sorted(
             row["started_at"] for row in successes if row.get("started_at")

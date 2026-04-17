@@ -69,6 +69,14 @@ class PendingGeneration:
     future: Future[BatchedGenerationResult] = field(default_factory=Future)
 
 
+@dataclass(frozen=True)
+class ClonePromptCacheResult:
+    """Prepared clone prompt plus cache-source metadata."""
+
+    prompt: Any
+    source: str
+
+
 class ClonePromptCache:
     """Thread-safe cache for prepared voice-clone prompts."""
 
@@ -85,10 +93,13 @@ class ClonePromptCache:
         ref_text: str | None,
         preprocess_prompt: bool,
         factory: Any,
-    ) -> Any:
+    ) -> ClonePromptCacheResult:
         """Return a cached prompt or create and cache it on demand."""
         if self.max_size <= 0:
-            return self._to_cpu_prompt(factory())
+            return ClonePromptCacheResult(
+                prompt=self._to_cpu_prompt(factory()),
+                source="disabled",
+            )
 
         key = (
             hashlib.sha256(ref_audio_bytes).hexdigest(),
@@ -101,7 +112,7 @@ class ClonePromptCache:
                 cached = self._entries.get(key)
                 if cached is not None:
                     self._entries.move_to_end(key)
-                    return cached
+                    return ClonePromptCacheResult(prompt=cached, source="hit")
 
                 event = self._inflight.get(key)
                 if event is None:
@@ -127,7 +138,7 @@ class ClonePromptCache:
             self._inflight.pop(key, None)
             event.set()
 
-        return prompt
+        return ClonePromptCacheResult(prompt=prompt, source="miss")
 
     def _to_cpu_prompt(self, prompt: Any) -> Any:
         ref_audio_tokens = getattr(prompt, "ref_audio_tokens", None)
@@ -152,6 +163,7 @@ class GenerationBatcher:
         max_batch_target_tokens: int = 24000,
         max_batch_conditioning_tokens: int = 12000,
         max_batch_padding_ratio: float = 1.5,
+        batch_bucket_sizes: tuple[int, ...] | None = None,
     ) -> None:
         self._model = model
         self.collect_ms = max(0.0, collect_ms)
@@ -159,6 +171,9 @@ class GenerationBatcher:
         self.max_batch_target_tokens = max(1, max_batch_target_tokens)
         self.max_batch_conditioning_tokens = max(1, max_batch_conditioning_tokens)
         self.max_batch_padding_ratio = max(1.0, max_batch_padding_ratio)
+        self.batch_bucket_sizes = tuple(
+            sorted({size for size in batch_bucket_sizes or () if size > 0})
+        )
 
         self._condition = threading.Condition()
         self._pending: deque[PendingGeneration] = deque()
@@ -263,8 +278,43 @@ class GenerationBatcher:
             total_sequence_length = next_total_sequence_length
             max_sequence_length = next_max_sequence_length
 
+        if selected and self.batch_bucket_sizes:
+            selected, remaining = self._apply_batch_buckets(
+                selected,
+                remaining,
+                anchor.batch_key.lane,
+            )
+
         self._pending = remaining
         return selected
+
+    def _apply_batch_buckets(
+        self,
+        selected: list[PendingGeneration],
+        remaining: deque[PendingGeneration],
+        lane: str,
+    ) -> tuple[list[PendingGeneration], deque[PendingGeneration]]:
+        batch_size = len(selected)
+        if batch_size <= 1 or batch_size in self.batch_bucket_sizes:
+            return selected, remaining
+
+        target_size = max(
+            (size for size in self.batch_bucket_sizes if size <= batch_size),
+            default=0,
+        )
+        if target_size <= 0 or target_size >= batch_size:
+            return selected, remaining
+
+        trimmed = selected[target_size:]
+        selected = selected[:target_size]
+        remaining = deque(trimmed + list(remaining))
+        logger.info(
+            "Batch bucket trim lane=%s original_size=%d trimmed_size=%d",
+            lane,
+            batch_size,
+            target_size,
+        )
+        return selected, remaining
 
     def _execute_batch(self, batch: list[PendingGeneration]) -> None:
         anchor = batch[0]

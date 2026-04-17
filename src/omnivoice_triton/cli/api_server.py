@@ -8,6 +8,8 @@ import logging
 import os
 import re
 import threading
+import time
+from collections import OrderedDict
 from contextlib import asynccontextmanager
 from datetime import UTC, datetime
 from enum import Enum
@@ -44,6 +46,9 @@ DEFAULT_MAX_BATCH_TARGET_TOKENS = 24000
 DEFAULT_MAX_BATCH_CONDITIONING_TOKENS = 12000
 DEFAULT_MAX_BATCH_PADDING_RATIO = 1.5
 DEFAULT_CLONE_PROMPT_CACHE_SIZE = 128
+DEFAULT_BATCH_BUCKET_SIZES = (1, 2, 4, 8, 16, 32)
+DEFAULT_REGISTERED_CLONE_PROMPT_STORE_SIZE = 256
+DEFAULT_TOKEN_ESTIMATE_CACHE_SIZE = 4096
 _SLUG_RE = re.compile(r"[^a-z0-9]+")
 
 
@@ -53,6 +58,101 @@ class GenerateMode(str, Enum):
     auto = "auto"
     design = "design"
     clone = "clone"
+
+
+class TokenEstimateCache:
+    """Thread-safe LRU cache for tokenizer-based batch estimates."""
+
+    def __init__(self, max_size: int = 4096) -> None:
+        self.max_size = max(0, max_size)
+        self._lock = threading.Lock()
+        self._entries: OrderedDict[tuple[str, bool], int] = OrderedDict()
+
+    def get_or_create(
+        self,
+        *,
+        text: str,
+        add_special_tokens: bool,
+        factory: Callable[[], int],
+    ) -> int:
+        if self.max_size <= 0:
+            return int(factory())
+
+        key = (text, add_special_tokens)
+        with self._lock:
+            cached = self._entries.get(key)
+            if cached is not None:
+                self._entries.move_to_end(key)
+                return cached
+
+        value = int(factory())
+        with self._lock:
+            self._entries[key] = value
+            self._entries.move_to_end(key)
+            while len(self._entries) > self.max_size:
+                self._entries.popitem(last=False)
+        return value
+
+    def __len__(self) -> int:
+        with self._lock:
+            return len(self._entries)
+
+
+class RegisteredClonePromptStore:
+    """Thread-safe LRU registry for reusable clone prompts."""
+
+    def __init__(self, max_size: int = 256, storage_device: str = "cpu") -> None:
+        self.max_size = max(0, max_size)
+        self.storage_device = storage_device
+        self._lock = threading.Lock()
+        self._entries: OrderedDict[str, Any] = OrderedDict()
+
+    def register(self, prompt: Any) -> str:
+        if self.max_size <= 0:
+            raise RuntimeError("Registered clone prompt store is disabled.")
+
+        prompt_id = uuid4().hex[:12]
+        stored = self._prepare_prompt(prompt)
+        with self._lock:
+            self._entries[prompt_id] = stored
+            self._entries.move_to_end(prompt_id)
+            while len(self._entries) > self.max_size:
+                self._entries.popitem(last=False)
+        return prompt_id
+
+    def get(self, prompt_id: str) -> Any | None:
+        with self._lock:
+            prompt = self._entries.get(prompt_id)
+            if prompt is None:
+                return None
+            self._entries.move_to_end(prompt_id)
+            return prompt
+
+    def __len__(self) -> int:
+        with self._lock:
+            return len(self._entries)
+
+    def _prepare_prompt(self, prompt: Any) -> Any:
+        ref_audio_tokens = getattr(prompt, "ref_audio_tokens", None)
+        if not isinstance(ref_audio_tokens, torch.Tensor):
+            return prompt
+
+        tokens = ref_audio_tokens.detach()
+        if self.storage_device.startswith("cuda") and torch.cuda.is_available():
+            tokens = tokens.to(self.storage_device, non_blocking=True)
+        else:
+            tokens = tokens.cpu()
+            if torch.cuda.is_available():
+                try:
+                    tokens = tokens.pin_memory()
+                except RuntimeError:
+                    pass
+
+        prompt_fields = dict(vars(prompt))
+        prompt_fields["ref_audio_tokens"] = tokens
+        if "ref_rms" in prompt_fields:
+            prompt_fields["ref_rms"] = float(prompt_fields["ref_rms"])
+        return type(prompt)(**prompt_fields)
 
 
 def get_best_device() -> str:
@@ -123,8 +223,7 @@ def build_parser() -> argparse.ArgumentParser:
         type=float,
         default=DEFAULT_BATCH_COLLECT_MS,
         help=(
-            "How long to wait for nearby compatible requests before "
-            "launching a batch."
+            "How long to wait for nearby compatible requests before launching a batch."
         ),
     )
     parser.add_argument(
@@ -156,6 +255,23 @@ def build_parser() -> argparse.ArgumentParser:
         type=int,
         default=DEFAULT_CLONE_PROMPT_CACHE_SIZE,
         help="Number of prepared clone prompts to keep in the in-memory cache.",
+    )
+    parser.add_argument(
+        "--registered-clone-prompt-store-size",
+        type=int,
+        default=DEFAULT_REGISTERED_CLONE_PROMPT_STORE_SIZE,
+        help="Number of registered clone prompts to keep for prompt_id reuse.",
+    )
+    parser.add_argument(
+        "--token-estimate-cache-size",
+        type=int,
+        default=DEFAULT_TOKEN_ESTIMATE_CACHE_SIZE,
+        help="LRU cache size for tokenizer-based batching estimates.",
+    )
+    parser.add_argument(
+        "--batch-bucket-sizes",
+        default="1,2,4,8,16,32",
+        help="Preferred merged request-count buckets, comma-separated.",
     )
     return parser
 
@@ -241,6 +357,28 @@ def _parse_optional_duration(raw: str | None) -> float | None:
     return parsed
 
 
+def _parse_batch_bucket_sizes(raw: str | None) -> tuple[int, ...]:
+    value = _normalize_text(raw)
+    if value is None:
+        return DEFAULT_BATCH_BUCKET_SIZES
+
+    sizes: set[int] = set()
+    for part in value.split(","):
+        item = part.strip()
+        if not item:
+            continue
+        try:
+            parsed = int(item)
+        except ValueError as exc:
+            raise ValueError(
+                "--batch-bucket-sizes must be a comma-separated list of integers."
+            ) from exc
+        if parsed <= 0:
+            raise ValueError("--batch-bucket-sizes values must be > 0.")
+        sizes.add(parsed)
+    return tuple(sorted(sizes))
+
+
 def _to_numpy(audio: Any) -> np.ndarray:
     if isinstance(audio, list):
         audio = audio[0]
@@ -319,6 +457,7 @@ def _estimate_conditioning_tokens(
     instruct: str | None,
     voice_clone_prompt: Any | None,
     denoise: bool,
+    token_cache: TokenEstimateCache | None = None,
 ) -> int:
     tokenizer = getattr(model, "text_tokenizer", None)
     if tokenizer is None:
@@ -335,7 +474,17 @@ def _estimate_conditioning_tokens(
         style_text += "<|denoise|>"
     style_text += f"<|lang_start|>{language or 'None'}<|lang_end|>"
     style_text += f"<|instruct_start|>{instruct or 'None'}<|instruct_end|>"
-    style_tokens = int(tokenizer(style_text, return_tensors="pt").input_ids.shape[-1])
+    style_tokens = (
+        token_cache.get_or_create(
+            text=style_text,
+            add_special_tokens=True,
+            factory=lambda: int(
+                tokenizer(style_text, return_tensors="pt").input_ids.shape[-1]
+            ),
+        )
+        if token_cache is not None
+        else int(tokenizer(style_text, return_tensors="pt").input_ids.shape[-1])
+    )
 
     combined_text = text.strip()
     ref_text = getattr(voice_clone_prompt, "ref_text", None)
@@ -344,12 +493,26 @@ def _estimate_conditioning_tokens(
     combined_text = re.sub(r"[\r\n]+", "", combined_text)
     combined_text = re.sub(r"[ \t]+", " ", combined_text).strip()
     wrapped_text = f"<|text_start|>{combined_text}<|text_end|>"
-    text_tokens = int(
-        tokenizer(
-            wrapped_text,
+    text_tokens = (
+        token_cache.get_or_create(
+            text=wrapped_text,
             add_special_tokens=False,
-            return_tensors="pt",
-        ).input_ids.shape[-1]
+            factory=lambda: int(
+                tokenizer(
+                    wrapped_text,
+                    add_special_tokens=False,
+                    return_tensors="pt",
+                ).input_ids.shape[-1]
+            ),
+        )
+        if token_cache is not None
+        else int(
+            tokenizer(
+                wrapped_text,
+                add_special_tokens=False,
+                return_tensors="pt",
+            ).input_ids.shape[-1]
+        )
     )
 
     ref_audio_tokens = getattr(voice_clone_prompt, "ref_audio_tokens", None)
@@ -386,6 +549,30 @@ def _build_batch_key(
         postprocess_output=generation_config.postprocess_output,
         audio_chunk_duration=generation_config.audio_chunk_duration,
         audio_chunk_threshold=generation_config.audio_chunk_threshold,
+    )
+
+
+def _create_voice_clone_prompt(
+    model: Any,
+    *,
+    ref_audio_bytes: bytes,
+    ref_text: str | None,
+    preprocess_prompt: bool,
+    asr_load_lock: threading.Lock,
+) -> Any:
+    if (
+        ref_text is None
+        and hasattr(model, "load_asr_model")
+        and getattr(model, "_asr_pipe", None) is None
+    ):
+        with asr_load_lock:
+            if getattr(model, "_asr_pipe", None) is None:
+                model.load_asr_model()
+
+    return model.create_voice_clone_prompt(
+        ref_audio=_decode_ref_audio_upload(ref_audio_bytes),
+        ref_text=ref_text,
+        preprocess_prompt=preprocess_prompt,
     )
 
 
@@ -440,6 +627,9 @@ def create_app(
     max_batch_conditioning_tokens: int = DEFAULT_MAX_BATCH_CONDITIONING_TOKENS,
     max_batch_padding_ratio: float = DEFAULT_MAX_BATCH_PADDING_RATIO,
     clone_prompt_cache_size: int = DEFAULT_CLONE_PROMPT_CACHE_SIZE,
+    registered_clone_prompt_store_size: int = DEFAULT_REGISTERED_CLONE_PROMPT_STORE_SIZE,
+    token_estimate_cache_size: int = DEFAULT_TOKEN_ESTIMATE_CACHE_SIZE,
+    batch_bucket_sizes: tuple[int, ...] = DEFAULT_BATCH_BUCKET_SIZES,
     runner_factory: Callable[..., Any] | None = None,
 ) -> FastAPI:
     """Create the FastAPI app."""
@@ -472,6 +662,13 @@ def create_app(
         app.state.clone_prompt_cache = ClonePromptCache(
             max_size=clone_prompt_cache_size
         )
+        app.state.registered_clone_prompts = RegisteredClonePromptStore(
+            max_size=registered_clone_prompt_store_size,
+            storage_device=resolved_device,
+        )
+        app.state.token_estimate_cache = TokenEstimateCache(
+            max_size=token_estimate_cache_size
+        )
         app.state.batcher = GenerationBatcher(
             model,
             collect_ms=batch_collect_ms,
@@ -479,10 +676,11 @@ def create_app(
             max_batch_target_tokens=max_batch_target_tokens,
             max_batch_conditioning_tokens=max_batch_conditioning_tokens,
             max_batch_padding_ratio=max_batch_padding_ratio,
+            batch_bucket_sizes=batch_bucket_sizes,
         )
         logger.info(
             "API server ready runner=%s model=%s device=%s dtype=%s asr_loaded=%s "
-            "batch_collect_ms=%.1f max_batch_requests=%d",
+            "batch_collect_ms=%.1f max_batch_requests=%d batch_bucket_sizes=%s",
             runner_name,
             model_checkpoint,
             resolved_device,
@@ -490,6 +688,7 @@ def create_app(
             bool(getattr(model, "_asr_pipe", None)),
             batch_collect_ms,
             max_batch_requests,
+            list(batch_bucket_sizes),
         )
         try:
             yield
@@ -518,6 +717,8 @@ def create_app(
     app.state.sample_rate = DEFAULT_SAMPLE_RATE
     app.state.batcher = None
     app.state.clone_prompt_cache = None
+    app.state.registered_clone_prompts = None
+    app.state.token_estimate_cache = None
     app.state.asr_load_lock = threading.Lock()
     app.state.batch_collect_ms = batch_collect_ms
     app.state.max_batch_requests = max_batch_requests
@@ -525,11 +726,20 @@ def create_app(
     app.state.max_batch_conditioning_tokens = max_batch_conditioning_tokens
     app.state.max_batch_padding_ratio = max_batch_padding_ratio
     app.state.clone_prompt_cache_size = clone_prompt_cache_size
+    app.state.registered_clone_prompt_store_size = registered_clone_prompt_store_size
+    app.state.token_estimate_cache_size = token_estimate_cache_size
+    app.state.batch_bucket_sizes = list(batch_bucket_sizes)
 
     @app.get("/health")
     def health() -> dict[str, Any]:
         runner = app.state.runner
         model = getattr(runner, "model", None)
+        graph_metrics: dict[str, Any] = {}
+        if runner is not None and hasattr(runner, "get_cuda_graph_metrics"):
+            try:
+                graph_metrics = runner.get_cuda_graph_metrics()
+            except Exception:  # pragma: no cover - health should stay resilient
+                logger.exception("Failed to collect CUDA graph metrics.")
         return {
             "status": "ok",
             "model": app.state.model_checkpoint,
@@ -547,6 +757,15 @@ def create_app(
             "max_batch_conditioning_tokens": app.state.max_batch_conditioning_tokens,
             "max_batch_padding_ratio": app.state.max_batch_padding_ratio,
             "clone_prompt_cache_size": app.state.clone_prompt_cache_size,
+            "registered_clone_prompt_store_size": app.state.registered_clone_prompt_store_size,
+            "registered_clone_prompt_count": len(
+                app.state.registered_clone_prompts or ()
+            ),
+            "token_estimate_cache_size": app.state.token_estimate_cache_size,
+            "token_estimate_cache_entries": len(app.state.token_estimate_cache or ()),
+            "batch_bucket_sizes": app.state.batch_bucket_sizes,
+            "cuda_graph_capture_count": int(graph_metrics.get("capture_count", 0)),
+            "cuda_graph_shapes": graph_metrics.get("shapes", []),
         }
 
     @app.get("/languages")
@@ -561,6 +780,95 @@ def create_app(
         ]
         return {"count": len(items), "languages": items}
 
+    @app.post("/clone-prompts")
+    def register_clone_prompt(
+        ref_audio: UploadFile = File(...),
+        ref_text: str | None = Form(None),
+        preprocess_prompt: bool = Form(True),
+    ) -> dict[str, Any]:
+        runner = app.state.runner
+        if runner is None:
+            raise HTTPException(503, detail="Model is not ready yet.")
+
+        prompt_store = app.state.registered_clone_prompts
+        if prompt_store is None or prompt_store.max_size <= 0:
+            raise HTTPException(
+                503,
+                detail="Registered clone prompt store is disabled.",
+            )
+
+        request_id = uuid4().hex[:12]
+        started_at = _utc_now()
+        started_perf = time.perf_counter()
+        ref_text_value = _normalize_text(ref_text)
+
+        try:
+            ref_audio_bytes = ref_audio.file.read()
+            if not ref_audio_bytes:
+                raise HTTPException(400, detail="ref_audio is empty.")
+
+            prompt = _create_voice_clone_prompt(
+                runner.model,
+                ref_audio_bytes=ref_audio_bytes,
+                ref_text=ref_text_value,
+                preprocess_prompt=preprocess_prompt,
+                asr_load_lock=app.state.asr_load_lock,
+            )
+            prompt_id = prompt_store.register(prompt)
+            finished_at = _utc_now()
+            duration_ms = (time.perf_counter() - started_perf) * 1000.0
+            ref_audio_tokens = getattr(prompt, "ref_audio_tokens", None)
+            prompt_audio_tokens = (
+                int(ref_audio_tokens.size(-1))
+                if isinstance(ref_audio_tokens, torch.Tensor)
+                else None
+            )
+            stored_device = (
+                str(ref_audio_tokens.device)
+                if isinstance(ref_audio_tokens, torch.Tensor)
+                else app.state.device
+            )
+
+            logger.info(
+                "clone_prompt_id=%s request_id=%s status=registered started_at=%s "
+                "finished_at=%s duration_ms=%.2f prompt_audio_tokens=%s "
+                "stored_device=%s has_ref_text=%s",
+                prompt_id,
+                request_id,
+                _iso_utc(started_at),
+                _iso_utc(finished_at),
+                duration_ms,
+                prompt_audio_tokens if prompt_audio_tokens is not None else "-",
+                stored_device,
+                bool(getattr(prompt, "ref_text", None)),
+            )
+
+            return {
+                "status": "ok",
+                "prompt_id": prompt_id,
+                "request_id": request_id,
+                "created_at": _iso_utc(finished_at),
+                "duration_ms": round(duration_ms, 2),
+                "prompt_audio_tokens": prompt_audio_tokens,
+                "ref_text": getattr(prompt, "ref_text", None),
+                "stored_device": stored_device,
+            }
+        except HTTPException:
+            raise
+        except ValueError as exc:
+            raise HTTPException(status_code=400, detail=str(exc)) from exc
+        except RuntimeError as exc:
+            logger.exception("request_id=%s status=runtime_error", request_id)
+            raise HTTPException(status_code=500, detail=str(exc)) from exc
+        except Exception as exc:  # pragma: no cover - defensive server guard
+            logger.exception("request_id=%s status=unexpected_error", request_id)
+            raise HTTPException(
+                status_code=500,
+                detail=f"{type(exc).__name__}: {exc}",
+            ) from exc
+        finally:
+            ref_audio.file.close()
+
     @app.post(
         "/generate",
         response_class=Response,
@@ -571,6 +879,7 @@ def create_app(
         text: str = Form(...),
         language: str | None = Form(None),
         instruct: str | None = Form(None),
+        prompt_id: str | None = Form(None),
         ref_text: str | None = Form(None),
         num_step: str | None = Form(None),
         guidance_scale: str | None = Form(None),
@@ -597,6 +906,7 @@ def create_app(
             raise HTTPException(400, detail="text is required.")
 
         instruct_value = _normalize_text(instruct)
+        prompt_id_value = _normalize_text(prompt_id)
         ref_text_value = _normalize_text(ref_text)
         language_value = _normalize_language(language)
 
@@ -605,17 +915,41 @@ def create_app(
                 raise HTTPException(
                     400, detail="instruct is not allowed for mode=auto."
                 )
-            if ref_audio is not None or ref_text_value is not None:
+            if (
+                prompt_id_value is not None
+                or ref_audio is not None
+                or ref_text_value is not None
+            ):
                 raise HTTPException(
-                    400, detail="ref_audio/ref_text are not allowed for mode=auto."
+                    400,
+                    detail="prompt_id/ref_audio/ref_text are not allowed for mode=auto.",
                 )
         elif mode == GenerateMode.design:
-            if ref_audio is not None or ref_text_value is not None:
+            if (
+                prompt_id_value is not None
+                or ref_audio is not None
+                or ref_text_value is not None
+            ):
                 raise HTTPException(
-                    400, detail="ref_audio/ref_text are not allowed for mode=design."
+                    400,
+                    detail="prompt_id/ref_audio/ref_text are not allowed for mode=design.",
                 )
-        elif ref_audio is None:
-            raise HTTPException(400, detail="ref_audio is required for mode=clone.")
+        else:
+            if prompt_id_value is not None and ref_audio is not None:
+                raise HTTPException(
+                    400,
+                    detail="Provide either prompt_id or ref_audio for mode=clone, not both.",
+                )
+            if prompt_id_value is None and ref_audio is None:
+                raise HTTPException(
+                    400,
+                    detail="prompt_id or ref_audio is required for mode=clone.",
+                )
+            if prompt_id_value is not None and ref_text_value is not None:
+                raise HTTPException(
+                    400,
+                    detail="ref_text cannot be combined with prompt_id.",
+                )
 
         num_step_value = _parse_positive_int("num_step", num_step, 32)
         guidance_scale_value = _parse_nonnegative_float(
@@ -636,8 +970,12 @@ def create_app(
 
         request_id = uuid4().hex[:12]
         started_at = _utc_now()
+        request_started_perf = time.perf_counter()
         saved_path: Path | None = None
-        has_ref_audio = ref_audio is not None
+        prompt_source = "none"
+        prompt_prepare_ms = 0.0
+        batch_estimate_ms = 0.0
+        response_encode_ms = 0.0
 
         try:
             model = runner.model
@@ -655,43 +993,54 @@ def create_app(
 
             voice_clone_prompt = None
             if mode == GenerateMode.clone:
-                assert ref_audio is not None  # for type checkers
-                ref_audio_bytes = ref_audio.file.read()
-                if not ref_audio_bytes:
-                    raise HTTPException(400, detail="ref_audio is empty.")
-
-                prompt_cache = app.state.clone_prompt_cache
-
-                def _create_prompt() -> Any:
-                    if (
-                        ref_text_value is None
-                        and hasattr(model, "load_asr_model")
-                        and getattr(model, "_asr_pipe", None) is None
-                    ):
-                        with app.state.asr_load_lock:
-                            if getattr(model, "_asr_pipe", None) is None:
-                                model.load_asr_model()
-
-                    return model.create_voice_clone_prompt(
-                        ref_audio=_decode_ref_audio_upload(ref_audio_bytes),
-                        ref_text=ref_text_value,
-                        preprocess_prompt=preprocess_prompt,
-                    )
-
-                if prompt_cache is None:
-                    voice_clone_prompt = _create_prompt()
+                prompt_started_perf = time.perf_counter()
+                if prompt_id_value is not None:
+                    prompt_store = app.state.registered_clone_prompts
+                    if prompt_store is None or prompt_store.max_size <= 0:
+                        raise HTTPException(
+                            503,
+                            detail="Registered clone prompt store is disabled.",
+                        )
+                    voice_clone_prompt = prompt_store.get(prompt_id_value)
+                    if voice_clone_prompt is None:
+                        raise HTTPException(404, detail="Unknown prompt_id.")
+                    prompt_source = "prompt_id"
                 else:
-                    voice_clone_prompt = prompt_cache.get_or_create(
-                        ref_audio_bytes=ref_audio_bytes,
-                        ref_text=ref_text_value,
-                        preprocess_prompt=preprocess_prompt,
-                        factory=_create_prompt,
-                    )
+                    assert ref_audio is not None  # for type checkers
+                    ref_audio_bytes = ref_audio.file.read()
+                    if not ref_audio_bytes:
+                        raise HTTPException(400, detail="ref_audio is empty.")
+
+                    prompt_cache = app.state.clone_prompt_cache
+
+                    def _create_prompt() -> Any:
+                        return _create_voice_clone_prompt(
+                            model,
+                            ref_audio_bytes=ref_audio_bytes,
+                            ref_text=ref_text_value,
+                            preprocess_prompt=preprocess_prompt,
+                            asr_load_lock=app.state.asr_load_lock,
+                        )
+
+                    if prompt_cache is None:
+                        voice_clone_prompt = _create_prompt()
+                        prompt_source = "cache_disabled"
+                    else:
+                        prompt_result = prompt_cache.get_or_create(
+                            ref_audio_bytes=ref_audio_bytes,
+                            ref_text=ref_text_value,
+                            preprocess_prompt=preprocess_prompt,
+                            factory=_create_prompt,
+                        )
+                        voice_clone_prompt = prompt_result.prompt
+                        prompt_source = f"upload_{prompt_result.source}"
+                prompt_prepare_ms = (time.perf_counter() - prompt_started_perf) * 1000.0
 
             batched_instruct = None
             if mode in {GenerateMode.design, GenerateMode.clone} and instruct_value:
                 batched_instruct = instruct_value
 
+            batch_estimate_started_perf = time.perf_counter()
             target_tokens = _estimate_target_tokens(
                 model,
                 text=text_value,
@@ -706,7 +1055,11 @@ def create_app(
                 instruct=instruct_value,
                 voice_clone_prompt=voice_clone_prompt,
                 denoise=gen_config.denoise,
+                token_cache=app.state.token_estimate_cache,
             )
+            batch_estimate_ms = (
+                time.perf_counter() - batch_estimate_started_perf
+            ) * 1000.0
             batch_key = _build_batch_key(
                 model,
                 voice_clone_prompt=voice_clone_prompt,
@@ -728,22 +1081,16 @@ def create_app(
                 batch_key=batch_key,
                 generation_config=gen_config,
             )
+            pre_batch_ms = (time.perf_counter() - request_started_perf) * 1000.0
             batch_result = batcher.submit(pending)
 
+            response_encode_started_perf = time.perf_counter()
             audio = _to_numpy(batch_result.audio)
             sample_rate = int(
                 getattr(model, "sampling_rate", app.state.sample_rate)
                 or app.state.sample_rate
             )
             wav_bytes = _to_wav_bytes(audio, sample_rate)
-            finished_at = _utc_now()
-            latency_ms = (finished_at - started_at).total_seconds() * 1000.0
-            audio_duration_s = float(audio.shape[0]) / float(sample_rate)
-            rtf = (
-                latency_ms / 1000.0 / audio_duration_s if audio_duration_s > 0 else None
-            )
-            peak_vram_gb = batch_result.peak_vram_gb
-
             if app.state.save_dir is not None:
                 saved_path = _save_output(
                     wav_bytes=wav_bytes,
@@ -752,6 +1099,17 @@ def create_app(
                     text=text_value,
                     request_id=request_id,
                 )
+            response_encode_ms = (
+                time.perf_counter() - response_encode_started_perf
+            ) * 1000.0
+
+            finished_at = _utc_now()
+            latency_ms = (finished_at - started_at).total_seconds() * 1000.0
+            audio_duration_s = float(audio.shape[0]) / float(sample_rate)
+            rtf = (
+                latency_ms / 1000.0 / audio_duration_s if audio_duration_s > 0 else None
+            )
+            peak_vram_gb = batch_result.peak_vram_gb
 
             headers = {
                 "Content-Disposition": 'inline; filename="omnivoice.wav"',
@@ -763,8 +1121,12 @@ def create_app(
                 "X-OmniVoice-Runner": app.state.runner_name,
                 "X-OmniVoice-Device": app.state.device,
                 "X-OmniVoice-Peak-Vram-Gb": f"{peak_vram_gb:.3f}",
+                "X-OmniVoice-Pre-Batch-Ms": f"{pre_batch_ms:.2f}",
+                "X-OmniVoice-Prompt-Prepare-Ms": f"{prompt_prepare_ms:.2f}",
+                "X-OmniVoice-Batch-Estimate-Ms": f"{batch_estimate_ms:.2f}",
                 "X-OmniVoice-Queue-Wait-Ms": f"{batch_result.queue_wait_ms:.2f}",
                 "X-OmniVoice-Batch-Exec-Ms": f"{batch_result.batch_exec_ms:.2f}",
+                "X-OmniVoice-Response-Encode-Ms": f"{response_encode_ms:.2f}",
                 "X-OmniVoice-Batch-Requests": str(batch_result.batch_requests),
                 "X-OmniVoice-Batch-Target-Tokens": str(
                     batch_result.batch_target_tokens
@@ -776,7 +1138,10 @@ def create_app(
                     batch_result.batch_max_sequence_length
                 ),
                 "X-OmniVoice-Batch-Lane": batch_key.lane,
+                "X-OmniVoice-Prompt-Source": prompt_source,
             }
+            if prompt_id_value is not None:
+                headers["X-OmniVoice-Prompt-Id"] = prompt_id_value
             if rtf is not None:
                 headers["X-OmniVoice-RTF"] = f"{rtf:.4f}"
             if saved_path is not None:
@@ -784,9 +1149,11 @@ def create_app(
 
             logger.info(
                 "request_id=%s status=success mode=%s lane=%s runner=%s started_at=%s "
-                "finished_at=%s latency_ms=%.2f queue_wait_ms=%.2f batch_exec_ms=%.2f "
-                "batch_requests=%d audio_s=%.3f rtf=%s text_chars=%d has_ref_audio=%s "
-                "language=%s device=%s saved_path=%s",
+                "finished_at=%s latency_ms=%.2f pre_batch_ms=%.2f "
+                "prompt_prepare_ms=%.2f batch_estimate_ms=%.2f "
+                "queue_wait_ms=%.2f batch_exec_ms=%.2f response_encode_ms=%.2f "
+                "batch_requests=%d audio_s=%.3f rtf=%s text_chars=%d "
+                "prompt_source=%s language=%s device=%s saved_path=%s",
                 request_id,
                 mode.value,
                 batch_key.lane,
@@ -794,13 +1161,17 @@ def create_app(
                 _iso_utc(started_at),
                 _iso_utc(finished_at),
                 latency_ms,
+                pre_batch_ms,
+                prompt_prepare_ms,
+                batch_estimate_ms,
                 batch_result.queue_wait_ms,
                 batch_result.batch_exec_ms,
+                response_encode_ms,
                 batch_result.batch_requests,
                 audio_duration_s,
                 f"{rtf:.4f}" if rtf is not None else "-",
                 len(text_value),
-                has_ref_audio,
+                prompt_source,
                 language_value or "auto",
                 app.state.device,
                 str(saved_path) if saved_path is not None else "-",
@@ -835,6 +1206,10 @@ def main(argv: list[str] | None = None) -> None:
     """CLI entrypoint."""
     parser = build_parser()
     args = parser.parse_args(argv)
+    try:
+        batch_bucket_sizes = _parse_batch_bucket_sizes(args.batch_bucket_sizes)
+    except ValueError as exc:
+        parser.error(str(exc))
 
     logging.basicConfig(
         level=getattr(
@@ -859,6 +1234,9 @@ def main(argv: list[str] | None = None) -> None:
         max_batch_conditioning_tokens=args.max_batch_conditioning_tokens,
         max_batch_padding_ratio=args.max_batch_padding_ratio,
         clone_prompt_cache_size=args.clone_prompt_cache_size,
+        registered_clone_prompt_store_size=args.registered_clone_prompt_store_size,
+        token_estimate_cache_size=args.token_estimate_cache_size,
+        batch_bucket_sizes=batch_bucket_sizes,
     )
 
     uvicorn.run(
