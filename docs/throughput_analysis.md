@@ -161,7 +161,6 @@ Implemented in repo on **2026-04-17**:
 
 Still planned and not implemented yet:
 
-- **Phase 6** smarter scheduler / multi-worker drain logic
 - **Phase 7** multi-replica scaling
 
 ## Optimization Phases
@@ -391,7 +390,7 @@ Success criteria:
 
 ## Phase 6: Smarter Scheduler Instead Of Bigger Batches
 
-Status: **Planned**
+Status: **Partially Implemented**
 
 Goal: improve drain time without creating giant slow batches.
 
@@ -410,6 +409,28 @@ Notes:
 - this may require more than one worker thread or more than one model replica
 - the current one-worker architecture is the structural wall
 
+Current measured update on 2026-04-17:
+
+- a scheduler upgrade now prefers fuller ready batches across batch keys while
+  keeping an anti-starvation fallback for the oldest queued request
+- this is exposed through `batch_scheduler_metrics` in `/health`
+- direct scheduler probes confirmed the intended behavior:
+  - fuller deeper batches are promoted while the queue is still fresh
+  - the oldest request takes priority again once wait time crosses the
+    starvation threshold
+- for the actual homogeneous clone throughput benchmark, the result stayed
+  roughly flat at about `17.18s` wall time because the queue was already a
+  single `short_ref` lane with no alternate better batch to promote
+- a `25`-request cap probe was worse at about `18.03s`, so smaller balanced
+  waves are not the answer on this GPU for this workload
+
+Important:
+
+- the implemented scheduler logic is still useful for mixed workloads and burst
+  fairness
+- for the target clone benchmark, the remaining wall is now mostly structural:
+  one in-flight batch at a time on a compute-saturated GPU
+
 Priority:
 
 - **Medium to high**
@@ -420,7 +441,7 @@ Success criteria:
 
 ## Phase 7: Scale Beyond One In-Flight Generate
 
-Status: **Planned**
+Status: **Partially Implemented and Measured**
 
 Goal: decide whether the 3-5 second target is possible on one GPU, and if not, add the minimum necessary parallelism.
 
@@ -433,6 +454,45 @@ Options:
 Reality:
 
 - if clone mode at `num_step=16` still sits well above target after Phases 1-6, **single in-process single-replica serving is the limit**, not just an implementation bug
+
+Current measured update on 2026-04-17:
+
+- the API now supports `--replica-count` to load multiple runner and batcher
+  replicas in one server process
+- requests are routed with least-outstanding selection plus round-robin
+  tiebreaking, and responses expose `X-OmniVoice-Replica-Index`
+- `/health` now reports aggregate and per-replica scheduler metrics
+- the first multi-replica attempt exposed a real stability issue:
+  concurrent lazy CUDA Graph capture across replicas caused runtime failures
+- that was fixed by:
+  - serializing CUDA Graph capture globally in the graph wrapper
+  - prewarming the `1-request` clone shape in addition to the larger hot-path
+    shapes
+- after that fix, `replica_count=2` became stable for the full benchmark
+
+Measured outcome on one RTX 3090, `clone`, `num_step=16`, full postprocess:
+
+- `replica_count=1`: about `16.90s` wall, `5.92 req/s`
+- `replica_count=2`: about `17.06s` wall, `5.86 req/s`
+
+What changed:
+
+- queue wait improved only slightly
+- per-batch execution got worse because both replicas now contend for the same
+  GPU and drive device VRAM from about `9.36 GB` to about `16.72 GB`
+- decode and audio decode time increased sharply under same-GPU dual-replica
+  contention
+- the workload did distribute across replicas, but not in a way that produced
+  a net throughput gain on this hardware
+
+Conclusion:
+
+- **two in-process replicas on one RTX 3090 are not the right scaling path for
+  the 100-clone / 3-5 second target**
+- Phase 7 still matters, but on this hardware it should now be interpreted as:
+  - process sharding across multiple GPUs
+  - a stronger single GPU
+  - or both
 
 Priority:
 
@@ -457,8 +517,7 @@ Recommended order:
 
 That order gave the best chance of gaining real throughput early without
 rewriting too much too soon. After the current work, the highest-value
-remaining items are Phase 6 first, then Phase 7 if the wall target is still
-hard.
+remaining item is Phase 7 if the wall target is still hard.
 
 ## Recommended Product Modes
 

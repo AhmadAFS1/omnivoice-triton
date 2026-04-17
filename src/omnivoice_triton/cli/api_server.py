@@ -51,6 +51,7 @@ DEFAULT_BATCH_BUCKET_SIZES = (1, 2, 4, 8, 16, 32)
 DEFAULT_REGISTERED_CLONE_PROMPT_STORE_SIZE = 256
 DEFAULT_TOKEN_ESTIMATE_CACHE_SIZE = 4096
 DEFAULT_DECODE_POSTPROCESS_WORKERS = max(1, min(4, os.cpu_count() or 1))
+DEFAULT_REPLICA_COUNT = 1
 DEFAULT_PREWARM_CLONE_BATCH_SIZES: tuple[int, ...] = ()
 DEFAULT_PREWARM_CLONE_SEQUENCE_LENGTHS: tuple[int, ...] = ()
 _SLUG_RE = re.compile(r"[^a-z0-9]+")
@@ -283,6 +284,12 @@ def build_parser() -> argparse.ArgumentParser:
         type=int,
         default=DEFAULT_DECODE_POSTPROCESS_WORKERS,
         help="Worker threads for CPU-side audio postprocessing after decode.",
+    )
+    parser.add_argument(
+        "--replica-count",
+        type=int,
+        default=DEFAULT_REPLICA_COUNT,
+        help="Number of runner/batcher replicas to load in one server process.",
     )
     parser.add_argument(
         "--batch-bucket-sizes",
@@ -724,6 +731,77 @@ def _build_clone_prewarm_shapes(
     return tuple(sorted(shapes))
 
 
+def _select_request_batcher(app: FastAPI) -> GenerationBatcher:
+    batchers = list(getattr(app.state, "batchers", []) or [])
+    if not batchers:
+        batcher = getattr(app.state, "batcher", None)
+        if batcher is None:
+            raise HTTPException(503, detail="Batcher is not ready yet.")
+        return batcher
+    if len(batchers) == 1:
+        return batchers[0]
+
+    with app.state.replica_select_lock:
+        scored: list[tuple[int, int, int, GenerationBatcher]] = []
+        for index, batcher in enumerate(batchers):
+            outstanding_requests = 0
+            pending_requests = 0
+            if hasattr(batcher, "get_scheduler_metrics"):
+                try:
+                    metrics = batcher.get_scheduler_metrics()
+                    outstanding_requests = int(metrics.get("outstanding_requests", 0))
+                    pending_requests = int(metrics.get("pending_requests", 0))
+                except Exception:  # pragma: no cover - selection should stay resilient
+                    outstanding_requests = 0
+                    pending_requests = 0
+            scored.append((outstanding_requests, pending_requests, index, batcher))
+
+        min_pending = min(item[0] for item in scored)
+        candidates = [item for item in scored if item[0] == min_pending]
+        offset = int(app.state.replica_rr_counter % len(candidates))
+        app.state.replica_rr_counter += 1
+        return candidates[offset][3]
+
+
+def _collect_replica_scheduler_metrics(
+    batchers: list[GenerationBatcher],
+) -> tuple[dict[str, Any], list[dict[str, Any]]]:
+    if not batchers:
+        return {}, []
+
+    per_replica: list[dict[str, Any]] = []
+    totals = {
+        "batches_total": 0,
+        "non_anchor_batches": 0,
+        "starvation_anchor_batches": 0,
+        "pending_requests": 0,
+        "inflight_requests": 0,
+        "outstanding_requests": 0,
+        "submitted_requests": 0,
+        "completed_requests": 0,
+        "starvation_threshold_ms": 0.0,
+    }
+    for batcher in batchers:
+        metrics = batcher.get_scheduler_metrics()
+        payload = {"replica_index": batcher.replica_index, **metrics}
+        per_replica.append(payload)
+        totals["batches_total"] += int(metrics.get("batches_total", 0))
+        totals["non_anchor_batches"] += int(metrics.get("non_anchor_batches", 0))
+        totals["starvation_anchor_batches"] += int(
+            metrics.get("starvation_anchor_batches", 0)
+        )
+        totals["pending_requests"] += int(metrics.get("pending_requests", 0))
+        totals["inflight_requests"] += int(metrics.get("inflight_requests", 0))
+        totals["outstanding_requests"] += int(metrics.get("outstanding_requests", 0))
+        totals["submitted_requests"] += int(metrics.get("submitted_requests", 0))
+        totals["completed_requests"] += int(metrics.get("completed_requests", 0))
+        totals["starvation_threshold_ms"] = max(
+            float(totals["starvation_threshold_ms"]),
+            float(metrics.get("starvation_threshold_ms", 0.0)),
+        )
+    return totals, per_replica
+
+
 def create_app(
     model_checkpoint: str = DEFAULT_MODEL_ID,
     runner_name: str = DEFAULT_RUNNER,
@@ -743,6 +821,7 @@ def create_app(
     registered_clone_prompt_store_size: int = DEFAULT_REGISTERED_CLONE_PROMPT_STORE_SIZE,
     token_estimate_cache_size: int = DEFAULT_TOKEN_ESTIMATE_CACHE_SIZE,
     batch_bucket_sizes: tuple[int, ...] = DEFAULT_BATCH_BUCKET_SIZES,
+    replica_count: int = DEFAULT_REPLICA_COUNT,
     prewarm_clone_batch_sizes: tuple[int, ...] = DEFAULT_PREWARM_CLONE_BATCH_SIZES,
     prewarm_clone_sequence_lengths: tuple[
         int, ...
@@ -757,107 +836,146 @@ def create_app(
         )
 
     factory = runner_factory or create_runner
+    resolved_replica_count = max(1, int(replica_count))
 
     @asynccontextmanager
     async def lifespan(app: FastAPI):
-        runner = _build_runner(
-            runner_name,
-            model_checkpoint=model_checkpoint,
-            device=resolved_device,
-            dtype=dtype,
-            enable_sage_attention=enable_sage_attention,
-            full_triton_patch=full_triton_patch,
-            decode_postprocess_workers=decode_postprocess_workers,
-            runner_factory=factory,
-        )
-        runner.load_model()
-        model = runner.model
-        if load_asr and hasattr(model, "load_asr_model"):
-            model.load_asr_model()
-        app.state.runner = runner
-        app.state.sample_rate = int(
-            getattr(model, "sampling_rate", DEFAULT_SAMPLE_RATE) or DEFAULT_SAMPLE_RATE
-        )
-        app.state.clone_prompt_cache = ClonePromptCache(
-            max_size=clone_prompt_cache_size
-        )
-        app.state.registered_clone_prompts = RegisteredClonePromptStore(
-            max_size=registered_clone_prompt_store_size,
-            storage_device=resolved_device,
-        )
-        app.state.token_estimate_cache = TokenEstimateCache(
-            max_size=token_estimate_cache_size
-        )
-        app.state.gpu_metrics_monitor = GPUMetricsMonitor(resolved_device)
-        app.state.batcher = GenerationBatcher(
-            model,
-            collect_ms=batch_collect_ms,
-            max_batch_requests=max_batch_requests,
-            max_batch_target_tokens=max_batch_target_tokens,
-            max_batch_conditioning_tokens=max_batch_conditioning_tokens,
-            max_batch_padding_ratio=max_batch_padding_ratio,
-            batch_bucket_sizes=batch_bucket_sizes,
-            gpu_metrics_monitor=app.state.gpu_metrics_monitor,
-        )
-        requested_prewarm_batch_sizes = tuple(
-            size for size in prewarm_clone_batch_sizes if size <= max_batch_requests
-        )
-        requested_prewarm_shapes = _build_clone_prewarm_shapes(
-            model,
-            request_batch_sizes=requested_prewarm_batch_sizes,
-            sequence_lengths=prewarm_clone_sequence_lengths,
-        )
-        prewarm_started = time.perf_counter()
-        prewarm_summary: dict[str, Any] = {
-            "requested_batch_sizes": list(requested_prewarm_batch_sizes),
-            "requested_sequence_lengths": list(prewarm_clone_sequence_lengths),
-            "requested_shapes": [list(shape) for shape in requested_prewarm_shapes],
-            "warmed_shapes": [],
-            "supported": hasattr(runner, "prewarm_cuda_graph_shapes"),
-        }
-        if requested_prewarm_shapes and hasattr(runner, "prewarm_cuda_graph_shapes"):
-            prewarm_summary.update(
-                runner.prewarm_cuda_graph_shapes(requested_prewarm_shapes)
-            )
-        prewarm_summary["duration_ms"] = round(
-            (time.perf_counter() - prewarm_started) * 1000.0,
-            2,
-        )
-        app.state.cuda_graph_prewarm_summary = prewarm_summary
-        logger.info(
-            "API server ready runner=%s model=%s device=%s dtype=%s asr_loaded=%s "
-            "batch_collect_ms=%.1f max_batch_requests=%d batch_bucket_sizes=%s "
-            "full_triton_patch=%s decode_postprocess_workers=%d "
-            "prewarm_clone_batch_sizes=%s "
-            "prewarm_clone_sequence_lengths=%s gpu_metrics_available=%s "
-            "gpu_device=%s",
-            runner_name,
-            model_checkpoint,
-            resolved_device,
-            dtype,
-            bool(getattr(model, "_asr_pipe", None)),
-            batch_collect_ms,
-            max_batch_requests,
-            list(batch_bucket_sizes),
-            full_triton_patch,
-            decode_postprocess_workers,
-            list(requested_prewarm_batch_sizes),
-            list(prewarm_clone_sequence_lengths),
-            app.state.gpu_metrics_monitor.available,
-            app.state.gpu_metrics_monitor.device_name
-            or app.state.gpu_metrics_monitor.unavailable_reason
-            or "-",
-        )
+        runners: list[Any] = []
+        batchers: list[GenerationBatcher] = []
+        gpu_monitor = GPUMetricsMonitor(resolved_device)
         try:
-            yield
-        finally:
-            if app.state.batcher is not None:
-                app.state.batcher.close()
+            for replica_index in range(resolved_replica_count):
+                runner = _build_runner(
+                    runner_name,
+                    model_checkpoint=model_checkpoint,
+                    device=resolved_device,
+                    dtype=dtype,
+                    enable_sage_attention=enable_sage_attention,
+                    full_triton_patch=full_triton_patch,
+                    decode_postprocess_workers=decode_postprocess_workers,
+                    runner_factory=factory,
+                )
+                runner.load_model()
+                model = runner.model
+                if replica_index == 0 and load_asr and hasattr(model, "load_asr_model"):
+                    model.load_asr_model()
+                runners.append(runner)
+
+                batchers.append(
+                    GenerationBatcher(
+                        model,
+                        replica_index=replica_index,
+                        collect_ms=batch_collect_ms,
+                        max_batch_requests=max_batch_requests,
+                        max_batch_target_tokens=max_batch_target_tokens,
+                        max_batch_conditioning_tokens=max_batch_conditioning_tokens,
+                        max_batch_padding_ratio=max_batch_padding_ratio,
+                        batch_bucket_sizes=batch_bucket_sizes,
+                        gpu_metrics_monitor=gpu_monitor,
+                    )
+                )
+
+            runner = runners[0]
+            model = runner.model
+            app.state.runner = runner
+            app.state.runners = runners
+            app.state.batcher = batchers[0]
+            app.state.batchers = batchers
+            app.state.gpu_metrics_monitor = gpu_monitor
+            app.state.sample_rate = int(
+                getattr(model, "sampling_rate", DEFAULT_SAMPLE_RATE)
+                or DEFAULT_SAMPLE_RATE
+            )
+            app.state.clone_prompt_cache = ClonePromptCache(
+                max_size=clone_prompt_cache_size
+            )
+            app.state.registered_clone_prompts = RegisteredClonePromptStore(
+                max_size=registered_clone_prompt_store_size,
+                storage_device=resolved_device,
+            )
+            app.state.token_estimate_cache = TokenEstimateCache(
+                max_size=token_estimate_cache_size
+            )
+            requested_prewarm_batch_sizes = tuple(
+                size for size in prewarm_clone_batch_sizes if size <= max_batch_requests
+            )
+            replica_prewarm_summaries: list[dict[str, Any]] = []
+            for replica_index, replica_runner in enumerate(runners):
+                requested_prewarm_shapes = _build_clone_prewarm_shapes(
+                    replica_runner.model,
+                    request_batch_sizes=requested_prewarm_batch_sizes,
+                    sequence_lengths=prewarm_clone_sequence_lengths,
+                )
+                prewarm_started = time.perf_counter()
+                prewarm_summary: dict[str, Any] = {
+                    "replica_index": replica_index,
+                    "requested_batch_sizes": list(requested_prewarm_batch_sizes),
+                    "requested_sequence_lengths": list(prewarm_clone_sequence_lengths),
+                    "requested_shapes": [
+                        list(shape) for shape in requested_prewarm_shapes
+                    ],
+                    "warmed_shapes": [],
+                    "supported": hasattr(replica_runner, "prewarm_cuda_graph_shapes"),
+                }
+                if requested_prewarm_shapes and hasattr(
+                    replica_runner, "prewarm_cuda_graph_shapes"
+                ):
+                    prewarm_summary.update(
+                        replica_runner.prewarm_cuda_graph_shapes(requested_prewarm_shapes)
+                    )
+                prewarm_summary["duration_ms"] = round(
+                    (time.perf_counter() - prewarm_started) * 1000.0,
+                    2,
+                )
+                replica_prewarm_summaries.append(prewarm_summary)
+
+            app.state.cuda_graph_prewarm_summary = replica_prewarm_summaries[0]
+            app.state.replica_cuda_graph_prewarm_summaries = (
+                replica_prewarm_summaries
+            )
+            logger.info(
+                "API server ready runner=%s model=%s device=%s dtype=%s asr_loaded=%s "
+                "replica_count=%d batch_collect_ms=%.1f max_batch_requests=%d "
+                "batch_bucket_sizes=%s full_triton_patch=%s "
+                "decode_postprocess_workers=%d prewarm_clone_batch_sizes=%s "
+                "prewarm_clone_sequence_lengths=%s gpu_metrics_available=%s "
+                "gpu_device=%s",
+                runner_name,
+                model_checkpoint,
+                resolved_device,
+                dtype,
+                bool(getattr(model, "_asr_pipe", None)),
+                resolved_replica_count,
+                batch_collect_ms,
+                max_batch_requests,
+                list(batch_bucket_sizes),
+                full_triton_patch,
+                decode_postprocess_workers,
+                list(requested_prewarm_batch_sizes),
+                list(prewarm_clone_sequence_lengths),
+                app.state.gpu_metrics_monitor.available,
+                app.state.gpu_metrics_monitor.device_name
+                or app.state.gpu_metrics_monitor.unavailable_reason
+                or "-",
+            )
+            try:
+                yield
+            finally:
+                for batcher in reversed(app.state.batchers or []):
+                    batcher.close()
                 app.state.batcher = None
-            app.state.gpu_metrics_monitor = None
-            if app.state.runner is not None:
-                app.state.runner.unload_model()
+                app.state.batchers = []
+                app.state.gpu_metrics_monitor = None
+                for replica_runner in reversed(app.state.runners or []):
+                    replica_runner.unload_model()
                 app.state.runner = None
+                app.state.runners = []
+        except Exception:
+            for batcher in reversed(batchers):
+                batcher.close()
+            for replica_runner in reversed(runners):
+                replica_runner.unload_model()
+            raise
 
     app = FastAPI(
         title="omnivoice-triton API",
@@ -874,14 +992,19 @@ def create_app(
     app.state.full_triton_patch = full_triton_patch
     app.state.decode_postprocess_workers = decode_postprocess_workers
     app.state.save_dir = Path(save_dir) if save_dir else None
+    app.state.replica_count = resolved_replica_count
     app.state.runner = None
+    app.state.runners = []
     app.state.sample_rate = DEFAULT_SAMPLE_RATE
     app.state.batcher = None
+    app.state.batchers = []
     app.state.clone_prompt_cache = None
     app.state.registered_clone_prompts = None
     app.state.token_estimate_cache = None
     app.state.gpu_metrics_monitor = None
     app.state.asr_load_lock = threading.Lock()
+    app.state.replica_select_lock = threading.Lock()
+    app.state.replica_rr_counter = 0
     app.state.batch_collect_ms = batch_collect_ms
     app.state.max_batch_requests = max_batch_requests
     app.state.max_batch_target_tokens = max_batch_target_tokens
@@ -894,15 +1017,19 @@ def create_app(
     app.state.prewarm_clone_batch_sizes = list(prewarm_clone_batch_sizes)
     app.state.prewarm_clone_sequence_lengths = list(prewarm_clone_sequence_lengths)
     app.state.cuda_graph_prewarm_summary = None
+    app.state.replica_cuda_graph_prewarm_summaries = []
 
     @app.get("/health")
     def health() -> dict[str, Any]:
         runner = app.state.runner
+        batcher = app.state.batcher
+        batchers = list(app.state.batchers or [])
         model = getattr(runner, "model", None)
         graph_metrics: dict[str, Any] = {}
         generation_metrics: dict[str, Any] = {}
         gpu_metrics: dict[str, Any] = {"available": False, "reason": "not_initialized"}
         last_batch_gpu_metrics: dict[str, Any] | None = None
+        batch_scheduler_metrics: dict[str, Any] = {}
         if runner is not None and hasattr(runner, "get_cuda_graph_metrics"):
             try:
                 graph_metrics = runner.get_cuda_graph_metrics()
@@ -920,6 +1047,25 @@ def create_app(
                 last_batch_gpu_metrics = gpu_monitor.get_last_batch_metrics()
             except Exception:  # pragma: no cover - health should stay resilient
                 logger.exception("Failed to collect GPU metrics.")
+        if batchers:
+            try:
+                batch_scheduler_metrics, per_replica_scheduler = (
+                    _collect_replica_scheduler_metrics(batchers)
+                )
+            except Exception:  # pragma: no cover - health should stay resilient
+                logger.exception("Failed to collect batch scheduler metrics.")
+                per_replica_scheduler = []
+        elif batcher is not None and hasattr(batcher, "get_scheduler_metrics"):
+            try:
+                batch_scheduler_metrics = batcher.get_scheduler_metrics()
+                per_replica_scheduler = [
+                    {"replica_index": batcher.replica_index, **batch_scheduler_metrics}
+                ]
+            except Exception:  # pragma: no cover - health should stay resilient
+                logger.exception("Failed to collect batch scheduler metrics.")
+                per_replica_scheduler = []
+        else:
+            per_replica_scheduler = []
         return {
             "status": "ok",
             "model": app.state.model_checkpoint,
@@ -933,6 +1079,7 @@ def create_app(
             "sage_attention": bool(app.state.enable_sage_attention),
             "full_triton_patch": bool(app.state.full_triton_patch),
             "decode_postprocess_workers": int(app.state.decode_postprocess_workers),
+            "replica_count": int(app.state.replica_count),
             "batch_collect_ms": app.state.batch_collect_ms,
             "max_batch_requests": app.state.max_batch_requests,
             "max_batch_target_tokens": app.state.max_batch_target_tokens,
@@ -951,9 +1098,12 @@ def create_app(
             "cuda_graph_capture_count": int(graph_metrics.get("capture_count", 0)),
             "cuda_graph_shapes": graph_metrics.get("shapes", []),
             "cuda_graph_prewarm": app.state.cuda_graph_prewarm_summary,
+            "replica_cuda_graph_prewarm_summaries": app.state.replica_cuda_graph_prewarm_summaries,
             "last_generation_metrics": generation_metrics,
             "gpu_metrics": gpu_metrics,
             "last_batch_gpu_metrics": last_batch_gpu_metrics,
+            "batch_scheduler_metrics": batch_scheduler_metrics,
+            "replica_batch_scheduler_metrics": per_replica_scheduler,
         }
 
     @app.get("/languages")
@@ -1086,8 +1236,7 @@ def create_app(
         runner = app.state.runner
         if runner is None:
             raise HTTPException(503, detail="Model is not ready yet.")
-        batcher = app.state.batcher
-        if batcher is None:
+        if not (app.state.batchers or app.state.batcher):
             raise HTTPException(503, detail="Batcher is not ready yet.")
 
         text_value = _normalize_text(text)
@@ -1276,6 +1425,7 @@ def create_app(
                 generation_config=gen_config,
             )
             pre_batch_ms = (time.perf_counter() - request_started_perf) * 1000.0
+            batcher = _select_request_batcher(app)
             batch_result = batcher.submit(pending)
 
             response_encode_started_perf = time.perf_counter()
@@ -1315,6 +1465,7 @@ def create_app(
                 "X-OmniVoice-Latency-Ms": f"{latency_ms:.2f}",
                 "X-OmniVoice-Audio-Duration-S": f"{audio_duration_s:.3f}",
                 "X-OmniVoice-Runner": app.state.runner_name,
+                "X-OmniVoice-Replica-Index": str(batch_result.replica_index),
                 "X-OmniVoice-Device": app.state.device,
                 "X-OmniVoice-Peak-Vram-Gb": f"{peak_vram_gb:.3f}",
                 "X-OmniVoice-Pre-Batch-Ms": f"{pre_batch_ms:.2f}",
@@ -1401,6 +1552,7 @@ def create_app(
 
             logger.info(
                 "request_id=%s status=success mode=%s lane=%s runner=%s started_at=%s "
+                "replica=%d "
                 "finished_at=%s latency_ms=%.2f pre_batch_ms=%.2f "
                 "prompt_prepare_ms=%.2f batch_estimate_ms=%.2f "
                 "queue_wait_ms=%.2f batch_exec_ms=%.2f response_encode_ms=%.2f "
@@ -1417,6 +1569,7 @@ def create_app(
                 batch_key.lane,
                 app.state.runner_name,
                 _iso_utc(started_at),
+                batch_result.replica_index,
                 _iso_utc(finished_at),
                 latency_ms,
                 pre_batch_ms,
@@ -1538,6 +1691,7 @@ def main(argv: list[str] | None = None) -> None:
         registered_clone_prompt_store_size=args.registered_clone_prompt_store_size,
         token_estimate_cache_size=args.token_estimate_cache_size,
         batch_bucket_sizes=batch_bucket_sizes,
+        replica_count=args.replica_count,
         prewarm_clone_batch_sizes=prewarm_clone_batch_sizes,
         prewarm_clone_sequence_lengths=prewarm_clone_sequence_lengths,
     )

@@ -6,6 +6,7 @@ eliminating kernel launch overhead.
 """
 
 import logging
+import threading
 from typing import Any
 
 import torch
@@ -28,6 +29,8 @@ class _CUDAGraphForward:
       2. Replay captured graph
       3. Return output from static buffer
     """
+
+    _global_capture_lock = threading.Lock()
 
     def __init__(self, model: Any) -> None:
         self._model = model
@@ -131,17 +134,20 @@ class _CUDAGraphForward:
             )
 
         key = self._get_shape_key(input_ids)
-
-        if key not in self._graphs:
-            entry = self._capture(
-                input_ids,
-                audio_mask,
-                attention_mask,
-                document_ids,
-                position_ids,
-            )
-        else:
-            entry = self._graphs[key]
+        entry = self._graphs.get(key)
+        if entry is None:
+            # CUDA Graph capture is effectively a device-global critical section.
+            # Serializing lazy captures avoids cross-replica capture conflicts.
+            with self._global_capture_lock:
+                entry = self._graphs.get(key)
+                if entry is None:
+                    entry = self._capture(
+                        input_ids,
+                        audio_mask,
+                        attention_mask,
+                        document_ids,
+                        position_ids,
+                    )
 
         # Copy ALL inputs into their static buffers before replay
         entry["static_input_ids"].copy_(input_ids)
@@ -194,12 +200,15 @@ class _CUDAGraphForward:
                 "CUDA Graph prewarm shape codebook dimension does not match model config."
             )
 
-        self._capture(
-            input_ids=input_ids,
-            audio_mask=audio_mask,
-            attention_mask=attention_mask,
-        )
-        return True
+        with self._global_capture_lock:
+            if shape in self._graphs:
+                return False
+            self._capture(
+                input_ids=input_ids,
+                audio_mask=audio_mask,
+                attention_mask=attention_mask,
+            )
+            return True
 
     def get_metrics(self) -> dict[str, Any]:
         """Return summary metrics for captured CUDA Graph shapes."""

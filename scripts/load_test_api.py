@@ -324,6 +324,7 @@ def _extract_result(
         "local_finished_at": finished_local.isoformat().replace("+00:00", "Z"),
         "elapsed_s": round(elapsed_s, 6),
         "request_id": headers.get("x-omnivoice-request-id"),
+        "replica_index": headers.get("x-omnivoice-replica-index"),
         "started_at": headers.get("x-omnivoice-started-at"),
         "finished_at": headers.get("x-omnivoice-finished-at"),
         "latency_ms": headers.get("x-omnivoice-latency-ms"),
@@ -421,6 +422,7 @@ async def _run_request(
                 "local_finished_at": finished_local.isoformat().replace("+00:00", "Z"),
                 "elapsed_s": round(finished_perf - started_perf, 6),
                 "request_id": None,
+                "replica_index": None,
                 "started_at": None,
                 "finished_at": None,
                 "latency_ms": None,
@@ -672,6 +674,11 @@ def _summarize(
             for row in successes
             if row["postprocess_mode"] is not None
         )
+        replica_indices = Counter(
+            str(row["replica_index"])
+            for row in successes
+            if row["replica_index"] is not None
+        )
 
         logger.info(
             "  latency_ms avg=%s p50=%s p95=%s max=%s",
@@ -839,6 +846,11 @@ def _summarize(
                 f"{mode}=>{count}" for mode, count in sorted(postprocess_modes.items())
             )
             logger.info("  postprocess modes: %s", distribution)
+        if replica_indices:
+            distribution = ", ".join(
+                f"{replica}=>{count}" for replica, count in sorted(replica_indices.items())
+            )
+            logger.info("  replica distribution: %s", distribution)
 
         server_starts = sorted(
             row["started_at"] for row in successes if row.get("started_at")

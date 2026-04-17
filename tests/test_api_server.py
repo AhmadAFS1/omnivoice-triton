@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import threading
 import time
+from collections import deque
 from concurrent.futures import ThreadPoolExecutor
 from io import BytesIO
 from pathlib import Path
@@ -16,6 +17,11 @@ import torch
 from fastapi.testclient import TestClient
 
 from omnivoice_triton.cli.api_server import create_app
+from omnivoice_triton.serving.batching import (
+    GenerationBatchKey,
+    GenerationBatcher,
+    PendingGeneration,
+)
 
 
 class _FakeTokenizer:
@@ -221,11 +227,13 @@ def test_health_and_languages(tmp_path: Path) -> None:
         assert payload["sage_attention"] is True
         assert payload["full_triton_patch"] is True
         assert payload["decode_postprocess_workers"] == 3
+        assert payload["replica_count"] == 1
         assert payload["batch_collect_ms"] == 10.0
         assert payload["max_batch_requests"] == 32
         assert payload["registered_clone_prompt_count"] == 0
         assert payload["token_estimate_cache_entries"] == 0
         assert payload["batch_bucket_sizes"] == [1, 2, 4, 8, 16, 32]
+        assert payload["batch_scheduler_metrics"]["batches_total"] == 0
         assert payload["cuda_graph_capture_count"] == 0
         assert payload["prewarm_clone_batch_sizes"] == [2, 4]
         assert payload["prewarm_clone_sequence_lengths"] == [163]
@@ -284,6 +292,7 @@ def test_generate_design_returns_wav_and_saves_file(tmp_path: Path) -> None:
     assert response.headers["x-omnivoice-peak-vram-gb"]
     assert response.headers["x-omnivoice-audio-duration-s"]
     assert response.headers["x-omnivoice-batch-requests"] == "1"
+    assert response.headers["x-omnivoice-replica-index"] == "0"
     assert response.headers["x-omnivoice-prompt-source"] == "none"
     assert response.headers["x-omnivoice-postprocess-mode"] == "full"
     assert response.headers["x-omnivoice-generate-total-ms"] == "11.00"
@@ -511,6 +520,44 @@ def test_generate_batches_concurrent_requests(tmp_path: Path) -> None:
     assert sorted(flattened) == sorted(texts)
 
 
+def test_generate_distributes_requests_across_replicas(tmp_path: Path) -> None:
+    created: list[_FakeRunner] = []
+    app = _make_app(
+        tmp_path,
+        created,
+        load_asr=False,
+        replica_count=2,
+        batch_collect_ms=0.0,
+        max_batch_requests=8,
+    )
+
+    with TestClient(app) as client:
+        responses = [
+            client.post(
+                "/generate",
+                data={
+                    "mode": "design",
+                    "text": f"Replica request {i}",
+                    "instruct": "warm",
+                },
+            )
+            for i in range(4)
+        ]
+        health = client.get("/health")
+
+    assert all(response.status_code == 200 for response in responses)
+    replica_headers = [
+        response.headers["x-omnivoice-replica-index"] for response in responses
+    ]
+    assert replica_headers == ["0", "1", "0", "1"]
+    assert len(created) == 2
+    assert [len(runner.model.calls) for runner in created] == [2, 2]
+    assert health.status_code == 200
+    payload = health.json()
+    assert payload["replica_count"] == 2
+    assert payload["batch_scheduler_metrics"]["batches_total"] == 4
+
+
 def test_generate_uses_batch_buckets(tmp_path: Path) -> None:
     created: list[_FakeRunner] = []
     app = _make_app(
@@ -595,3 +642,184 @@ def test_generate_validation_errors(tmp_path: Path) -> None:
             },
         )
         assert clone_prompt_with_ref_text.status_code == 400
+
+
+def test_batch_scheduler_prefers_fuller_deeper_batch_before_starvation() -> None:
+    batcher = GenerationBatcher(
+        _FakeModel(),
+        collect_ms=50.0,
+        max_batch_requests=4,
+        max_batch_target_tokens=10000,
+        max_batch_conditioning_tokens=10000,
+        max_batch_padding_ratio=10.0,
+        batch_bucket_sizes=(1, 2, 4),
+    )
+
+    try:
+        key_a = GenerationBatchKey(
+            lane="short_noref",
+            num_step=16,
+            guidance_scale=2.0,
+            t_shift=0.1,
+            layer_penalty_factor=5.0,
+            position_temperature=5.0,
+            class_temperature=0.0,
+            denoise=True,
+            postprocess_mode="full",
+            audio_chunk_duration=30.0,
+            audio_chunk_threshold=30.0,
+        )
+        key_b = GenerationBatchKey(
+            lane="short_ref",
+            num_step=16,
+            guidance_scale=2.0,
+            t_shift=0.1,
+            layer_penalty_factor=5.0,
+            position_temperature=5.0,
+            class_temperature=0.0,
+            denoise=True,
+            postprocess_mode="full",
+            audio_chunk_duration=30.0,
+            audio_chunk_threshold=30.0,
+        )
+
+        pending = deque(
+            [
+                PendingGeneration(
+                    request_id="a1",
+                    mode="design",
+                    text="anchor",
+                    language=None,
+                    instruct=None,
+                    voice_clone_prompt=None,
+                    speed=None,
+                    duration=None,
+                    target_tokens=100,
+                    conditioning_tokens=100,
+                    max_sequence_length=200,
+                    batch_key=key_a,
+                    generation_config=SimpleNamespace(),
+                ),
+                *[
+                    PendingGeneration(
+                        request_id=f"b{i}",
+                        mode="clone",
+                        text=f"batch-{i}",
+                        language=None,
+                        instruct=None,
+                        voice_clone_prompt=SimpleNamespace(ref_text="ref"),
+                        speed=None,
+                        duration=None,
+                        target_tokens=100,
+                        conditioning_tokens=100,
+                        max_sequence_length=200,
+                        batch_key=key_b,
+                        generation_config=SimpleNamespace(),
+                    )
+                    for i in range(4)
+                ],
+            ]
+        )
+
+        with batcher._condition:
+            batcher._pending = pending
+            selected = batcher._select_batch_locked()
+
+        assert len(selected) == 4
+        assert all(request.batch_key == key_b for request in selected)
+        metrics = batcher.get_scheduler_metrics()
+        assert metrics["non_anchor_batches"] == 1
+        assert metrics["starvation_anchor_batches"] == 0
+    finally:
+        batcher.close()
+
+
+def test_batch_scheduler_uses_anchor_after_starvation_threshold() -> None:
+    batcher = GenerationBatcher(
+        _FakeModel(),
+        collect_ms=10.0,
+        max_batch_requests=4,
+        max_batch_target_tokens=10000,
+        max_batch_conditioning_tokens=10000,
+        max_batch_padding_ratio=10.0,
+        batch_bucket_sizes=(1, 2, 4),
+    )
+
+    try:
+        key_a = GenerationBatchKey(
+            lane="short_noref",
+            num_step=16,
+            guidance_scale=2.0,
+            t_shift=0.1,
+            layer_penalty_factor=5.0,
+            position_temperature=5.0,
+            class_temperature=0.0,
+            denoise=True,
+            postprocess_mode="full",
+            audio_chunk_duration=30.0,
+            audio_chunk_threshold=30.0,
+        )
+        key_b = GenerationBatchKey(
+            lane="short_ref",
+            num_step=16,
+            guidance_scale=2.0,
+            t_shift=0.1,
+            layer_penalty_factor=5.0,
+            position_temperature=5.0,
+            class_temperature=0.0,
+            denoise=True,
+            postprocess_mode="full",
+            audio_chunk_duration=30.0,
+            audio_chunk_threshold=30.0,
+        )
+
+        old_anchor = PendingGeneration(
+            request_id="a1",
+            mode="design",
+            text="anchor",
+            language=None,
+            instruct=None,
+            voice_clone_prompt=None,
+            speed=None,
+            duration=None,
+            target_tokens=100,
+            conditioning_tokens=100,
+            max_sequence_length=200,
+            batch_key=key_a,
+            generation_config=SimpleNamespace(),
+            enqueued_at=time.perf_counter() - 0.2,
+        )
+        pending = deque(
+            [
+                old_anchor,
+                *[
+                    PendingGeneration(
+                        request_id=f"b{i}",
+                        mode="clone",
+                        text=f"batch-{i}",
+                        language=None,
+                        instruct=None,
+                        voice_clone_prompt=SimpleNamespace(ref_text="ref"),
+                        speed=None,
+                        duration=None,
+                        target_tokens=100,
+                        conditioning_tokens=100,
+                        max_sequence_length=200,
+                        batch_key=key_b,
+                        generation_config=SimpleNamespace(),
+                    )
+                    for i in range(4)
+                ],
+            ]
+        )
+
+        with batcher._condition:
+            batcher._pending = pending
+            selected = batcher._select_batch_locked()
+
+        assert [request.request_id for request in selected] == ["a1"]
+        metrics = batcher.get_scheduler_metrics()
+        assert metrics["non_anchor_batches"] == 0
+        assert metrics["starvation_anchor_batches"] == 1
+    finally:
+        batcher.close()
