@@ -129,17 +129,38 @@ Implemented in repo on **2026-04-17**:
 - **Phase 1**
   - request-count batch buckets in the batcher
   - configurable `--batch-bucket-sizes`
+  - startup CUDA Graph prewarm controls:
+    - `--prewarm-clone-batch-sizes`
+    - `--prewarm-clone-sequence-lengths`
 - **Phase 2**
   - `POST /clone-prompts`
   - `prompt_id` support on `POST /generate`
   - reusable registered clone prompt store for throughput-sensitive clone traffic
 - **Phase 3**
   - tokenizer estimate LRU cache for server-side batching estimates
+- **Phase 5**
+  - `--full-triton-patch` to benchmark full-layer Triton patching at `num_step=16`
+  - model-internal timing breakdown surfaced through health, response headers,
+    batch logs, and load-test CSV/summary output
+  - current measured clone results on the RTX 3090 for `100` requests /
+    `100` concurrency / `num_step=16`:
+    - baseline hybrid: about `19.69s`
+    - hybrid + clone graph prewarm: about `17.46s`
+    - hybrid + full-layer Triton + clone graph prewarm: about `17.18s`
+- **Phase 4**
+  - throughput-oriented postprocess modes: `full`, `light`, and `off`
+  - threaded CPU-side decode/postprocess execution with detailed timing split
+  - current measured clone results on the RTX 3090 for `100` requests /
+    `100` concurrency / `num_step=16`:
+    - full postprocess path: about `17.13s`
+    - light postprocess path: about `16.16s`
+    - full path decode split: about `463ms` audio decode + `131ms`
+      post-audio cleanup
+    - light path decode split: about `462ms` audio decode + `7ms`
+      post-audio cleanup
 
 Still planned and not implemented yet:
 
-- **Phase 4** decode/postprocess reduction
-- **Phase 5** model-variant quality/performance benchmarking
 - **Phase 6** smarter scheduler / multi-worker drain logic
 - **Phase 7** multi-replica scaling
 
@@ -195,7 +216,8 @@ Changes:
   - `32`
 - prefer filling the nearest bucket instead of emitting arbitrary sizes like `18`, `22`, `39`, `40`
 - optionally hold requests slightly longer when a batch is near the next bucket boundary
-- prewarm graph shapes at startup for the common buckets and common sequence-length bands
+- prewarm graph shapes at startup for the common buckets and common
+  sequence-length bands
 - consider separate lanes for:
   - `short_noref`
   - `short_ref`
@@ -281,7 +303,7 @@ Success criteria:
 
 ## Phase 4: Reduce Decode And Postprocess Cost
 
-Status: **Planned**
+Status: **Implemented**
 
 Goal: keep the GPU focused on generation and reduce serial tail work.
 
@@ -312,9 +334,29 @@ Success criteria:
 
 - decode/postprocess is no longer a large share of total per-response time
 
+Current measured update on 2026-04-17:
+
+- with `hybrid + full-layer Triton + clone graph prewarm`, the default `full`
+  postprocess path completed the `100` request clone burst in about `17.13s`
+- the same workload with `postprocess_mode=light` completed in about `16.16s`
+- `decode_postprocess_ms` dropped from about `594ms` in `full` mode to about
+  `469ms` in `light` mode
+- most of the remaining decode/postprocess cost is still audio decode itself:
+  - `full`: about `463ms` audio decode + `131ms` post-audio cleanup
+  - `light`: about `462ms` audio decode + `7ms` post-audio cleanup
+- this means lighter cleanup helps, but the bigger remaining hot paths are
+  still iterative generation and the decode step itself
+
+Important:
+
+- `light` mode should get listening-based QA before it becomes the default
+  clone throughput preset
+- Phase 4 reduced the CPU-side tail, but it did not change the compute-bound
+  nature of the main generation path
+
 ## Phase 5: Benchmark The Fastest Safe Model Variant At `num_step=16`
 
-Status: **Planned**
+Status: **Partially Implemented**
 
 Goal: squeeze more speed out of the model path without dropping below your quality bar.
 
@@ -324,6 +366,15 @@ Changes to benchmark:
 - `hybrid + SageAttention` on Ampere
 - `bf16` versus `fp16` if numerically stable on the target GPU
 - prewarmed graph shapes for the dominant serving buckets
+
+Current measured update on 2026-04-17:
+
+- prewarming the dominant clone graph shapes reduced average `batch_exec_ms`
+  from about `4009ms` to about `3766ms`
+- adding full-layer Triton patching on top of prewarm reduced average
+  `batch_exec_ms` again to about `3698ms`
+- decode/postprocess stayed roughly flat at about `555-563ms`, so the current
+  wins are mostly from the iterative generation path rather than postprocessing
 
 Important:
 
@@ -404,7 +455,10 @@ Recommended order:
 7. Phase 6
 8. Phase 7
 
-That order gives the best chance of gaining real throughput early without rewriting too much too soon.
+That order gave the best chance of gaining real throughput early without
+rewriting too much too soon. After the current work, the highest-value
+remaining items are Phase 6 first, then Phase 7 if the wall target is still
+hard.
 
 ## Recommended Product Modes
 
@@ -426,10 +480,12 @@ Target:
 
 - `mode=clone`
 - `num_step=16`
-- `prompt_id` required for production throughput path
+- `prompt_id` optional but recommended when the caller can reuse a prompt
 - `ref_text` required
 - no ASR in hot path
 - cached prompt tokens on GPU or pinned memory
+- `postprocess_mode=full` for quality-first serving
+- `postprocess_mode=light` only after listening-based validation
 
 Target:
 
@@ -459,6 +515,8 @@ Recommended throughput validation commands after warm server startup:
   - `.venv/bin/python scripts/load_test_api.py --mode clone --num-step 16 --requests 100 --concurrency 100 --warmup-requests 4 --ref-audio clone.wav --ref-text "Reference text" --csv results_clone_upload_100.csv`
 - clone with registered prompt fast path:
   - `.venv/bin/python scripts/load_test_api.py --mode clone --num-step 16 --requests 100 --concurrency 100 --warmup-requests 4 --register-clone-prompt --ref-audio clone.wav --ref-text "Reference text" --csv results_clone_prompt_id_100.csv`
+- clone with the lighter postprocess path:
+  - `.venv/bin/python scripts/load_test_api.py --mode clone --num-step 16 --requests 100 --concurrency 100 --warmup-requests 4 --ref-audio clone.wav --postprocess-mode light --csv results_clone_light_100.csv`
 
 What to compare between runs:
 
@@ -482,7 +540,7 @@ The next big gains come from:
 - **stable batch shapes**
 - **pre-registered clone prompts**
 - **less request-side CPU work**
-- **less serial decode/postprocess work**
+- **less audio decode cost and lighter post-audio cleanup when quality holds**
 - **benchmarking the fastest safe `hybrid` variant at `num_step=16`**
 
 For `design` mode, the 3-5 second goal looks aggressive but plausible with strong serving work.

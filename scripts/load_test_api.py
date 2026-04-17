@@ -180,6 +180,12 @@ def _build_parser() -> argparse.ArgumentParser:
         help="Whether to postprocess generated audio.",
     )
     parser.add_argument(
+        "--postprocess-mode",
+        choices=["full", "light", "off"],
+        default=None,
+        help="Optional named postprocess mode override.",
+    )
+    parser.add_argument(
         "--timeout",
         type=float,
         default=DEFAULT_TIMEOUT_S,
@@ -203,8 +209,11 @@ def _build_form_data(args: argparse.Namespace) -> dict[str, str]:
         "guidance_scale": str(args.guidance_scale),
         "denoise": str(args.denoise).lower(),
         "preprocess_prompt": str(args.preprocess_prompt).lower(),
-        "postprocess_output": str(args.postprocess_output).lower(),
     }
+    if args.postprocess_mode:
+        data["postprocess_mode"] = args.postprocess_mode
+    else:
+        data["postprocess_output"] = str(args.postprocess_output).lower()
     if args.language:
         data["language"] = args.language
     if args.instruct:
@@ -325,6 +334,15 @@ def _extract_result(
         "queue_wait_ms": headers.get("x-omnivoice-queue-wait-ms"),
         "batch_exec_ms": headers.get("x-omnivoice-batch-exec-ms"),
         "response_encode_ms": headers.get("x-omnivoice-response-encode-ms"),
+        "generate_total_ms": headers.get("x-omnivoice-generate-total-ms"),
+        "prepare_inference_inputs_ms": headers.get(
+            "x-omnivoice-prepare-inference-inputs-ms"
+        ),
+        "iterative_generate_ms": headers.get("x-omnivoice-iterative-generate-ms"),
+        "chunked_generate_ms": headers.get("x-omnivoice-chunked-generate-ms"),
+        "decode_postprocess_ms": headers.get("x-omnivoice-decode-postprocess-ms"),
+        "audio_decode_ms": headers.get("x-omnivoice-audio-decode-ms"),
+        "post_process_audio_ms": headers.get("x-omnivoice-post-process-audio-ms"),
         "gpu_sample_count": headers.get("x-omnivoice-gpu-sample-count"),
         "gpu_util_avg_pct": headers.get("x-omnivoice-gpu-util-avg-pct"),
         "gpu_util_peak_pct": headers.get("x-omnivoice-gpu-util-peak-pct"),
@@ -349,6 +367,7 @@ def _extract_result(
             "x-omnivoice-batch-max-sequence-length"
         ),
         "batch_lane": headers.get("x-omnivoice-batch-lane"),
+        "postprocess_mode": headers.get("x-omnivoice-postprocess-mode"),
         "prompt_source": headers.get("x-omnivoice-prompt-source"),
         "prompt_id": headers.get("x-omnivoice-prompt-id"),
         "audio_duration_s": headers.get("x-omnivoice-audio-duration-s"),
@@ -412,6 +431,13 @@ async def _run_request(
                 "queue_wait_ms": None,
                 "batch_exec_ms": None,
                 "response_encode_ms": None,
+                "generate_total_ms": None,
+                "prepare_inference_inputs_ms": None,
+                "iterative_generate_ms": None,
+                "chunked_generate_ms": None,
+                "decode_postprocess_ms": None,
+                "audio_decode_ms": None,
+                "post_process_audio_ms": None,
                 "gpu_sample_count": None,
                 "gpu_util_avg_pct": None,
                 "gpu_util_peak_pct": None,
@@ -424,6 +450,7 @@ async def _run_request(
                 "batch_conditioning_tokens": None,
                 "batch_max_sequence_length": None,
                 "batch_lane": None,
+                "postprocess_mode": None,
                 "prompt_source": None,
                 "prompt_id": None,
                 "audio_duration_s": None,
@@ -575,6 +602,41 @@ def _summarize(
             for row in successes
             if row["response_encode_ms"] is not None
         ]
+        generate_total_times = [
+            float(row["generate_total_ms"])
+            for row in successes
+            if row["generate_total_ms"] is not None
+        ]
+        prepare_input_times = [
+            float(row["prepare_inference_inputs_ms"])
+            for row in successes
+            if row["prepare_inference_inputs_ms"] is not None
+        ]
+        iterative_generate_times = [
+            float(row["iterative_generate_ms"])
+            for row in successes
+            if row["iterative_generate_ms"] is not None
+        ]
+        chunked_generate_times = [
+            float(row["chunked_generate_ms"])
+            for row in successes
+            if row["chunked_generate_ms"] is not None
+        ]
+        decode_postprocess_times = [
+            float(row["decode_postprocess_ms"])
+            for row in successes
+            if row["decode_postprocess_ms"] is not None
+        ]
+        audio_decode_times = [
+            float(row["audio_decode_ms"])
+            for row in successes
+            if row["audio_decode_ms"] is not None
+        ]
+        post_process_audio_times = [
+            float(row["post_process_audio_ms"])
+            for row in successes
+            if row["post_process_audio_ms"] is not None
+        ]
         gpu_util_avg = [
             float(row["gpu_util_avg_pct"])
             for row in successes
@@ -604,6 +666,11 @@ def _summarize(
             str(row["prompt_source"])
             for row in successes
             if row["prompt_source"] is not None
+        )
+        postprocess_modes = Counter(
+            str(row["postprocess_mode"])
+            for row in successes
+            if row["postprocess_mode"] is not None
         )
 
         logger.info(
@@ -669,6 +736,62 @@ def _summarize(
                 _format_float(_percentile(response_encode_times, 0.95)),
                 _format_float(max(response_encode_times)),
             )
+        if generate_total_times:
+            logger.info(
+                "  generate_ms avg=%s p50=%s p95=%s max=%s",
+                _format_float(statistics.mean(generate_total_times)),
+                _format_float(statistics.median(generate_total_times)),
+                _format_float(_percentile(generate_total_times, 0.95)),
+                _format_float(max(generate_total_times)),
+            )
+        if prepare_input_times:
+            logger.info(
+                "  prepare_infer_ms avg=%s p50=%s p95=%s max=%s",
+                _format_float(statistics.mean(prepare_input_times)),
+                _format_float(statistics.median(prepare_input_times)),
+                _format_float(_percentile(prepare_input_times, 0.95)),
+                _format_float(max(prepare_input_times)),
+            )
+        if iterative_generate_times:
+            logger.info(
+                "  iterative_ms avg=%s p50=%s p95=%s max=%s",
+                _format_float(statistics.mean(iterative_generate_times)),
+                _format_float(statistics.median(iterative_generate_times)),
+                _format_float(_percentile(iterative_generate_times, 0.95)),
+                _format_float(max(iterative_generate_times)),
+            )
+        if chunked_generate_times:
+            logger.info(
+                "  chunked_ms avg=%s p50=%s p95=%s max=%s",
+                _format_float(statistics.mean(chunked_generate_times)),
+                _format_float(statistics.median(chunked_generate_times)),
+                _format_float(_percentile(chunked_generate_times, 0.95)),
+                _format_float(max(chunked_generate_times)),
+            )
+        if decode_postprocess_times:
+            logger.info(
+                "  decode_ms  avg=%s p50=%s p95=%s max=%s",
+                _format_float(statistics.mean(decode_postprocess_times)),
+                _format_float(statistics.median(decode_postprocess_times)),
+                _format_float(_percentile(decode_postprocess_times, 0.95)),
+                _format_float(max(decode_postprocess_times)),
+            )
+        if audio_decode_times:
+            logger.info(
+                "  audio_decode_ms avg=%s p50=%s p95=%s max=%s",
+                _format_float(statistics.mean(audio_decode_times)),
+                _format_float(statistics.median(audio_decode_times)),
+                _format_float(_percentile(audio_decode_times, 0.95)),
+                _format_float(max(audio_decode_times)),
+            )
+        if post_process_audio_times:
+            logger.info(
+                "  post_audio_ms avg=%s p50=%s p95=%s max=%s",
+                _format_float(statistics.mean(post_process_audio_times)),
+                _format_float(statistics.median(post_process_audio_times)),
+                _format_float(_percentile(post_process_audio_times, 0.95)),
+                _format_float(max(post_process_audio_times)),
+            )
         if gpu_util_avg:
             logger.info(
                 "  gpu_avg_pct avg=%s p50=%s p95=%s max=%s",
@@ -711,6 +834,11 @@ def _summarize(
                 f"{source}=>{count}" for source, count in sorted(prompt_sources.items())
             )
             logger.info("  prompt sources: %s", distribution)
+        if postprocess_modes:
+            distribution = ", ".join(
+                f"{mode}=>{count}" for mode, count in sorted(postprocess_modes.items())
+            )
+            logger.info("  postprocess modes: %s", distribution)
 
         server_starts = sorted(
             row["started_at"] for row in successes if row.get("started_at")

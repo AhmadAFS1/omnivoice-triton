@@ -51,6 +51,7 @@ class _FakeModel:
     def __init__(self, *, generate_delay_s: float = 0.0) -> None:
         self.sampling_rate = 24000
         self._asr_pipe = None
+        self.config = SimpleNamespace(num_audio_codebook=8, audio_mask_id=1024)
         self.text_tokenizer = _FakeTokenizer()
         self.audio_tokenizer = SimpleNamespace(
             config=SimpleNamespace(frame_rate=75),
@@ -58,6 +59,13 @@ class _FakeModel:
         self.calls: list[dict[str, Any]] = []
         self.prompt_calls: list[dict[str, Any]] = []
         self.generate_delay_s = generate_delay_s
+        self._last_generation_metrics = {
+            "generate_total_ms": 11.0,
+            "prepare_inference_inputs_ms": 1.5,
+            "iterative_generate_ms": 7.0,
+            "chunked_generate_ms": 0.0,
+            "decode_postprocess_ms": 2.0,
+        }
 
     def load_asr_model(self) -> None:
         self._asr_pipe = object()
@@ -114,6 +122,9 @@ class _FakeModel:
             np.full(2400, 0.1 + i * 0.05, dtype=np.float32) for i, _ in enumerate(texts)
         ]
 
+    def get_runtime_stage_metrics(self) -> dict[str, float]:
+        return dict(self._last_generation_metrics)
+
 
 class _FakeRunner:
     def __init__(
@@ -128,6 +139,7 @@ class _FakeRunner:
         self.loaded = False
         self.unloaded = False
         self._model = _FakeModel(generate_delay_s=model_generate_delay_s)
+        self.prewarmed_shapes: list[list[int]] = []
 
     def load_model(self) -> None:
         self.loaded = True
@@ -141,6 +153,20 @@ class _FakeRunner:
 
     def get_cuda_graph_metrics(self) -> dict[str, Any]:
         return {"capture_count": 0, "shapes": []}
+
+    def get_generation_metrics(self) -> dict[str, float]:
+        return self._model.get_runtime_stage_metrics()
+
+    def prewarm_cuda_graph_shapes(
+        self,
+        shapes: list[tuple[int, int, int]] | tuple[tuple[int, int, int], ...],
+    ) -> dict[str, Any]:
+        self.prewarmed_shapes = [list(shape) for shape in shapes]
+        return {
+            "capture_count": len(self.prewarmed_shapes),
+            "shapes": list(self.prewarmed_shapes),
+            "warmed_shapes": list(self.prewarmed_shapes),
+        }
 
 
 def _make_app(
@@ -172,7 +198,16 @@ def _make_app(
 
 def test_health_and_languages(tmp_path: Path) -> None:
     created: list[_FakeRunner] = []
-    app = _make_app(tmp_path, created, load_asr=True, enable_sage_attention=True)
+    app = _make_app(
+        tmp_path,
+        created,
+        load_asr=True,
+        enable_sage_attention=True,
+        full_triton_patch=True,
+        decode_postprocess_workers=3,
+        prewarm_clone_batch_sizes=(2, 4),
+        prewarm_clone_sequence_lengths=(163,),
+    )
 
     with TestClient(app) as client:
         health = client.get("/health")
@@ -184,12 +219,25 @@ def test_health_and_languages(tmp_path: Path) -> None:
         assert payload["device"] == "cuda"
         assert payload["asr_loaded"] is True
         assert payload["sage_attention"] is True
+        assert payload["full_triton_patch"] is True
+        assert payload["decode_postprocess_workers"] == 3
         assert payload["batch_collect_ms"] == 10.0
         assert payload["max_batch_requests"] == 32
         assert payload["registered_clone_prompt_count"] == 0
         assert payload["token_estimate_cache_entries"] == 0
         assert payload["batch_bucket_sizes"] == [1, 2, 4, 8, 16, 32]
         assert payload["cuda_graph_capture_count"] == 0
+        assert payload["prewarm_clone_batch_sizes"] == [2, 4]
+        assert payload["prewarm_clone_sequence_lengths"] == [163]
+        assert payload["cuda_graph_prewarm"]["requested_shapes"] == [
+            [4, 8, 163],
+            [8, 8, 163],
+        ]
+        assert payload["cuda_graph_prewarm"]["warmed_shapes"] == [
+            [4, 8, 163],
+            [8, 8, 163],
+        ]
+        assert payload["last_generation_metrics"]["generate_total_ms"] == 11.0
         assert {"available"} <= set(payload["gpu_metrics"])
         assert payload["last_batch_gpu_metrics"] is None
         assert Path(payload["save_dir"]) == tmp_path
@@ -203,6 +251,9 @@ def test_health_and_languages(tmp_path: Path) -> None:
     assert created[0].loaded is True
     assert created[0].unloaded is True
     assert created[0].kwargs["enable_sage_attention"] is True
+    assert created[0].kwargs["patch_range"] is None
+    assert created[0].kwargs["decode_postprocess_workers"] == 3
+    assert created[0].prewarmed_shapes == [[4, 8, 163], [8, 8, 163]]
 
 
 def test_generate_design_returns_wav_and_saves_file(tmp_path: Path) -> None:
@@ -234,6 +285,11 @@ def test_generate_design_returns_wav_and_saves_file(tmp_path: Path) -> None:
     assert response.headers["x-omnivoice-audio-duration-s"]
     assert response.headers["x-omnivoice-batch-requests"] == "1"
     assert response.headers["x-omnivoice-prompt-source"] == "none"
+    assert response.headers["x-omnivoice-postprocess-mode"] == "full"
+    assert response.headers["x-omnivoice-generate-total-ms"] == "11.00"
+    assert response.headers["x-omnivoice-prepare-inference-inputs-ms"] == "1.50"
+    assert response.headers["x-omnivoice-iterative-generate-ms"] == "7.00"
+    assert response.headers["x-omnivoice-decode-postprocess-ms"] == "2.00"
     if "x-omnivoice-gpu-sample-count" in response.headers:
         assert int(response.headers["x-omnivoice-gpu-sample-count"]) >= 0
     saved_path = Path(response.headers["x-omnivoice-saved-path"])
@@ -323,6 +379,28 @@ def test_generate_clone_reuses_cached_prompt(tmp_path: Path) -> None:
     assert len(model.calls) == 2
     assert first.headers["x-omnivoice-prompt-source"] == "upload_miss"
     assert second.headers["x-omnivoice-prompt-source"] == "upload_hit"
+
+
+def test_generate_design_accepts_light_postprocess_mode(tmp_path: Path) -> None:
+    created: list[_FakeRunner] = []
+    app = _make_app(tmp_path, created, load_asr=False)
+
+    with TestClient(app) as client:
+        response = client.post(
+            "/generate",
+            data={
+                "mode": "design",
+                "text": "Use the light postprocess mode.",
+                "instruct": "warm",
+                "postprocess_output": "light",
+            },
+        )
+
+    assert response.status_code == 200
+    assert response.headers["x-omnivoice-postprocess-mode"] == "light"
+    gen_config = created[0].model.calls[0]["generation_config"]
+    assert gen_config.postprocess_output is False
+    assert getattr(gen_config, "postprocess_mode") == "light"
 
 
 def test_register_clone_prompt_and_generate_with_prompt_id(tmp_path: Path) -> None:

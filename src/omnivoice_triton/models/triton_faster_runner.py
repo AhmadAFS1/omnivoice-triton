@@ -40,8 +40,14 @@ class TritonFasterRunner(FasterRunner):
         device: str = "cuda",
         model_id: str = "k2-fsa/OmniVoice",
         dtype: str = "fp16",
+        decode_postprocess_workers: int = 0,
     ) -> None:
-        super().__init__(device=device, model_id=model_id, dtype=dtype)
+        super().__init__(
+            device=device,
+            model_id=model_id,
+            dtype=dtype,
+            decode_postprocess_workers=decode_postprocess_workers,
+        )
         self.patch_range = patch_range
         self.enable_sage_attention = enable_sage_attention
 

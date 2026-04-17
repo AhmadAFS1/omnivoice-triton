@@ -50,6 +50,9 @@ DEFAULT_CLONE_PROMPT_CACHE_SIZE = 128
 DEFAULT_BATCH_BUCKET_SIZES = (1, 2, 4, 8, 16, 32)
 DEFAULT_REGISTERED_CLONE_PROMPT_STORE_SIZE = 256
 DEFAULT_TOKEN_ESTIMATE_CACHE_SIZE = 4096
+DEFAULT_DECODE_POSTPROCESS_WORKERS = max(1, min(4, os.cpu_count() or 1))
+DEFAULT_PREWARM_CLONE_BATCH_SIZES: tuple[int, ...] = ()
+DEFAULT_PREWARM_CLONE_SEQUENCE_LENGTHS: tuple[int, ...] = ()
 _SLUG_RE = re.compile(r"[^a-z0-9]+")
 
 
@@ -190,6 +193,12 @@ def build_parser() -> argparse.ArgumentParser:
         help="Enable SageAttention for Triton/Hybrid runners.",
     )
     parser.add_argument(
+        "--full-triton-patch",
+        action="store_true",
+        default=False,
+        help="Patch all decoder layers for Triton/Hybrid runners.",
+    )
+    parser.add_argument(
         "--device",
         default=None,
         help="Device to use. Auto-detected if not specified.",
@@ -270,9 +279,31 @@ def build_parser() -> argparse.ArgumentParser:
         help="LRU cache size for tokenizer-based batching estimates.",
     )
     parser.add_argument(
+        "--decode-postprocess-workers",
+        type=int,
+        default=DEFAULT_DECODE_POSTPROCESS_WORKERS,
+        help="Worker threads for CPU-side audio postprocessing after decode.",
+    )
+    parser.add_argument(
         "--batch-bucket-sizes",
         default="1,2,4,8,16,32",
         help="Preferred merged request-count buckets, comma-separated.",
+    )
+    parser.add_argument(
+        "--prewarm-clone-batch-sizes",
+        default=None,
+        help=(
+            "Optional comma-separated clone request batch sizes to prewarm for "
+            "CUDA Graph capture, such as 2,4,8,16,32."
+        ),
+    )
+    parser.add_argument(
+        "--prewarm-clone-sequence-lengths",
+        default=None,
+        help=(
+            "Optional comma-separated clone max sequence lengths to prewarm for "
+            "CUDA Graph capture, such as 163."
+        ),
     )
     return parser
 
@@ -365,10 +396,38 @@ def _parse_optional_duration(raw: str | None) -> float | None:
     return parsed
 
 
-def _parse_batch_bucket_sizes(raw: str | None) -> tuple[int, ...]:
+def _parse_postprocess_mode(
+    raw_output: str | None,
+    raw_mode: str | None = None,
+) -> tuple[bool, str]:
+    """Parse legacy bool-style and new named postprocess modes."""
+    value = _normalize_text(raw_mode) or _normalize_text(raw_output)
+    if value is None:
+        return True, "full"
+
+    normalized = value.lower()
+    if normalized in {"1", "true", "yes", "on", "full"}:
+        return True, "full"
+    if normalized in {"light", "fast"}:
+        return False, "light"
+    if normalized in {"0", "false", "no", "off", "none"}:
+        return False, "off"
+    raise HTTPException(
+        400,
+        detail="postprocess_output/postprocess_mode must be one of "
+        "true, false, full, light, or off.",
+    )
+
+
+def _parse_positive_int_list(
+    raw: str | None,
+    *,
+    option_name: str,
+    default: tuple[int, ...],
+) -> tuple[int, ...]:
     value = _normalize_text(raw)
     if value is None:
-        return DEFAULT_BATCH_BUCKET_SIZES
+        return default
 
     sizes: set[int] = set()
     for part in value.split(","):
@@ -379,12 +438,20 @@ def _parse_batch_bucket_sizes(raw: str | None) -> tuple[int, ...]:
             parsed = int(item)
         except ValueError as exc:
             raise ValueError(
-                "--batch-bucket-sizes must be a comma-separated list of integers."
+                f"{option_name} must be a comma-separated list of integers."
             ) from exc
         if parsed <= 0:
-            raise ValueError("--batch-bucket-sizes values must be > 0.")
+            raise ValueError(f"{option_name} values must be > 0.")
         sizes.add(parsed)
     return tuple(sorted(sizes))
+
+
+def _parse_batch_bucket_sizes(raw: str | None) -> tuple[int, ...]:
+    return _parse_positive_int_list(
+        raw,
+        option_name="--batch-bucket-sizes",
+        default=DEFAULT_BATCH_BUCKET_SIZES,
+    )
 
 
 def _to_numpy(audio: Any) -> np.ndarray:
@@ -554,7 +621,13 @@ def _build_batch_key(
         position_temperature=generation_config.position_temperature,
         class_temperature=generation_config.class_temperature,
         denoise=generation_config.denoise,
-        postprocess_output=generation_config.postprocess_output,
+        postprocess_mode=str(
+            getattr(
+                generation_config,
+                "postprocess_mode",
+                "full" if generation_config.postprocess_output else "off",
+            )
+        ),
         audio_chunk_duration=generation_config.audio_chunk_duration,
         audio_chunk_threshold=generation_config.audio_chunk_threshold,
     )
@@ -605,13 +678,22 @@ def _build_runner(
     device: str,
     dtype: str,
     enable_sage_attention: bool,
+    full_triton_patch: bool,
+    decode_postprocess_workers: int,
     runner_factory: Callable[..., Any],
 ) -> Any:
     kwargs: dict[str, Any] = {
         "device": device,
         "model_id": model_checkpoint,
         "dtype": dtype,
+        "decode_postprocess_workers": decode_postprocess_workers,
     }
+    if full_triton_patch:
+        if runner_name not in {"triton", "hybrid"}:
+            raise ValueError(
+                "--full-triton-patch is only supported for the triton and hybrid runners."
+            )
+        kwargs["patch_range"] = None
     if enable_sage_attention:
         if runner_name not in {"triton", "hybrid"}:
             raise ValueError(
@@ -621,6 +703,27 @@ def _build_runner(
     return runner_factory(runner_name, **kwargs)
 
 
+def _build_clone_prewarm_shapes(
+    model: Any,
+    *,
+    request_batch_sizes: tuple[int, ...],
+    sequence_lengths: tuple[int, ...],
+) -> tuple[tuple[int, int, int], ...]:
+    if not request_batch_sizes or not sequence_lengths:
+        return ()
+
+    num_audio_codebook = int(
+        getattr(getattr(model, "config", None), "num_audio_codebook", 8)
+    )
+    shapes = {
+        (int(batch_size) * 2, num_audio_codebook, int(seq_len))
+        for batch_size in request_batch_sizes
+        for seq_len in sequence_lengths
+        if batch_size > 0 and seq_len > 0
+    }
+    return tuple(sorted(shapes))
+
+
 def create_app(
     model_checkpoint: str = DEFAULT_MODEL_ID,
     runner_name: str = DEFAULT_RUNNER,
@@ -628,6 +731,8 @@ def create_app(
     dtype: str = "fp16",
     load_asr: bool = True,
     enable_sage_attention: bool = False,
+    full_triton_patch: bool = False,
+    decode_postprocess_workers: int = DEFAULT_DECODE_POSTPROCESS_WORKERS,
     save_dir: str | None = None,
     batch_collect_ms: float = DEFAULT_BATCH_COLLECT_MS,
     max_batch_requests: int = DEFAULT_MAX_BATCH_REQUESTS,
@@ -638,6 +743,10 @@ def create_app(
     registered_clone_prompt_store_size: int = DEFAULT_REGISTERED_CLONE_PROMPT_STORE_SIZE,
     token_estimate_cache_size: int = DEFAULT_TOKEN_ESTIMATE_CACHE_SIZE,
     batch_bucket_sizes: tuple[int, ...] = DEFAULT_BATCH_BUCKET_SIZES,
+    prewarm_clone_batch_sizes: tuple[int, ...] = DEFAULT_PREWARM_CLONE_BATCH_SIZES,
+    prewarm_clone_sequence_lengths: tuple[
+        int, ...
+    ] = DEFAULT_PREWARM_CLONE_SEQUENCE_LENGTHS,
     runner_factory: Callable[..., Any] | None = None,
 ) -> FastAPI:
     """Create the FastAPI app."""
@@ -657,6 +766,8 @@ def create_app(
             device=resolved_device,
             dtype=dtype,
             enable_sage_attention=enable_sage_attention,
+            full_triton_patch=full_triton_patch,
+            decode_postprocess_workers=decode_postprocess_workers,
             runner_factory=factory,
         )
         runner.load_model()
@@ -688,10 +799,38 @@ def create_app(
             batch_bucket_sizes=batch_bucket_sizes,
             gpu_metrics_monitor=app.state.gpu_metrics_monitor,
         )
+        requested_prewarm_batch_sizes = tuple(
+            size for size in prewarm_clone_batch_sizes if size <= max_batch_requests
+        )
+        requested_prewarm_shapes = _build_clone_prewarm_shapes(
+            model,
+            request_batch_sizes=requested_prewarm_batch_sizes,
+            sequence_lengths=prewarm_clone_sequence_lengths,
+        )
+        prewarm_started = time.perf_counter()
+        prewarm_summary: dict[str, Any] = {
+            "requested_batch_sizes": list(requested_prewarm_batch_sizes),
+            "requested_sequence_lengths": list(prewarm_clone_sequence_lengths),
+            "requested_shapes": [list(shape) for shape in requested_prewarm_shapes],
+            "warmed_shapes": [],
+            "supported": hasattr(runner, "prewarm_cuda_graph_shapes"),
+        }
+        if requested_prewarm_shapes and hasattr(runner, "prewarm_cuda_graph_shapes"):
+            prewarm_summary.update(
+                runner.prewarm_cuda_graph_shapes(requested_prewarm_shapes)
+            )
+        prewarm_summary["duration_ms"] = round(
+            (time.perf_counter() - prewarm_started) * 1000.0,
+            2,
+        )
+        app.state.cuda_graph_prewarm_summary = prewarm_summary
         logger.info(
             "API server ready runner=%s model=%s device=%s dtype=%s asr_loaded=%s "
             "batch_collect_ms=%.1f max_batch_requests=%d batch_bucket_sizes=%s "
-            "gpu_metrics_available=%s gpu_device=%s",
+            "full_triton_patch=%s decode_postprocess_workers=%d "
+            "prewarm_clone_batch_sizes=%s "
+            "prewarm_clone_sequence_lengths=%s gpu_metrics_available=%s "
+            "gpu_device=%s",
             runner_name,
             model_checkpoint,
             resolved_device,
@@ -700,6 +839,10 @@ def create_app(
             batch_collect_ms,
             max_batch_requests,
             list(batch_bucket_sizes),
+            full_triton_patch,
+            decode_postprocess_workers,
+            list(requested_prewarm_batch_sizes),
+            list(prewarm_clone_sequence_lengths),
             app.state.gpu_metrics_monitor.available,
             app.state.gpu_metrics_monitor.device_name
             or app.state.gpu_metrics_monitor.unavailable_reason
@@ -728,6 +871,8 @@ def create_app(
     app.state.dtype = dtype
     app.state.load_asr = load_asr
     app.state.enable_sage_attention = enable_sage_attention
+    app.state.full_triton_patch = full_triton_patch
+    app.state.decode_postprocess_workers = decode_postprocess_workers
     app.state.save_dir = Path(save_dir) if save_dir else None
     app.state.runner = None
     app.state.sample_rate = DEFAULT_SAMPLE_RATE
@@ -746,12 +891,16 @@ def create_app(
     app.state.registered_clone_prompt_store_size = registered_clone_prompt_store_size
     app.state.token_estimate_cache_size = token_estimate_cache_size
     app.state.batch_bucket_sizes = list(batch_bucket_sizes)
+    app.state.prewarm_clone_batch_sizes = list(prewarm_clone_batch_sizes)
+    app.state.prewarm_clone_sequence_lengths = list(prewarm_clone_sequence_lengths)
+    app.state.cuda_graph_prewarm_summary = None
 
     @app.get("/health")
     def health() -> dict[str, Any]:
         runner = app.state.runner
         model = getattr(runner, "model", None)
         graph_metrics: dict[str, Any] = {}
+        generation_metrics: dict[str, Any] = {}
         gpu_metrics: dict[str, Any] = {"available": False, "reason": "not_initialized"}
         last_batch_gpu_metrics: dict[str, Any] | None = None
         if runner is not None and hasattr(runner, "get_cuda_graph_metrics"):
@@ -759,6 +908,11 @@ def create_app(
                 graph_metrics = runner.get_cuda_graph_metrics()
             except Exception:  # pragma: no cover - health should stay resilient
                 logger.exception("Failed to collect CUDA graph metrics.")
+        if runner is not None and hasattr(runner, "get_generation_metrics"):
+            try:
+                generation_metrics = runner.get_generation_metrics()
+            except Exception:  # pragma: no cover - health should stay resilient
+                logger.exception("Failed to collect generation metrics.")
         gpu_monitor = app.state.gpu_metrics_monitor
         if gpu_monitor is not None:
             try:
@@ -777,6 +931,8 @@ def create_app(
             "asr_loaded": bool(getattr(model, "_asr_pipe", None)),
             "save_dir": str(app.state.save_dir) if app.state.save_dir else None,
             "sage_attention": bool(app.state.enable_sage_attention),
+            "full_triton_patch": bool(app.state.full_triton_patch),
+            "decode_postprocess_workers": int(app.state.decode_postprocess_workers),
             "batch_collect_ms": app.state.batch_collect_ms,
             "max_batch_requests": app.state.max_batch_requests,
             "max_batch_target_tokens": app.state.max_batch_target_tokens,
@@ -790,8 +946,12 @@ def create_app(
             "token_estimate_cache_size": app.state.token_estimate_cache_size,
             "token_estimate_cache_entries": len(app.state.token_estimate_cache or ()),
             "batch_bucket_sizes": app.state.batch_bucket_sizes,
+            "prewarm_clone_batch_sizes": app.state.prewarm_clone_batch_sizes,
+            "prewarm_clone_sequence_lengths": app.state.prewarm_clone_sequence_lengths,
             "cuda_graph_capture_count": int(graph_metrics.get("capture_count", 0)),
             "cuda_graph_shapes": graph_metrics.get("shapes", []),
+            "cuda_graph_prewarm": app.state.cuda_graph_prewarm_summary,
+            "last_generation_metrics": generation_metrics,
             "gpu_metrics": gpu_metrics,
             "last_batch_gpu_metrics": last_batch_gpu_metrics,
         }
@@ -919,7 +1079,8 @@ def create_app(
         duration: str | None = Form(None),
         denoise: bool = Form(True),
         preprocess_prompt: bool = Form(True),
-        postprocess_output: bool = Form(True),
+        postprocess_output: str | None = Form("true"),
+        postprocess_mode: str | None = Form(None),
         ref_audio: UploadFile | None = File(None),
     ) -> Response:
         runner = app.state.runner
@@ -995,6 +1156,10 @@ def create_app(
         )
         speed_value = _parse_optional_positive_float("speed", speed)
         duration_value = _parse_optional_duration(duration)
+        postprocess_enabled, postprocess_mode_value = _parse_postprocess_mode(
+            postprocess_output,
+            postprocess_mode,
+        )
 
         request_id = uuid4().hex[:12]
         started_at = _utc_now()
@@ -1016,8 +1181,9 @@ def create_app(
                 class_temperature=class_temperature_value,
                 denoise=denoise,
                 preprocess_prompt=preprocess_prompt,
-                postprocess_output=postprocess_output,
+                postprocess_output=postprocess_enabled,
             )
+            setattr(gen_config, "postprocess_mode", postprocess_mode_value)
 
             voice_clone_prompt = None
             if mode == GenerateMode.clone:
@@ -1139,6 +1305,7 @@ def create_app(
             )
             peak_vram_gb = batch_result.peak_vram_gb
             gpu_metrics = batch_result.gpu_metrics
+            generation_metrics = batch_result.generation_metrics
 
             headers = {
                 "Content-Disposition": 'inline; filename="omnivoice.wav"',
@@ -1167,8 +1334,38 @@ def create_app(
                     batch_result.batch_max_sequence_length
                 ),
                 "X-OmniVoice-Batch-Lane": batch_key.lane,
+                "X-OmniVoice-Postprocess-Mode": postprocess_mode_value,
                 "X-OmniVoice-Prompt-Source": prompt_source,
             }
+            if generation_metrics:
+                if generation_metrics.get("generate_total_ms") is not None:
+                    headers["X-OmniVoice-Generate-Total-Ms"] = (
+                        f"{generation_metrics['generate_total_ms']:.2f}"
+                    )
+                if generation_metrics.get("prepare_inference_inputs_ms") is not None:
+                    headers["X-OmniVoice-Prepare-Inference-Inputs-Ms"] = (
+                        f"{generation_metrics['prepare_inference_inputs_ms']:.2f}"
+                    )
+                if generation_metrics.get("iterative_generate_ms") is not None:
+                    headers["X-OmniVoice-Iterative-Generate-Ms"] = (
+                        f"{generation_metrics['iterative_generate_ms']:.2f}"
+                    )
+                if generation_metrics.get("chunked_generate_ms") is not None:
+                    headers["X-OmniVoice-Chunked-Generate-Ms"] = (
+                        f"{generation_metrics['chunked_generate_ms']:.2f}"
+                    )
+                if generation_metrics.get("decode_postprocess_ms") is not None:
+                    headers["X-OmniVoice-Decode-Postprocess-Ms"] = (
+                        f"{generation_metrics['decode_postprocess_ms']:.2f}"
+                    )
+                if generation_metrics.get("audio_decode_ms") is not None:
+                    headers["X-OmniVoice-Audio-Decode-Ms"] = (
+                        f"{generation_metrics['audio_decode_ms']:.2f}"
+                    )
+                if generation_metrics.get("post_process_audio_ms") is not None:
+                    headers["X-OmniVoice-Post-Process-Audio-Ms"] = (
+                        f"{generation_metrics['post_process_audio_ms']:.2f}"
+                    )
             if gpu_metrics is not None:
                 headers["X-OmniVoice-Gpu-Sample-Count"] = str(gpu_metrics.sample_count)
                 if gpu_metrics.gpu_util_avg_pct is not None:
@@ -1207,11 +1404,14 @@ def create_app(
                 "finished_at=%s latency_ms=%.2f pre_batch_ms=%.2f "
                 "prompt_prepare_ms=%.2f batch_estimate_ms=%.2f "
                 "queue_wait_ms=%.2f batch_exec_ms=%.2f response_encode_ms=%.2f "
+                "generate_total_ms=%s prepare_inputs_ms=%s iterative_ms=%s "
+                "chunked_ms=%s decode_postprocess_ms=%s audio_decode_ms=%s "
+                "post_process_audio_ms=%s "
                 "batch_requests=%d audio_s=%.3f rtf=%s peak_vram_gb=%.3f "
                 "gpu_util_avg_pct=%s gpu_util_peak_pct=%s "
                 "device_vram_used_gb_peak=%s device_vram_util_peak_pct=%s "
                 "text_chars=%d "
-                "prompt_source=%s language=%s device=%s saved_path=%s",
+                "prompt_source=%s postprocess_mode=%s language=%s device=%s saved_path=%s",
                 request_id,
                 mode.value,
                 batch_key.lane,
@@ -1225,6 +1425,23 @@ def create_app(
                 batch_result.queue_wait_ms,
                 batch_result.batch_exec_ms,
                 response_encode_ms,
+                _format_optional_metric(generation_metrics.get("generate_total_ms")),
+                _format_optional_metric(
+                    generation_metrics.get("prepare_inference_inputs_ms")
+                ),
+                _format_optional_metric(
+                    generation_metrics.get("iterative_generate_ms")
+                ),
+                _format_optional_metric(
+                    generation_metrics.get("chunked_generate_ms")
+                ),
+                _format_optional_metric(
+                    generation_metrics.get("decode_postprocess_ms")
+                ),
+                _format_optional_metric(generation_metrics.get("audio_decode_ms")),
+                _format_optional_metric(
+                    generation_metrics.get("post_process_audio_ms")
+                ),
                 batch_result.batch_requests,
                 audio_duration_s,
                 f"{rtf:.4f}" if rtf is not None else "-",
@@ -1243,6 +1460,7 @@ def create_app(
                 ),
                 len(text_value),
                 prompt_source,
+                postprocess_mode_value,
                 language_value or "auto",
                 app.state.device,
                 str(saved_path) if saved_path is not None else "-",
@@ -1279,6 +1497,16 @@ def main(argv: list[str] | None = None) -> None:
     args = parser.parse_args(argv)
     try:
         batch_bucket_sizes = _parse_batch_bucket_sizes(args.batch_bucket_sizes)
+        prewarm_clone_batch_sizes = _parse_positive_int_list(
+            args.prewarm_clone_batch_sizes,
+            option_name="--prewarm-clone-batch-sizes",
+            default=DEFAULT_PREWARM_CLONE_BATCH_SIZES,
+        )
+        prewarm_clone_sequence_lengths = _parse_positive_int_list(
+            args.prewarm_clone_sequence_lengths,
+            option_name="--prewarm-clone-sequence-lengths",
+            default=DEFAULT_PREWARM_CLONE_SEQUENCE_LENGTHS,
+        )
     except ValueError as exc:
         parser.error(str(exc))
 
@@ -1298,6 +1526,8 @@ def main(argv: list[str] | None = None) -> None:
         dtype=args.dtype,
         load_asr=not args.no_asr,
         enable_sage_attention=args.sage_attention,
+        full_triton_patch=args.full_triton_patch,
+        decode_postprocess_workers=args.decode_postprocess_workers,
         save_dir=args.save_dir,
         batch_collect_ms=args.batch_collect_ms,
         max_batch_requests=args.max_batch_requests,
@@ -1308,6 +1538,8 @@ def main(argv: list[str] | None = None) -> None:
         registered_clone_prompt_store_size=args.registered_clone_prompt_store_size,
         token_estimate_cache_size=args.token_estimate_cache_size,
         batch_bucket_sizes=batch_bucket_sizes,
+        prewarm_clone_batch_sizes=prewarm_clone_batch_sizes,
+        prewarm_clone_sequence_lengths=prewarm_clone_sequence_lengths,
     )
 
     uvicorn.run(

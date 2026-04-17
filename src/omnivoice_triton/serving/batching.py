@@ -31,7 +31,7 @@ class GenerationBatchKey:
     position_temperature: float
     class_temperature: float
     denoise: bool
-    postprocess_output: bool
+    postprocess_mode: str
     audio_chunk_duration: float
     audio_chunk_threshold: float
 
@@ -49,6 +49,7 @@ class BatchedGenerationResult:
     batch_max_sequence_length: int
     peak_vram_gb: float
     gpu_metrics: BatchGpuMetrics | None = None
+    generation_metrics: dict[str, float] = field(default_factory=dict)
 
 
 @dataclass
@@ -367,6 +368,15 @@ class GenerationBatcher:
             outputs = self._model.generate(**generate_kwargs)
             batch_finished = time.perf_counter()
             batch_exec_ms = (batch_finished - batch_started) * 1000.0
+            generation_metrics: dict[str, float] = {}
+            metrics_getter = getattr(self._model, "get_runtime_stage_metrics", None)
+            if callable(metrics_getter):
+                raw_metrics = metrics_getter() or {}
+                generation_metrics = {
+                    str(name): float(value)
+                    for name, value in raw_metrics.items()
+                    if value is not None
+                }
 
             peak_vram_gb = 0.0
             if torch.cuda.is_available():
@@ -408,6 +418,30 @@ class GenerationBatcher:
                     peak_vram_gb,
                 )
 
+            if generation_metrics:
+                logger.info(
+                    "Batch model timings lane=%s size=%d generate_total_ms=%s "
+                    "prepare_inputs_ms=%s iterative_ms=%s chunked_ms=%s "
+                    "decode_postprocess_ms=%s",
+                    anchor.batch_key.lane,
+                    len(batch),
+                    _format_optional_float(
+                        generation_metrics.get("generate_total_ms")
+                    ),
+                    _format_optional_float(
+                        generation_metrics.get("prepare_inference_inputs_ms")
+                    ),
+                    _format_optional_float(
+                        generation_metrics.get("iterative_generate_ms")
+                    ),
+                    _format_optional_float(
+                        generation_metrics.get("chunked_generate_ms")
+                    ),
+                    _format_optional_float(
+                        generation_metrics.get("decode_postprocess_ms")
+                    ),
+                )
+
             if len(outputs) != len(batch):
                 raise RuntimeError(
                     f"Expected {len(batch)} outputs from model.generate(), got "
@@ -435,6 +469,7 @@ class GenerationBatcher:
                         batch_max_sequence_length=batch_max_sequence_length,
                         peak_vram_gb=peak_vram_gb,
                         gpu_metrics=batch_gpu_metrics,
+                        generation_metrics=generation_metrics,
                     )
                 )
         except Exception as exc:

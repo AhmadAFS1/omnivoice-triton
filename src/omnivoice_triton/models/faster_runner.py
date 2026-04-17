@@ -161,6 +161,46 @@ class _CUDAGraphForward:
         """Release all captured graphs."""
         self._graphs.clear()
 
+    def prewarm_shape(self, shape: tuple[int, int, int]) -> bool:
+        """Capture a CUDA Graph for a shape before live traffic arrives."""
+        if shape in self._graphs:
+            return False
+
+        batch_size, num_audio_codebook, seq_len = shape
+        device = getattr(self._model, "device", "cuda")
+        pad_id = int(getattr(self._model.config, "audio_mask_id", 0))
+        input_ids = torch.full(
+            shape,
+            pad_id,
+            dtype=torch.long,
+            device=device,
+        )
+        audio_mask = torch.zeros(
+            (batch_size, seq_len),
+            dtype=torch.bool,
+            device=device,
+        )
+        audio_mask[:, seq_len // 2 :] = True
+        attention_mask = torch.tril(
+            torch.ones(
+                (batch_size, 1, seq_len, seq_len),
+                dtype=torch.bool,
+                device=device,
+            )
+        )
+
+        if num_audio_codebook != int(getattr(self._model.config, "num_audio_codebook", 0)):
+            raise ValueError(
+                "CUDA Graph prewarm shape codebook dimension does not match model config."
+            )
+
+        self._capture(
+            input_ids=input_ids,
+            audio_mask=audio_mask,
+            attention_mask=attention_mask,
+        )
+        return True
+
     def get_metrics(self) -> dict[str, Any]:
         """Return summary metrics for captured CUDA Graph shapes."""
         return {
@@ -187,8 +227,14 @@ class FasterRunner(BaseRunner):
         device: str = "cuda",
         model_id: str = "k2-fsa/OmniVoice",
         dtype: str = "fp16",
+        decode_postprocess_workers: int = 0,
     ) -> None:
-        super().__init__(device=device, model_id=model_id, dtype=dtype)
+        super().__init__(
+            device=device,
+            model_id=model_id,
+            dtype=dtype,
+            decode_postprocess_workers=decode_postprocess_workers,
+        )
         self._graph_forward: _CUDAGraphForward | None = None
 
     def load_model(self) -> None:
@@ -210,3 +256,23 @@ class FasterRunner(BaseRunner):
         if self._graph_forward is None:
             return {"capture_count": 0, "shapes": []}
         return self._graph_forward.get_metrics()
+
+    def prewarm_cuda_graph_shapes(
+        self,
+        shapes: list[tuple[int, int, int]] | tuple[tuple[int, int, int], ...],
+    ) -> dict[str, Any]:
+        """Pre-capture CUDA Graphs for known hot-path shapes."""
+        if self._graph_forward is None:
+            return {"capture_count": 0, "shapes": [], "warmed_shapes": []}
+
+        warmed_shapes: list[list[int]] = []
+        for shape in shapes:
+            if len(shape) != 3:
+                raise ValueError(f"Expected 3D CUDA Graph shape, got {shape!r}")
+            normalized = tuple(int(dim) for dim in shape)
+            if self._graph_forward.prewarm_shape(normalized):
+                warmed_shapes.append(list(normalized))
+
+        metrics = self._graph_forward.get_metrics()
+        metrics["warmed_shapes"] = warmed_shapes
+        return metrics
