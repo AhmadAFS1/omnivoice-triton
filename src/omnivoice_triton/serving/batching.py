@@ -14,6 +14,8 @@ from typing import Any
 import torch
 from omnivoice import OmniVoiceGenerationConfig
 
+from omnivoice_triton.serving.gpu_metrics import BatchGpuMetrics, GPUMetricsMonitor
+
 logger = logging.getLogger(__name__)
 
 
@@ -46,6 +48,7 @@ class BatchedGenerationResult:
     batch_conditioning_tokens: int
     batch_max_sequence_length: int
     peak_vram_gb: float
+    gpu_metrics: BatchGpuMetrics | None = None
 
 
 @dataclass
@@ -164,6 +167,7 @@ class GenerationBatcher:
         max_batch_conditioning_tokens: int = 12000,
         max_batch_padding_ratio: float = 1.5,
         batch_bucket_sizes: tuple[int, ...] | None = None,
+        gpu_metrics_monitor: GPUMetricsMonitor | None = None,
     ) -> None:
         self._model = model
         self.collect_ms = max(0.0, collect_ms)
@@ -174,6 +178,7 @@ class GenerationBatcher:
         self.batch_bucket_sizes = tuple(
             sorted({size for size in batch_bucket_sizes or () if size > 0})
         )
+        self._gpu_metrics_monitor = gpu_metrics_monitor
 
         self._condition = threading.Condition()
         self._pending: deque[PendingGeneration] = deque()
@@ -332,6 +337,12 @@ class GenerationBatcher:
             if torch.cuda.is_available():
                 torch.cuda.reset_peak_memory_stats()
 
+            batch_gpu_sampler = None
+            if self._gpu_metrics_monitor is not None:
+                batch_gpu_sampler = self._gpu_metrics_monitor.create_batch_sampler()
+                if batch_gpu_sampler is not None:
+                    batch_gpu_sampler.start()
+
             generate_kwargs: dict[str, Any] = {
                 "text": [request.text for request in batch],
                 "generation_config": anchor.generation_config,
@@ -360,6 +371,42 @@ class GenerationBatcher:
             peak_vram_gb = 0.0
             if torch.cuda.is_available():
                 peak_vram_gb = torch.cuda.max_memory_allocated() / 1024**3
+            batch_gpu_metrics = None
+            if batch_gpu_sampler is not None:
+                batch_gpu_metrics = batch_gpu_sampler.stop(
+                    process_peak_vram_gb=peak_vram_gb
+                )
+                batch_gpu_sampler = None
+
+            if batch_gpu_metrics is not None:
+                logger.info(
+                    "Completed batch lane=%s size=%d batch_exec_ms=%.2f "
+                    "gpu_util_avg_pct=%s gpu_util_peak_pct=%s "
+                    "device_vram_used_gb_peak=%s device_vram_util_peak_pct=%s "
+                    "process_peak_vram_gb=%.3f gpu_sample_count=%d",
+                    anchor.batch_key.lane,
+                    len(batch),
+                    batch_exec_ms,
+                    _format_optional_float(batch_gpu_metrics.gpu_util_avg_pct),
+                    _format_optional_float(batch_gpu_metrics.gpu_util_peak_pct),
+                    _format_optional_float(
+                        batch_gpu_metrics.device_vram_used_gb_peak
+                    ),
+                    _format_optional_float(
+                        batch_gpu_metrics.device_vram_util_peak_pct
+                    ),
+                    peak_vram_gb,
+                    batch_gpu_metrics.sample_count,
+                )
+            else:
+                logger.info(
+                    "Completed batch lane=%s size=%d batch_exec_ms=%.2f "
+                    "process_peak_vram_gb=%.3f gpu_metrics=unavailable",
+                    anchor.batch_key.lane,
+                    len(batch),
+                    batch_exec_ms,
+                    peak_vram_gb,
+                )
 
             if len(outputs) != len(batch):
                 raise RuntimeError(
@@ -387,9 +434,20 @@ class GenerationBatcher:
                         batch_conditioning_tokens=batch_conditioning_tokens,
                         batch_max_sequence_length=batch_max_sequence_length,
                         peak_vram_gb=peak_vram_gb,
+                        gpu_metrics=batch_gpu_metrics,
                     )
                 )
         except Exception as exc:
+            try:
+                peak_vram_gb = (
+                    torch.cuda.max_memory_allocated() / 1024**3
+                    if torch.cuda.is_available()
+                    else 0.0
+                )
+                if "batch_gpu_sampler" in locals() and batch_gpu_sampler is not None:
+                    batch_gpu_sampler.stop(process_peak_vram_gb=peak_vram_gb)
+            except Exception:  # pragma: no cover - metrics should not mask failures
+                logger.debug("Failed to stop GPU batch sampler after error.", exc_info=True)
             logger.exception(
                 "Batch execution failed lane=%s size=%d",
                 anchor.batch_key.lane,
@@ -398,3 +456,10 @@ class GenerationBatcher:
             for request in batch:
                 if not request.future.done():
                     request.future.set_exception(exc)
+
+
+def _format_optional_float(value: float | None) -> str:
+    """Format optional floating point values for human-readable logs."""
+    if value is None:
+        return "-"
+    return f"{value:.2f}"

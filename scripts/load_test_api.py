@@ -318,12 +318,28 @@ def _extract_result(
         "started_at": headers.get("x-omnivoice-started-at"),
         "finished_at": headers.get("x-omnivoice-finished-at"),
         "latency_ms": headers.get("x-omnivoice-latency-ms"),
+        "peak_vram_gb": headers.get("x-omnivoice-peak-vram-gb"),
         "pre_batch_ms": headers.get("x-omnivoice-pre-batch-ms"),
         "prompt_prepare_ms": headers.get("x-omnivoice-prompt-prepare-ms"),
         "batch_estimate_ms": headers.get("x-omnivoice-batch-estimate-ms"),
         "queue_wait_ms": headers.get("x-omnivoice-queue-wait-ms"),
         "batch_exec_ms": headers.get("x-omnivoice-batch-exec-ms"),
         "response_encode_ms": headers.get("x-omnivoice-response-encode-ms"),
+        "gpu_sample_count": headers.get("x-omnivoice-gpu-sample-count"),
+        "gpu_util_avg_pct": headers.get("x-omnivoice-gpu-util-avg-pct"),
+        "gpu_util_peak_pct": headers.get("x-omnivoice-gpu-util-peak-pct"),
+        "device_vram_used_gb_avg": headers.get(
+            "x-omnivoice-device-vram-used-gb-avg"
+        ),
+        "device_vram_used_gb_peak": headers.get(
+            "x-omnivoice-device-vram-used-gb-peak"
+        ),
+        "device_vram_util_avg_pct": headers.get(
+            "x-omnivoice-device-vram-util-avg-pct"
+        ),
+        "device_vram_util_peak_pct": headers.get(
+            "x-omnivoice-device-vram-util-peak-pct"
+        ),
         "batch_requests": headers.get("x-omnivoice-batch-requests"),
         "batch_target_tokens": headers.get("x-omnivoice-batch-target-tokens"),
         "batch_conditioning_tokens": headers.get(
@@ -389,12 +405,20 @@ async def _run_request(
                 "started_at": None,
                 "finished_at": None,
                 "latency_ms": None,
+                "peak_vram_gb": None,
                 "pre_batch_ms": None,
                 "prompt_prepare_ms": None,
                 "batch_estimate_ms": None,
                 "queue_wait_ms": None,
                 "batch_exec_ms": None,
                 "response_encode_ms": None,
+                "gpu_sample_count": None,
+                "gpu_util_avg_pct": None,
+                "gpu_util_peak_pct": None,
+                "device_vram_used_gb_avg": None,
+                "device_vram_used_gb_peak": None,
+                "device_vram_util_avg_pct": None,
+                "device_vram_util_peak_pct": None,
                 "batch_requests": None,
                 "batch_target_tokens": None,
                 "batch_conditioning_tokens": None,
@@ -521,6 +545,11 @@ def _summarize(
             for row in successes
             if row["pre_batch_ms"] is not None
         ]
+        peak_vram_gb = [
+            float(row["peak_vram_gb"])
+            for row in successes
+            if row["peak_vram_gb"] is not None
+        ]
         prompt_prepare_times = [
             float(row["prompt_prepare_ms"])
             for row in successes
@@ -545,6 +574,26 @@ def _summarize(
             float(row["response_encode_ms"])
             for row in successes
             if row["response_encode_ms"] is not None
+        ]
+        gpu_util_avg = [
+            float(row["gpu_util_avg_pct"])
+            for row in successes
+            if row["gpu_util_avg_pct"] is not None
+        ]
+        gpu_util_peak = [
+            float(row["gpu_util_peak_pct"])
+            for row in successes
+            if row["gpu_util_peak_pct"] is not None
+        ]
+        device_vram_peak = [
+            float(row["device_vram_used_gb_peak"])
+            for row in successes
+            if row["device_vram_used_gb_peak"] is not None
+        ]
+        device_vram_util_peak = [
+            float(row["device_vram_util_peak_pct"])
+            for row in successes
+            if row["device_vram_util_peak_pct"] is not None
         ]
         batch_sizes = Counter(
             int(row["batch_requests"])
@@ -571,6 +620,14 @@ def _summarize(
                 _format_float(statistics.median(pre_batch_times)),
                 _format_float(_percentile(pre_batch_times, 0.95)),
                 _format_float(max(pre_batch_times)),
+            )
+        if peak_vram_gb:
+            logger.info(
+                "  peak_vram_gb avg=%s p50=%s p95=%s max=%s",
+                _format_float(statistics.mean(peak_vram_gb)),
+                _format_float(statistics.median(peak_vram_gb)),
+                _format_float(_percentile(peak_vram_gb, 0.95)),
+                _format_float(max(peak_vram_gb)),
             )
         if prompt_prepare_times:
             logger.info(
@@ -611,6 +668,38 @@ def _summarize(
                 _format_float(statistics.median(response_encode_times)),
                 _format_float(_percentile(response_encode_times, 0.95)),
                 _format_float(max(response_encode_times)),
+            )
+        if gpu_util_avg:
+            logger.info(
+                "  gpu_avg_pct avg=%s p50=%s p95=%s max=%s",
+                _format_float(statistics.mean(gpu_util_avg)),
+                _format_float(statistics.median(gpu_util_avg)),
+                _format_float(_percentile(gpu_util_avg, 0.95)),
+                _format_float(max(gpu_util_avg)),
+            )
+        if gpu_util_peak:
+            logger.info(
+                "  gpu_peak_pct avg=%s p50=%s p95=%s max=%s",
+                _format_float(statistics.mean(gpu_util_peak)),
+                _format_float(statistics.median(gpu_util_peak)),
+                _format_float(_percentile(gpu_util_peak, 0.95)),
+                _format_float(max(gpu_util_peak)),
+            )
+        if device_vram_peak:
+            logger.info(
+                "  dev_vram_gb avg=%s p50=%s p95=%s max=%s",
+                _format_float(statistics.mean(device_vram_peak)),
+                _format_float(statistics.median(device_vram_peak)),
+                _format_float(_percentile(device_vram_peak, 0.95)),
+                _format_float(max(device_vram_peak)),
+            )
+        if device_vram_util_peak:
+            logger.info(
+                "  dev_vram_pct avg=%s p50=%s p95=%s max=%s",
+                _format_float(statistics.mean(device_vram_util_peak)),
+                _format_float(statistics.median(device_vram_util_peak)),
+                _format_float(_percentile(device_vram_util_peak, 0.95)),
+                _format_float(max(device_vram_util_peak)),
             )
         if batch_sizes:
             distribution = ", ".join(

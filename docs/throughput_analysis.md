@@ -124,6 +124,8 @@ Implemented in repo on **2026-04-17**:
     - response encoding
   - richer `scripts/load_test_api.py` summary output
   - CUDA Graph capture metrics exposed from health checks
+  - GPU utilization and VRAM telemetry exposed in health checks, server logs,
+    and load-test CSV/summary output
 - **Phase 1**
   - request-count batch buckets in the batcher
   - configurable `--batch-bucket-sizes`

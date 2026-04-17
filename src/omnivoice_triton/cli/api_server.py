@@ -29,6 +29,7 @@ from omnivoice.utils.lang_map import LANG_NAME_TO_ID, lang_display_name
 from omnivoice_triton import ALL_RUNNER_NAMES, __version__, create_runner
 from omnivoice_triton.serving import (
     ClonePromptCache,
+    GPUMetricsMonitor,
     GenerationBatcher,
     GenerationBatchKey,
     PendingGeneration,
@@ -282,6 +283,13 @@ def _utc_now() -> datetime:
 
 def _iso_utc(dt: datetime) -> str:
     return dt.isoformat().replace("+00:00", "Z")
+
+
+def _format_optional_metric(value: float | None) -> str:
+    """Format optional numeric metrics for structured logs."""
+    if value is None:
+        return "-"
+    return f"{value:.2f}"
 
 
 def _normalize_text(value: str | None) -> str | None:
@@ -669,6 +677,7 @@ def create_app(
         app.state.token_estimate_cache = TokenEstimateCache(
             max_size=token_estimate_cache_size
         )
+        app.state.gpu_metrics_monitor = GPUMetricsMonitor(resolved_device)
         app.state.batcher = GenerationBatcher(
             model,
             collect_ms=batch_collect_ms,
@@ -677,10 +686,12 @@ def create_app(
             max_batch_conditioning_tokens=max_batch_conditioning_tokens,
             max_batch_padding_ratio=max_batch_padding_ratio,
             batch_bucket_sizes=batch_bucket_sizes,
+            gpu_metrics_monitor=app.state.gpu_metrics_monitor,
         )
         logger.info(
             "API server ready runner=%s model=%s device=%s dtype=%s asr_loaded=%s "
-            "batch_collect_ms=%.1f max_batch_requests=%d batch_bucket_sizes=%s",
+            "batch_collect_ms=%.1f max_batch_requests=%d batch_bucket_sizes=%s "
+            "gpu_metrics_available=%s gpu_device=%s",
             runner_name,
             model_checkpoint,
             resolved_device,
@@ -689,6 +700,10 @@ def create_app(
             batch_collect_ms,
             max_batch_requests,
             list(batch_bucket_sizes),
+            app.state.gpu_metrics_monitor.available,
+            app.state.gpu_metrics_monitor.device_name
+            or app.state.gpu_metrics_monitor.unavailable_reason
+            or "-",
         )
         try:
             yield
@@ -696,6 +711,7 @@ def create_app(
             if app.state.batcher is not None:
                 app.state.batcher.close()
                 app.state.batcher = None
+            app.state.gpu_metrics_monitor = None
             if app.state.runner is not None:
                 app.state.runner.unload_model()
                 app.state.runner = None
@@ -719,6 +735,7 @@ def create_app(
     app.state.clone_prompt_cache = None
     app.state.registered_clone_prompts = None
     app.state.token_estimate_cache = None
+    app.state.gpu_metrics_monitor = None
     app.state.asr_load_lock = threading.Lock()
     app.state.batch_collect_ms = batch_collect_ms
     app.state.max_batch_requests = max_batch_requests
@@ -735,11 +752,20 @@ def create_app(
         runner = app.state.runner
         model = getattr(runner, "model", None)
         graph_metrics: dict[str, Any] = {}
+        gpu_metrics: dict[str, Any] = {"available": False, "reason": "not_initialized"}
+        last_batch_gpu_metrics: dict[str, Any] | None = None
         if runner is not None and hasattr(runner, "get_cuda_graph_metrics"):
             try:
                 graph_metrics = runner.get_cuda_graph_metrics()
             except Exception:  # pragma: no cover - health should stay resilient
                 logger.exception("Failed to collect CUDA graph metrics.")
+        gpu_monitor = app.state.gpu_metrics_monitor
+        if gpu_monitor is not None:
+            try:
+                gpu_metrics = gpu_monitor.snapshot()
+                last_batch_gpu_metrics = gpu_monitor.get_last_batch_metrics()
+            except Exception:  # pragma: no cover - health should stay resilient
+                logger.exception("Failed to collect GPU metrics.")
         return {
             "status": "ok",
             "model": app.state.model_checkpoint,
@@ -766,6 +792,8 @@ def create_app(
             "batch_bucket_sizes": app.state.batch_bucket_sizes,
             "cuda_graph_capture_count": int(graph_metrics.get("capture_count", 0)),
             "cuda_graph_shapes": graph_metrics.get("shapes", []),
+            "gpu_metrics": gpu_metrics,
+            "last_batch_gpu_metrics": last_batch_gpu_metrics,
         }
 
     @app.get("/languages")
@@ -1110,6 +1138,7 @@ def create_app(
                 latency_ms / 1000.0 / audio_duration_s if audio_duration_s > 0 else None
             )
             peak_vram_gb = batch_result.peak_vram_gb
+            gpu_metrics = batch_result.gpu_metrics
 
             headers = {
                 "Content-Disposition": 'inline; filename="omnivoice.wav"',
@@ -1140,6 +1169,32 @@ def create_app(
                 "X-OmniVoice-Batch-Lane": batch_key.lane,
                 "X-OmniVoice-Prompt-Source": prompt_source,
             }
+            if gpu_metrics is not None:
+                headers["X-OmniVoice-Gpu-Sample-Count"] = str(gpu_metrics.sample_count)
+                if gpu_metrics.gpu_util_avg_pct is not None:
+                    headers["X-OmniVoice-Gpu-Util-Avg-Pct"] = (
+                        f"{gpu_metrics.gpu_util_avg_pct:.2f}"
+                    )
+                if gpu_metrics.gpu_util_peak_pct is not None:
+                    headers["X-OmniVoice-Gpu-Util-Peak-Pct"] = (
+                        f"{gpu_metrics.gpu_util_peak_pct:.2f}"
+                    )
+                if gpu_metrics.device_vram_used_gb_avg is not None:
+                    headers["X-OmniVoice-Device-Vram-Used-Gb-Avg"] = (
+                        f"{gpu_metrics.device_vram_used_gb_avg:.3f}"
+                    )
+                if gpu_metrics.device_vram_used_gb_peak is not None:
+                    headers["X-OmniVoice-Device-Vram-Used-Gb-Peak"] = (
+                        f"{gpu_metrics.device_vram_used_gb_peak:.3f}"
+                    )
+                if gpu_metrics.device_vram_util_avg_pct is not None:
+                    headers["X-OmniVoice-Device-Vram-Util-Avg-Pct"] = (
+                        f"{gpu_metrics.device_vram_util_avg_pct:.2f}"
+                    )
+                if gpu_metrics.device_vram_util_peak_pct is not None:
+                    headers["X-OmniVoice-Device-Vram-Util-Peak-Pct"] = (
+                        f"{gpu_metrics.device_vram_util_peak_pct:.2f}"
+                    )
             if prompt_id_value is not None:
                 headers["X-OmniVoice-Prompt-Id"] = prompt_id_value
             if rtf is not None:
@@ -1152,7 +1207,10 @@ def create_app(
                 "finished_at=%s latency_ms=%.2f pre_batch_ms=%.2f "
                 "prompt_prepare_ms=%.2f batch_estimate_ms=%.2f "
                 "queue_wait_ms=%.2f batch_exec_ms=%.2f response_encode_ms=%.2f "
-                "batch_requests=%d audio_s=%.3f rtf=%s text_chars=%d "
+                "batch_requests=%d audio_s=%.3f rtf=%s peak_vram_gb=%.3f "
+                "gpu_util_avg_pct=%s gpu_util_peak_pct=%s "
+                "device_vram_used_gb_peak=%s device_vram_util_peak_pct=%s "
+                "text_chars=%d "
                 "prompt_source=%s language=%s device=%s saved_path=%s",
                 request_id,
                 mode.value,
@@ -1170,6 +1228,19 @@ def create_app(
                 batch_result.batch_requests,
                 audio_duration_s,
                 f"{rtf:.4f}" if rtf is not None else "-",
+                peak_vram_gb,
+                _format_optional_metric(
+                    getattr(gpu_metrics, "gpu_util_avg_pct", None)
+                ),
+                _format_optional_metric(
+                    getattr(gpu_metrics, "gpu_util_peak_pct", None)
+                ),
+                _format_optional_metric(
+                    getattr(gpu_metrics, "device_vram_used_gb_peak", None)
+                ),
+                _format_optional_metric(
+                    getattr(gpu_metrics, "device_vram_util_peak_pct", None)
+                ),
                 len(text_value),
                 prompt_source,
                 language_value or "auto",

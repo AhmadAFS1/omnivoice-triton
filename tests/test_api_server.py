@@ -190,6 +190,8 @@ def test_health_and_languages(tmp_path: Path) -> None:
         assert payload["token_estimate_cache_entries"] == 0
         assert payload["batch_bucket_sizes"] == [1, 2, 4, 8, 16, 32]
         assert payload["cuda_graph_capture_count"] == 0
+        assert {"available"} <= set(payload["gpu_metrics"])
+        assert payload["last_batch_gpu_metrics"] is None
         assert Path(payload["save_dir"]) == tmp_path
 
         languages = client.get("/languages")
@@ -228,9 +230,12 @@ def test_generate_design_returns_wav_and_saves_file(tmp_path: Path) -> None:
     assert response.headers["x-omnivoice-pre-batch-ms"]
     assert response.headers["x-omnivoice-batch-estimate-ms"]
     assert response.headers["x-omnivoice-response-encode-ms"]
+    assert response.headers["x-omnivoice-peak-vram-gb"]
     assert response.headers["x-omnivoice-audio-duration-s"]
     assert response.headers["x-omnivoice-batch-requests"] == "1"
     assert response.headers["x-omnivoice-prompt-source"] == "none"
+    if "x-omnivoice-gpu-sample-count" in response.headers:
+        assert int(response.headers["x-omnivoice-gpu-sample-count"]) >= 0
     saved_path = Path(response.headers["x-omnivoice-saved-path"])
     assert saved_path.exists()
 
