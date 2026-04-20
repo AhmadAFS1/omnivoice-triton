@@ -27,6 +27,37 @@ Observed live results on RTX 3090 with warmed `hybrid` runner:
 - `design`, `num_step=16`, 100 concurrent requests: about **12.1s** wall
 - `design`, `num_step=8`, 100 concurrent requests: about **5.7s** wall
 
+Observed live results on RTX 5070 with warmed `hybrid` runner on 2026-04-19:
+
+- `design`, `num_step=16`, 1 request at concurrency 1: about **0.35s** wall
+  - about **2.86 req/s** for the one-request run
+  - avg latency about **124ms**
+  - avg queue wait about **10ms**
+  - avg merged batch execution about **112ms**
+  - per-response batch sizes: `1=>1`
+  - peak VRAM about **6.40 GB**
+- `design`, `num_step=16`, 25 concurrent requests: about **2.69s** wall
+  - about **9.29 req/s**
+  - avg latency about **1706ms**, p50 about **1687ms**, p95 about **2276ms**
+  - avg queue wait about **667ms**
+  - avg merged batch execution about **1010ms**
+  - per-response batch sizes: `1=>1`, `2=>4`, `4=>4`, `16=>16`
+  - peak VRAM about **6.40 GB**
+- `design`, `num_step=16`, 50 concurrent requests: about **5.06s** wall
+  - about **9.89 req/s**
+  - avg latency about **2937ms**, p50 about **3206ms**, p95 about **3950ms**
+  - avg queue wait about **765ms**
+  - avg merged batch execution about **2128ms**
+  - per-response batch sizes: `2=>2`, `8=>16`, `32=>32`
+  - peak VRAM about **6.40 GB**
+- `design`, `num_step=16`, 100 concurrent requests: about **11.52s** wall
+  - about **8.68 req/s**
+  - avg latency about **3491ms**, p50 about **3747ms**, p95 about **4181ms**
+  - avg queue wait about **1063ms**
+  - avg merged batch execution about **2383ms**
+  - per-response batch sizes: `4=>4`, `8=>16`, `16=>16`, `32=>64`
+  - avg peak VRAM about **6.10 GB**, max observed peak VRAM about **6.97 GB**
+
 Observed live results on an RTX 4070 SUPER with warmed `hybrid` runner on
 2026-04-20:
 
@@ -85,7 +116,27 @@ Stored repo results are better than the live 3090 run, but still not within targ
 
 Implication:
 
-- **`design` / no-reference mode** may be able to approach the goal with strong optimization work.
+- On the RTX 5070, `design` mode scales reasonably up to around **25 concurrent
+  requests** and nearly holds the target at **50 concurrent requests**:
+  - `25` concurrent lands inside the `3-5s` target window at **2.69s**
+  - `50` concurrent narrowly misses the `5s` upper bound at **5.06s**
+  - `100` concurrent still misses badly at **11.52s**
+- The RTX 4070 SUPER improves materially over both older baselines at the
+  actual `100`-concurrent `design`, `num_step=16` scenario:
+  - versus the RTX 3090: **9.61s** vs **12.1s**, about **20.6%** lower wall
+    time and about **26.0%** higher throughput
+  - versus the RTX 5070: **9.61s** vs **11.52s**, about **16.6%** lower wall
+    time and about **19.9%** higher throughput
+- At `50` concurrent `design`, the RTX 4070 SUPER and RTX 5070 are in nearly
+  the same band:
+  - RTX 5070 still has the slightly better wall time at **5.06s** vs
+    **5.29s**
+  - RTX 4070 SUPER shows somewhat lower avg latency, avg queue wait, and avg
+    merged batch execution on that run, so the difference looks small rather
+    than structural
+- Compared with the live RTX 3090 baseline, both newer GPUs are better fits for
+  `design` mode throughput work, but none of the current single-replica runs
+  meet the actual `100`-concurrent / `num_step=16` target yet.
 - **`clone` mode at `num_step=16`** likely needs more than small tuning. It will require major serving improvements and may still need stronger hardware or multi-replica scheduling to consistently hit 3-5 seconds.
 
 ## Main Bottlenecks
