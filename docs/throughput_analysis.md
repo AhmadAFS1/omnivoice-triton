@@ -27,6 +27,58 @@ Observed live results on RTX 3090 with warmed `hybrid` runner:
 - `design`, `num_step=16`, 100 concurrent requests: about **12.1s** wall
 - `design`, `num_step=8`, 100 concurrent requests: about **5.7s** wall
 
+Observed live results on an RTX 4070 SUPER with warmed `hybrid` runner on
+2026-04-20:
+
+- `design`, `num_step=16`, 100 concurrent requests: **9.61s** wall,
+  **10.41 req/s**
+- latency: avg `2970.53ms`, p50 `2995.49ms`, p95 `3630.08ms`, max `3633.05ms`
+- pre-batch work: avg `0.15ms`, p95 `0.19ms`
+- queue wait: avg `886.35ms`, p50 `664.20ms`, p95 `2931.00ms`, max
+  `2933.13ms`
+- merged batch execution: avg `2068.32ms`, p50 `2709.41ms`, p95 `2717.17ms`,
+  max `2717.17ms`
+- response encoding: avg `13.92ms`, p95 `24.57ms`
+- generation breakdown:
+  - `generate_ms`: avg `2067.00ms`, p50 `2709.08ms`, p95 `2716.02ms`
+  - `prepare_infer_ms`: avg `22.95ms`, p50 `24.22ms`, p95 `30.56ms`
+  - `iterative_ms`: avg `1504.48ms`, p50 `1995.55ms`, p95 `2002.58ms`
+  - `decode_ms`: avg `557.85ms`, p50 `708.68ms`, p95 `708.81ms`
+  - `audio_decode_ms`: avg `412.85ms`, p50 `517.83ms`, p95 `519.70ms`
+  - `post_audio_ms`: avg `145.00ms`, p50 `188.97ms`, p95 `190.98ms`
+- peak process VRAM: `6.25 GB`
+- per-response batch sizes: `2=>4`, `8=>16`, `16=>16`, `32=>64`
+- prompt sources: `none=>100`
+- postprocess modes: `full=>100`
+- replica distribution: `0=>100`
+- server window:
+  `2026-04-20T02:58:16.574615Z -> 2026-04-20T02:58:25.243699Z`
+- CSV output: `out/results_design_100.csv`
+- `design`, `num_step=16`, 50 concurrent requests / 50 total requests:
+  **5.29s** wall, **9.45 req/s**
+- latency: avg `2679.17ms`, p50 `2941.78ms`, p95 `3597.14ms`, max `3605.32ms`
+- pre-batch work: avg `0.15ms`, p95 `0.17ms`
+- queue wait: avg `698.69ms`, p50 `212.51ms`, p95 `2905.14ms`, max
+  `2912.77ms`
+- merged batch execution: avg `1963.42ms`, p50 `2716.38ms`, p95 `2716.38ms`,
+  max `2716.38ms`
+- response encoding: avg `15.66ms`, p95 `27.35ms`
+- generation breakdown:
+  - `generate_ms`: avg `1963.09ms`, p50 `2716.06ms`, p95 `2716.06ms`
+  - `prepare_infer_ms`: avg `22.35ms`, p50 `24.95ms`, p95 `31.43ms`
+  - `iterative_ms`: avg `1419.66ms`, p50 `1997.69ms`, p95 `1997.69ms`
+  - `decode_ms`: avg `538.83ms`, p50 `713.55ms`, p95 `713.55ms`
+  - `audio_decode_ms`: avg `400.03ms`, p50 `521.25ms`, p95 `521.25ms`
+  - `post_audio_ms`: avg `138.81ms`, p50 `192.31ms`, p95 `192.31ms`
+- peak process VRAM: `6.25 GB`
+- per-response batch sizes: `2=>2`, `8=>16`, `32=>32`
+- prompt sources: `none=>50`
+- postprocess modes: `full=>50`
+- replica distribution: `0=>50`
+- server window:
+  `2026-04-20T02:59:41.552082Z -> 2026-04-20T02:59:45.889119Z`
+- CSV output reported by run: `out/results_design_100.csv`
+
 Stored repo results are better than the live 3090 run, but still not within target for clone mode:
 
 - `results_100_clone_step16.csv`: about **16.0s** wall for 100 clone requests

@@ -39,7 +39,9 @@ def _check_torch() -> None:
         )
     if not torch.cuda.is_available():
         warnings.warn(
-            "CUDA is not available. omnivoice-triton requires a CUDA-capable GPU.",
+            "CUDA is not available. omnivoice-triton requires a CUDA-capable GPU "
+            "and a working CUDA-enabled PyTorch runtime. This is often caused by "
+            "a mismatched PyTorch CUDA wheel and NVIDIA driver/runtime.",
             stacklevel=2,
         )
 
