@@ -240,6 +240,11 @@ def test_health_and_languages(tmp_path: Path) -> None:
         assert payload["last_generation_metrics"]["generate_total_ms"] == 11.0
         assert {"available"} <= set(payload["gpu_metrics"])
         assert payload["last_batch_gpu_metrics"] is None
+        assert payload["worker"]["worker_type"] == "tts"
+        assert payload["worker"]["status"] == "healthy"
+        assert payload["worker"]["active_requests"] == 0
+        assert payload["worker"]["assignable"] is True
+        assert payload["worker"]["callback_enabled"] is False
         assert Path(payload["save_dir"]) == tmp_path
 
         languages = client.get("/languages")
@@ -254,6 +259,67 @@ def test_health_and_languages(tmp_path: Path) -> None:
     assert created[0].kwargs["patch_range"] is None
     assert created[0].kwargs["decode_postprocess_workers"] == 3
     assert created[0].prewarmed_shapes == [[4, 8, 163], [8, 8, 163]]
+
+
+def test_worker_drain_rejects_new_generate_requests(tmp_path: Path) -> None:
+    created: list[_FakeRunner] = []
+    app = _make_app(
+        tmp_path,
+        created,
+        load_asr=False,
+        start_worker_callback=False,
+    )
+
+    with TestClient(app) as client:
+        drain = client.post("/drain")
+        assert drain.status_code == 200
+        drain_payload = drain.json()
+        assert drain_payload["status"] == "draining"
+        assert drain_payload["assignable"] is False
+
+        health = client.get("/health")
+        assert health.status_code == 200
+        assert health.json()["worker"]["status"] == "draining"
+
+        response = client.post(
+            "/generate",
+            data={"mode": "design", "text": "No new work.", "instruct": "warm"},
+        )
+        assert response.status_code == 503
+        assert response.json()["detail"] == "Worker is draining."
+
+
+def test_worker_drain_requires_token_when_configured(
+    tmp_path: Path,
+    monkeypatch,
+) -> None:
+    monkeypatch.setenv("LINGUA_CONTROL_PLANE_BASE_URL", "https://lingua.example")
+    monkeypatch.setenv("LINGUA_WORKER_TOKEN", "secret-token")
+    monkeypatch.setenv("LINGUA_WORKER_PUBLIC_BASE_URL", "http://203.0.113.10:8002")
+    monkeypatch.setenv("VAST_INSTANCE_ID", "12345")
+
+    created: list[_FakeRunner] = []
+    app = _make_app(
+        tmp_path,
+        created,
+        load_asr=False,
+        start_worker_callback=False,
+    )
+
+    with TestClient(app) as client:
+        unauthorized = client.post("/drain")
+        assert unauthorized.status_code == 401
+
+        authorized = client.post(
+            "/drain",
+            headers={"X-Worker-Token": "secret-token"},
+        )
+        assert authorized.status_code == 200
+        payload = authorized.json()
+        assert payload["worker_type"] == "tts"
+        assert payload["worker_id"] == "tts-12345"
+        assert payload["base_url"] == "http://203.0.113.10:8002"
+        assert payload["callback_enabled"] is True
 
 
 def test_generate_design_returns_wav_and_saves_file(tmp_path: Path) -> None:

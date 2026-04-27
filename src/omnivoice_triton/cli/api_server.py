@@ -21,7 +21,7 @@ import numpy as np
 import soundfile as sf
 import torch
 import uvicorn
-from fastapi import FastAPI, File, Form, HTTPException, UploadFile
+from fastapi import FastAPI, File, Form, Header, HTTPException, UploadFile
 from fastapi.responses import Response
 from omnivoice import OmniVoiceGenerationConfig
 from omnivoice.utils.lang_map import LANG_NAME_TO_ID, lang_display_name
@@ -29,10 +29,13 @@ from omnivoice.utils.lang_map import LANG_NAME_TO_ID, lang_display_name
 from omnivoice_triton import ALL_RUNNER_NAMES, __version__, create_runner
 from omnivoice_triton.serving import (
     ClonePromptCache,
-    GPUMetricsMonitor,
     GenerationBatcher,
     GenerationBatchKey,
+    GPUMetricsMonitor,
     PendingGeneration,
+    WorkerCallbackConfig,
+    WorkerLifecycleReporter,
+    WorkerRuntimeState,
 )
 
 logger = logging.getLogger(__name__)
@@ -350,6 +353,16 @@ def _parse_positive_int(name: str, raw: str | None, default: int) -> int:
     if parsed <= 0:
         raise HTTPException(400, detail=f"{name} must be > 0.")
     return parsed
+
+
+def _require_worker_token(
+    expected_token: str | None,
+    supplied_token: str | None,
+) -> None:
+    if expected_token is None:
+        return
+    if supplied_token != expected_token:
+        raise HTTPException(401, detail="Invalid worker token.")
 
 
 def _parse_nonnegative_float(name: str, raw: str | None, default: float) -> float:
@@ -691,7 +704,8 @@ def _build_runner(
     if full_triton_patch:
         if runner_name not in {"triton", "hybrid"}:
             raise ValueError(
-                "--full-triton-patch is only supported for the triton and hybrid runners."
+                "--full-triton-patch is only supported for the triton and "
+                "hybrid runners."
             )
         kwargs["patch_range"] = None
     if enable_sage_attention:
@@ -740,13 +754,17 @@ def create_app(
     max_batch_conditioning_tokens: int = DEFAULT_MAX_BATCH_CONDITIONING_TOKENS,
     max_batch_padding_ratio: float = DEFAULT_MAX_BATCH_PADDING_RATIO,
     clone_prompt_cache_size: int = DEFAULT_CLONE_PROMPT_CACHE_SIZE,
-    registered_clone_prompt_store_size: int = DEFAULT_REGISTERED_CLONE_PROMPT_STORE_SIZE,
+    registered_clone_prompt_store_size: int = (
+        DEFAULT_REGISTERED_CLONE_PROMPT_STORE_SIZE
+    ),
     token_estimate_cache_size: int = DEFAULT_TOKEN_ESTIMATE_CACHE_SIZE,
     batch_bucket_sizes: tuple[int, ...] = DEFAULT_BATCH_BUCKET_SIZES,
     prewarm_clone_batch_sizes: tuple[int, ...] = DEFAULT_PREWARM_CLONE_BATCH_SIZES,
     prewarm_clone_sequence_lengths: tuple[
         int, ...
     ] = DEFAULT_PREWARM_CLONE_SEQUENCE_LENGTHS,
+    server_port: int = DEFAULT_PORT,
+    start_worker_callback: bool = True,
     runner_factory: Callable[..., Any] | None = None,
 ) -> FastAPI:
     """Create the FastAPI app."""
@@ -757,6 +775,10 @@ def create_app(
         )
 
     factory = runner_factory or create_runner
+    worker_callback_config = WorkerCallbackConfig.from_env(port=server_port)
+    worker_capacity = (
+        worker_callback_config.capacity if worker_callback_config is not None else 1
+    )
 
     @asynccontextmanager
     async def lifespan(app: FastAPI):
@@ -824,6 +846,13 @@ def create_app(
             2,
         )
         app.state.cuda_graph_prewarm_summary = prewarm_summary
+        if worker_callback_config is not None and start_worker_callback:
+            worker_reporter = WorkerLifecycleReporter(
+                worker_callback_config,
+                app.state.worker_runtime,
+            )
+            app.state.worker_lifecycle_reporter = worker_reporter
+            worker_reporter.start()
         logger.info(
             "API server ready runner=%s model=%s device=%s dtype=%s asr_loaded=%s "
             "batch_collect_ms=%.1f max_batch_requests=%d batch_bucket_sizes=%s "
@@ -851,6 +880,10 @@ def create_app(
         try:
             yield
         finally:
+            worker_reporter = app.state.worker_lifecycle_reporter
+            if worker_reporter is not None:
+                worker_reporter.stop()
+                app.state.worker_lifecycle_reporter = None
             if app.state.batcher is not None:
                 app.state.batcher.close()
                 app.state.batcher = None
@@ -894,6 +927,9 @@ def create_app(
     app.state.prewarm_clone_batch_sizes = list(prewarm_clone_batch_sizes)
     app.state.prewarm_clone_sequence_lengths = list(prewarm_clone_sequence_lengths)
     app.state.cuda_graph_prewarm_summary = None
+    app.state.worker_runtime = WorkerRuntimeState(capacity=worker_capacity)
+    app.state.worker_callback_config = worker_callback_config
+    app.state.worker_lifecycle_reporter = None
 
     @app.get("/health")
     def health() -> dict[str, Any]:
@@ -920,6 +956,8 @@ def create_app(
                 last_batch_gpu_metrics = gpu_monitor.get_last_batch_metrics()
             except Exception:  # pragma: no cover - health should stay resilient
                 logger.exception("Failed to collect GPU metrics.")
+        worker_config = app.state.worker_callback_config
+        worker_runtime = app.state.worker_runtime.snapshot()
         return {
             "status": "ok",
             "model": app.state.model_checkpoint,
@@ -939,7 +977,9 @@ def create_app(
             "max_batch_conditioning_tokens": app.state.max_batch_conditioning_tokens,
             "max_batch_padding_ratio": app.state.max_batch_padding_ratio,
             "clone_prompt_cache_size": app.state.clone_prompt_cache_size,
-            "registered_clone_prompt_store_size": app.state.registered_clone_prompt_store_size,
+            "registered_clone_prompt_store_size": (
+                app.state.registered_clone_prompt_store_size
+            ),
             "registered_clone_prompt_count": len(
                 app.state.registered_clone_prompts or ()
             ),
@@ -954,6 +994,24 @@ def create_app(
             "last_generation_metrics": generation_metrics,
             "gpu_metrics": gpu_metrics,
             "last_batch_gpu_metrics": last_batch_gpu_metrics,
+            "worker": {
+                "worker_type": (
+                    worker_config.worker_type if worker_config is not None else "tts"
+                ),
+                "worker_id": (
+                    worker_config.worker_id if worker_config is not None else None
+                ),
+                "instance_id": (
+                    worker_config.instance_id if worker_config is not None else None
+                ),
+                "base_url": (
+                    worker_config.public_base_url
+                    if worker_config is not None
+                    else None
+                ),
+                "callback_enabled": worker_config is not None,
+                **worker_runtime,
+            },
         }
 
     @app.get("/languages")
@@ -967,6 +1025,32 @@ def create_app(
             for name in sorted(LANG_NAME_TO_ID, key=lang_display_name)
         ]
         return {"count": len(items), "languages": items}
+
+    @app.get("/worker")
+    def worker_status() -> dict[str, Any]:
+        worker_config = app.state.worker_callback_config
+        runtime = app.state.worker_runtime.snapshot()
+        return {
+            "worker_type": worker_config.worker_type if worker_config else "tts",
+            "worker_id": worker_config.worker_id if worker_config else None,
+            "instance_id": worker_config.instance_id if worker_config else None,
+            "base_url": worker_config.public_base_url if worker_config else None,
+            "callback_enabled": worker_config is not None,
+            **runtime,
+        }
+
+    @app.post("/drain")
+    def drain_worker(
+        x_worker_token: str | None = Header(default=None, alias="X-Worker-Token"),
+    ) -> dict[str, Any]:
+        expected_token = (
+            app.state.worker_callback_config.token
+            if app.state.worker_callback_config is not None
+            else os.environ.get("LINGUA_WORKER_TOKEN")
+        )
+        _require_worker_token(expected_token, x_worker_token)
+        app.state.worker_runtime.request_drain()
+        return worker_status()
 
     @app.post("/clone-prompts")
     def register_clone_prompt(
@@ -1111,7 +1195,9 @@ def create_app(
             ):
                 raise HTTPException(
                     400,
-                    detail="prompt_id/ref_audio/ref_text are not allowed for mode=auto.",
+                    detail=(
+                        "prompt_id/ref_audio/ref_text are not allowed for mode=auto."
+                    ),
                 )
         elif mode == GenerateMode.design:
             if (
@@ -1121,13 +1207,19 @@ def create_app(
             ):
                 raise HTTPException(
                     400,
-                    detail="prompt_id/ref_audio/ref_text are not allowed for mode=design.",
+                    detail=(
+                        "prompt_id/ref_audio/ref_text are not allowed for "
+                        "mode=design."
+                    ),
                 )
         else:
             if prompt_id_value is not None and ref_audio is not None:
                 raise HTTPException(
                     400,
-                    detail="Provide either prompt_id or ref_audio for mode=clone, not both.",
+                    detail=(
+                        "Provide either prompt_id or ref_audio for mode=clone, "
+                        "not both."
+                    ),
                 )
             if prompt_id_value is None and ref_audio is None:
                 raise HTTPException(
@@ -1169,6 +1261,9 @@ def create_app(
         prompt_prepare_ms = 0.0
         batch_estimate_ms = 0.0
         response_encode_ms = 0.0
+        request_counted = app.state.worker_runtime.begin_request()
+        if not request_counted:
+            raise HTTPException(503, detail="Worker is draining.")
 
         try:
             model = runner.model
@@ -1411,7 +1506,8 @@ def create_app(
                 "gpu_util_avg_pct=%s gpu_util_peak_pct=%s "
                 "device_vram_used_gb_peak=%s device_vram_util_peak_pct=%s "
                 "text_chars=%d "
-                "prompt_source=%s postprocess_mode=%s language=%s device=%s saved_path=%s",
+                "prompt_source=%s postprocess_mode=%s language=%s device=%s "
+                "saved_path=%s",
                 request_id,
                 mode.value,
                 batch_key.lane,
@@ -1485,6 +1581,7 @@ def create_app(
                 detail=f"{type(exc).__name__}: {exc}",
             ) from exc
         finally:
+            app.state.worker_runtime.end_request()
             if ref_audio is not None:
                 ref_audio.file.close()
 
@@ -1540,6 +1637,7 @@ def main(argv: list[str] | None = None) -> None:
         batch_bucket_sizes=batch_bucket_sizes,
         prewarm_clone_batch_sizes=prewarm_clone_batch_sizes,
         prewarm_clone_sequence_lengths=prewarm_clone_sequence_lengths,
+        server_port=args.port,
     )
 
     uvicorn.run(

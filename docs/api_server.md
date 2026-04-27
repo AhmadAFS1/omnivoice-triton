@@ -27,6 +27,49 @@ generation lock. Instead it:
 It is still **one process with one in-flight merged batch at a time**, so this
 is a throughput improvement rather than a full multi-worker serving system.
 
+## Lingua Worker Callback
+
+For Vast.ai autoscaling, the API server can self-register as a Lingua
+`worker_type: "tts"` worker. Callback behavior is enabled only when the worker
+token and control-plane URL are present in the environment.
+
+Required environment:
+
+- `LINGUA_CONTROL_PLANE_BASE_URL`
+- `LINGUA_WORKER_TOKEN`
+- `LINGUA_WORKER_TYPE=tts`
+- `LINGUA_WORKER_DEFAULT_CAPACITY=1`
+
+Optional overrides:
+
+- `LINGUA_WORKER_REGISTER_URL`
+- `LINGUA_WORKER_HEARTBEAT_URL`
+- `LINGUA_WORKER_PUBLIC_BASE_URL`
+- `LINGUA_WORKER_PUBLIC_IP`
+- `LINGUA_WORKER_PUBLIC_PORT`
+- `LINGUA_WORKER_REGION`
+- `LINGUA_WORKER_GPU_TYPE`
+- `LINGUA_WORKER_HEARTBEAT_INTERVAL_SECONDS`
+
+If `LINGUA_WORKER_PUBLIC_BASE_URL` is not set, the server attempts to build a
+public URL from Vast-style `PUBLIC_IPADDR` and `VAST_TCP_PORT_<port>` variables.
+Registration uses `X-Worker-Token: $LINGUA_WORKER_TOKEN`, retries until
+successful, and then sends periodic heartbeats with active request and drain
+metadata.
+
+Drain mode is available through:
+
+```bash
+curl -X POST \
+  -H "X-Worker-Token: $LINGUA_WORKER_TOKEN" \
+  http://127.0.0.1:8002/drain
+```
+
+While draining, new `/generate` requests return `503` and existing in-flight
+requests are allowed to finish. `/health` and `/worker` expose the current
+worker status, active request count, assignability, callback config, and public
+base URL.
+
 ## Overview
 
 The server is a thin HTTP layer around:
