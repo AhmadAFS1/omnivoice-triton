@@ -23,6 +23,45 @@ _DTYPE_MAP: dict[str, torch.dtype] = {
 }
 
 
+def cuda_preflight_error() -> str | None:
+    """Return a diagnostic message if CUDA cannot be used by PyTorch."""
+    try:
+        if torch.cuda.is_available():
+            return None
+        device_count = torch.cuda.device_count()
+    except Exception as exc:
+        return f"PyTorch CUDA initialization failed: {exc}"
+
+    torch_version = getattr(torch, "__version__", "unknown")
+    cuda_version = getattr(torch.version, "cuda", None) or "not built with CUDA"
+    if device_count > 0:
+        return (
+            "PyTorch can see an NVIDIA device but CUDA is not usable. "
+            f"Installed torch={torch_version} was built for CUDA {cuda_version}. "
+            "Install a PyTorch wheel that matches the host driver, for example "
+            "the cu128 wheel on Vast.ai CUDA 12.8 images."
+        )
+    return "PyTorch CUDA is unavailable and no CUDA devices were detected."
+
+
+def require_cuda_available() -> None:
+    """Raise a clear error when a CUDA runner is requested without CUDA."""
+    error = cuda_preflight_error()
+    if error is not None:
+        raise RuntimeError(error)
+
+
+def _reset_peak_memory_stats() -> None:
+    if torch.cuda.is_available():
+        torch.cuda.reset_peak_memory_stats()
+
+
+def _max_memory_allocated_gb() -> float:
+    if not torch.cuda.is_available():
+        return 0.0
+    return torch.cuda.max_memory_allocated() / 1024**3
+
+
 def _resolve_dtype(dtype: str | torch.dtype) -> torch.dtype:
     """Convert dtype string to torch.dtype."""
     if isinstance(dtype, torch.dtype):
@@ -132,7 +171,9 @@ class BaseRunner:
         from omnivoice import OmniVoice
 
         logger.info("Loading %s ...", self.model_id)
-        torch.cuda.reset_peak_memory_stats()
+        if self.device.startswith("cuda"):
+            require_cuda_available()
+        _reset_peak_memory_stats()
 
         self._model = OmniVoice.from_pretrained(
             self.model_id,
@@ -146,7 +187,7 @@ class BaseRunner:
                 thread_name_prefix="omnivoice-postprocess",
             )
         self._install_generation_metrics(self._model)
-        vram_gb = torch.cuda.max_memory_allocated() / 1024**3
+        vram_gb = _max_memory_allocated_gb()
         logger.info("Model loaded. VRAM: %.2f GB", vram_gb)
 
     @property
@@ -181,7 +222,7 @@ class BaseRunner:
             Dict with audio, sample_rate, time_s, peak_vram_gb.
         """
         self._check_loaded()
-        torch.cuda.reset_peak_memory_stats()
+        _reset_peak_memory_stats()
 
         from omnivoice import OmniVoiceGenerationConfig
 
@@ -206,7 +247,7 @@ class BaseRunner:
             "audio": _to_numpy(audio_list),
             "sample_rate": DEFAULT_SAMPLE_RATE,
             "time_s": elapsed,
-            "peak_vram_gb": torch.cuda.max_memory_allocated() / 1024**3,
+            "peak_vram_gb": _max_memory_allocated_gb(),
         }
 
     def generate_voice_clone(
@@ -235,7 +276,7 @@ class BaseRunner:
             Dict with audio, sample_rate, time_s, peak_vram_gb.
         """
         self._check_loaded()
-        torch.cuda.reset_peak_memory_stats()
+        _reset_peak_memory_stats()
 
         from omnivoice import OmniVoiceGenerationConfig
 
@@ -263,7 +304,7 @@ class BaseRunner:
             "audio": _to_numpy(audio_list),
             "sample_rate": DEFAULT_SAMPLE_RATE,
             "time_s": elapsed,
-            "peak_vram_gb": torch.cuda.max_memory_allocated() / 1024**3,
+            "peak_vram_gb": _max_memory_allocated_gb(),
         }
 
     def generate_voice_design(
@@ -291,7 +332,7 @@ class BaseRunner:
             Dict with audio, sample_rate, time_s, peak_vram_gb.
         """
         self._check_loaded()
-        torch.cuda.reset_peak_memory_stats()
+        _reset_peak_memory_stats()
 
         from omnivoice import OmniVoiceGenerationConfig
 
@@ -317,7 +358,7 @@ class BaseRunner:
             "audio": _to_numpy(audio_list),
             "sample_rate": DEFAULT_SAMPLE_RATE,
             "time_s": elapsed,
-            "peak_vram_gb": torch.cuda.max_memory_allocated() / 1024**3,
+            "peak_vram_gb": _max_memory_allocated_gb(),
         }
 
     def unload_model(self) -> None:
@@ -327,7 +368,8 @@ class BaseRunner:
             self._decode_postprocess_executor = None
         del self._model
         self._model = None
-        torch.cuda.empty_cache()
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
         logger.info("Model unloaded.")
 
     def get_generation_metrics(self) -> dict[str, float]:

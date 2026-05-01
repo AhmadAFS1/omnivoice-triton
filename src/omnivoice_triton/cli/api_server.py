@@ -27,6 +27,7 @@ from omnivoice import OmniVoiceGenerationConfig
 from omnivoice.utils.lang_map import LANG_NAME_TO_ID, lang_display_name
 
 from omnivoice_triton import ALL_RUNNER_NAMES, __version__, create_runner
+from omnivoice_triton.models.base_runner import require_cuda_available
 from omnivoice_triton.serving import (
     ClonePromptCache,
     GenerationBatcher,
@@ -769,7 +770,9 @@ def create_app(
 ) -> FastAPI:
     """Create the FastAPI app."""
     resolved_device = device or get_best_device()
-    if not resolved_device.startswith("cuda") and runner_name != "base":
+    if resolved_device.startswith("cuda"):
+        require_cuda_available()
+    elif runner_name != "base":
         raise ValueError(
             f"Runner '{runner_name}' requires CUDA. Use --runner base or a CUDA device."
         )
