@@ -322,6 +322,96 @@ def test_worker_drain_requires_token_when_configured(
         assert payload["callback_enabled"] is True
 
 
+def test_worker_state_reads_vast_public_port_for_internal_port(
+    tmp_path: Path,
+    monkeypatch,
+) -> None:
+    monkeypatch.setenv("LINGUA_CONTROL_PLANE_BASE_URL", "https://lingua.example")
+    monkeypatch.setenv("LINGUA_WORKER_TOKEN", "secret-token")
+    monkeypatch.setenv("PUBLIC_IPADDR", "74.48.140.178")
+    monkeypatch.setenv("VAST_TCP_PORT_8000", "43538")
+
+    created: list[_FakeRunner] = []
+    app = _make_app(
+        tmp_path,
+        created,
+        load_asr=False,
+        server_port=8000,
+        start_worker_callback=False,
+    )
+
+    with TestClient(app) as client:
+        response = client.get("/worker/state")
+        assert response.status_code == 200
+        payload = response.json()
+        assert payload["base_url"] == "http://74.48.140.178:43538"
+        assert payload["endpoint_url"] == "http://74.48.140.178:43538"
+        assert payload["public_ip"] == "74.48.140.178"
+        assert payload["public_port"] == "43538"
+        assert payload["internal_port"] == 8000
+
+        health = client.get("/health")
+        assert health.status_code == 200
+        assert health.json()["worker"]["base_url"] == payload["base_url"]
+
+
+def test_worker_base_url_override_wins(
+    tmp_path: Path,
+    monkeypatch,
+) -> None:
+    monkeypatch.setenv("LINGUA_CONTROL_PLANE_BASE_URL", "https://lingua.example")
+    monkeypatch.setenv("LINGUA_WORKER_TOKEN", "secret-token")
+    monkeypatch.setenv("LINGUA_WORKER_BASE_URL", "http://203.0.113.55:45678")
+    monkeypatch.setenv("PUBLIC_IPADDR", "74.48.140.178")
+    monkeypatch.setenv("VAST_TCP_PORT_8000", "43538")
+
+    created: list[_FakeRunner] = []
+    app = _make_app(
+        tmp_path,
+        created,
+        load_asr=False,
+        server_port=8000,
+        start_worker_callback=False,
+    )
+
+    with TestClient(app) as client:
+        response = client.get("/worker/state")
+        assert response.status_code == 200
+        payload = response.json()
+        assert payload["base_url"] == "http://203.0.113.55:45678"
+        assert payload["endpoint_url"] == "http://203.0.113.55:45678"
+        assert payload["internal_port"] == 8000
+
+
+def test_worker_state_does_not_advertise_unmapped_vast_internal_port(
+    tmp_path: Path,
+    monkeypatch,
+) -> None:
+    monkeypatch.setenv("LINGUA_CONTROL_PLANE_BASE_URL", "https://lingua.example")
+    monkeypatch.setenv("LINGUA_WORKER_TOKEN", "secret-token")
+    monkeypatch.setenv("PUBLIC_IPADDR", "74.48.140.178")
+    monkeypatch.setenv("VAST_TCP_PORT_8000", "43538")
+
+    created: list[_FakeRunner] = []
+    app = _make_app(
+        tmp_path,
+        created,
+        load_asr=False,
+        server_port=8002,
+        start_worker_callback=False,
+    )
+
+    with TestClient(app) as client:
+        response = client.get("/worker/state")
+        assert response.status_code == 200
+        payload = response.json()
+        assert payload["base_url"] is None
+        assert payload["endpoint_url"] is None
+        assert payload["public_ip"] == "74.48.140.178"
+        assert payload["public_port"] is None
+        assert payload["internal_port"] == 8002
+
+
 def test_generate_design_returns_wav_and_saves_file(tmp_path: Path) -> None:
     created: list[_FakeRunner] = []
     app = _make_app(tmp_path, created, load_asr=False)

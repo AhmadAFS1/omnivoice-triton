@@ -46,6 +46,12 @@ def _env_first(*names: str) -> str | None:
     return None
 
 
+def _has_env_with_prefix(prefix: str) -> bool:
+    return any(
+        name.startswith(prefix) and value.strip() for name, value in os.environ.items()
+    )
+
+
 def _detect_instance_id() -> str:
     value = _env_first(
         "LINGUA_WORKER_INSTANCE_ID",
@@ -59,30 +65,59 @@ def _detect_instance_id() -> str:
     return socket.gethostname()
 
 
-def detect_public_base_url(port: int) -> str | None:
-    """Detect the public URL Lingua should use to call this worker."""
+@dataclass(frozen=True)
+class WorkerPublicEndpoint:
+    base_url: str | None
+    public_ip: str | None
+    public_port: str | None
+    internal_port: int
+
+
+def detect_public_endpoint(port: int) -> WorkerPublicEndpoint:
+    """Detect the public endpoint Lingua should use to call this worker."""
     explicit = _env_first(
+        "LINGUA_WORKER_BASE_URL",
         "LINGUA_WORKER_PUBLIC_BASE_URL",
         "OMNIVOICE_PUBLIC_BASE_URL",
         "PUBLIC_BASE_URL",
     )
     if explicit:
-        return explicit.rstrip("/")
+        return WorkerPublicEndpoint(
+            base_url=explicit.rstrip("/"),
+            public_ip=None,
+            public_port=None,
+            internal_port=port,
+        )
 
     public_ip = _env_first(
         "LINGUA_WORKER_PUBLIC_IP",
+        "VAST_PUBLIC_IP",
         "PUBLIC_IPADDR",
         "PUBLIC_IP",
-        "VAST_PUBLIC_IP",
     )
     public_port = _env_first(
-        f"VAST_TCP_PORT_{port}",
         "LINGUA_WORKER_PUBLIC_PORT",
+        "VAST_PUBLIC_PORT",
+        f"VAST_TCP_PORT_{port}",
         "PUBLIC_PORT",
     )
-    if public_ip:
-        return f"http://{public_ip}:{public_port or port}"
-    return None
+    base_url: str | None = None
+    if public_ip and public_port:
+        base_url = f"http://{public_ip}:{public_port}"
+    elif public_ip and not _has_env_with_prefix("VAST_TCP_PORT_"):
+        base_url = f"http://{public_ip}:{port}"
+
+    return WorkerPublicEndpoint(
+        base_url=base_url,
+        public_ip=public_ip,
+        public_port=public_port,
+        internal_port=port,
+    )
+
+
+def detect_public_base_url(port: int) -> str | None:
+    """Detect the public URL Lingua should use to call this worker."""
+    return detect_public_endpoint(port).base_url
 
 
 class WorkerRuntimeState:
@@ -133,6 +168,9 @@ class WorkerCallbackConfig:
     token: str
     capacity: int
     public_base_url: str | None
+    public_ip: str | None
+    public_port: str | None
+    internal_port: int
     region: str | None
     gpu_type: str | None
     heartbeat_interval_s: float
@@ -161,6 +199,7 @@ class WorkerCallbackConfig:
             ),
             1,
         )
+        public_endpoint = detect_public_endpoint(port)
         return cls(
             worker_type=worker_type,
             worker_id=worker_id,
@@ -169,7 +208,10 @@ class WorkerCallbackConfig:
             heartbeat_url=heartbeat_url,
             token=token,
             capacity=capacity,
-            public_base_url=detect_public_base_url(port),
+            public_base_url=public_endpoint.base_url,
+            public_ip=public_endpoint.public_ip,
+            public_port=public_endpoint.public_port,
+            internal_port=public_endpoint.internal_port,
             region=_env_first("LINGUA_WORKER_REGION"),
             gpu_type=_env_first("LINGUA_WORKER_GPU_TYPE"),
             heartbeat_interval_s=_parse_positive_float(
@@ -226,6 +268,10 @@ class WorkerLifecycleReporter:
             "worker_id": self.config.worker_id,
             "instance_id": self.config.instance_id,
             "base_url": self.config.public_base_url,
+            "endpoint_url": self.config.public_base_url,
+            "public_ip": self.config.public_ip,
+            "public_port": self.config.public_port,
+            "internal_port": self.config.internal_port,
             "status": snapshot["status"],
             "capacity": snapshot["capacity"],
             "region": self.config.region,

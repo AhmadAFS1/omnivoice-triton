@@ -1008,9 +1008,19 @@ def create_app(
                     worker_config.instance_id if worker_config is not None else None
                 ),
                 "base_url": (
-                    worker_config.public_base_url
-                    if worker_config is not None
-                    else None
+                    worker_config.public_base_url if worker_config is not None else None
+                ),
+                "endpoint_url": (
+                    worker_config.public_base_url if worker_config is not None else None
+                ),
+                "public_ip": (
+                    worker_config.public_ip if worker_config is not None else None
+                ),
+                "public_port": (
+                    worker_config.public_port if worker_config is not None else None
+                ),
+                "internal_port": (
+                    worker_config.internal_port if worker_config is not None else None
                 ),
                 "callback_enabled": worker_config is not None,
                 **worker_runtime,
@@ -1029,6 +1039,7 @@ def create_app(
         ]
         return {"count": len(items), "languages": items}
 
+    @app.get("/worker/state")
     @app.get("/worker")
     def worker_status() -> dict[str, Any]:
         worker_config = app.state.worker_callback_config
@@ -1038,6 +1049,10 @@ def create_app(
             "worker_id": worker_config.worker_id if worker_config else None,
             "instance_id": worker_config.instance_id if worker_config else None,
             "base_url": worker_config.public_base_url if worker_config else None,
+            "endpoint_url": worker_config.public_base_url if worker_config else None,
+            "public_ip": worker_config.public_ip if worker_config else None,
+            "public_port": worker_config.public_port if worker_config else None,
+            "internal_port": worker_config.internal_port if worker_config else None,
             "callback_enabled": worker_config is not None,
             **runtime,
         }
@@ -1211,8 +1226,7 @@ def create_app(
                 raise HTTPException(
                     400,
                     detail=(
-                        "prompt_id/ref_audio/ref_text are not allowed for "
-                        "mode=design."
+                        "prompt_id/ref_audio/ref_text are not allowed for mode=design."
                     ),
                 )
         else:
@@ -1531,9 +1545,7 @@ def create_app(
                 _format_optional_metric(
                     generation_metrics.get("iterative_generate_ms")
                 ),
-                _format_optional_metric(
-                    generation_metrics.get("chunked_generate_ms")
-                ),
+                _format_optional_metric(generation_metrics.get("chunked_generate_ms")),
                 _format_optional_metric(
                     generation_metrics.get("decode_postprocess_ms")
                 ),
@@ -1545,9 +1557,7 @@ def create_app(
                 audio_duration_s,
                 f"{rtf:.4f}" if rtf is not None else "-",
                 peak_vram_gb,
-                _format_optional_metric(
-                    getattr(gpu_metrics, "gpu_util_avg_pct", None)
-                ),
+                _format_optional_metric(getattr(gpu_metrics, "gpu_util_avg_pct", None)),
                 _format_optional_metric(
                     getattr(gpu_metrics, "gpu_util_peak_pct", None)
                 ),
