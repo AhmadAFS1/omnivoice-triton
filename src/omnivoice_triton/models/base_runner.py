@@ -1,6 +1,5 @@
 """Base OmniVoice runner using HuggingFace transformers."""
 
-import os
 import logging
 import threading
 import time
@@ -568,7 +567,8 @@ class BaseRunner:
             setattr(model, "_omnivoice_current_generation_metrics", metrics)
             started = time.perf_counter()
             try:
-                return enhanced_generate(*args, **kwargs)
+                with torch.inference_mode():
+                    return enhanced_generate(*args, **kwargs)
             finally:
                 metrics["generate_total_ms"] = (time.perf_counter() - started) * 1000.0
                 setattr(model, "_omnivoice_last_generation_metrics", dict(metrics))

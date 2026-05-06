@@ -217,16 +217,19 @@ def test_health_and_languages(tmp_path: Path) -> None:
         assert payload["runner"] == "hybrid"
         assert payload["model"] == "fake/omnivoice"
         assert payload["device"] == "cuda"
+        assert payload["allow_lazy_asr"] is False
         assert payload["asr_loaded"] is True
         assert payload["sage_attention"] is True
         assert payload["full_triton_patch"] is True
         assert payload["decode_postprocess_workers"] == 3
+        assert payload["max_cuda_graphs"] == 8
         assert payload["batch_collect_ms"] == 10.0
         assert payload["max_batch_requests"] == 32
         assert payload["registered_clone_prompt_count"] == 0
         assert payload["token_estimate_cache_entries"] == 0
         assert payload["batch_bucket_sizes"] == [1, 2, 4, 8, 16, 32]
         assert payload["cuda_graph_capture_count"] == 0
+        assert payload["cuda_graph_max_graphs"] == 8
         assert payload["prewarm_clone_batch_sizes"] == [2, 4]
         assert payload["prewarm_clone_sequence_lengths"] == [163]
         assert payload["cuda_graph_prewarm"]["requested_shapes"] == [
@@ -258,6 +261,7 @@ def test_health_and_languages(tmp_path: Path) -> None:
     assert created[0].kwargs["enable_sage_attention"] is True
     assert created[0].kwargs["patch_range"] is None
     assert created[0].kwargs["decode_postprocess_workers"] == 3
+    assert created[0].kwargs["max_cuda_graphs"] == 8
     assert created[0].prewarmed_shapes == [[4, 8, 163], [8, 8, 163]]
 
 
@@ -535,6 +539,28 @@ def test_generate_clone_reuses_cached_prompt(tmp_path: Path) -> None:
     assert len(model.calls) == 2
     assert first.headers["x-omnivoice-prompt-source"] == "upload_miss"
     assert second.headers["x-omnivoice-prompt-source"] == "upload_hit"
+
+
+def test_generate_clone_without_ref_text_rejected_when_lazy_asr_disabled(
+    tmp_path: Path,
+) -> None:
+    created: list[_FakeRunner] = []
+    app = _make_app(tmp_path, created, load_asr=False)
+
+    with TestClient(app) as client:
+        response = client.post(
+            "/generate",
+            data={
+                "mode": "clone",
+                "text": "Clone without transcript.",
+            },
+            files={"ref_audio": ("ref.wav", _fake_wav_bytes(), "audio/wav")},
+        )
+
+    assert response.status_code == 400
+    assert "ref_text is required" in response.json()["detail"]
+    assert created[0].model._asr_pipe is None
+    assert created[0].model.prompt_calls == []
 
 
 def test_generate_design_accepts_light_postprocess_mode(tmp_path: Path) -> None:

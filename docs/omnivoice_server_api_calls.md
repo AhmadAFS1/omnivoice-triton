@@ -91,7 +91,7 @@ Common optional fields:
 | `instruct` | Voice design instruction. Used with `mode=design`; optional in `mode=clone`. |
 | `prompt_id` | Reusable clone prompt ID from `/clone-prompts`. Used with `mode=clone`. |
 | `ref_audio` | Uploaded reference audio file. Used with `mode=clone`. |
-| `ref_text` | Optional transcript for `ref_audio`. |
+| `ref_text` | Optional transcript for `ref_audio`; required when `--no-asr` is used unless `--allow-lazy-asr` is enabled. |
 | `num_step` | Decode step override. |
 | `guidance_scale` | Guidance scale override. |
 | `t_shift` | Advanced generation timing shift override. |
@@ -149,6 +149,8 @@ curl -sS -o out.wav \
 ```
 
 `mode=clone` requires exactly one of `prompt_id` or `ref_audio`.
+Supplying `ref_text` is recommended so the worker does not need to load Whisper
+ASR onto the GPU.
 
 ### Clone Mode With Reusable Prompt ID
 

@@ -3,8 +3,8 @@
 from omnivoice_triton.serving.batching import (
     BatchedGenerationResult,
     ClonePromptCache,
-    GenerationBatchKey,
     GenerationBatcher,
+    GenerationBatchKey,
     PendingGeneration,
 )
 from omnivoice_triton.serving.gpu_metrics import BatchGpuMetrics, GPUMetricsMonitor

@@ -55,6 +55,7 @@ DEFAULT_BATCH_BUCKET_SIZES = (1, 2, 4, 8, 16, 32)
 DEFAULT_REGISTERED_CLONE_PROMPT_STORE_SIZE = 256
 DEFAULT_TOKEN_ESTIMATE_CACHE_SIZE = 4096
 DEFAULT_DECODE_POSTPROCESS_WORKERS = max(1, min(4, os.cpu_count() or 1))
+DEFAULT_MAX_CUDA_GRAPHS = 8
 DEFAULT_PREWARM_CLONE_BATCH_SIZES: tuple[int, ...] = ()
 DEFAULT_PREWARM_CLONE_SEQUENCE_LENGTHS: tuple[int, ...] = ()
 _SLUG_RE = re.compile(r"[^a-z0-9]+")
@@ -147,7 +148,23 @@ class RegisteredClonePromptStore:
 
         tokens = ref_audio_tokens.detach()
         if self.storage_device.startswith("cuda") and torch.cuda.is_available():
-            tokens = tokens.to(self.storage_device, non_blocking=True)
+            try:
+                tokens = tokens.to(self.storage_device, non_blocking=True)
+            except Exception as exc:
+                logger.warning(
+                    "Failed to store registered clone prompt on %s; falling back "
+                    "to CPU storage: %s",
+                    self.storage_device,
+                    exc,
+                )
+                _cleanup_cuda_after_failure(
+                    "registered_clone_prompt_gpu_store_error",
+                )
+                tokens = ref_audio_tokens.detach().cpu()
+                try:
+                    tokens = tokens.pin_memory()
+                except RuntimeError:
+                    pass
         else:
             tokens = tokens.cpu()
             if torch.cuda.is_available():
@@ -224,8 +241,14 @@ def build_parser() -> argparse.ArgumentParser:
         "--no-asr",
         action="store_true",
         default=False,
-        help="Skip loading Whisper ASR at startup. Clone mode without ref_text "
-        "may still load ASR on demand.",
+        help="Skip loading Whisper ASR at startup and require ref_text for clone "
+        "requests unless --allow-lazy-asr is also set.",
+    )
+    parser.add_argument(
+        "--allow-lazy-asr",
+        action="store_true",
+        default=False,
+        help="Allow clone requests without ref_text to load Whisper ASR on demand.",
     )
     parser.add_argument(
         "--save-dir",
@@ -287,6 +310,16 @@ def build_parser() -> argparse.ArgumentParser:
         type=int,
         default=DEFAULT_DECODE_POSTPROCESS_WORKERS,
         help="Worker threads for CPU-side audio postprocessing after decode.",
+    )
+    parser.add_argument(
+        "--max-cuda-graphs",
+        type=int,
+        default=DEFAULT_MAX_CUDA_GRAPHS,
+        help=(
+            "Maximum CUDA Graph shapes to retain for faster/hybrid runners "
+            "(default: 8). "
+            "Use 0 to disable graph caching."
+        ),
     )
     parser.add_argument(
         "--batch-bucket-sizes",
@@ -485,6 +518,56 @@ def _to_wav_bytes(audio: np.ndarray, sample_rate: int) -> bytes:
     return buffer.getvalue()
 
 
+def _cleanup_cuda_after_failure(
+    reason: str,
+    *,
+    model: Any | None = None,
+    clear_cuda_graphs: bool = False,
+) -> None:
+    """Best-effort cleanup for failed requests that may have touched CUDA."""
+    cleared_graphs = False
+    if clear_cuda_graphs and model is not None:
+        forward = getattr(model, "forward", None)
+        clear = getattr(forward, "clear", None)
+        if callable(clear):
+            try:
+                clear()
+                cleared_graphs = True
+            except Exception:
+                logger.debug(
+                    "Failed to clear CUDA Graph cache after %s.",
+                    reason,
+                    exc_info=True,
+                )
+
+    if not torch.cuda.is_available():
+        return
+
+    try:
+        torch.cuda.synchronize()
+    except Exception:
+        logger.debug(
+            "CUDA synchronize failed during cleanup after %s.",
+            reason,
+            exc_info=True,
+        )
+    try:
+        torch.cuda.empty_cache()
+        if hasattr(torch.cuda, "ipc_collect"):
+            torch.cuda.ipc_collect()
+        logger.info(
+            "CUDA cleanup complete after %s cleared_graphs=%s",
+            reason,
+            cleared_graphs,
+        )
+    except Exception:
+        logger.debug(
+            "CUDA cache cleanup failed after %s.",
+            reason,
+            exc_info=True,
+        )
+
+
 def _slugify(text: str, max_len: int = 48) -> str:
     slug = _SLUG_RE.sub("-", text.lower()).strip("-")
     if not slug:
@@ -654,12 +737,22 @@ def _create_voice_clone_prompt(
     ref_text: str | None,
     preprocess_prompt: bool,
     asr_load_lock: threading.Lock,
+    allow_lazy_asr: bool,
 ) -> Any:
     if (
         ref_text is None
         and hasattr(model, "load_asr_model")
         and getattr(model, "_asr_pipe", None) is None
     ):
+        if not allow_lazy_asr:
+            raise HTTPException(
+                400,
+                detail=(
+                    "ref_text is required for clone requests when lazy ASR is "
+                    "disabled. Start with --allow-lazy-asr to permit on-demand "
+                    "Whisper loading."
+                ),
+            )
         with asr_load_lock:
             if getattr(model, "_asr_pipe", None) is None:
                 model.load_asr_model()
@@ -694,6 +787,7 @@ def _build_runner(
     enable_sage_attention: bool,
     full_triton_patch: bool,
     decode_postprocess_workers: int,
+    max_cuda_graphs: int,
     runner_factory: Callable[..., Any],
 ) -> Any:
     kwargs: dict[str, Any] = {
@@ -702,6 +796,8 @@ def _build_runner(
         "dtype": dtype,
         "decode_postprocess_workers": decode_postprocess_workers,
     }
+    if runner_name in {"faster", "hybrid"}:
+        kwargs["max_cuda_graphs"] = max(0, int(max_cuda_graphs))
     if full_triton_patch:
         if runner_name not in {"triton", "hybrid"}:
             raise ValueError(
@@ -745,9 +841,11 @@ def create_app(
     device: str | None = None,
     dtype: str = "fp16",
     load_asr: bool = True,
+    allow_lazy_asr: bool = False,
     enable_sage_attention: bool = False,
     full_triton_patch: bool = False,
     decode_postprocess_workers: int = DEFAULT_DECODE_POSTPROCESS_WORKERS,
+    max_cuda_graphs: int = DEFAULT_MAX_CUDA_GRAPHS,
     save_dir: str | None = None,
     batch_collect_ms: float = DEFAULT_BATCH_COLLECT_MS,
     max_batch_requests: int = DEFAULT_MAX_BATCH_REQUESTS,
@@ -793,6 +891,7 @@ def create_app(
             enable_sage_attention=enable_sage_attention,
             full_triton_patch=full_triton_patch,
             decode_postprocess_workers=decode_postprocess_workers,
+            max_cuda_graphs=max_cuda_graphs,
             runner_factory=factory,
         )
         runner.load_model()
@@ -860,6 +959,7 @@ def create_app(
             "API server ready runner=%s model=%s device=%s dtype=%s asr_loaded=%s "
             "batch_collect_ms=%.1f max_batch_requests=%d batch_bucket_sizes=%s "
             "full_triton_patch=%s decode_postprocess_workers=%d "
+            "max_cuda_graphs=%d allow_lazy_asr=%s "
             "prewarm_clone_batch_sizes=%s "
             "prewarm_clone_sequence_lengths=%s gpu_metrics_available=%s "
             "gpu_device=%s",
@@ -873,6 +973,8 @@ def create_app(
             list(batch_bucket_sizes),
             full_triton_patch,
             decode_postprocess_workers,
+            max_cuda_graphs,
+            allow_lazy_asr,
             list(requested_prewarm_batch_sizes),
             list(prewarm_clone_sequence_lengths),
             app.state.gpu_metrics_monitor.available,
@@ -906,9 +1008,11 @@ def create_app(
     app.state.device = resolved_device
     app.state.dtype = dtype
     app.state.load_asr = load_asr
+    app.state.allow_lazy_asr = allow_lazy_asr
     app.state.enable_sage_attention = enable_sage_attention
     app.state.full_triton_patch = full_triton_patch
     app.state.decode_postprocess_workers = decode_postprocess_workers
+    app.state.max_cuda_graphs = max(0, int(max_cuda_graphs))
     app.state.save_dir = Path(save_dir) if save_dir else None
     app.state.runner = None
     app.state.sample_rate = DEFAULT_SAMPLE_RATE
@@ -969,11 +1073,13 @@ def create_app(
             "dtype": app.state.dtype,
             "sample_rate": app.state.sample_rate,
             "load_asr": app.state.load_asr,
+            "allow_lazy_asr": app.state.allow_lazy_asr,
             "asr_loaded": bool(getattr(model, "_asr_pipe", None)),
             "save_dir": str(app.state.save_dir) if app.state.save_dir else None,
             "sage_attention": bool(app.state.enable_sage_attention),
             "full_triton_patch": bool(app.state.full_triton_patch),
             "decode_postprocess_workers": int(app.state.decode_postprocess_workers),
+            "max_cuda_graphs": int(app.state.max_cuda_graphs),
             "batch_collect_ms": app.state.batch_collect_ms,
             "max_batch_requests": app.state.max_batch_requests,
             "max_batch_target_tokens": app.state.max_batch_target_tokens,
@@ -992,6 +1098,9 @@ def create_app(
             "prewarm_clone_batch_sizes": app.state.prewarm_clone_batch_sizes,
             "prewarm_clone_sequence_lengths": app.state.prewarm_clone_sequence_lengths,
             "cuda_graph_capture_count": int(graph_metrics.get("capture_count", 0)),
+            "cuda_graph_max_graphs": int(
+                graph_metrics.get("max_graphs", app.state.max_cuda_graphs)
+            ),
             "cuda_graph_shapes": graph_metrics.get("shapes", []),
             "cuda_graph_prewarm": app.state.cuda_graph_prewarm_summary,
             "last_generation_metrics": generation_metrics,
@@ -1103,11 +1212,13 @@ def create_app(
                 ref_text=ref_text_value,
                 preprocess_prompt=preprocess_prompt,
                 asr_load_lock=app.state.asr_load_lock,
+                allow_lazy_asr=app.state.allow_lazy_asr,
             )
             prompt_id = prompt_store.register(prompt)
             finished_at = _utc_now()
             duration_ms = (time.perf_counter() - started_perf) * 1000.0
-            ref_audio_tokens = getattr(prompt, "ref_audio_tokens", None)
+            stored_prompt = prompt_store.get(prompt_id) or prompt
+            ref_audio_tokens = getattr(stored_prompt, "ref_audio_tokens", None)
             prompt_audio_tokens = (
                 int(ref_audio_tokens.size(-1))
                 if isinstance(ref_audio_tokens, torch.Tensor)
@@ -1140,18 +1251,32 @@ def create_app(
                 "created_at": _iso_utc(finished_at),
                 "duration_ms": round(duration_ms, 2),
                 "prompt_audio_tokens": prompt_audio_tokens,
-                "ref_text": getattr(prompt, "ref_text", None),
+                "ref_text": getattr(stored_prompt, "ref_text", None),
                 "stored_device": stored_device,
             }
         except HTTPException:
             raise
         except ValueError as exc:
+            _cleanup_cuda_after_failure(
+                "clone_prompt_value_error",
+                model=getattr(runner, "model", None),
+            )
             raise HTTPException(status_code=400, detail=str(exc)) from exc
         except RuntimeError as exc:
             logger.exception("request_id=%s status=runtime_error", request_id)
+            _cleanup_cuda_after_failure(
+                "clone_prompt_runtime_error",
+                model=getattr(runner, "model", None),
+                clear_cuda_graphs=True,
+            )
             raise HTTPException(status_code=500, detail=str(exc)) from exc
         except Exception as exc:  # pragma: no cover - defensive server guard
             logger.exception("request_id=%s status=unexpected_error", request_id)
+            _cleanup_cuda_after_failure(
+                "clone_prompt_unexpected_error",
+                model=getattr(runner, "model", None),
+                clear_cuda_graphs=True,
+            )
             raise HTTPException(
                 status_code=500,
                 detail=f"{type(exc).__name__}: {exc}",
@@ -1326,6 +1451,7 @@ def create_app(
                             ref_text=ref_text_value,
                             preprocess_prompt=preprocess_prompt,
                             asr_load_lock=app.state.asr_load_lock,
+                            allow_lazy_asr=app.state.allow_lazy_asr,
                         )
 
                     if prompt_cache is None:
@@ -1583,12 +1709,27 @@ def create_app(
         except HTTPException:
             raise
         except ValueError as exc:
+            _cleanup_cuda_after_failure(
+                "generate_value_error",
+                model=getattr(runner, "model", None),
+                clear_cuda_graphs=True,
+            )
             raise HTTPException(status_code=400, detail=str(exc)) from exc
         except RuntimeError as exc:
             logger.exception("request_id=%s status=runtime_error", request_id)
+            _cleanup_cuda_after_failure(
+                "generate_runtime_error",
+                model=getattr(runner, "model", None),
+                clear_cuda_graphs=True,
+            )
             raise HTTPException(status_code=500, detail=str(exc)) from exc
         except Exception as exc:  # pragma: no cover - defensive server guard
             logger.exception("request_id=%s status=unexpected_error", request_id)
+            _cleanup_cuda_after_failure(
+                "generate_unexpected_error",
+                model=getattr(runner, "model", None),
+                clear_cuda_graphs=True,
+            )
             raise HTTPException(
                 status_code=500,
                 detail=f"{type(exc).__name__}: {exc}",
@@ -1635,9 +1776,11 @@ def main(argv: list[str] | None = None) -> None:
         device=args.device,
         dtype=args.dtype,
         load_asr=not args.no_asr,
+        allow_lazy_asr=args.allow_lazy_asr,
         enable_sage_attention=args.sage_attention,
         full_triton_patch=args.full_triton_patch,
         decode_postprocess_workers=args.decode_postprocess_workers,
+        max_cuda_graphs=args.max_cuda_graphs,
         save_dir=args.save_dir,
         batch_collect_ms=args.batch_collect_ms,
         max_batch_requests=args.max_batch_requests,

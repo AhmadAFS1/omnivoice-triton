@@ -6,6 +6,7 @@ eliminating kernel launch overhead.
 """
 
 import logging
+from collections import OrderedDict
 from typing import Any
 
 import torch
@@ -29,10 +30,11 @@ class _CUDAGraphForward:
       3. Return output from static buffer
     """
 
-    def __init__(self, model: Any) -> None:
+    def __init__(self, model: Any, *, max_graphs: int = 32) -> None:
         self._model = model
         self._original_forward = model.forward
-        self._graphs: dict[tuple[int, ...], dict] = {}
+        self.max_graphs = max(0, int(max_graphs))
+        self._graphs: OrderedDict[tuple[int, ...], dict] = OrderedDict()
 
     def _get_shape_key(self, input_ids: torch.Tensor) -> tuple[int, ...]:
         return tuple(input_ids.shape)
@@ -106,6 +108,12 @@ class _CUDAGraphForward:
             "static_output": static_output,
         }
         self._graphs[key] = entry
+        self._graphs.move_to_end(key)
+        while self.max_graphs > 0 and len(self._graphs) > self.max_graphs:
+            evicted_key, _ = self._graphs.popitem(last=False)
+            logger.info("Evicted CUDA Graph for shape %s", evicted_key)
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
         logger.info("CUDA Graph captured for shape %s", key)
         return entry
 
@@ -130,6 +138,16 @@ class _CUDAGraphForward:
                 position_ids,
             )
 
+        if self.max_graphs <= 0:
+            return self._original_forward(
+                input_ids,
+                audio_mask,
+                labels,
+                attention_mask,
+                document_ids,
+                position_ids,
+            )
+
         key = self._get_shape_key(input_ids)
 
         if key not in self._graphs:
@@ -142,6 +160,7 @@ class _CUDAGraphForward:
             )
         else:
             entry = self._graphs[key]
+            self._graphs.move_to_end(key)
 
         # Copy ALL inputs into their static buffers before replay
         entry["static_input_ids"].copy_(input_ids)
@@ -163,6 +182,8 @@ class _CUDAGraphForward:
 
     def prewarm_shape(self, shape: tuple[int, int, int]) -> bool:
         """Capture a CUDA Graph for a shape before live traffic arrives."""
+        if self.max_graphs <= 0:
+            return False
         if shape in self._graphs:
             return False
 
@@ -189,9 +210,13 @@ class _CUDAGraphForward:
             )
         )
 
-        if num_audio_codebook != int(getattr(self._model.config, "num_audio_codebook", 0)):
+        expected_codebooks = int(
+            getattr(self._model.config, "num_audio_codebook", 0)
+        )
+        if num_audio_codebook != expected_codebooks:
             raise ValueError(
-                "CUDA Graph prewarm shape codebook dimension does not match model config."
+                "CUDA Graph prewarm shape codebook dimension does not match "
+                "model config."
             )
 
         self._capture(
@@ -205,6 +230,7 @@ class _CUDAGraphForward:
         """Return summary metrics for captured CUDA Graph shapes."""
         return {
             "capture_count": len(self._graphs),
+            "max_graphs": self.max_graphs,
             "shapes": [list(shape) for shape in sorted(self._graphs)],
         }
 
@@ -228,6 +254,7 @@ class FasterRunner(BaseRunner):
         model_id: str = "k2-fsa/OmniVoice",
         dtype: str = "fp16",
         decode_postprocess_workers: int = 0,
+        max_cuda_graphs: int = 32,
     ) -> None:
         super().__init__(
             device=device,
@@ -236,13 +263,20 @@ class FasterRunner(BaseRunner):
             decode_postprocess_workers=decode_postprocess_workers,
         )
         self._graph_forward: _CUDAGraphForward | None = None
+        self.max_cuda_graphs = max(0, int(max_cuda_graphs))
 
     def load_model(self) -> None:
         """Load model and install CUDA Graph forward wrapper."""
         super().load_model()
-        self._graph_forward = _CUDAGraphForward(self._model)
+        self._graph_forward = _CUDAGraphForward(
+            self._model,
+            max_graphs=self.max_cuda_graphs,
+        )
         self._model.forward = self._graph_forward
-        logger.info("FasterRunner ready (CUDA Graph wrapper installed).")
+        logger.info(
+            "FasterRunner ready (CUDA Graph wrapper installed, max_graphs=%d).",
+            self.max_cuda_graphs,
+        )
 
     def unload_model(self) -> None:
         """Release graphs and unload model."""

@@ -154,7 +154,10 @@ Main runtime flags:
 - `--ip`: bind address
 - `--port`: bind port
 - `--root-path`: reverse-proxy root path
-- `--no-asr`: skip loading Whisper ASR at startup
+- `--no-asr`: skip loading Whisper ASR at startup and require `ref_text`
+  unless `--allow-lazy-asr` is also set
+- `--allow-lazy-asr`: allow clone requests without `ref_text` to load Whisper
+  ASR on demand
 - `--save-dir`: persist a copy of each generated WAV
 - `--sage-attention`: enable SageAttention on `triton` or `hybrid`
 - `--batch-collect-ms`: micro-batch collection window
@@ -163,6 +166,11 @@ Main runtime flags:
 - `--max-batch-conditioning-tokens`: cap on estimated prompt/context tokens
 - `--max-batch-padding-ratio`: guardrail against inefficient padding-heavy batches
 - `--clone-prompt-cache-size`: number of prepared clone prompts to cache
+- `--registered-clone-prompt-store-size`: number of registered prompt IDs to keep
+- `--token-estimate-cache-size`: LRU size for tokenizer-based batch estimates
+- `--decode-postprocess-workers`: CPU worker threads for audio postprocessing
+- `--max-cuda-graphs`: maximum CUDA Graph shapes retained by `faster` and
+  `hybrid`; default `8`, and `0` disables graph caching
 
 Typical startup:
 
@@ -171,12 +179,16 @@ cd /workspace/omnivoice-triton
 .venv/bin/omnivoice-api --runner hybrid --device cuda --ip 0.0.0.0 --port 8002
 ```
 
-Faster startup if you always supply `ref_text` for clone mode:
+Faster and safer startup if you always supply `ref_text` for clone mode:
 
 ```bash
 cd /workspace/omnivoice-triton
 .venv/bin/omnivoice-api --runner hybrid --device cuda --no-asr --ip 0.0.0.0 --port 8002
 ```
+
+With this startup mode, clone requests that omit `ref_text` return `400`
+instead of loading Whisper ASR onto the GPU during request handling. Use
+`--allow-lazy-asr` only when that VRAM tradeoff is intentional.
 
 Save generated files locally too:
 
@@ -440,9 +452,10 @@ Behavior:
 - the uploaded file is written to a temporary file
 - the server calls `model.create_voice_clone_prompt(...)`
 - the resulting prompt is passed into `model.generate(...)`
-- if `ref_text` is omitted, OmniVoice may use ASR to auto-transcribe
-- if `--no-asr` was used, ASR is still allowed to load lazily on first clone
-  request without `ref_text`; startup is faster, first such request is slower
+- if `ref_text` is omitted and ASR is already loaded, OmniVoice may use ASR to
+  auto-transcribe
+- if `--no-asr` was used, clone requests without `ref_text` are rejected unless
+  the server was also started with `--allow-lazy-asr`
 
 Example:
 

@@ -482,15 +482,53 @@ class GenerationBatcher:
                 if "batch_gpu_sampler" in locals() and batch_gpu_sampler is not None:
                     batch_gpu_sampler.stop(process_peak_vram_gb=peak_vram_gb)
             except Exception:  # pragma: no cover - metrics should not mask failures
-                logger.debug("Failed to stop GPU batch sampler after error.", exc_info=True)
+                logger.debug(
+                    "Failed to stop GPU batch sampler after error.",
+                    exc_info=True,
+                )
             logger.exception(
                 "Batch execution failed lane=%s size=%d",
                 anchor.batch_key.lane,
                 len(batch),
             )
+            _cleanup_cuda_after_failed_batch(self._model)
             for request in batch:
                 if not request.future.done():
                     request.future.set_exception(exc)
+
+
+def _cleanup_cuda_after_failed_batch(model: Any) -> None:
+    """Release failure-created CUDA state before the next request wave."""
+    forward = getattr(model, "forward", None)
+    clear = getattr(forward, "clear", None)
+    cleared_graphs = False
+    if callable(clear):
+        try:
+            clear()
+            cleared_graphs = True
+        except Exception:
+            logger.debug(
+                "Failed to clear CUDA Graph cache after batch error.",
+                exc_info=True,
+            )
+
+    if not torch.cuda.is_available():
+        return
+
+    try:
+        torch.cuda.synchronize()
+    except Exception:
+        logger.debug("CUDA synchronize failed after batch error.", exc_info=True)
+    try:
+        torch.cuda.empty_cache()
+        if hasattr(torch.cuda, "ipc_collect"):
+            torch.cuda.ipc_collect()
+        logger.info(
+            "CUDA cleanup complete after failed batch cleared_graphs=%s",
+            cleared_graphs,
+        )
+    except Exception:
+        logger.debug("CUDA cleanup failed after batch error.", exc_info=True)
 
 
 def _format_optional_float(value: float | None) -> str:

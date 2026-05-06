@@ -45,6 +45,10 @@ if [ "${NO_ASR:-1}" = "1" ]; then
   cmd+=(--no-asr)
 fi
 
+if [ "${ALLOW_LAZY_ASR:-0}" = "1" ]; then
+  cmd+=(--allow-lazy-asr)
+fi
+
 if [ "${SAGE_ATTENTION:-0}" = "1" ]; then
   cmd+=(--sage-attention)
 fi
@@ -79,6 +83,10 @@ fi
 
 if [ -n "${MAX_BATCH_PADDING_RATIO:-}" ]; then
   cmd+=(--max-batch-padding-ratio "$MAX_BATCH_PADDING_RATIO")
+fi
+
+if [ -n "${MAX_CUDA_GRAPHS:-}" ]; then
+  cmd+=(--max-cuda-graphs "$MAX_CUDA_GRAPHS")
 fi
 
 if [ -n "${PREWARM_CLONE_BATCH_SIZES:-}" ]; then

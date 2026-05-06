@@ -67,7 +67,7 @@ Do not send both in the same generation request.
 
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
-| `ref_text` | string | unset | Transcript of `ref_audio`. Recommended when available. Cannot be combined with `prompt_id`. |
+| `ref_text` | string | unset | Transcript of `ref_audio`. Recommended, and required when the server runs with `--no-asr` unless `--allow-lazy-asr` is enabled. Cannot be combined with `prompt_id`. |
 | `language` | string | auto | OmniVoice language ID or supported language name. Use `GET /languages` to inspect supported values. |
 | `instruct` | string | unset | Optional style/control instruction for clone mode, such as `whisper`, `steady`, or `warm conversational voice`. |
 | `num_step` | integer | `32` | Decode step override. Must be `> 0`. |
@@ -99,6 +99,9 @@ denoise=true
 preprocess_prompt=true
 postprocess_mode=full
 ```
+
+Supplying `ref_text` is the safest production path. It prevents a request from
+loading Whisper ASR onto the GPU just to transcribe the reference clip.
 
 For faster/lighter output postprocessing:
 
@@ -359,4 +362,3 @@ curl -sS "$BASE_URL/languages"
 7. If using `ref_audio`, the file exists and is non-empty.
 8. If using `prompt_id`, do not send `ref_text`.
 9. Save the response body as `.wav`.
-
