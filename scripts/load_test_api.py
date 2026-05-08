@@ -253,7 +253,8 @@ def _validate_args(args: argparse.Namespace) -> None:
         if args.prompt_id is None:
             if args.ref_audio is None:
                 raise ValueError(
-                    "--ref-audio is required for --mode clone unless --prompt-id is used."
+                    "--ref-audio is required for --mode clone unless "
+                    "--prompt-id is used."
                 )
             if not args.ref_audio.exists():
                 raise ValueError(f"Reference audio not found: {args.ref_audio}")
@@ -460,7 +461,9 @@ async def _run_request(
             }
 
 
-async def _run_load_test(args: argparse.Namespace) -> list[dict[str, Any]]:
+async def _run_load_test(
+    args: argparse.Namespace,
+) -> tuple[list[dict[str, Any]], float]:
     data = _build_form_data(args)
     semaphore = asyncio.Semaphore(args.concurrency)
 
@@ -477,7 +480,8 @@ async def _run_load_test(args: argparse.Namespace) -> list[dict[str, Any]]:
         if args.mode == "clone" and args.register_clone_prompt:
             if audio_name is None or audio_bytes is None:
                 raise RuntimeError(
-                    "--register-clone-prompt requires --ref-audio to prepare the prompt."
+                    "--register-clone-prompt requires --ref-audio to prepare "
+                    "the prompt."
                 )
             prompt_id = await _register_clone_prompt(
                 client=client,
@@ -495,20 +499,18 @@ async def _run_load_test(args: argparse.Namespace) -> list[dict[str, Any]]:
 
         if args.warmup_requests:
             logger.info("Running %d warmup request(s)...", args.warmup_requests)
-            warmup_tasks = [
-                _run_request(
+            warmup_semaphore = asyncio.Semaphore(1)
+            for i in range(args.warmup_requests):
+                await _run_request(
                     index=i,
                     client=client,
-                    semaphore=asyncio.Semaphore(1),
+                    semaphore=warmup_semaphore,
                     url=args.url,
                     data=data,
                     audio_name=audio_name,
                     audio_bytes=audio_bytes,
                     audio_content_type=audio_content_type,
                 )
-                for i in range(args.warmup_requests)
-            ]
-            await asyncio.gather(*warmup_tasks)
 
         logger.info(
             "Starting load test: mode=%s requests=%d concurrency=%d url=%s",
@@ -517,6 +519,7 @@ async def _run_load_test(args: argparse.Namespace) -> list[dict[str, Any]]:
             args.concurrency,
             args.url,
         )
+        wall_started = time.perf_counter()
         tasks = [
             _run_request(
                 index=i,
@@ -530,7 +533,9 @@ async def _run_load_test(args: argparse.Namespace) -> list[dict[str, Any]]:
             )
             for i in range(args.requests)
         ]
-        return await asyncio.gather(*tasks)
+        rows = await asyncio.gather(*tasks)
+        wall_elapsed_s = time.perf_counter() - wall_started
+        return rows, wall_elapsed_s
 
 
 def _write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
@@ -874,9 +879,7 @@ def main() -> None:
     args = parser.parse_args()
     _validate_args(args)
 
-    wall_started = time.perf_counter()
-    rows = asyncio.run(_run_load_test(args))
-    wall_elapsed_s = time.perf_counter() - wall_started
+    rows, wall_elapsed_s = asyncio.run(_run_load_test(args))
 
     if args.csv is not None and rows:
         _write_csv(args.csv, rows)
