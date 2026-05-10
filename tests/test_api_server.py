@@ -541,6 +541,117 @@ def test_generate_clone_reuses_cached_prompt(tmp_path: Path) -> None:
     assert second.headers["x-omnivoice-prompt-source"] == "upload_hit"
 
 
+def test_cache_warm_wait_true_populates_clone_prompt_cache(tmp_path: Path) -> None:
+    created: list[_FakeRunner] = []
+    app = _make_app(tmp_path, created, load_asr=False)
+    ref_audio_bytes = _fake_wav_bytes()
+
+    with TestClient(app) as client:
+        warm = client.post(
+            "/cache/warm?wait=true",
+            data={
+                "mode": "clone",
+                "language": "en",
+                "ref_text": "Reference transcript.",
+                "num_step": "16",
+                "denoise": "false",
+                "preprocess_prompt": "false",
+                "postprocess_mode": "light",
+            },
+            files={"ref_audio": ("ref.wav", ref_audio_bytes, "audio/wav")},
+        )
+        assert warm.status_code == 200
+        payload = warm.json()
+        assert payload["status"] == "ok"
+        assert payload["cache"] == "clone_prompt"
+        assert payload["source"] == "miss"
+        assert payload["warmed"] is True
+        assert payload["wait"] is True
+        assert payload["language"] == "en"
+        assert payload["num_step"] == 16
+        assert payload["denoise"] is False
+        assert payload["postprocess_mode"] == "light"
+
+        response = client.post(
+            "/generate",
+            data={
+                "mode": "clone",
+                "text": "Use the warmed prompt.",
+                "ref_text": "Reference transcript.",
+                "preprocess_prompt": "false",
+            },
+            files={"ref_audio": ("ref.wav", ref_audio_bytes, "audio/wav")},
+        )
+
+    assert response.status_code == 200
+    assert response.headers["x-omnivoice-prompt-source"] == "upload_hit"
+    assert len(created[0].model.prompt_calls) == 1
+
+
+def test_cache_warm_wait_false_runs_in_background(tmp_path: Path) -> None:
+    created: list[_FakeRunner] = []
+    app = _make_app(tmp_path, created, load_asr=False)
+    ref_audio_bytes = _fake_wav_bytes()
+
+    with TestClient(app) as client:
+        model = created[0].model
+        original_create_prompt = model.create_voice_clone_prompt
+        started = threading.Event()
+        release = threading.Event()
+
+        def _slow_create_prompt(**kwargs: Any) -> SimpleNamespace:
+            started.set()
+            release.wait(timeout=2.0)
+            return original_create_prompt(**kwargs)
+
+        model.create_voice_clone_prompt = _slow_create_prompt
+        try:
+            warm = client.post(
+                "/cache/warm?wait=false",
+                data={
+                    "mode": "clone",
+                    "ref_text": "Reference transcript.",
+                },
+                files={"ref_audio": ("ref.wav", ref_audio_bytes, "audio/wav")},
+            )
+            assert warm.status_code == 200
+            assert warm.json()["status"] == "accepted"
+            assert started.wait(timeout=1.0)
+
+            health = client.get("/health")
+            assert health.status_code == 200
+            assert health.json()["worker"]["active_requests"] == 1
+        finally:
+            release.set()
+
+        deadline = time.time() + 2.0
+        while len(model.prompt_calls) < 1 and time.time() < deadline:
+            time.sleep(0.01)
+
+        health = client.get("/health")
+        assert health.status_code == 200
+        assert health.json()["worker"]["active_requests"] == 0
+        assert len(model.prompt_calls) == 1
+
+
+def test_cache_warm_requires_ref_text_when_lazy_asr_disabled(
+    tmp_path: Path,
+) -> None:
+    created: list[_FakeRunner] = []
+    app = _make_app(tmp_path, created, load_asr=False)
+
+    with TestClient(app) as client:
+        response = client.post(
+            "/cache/warm?wait=true",
+            data={"mode": "clone"},
+            files={"ref_audio": ("ref.wav", _fake_wav_bytes(), "audio/wav")},
+        )
+
+    assert response.status_code == 400
+    assert "ref_text is required" in response.json()["detail"]
+    assert created[0].model.prompt_calls == []
+
+
 def test_generate_clone_without_ref_text_rejected_when_lazy_asr_disabled(
     tmp_path: Path,
 ) -> None:

@@ -764,6 +764,25 @@ def _create_voice_clone_prompt(
     )
 
 
+def _describe_clone_prompt(prompt: Any, fallback_device: str) -> dict[str, Any]:
+    ref_audio_tokens = getattr(prompt, "ref_audio_tokens", None)
+    prompt_audio_tokens = (
+        int(ref_audio_tokens.size(-1))
+        if isinstance(ref_audio_tokens, torch.Tensor)
+        else None
+    )
+    stored_device = (
+        str(ref_audio_tokens.device)
+        if isinstance(ref_audio_tokens, torch.Tensor)
+        else fallback_device
+    )
+    return {
+        "prompt_audio_tokens": prompt_audio_tokens,
+        "ref_text": getattr(prompt, "ref_text", None),
+        "stored_device": stored_device,
+    }
+
+
 def _save_output(
     wav_bytes: bytes,
     save_dir: Path,
@@ -1283,6 +1302,254 @@ def create_app(
             ) from exc
         finally:
             ref_audio.file.close()
+
+    def _warm_clone_prompt_cache(
+        *,
+        runner: Any,
+        ref_audio_bytes: bytes,
+        ref_text_value: str | None,
+        preprocess_prompt: bool,
+    ) -> dict[str, Any]:
+        prompt_cache = app.state.clone_prompt_cache
+        if prompt_cache is None:
+            raise HTTPException(503, detail="Clone prompt cache is not ready yet.")
+
+        def _create_prompt() -> Any:
+            return _create_voice_clone_prompt(
+                runner.model,
+                ref_audio_bytes=ref_audio_bytes,
+                ref_text=ref_text_value,
+                preprocess_prompt=preprocess_prompt,
+                asr_load_lock=app.state.asr_load_lock,
+                allow_lazy_asr=app.state.allow_lazy_asr,
+            )
+
+        prompt_result = prompt_cache.get_or_create(
+            ref_audio_bytes=ref_audio_bytes,
+            ref_text=ref_text_value,
+            preprocess_prompt=preprocess_prompt,
+            factory=_create_prompt,
+        )
+        return {
+            "cache": "clone_prompt",
+            "source": prompt_result.source,
+            "warmed": prompt_result.source != "disabled",
+            **_describe_clone_prompt(prompt_result.prompt, app.state.device),
+        }
+
+    def _run_cache_warm_background(
+        *,
+        request_id: str,
+        runner: Any,
+        ref_audio_bytes: bytes,
+        ref_text_value: str | None,
+        preprocess_prompt: bool,
+        started_at: datetime,
+    ) -> None:
+        started_perf = time.perf_counter()
+        try:
+            result = _warm_clone_prompt_cache(
+                runner=runner,
+                ref_audio_bytes=ref_audio_bytes,
+                ref_text_value=ref_text_value,
+                preprocess_prompt=preprocess_prompt,
+            )
+            logger.info(
+                "cache_warm request_id=%s status=success wait=false started_at=%s "
+                "finished_at=%s duration_ms=%.2f source=%s "
+                "prompt_audio_tokens=%s stored_device=%s has_ref_text=%s",
+                request_id,
+                _iso_utc(started_at),
+                _iso_utc(_utc_now()),
+                (time.perf_counter() - started_perf) * 1000.0,
+                result["source"],
+                result["prompt_audio_tokens"]
+                if result["prompt_audio_tokens"] is not None
+                else "-",
+                result["stored_device"],
+                bool(result["ref_text"]),
+            )
+        except Exception:
+            logger.exception(
+                "cache_warm request_id=%s status=background_error",
+                request_id,
+            )
+        finally:
+            app.state.worker_runtime.end_request()
+
+    @app.post("/cache/warm")
+    def warm_cache(
+        wait: bool = True,
+        mode: GenerateMode = Form(GenerateMode.clone),
+        language: str | None = Form(None),
+        ref_text: str | None = Form(None),
+        num_step: str | None = Form(None),
+        denoise: bool = Form(True),
+        preprocess_prompt: bool = Form(True),
+        postprocess_mode: str | None = Form(None),
+        ref_audio: UploadFile | None = File(None),
+    ) -> dict[str, Any]:
+        runner = app.state.runner
+        if runner is None:
+            raise HTTPException(503, detail="Model is not ready yet.")
+
+        request_id = uuid4().hex[:12]
+        started_at = _utc_now()
+        started_perf = time.perf_counter()
+        language_value = _normalize_language(language)
+        num_step_value = _parse_positive_int("num_step", num_step, 32)
+        _, postprocess_mode_value = _parse_postprocess_mode(None, postprocess_mode)
+        ref_text_value = _normalize_text(ref_text)
+
+        try:
+            if mode != GenerateMode.clone:
+                return {
+                    "status": "ok",
+                    "request_id": request_id,
+                    "mode": mode.value,
+                    "wait": wait,
+                    "warmed": False,
+                    "cache": "none",
+                    "reason": "mode_has_no_reference_cache",
+                    "language": language_value,
+                    "num_step": num_step_value,
+                    "denoise": denoise,
+                    "postprocess_mode": postprocess_mode_value,
+                }
+
+            if ref_audio is None:
+                raise HTTPException(400, detail="ref_audio is required for cache warm.")
+
+            ref_audio_bytes = ref_audio.file.read()
+            if not ref_audio_bytes:
+                raise HTTPException(400, detail="ref_audio is empty.")
+
+            if (
+                ref_text_value is None
+                and hasattr(runner.model, "load_asr_model")
+                and getattr(runner.model, "_asr_pipe", None) is None
+                and not app.state.allow_lazy_asr
+            ):
+                raise HTTPException(
+                    400,
+                    detail=(
+                        "ref_text is required for clone requests when lazy ASR is "
+                        "disabled. Start with --allow-lazy-asr to permit on-demand "
+                        "Whisper loading."
+                    ),
+                )
+
+            request_counted = app.state.worker_runtime.begin_request()
+            if not request_counted:
+                raise HTTPException(503, detail="Worker is draining.")
+
+            if not wait:
+                thread = threading.Thread(
+                    target=_run_cache_warm_background,
+                    name=f"omnivoice-cache-warm-{request_id}",
+                    daemon=True,
+                    kwargs={
+                        "request_id": request_id,
+                        "runner": runner,
+                        "ref_audio_bytes": ref_audio_bytes,
+                        "ref_text_value": ref_text_value,
+                        "preprocess_prompt": preprocess_prompt,
+                        "started_at": started_at,
+                    },
+                )
+                try:
+                    thread.start()
+                except Exception:
+                    app.state.worker_runtime.end_request()
+                    raise
+                return {
+                    "status": "accepted",
+                    "request_id": request_id,
+                    "mode": mode.value,
+                    "wait": False,
+                    "warmed": False,
+                    "cache": "clone_prompt",
+                    "language": language_value,
+                    "num_step": num_step_value,
+                    "denoise": denoise,
+                    "postprocess_mode": postprocess_mode_value,
+                }
+
+            try:
+                result = _warm_clone_prompt_cache(
+                    runner=runner,
+                    ref_audio_bytes=ref_audio_bytes,
+                    ref_text_value=ref_text_value,
+                    preprocess_prompt=preprocess_prompt,
+                )
+            finally:
+                app.state.worker_runtime.end_request()
+
+            finished_at = _utc_now()
+            duration_ms = (time.perf_counter() - started_perf) * 1000.0
+            logger.info(
+                "cache_warm request_id=%s status=success wait=true started_at=%s "
+                "finished_at=%s duration_ms=%.2f source=%s "
+                "prompt_audio_tokens=%s stored_device=%s has_ref_text=%s",
+                request_id,
+                _iso_utc(started_at),
+                _iso_utc(finished_at),
+                duration_ms,
+                result["source"],
+                result["prompt_audio_tokens"]
+                if result["prompt_audio_tokens"] is not None
+                else "-",
+                result["stored_device"],
+                bool(result["ref_text"]),
+            )
+            return {
+                "status": "ok",
+                "request_id": request_id,
+                "mode": mode.value,
+                "wait": True,
+                "language": language_value,
+                "num_step": num_step_value,
+                "denoise": denoise,
+                "postprocess_mode": postprocess_mode_value,
+                "duration_ms": round(duration_ms, 2),
+                **result,
+            }
+        except HTTPException:
+            raise
+        except ValueError as exc:
+            _cleanup_cuda_after_failure(
+                "cache_warm_value_error",
+                model=getattr(runner, "model", None),
+            )
+            raise HTTPException(status_code=400, detail=str(exc)) from exc
+        except RuntimeError as exc:
+            logger.exception(
+                "cache_warm request_id=%s status=runtime_error",
+                request_id,
+            )
+            _cleanup_cuda_after_failure(
+                "cache_warm_runtime_error",
+                model=getattr(runner, "model", None),
+                clear_cuda_graphs=True,
+            )
+            raise HTTPException(status_code=500, detail=str(exc)) from exc
+        except Exception as exc:  # pragma: no cover - defensive server guard
+            logger.exception(
+                "cache_warm request_id=%s status=unexpected_error",
+                request_id,
+            )
+            _cleanup_cuda_after_failure(
+                "cache_warm_unexpected_error",
+                model=getattr(runner, "model", None),
+                clear_cuda_graphs=True,
+            )
+            raise HTTPException(
+                status_code=500,
+                detail=f"{type(exc).__name__}: {exc}",
+            ) from exc
+        finally:
+            if ref_audio is not None:
+                ref_audio.file.close()
 
     @app.post(
         "/generate",
