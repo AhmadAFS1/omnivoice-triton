@@ -26,6 +26,14 @@
       "api_audio_duration_s": "7.100",
       "latency_ms": "1301.77",
       "batch_target_tokens": "174"
+    },
+    {
+      "speed": 1.5,
+      "path": "tts/speed_examples/gemini_despina_clone_speed_1_50.wav",
+      "duration_s": 6.24,
+      "api_audio_duration_s": "6.240",
+      "latency_ms": "1421.48",
+      "batch_target_tokens": "151"
     }
   ]
 }
