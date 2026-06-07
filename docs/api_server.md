@@ -44,18 +44,27 @@ Optional overrides:
 
 - `LINGUA_WORKER_REGISTER_URL`
 - `LINGUA_WORKER_HEARTBEAT_URL`
+- `WORKER_ID`
 - `LINGUA_WORKER_PUBLIC_BASE_URL`
 - `LINGUA_WORKER_PUBLIC_IP`
 - `LINGUA_WORKER_PUBLIC_PORT`
 - `LINGUA_WORKER_REGION`
 - `LINGUA_WORKER_GPU_TYPE`
+- `OMNIVOICE_MODEL_ID`
+- `OMNIVOICE_MAX_CONCURRENT`
 - `LINGUA_WORKER_HEARTBEAT_INTERVAL_SECONDS`
+- `LINGUA_WORKER_DRAIN_TIMEOUT_SECONDS`
 
 If `LINGUA_WORKER_PUBLIC_BASE_URL` is not set, the server attempts to build a
 public URL from Vast-style `PUBLIC_IPADDR` and `VAST_TCP_PORT_<port>` variables.
 Registration uses `X-Worker-Token: $LINGUA_WORKER_TOKEN`, retries until
 successful, and then sends periodic heartbeats with active request and drain
 metadata.
+
+Heartbeat intervals are clamped to the Lingua-safe `15` to `30` second window.
+If the public Vast URL is not available at startup, registration waits and
+keeps retrying URL discovery instead of advertising a local or container-only
+address.
 
 Drain mode is available through:
 
@@ -65,8 +74,11 @@ curl -X POST \
   http://127.0.0.1:8002/drain
 ```
 
-While draining, new `/generate` requests return `503` and existing in-flight
-requests are allowed to finish. `/health` and `/worker` expose the current
+While draining, new `/generate`, `/clone-prompts`, and `/cache/warm` work
+returns `503` with `{"ok": false, "error": "worker_draining"}` and existing
+in-flight requests are allowed to finish. Shutdown sends a final `draining`
+heartbeat and waits up to `LINGUA_WORKER_DRAIN_TIMEOUT_SECONDS` for in-flight
+work before unloading. `/health`, `/healthz`, and `/worker` expose the current
 worker status, active request count, assignability, callback config, and public
 base URL.
 
@@ -198,6 +210,19 @@ cd /workspace/omnivoice-triton
 ```
 
 ## Endpoints
+
+### `GET /healthz`
+
+Returns a compact readiness response once the model and batcher are ready:
+
+```json
+{
+  "ok": true,
+  "service": "omnivoice",
+  "worker_type": "tts",
+  "status": "healthy"
+}
+```
 
 ### `GET /health`
 

@@ -154,6 +154,10 @@ class ClonePromptCache:
             )
         return prompt
 
+    def __len__(self) -> int:
+        with self._lock:
+            return len(self._entries)
+
 
 class GenerationBatcher:
     """Background worker that merges compatible requests into one generate call."""
@@ -399,12 +403,8 @@ class GenerationBatcher:
                     batch_exec_ms,
                     _format_optional_float(batch_gpu_metrics.gpu_util_avg_pct),
                     _format_optional_float(batch_gpu_metrics.gpu_util_peak_pct),
-                    _format_optional_float(
-                        batch_gpu_metrics.device_vram_used_gb_peak
-                    ),
-                    _format_optional_float(
-                        batch_gpu_metrics.device_vram_util_peak_pct
-                    ),
+                    _format_optional_float(batch_gpu_metrics.device_vram_used_gb_peak),
+                    _format_optional_float(batch_gpu_metrics.device_vram_util_peak_pct),
                     peak_vram_gb,
                     batch_gpu_metrics.sample_count,
                 )
@@ -425,9 +425,7 @@ class GenerationBatcher:
                     "decode_postprocess_ms=%s",
                     anchor.batch_key.lane,
                     len(batch),
-                    _format_optional_float(
-                        generation_metrics.get("generate_total_ms")
-                    ),
+                    _format_optional_float(generation_metrics.get("generate_total_ms")),
                     _format_optional_float(
                         generation_metrics.get("prepare_inference_inputs_ms")
                     ),

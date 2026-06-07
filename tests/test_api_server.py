@@ -16,6 +16,7 @@ import torch
 from fastapi.testclient import TestClient
 
 from omnivoice_triton.cli.api_server import create_app
+from omnivoice_triton.serving import WorkerLifecycleReporter
 
 
 class _FakeTokenizer:
@@ -250,6 +251,15 @@ def test_health_and_languages(tmp_path: Path) -> None:
         assert payload["worker"]["callback_enabled"] is False
         assert Path(payload["save_dir"]) == tmp_path
 
+        healthz = client.get("/healthz")
+        assert healthz.status_code == 200
+        assert healthz.json() == {
+            "ok": True,
+            "service": "omnivoice",
+            "worker_type": "tts",
+            "status": "healthy",
+        }
+
         languages = client.get("/languages")
         assert languages.status_code == 200
         lang_payload = languages.json()
@@ -290,7 +300,37 @@ def test_worker_drain_rejects_new_generate_requests(tmp_path: Path) -> None:
             data={"mode": "design", "text": "No new work.", "instruct": "warm"},
         )
         assert response.status_code == 503
-        assert response.json()["detail"] == "Worker is draining."
+        assert response.json() == {"ok": False, "error": "worker_draining"}
+
+
+def test_worker_drain_rejects_new_prompt_and_cache_work(tmp_path: Path) -> None:
+    created: list[_FakeRunner] = []
+    app = _make_app(
+        tmp_path,
+        created,
+        load_asr=False,
+        start_worker_callback=False,
+    )
+
+    with TestClient(app) as client:
+        drain = client.post("/drain")
+        assert drain.status_code == 200
+
+        clone_prompt = client.post(
+            "/clone-prompts",
+            files={"ref_audio": ("ref.wav", _fake_wav_bytes(), "audio/wav")},
+            data={"ref_text": "Reference."},
+        )
+        assert clone_prompt.status_code == 503
+        assert clone_prompt.json() == {"ok": False, "error": "worker_draining"}
+
+        warm = client.post(
+            "/cache/warm?wait=true",
+            files={"ref_audio": ("ref.wav", _fake_wav_bytes(), "audio/wav")},
+            data={"mode": "clone", "ref_text": "Reference."},
+        )
+        assert warm.status_code == 503
+        assert warm.json() == {"ok": False, "error": "worker_draining"}
 
 
 def test_worker_drain_requires_token_when_configured(
@@ -357,6 +397,52 @@ def test_worker_state_reads_vast_public_port_for_internal_port(
         health = client.get("/health")
         assert health.status_code == 200
         assert health.json()["worker"]["base_url"] == payload["base_url"]
+
+
+def test_worker_callback_payload_matches_lingua_contract(
+    tmp_path: Path,
+    monkeypatch,
+) -> None:
+    monkeypatch.setenv("LINGUA_CONTROL_PLANE_BASE_URL", "https://lingua.example")
+    monkeypatch.setenv("LINGUA_WORKER_TOKEN", "secret-token")
+    monkeypatch.setenv("PUBLIC_IPADDR", "74.48.140.178")
+    monkeypatch.setenv("VAST_TCP_PORT_8000", "43538")
+    monkeypatch.setenv("VAST_INSTANCE_ID", "12345")
+    monkeypatch.setenv("OMNIVOICE_MODEL_ID", "omnivoice-test")
+    monkeypatch.setenv("OMNIVOICE_MAX_CONCURRENT", "1")
+
+    created: list[_FakeRunner] = []
+    app = _make_app(
+        tmp_path,
+        created,
+        load_asr=False,
+        server_port=8000,
+        start_worker_callback=False,
+    )
+
+    with TestClient(app):
+        reporter = WorkerLifecycleReporter(
+            app.state.worker_callback_config,
+            app.state.worker_runtime,
+        )
+        payload = reporter.payload()
+
+    assert payload["worker_type"] == "tts"
+    assert payload["worker_id"] == "tts-12345"
+    assert payload["instance_id"] == "12345"
+    assert payload["base_url"] == "http://74.48.140.178:43538"
+    assert payload["capacity"] == 1
+    assert payload["status"] == "healthy"
+    assert payload["metadata"] == {
+        "provider": "omnivoice",
+        "model_id": "omnivoice-test",
+        "queue_depth": 0,
+        "active_requests": 0,
+        "max_concurrent": 1,
+        "gpu_utilization": 0,
+        "gpu_memory_pct": 0,
+        "p95_latency_ms": 0,
+    }
 
 
 def test_worker_base_url_override_wins(
@@ -713,6 +799,16 @@ def test_register_clone_prompt_and_generate_with_prompt_id(tmp_path: Path) -> No
         health = client.get("/health")
         assert health.status_code == 200
         assert health.json()["registered_clone_prompt_count"] == 1
+        cache_status = client.get(f"/cache/status?cache_key={prompt_id}")
+        assert cache_status.status_code == 200
+        assert cache_status.json()["status"] == "ready"
+        assert cache_status.json()["cached"] is True
+        assert cache_status.json()["prompt_id"] == prompt_id
+
+        unknown_cache_status = client.get("/cache/status?cache_key=missing")
+        assert unknown_cache_status.status_code == 200
+        assert unknown_cache_status.json()["status"] == "unknown"
+        assert unknown_cache_status.json()["cached"] is False
 
         response = client.post(
             "/generate",

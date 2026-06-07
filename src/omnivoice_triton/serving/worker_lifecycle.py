@@ -7,9 +7,10 @@ import logging
 import os
 import socket
 import threading
+import time
 import urllib.error
 import urllib.request
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from typing import Any
 
 logger = logging.getLogger(__name__)
@@ -36,6 +37,11 @@ def _parse_positive_float(value: str | None, default: float) -> float:
     except ValueError:
         return default
     return parsed if parsed > 0.0 else default
+
+
+def _parse_interval_seconds(value: str | None, default: float) -> float:
+    parsed = _parse_positive_float(value, default)
+    return min(max(parsed, 15.0), 30.0)
 
 
 def _env_first(*names: str) -> str | None:
@@ -144,6 +150,17 @@ class WorkerRuntimeState:
         with self._lock:
             self._draining = True
 
+    def wait_for_idle(self, timeout_s: float) -> bool:
+        deadline_at = time.monotonic() + max(0.0, timeout_s)
+        while True:
+            with self._lock:
+                if self._active_requests <= 0:
+                    return True
+            remaining = deadline_at - time.monotonic()
+            if remaining <= 0.0:
+                return False
+            time.sleep(min(0.1, remaining))
+
     def snapshot(self) -> dict[str, Any]:
         with self._lock:
             active_requests = self._active_requests
@@ -191,7 +208,9 @@ class WorkerCallbackConfig:
         heartbeat_url = heartbeat_url or f"{base_url}/api/runtime/workers/heartbeat"
         worker_type = _normalize_worker_type(_env_first("LINGUA_WORKER_TYPE"))
         instance_id = _detect_instance_id()
-        worker_id = _env_first("LINGUA_WORKER_ID") or f"{worker_type}-{instance_id}"
+        worker_id = _env_first("WORKER_ID", "LINGUA_WORKER_ID") or (
+            f"{worker_type}-{instance_id}"
+        )
         capacity = _parse_positive_int(
             _env_first(
                 "LINGUA_WORKER_DEFAULT_CAPACITY",
@@ -214,7 +233,7 @@ class WorkerCallbackConfig:
             internal_port=public_endpoint.internal_port,
             region=_env_first("LINGUA_WORKER_REGION"),
             gpu_type=_env_first("LINGUA_WORKER_GPU_TYPE"),
-            heartbeat_interval_s=_parse_positive_float(
+            heartbeat_interval_s=_parse_interval_seconds(
                 _env_first("LINGUA_WORKER_HEARTBEAT_INTERVAL_SECONDS"),
                 20.0,
             ),
@@ -248,7 +267,10 @@ class WorkerLifecycleReporter:
         )
         self._thread.start()
 
-    def stop(self, timeout_s: float = 5.0) -> None:
+    def stop(self, timeout_s: float = 5.0, *, final_heartbeat: bool = True) -> None:
+        if final_heartbeat and self.config.public_base_url:
+            self.runtime_state.request_drain()
+            self._post(self.config.heartbeat_url, "final heartbeat")
         self._stop_event.set()
         if self._thread is not None:
             self._thread.join(timeout=timeout_s)
@@ -258,10 +280,16 @@ class WorkerLifecycleReporter:
         snapshot = self.runtime_state.snapshot()
         metadata = {
             "provider": "omnivoice",
-            "model_id": "omnivoice",
+            "model_id": _env_first("OMNIVOICE_MODEL_ID") or "omnivoice",
             "queue_depth": snapshot["queue_depth"],
             "active_requests": snapshot["active_requests"],
-            "max_concurrent": snapshot["capacity"],
+            "max_concurrent": _parse_positive_int(
+                _env_first("OMNIVOICE_MAX_CONCURRENT"),
+                snapshot["capacity"],
+            ),
+            "gpu_utilization": 0,
+            "gpu_memory_pct": 0,
+            "p95_latency_ms": 0,
         }
         return {
             "worker_type": self.config.worker_type,
@@ -280,12 +308,8 @@ class WorkerLifecycleReporter:
         }
 
     def _run(self) -> None:
+        self._retry_until_public_base_url()
         if not self.config.public_base_url:
-            logger.warning(
-                "Lingua worker callback disabled: public base URL could not be "
-                "detected. "
-                "Set LINGUA_WORKER_PUBLIC_BASE_URL for Vast.ai registration."
-            )
             return
 
         self._retry_until_registered()
@@ -295,6 +319,34 @@ class WorkerLifecycleReporter:
                 "heartbeat",
                 forever=False,
             )
+
+    def _retry_until_public_base_url(self) -> None:
+        backoff_s = 1.0
+        while not self._stop_event.is_set() and not self.config.public_base_url:
+            public_endpoint = detect_public_endpoint(self.config.internal_port)
+            if public_endpoint.base_url:
+                self.config = replace(
+                    self.config,
+                    public_base_url=public_endpoint.base_url,
+                    public_ip=public_endpoint.public_ip,
+                    public_port=public_endpoint.public_port,
+                )
+                logger.info(
+                    "Detected Lingua worker public base URL worker_id=%s base_url=%s",
+                    self.config.worker_id,
+                    self.config.public_base_url,
+                )
+                return
+            logger.warning(
+                "Lingua worker registration waiting for public Vast URL "
+                "worker_id=%s internal_port=%s. Set LINGUA_WORKER_PUBLIC_BASE_URL "
+                "or expose VAST_TCP_PORT_%s.",
+                self.config.worker_id,
+                self.config.internal_port,
+                self.config.internal_port,
+            )
+            self._stop_event.wait(backoff_s)
+            backoff_s = min(backoff_s * 2.0, 30.0)
 
     def _retry_until_registered(self) -> None:
         backoff_s = 1.0

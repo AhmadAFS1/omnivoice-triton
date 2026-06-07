@@ -16,11 +16,14 @@ BASE_URL=http://127.0.0.1:8000
 | Method | Path | Purpose |
 | --- | --- | --- |
 | `GET` | `/health` | Full server, model, GPU, batching, and worker health. |
+| `GET` | `/healthz` | Compact readiness probe for Lingua worker checks. |
 | `GET` | `/languages` | Supported OmniVoice language IDs and names. |
 | `GET` | `/worker` | Worker callback status, assignability, capacity, and public URL. |
 | `GET` | `/worker/state` | Alias of `/worker`. |
 | `POST` | `/drain` | Marks the worker as draining. Requires `X-Worker-Token`. |
 | `POST` | `/clone-prompts` | Registers reusable clone prompt audio and returns a `prompt_id`. |
+| `POST` | `/cache/warm` | Prepares clone prompt cache entries. |
+| `GET` | `/cache/status` | Reports whether a worker-local cache key or `prompt_id` is ready. |
 | `POST` | `/generate` | Generates speech and returns inline `audio/wav`. |
 
 FastAPI discovery endpoints are also available:
@@ -194,7 +197,6 @@ These are not implemented by the OmniVoice worker:
 
 | Method | Path | Why it fails |
 | --- | --- | --- |
-| `GET` | `/healthz` | Use `GET /health`. |
 | `GET` | `/status` | Use `GET /health` or `GET /worker`. |
 | `POST` | `/v1/tts` | Chatterbox-style route; use `POST /generate`. |
 | `POST` | `/v1/audio/speech` | OpenAI-style route; use `POST /generate`. |

@@ -22,7 +22,7 @@ import soundfile as sf
 import torch
 import uvicorn
 from fastapi import FastAPI, File, Form, Header, HTTPException, UploadFile
-from fastapi.responses import Response
+from fastapi.responses import JSONResponse, Response
 from omnivoice import OmniVoiceGenerationConfig
 from omnivoice.utils.lang_map import LANG_NAME_TO_ID, lang_display_name
 
@@ -397,6 +397,28 @@ def _require_worker_token(
         return
     if supplied_token != expected_token:
         raise HTTPException(401, detail="Invalid worker token.")
+
+
+def _worker_draining_response() -> JSONResponse:
+    return JSONResponse(
+        status_code=503,
+        content={"ok": False, "error": "worker_draining"},
+    )
+
+
+def _parse_env_nonnegative_float(name: str, default: float) -> float:
+    raw = os.environ.get(name)
+    if raw is None or not raw.strip():
+        return default
+    try:
+        parsed = float(raw.strip())
+    except ValueError:
+        logger.warning("Ignoring invalid %s=%r; using %.2f", name, raw, default)
+        return default
+    if parsed < 0.0:
+        logger.warning("Ignoring negative %s=%r; using %.2f", name, raw, default)
+        return default
+    return parsed
 
 
 def _parse_nonnegative_float(name: str, raw: str | None, default: float) -> float:
@@ -1005,6 +1027,17 @@ def create_app(
             yield
         finally:
             worker_reporter = app.state.worker_lifecycle_reporter
+            app.state.worker_runtime.request_drain()
+            idle = app.state.worker_runtime.wait_for_idle(
+                _parse_env_nonnegative_float(
+                    "LINGUA_WORKER_DRAIN_TIMEOUT_SECONDS", 30.0
+                )
+            )
+            if not idle:
+                logger.warning(
+                    "Worker shutdown continuing with active_requests=%s",
+                    app.state.worker_runtime.snapshot()["active_requests"],
+                )
             if worker_reporter is not None:
                 worker_reporter.stop()
                 app.state.worker_lifecycle_reporter = None
@@ -1155,6 +1188,18 @@ def create_app(
             },
         }
 
+    @app.get("/healthz")
+    def healthz() -> dict[str, Any]:
+        runner = app.state.runner
+        if runner is None or app.state.batcher is None:
+            raise HTTPException(503, detail="Model is not ready yet.")
+        return {
+            "ok": True,
+            "service": "omnivoice",
+            "worker_type": "tts",
+            "status": app.state.worker_runtime.snapshot()["status"],
+        }
+
     @app.get("/languages")
     def languages() -> dict[str, Any]:
         items = [
@@ -1203,7 +1248,7 @@ def create_app(
         ref_audio: UploadFile = File(...),
         ref_text: str | None = Form(None),
         preprocess_prompt: bool = Form(True),
-    ) -> dict[str, Any]:
+    ) -> Any:
         runner = app.state.runner
         if runner is None:
             raise HTTPException(503, detail="Model is not ready yet.")
@@ -1214,6 +1259,9 @@ def create_app(
                 503,
                 detail="Registered clone prompt store is disabled.",
             )
+        request_counted = app.state.worker_runtime.begin_request()
+        if not request_counted:
+            return _worker_draining_response()
 
         request_id = uuid4().hex[:12]
         started_at = _utc_now()
@@ -1301,6 +1349,7 @@ def create_app(
                 detail=f"{type(exc).__name__}: {exc}",
             ) from exc
         finally:
+            app.state.worker_runtime.end_request()
             ref_audio.file.close()
 
     def _warm_clone_prompt_cache(
@@ -1388,7 +1437,7 @@ def create_app(
         preprocess_prompt: bool = Form(True),
         postprocess_mode: str | None = Form(None),
         ref_audio: UploadFile | None = File(None),
-    ) -> dict[str, Any]:
+    ) -> Any:
         runner = app.state.runner
         if runner is None:
             raise HTTPException(503, detail="Model is not ready yet.")
@@ -1400,6 +1449,10 @@ def create_app(
         num_step_value = _parse_positive_int("num_step", num_step, 32)
         _, postprocess_mode_value = _parse_postprocess_mode(None, postprocess_mode)
         ref_text_value = _normalize_text(ref_text)
+        request_counted = app.state.worker_runtime.begin_request()
+        if not request_counted:
+            return _worker_draining_response()
+        release_request = True
 
         try:
             if mode != GenerateMode.clone:
@@ -1439,10 +1492,6 @@ def create_app(
                     ),
                 )
 
-            request_counted = app.state.worker_runtime.begin_request()
-            if not request_counted:
-                raise HTTPException(503, detail="Worker is draining.")
-
             if not wait:
                 thread = threading.Thread(
                     target=_run_cache_warm_background,
@@ -1460,8 +1509,8 @@ def create_app(
                 try:
                     thread.start()
                 except Exception:
-                    app.state.worker_runtime.end_request()
                     raise
+                release_request = False
                 return {
                     "status": "accepted",
                     "request_id": request_id,
@@ -1475,15 +1524,12 @@ def create_app(
                     "postprocess_mode": postprocess_mode_value,
                 }
 
-            try:
-                result = _warm_clone_prompt_cache(
-                    runner=runner,
-                    ref_audio_bytes=ref_audio_bytes,
-                    ref_text_value=ref_text_value,
-                    preprocess_prompt=preprocess_prompt,
-                )
-            finally:
-                app.state.worker_runtime.end_request()
+            result = _warm_clone_prompt_cache(
+                runner=runner,
+                ref_audio_bytes=ref_audio_bytes,
+                ref_text_value=ref_text_value,
+                preprocess_prompt=preprocess_prompt,
+            )
 
             finished_at = _utc_now()
             duration_ms = (time.perf_counter() - started_perf) * 1000.0
@@ -1548,8 +1594,26 @@ def create_app(
                 detail=f"{type(exc).__name__}: {exc}",
             ) from exc
         finally:
+            if release_request:
+                app.state.worker_runtime.end_request()
             if ref_audio is not None:
                 ref_audio.file.close()
+
+    @app.get("/cache/status")
+    def cache_status(cache_key: str | None = None) -> dict[str, Any]:
+        prompt_store = app.state.registered_clone_prompts
+        clone_prompt_cache = app.state.clone_prompt_cache
+        cached = False
+        if cache_key and prompt_store is not None:
+            cached = prompt_store.get(cache_key) is not None
+        return {
+            "status": "ready" if cached else "unknown",
+            "cached": cached,
+            "cache_key": cache_key,
+            "prompt_id": cache_key if cached else None,
+            "registered_clone_prompt_count": len(prompt_store or ()),
+            "clone_prompt_cache_entries": len(clone_prompt_cache or ()),
+        }
 
     @app.post(
         "/generate",
@@ -1672,7 +1736,7 @@ def create_app(
         response_encode_ms = 0.0
         request_counted = app.state.worker_runtime.begin_request()
         if not request_counted:
-            raise HTTPException(503, detail="Worker is draining.")
+            return _worker_draining_response()
 
         try:
             model = runner.model
