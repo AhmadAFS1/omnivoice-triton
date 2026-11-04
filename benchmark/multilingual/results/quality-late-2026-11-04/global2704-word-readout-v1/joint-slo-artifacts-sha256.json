@@ -1,0 +1,27 @@
+[
+  {
+    "path": "joint-slo-summary.json",
+    "sha256": "52ceab3a653d11f8b83759e6e4147359eb554390d7160a437c4df1c4dc05375d",
+    "bytes": 8851
+  },
+  {
+    "path": "joint-slo-per-voice-configuration26.json",
+    "sha256": "34073dec963651598a1ed5c5ea2facb74b561b9543428537c7e10a3ccc12d3e5",
+    "bytes": 27433
+  },
+  {
+    "path": "joint-slo-per-route104.json",
+    "sha256": "55ba5aa9f3e18e60bdb93edf363af6d8a8332cd05347f79aa580f172aaf36919",
+    "bytes": 95515
+  },
+  {
+    "path": "joint-slo-provenance.json",
+    "sha256": "5cb0904fc23ccf0aeb98814249aed2bd9cc0a37e7312ea545a7c54bc9cb2f9c8",
+    "bytes": 7952
+  },
+  {
+    "path": "joint-slo-report.md",
+    "sha256": "b74fd883ecf4e99166fad013f29fe1d8f9d12e48e7b8eb162520b33e8d7af6cf",
+    "bytes": 2543
+  }
+]

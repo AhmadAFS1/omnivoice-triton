@@ -1,0 +1,471 @@
+{
+  "at": "2026-11-04T13:54:29.856460+00:00",
+  "files": [
+    {
+      "source": "quality/reference-fixed-duration-analysis-v1/paired132.jsonl",
+      "target": "results/quality-late-2026-11-04/reference-fixed-duration-analysis-v1/paired132.jsonl",
+      "source_sha256": "ce6bb49323647fa839a18e97e6ae31d45fcfa432a2d86c0399edf6dc98dc87ab",
+      "saved_sha256": "ce6bb49323647fa839a18e97e6ae31d45fcfa432a2d86c0399edf6dc98dc87ab",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/reference-fixed-duration-analysis-v1/summary.json",
+      "target": "results/quality-late-2026-11-04/reference-fixed-duration-analysis-v1/summary.json",
+      "source_sha256": "80607f1a35bb6789ce67927835e1f7d2f866330108a62ee84727930d8745a92c",
+      "saved_sha256": "80607f1a35bb6789ce67927835e1f7d2f866330108a62ee84727930d8745a92c",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/reference-fixed-duration-analysis-v1/verified-audio396.jsonl",
+      "target": "results/quality-late-2026-11-04/reference-fixed-duration-analysis-v1/verified-audio396.jsonl",
+      "source_sha256": "9b829f950da2a2f7de780d66d57ca2facfd7d5d114894d56512df71fa0aab843",
+      "saved_sha256": "9b829f950da2a2f7de780d66d57ca2facfd7d5d114894d56512df71fa0aab843",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/reference-fixed-duration-word-analysis-v1/paired132.jsonl",
+      "target": "results/quality-late-2026-11-04/reference-fixed-duration-word-analysis-v1/paired132.jsonl",
+      "source_sha256": "40c32b8c2ea9bd09a585006d10d9da1dbcb49dcb0310cb64768e5d8e7deeed0e",
+      "saved_sha256": "40c32b8c2ea9bd09a585006d10d9da1dbcb49dcb0310cb64768e5d8e7deeed0e",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/reference-fixed-duration-word-analysis-v1/summary.json",
+      "target": "results/quality-late-2026-11-04/reference-fixed-duration-word-analysis-v1/summary.json",
+      "source_sha256": "bec92bda3c5b5ac74c0b9f4d9672b29cb226f09674d26c8a42ab83d5067b4f02",
+      "saved_sha256": "bec92bda3c5b5ac74c0b9f4d9672b29cb226f09674d26c8a42ab83d5067b4f02",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/runner-word-analysis132-v1/paired132.jsonl",
+      "target": "results/quality-late-2026-11-04/runner-word-analysis132-v1/paired132.jsonl",
+      "source_sha256": "1938428259850c2d7698167d3c2a113b7f1244ab1a6ded12fb8981e94014eec6",
+      "saved_sha256": "1938428259850c2d7698167d3c2a113b7f1244ab1a6ded12fb8981e94014eec6",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/runner-word-analysis132-v1/summary.json",
+      "target": "results/quality-late-2026-11-04/runner-word-analysis132-v1/summary.json",
+      "source_sha256": "17ccb6ee8910c2eddee9dcae3ab7710b9373e229d1715df98ecbf7c3f7c9278d",
+      "saved_sha256": "17ccb6ee8910c2eddee9dcae3ab7710b9373e229d1715df98ecbf7c3f7c9278d",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/global2704-word-readout-v1/artifacts-sha256.json",
+      "target": "results/quality-late-2026-11-04/global2704-word-readout-v1/artifacts-sha256.json",
+      "source_sha256": "b43f3897229407aa8d4c1eadea06fd943512e2a8811a0beb8e71f1f73b8bcf86",
+      "saved_sha256": "b43f3897229407aa8d4c1eadea06fd943512e2a8811a0beb8e71f1f73b8bcf86",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/global2704-word-readout-v1/cases2704.jsonl",
+      "target": "results/quality-late-2026-11-04/global2704-word-readout-v1/cases2704.jsonl",
+      "source_sha256": "b371f43aaa415cf538206319db6bd8466fa466e81f6c9b733c96ec0d85e227af",
+      "saved_sha256": "b371f43aaa415cf538206319db6bd8466fa466e81f6c9b733c96ec0d85e227af",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/global2704-word-readout-v1/invalid-audio4.json",
+      "target": "results/quality-late-2026-11-04/global2704-word-readout-v1/invalid-audio4.json",
+      "source_sha256": "3d82ac472eb2ed25e3ecca052d18e2d2a632937b2280b456360ae90e74052d31",
+      "saved_sha256": "3d82ac472eb2ed25e3ecca052d18e2d2a632937b2280b456360ae90e74052d31",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/global2704-word-readout-v1/joint-slo-artifacts-sha256.json",
+      "target": "results/quality-late-2026-11-04/global2704-word-readout-v1/joint-slo-artifacts-sha256.json",
+      "source_sha256": "ea4f0051635a1f4dbd255ebda6f95a326a99c7edf5f2fc81b6bb59e873f668a2",
+      "saved_sha256": "ea4f0051635a1f4dbd255ebda6f95a326a99c7edf5f2fc81b6bb59e873f668a2",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/global2704-word-readout-v1/joint-slo-per-route104.json",
+      "target": "results/quality-late-2026-11-04/global2704-word-readout-v1/joint-slo-per-route104.json",
+      "source_sha256": "55ba5aa9f3e18e60bdb93edf363af6d8a8332cd05347f79aa580f172aaf36919",
+      "saved_sha256": "55ba5aa9f3e18e60bdb93edf363af6d8a8332cd05347f79aa580f172aaf36919",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/global2704-word-readout-v1/joint-slo-per-voice-configuration26.json",
+      "target": "results/quality-late-2026-11-04/global2704-word-readout-v1/joint-slo-per-voice-configuration26.json",
+      "source_sha256": "34073dec963651598a1ed5c5ea2facb74b561b9543428537c7e10a3ccc12d3e5",
+      "saved_sha256": "34073dec963651598a1ed5c5ea2facb74b561b9543428537c7e10a3ccc12d3e5",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/global2704-word-readout-v1/joint-slo-provenance.json",
+      "target": "results/quality-late-2026-11-04/global2704-word-readout-v1/joint-slo-provenance.json",
+      "source_sha256": "5cb0904fc23ccf0aeb98814249aed2bd9cc0a37e7312ea545a7c54bc9cb2f9c8",
+      "saved_sha256": "5cb0904fc23ccf0aeb98814249aed2bd9cc0a37e7312ea545a7c54bc9cb2f9c8",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/global2704-word-readout-v1/joint-slo-report.md",
+      "target": "results/quality-late-2026-11-04/global2704-word-readout-v1/joint-slo-report.md",
+      "source_sha256": "b74fd883ecf4e99166fad013f29fe1d8f9d12e48e7b8eb162520b33e8d7af6cf",
+      "saved_sha256": "b74fd883ecf4e99166fad013f29fe1d8f9d12e48e7b8eb162520b33e8d7af6cf",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/global2704-word-readout-v1/joint-slo-summary.json",
+      "target": "results/quality-late-2026-11-04/global2704-word-readout-v1/joint-slo-summary.json",
+      "source_sha256": "52ceab3a653d11f8b83759e6e4147359eb554390d7160a437c4df1c4dc05375d",
+      "saved_sha256": "52ceab3a653d11f8b83759e6e4147359eb554390d7160a437c4df1c4dc05375d",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/global2704-word-readout-v1/per-route104.csv",
+      "target": "results/quality-late-2026-11-04/global2704-word-readout-v1/per-route104.csv",
+      "source_sha256": "9714a3e76ffb05493d7d66597258bf67ca9dcaae17b469fc80cf3105a4cb86d2",
+      "saved_sha256": "9714a3e76ffb05493d7d66597258bf67ca9dcaae17b469fc80cf3105a4cb86d2",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/global2704-word-readout-v1/per-route104.json",
+      "target": "results/quality-late-2026-11-04/global2704-word-readout-v1/per-route104.json",
+      "source_sha256": "b18dbb3654509c3314c1a3e8d08f748dc33128a3af6ec46d472d9e4a650c4623",
+      "saved_sha256": "b18dbb3654509c3314c1a3e8d08f748dc33128a3af6ec46d472d9e4a650c4623",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/global2704-word-readout-v1/per-voice-configuration26.json",
+      "target": "results/quality-late-2026-11-04/global2704-word-readout-v1/per-voice-configuration26.json",
+      "source_sha256": "0bac766317000963c819311e96d7e50b44cd3a7fe7120023d92e8257c601f5dc",
+      "saved_sha256": "0bac766317000963c819311e96d7e50b44cd3a7fe7120023d92e8257c601f5dc",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/global2704-word-readout-v1/provenance.json",
+      "target": "results/quality-late-2026-11-04/global2704-word-readout-v1/provenance.json",
+      "source_sha256": "d2b128d613656081d5036e470a01658f6224c8c54691046f38ce71069ba8651c",
+      "saved_sha256": "d2b128d613656081d5036e470a01658f6224c8c54691046f38ce71069ba8651c",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/global2704-word-readout-v1/reference-controls64.json",
+      "target": "results/quality-late-2026-11-04/global2704-word-readout-v1/reference-controls64.json",
+      "source_sha256": "67de84b0688e33c48dcea42ae614befe68c5e418e80fc6c89512c4b1dba92d29",
+      "saved_sha256": "67de84b0688e33c48dcea42ae614befe68c5e418e80fc6c89512c4b1dba92d29",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/global2704-word-readout-v1/report.md",
+      "target": "results/quality-late-2026-11-04/global2704-word-readout-v1/report.md",
+      "source_sha256": "cf21090a1a1ec7ad00e3adfb43241985773766dda28d9e8a219057d6ab41d6ef",
+      "saved_sha256": "cf21090a1a1ec7ad00e3adfb43241985773766dda28d9e8a219057d6ab41d6ef",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/global2704-word-readout-v1/summary.json",
+      "target": "results/quality-late-2026-11-04/global2704-word-readout-v1/summary.json",
+      "source_sha256": "84e4002278d7b5f8eb40ec5703deca9b5a08b164fb5711022c5d95460342ad4f",
+      "saved_sha256": "84e4002278d7b5f8eb40ec5703deca9b5a08b164fb5711022c5d95460342ad4f",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/global2704-word-readout-v1/weak-signal3.json",
+      "target": "results/quality-late-2026-11-04/global2704-word-readout-v1/weak-signal3.json",
+      "source_sha256": "1fe3b9038d1115879681752dee8e510a246a8f0f01e4cd690d89a48dd8c2c31f",
+      "saved_sha256": "1fe3b9038d1115879681752dee8e510a246a8f0f01e4cd690d89a48dd8c2c31f",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-fixed396-v1/embeddings.jsonl",
+      "target": "results/quality-late-2026-11-04/speaker-fixed396-v1/embeddings.jsonl",
+      "source_sha256": "9a3b8b4b0be315059057912f3a5008f13cea53f7cd6a102f26c009c524e54f8e",
+      "saved_sha256": "9a3b8b4b0be315059057912f3a5008f13cea53f7cd6a102f26c009c524e54f8e",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-fixed396-v1/generated-scores.json",
+      "target": "results/quality-late-2026-11-04/speaker-fixed396-v1/generated-scores.json",
+      "source_sha256": "cfe5df1f37ba3da677099d063c8d5830bd8d261203f54f2489e52c80e1fee1e7",
+      "saved_sha256": "cfe5df1f37ba3da677099d063c8d5830bd8d261203f54f2489e52c80e1fee1e7",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-fixed396-v1/metadata.json",
+      "target": "results/quality-late-2026-11-04/speaker-fixed396-v1/metadata.json",
+      "source_sha256": "3ca63ebb73e1b9b3de75344427c381306c18d11fbdba2bea7d54ec4f4010e88c",
+      "saved_sha256": "3ca63ebb73e1b9b3de75344427c381306c18d11fbdba2bea7d54ec4f4010e88c",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-fixed396-v1/paired-deltas.json",
+      "target": "results/quality-late-2026-11-04/speaker-fixed396-v1/paired-deltas.json",
+      "source_sha256": "07a73a17e5bbeb4bb2153de196aab2ace8a348684b81ae4373b459f9a59029ba",
+      "saved_sha256": "07a73a17e5bbeb4bb2153de196aab2ace8a348684b81ae4373b459f9a59029ba",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-fixed396-v1/reference-controls.json",
+      "target": "results/quality-late-2026-11-04/speaker-fixed396-v1/reference-controls.json",
+      "source_sha256": "db5244e19bc5a80ab482260058f5d49063ce68b2c71f563b93167ca3dee94a00",
+      "saved_sha256": "db5244e19bc5a80ab482260058f5d49063ce68b2c71f563b93167ca3dee94a00",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-fixed396-v1/summary.json",
+      "target": "results/quality-late-2026-11-04/speaker-fixed396-v1/summary.json",
+      "source_sha256": "5807fd922fc58242386fe050c5d3fdf6a80ed1b8a73731d78b723af4c49b9488",
+      "saved_sha256": "5807fd922fc58242386fe050c5d3fdf6a80ed1b8a73731d78b723af4c49b9488",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-fixed396-independent-v1/artifacts-sha256.json",
+      "target": "results/quality-late-2026-11-04/speaker-fixed396-independent-v1/artifacts-sha256.json",
+      "source_sha256": "e7b3902541b51f1d0d14057569662c53913e2c3000ac1bb384c23dfbb84bf7f9",
+      "saved_sha256": "e7b3902541b51f1d0d14057569662c53913e2c3000ac1bb384c23dfbb84bf7f9",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-fixed396-independent-v1/flagged-review.json",
+      "target": "results/quality-late-2026-11-04/speaker-fixed396-independent-v1/flagged-review.json",
+      "source_sha256": "cbed8f8febda4a4cb032220858dd01a2001159dd4419b9b5eba197013b157608",
+      "saved_sha256": "cbed8f8febda4a4cb032220858dd01a2001159dd4419b9b5eba197013b157608",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-fixed396-independent-v1/pairs264.jsonl",
+      "target": "results/quality-late-2026-11-04/speaker-fixed396-independent-v1/pairs264.jsonl",
+      "source_sha256": "33eda3d3aa8ae4709329eb801190d309c31411c32d4ad750cea4aac6f54086d0",
+      "saved_sha256": "33eda3d3aa8ae4709329eb801190d309c31411c32d4ad750cea4aac6f54086d0",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-fixed396-independent-v1/provenance.json",
+      "target": "results/quality-late-2026-11-04/speaker-fixed396-independent-v1/provenance.json",
+      "source_sha256": "d07411956a735e02f0e8516cdf5b497f7c5235b22ffe572869863548b93a1883",
+      "saved_sha256": "d07411956a735e02f0e8516cdf5b497f7c5235b22ffe572869863548b93a1883",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-fixed396-independent-v1/report.md",
+      "target": "results/quality-late-2026-11-04/speaker-fixed396-independent-v1/report.md",
+      "source_sha256": "dcfb25933142793777a544ffd7fc740dcf88fd2fe68d8b52a210c9b720fe4150",
+      "saved_sha256": "dcfb25933142793777a544ffd7fc740dcf88fd2fe68d8b52a210c9b720fe4150",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-fixed396-independent-v1/summary.json",
+      "target": "results/quality-late-2026-11-04/speaker-fixed396-independent-v1/summary.json",
+      "source_sha256": "04fcd15b15abab9dd17ee3b668629b5f6641bfaa26109acab04b4e5436f08e67",
+      "saved_sha256": "04fcd15b15abab9dd17ee3b668629b5f6641bfaa26109acab04b4e5436f08e67",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/whisper-prefix-diagnostics-v1/README.md",
+      "target": "results/quality-late-2026-11-04/whisper-prefix-diagnostics-v1/README.md",
+      "source_sha256": "862dacfbd3b2ea5d65176b8d43278783de9838ff717264b8ab03b33564955743",
+      "saved_sha256": "862dacfbd3b2ea5d65176b8d43278783de9838ff717264b8ab03b33564955743",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/whisper-prefix-diagnostics-v1/complete.json",
+      "target": "results/quality-late-2026-11-04/whisper-prefix-diagnostics-v1/complete.json",
+      "source_sha256": "58e164580d58f0a9ffe78d4c2c29a0362f17dccba61e3d2c1bf5439dbc31e019",
+      "saved_sha256": "58e164580d58f0a9ffe78d4c2c29a0362f17dccba61e3d2c1bf5439dbc31e019",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/whisper-prefix-diagnostics-v1/metadata.json",
+      "target": "results/quality-late-2026-11-04/whisper-prefix-diagnostics-v1/metadata.json",
+      "source_sha256": "d1a6ad9782bfeca59cb595b7dac0eae1ed44768ef98f1b84cacfd6dbdbe4f006",
+      "saved_sha256": "d1a6ad9782bfeca59cb595b7dac0eae1ed44768ef98f1b84cacfd6dbdbe4f006",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/whisper-prefix-diagnostics-v1/paired-summary.json",
+      "target": "results/quality-late-2026-11-04/whisper-prefix-diagnostics-v1/paired-summary.json",
+      "source_sha256": "84e2a7776f41dcd132b9708f891858ad6c65439ee1ad19434c02b35927d702ee",
+      "saved_sha256": "84e2a7776f41dcd132b9708f891858ad6c65439ee1ad19434c02b35927d702ee",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/whisper-prefix-diagnostics-v1/progress.json",
+      "target": "results/quality-late-2026-11-04/whisper-prefix-diagnostics-v1/progress.json",
+      "source_sha256": "2b706605d748c7aee211296e2234e5b0d34d32aa47ff5cda9a850707f067d644",
+      "saved_sha256": "2b706605d748c7aee211296e2234e5b0d34d32aa47ff5cda9a850707f067d644",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/whisper-prefix-diagnostics-v1/scored-logical.json",
+      "target": "results/quality-late-2026-11-04/whisper-prefix-diagnostics-v1/scored-logical.json",
+      "source_sha256": "f8d568b05269fa02df4d24e3827108831da779351b9ff4f4ac4ef6c45da3d57d",
+      "saved_sha256": "f8d568b05269fa02df4d24e3827108831da779351b9ff4f4ac4ef6c45da3d57d",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/whisper-prefix-diagnostics-v1/selection.json",
+      "target": "results/quality-late-2026-11-04/whisper-prefix-diagnostics-v1/selection.json",
+      "source_sha256": "bcfac3e79021d438f390e60b10a46f1821c4541e695aaec57ce61a9ab4a88a21",
+      "saved_sha256": "bcfac3e79021d438f390e60b10a46f1821c4541e695aaec57ce61a9ab4a88a21",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/whisper-prefix-diagnostics-v1/transcripts.jsonl",
+      "target": "results/quality-late-2026-11-04/whisper-prefix-diagnostics-v1/transcripts.jsonl",
+      "source_sha256": "fa10e64261db7acc53384116ce444f9d61ad9d5c334f2829176f4c48d316282c",
+      "saved_sha256": "fa10e64261db7acc53384116ce444f9d61ad9d5c334f2829176f4c48d316282c",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/whisper-fixed-diagnostics-v1/README.md",
+      "target": "results/quality-late-2026-11-04/whisper-fixed-diagnostics-v1/README.md",
+      "source_sha256": "1cfddf9ed93e66316f6521d0e45354310525091d43be09c422be469c247af66a",
+      "saved_sha256": "1cfddf9ed93e66316f6521d0e45354310525091d43be09c422be469c247af66a",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/whisper-fixed-diagnostics-v1/complete.json",
+      "target": "results/quality-late-2026-11-04/whisper-fixed-diagnostics-v1/complete.json",
+      "source_sha256": "409616c715aa86e61d8f7df7ab6b963a7ce7f9369a7358ddab90fcc6057fc5c1",
+      "saved_sha256": "409616c715aa86e61d8f7df7ab6b963a7ce7f9369a7358ddab90fcc6057fc5c1",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/whisper-fixed-diagnostics-v1/metadata.json",
+      "target": "results/quality-late-2026-11-04/whisper-fixed-diagnostics-v1/metadata.json",
+      "source_sha256": "824695448cbebda2f4d98f788a2a9484c01e182ccbf74ea5f2a15e6c4973c9e5",
+      "saved_sha256": "824695448cbebda2f4d98f788a2a9484c01e182ccbf74ea5f2a15e6c4973c9e5",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/whisper-fixed-diagnostics-v1/paired-summary.json",
+      "target": "results/quality-late-2026-11-04/whisper-fixed-diagnostics-v1/paired-summary.json",
+      "source_sha256": "dd3d2fa104a7e6b79bbfd99f3cdf88e10a453c5960436a61949df2820b6a5119",
+      "saved_sha256": "dd3d2fa104a7e6b79bbfd99f3cdf88e10a453c5960436a61949df2820b6a5119",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/whisper-fixed-diagnostics-v1/progress.json",
+      "target": "results/quality-late-2026-11-04/whisper-fixed-diagnostics-v1/progress.json",
+      "source_sha256": "89583790fdfbaa26c4f957145c98d7a97438d77c9fb4cb4ef3afbea870664760",
+      "saved_sha256": "89583790fdfbaa26c4f957145c98d7a97438d77c9fb4cb4ef3afbea870664760",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/whisper-fixed-diagnostics-v1/scored-logical.json",
+      "target": "results/quality-late-2026-11-04/whisper-fixed-diagnostics-v1/scored-logical.json",
+      "source_sha256": "fd644c5b0796a331692d9ce8a22102f2d20e2e4c64ad1b591b5057ea7277abb8",
+      "saved_sha256": "fd644c5b0796a331692d9ce8a22102f2d20e2e4c64ad1b591b5057ea7277abb8",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/whisper-fixed-diagnostics-v1/selection.json",
+      "target": "results/quality-late-2026-11-04/whisper-fixed-diagnostics-v1/selection.json",
+      "source_sha256": "7110b422dbc5016d162163f99f3b5fce3f927950dde42beda74b4426ba667725",
+      "saved_sha256": "7110b422dbc5016d162163f99f3b5fce3f927950dde42beda74b4426ba667725",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/whisper-fixed-diagnostics-v1/transcripts.jsonl",
+      "target": "results/quality-late-2026-11-04/whisper-fixed-diagnostics-v1/transcripts.jsonl",
+      "source_sha256": "86aa00689663de53193217978b2cc3b95b6b2b8817f49ea57587c80ec237af3f",
+      "saved_sha256": "86aa00689663de53193217978b2cc3b95b6b2b8817f49ea57587c80ec237af3f",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/report-global7405-v1/origin-propagation.json",
+      "target": "results/quality-late-2026-11-04/report-global7405-v1/origin-propagation.json",
+      "source_sha256": "e22f7cec2c2447f466fafc4556ee5fdb0b303997f882bbaf282c7fbdb1e0a48c",
+      "saved_sha256": "e22f7cec2c2447f466fafc4556ee5fdb0b303997f882bbaf282c7fbdb1e0a48c",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/report-global7405-v1/paired-before-after.jsonl",
+      "target": "results/quality-late-2026-11-04/report-global7405-v1/paired-before-after.jsonl",
+      "source_sha256": "86e43e98edbfded73c65e8d744613fd40c4ab59dd8bcd239f4db9936f810d150",
+      "saved_sha256": "86e43e98edbfded73c65e8d744613fd40c4ab59dd8bcd239f4db9936f810d150",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/report-global7405-v1/per-configuration.json",
+      "target": "results/quality-late-2026-11-04/report-global7405-v1/per-configuration.json",
+      "source_sha256": "3edb93e5e6527ab71824cdbd0ea7cf56a25418496b1cd949a7ae96e2bb30b16c",
+      "saved_sha256": "3edb93e5e6527ab71824cdbd0ea7cf56a25418496b1cd949a7ae96e2bb30b16c",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/report-global7405-v1/per-route.csv",
+      "target": "results/quality-late-2026-11-04/report-global7405-v1/per-route.csv",
+      "source_sha256": "39d15b8fb860b9c05cf4f6818622564cc6c2a6aeb10e35459464f2aa8eaa0625",
+      "saved_sha256": "39d15b8fb860b9c05cf4f6818622564cc6c2a6aeb10e35459464f2aa8eaa0625",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/report-global7405-v1/per-route.json",
+      "target": "results/quality-late-2026-11-04/report-global7405-v1/per-route.json",
+      "source_sha256": "3c7b4e762faf463827ad6a5d07c456088bb2335a0210133db34ef05d1935530c",
+      "saved_sha256": "3c7b4e762faf463827ad6a5d07c456088bb2335a0210133db34ef05d1935530c",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/report-global7405-v1/report.md",
+      "target": "results/quality-late-2026-11-04/report-global7405-v1/report.md",
+      "source_sha256": "8ed58c22e82ff9fc324a1dafdc3105fa744ff3f4b82506c14b54960e3baf71c7",
+      "saved_sha256": "8ed58c22e82ff9fc324a1dafdc3105fa744ff3f4b82506c14b54960e3baf71c7",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/report-global7405-v1/scored-logical-cases.jsonl",
+      "target": "results/quality-late-2026-11-04/report-global7405-v1/scored-logical-cases.jsonl.gz",
+      "source_sha256": "b900ec369da5ea6be99b3bb5897a5f8574ebab1a1ec8e2b0aa09701d00999720",
+      "saved_sha256": "01fcc6a44fb2541bb13135453b6e304ea0c52d0b59c1e87c2fed37e6b15b65dd",
+      "adaptation": "lossless gzip, decompressed SHA verified"
+    },
+    {
+      "source": "quality/report-global7405-v1/summary.json",
+      "target": "results/quality-late-2026-11-04/report-global7405-v1/summary.json",
+      "source_sha256": "d16ab0fc36784b581381e075093f17abb798af38e5abe3ecc4a77831fd4eabb0",
+      "saved_sha256": "d16ab0fc36784b581381e075093f17abb798af38e5abe3ecc4a77831fd4eabb0",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/report-global7405-v1/validation-checks.jsonl",
+      "target": "results/quality-late-2026-11-04/report-global7405-v1/validation-checks.jsonl",
+      "source_sha256": "16ca9b6da49df6153b278ac94ddd72fdf201fccf18b07cf343888d6d692ec30b",
+      "saved_sha256": "16ca9b6da49df6153b278ac94ddd72fdf201fccf18b07cf343888d6d692ec30b",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/audit_fixed_speaker.py",
+      "target": "results/quality-late-2026-11-04/source/audit_fixed_speaker.py",
+      "source_sha256": "d4bfb0b156e9e5bf2b2e3bbf89f2abf63fcfff9475c679a16a00f21044af4dcf",
+      "saved_sha256": "d4bfb0b156e9e5bf2b2e3bbf89f2abf63fcfff9475c679a16a00f21044af4dcf",
+      "adaptation": "none"
+    },
+    {
+      "source": "quality/speaker_similarity.py",
+      "target": "results/quality-late-2026-11-04/source/speaker_similarity.py",
+      "source_sha256": "3c13a53c20bffe085df9ceecdcc9fba401167452f6af62a3fedb7d298d650aee",
+      "saved_sha256": "3c13a53c20bffe085df9ceecdcc9fba401167452f6af62a3fedb7d298d650aee",
+      "adaptation": "none"
+    },
+    {
+      "source": "quality/crosscheck_prefix_whisper.py",
+      "target": "results/quality-late-2026-11-04/source/crosscheck_prefix_whisper.py",
+      "source_sha256": "59169ff4bf1ed48c81c39e600b0a9bf274c535bd95ec1a5dcda88a20557ea1e2",
+      "saved_sha256": "59169ff4bf1ed48c81c39e600b0a9bf274c535bd95ec1a5dcda88a20557ea1e2",
+      "adaptation": "none"
+    },
+    {
+      "source": "quality/crosscheck_fixed_whisper.py",
+      "target": "results/quality-late-2026-11-04/source/crosscheck_fixed_whisper.py",
+      "source_sha256": "c3e3ce7c2d713f62a7e07ca9d15b057200245d255ad66b174b2ecd098d885099",
+      "saved_sha256": "c3e3ce7c2d713f62a7e07ca9d15b057200245d255ad66b174b2ecd098d885099",
+      "adaptation": "none"
+    },
+    {
+      "source": "quality/publish_fixed_checkpoint.py",
+      "target": "results/quality-late-2026-11-04/source/publish_fixed_checkpoint.py",
+      "source_sha256": "f25026d02bfbc7049d02b5a1d3b57090fae738f92245fac603c2d5c6013ab23d",
+      "saved_sha256": "f25026d02bfbc7049d02b5a1d3b57090fae738f92245fac603c2d5c6013ab23d",
+      "adaptation": "none"
+    }
+  ],
+  "samples": "samples/rtx4070ti-fixed-reference-2026-11-04",
+  "sample_manifest_sha256": "5120c062e46155d9aba1ea84a8491044e66533936cc553f580fbf9a2afab4919",
+  "publisher_sha256": "f25026d02bfbc7049d02b5a1d3b57090fae738f92245fac603c2d5c6013ab23d",
+  "inference_calls": 0
+}

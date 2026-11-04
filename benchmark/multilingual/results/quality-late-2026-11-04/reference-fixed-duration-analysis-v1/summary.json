@@ -1,0 +1,178 @@
+{
+  "measurement_kind": "CPU-only SHA/decode/frame/paired latency audit",
+  "sources": {
+    "full": {
+      "requests.jsonl": "ef0c9c65d49a34e7e3421851045103bf816385dfd5d7ec5694d9ab3afa452b51",
+      "metadata.json": "3a26bcddb39f84141755c6c645a8a0dc20925ea61f2fcfd1db59e16c2abcad0b",
+      "health-before.json": "1d3236cf7c78ba4d828ea73b24f4b7c437a93b5ceb1a26ed7e08e72d97fe73f3",
+      "health-after.json": "f293f22f48be4d2a426d0a337a00de7e64afa6eed0a98550aeda75c5d720a7be",
+      "reference-manifest.json": "883282175dd47d66f5677ccac8e6c3771d7259a9ca53b6d647ac421143c752e1"
+    },
+    "prefix10": {
+      "requests.jsonl": "a6a9857ff93efa17f1dfc089408175f8fd188a2754f1f5264162d9901c46a1a2",
+      "metadata.json": "0dbfd25c845ede518b60e110dcb61a0f7092a4c35c5f9ce33a4e48353b7d5f9b",
+      "health-before.json": "1d3236cf7c78ba4d828ea73b24f4b7c437a93b5ceb1a26ed7e08e72d97fe73f3",
+      "health-after.json": "c38b3aab6cd11c451293aad1c048781e93ad419066d8ffce0f13a8053b081fb7",
+      "reference-manifest.json": "883282175dd47d66f5677ccac8e6c3771d7259a9ca53b6d647ac421143c752e1"
+    },
+    "prefix17": {
+      "requests.jsonl": "a2072cb5b973f02b6f63ab456bc52587603b30fe340c197bcafbe21fd85b6e47",
+      "metadata.json": "3181f53391228cc04027387a84b7583a0135d4f9a0a08b60c1971b82f3f71ef7",
+      "health-before.json": "1d3236cf7c78ba4d828ea73b24f4b7c437a93b5ceb1a26ed7e08e72d97fe73f3",
+      "health-after.json": "4214ab3d16fd1abb21a28bab80213136ac713177c4c7cb619beaff00624de132",
+      "reference-manifest.json": "883282175dd47d66f5677ccac8e6c3771d7259a9ca53b6d647ac421143c752e1"
+    }
+  },
+  "verified_WAVs": 396,
+  "word_quality": "both Meta ASR pending; no promotion",
+  "groups": {
+    "full": {
+      "English110": {
+        "latency_ms": {
+          "n": 110,
+          "min": 296.1466839769855,
+          "p50": 478.1708950031316,
+          "p95": 570.6418997884612,
+          "max": 610.4463869996835,
+          "mean": 484.6825481448005
+        },
+        "within_500_ms": 72,
+        "duration_s": {
+          "n": 110,
+          "min": 1.76,
+          "p50": 2.74,
+          "p95": 4.102,
+          "max": 6.84,
+          "mean": 2.829818181818182
+        }
+      },
+      "native22": {
+        "latency_ms": {
+          "n": 22,
+          "min": 317.25192099111155,
+          "p50": 515.9489214856876,
+          "p95": 579.1979155459558,
+          "max": 1065.5926009931136,
+          "mean": 520.618803496208
+        },
+        "within_500_ms": 11,
+        "duration_s": {
+          "n": 22,
+          "min": 2.32,
+          "p50": 2.82,
+          "p95": 3.2,
+          "max": 3.28,
+          "mean": 2.847272727272727
+        }
+      }
+    },
+    "prefix10": {
+      "English110": {
+        "latency_ms": {
+          "n": 110,
+          "min": 149.64188801241107,
+          "p50": 325.8990254980745,
+          "p95": 385.0425438664388,
+          "max": 438.05516700376756,
+          "mean": 312.7360194379104
+        },
+        "within_500_ms": 110,
+        "duration_s": {
+          "n": 110,
+          "min": 1.76,
+          "p50": 2.74,
+          "p95": 4.102,
+          "max": 6.84,
+          "mean": 2.829818181818182
+        }
+      },
+      "native22": {
+        "latency_ms": {
+          "n": 22,
+          "min": 317.80301200342365,
+          "p50": 515.9387390012853,
+          "p95": 581.8591190909501,
+          "max": 1068.7259580008686,
+          "mean": 523.4915539992719
+        },
+        "within_500_ms": 11,
+        "duration_s": {
+          "n": 22,
+          "min": 2.32,
+          "p50": 2.82,
+          "p95": 3.2,
+          "max": 3.28,
+          "mean": 2.847272727272727
+        }
+      }
+    },
+    "prefix17": {
+      "English110": {
+        "latency_ms": {
+          "n": 110,
+          "min": 205.0771310168784,
+          "p50": 376.3763934985036,
+          "p95": 418.2349387934663,
+          "max": 466.6232790041249,
+          "mean": 364.5942652727668
+        },
+        "within_500_ms": 110,
+        "duration_s": {
+          "n": 110,
+          "min": 1.76,
+          "p50": 2.74,
+          "p95": 4.102,
+          "max": 6.84,
+          "mean": 2.829818181818182
+        }
+      },
+      "native22": {
+        "latency_ms": {
+          "n": 22,
+          "min": 317.81815100112,
+          "p50": 517.5504850049037,
+          "p95": 581.0660243078019,
+          "max": 1066.9675120152533,
+          "mean": 522.8760851843452
+        },
+        "within_500_ms": 11,
+        "duration_s": {
+          "n": 22,
+          "min": 2.32,
+          "p50": 2.82,
+          "p95": 3.2,
+          "max": 3.28,
+          "mean": 2.847272727272727
+        }
+      }
+    }
+  },
+  "paired": {
+    "prefix10": {
+      "English110_latency_ratio": {
+        "n": 110,
+        "min": 0.32077161726741504,
+        "p50": 0.6622982824252266,
+        "p95": 0.6972160446916342,
+        "max": 0.7261248603503684,
+        "mean": 0.6407551808364771
+      },
+      "all132_same_target_frames": true,
+      "full132_original_byte_identity": true,
+      "native22_byte_identity": true
+    },
+    "prefix17": {
+      "English110_latency_ratio": {
+        "n": 110,
+        "min": 0.4159044477510525,
+        "p50": 0.7772033379834568,
+        "p95": 0.811971933194126,
+        "max": 0.8303601772868155,
+        "mean": 0.751904906703705
+      },
+      "all132_same_target_frames": true,
+      "full132_original_byte_identity": true,
+      "native22_byte_identity": true
+    }
+  }
+}

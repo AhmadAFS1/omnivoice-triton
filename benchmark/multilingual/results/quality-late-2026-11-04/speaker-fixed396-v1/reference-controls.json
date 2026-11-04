@@ -1,0 +1,322 @@
+[
+  {
+    "id": "en-despina-prefix10",
+    "voice": "Despina",
+    "word_count": 10,
+    "own_cosine": 0.8412108301397596,
+    "nearest_other_voice": "Zephyr",
+    "nearest_other_cosine": 0.5983777175647949,
+    "own_margin": 0.24283311257496476,
+    "own_is_top1": true,
+    "all_stock_scores": {
+      "Despina": 0.8412108301397596,
+      "Aoede": 0.41968006318421747,
+      "Zephyr": 0.5983777175647949,
+      "Kore": 0.4413097082215943,
+      "Charon": 0.12125003197353096,
+      "Iapetus": 0.10453026261182206,
+      "Fenrir": 0.20509719661241527,
+      "Umbriel": 0.0691088169506983
+    }
+  },
+  {
+    "id": "en-despina-prefix17",
+    "voice": "Despina",
+    "word_count": 17,
+    "own_cosine": 0.9406774117448524,
+    "nearest_other_voice": "Zephyr",
+    "nearest_other_cosine": 0.5711926267838106,
+    "own_margin": 0.36948478496104187,
+    "own_is_top1": true,
+    "all_stock_scores": {
+      "Despina": 0.9406774117448524,
+      "Aoede": 0.3974001816326601,
+      "Zephyr": 0.5711926267838106,
+      "Kore": 0.4051745115194573,
+      "Charon": 0.09092059016559392,
+      "Iapetus": 0.06986717698695774,
+      "Fenrir": 0.19903249977317805,
+      "Umbriel": 0.08298699652826061
+    }
+  },
+  {
+    "id": "en-aoede-prefix10",
+    "voice": "Aoede",
+    "word_count": 10,
+    "own_cosine": 0.8695343645687208,
+    "nearest_other_voice": "Despina",
+    "nearest_other_cosine": 0.3038584152071481,
+    "own_margin": 0.5656759493615726,
+    "own_is_top1": true,
+    "all_stock_scores": {
+      "Despina": 0.3038584152071481,
+      "Aoede": 0.8695343645687208,
+      "Zephyr": 0.22580734255938859,
+      "Kore": 0.25704727062182353,
+      "Charon": 0.0400671939593448,
+      "Iapetus": 0.041239042590582226,
+      "Fenrir": 0.030323315492717235,
+      "Umbriel": 0.03369423859618418
+    }
+  },
+  {
+    "id": "en-aoede-prefix17",
+    "voice": "Aoede",
+    "word_count": 17,
+    "own_cosine": 0.9468296933071052,
+    "nearest_other_voice": "Despina",
+    "nearest_other_cosine": 0.3809638683103063,
+    "own_margin": 0.5658658249967989,
+    "own_is_top1": true,
+    "all_stock_scores": {
+      "Despina": 0.3809638683103063,
+      "Aoede": 0.9468296933071052,
+      "Zephyr": 0.2708504212059285,
+      "Kore": 0.2805741521707992,
+      "Charon": 0.05849296248654508,
+      "Iapetus": 0.07376489364151813,
+      "Fenrir": 0.07691934766013339,
+      "Umbriel": 0.07492446084903764
+    }
+  },
+  {
+    "id": "en-zephyr-prefix10",
+    "voice": "Zephyr",
+    "word_count": 10,
+    "own_cosine": 0.8802877665804201,
+    "nearest_other_voice": "Despina",
+    "nearest_other_cosine": 0.45220741757237215,
+    "own_margin": 0.4280803490080479,
+    "own_is_top1": true,
+    "all_stock_scores": {
+      "Despina": 0.45220741757237215,
+      "Aoede": 0.2735682260697604,
+      "Zephyr": 0.8802877665804201,
+      "Kore": 0.36091778258019735,
+      "Charon": 0.12286667486230644,
+      "Iapetus": 0.05911863522912994,
+      "Fenrir": 0.1384133416097039,
+      "Umbriel": 0.160328294885957
+    }
+  },
+  {
+    "id": "en-zephyr-prefix17",
+    "voice": "Zephyr",
+    "word_count": 17,
+    "own_cosine": 0.9436706112167905,
+    "nearest_other_voice": "Despina",
+    "nearest_other_cosine": 0.48687856556478953,
+    "own_margin": 0.456792045652001,
+    "own_is_top1": true,
+    "all_stock_scores": {
+      "Despina": 0.48687856556478953,
+      "Aoede": 0.288459858124795,
+      "Zephyr": 0.9436706112167905,
+      "Kore": 0.3627889765139468,
+      "Charon": 0.12027207617362556,
+      "Iapetus": 0.03827577113223465,
+      "Fenrir": 0.1572223466739658,
+      "Umbriel": 0.17407776964900276
+    }
+  },
+  {
+    "id": "en-kore-prefix10",
+    "voice": "Kore",
+    "word_count": 10,
+    "own_cosine": 0.8528488137832086,
+    "nearest_other_voice": "Despina",
+    "nearest_other_cosine": 0.30157420266515267,
+    "own_margin": 0.551274611118056,
+    "own_is_top1": true,
+    "all_stock_scores": {
+      "Despina": 0.30157420266515267,
+      "Aoede": 0.2486433151449907,
+      "Zephyr": 0.23556120885031367,
+      "Kore": 0.8528488137832086,
+      "Charon": 0.15264833817212964,
+      "Iapetus": 0.11940355614248988,
+      "Fenrir": 0.2197237820432011,
+      "Umbriel": 0.244619861635198
+    }
+  },
+  {
+    "id": "en-kore-prefix17",
+    "voice": "Kore",
+    "word_count": 17,
+    "own_cosine": 0.9206461298836266,
+    "nearest_other_voice": "Despina",
+    "nearest_other_cosine": 0.37142587823624695,
+    "own_margin": 0.5492202516473796,
+    "own_is_top1": true,
+    "all_stock_scores": {
+      "Despina": 0.37142587823624695,
+      "Aoede": 0.28169489617310395,
+      "Zephyr": 0.28698459832339196,
+      "Kore": 0.9206461298836266,
+      "Charon": 0.20109176643737048,
+      "Iapetus": 0.14870427875126524,
+      "Fenrir": 0.2380945568111687,
+      "Umbriel": 0.26328330325813337
+    }
+  },
+  {
+    "id": "en-charon-prefix10",
+    "voice": "Charon",
+    "word_count": 10,
+    "own_cosine": 0.7821136986258745,
+    "nearest_other_voice": "Umbriel",
+    "nearest_other_cosine": 0.17718858234167167,
+    "own_margin": 0.6049251162842029,
+    "own_is_top1": true,
+    "all_stock_scores": {
+      "Despina": 0.0931162815212037,
+      "Aoede": 0.06727224332309029,
+      "Zephyr": 0.10746858488798239,
+      "Kore": 0.13899038684527326,
+      "Charon": 0.7821136986258745,
+      "Iapetus": 0.14067148396498072,
+      "Fenrir": 0.10479088136901951,
+      "Umbriel": 0.17718858234167167
+    }
+  },
+  {
+    "id": "en-charon-prefix17",
+    "voice": "Charon",
+    "word_count": 17,
+    "own_cosine": 0.8845173585787438,
+    "nearest_other_voice": "Umbriel",
+    "nearest_other_cosine": 0.2093520109310125,
+    "own_margin": 0.6751653476477313,
+    "own_is_top1": true,
+    "all_stock_scores": {
+      "Despina": 0.060643242910896976,
+      "Aoede": 0.034164685639364346,
+      "Zephyr": 0.09332999742226752,
+      "Kore": 0.14665775101006082,
+      "Charon": 0.8845173585787438,
+      "Iapetus": 0.20020316152308565,
+      "Fenrir": 0.20236884688152634,
+      "Umbriel": 0.2093520109310125
+    }
+  },
+  {
+    "id": "en-iapetus-prefix10",
+    "voice": "Iapetus",
+    "word_count": 10,
+    "own_cosine": 0.8919852645820618,
+    "nearest_other_voice": "Fenrir",
+    "nearest_other_cosine": 0.39961082343131943,
+    "own_margin": 0.4923744411507424,
+    "own_is_top1": true,
+    "all_stock_scores": {
+      "Despina": 0.07101738826113113,
+      "Aoede": 0.06773929965995207,
+      "Zephyr": 0.03299395365291655,
+      "Kore": 0.10774057254443775,
+      "Charon": 0.19970129549041926,
+      "Iapetus": 0.8919852645820618,
+      "Fenrir": 0.39961082343131943,
+      "Umbriel": 0.3839097466724003
+    }
+  },
+  {
+    "id": "en-iapetus-prefix17",
+    "voice": "Iapetus",
+    "word_count": 17,
+    "own_cosine": 0.9242170455578923,
+    "nearest_other_voice": "Fenrir",
+    "nearest_other_cosine": 0.45743640162150184,
+    "own_margin": 0.46678064393639046,
+    "own_is_top1": true,
+    "all_stock_scores": {
+      "Despina": 0.08722728292458194,
+      "Aoede": 0.09814428202461303,
+      "Zephyr": 0.024844179898039997,
+      "Kore": 0.10347959044398422,
+      "Charon": 0.20588840530497704,
+      "Iapetus": 0.9242170455578923,
+      "Fenrir": 0.45743640162150184,
+      "Umbriel": 0.4189403075505798
+    }
+  },
+  {
+    "id": "en-fenrir-prefix10",
+    "voice": "Fenrir",
+    "word_count": 10,
+    "own_cosine": 0.874231069012201,
+    "nearest_other_voice": "Umbriel",
+    "nearest_other_cosine": 0.5277715942355012,
+    "own_margin": 0.3464594747766998,
+    "own_is_top1": true,
+    "all_stock_scores": {
+      "Despina": 0.16686597116327262,
+      "Aoede": 0.10341290218706871,
+      "Zephyr": 0.1667594811738079,
+      "Kore": 0.16555824901593746,
+      "Charon": 0.21143783160575536,
+      "Iapetus": 0.5275914260126509,
+      "Fenrir": 0.874231069012201,
+      "Umbriel": 0.5277715942355012
+    }
+  },
+  {
+    "id": "en-fenrir-prefix17",
+    "voice": "Fenrir",
+    "word_count": 17,
+    "own_cosine": 0.9275559893738854,
+    "nearest_other_voice": "Umbriel",
+    "nearest_other_cosine": 0.5739034190218704,
+    "own_margin": 0.353652570352015,
+    "own_is_top1": true,
+    "all_stock_scores": {
+      "Despina": 0.15127740980835963,
+      "Aoede": 0.11709629160690231,
+      "Zephyr": 0.17237888031974147,
+      "Kore": 0.18657627137264726,
+      "Charon": 0.24401378454601996,
+      "Iapetus": 0.5457376481147808,
+      "Fenrir": 0.9275559893738854,
+      "Umbriel": 0.5739034190218704
+    }
+  },
+  {
+    "id": "en-umbriel-prefix10",
+    "voice": "Umbriel",
+    "word_count": 10,
+    "own_cosine": 0.8798986602751779,
+    "nearest_other_voice": "Fenrir",
+    "nearest_other_cosine": 0.5055069659156401,
+    "own_margin": 0.3743916943595378,
+    "own_is_top1": true,
+    "all_stock_scores": {
+      "Despina": 0.1574109308845777,
+      "Aoede": 0.09692602192880087,
+      "Zephyr": 0.1516764137663842,
+      "Kore": 0.21689673562858067,
+      "Charon": 0.15391431367296354,
+      "Iapetus": 0.4096033394878232,
+      "Fenrir": 0.5055069659156401,
+      "Umbriel": 0.8798986602751779
+    }
+  },
+  {
+    "id": "en-umbriel-prefix17",
+    "voice": "Umbriel",
+    "word_count": 17,
+    "own_cosine": 0.9442889225983402,
+    "nearest_other_voice": "Fenrir",
+    "nearest_other_cosine": 0.5230406492596137,
+    "own_margin": 0.4212482733387265,
+    "own_is_top1": true,
+    "all_stock_scores": {
+      "Despina": 0.11184922413324871,
+      "Aoede": 0.10440329592487463,
+      "Zephyr": 0.13394366352160503,
+      "Kore": 0.254135568373088,
+      "Charon": 0.19059620933080612,
+      "Iapetus": 0.40134618163277136,
+      "Fenrir": 0.5230406492596137,
+      "Umbriel": 0.9442889225983402
+    }
+  }
+]

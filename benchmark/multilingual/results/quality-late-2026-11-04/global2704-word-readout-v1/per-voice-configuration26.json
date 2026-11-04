@@ -1,0 +1,1162 @@
+[
+  {
+    "voice": "Aoede",
+    "configuration": "lingua-default",
+    "offered": 104,
+    "HTTP200": 104,
+    "signal_valid": 102,
+    "invalid_audio": 2,
+    "both_judges_present": 102,
+    "both_normalized_exact": 11,
+    "both_character_exact_CER0": 12,
+    "either_judge_character_mismatch": 90,
+    "LLM_normalized_exact": 27,
+    "CTC_normalized_exact": 15,
+    "judge_transcripts_disagree": 84,
+    "unique_ASR_audio_script_evidence": 102,
+    "native_reference": 9,
+    "EN_fallback_reference": 95,
+    "no_reference": 0,
+    "ASR_mapping_proxy": 1,
+    "actual_reference_calibration_status": {
+      "control_ASR_mismatch_review": 5,
+      "control_ASR_screen_matches": 99
+    },
+    "target_language_calibration_status": {
+      "control_ASR_mismatch_review": 5,
+      "control_ASR_screen_matches": 4,
+      "target_language_control_not_available": 95
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 2555,
+        "character_edits": 428,
+        "reference_words": 539,
+        "word_edits": 219
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 2555,
+        "character_edits": 1043,
+        "reference_words": 539,
+        "word_edits": 373
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "voice": "Aoede",
+    "configuration": "lingua-tutor",
+    "offered": 104,
+    "HTTP200": 104,
+    "signal_valid": 104,
+    "invalid_audio": 0,
+    "both_judges_present": 104,
+    "both_normalized_exact": 17,
+    "both_character_exact_CER0": 18,
+    "either_judge_character_mismatch": 86,
+    "LLM_normalized_exact": 38,
+    "CTC_normalized_exact": 17,
+    "judge_transcripts_disagree": 81,
+    "unique_ASR_audio_script_evidence": 104,
+    "native_reference": 9,
+    "EN_fallback_reference": 95,
+    "no_reference": 0,
+    "ASR_mapping_proxy": 1,
+    "actual_reference_calibration_status": {
+      "control_ASR_mismatch_review": 5,
+      "control_ASR_screen_matches": 99
+    },
+    "target_language_calibration_status": {
+      "control_ASR_mismatch_review": 5,
+      "control_ASR_screen_matches": 4,
+      "target_language_control_not_available": 95
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 307,
+        "reference_words": 548,
+        "word_edits": 200
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 926,
+        "reference_words": 548,
+        "word_edits": 355
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "voice": "Aoede",
+    "configuration": "lingua-video",
+    "offered": 104,
+    "HTTP200": 104,
+    "signal_valid": 104,
+    "invalid_audio": 0,
+    "both_judges_present": 104,
+    "both_normalized_exact": 18,
+    "both_character_exact_CER0": 19,
+    "either_judge_character_mismatch": 85,
+    "LLM_normalized_exact": 39,
+    "CTC_normalized_exact": 18,
+    "judge_transcripts_disagree": 78,
+    "unique_ASR_audio_script_evidence": 104,
+    "native_reference": 9,
+    "EN_fallback_reference": 95,
+    "no_reference": 0,
+    "ASR_mapping_proxy": 1,
+    "actual_reference_calibration_status": {
+      "control_ASR_mismatch_review": 5,
+      "control_ASR_screen_matches": 99
+    },
+    "target_language_calibration_status": {
+      "control_ASR_mismatch_review": 5,
+      "control_ASR_screen_matches": 4,
+      "target_language_control_not_available": 95
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 383,
+        "reference_words": 548,
+        "word_edits": 196
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 1024,
+        "reference_words": 548,
+        "word_edits": 361
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "voice": "Charon",
+    "configuration": "lingua-default",
+    "offered": 104,
+    "HTTP200": 104,
+    "signal_valid": 103,
+    "invalid_audio": 1,
+    "both_judges_present": 103,
+    "both_normalized_exact": 15,
+    "both_character_exact_CER0": 17,
+    "either_judge_character_mismatch": 86,
+    "LLM_normalized_exact": 31,
+    "CTC_normalized_exact": 18,
+    "judge_transcripts_disagree": 83,
+    "unique_ASR_audio_script_evidence": 103,
+    "native_reference": 9,
+    "EN_fallback_reference": 95,
+    "no_reference": 0,
+    "ASR_mapping_proxy": 1,
+    "actual_reference_calibration_status": {
+      "control_ASR_mismatch_review": 5,
+      "control_ASR_screen_matches": 99
+    },
+    "target_language_calibration_status": {
+      "control_ASR_mismatch_review": 5,
+      "control_ASR_screen_matches": 4,
+      "target_language_control_not_available": 95
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 2578,
+        "character_edits": 436,
+        "reference_words": 543,
+        "word_edits": 224
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 2578,
+        "character_edits": 1029,
+        "reference_words": 543,
+        "word_edits": 369
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "voice": "Charon",
+    "configuration": "lingua-tutor",
+    "offered": 104,
+    "HTTP200": 104,
+    "signal_valid": 104,
+    "invalid_audio": 0,
+    "both_judges_present": 104,
+    "both_normalized_exact": 21,
+    "both_character_exact_CER0": 23,
+    "either_judge_character_mismatch": 81,
+    "LLM_normalized_exact": 39,
+    "CTC_normalized_exact": 25,
+    "judge_transcripts_disagree": 80,
+    "unique_ASR_audio_script_evidence": 104,
+    "native_reference": 9,
+    "EN_fallback_reference": 95,
+    "no_reference": 0,
+    "ASR_mapping_proxy": 1,
+    "actual_reference_calibration_status": {
+      "control_ASR_mismatch_review": 5,
+      "control_ASR_screen_matches": 99
+    },
+    "target_language_calibration_status": {
+      "control_ASR_mismatch_review": 5,
+      "control_ASR_screen_matches": 4,
+      "target_language_control_not_available": 95
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 346,
+        "reference_words": 548,
+        "word_edits": 203
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 972,
+        "reference_words": 548,
+        "word_edits": 360
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "voice": "Charon",
+    "configuration": "lingua-video",
+    "offered": 104,
+    "HTTP200": 104,
+    "signal_valid": 104,
+    "invalid_audio": 0,
+    "both_judges_present": 104,
+    "both_normalized_exact": 21,
+    "both_character_exact_CER0": 23,
+    "either_judge_character_mismatch": 81,
+    "LLM_normalized_exact": 40,
+    "CTC_normalized_exact": 26,
+    "judge_transcripts_disagree": 81,
+    "unique_ASR_audio_script_evidence": 104,
+    "native_reference": 9,
+    "EN_fallback_reference": 95,
+    "no_reference": 0,
+    "ASR_mapping_proxy": 1,
+    "actual_reference_calibration_status": {
+      "control_ASR_mismatch_review": 5,
+      "control_ASR_screen_matches": 99
+    },
+    "target_language_calibration_status": {
+      "control_ASR_mismatch_review": 5,
+      "control_ASR_screen_matches": 4,
+      "target_language_control_not_available": 95
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 293,
+        "reference_words": 548,
+        "word_edits": 183
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 962,
+        "reference_words": 548,
+        "word_edits": 351
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "voice": "Despina",
+    "configuration": "lingua-default",
+    "offered": 104,
+    "HTTP200": 104,
+    "signal_valid": 104,
+    "invalid_audio": 0,
+    "both_judges_present": 104,
+    "both_normalized_exact": 19,
+    "both_character_exact_CER0": 20,
+    "either_judge_character_mismatch": 84,
+    "LLM_normalized_exact": 40,
+    "CTC_normalized_exact": 20,
+    "judge_transcripts_disagree": 82,
+    "unique_ASR_audio_script_evidence": 104,
+    "native_reference": 8,
+    "EN_fallback_reference": 96,
+    "no_reference": 0,
+    "ASR_mapping_proxy": 1,
+    "actual_reference_calibration_status": {
+      "control_ASR_mismatch_review": 4,
+      "control_ASR_screen_matches": 100
+    },
+    "target_language_calibration_status": {
+      "control_ASR_mismatch_review": 4,
+      "control_ASR_screen_matches": 4,
+      "target_language_control_not_available": 95,
+      "control_ASR_partial_or_mismatch_review": 1
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 332,
+        "reference_words": 548,
+        "word_edits": 187
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 967,
+        "reference_words": 548,
+        "word_edits": 355
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "voice": "Despina",
+    "configuration": "lingua-tutor",
+    "offered": 104,
+    "HTTP200": 104,
+    "signal_valid": 104,
+    "invalid_audio": 0,
+    "both_judges_present": 104,
+    "both_normalized_exact": 19,
+    "both_character_exact_CER0": 24,
+    "either_judge_character_mismatch": 80,
+    "LLM_normalized_exact": 45,
+    "CTC_normalized_exact": 24,
+    "judge_transcripts_disagree": 78,
+    "unique_ASR_audio_script_evidence": 104,
+    "native_reference": 8,
+    "EN_fallback_reference": 96,
+    "no_reference": 0,
+    "ASR_mapping_proxy": 1,
+    "actual_reference_calibration_status": {
+      "control_ASR_mismatch_review": 4,
+      "control_ASR_screen_matches": 100
+    },
+    "target_language_calibration_status": {
+      "control_ASR_mismatch_review": 4,
+      "control_ASR_screen_matches": 4,
+      "target_language_control_not_available": 95,
+      "control_ASR_partial_or_mismatch_review": 1
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 280,
+        "reference_words": 548,
+        "word_edits": 168
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 732,
+        "reference_words": 548,
+        "word_edits": 298
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "voice": "Despina",
+    "configuration": "lingua-video",
+    "offered": 104,
+    "HTTP200": 104,
+    "signal_valid": 104,
+    "invalid_audio": 0,
+    "both_judges_present": 104,
+    "both_normalized_exact": 21,
+    "both_character_exact_CER0": 28,
+    "either_judge_character_mismatch": 76,
+    "LLM_normalized_exact": 45,
+    "CTC_normalized_exact": 25,
+    "judge_transcripts_disagree": 76,
+    "unique_ASR_audio_script_evidence": 104,
+    "native_reference": 8,
+    "EN_fallback_reference": 96,
+    "no_reference": 0,
+    "ASR_mapping_proxy": 1,
+    "actual_reference_calibration_status": {
+      "control_ASR_mismatch_review": 4,
+      "control_ASR_screen_matches": 100
+    },
+    "target_language_calibration_status": {
+      "control_ASR_mismatch_review": 4,
+      "control_ASR_screen_matches": 4,
+      "target_language_control_not_available": 95,
+      "control_ASR_partial_or_mismatch_review": 1
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 275,
+        "reference_words": 548,
+        "word_edits": 168
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 719,
+        "reference_words": 548,
+        "word_edits": 290
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "voice": "Fenrir",
+    "configuration": "lingua-default",
+    "offered": 104,
+    "HTTP200": 104,
+    "signal_valid": 104,
+    "invalid_audio": 0,
+    "both_judges_present": 104,
+    "both_normalized_exact": 6,
+    "both_character_exact_CER0": 6,
+    "either_judge_character_mismatch": 98,
+    "LLM_normalized_exact": 17,
+    "CTC_normalized_exact": 7,
+    "judge_transcripts_disagree": 94,
+    "unique_ASR_audio_script_evidence": 104,
+    "native_reference": 7,
+    "EN_fallback_reference": 97,
+    "no_reference": 0,
+    "ASR_mapping_proxy": 1,
+    "actual_reference_calibration_status": {
+      "control_ASR_mismatch_review": 4,
+      "control_ASR_screen_matches": 100
+    },
+    "target_language_calibration_status": {
+      "control_ASR_mismatch_review": 4,
+      "control_ASR_screen_matches": 4,
+      "target_language_control_not_available": 95,
+      "control_ASR_partial_or_mismatch_review": 1
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 489,
+        "reference_words": 548,
+        "word_edits": 271
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 1187,
+        "reference_words": 548,
+        "word_edits": 448
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "voice": "Fenrir",
+    "configuration": "lingua-tutor",
+    "offered": 104,
+    "HTTP200": 104,
+    "signal_valid": 104,
+    "invalid_audio": 0,
+    "both_judges_present": 104,
+    "both_normalized_exact": 12,
+    "both_character_exact_CER0": 15,
+    "either_judge_character_mismatch": 89,
+    "LLM_normalized_exact": 33,
+    "CTC_normalized_exact": 13,
+    "judge_transcripts_disagree": 88,
+    "unique_ASR_audio_script_evidence": 104,
+    "native_reference": 7,
+    "EN_fallback_reference": 97,
+    "no_reference": 0,
+    "ASR_mapping_proxy": 1,
+    "actual_reference_calibration_status": {
+      "control_ASR_mismatch_review": 4,
+      "control_ASR_screen_matches": 100
+    },
+    "target_language_calibration_status": {
+      "control_ASR_mismatch_review": 4,
+      "control_ASR_screen_matches": 4,
+      "target_language_control_not_available": 95,
+      "control_ASR_partial_or_mismatch_review": 1
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 383,
+        "reference_words": 548,
+        "word_edits": 220
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 1013,
+        "reference_words": 548,
+        "word_edits": 389
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "voice": "Fenrir",
+    "configuration": "lingua-video",
+    "offered": 104,
+    "HTTP200": 104,
+    "signal_valid": 104,
+    "invalid_audio": 0,
+    "both_judges_present": 104,
+    "both_normalized_exact": 12,
+    "both_character_exact_CER0": 15,
+    "either_judge_character_mismatch": 89,
+    "LLM_normalized_exact": 33,
+    "CTC_normalized_exact": 13,
+    "judge_transcripts_disagree": 89,
+    "unique_ASR_audio_script_evidence": 104,
+    "native_reference": 7,
+    "EN_fallback_reference": 97,
+    "no_reference": 0,
+    "ASR_mapping_proxy": 1,
+    "actual_reference_calibration_status": {
+      "control_ASR_mismatch_review": 4,
+      "control_ASR_screen_matches": 100
+    },
+    "target_language_calibration_status": {
+      "control_ASR_mismatch_review": 4,
+      "control_ASR_screen_matches": 4,
+      "target_language_control_not_available": 95,
+      "control_ASR_partial_or_mismatch_review": 1
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 379,
+        "reference_words": 548,
+        "word_edits": 230
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 1006,
+        "reference_words": 548,
+        "word_edits": 389
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "voice": "Iapetus",
+    "configuration": "lingua-default",
+    "offered": 104,
+    "HTTP200": 104,
+    "signal_valid": 103,
+    "invalid_audio": 1,
+    "both_judges_present": 103,
+    "both_normalized_exact": 13,
+    "both_character_exact_CER0": 14,
+    "either_judge_character_mismatch": 89,
+    "LLM_normalized_exact": 30,
+    "CTC_normalized_exact": 14,
+    "judge_transcripts_disagree": 87,
+    "unique_ASR_audio_script_evidence": 103,
+    "native_reference": 8,
+    "EN_fallback_reference": 96,
+    "no_reference": 0,
+    "ASR_mapping_proxy": 1,
+    "actual_reference_calibration_status": {
+      "control_ASR_mismatch_review": 3,
+      "control_ASR_screen_matches": 101
+    },
+    "target_language_calibration_status": {
+      "control_ASR_mismatch_review": 3,
+      "control_ASR_screen_matches": 5,
+      "target_language_control_not_available": 95,
+      "control_ASR_partial_or_mismatch_review": 1
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 2568,
+        "character_edits": 402,
+        "reference_words": 543,
+        "word_edits": 229
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 2568,
+        "character_edits": 1135,
+        "reference_words": 543,
+        "word_edits": 399
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "voice": "Iapetus",
+    "configuration": "lingua-tutor",
+    "offered": 104,
+    "HTTP200": 104,
+    "signal_valid": 104,
+    "invalid_audio": 0,
+    "both_judges_present": 104,
+    "both_normalized_exact": 16,
+    "both_character_exact_CER0": 20,
+    "either_judge_character_mismatch": 84,
+    "LLM_normalized_exact": 42,
+    "CTC_normalized_exact": 17,
+    "judge_transcripts_disagree": 84,
+    "unique_ASR_audio_script_evidence": 104,
+    "native_reference": 8,
+    "EN_fallback_reference": 96,
+    "no_reference": 0,
+    "ASR_mapping_proxy": 1,
+    "actual_reference_calibration_status": {
+      "control_ASR_mismatch_review": 3,
+      "control_ASR_screen_matches": 101
+    },
+    "target_language_calibration_status": {
+      "control_ASR_mismatch_review": 3,
+      "control_ASR_screen_matches": 5,
+      "target_language_control_not_available": 95,
+      "control_ASR_partial_or_mismatch_review": 1
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 304,
+        "reference_words": 548,
+        "word_edits": 184
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 958,
+        "reference_words": 548,
+        "word_edits": 369
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "voice": "Iapetus",
+    "configuration": "lingua-video",
+    "offered": 104,
+    "HTTP200": 104,
+    "signal_valid": 104,
+    "invalid_audio": 0,
+    "both_judges_present": 104,
+    "both_normalized_exact": 14,
+    "both_character_exact_CER0": 18,
+    "either_judge_character_mismatch": 86,
+    "LLM_normalized_exact": 42,
+    "CTC_normalized_exact": 15,
+    "judge_transcripts_disagree": 86,
+    "unique_ASR_audio_script_evidence": 104,
+    "native_reference": 8,
+    "EN_fallback_reference": 96,
+    "no_reference": 0,
+    "ASR_mapping_proxy": 1,
+    "actual_reference_calibration_status": {
+      "control_ASR_mismatch_review": 3,
+      "control_ASR_screen_matches": 101
+    },
+    "target_language_calibration_status": {
+      "control_ASR_mismatch_review": 3,
+      "control_ASR_screen_matches": 5,
+      "target_language_control_not_available": 95,
+      "control_ASR_partial_or_mismatch_review": 1
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 295,
+        "reference_words": 548,
+        "word_edits": 191
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 982,
+        "reference_words": 548,
+        "word_edits": 383
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "voice": "Kore",
+    "configuration": "lingua-default",
+    "offered": 104,
+    "HTTP200": 104,
+    "signal_valid": 104,
+    "invalid_audio": 0,
+    "both_judges_present": 104,
+    "both_normalized_exact": 15,
+    "both_character_exact_CER0": 16,
+    "either_judge_character_mismatch": 88,
+    "LLM_normalized_exact": 30,
+    "CTC_normalized_exact": 17,
+    "judge_transcripts_disagree": 82,
+    "unique_ASR_audio_script_evidence": 104,
+    "native_reference": 8,
+    "EN_fallback_reference": 96,
+    "no_reference": 0,
+    "ASR_mapping_proxy": 1,
+    "actual_reference_calibration_status": {
+      "control_ASR_mismatch_review": 2,
+      "control_ASR_screen_matches": 102
+    },
+    "target_language_calibration_status": {
+      "control_ASR_mismatch_review": 2,
+      "control_ASR_screen_matches": 6,
+      "target_language_control_not_available": 95,
+      "control_ASR_partial_or_mismatch_review": 1
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 411,
+        "reference_words": 548,
+        "word_edits": 227
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 1097,
+        "reference_words": 548,
+        "word_edits": 392
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "voice": "Kore",
+    "configuration": "lingua-tutor",
+    "offered": 104,
+    "HTTP200": 104,
+    "signal_valid": 104,
+    "invalid_audio": 0,
+    "both_judges_present": 104,
+    "both_normalized_exact": 21,
+    "both_character_exact_CER0": 25,
+    "either_judge_character_mismatch": 79,
+    "LLM_normalized_exact": 42,
+    "CTC_normalized_exact": 22,
+    "judge_transcripts_disagree": 77,
+    "unique_ASR_audio_script_evidence": 104,
+    "native_reference": 8,
+    "EN_fallback_reference": 96,
+    "no_reference": 0,
+    "ASR_mapping_proxy": 1,
+    "actual_reference_calibration_status": {
+      "control_ASR_mismatch_review": 2,
+      "control_ASR_screen_matches": 102
+    },
+    "target_language_calibration_status": {
+      "control_ASR_mismatch_review": 2,
+      "control_ASR_screen_matches": 6,
+      "target_language_control_not_available": 95,
+      "control_ASR_partial_or_mismatch_review": 1
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 276,
+        "reference_words": 548,
+        "word_edits": 191
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 999,
+        "reference_words": 548,
+        "word_edits": 353
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "voice": "Kore",
+    "configuration": "lingua-video",
+    "offered": 104,
+    "HTTP200": 104,
+    "signal_valid": 104,
+    "invalid_audio": 0,
+    "both_judges_present": 104,
+    "both_normalized_exact": 22,
+    "both_character_exact_CER0": 26,
+    "either_judge_character_mismatch": 78,
+    "LLM_normalized_exact": 45,
+    "CTC_normalized_exact": 24,
+    "judge_transcripts_disagree": 78,
+    "unique_ASR_audio_script_evidence": 104,
+    "native_reference": 8,
+    "EN_fallback_reference": 96,
+    "no_reference": 0,
+    "ASR_mapping_proxy": 1,
+    "actual_reference_calibration_status": {
+      "control_ASR_mismatch_review": 2,
+      "control_ASR_screen_matches": 102
+    },
+    "target_language_calibration_status": {
+      "control_ASR_mismatch_review": 2,
+      "control_ASR_screen_matches": 6,
+      "target_language_control_not_available": 95,
+      "control_ASR_partial_or_mismatch_review": 1
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 274,
+        "reference_words": 548,
+        "word_edits": 185
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 985,
+        "reference_words": 548,
+        "word_edits": 356
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "voice": "Umbriel",
+    "configuration": "lingua-default",
+    "offered": 104,
+    "HTTP200": 104,
+    "signal_valid": 104,
+    "invalid_audio": 0,
+    "both_judges_present": 104,
+    "both_normalized_exact": 9,
+    "both_character_exact_CER0": 11,
+    "either_judge_character_mismatch": 93,
+    "LLM_normalized_exact": 20,
+    "CTC_normalized_exact": 11,
+    "judge_transcripts_disagree": 88,
+    "unique_ASR_audio_script_evidence": 104,
+    "native_reference": 7,
+    "EN_fallback_reference": 97,
+    "no_reference": 0,
+    "ASR_mapping_proxy": 1,
+    "actual_reference_calibration_status": {
+      "control_ASR_mismatch_review": 4,
+      "control_ASR_screen_matches": 100
+    },
+    "target_language_calibration_status": {
+      "control_ASR_mismatch_review": 4,
+      "control_ASR_screen_matches": 4,
+      "target_language_control_not_available": 95,
+      "control_ASR_partial_or_mismatch_review": 1
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 432,
+        "reference_words": 548,
+        "word_edits": 259
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 991,
+        "reference_words": 548,
+        "word_edits": 404
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "voice": "Umbriel",
+    "configuration": "lingua-tutor",
+    "offered": 104,
+    "HTTP200": 104,
+    "signal_valid": 104,
+    "invalid_audio": 0,
+    "both_judges_present": 104,
+    "both_normalized_exact": 18,
+    "both_character_exact_CER0": 20,
+    "either_judge_character_mismatch": 84,
+    "LLM_normalized_exact": 38,
+    "CTC_normalized_exact": 21,
+    "judge_transcripts_disagree": 81,
+    "unique_ASR_audio_script_evidence": 104,
+    "native_reference": 7,
+    "EN_fallback_reference": 97,
+    "no_reference": 0,
+    "ASR_mapping_proxy": 1,
+    "actual_reference_calibration_status": {
+      "control_ASR_mismatch_review": 4,
+      "control_ASR_screen_matches": 100
+    },
+    "target_language_calibration_status": {
+      "control_ASR_mismatch_review": 4,
+      "control_ASR_screen_matches": 4,
+      "target_language_control_not_available": 95,
+      "control_ASR_partial_or_mismatch_review": 1
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 326,
+        "reference_words": 548,
+        "word_edits": 185
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 712,
+        "reference_words": 548,
+        "word_edits": 336
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "voice": "Umbriel",
+    "configuration": "lingua-video",
+    "offered": 104,
+    "HTTP200": 104,
+    "signal_valid": 104,
+    "invalid_audio": 0,
+    "both_judges_present": 104,
+    "both_normalized_exact": 18,
+    "both_character_exact_CER0": 20,
+    "either_judge_character_mismatch": 84,
+    "LLM_normalized_exact": 39,
+    "CTC_normalized_exact": 21,
+    "judge_transcripts_disagree": 81,
+    "unique_ASR_audio_script_evidence": 104,
+    "native_reference": 7,
+    "EN_fallback_reference": 97,
+    "no_reference": 0,
+    "ASR_mapping_proxy": 1,
+    "actual_reference_calibration_status": {
+      "control_ASR_mismatch_review": 4,
+      "control_ASR_screen_matches": 100
+    },
+    "target_language_calibration_status": {
+      "control_ASR_mismatch_review": 4,
+      "control_ASR_screen_matches": 4,
+      "target_language_control_not_available": 95,
+      "control_ASR_partial_or_mismatch_review": 1
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 320,
+        "reference_words": 548,
+        "word_edits": 185
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 722,
+        "reference_words": 548,
+        "word_edits": 341
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "voice": "Zephyr",
+    "configuration": "lingua-default",
+    "offered": 104,
+    "HTTP200": 104,
+    "signal_valid": 104,
+    "invalid_audio": 0,
+    "both_judges_present": 104,
+    "both_normalized_exact": 11,
+    "both_character_exact_CER0": 13,
+    "either_judge_character_mismatch": 91,
+    "LLM_normalized_exact": 35,
+    "CTC_normalized_exact": 12,
+    "judge_transcripts_disagree": 86,
+    "unique_ASR_audio_script_evidence": 104,
+    "native_reference": 8,
+    "EN_fallback_reference": 96,
+    "no_reference": 0,
+    "ASR_mapping_proxy": 1,
+    "actual_reference_calibration_status": {
+      "control_ASR_mismatch_review": 4,
+      "control_ASR_screen_matches": 100
+    },
+    "target_language_calibration_status": {
+      "control_ASR_mismatch_review": 4,
+      "control_ASR_screen_matches": 4,
+      "target_language_control_not_available": 95,
+      "control_ASR_partial_or_mismatch_review": 1
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 418,
+        "reference_words": 548,
+        "word_edits": 194
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 1067,
+        "reference_words": 548,
+        "word_edits": 382
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "voice": "Zephyr",
+    "configuration": "lingua-tutor",
+    "offered": 104,
+    "HTTP200": 104,
+    "signal_valid": 104,
+    "invalid_audio": 0,
+    "both_judges_present": 104,
+    "both_normalized_exact": 17,
+    "both_character_exact_CER0": 20,
+    "either_judge_character_mismatch": 84,
+    "LLM_normalized_exact": 39,
+    "CTC_normalized_exact": 20,
+    "judge_transcripts_disagree": 84,
+    "unique_ASR_audio_script_evidence": 104,
+    "native_reference": 8,
+    "EN_fallback_reference": 96,
+    "no_reference": 0,
+    "ASR_mapping_proxy": 1,
+    "actual_reference_calibration_status": {
+      "control_ASR_mismatch_review": 4,
+      "control_ASR_screen_matches": 100
+    },
+    "target_language_calibration_status": {
+      "control_ASR_mismatch_review": 4,
+      "control_ASR_screen_matches": 4,
+      "target_language_control_not_available": 95,
+      "control_ASR_partial_or_mismatch_review": 1
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 300,
+        "reference_words": 548,
+        "word_edits": 182
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 860,
+        "reference_words": 548,
+        "word_edits": 363
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "voice": "Zephyr",
+    "configuration": "lingua-video",
+    "offered": 104,
+    "HTTP200": 104,
+    "signal_valid": 104,
+    "invalid_audio": 0,
+    "both_judges_present": 104,
+    "both_normalized_exact": 17,
+    "both_character_exact_CER0": 21,
+    "either_judge_character_mismatch": 83,
+    "LLM_normalized_exact": 39,
+    "CTC_normalized_exact": 20,
+    "judge_transcripts_disagree": 83,
+    "unique_ASR_audio_script_evidence": 104,
+    "native_reference": 8,
+    "EN_fallback_reference": 96,
+    "no_reference": 0,
+    "ASR_mapping_proxy": 1,
+    "actual_reference_calibration_status": {
+      "control_ASR_mismatch_review": 4,
+      "control_ASR_screen_matches": 100
+    },
+    "target_language_calibration_status": {
+      "control_ASR_mismatch_review": 4,
+      "control_ASR_screen_matches": 4,
+      "target_language_control_not_available": 95,
+      "control_ASR_partial_or_mismatch_review": 1
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 290,
+        "reference_words": 548,
+        "word_edits": 179
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 862,
+        "reference_words": 548,
+        "word_edits": 366
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "voice": "no-stock-voice",
+    "configuration": "worker-auto-not-current-Lingua-UI",
+    "offered": 104,
+    "HTTP200": 104,
+    "signal_valid": 104,
+    "invalid_audio": 0,
+    "both_judges_present": 104,
+    "both_normalized_exact": 39,
+    "both_character_exact_CER0": 43,
+    "either_judge_character_mismatch": 61,
+    "LLM_normalized_exact": 64,
+    "CTC_normalized_exact": 39,
+    "judge_transcripts_disagree": 58,
+    "unique_ASR_audio_script_evidence": 104,
+    "native_reference": 0,
+    "EN_fallback_reference": 0,
+    "no_reference": 104,
+    "ASR_mapping_proxy": 1,
+    "actual_reference_calibration_status": {
+      "exact_reference_control_not_available": 104
+    },
+    "target_language_calibration_status": {
+      "control_ASR_partial_or_mismatch_review": 7,
+      "control_ASR_screen_matches": 2,
+      "target_language_control_not_available": 95
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 302,
+        "reference_words": 548,
+        "word_edits": 125
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 357,
+        "reference_words": 548,
+        "word_edits": 195
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "voice": "no-stock-voice",
+    "configuration": "worker-design-not-current-Lingua-UI",
+    "offered": 104,
+    "HTTP200": 104,
+    "signal_valid": 104,
+    "invalid_audio": 0,
+    "both_judges_present": 104,
+    "both_normalized_exact": 41,
+    "both_character_exact_CER0": 48,
+    "either_judge_character_mismatch": 56,
+    "LLM_normalized_exact": 60,
+    "CTC_normalized_exact": 43,
+    "judge_transcripts_disagree": 54,
+    "unique_ASR_audio_script_evidence": 104,
+    "native_reference": 0,
+    "EN_fallback_reference": 0,
+    "no_reference": 104,
+    "ASR_mapping_proxy": 1,
+    "actual_reference_calibration_status": {
+      "exact_reference_control_not_available": 104
+    },
+    "target_language_calibration_status": {
+      "control_ASR_partial_or_mismatch_review": 7,
+      "control_ASR_screen_matches": 2,
+      "target_language_control_not_available": 95
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 451,
+        "reference_words": 548,
+        "word_edits": 205
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 2595,
+        "character_edits": 486,
+        "reference_words": 548,
+        "word_edits": 203
+      }
+    },
+    "native_or_human_quality_certified": false
+  }
+]

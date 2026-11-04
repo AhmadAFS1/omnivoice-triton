@@ -1,0 +1,299 @@
+{
+  "selected_diagnostic_only": true,
+  "summary": {
+    "prefix10": {
+      "pairs": 14,
+      "CER_worse": 1,
+      "CER_better": 7,
+      "same": 6
+    },
+    "prefix17": {
+      "pairs": 14,
+      "CER_worse": 5,
+      "CER_better": 4,
+      "same": 5
+    }
+  },
+  "pairs": [
+    {
+      "case": "hi-short--Aoede--lingua-video",
+      "variant": "prefix17",
+      "language": "hi",
+      "before": 0.08333333333333333,
+      "after": 0.0,
+      "expected": "कोई भी घर की अंदर मौजूद नहीं था |",
+      "before_transcript": " कोई भी खर की अंदर माजूद नहीं था.",
+      "after_transcript": " कोई भी घर की अंदर मौजूद नहीं था"
+    },
+    {
+      "case": "hi-short--Charon--lingua-video",
+      "variant": "prefix10",
+      "language": "hi",
+      "before": 0.08333333333333333,
+      "after": 0.0,
+      "expected": "कोई भी घर की अंदर मौजूद नहीं था |",
+      "before_transcript": " कोई भी घरकी अंदर माजूद नही था?",
+      "after_transcript": " कोई भी घर की अंदर मौजूद नहीं था"
+    },
+    {
+      "case": "hi-short--Iapetus--lingua-video",
+      "variant": "prefix10",
+      "language": "hi",
+      "before": 0.0,
+      "after": 0.0,
+      "expected": "कोई भी घर की अंदर मौजूद नहीं था |",
+      "before_transcript": " कोई भी घर की अंदर मौजूद नहीं था",
+      "after_transcript": " कोई भी घर की अंदर मौजूद नहीं था"
+    },
+    {
+      "case": "hi-short--Fenrir--lingua-video",
+      "variant": "prefix10",
+      "language": "hi",
+      "before": 0.375,
+      "after": 0.0,
+      "expected": "कोई भी घर की अंदर मौजूद नहीं था |",
+      "before_transcript": " को इपी करकी अन्दर माझूद नहीता.",
+      "after_transcript": " कोई भी घर की अंदर मौजूद नहीं था"
+    },
+    {
+      "case": "ko-short--Aoede--lingua-video",
+      "variant": "prefix17",
+      "language": "ko",
+      "before": 0.0,
+      "after": 0.0,
+      "expected": "아파트 안에 아무도 없었다.",
+      "before_transcript": " 아파트 안에 아무도 없었다.",
+      "after_transcript": " 아파트 안에 아무도 없었다."
+    },
+    {
+      "case": "no-short--Aoede--lingua-video",
+      "variant": "prefix17",
+      "language": "no",
+      "before": 0.0,
+      "after": 0.0,
+      "expected": "Det var ingen i leiligheten.",
+      "before_transcript": " Det var ingen i leiligheten.",
+      "after_transcript": " Det var ingen i leiligheten."
+    },
+    {
+      "case": "pa-short--Aoede--lingua-video",
+      "variant": "prefix17",
+      "language": "pa",
+      "before": 12.576923076923077,
+      "after": 0.19230769230769232,
+      "expected": "ਅਪਾਰਟਮੈਂਟ ਦੇ ਅੰਦਰ ਕੋਈ ਵੀ ਨਹੀਂ ਸੀ।",
+      "before_transcript": " ਅਪਰਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾ ਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾ ਤਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾਾ",
+      "after_transcript": " ਅਪਾਟਮੇਨਟ ਦੇ ਅਂਦਰ ਕੋਈ ਵੀ ਨਹੀ ਸੀ"
+    },
+    {
+      "case": "te-short--Aoede--lingua-video",
+      "variant": "prefix17",
+      "language": "te",
+      "before": 4.28,
+      "after": 0.32,
+      "expected": "అపార్ట్‌మెంట్ లోపల ఎవరూ లేరు.",
+      "before_transcript": " పరటమామాలా యరలరిరిరిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండిండ�",
+      "after_transcript": " అపార్మ్ట్ లోపలా యవరు లేరు."
+    },
+    {
+      "case": "ta-short--Aoede--lingua-video",
+      "variant": "prefix10",
+      "language": "ta",
+      "before": 0.2962962962962963,
+      "after": 0.14814814814814814,
+      "expected": "குடியிருப்பினுள் எவரும் இல்லை.",
+      "before_transcript": " குடியிடப்பின்லை வரும் இலை",
+      "after_transcript": " கொடி இரப்பினுள் எவரும் இல்லை"
+    },
+    {
+      "case": "th-short--Aoede--lingua-video",
+      "variant": "prefix10",
+      "language": "th",
+      "before": 0.0967741935483871,
+      "after": 0.0967741935483871,
+      "expected": "ไม่มีใครอยู่ในอะพาร์ตเมนต์สักคน",
+      "before_transcript": "ไม่มีใครอยู่ในอัพาตเมนต์สักคน",
+      "after_transcript": "ไม่มีใครอยู่ในอัพาตเมนต์สักคน"
+    },
+    {
+      "case": "gu-short--Aoede--lingua-video",
+      "variant": "prefix10",
+      "language": "gu",
+      "before": 1.08,
+      "after": 0.24,
+      "expected": "ઍપાર્ટમેન્ટની અંદર કોઈ ન હતું.",
+      "before_transcript": " Apartment née andar koi na hatou.",
+      "after_transcript": " એપરટમેટની અંદર કોઈ નહતુ"
+    },
+    {
+      "case": "ha-short--Aoede--lingua-video",
+      "variant": "prefix17",
+      "language": "ha",
+      "before": 0.21428571428571427,
+      "after": 0.32142857142857145,
+      "expected": "Babu wanda ya kasance cikin ɗakin.",
+      "before_transcript": " Baabu wan dayakasansa chikin ekin.",
+      "after_transcript": " Babuwen daya khasanti chicken daking."
+    },
+    {
+      "case": "ar-SD-short--Aoede--lingua-video",
+      "variant": "prefix10",
+      "language": "ar-SD",
+      "before": 0.0,
+      "after": 0.0,
+      "expected": "اللغة النوبية.",
+      "before_transcript": " اللغة النوبية",
+      "after_transcript": " اللغة النوبية"
+    },
+    {
+      "case": "ar-SD-short--Aoede--lingua-video",
+      "variant": "prefix17",
+      "language": "ar-SD",
+      "before": 0.0,
+      "after": 0.0,
+      "expected": "اللغة النوبية.",
+      "before_transcript": " اللغة النوبية",
+      "after_transcript": " اللغة النوبية"
+    },
+    {
+      "case": "ln-short--Aoede--lingua-video",
+      "variant": "prefix10",
+      "language": "ln",
+      "before": 0.0,
+      "after": 0.06060606060606061,
+      "expected": "Moto moko te azalaki na kati ya apartema.",
+      "before_transcript": " Motomoko te azalaki na kati ya apartema.",
+      "after_transcript": " Motomoko te azala kinakati apartema."
+    },
+    {
+      "case": "ar-EG-short--Aoede--lingua-video",
+      "variant": "prefix10",
+      "language": "ar-EG",
+      "before": 0.043478260869565216,
+      "after": 0.043478260869565216,
+      "expected": "معايا ابويا وامي ومرتي كمان",
+      "before_transcript": " معايا أبوي وأمي ومرتي كمان",
+      "after_transcript": " معايا أبوي وأمي ومرتي كمان"
+    },
+    {
+      "case": "ht-short--Aoede--lingua-video",
+      "variant": "prefix17",
+      "language": "ht",
+      "before": 0.20833333333333334,
+      "after": 0.16666666666666666,
+      "expected": "Pa gen moun anndan apatman an.",
+      "before_transcript": " Pagin mon on den apatman an.",
+      "after_transcript": " Pagin moon andan apatmanen."
+    },
+    {
+      "case": "ar-TN-short--Aoede--lingua-video",
+      "variant": "prefix10",
+      "language": "ar-TN",
+      "before": 0.09523809523809523,
+      "after": 0.047619047619047616,
+      "expected": "ماكان فمّا حدّ في بالبرتمان.",
+      "before_transcript": " ما كان فمّا حدّ في بلبرتة مان",
+      "after_transcript": " ما كان فم محدفي بالبرتمان"
+    },
+    {
+      "case": "ar-TN-short--Aoede--lingua-video",
+      "variant": "prefix17",
+      "language": "ar-TN",
+      "before": 0.09523809523809523,
+      "after": 0.09523809523809523,
+      "expected": "ماكان فمّا حدّ في بالبرتمان.",
+      "before_transcript": " ما كان فمّا حدّ في بلبرتة مان",
+      "after_transcript": " مكان فما حد في بلبرتمان"
+    },
+    {
+      "case": "af-short--Aoede--lingua-video",
+      "variant": "prefix10",
+      "language": "af",
+      "before": 0.1724137931034483,
+      "after": 0.13793103448275862,
+      "expected": "Niemand was binne die woonstel nie.",
+      "before_transcript": " Niemend was binnen die Wundstelnie.",
+      "after_transcript": " Niemand was binnen die windstel nie."
+    },
+    {
+      "case": "et-short--Aoede--lingua-video",
+      "variant": "prefix10",
+      "language": "et",
+      "before": 0.0,
+      "after": 0.0,
+      "expected": "Korteris polnud kedagi.",
+      "before_transcript": " Korteris polnud kedagi.",
+      "after_transcript": " Korteris polnud kedagi."
+    },
+    {
+      "case": "et-short--Aoede--lingua-video",
+      "variant": "prefix17",
+      "language": "et",
+      "before": 0.0,
+      "after": 0.0,
+      "expected": "Korteris polnud kedagi.",
+      "before_transcript": " Korteris polnud kedagi.",
+      "after_transcript": " Korteris polnud kedagi."
+    },
+    {
+      "case": "sl-short--Aoede--lingua-video",
+      "variant": "prefix17",
+      "language": "sl",
+      "before": 0.0,
+      "after": 0.041666666666666664,
+      "expected": "V stanovanju ni bilo nikogar.",
+      "before_transcript": " V stanovanju ni bilo nikogar.",
+      "after_transcript": " V sanovanju ni bilo nikogar."
+    },
+    {
+      "case": "sq-short--Aoede--lingua-video",
+      "variant": "prefix10",
+      "language": "sq",
+      "before": 0.15384615384615385,
+      "after": 0.07692307692307693,
+      "expected": "Në apartament nuk kishte njeri.",
+      "before_transcript": " Në appartament nukis të njeri.",
+      "after_transcript": " Në partament nuk kishtë njeri."
+    },
+    {
+      "case": "ka-short--Aoede--lingua-video",
+      "variant": "prefix17",
+      "language": "ka",
+      "before": 4.666666666666667,
+      "after": 4.933333333333334,
+      "expected": "არავინ იყო ბინაში.",
+      "before_transcript": " ეეეეიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიიი�",
+      "after_transcript": " ეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეეე�"
+    },
+    {
+      "case": "hy-short--Aoede--lingua-video",
+      "variant": "prefix17",
+      "language": "hy",
+      "before": 0.4166666666666667,
+      "after": 4.291666666666667,
+      "expected": "Բնակարանի ներսում ոչ ոք չկար:",
+      "before_transcript": " փ�նակարանի նում նպտշպտ չկար.",
+      "after_transcript": " Բնա կարանիներ ուղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղղ�"
+    },
+    {
+      "case": "haw-short--Aoede--lingua-video",
+      "variant": "prefix10",
+      "language": "haw",
+      "before": 0.4,
+      "after": 0.4,
+      "expected": "I ka ʻāina ʻē?",
+      "before_transcript": " Ika Aina e.",
+      "after_transcript": " Ika Aina e."
+    },
+    {
+      "case": "haw-short--Aoede--lingua-video",
+      "variant": "prefix17",
+      "language": "haw",
+      "before": 0.4,
+      "after": 0.5,
+      "expected": "I ka ʻāina ʻē?",
+      "before_transcript": " Ika Aina e.",
+      "after_transcript": " Aika Aina E."
+    }
+  ]
+}

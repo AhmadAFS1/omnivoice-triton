@@ -1,0 +1,4282 @@
+[
+  {
+    "language": "af",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 1,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 26,
+    "unique_ASR_audio_script_evidence": 24,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 754,
+        "character_edits": 197,
+        "reference_words": 156,
+        "word_edits": 110
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 754,
+        "character_edits": 233,
+        "reference_words": 156,
+        "word_edits": 119
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "am",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 2,
+    "either_judge_character_mismatch": 24,
+    "LLM_normalized_exact": 14,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 26,
+    "unique_ASR_audio_script_evidence": 26,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 494,
+        "character_edits": 48,
+        "reference_words": 104,
+        "word_edits": 22
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 494,
+        "character_edits": 233,
+        "reference_words": 104,
+        "word_edits": 85
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "ar",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 10,
+    "both_character_exact_CER0": 10,
+    "either_judge_character_mismatch": 16,
+    "LLM_normalized_exact": 11,
+    "CTC_normalized_exact": 10,
+    "judge_transcripts_disagree": 8,
+    "unique_ASR_audio_script_evidence": 26,
+    "native_reference": 24,
+    "EN_fallback_reference": 0,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_mismatch_review": 9,
+      "control_ASR_screen_matches": 15,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "control_ASR_mismatch_review": 9,
+      "control_ASR_screen_matches": 15,
+      "control_ASR_partial_or_mismatch_review": 2
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 520,
+        "character_edits": 61,
+        "reference_words": 130,
+        "word_edits": 29
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 520,
+        "character_edits": 66,
+        "reference_words": 130,
+        "word_edits": 28
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "ar-AE",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 1,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 26,
+    "unique_ASR_audio_script_evidence": 20,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 312,
+        "character_edits": 106,
+        "reference_words": 78,
+        "word_edits": 59
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 312,
+        "character_edits": 158,
+        "reference_words": 78,
+        "word_edits": 73
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "ar-DZ",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 12,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 26,
+    "unique_ASR_audio_script_evidence": 21,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 442,
+        "character_edits": 30,
+        "reference_words": 130,
+        "word_edits": 29
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 442,
+        "character_edits": 167,
+        "reference_words": 130,
+        "word_edits": 104
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "ar-EG",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 5,
+    "both_character_exact_CER0": 11,
+    "either_judge_character_mismatch": 15,
+    "LLM_normalized_exact": 6,
+    "CTC_normalized_exact": 16,
+    "judge_transcripts_disagree": 21,
+    "unique_ASR_audio_script_evidence": 25,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 598,
+        "character_edits": 14,
+        "reference_words": 130,
+        "word_edits": 52
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 598,
+        "character_edits": 42,
+        "reference_words": 130,
+        "word_edits": 22
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "ar-IQ",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 7,
+    "both_character_exact_CER0": 7,
+    "either_judge_character_mismatch": 19,
+    "LLM_normalized_exact": 24,
+    "CTC_normalized_exact": 7,
+    "judge_transcripts_disagree": 18,
+    "unique_ASR_audio_script_evidence": 24,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 520,
+        "character_edits": 4,
+        "reference_words": 156,
+        "word_edits": 2
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 520,
+        "character_edits": 68,
+        "reference_words": 156,
+        "word_edits": 46
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "ar-SA",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 12,
+    "both_character_exact_CER0": 12,
+    "either_judge_character_mismatch": 14,
+    "LLM_normalized_exact": 14,
+    "CTC_normalized_exact": 20,
+    "judge_transcripts_disagree": 13,
+    "unique_ASR_audio_script_evidence": 21,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 312,
+        "character_edits": 24,
+        "reference_words": 78,
+        "word_edits": 12
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 312,
+        "character_edits": 18,
+        "reference_words": 78,
+        "word_edits": 8
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "ar-SD",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 14,
+    "both_character_exact_CER0": 14,
+    "either_judge_character_mismatch": 12,
+    "LLM_normalized_exact": 17,
+    "CTC_normalized_exact": 14,
+    "judge_transcripts_disagree": 10,
+    "unique_ASR_audio_script_evidence": 24,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 312,
+        "character_edits": 35,
+        "reference_words": 52,
+        "word_edits": 18
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 312,
+        "character_edits": 79,
+        "reference_words": 52,
+        "word_edits": 23
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "ar-SY",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 1,
+    "both_character_exact_CER0": 1,
+    "either_judge_character_mismatch": 25,
+    "LLM_normalized_exact": 18,
+    "CTC_normalized_exact": 1,
+    "judge_transcripts_disagree": 24,
+    "unique_ASR_audio_script_evidence": 24,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 494,
+        "character_edits": 11,
+        "reference_words": 156,
+        "word_edits": 10
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 494,
+        "character_edits": 32,
+        "reference_words": 156,
+        "word_edits": 26
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "ar-TN",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 1,
+    "either_judge_character_mismatch": 25,
+    "LLM_normalized_exact": 0,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 26,
+    "unique_ASR_audio_script_evidence": 22,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 546,
+        "character_edits": 94,
+        "reference_words": 130,
+        "word_edits": 125
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 546,
+        "character_edits": 561,
+        "reference_words": 130,
+        "word_edits": 157
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "as",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 1,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 26,
+    "unique_ASR_audio_script_evidence": 24,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 806,
+        "character_edits": 107,
+        "reference_words": 156,
+        "word_edits": 74
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 806,
+        "character_edits": 525,
+        "reference_words": 156,
+        "word_edits": 138
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "ayp",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 1,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 26,
+    "unique_ASR_audio_script_evidence": 20,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 416,
+        "character_edits": 156,
+        "reference_words": 104,
+        "word_edits": 50
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 416,
+        "character_edits": 253,
+        "reference_words": 104,
+        "word_edits": 94
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "be",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 2,
+    "both_character_exact_CER0": 2,
+    "either_judge_character_mismatch": 24,
+    "LLM_normalized_exact": 14,
+    "CTC_normalized_exact": 2,
+    "judge_transcripts_disagree": 24,
+    "unique_ASR_audio_script_evidence": 22,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 520,
+        "character_edits": 22,
+        "reference_words": 130,
+        "word_edits": 25
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 520,
+        "character_edits": 330,
+        "reference_words": 130,
+        "word_edits": 96
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "bho",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 2,
+    "both_character_exact_CER0": 2,
+    "either_judge_character_mismatch": 24,
+    "LLM_normalized_exact": 7,
+    "CTC_normalized_exact": 2,
+    "judge_transcripts_disagree": 21,
+    "unique_ASR_audio_script_evidence": 23,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 598,
+        "character_edits": 45,
+        "reference_words": 156,
+        "word_edits": 32
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 598,
+        "character_edits": 205,
+        "reference_words": 156,
+        "word_edits": 83
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "bjj",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 1,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 26,
+    "unique_ASR_audio_script_evidence": 24,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 286,
+        "character_edits": 69,
+        "reference_words": 104,
+        "word_edits": 51
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 286,
+        "character_edits": 300,
+        "reference_words": 104,
+        "word_edits": 104
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "bn",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 1,
+    "both_character_exact_CER0": 1,
+    "either_judge_character_mismatch": 25,
+    "LLM_normalized_exact": 2,
+    "CTC_normalized_exact": 1,
+    "judge_transcripts_disagree": 25,
+    "unique_ASR_audio_script_evidence": 24,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 754,
+        "character_edits": 199,
+        "reference_words": 130,
+        "word_edits": 94
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 754,
+        "character_edits": 648,
+        "reference_words": 130,
+        "word_edits": 117
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "bs",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 6,
+    "both_character_exact_CER0": 7,
+    "either_judge_character_mismatch": 19,
+    "LLM_normalized_exact": 12,
+    "CTC_normalized_exact": 6,
+    "judge_transcripts_disagree": 20,
+    "unique_ASR_audio_script_evidence": 22,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 520,
+        "character_edits": 51,
+        "reference_words": 130,
+        "word_edits": 48
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 520,
+        "character_edits": 67,
+        "reference_words": 130,
+        "word_edits": 72
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "ceb",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 1,
+    "both_character_exact_CER0": 1,
+    "either_judge_character_mismatch": 25,
+    "LLM_normalized_exact": 3,
+    "CTC_normalized_exact": 1,
+    "judge_transcripts_disagree": 25,
+    "unique_ASR_audio_script_evidence": 23,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 702,
+        "character_edits": 51,
+        "reference_words": 156,
+        "word_edits": 40
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 702,
+        "character_edits": 142,
+        "reference_words": 156,
+        "word_edits": 126
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "cs",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 5,
+    "both_character_exact_CER0": 5,
+    "either_judge_character_mismatch": 21,
+    "LLM_normalized_exact": 16,
+    "CTC_normalized_exact": 6,
+    "judge_transcripts_disagree": 18,
+    "unique_ASR_audio_script_evidence": 23,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 572,
+        "character_edits": 15,
+        "reference_words": 130,
+        "word_edits": 14
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 572,
+        "character_edits": 29,
+        "reference_words": 130,
+        "word_edits": 25
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "da",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 20,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 22,
+    "unique_ASR_audio_script_evidence": 23,
+    "native_reference": 24,
+    "EN_fallback_reference": 0,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_mismatch_review": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "control_ASR_mismatch_review": 24,
+      "control_ASR_partial_or_mismatch_review": 2
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 806,
+        "character_edits": 6,
+        "reference_words": 182,
+        "word_edits": 6
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 806,
+        "character_edits": 40,
+        "reference_words": 182,
+        "word_edits": 26
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "dag",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 0,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 26,
+    "unique_ASR_audio_script_evidence": 26,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 1144,
+        "character_edits": 233,
+        "reference_words": 208,
+        "word_edits": 205
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 1144,
+        "character_edits": 369,
+        "reference_words": 208,
+        "word_edits": 199
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "dcc",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 1,
+    "both_character_exact_CER0": 1,
+    "either_judge_character_mismatch": 25,
+    "LLM_normalized_exact": 21,
+    "CTC_normalized_exact": 1,
+    "judge_transcripts_disagree": 25,
+    "unique_ASR_audio_script_evidence": 23,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 260,
+        "character_edits": 14,
+        "reference_words": 78,
+        "word_edits": 11
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 260,
+        "character_edits": 250,
+        "reference_words": 78,
+        "word_edits": 75
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "de",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 26,
+    "both_character_exact_CER0": 26,
+    "either_judge_character_mismatch": 0,
+    "LLM_normalized_exact": 26,
+    "CTC_normalized_exact": 26,
+    "judge_transcripts_disagree": 0,
+    "unique_ASR_audio_script_evidence": 23,
+    "native_reference": 24,
+    "EN_fallback_reference": 0,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 21,
+      "control_ASR_mismatch_review": 3,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "control_ASR_screen_matches": 21,
+      "control_ASR_mismatch_review": 3,
+      "control_ASR_partial_or_mismatch_review": 2
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 806,
+        "character_edits": 0,
+        "reference_words": 182,
+        "word_edits": 0
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 806,
+        "character_edits": 0,
+        "reference_words": 182,
+        "word_edits": 0
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "dyu",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 0,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 26,
+    "unique_ASR_audio_script_evidence": 24,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 546,
+        "character_edits": 383,
+        "reference_words": 130,
+        "word_edits": 176
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 546,
+        "character_edits": 246,
+        "reference_words": 130,
+        "word_edits": 130
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "el",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 20,
+    "both_character_exact_CER0": 20,
+    "either_judge_character_mismatch": 6,
+    "LLM_normalized_exact": 23,
+    "CTC_normalized_exact": 20,
+    "judge_transcripts_disagree": 6,
+    "unique_ASR_audio_script_evidence": 24,
+    "native_reference": 24,
+    "EN_fallback_reference": 0,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_mismatch_review": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "control_ASR_mismatch_review": 24,
+      "control_ASR_partial_or_mismatch_review": 2
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 936,
+        "character_edits": 3,
+        "reference_words": 156,
+        "word_edits": 3
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 936,
+        "character_edits": 8,
+        "reference_words": 156,
+        "word_edits": 8
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "en",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 26,
+    "both_character_exact_CER0": 26,
+    "either_judge_character_mismatch": 0,
+    "LLM_normalized_exact": 26,
+    "CTC_normalized_exact": 26,
+    "judge_transcripts_disagree": 0,
+    "unique_ASR_audio_script_evidence": 26,
+    "native_reference": 24,
+    "EN_fallback_reference": 0,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "control_ASR_screen_matches": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 676,
+        "character_edits": 0,
+        "reference_words": 156,
+        "word_edits": 0
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 676,
+        "character_edits": 0,
+        "reference_words": 156,
+        "word_edits": 0
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "es",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 25,
+    "both_character_exact_CER0": 25,
+    "either_judge_character_mismatch": 1,
+    "LLM_normalized_exact": 25,
+    "CTC_normalized_exact": 26,
+    "judge_transcripts_disagree": 1,
+    "unique_ASR_audio_script_evidence": 26,
+    "native_reference": 24,
+    "EN_fallback_reference": 0,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 18,
+      "control_ASR_mismatch_review": 6,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "control_ASR_screen_matches": 18,
+      "control_ASR_mismatch_review": 6,
+      "control_ASR_partial_or_mismatch_review": 2
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 832,
+        "character_edits": 1,
+        "reference_words": 156,
+        "word_edits": 1
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 832,
+        "character_edits": 0,
+        "reference_words": 156,
+        "word_edits": 0
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "et",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 3,
+    "both_character_exact_CER0": 3,
+    "either_judge_character_mismatch": 23,
+    "LLM_normalized_exact": 4,
+    "CTC_normalized_exact": 3,
+    "judge_transcripts_disagree": 23,
+    "unique_ASR_audio_script_evidence": 19,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 520,
+        "character_edits": 59,
+        "reference_words": 78,
+        "word_edits": 47
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 520,
+        "character_edits": 90,
+        "reference_words": 78,
+        "word_edits": 58
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "fi",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 25,
+    "invalid_audio": 1,
+    "both_judges_present": 25,
+    "both_normalized_exact": 18,
+    "both_character_exact_CER0": 18,
+    "either_judge_character_mismatch": 7,
+    "LLM_normalized_exact": 18,
+    "CTC_normalized_exact": 18,
+    "judge_transcripts_disagree": 2,
+    "unique_ASR_audio_script_evidence": 21,
+    "native_reference": 24,
+    "EN_fallback_reference": 0,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_mismatch_review": 21,
+      "control_ASR_screen_matches": 3,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "control_ASR_mismatch_review": 21,
+      "control_ASR_screen_matches": 3,
+      "control_ASR_partial_or_mismatch_review": 2
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 675,
+        "character_edits": 28,
+        "reference_words": 125,
+        "word_edits": 11
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 675,
+        "character_edits": 30,
+        "reference_words": 125,
+        "word_edits": 13
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "fil",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 2,
+    "both_character_exact_CER0": 2,
+    "either_judge_character_mismatch": 24,
+    "LLM_normalized_exact": 5,
+    "CTC_normalized_exact": 2,
+    "judge_transcripts_disagree": 24,
+    "unique_ASR_audio_script_evidence": 26,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 1118,
+        "character_edits": 137,
+        "reference_words": 208,
+        "word_edits": 64
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 1118,
+        "character_edits": 84,
+        "reference_words": 208,
+        "word_edits": 78
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "fr",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 21,
+    "both_character_exact_CER0": 21,
+    "either_judge_character_mismatch": 5,
+    "LLM_normalized_exact": 21,
+    "CTC_normalized_exact": 21,
+    "judge_transcripts_disagree": 3,
+    "unique_ASR_audio_script_evidence": 20,
+    "native_reference": 18,
+    "EN_fallback_reference": 6,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "control_ASR_screen_matches": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 1014,
+        "character_edits": 15,
+        "reference_words": 234,
+        "word_edits": 8
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 1014,
+        "character_edits": 15,
+        "reference_words": 234,
+        "word_edits": 7
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "gu",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 0,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 5,
+    "unique_ASR_audio_script_evidence": 23,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 650,
+        "character_edits": 33,
+        "reference_words": 130,
+        "word_edits": 27
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 650,
+        "character_edits": 34,
+        "reference_words": 130,
+        "word_edits": 30
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "ha",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 3,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 21,
+    "unique_ASR_audio_script_evidence": 25,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 728,
+        "character_edits": 70,
+        "reference_words": 156,
+        "word_edits": 42
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 728,
+        "character_edits": 95,
+        "reference_words": 156,
+        "word_edits": 55
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "haw",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 19,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 26,
+    "unique_ASR_audio_script_evidence": 23,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 260,
+        "character_edits": 19,
+        "reference_words": 104,
+        "word_edits": 18
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 260,
+        "character_edits": 110,
+        "reference_words": 104,
+        "word_edits": 85
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "he",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 5,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 25,
+    "unique_ASR_audio_script_evidence": 25,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 442,
+        "character_edits": 54,
+        "reference_words": 130,
+        "word_edits": 44
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 442,
+        "character_edits": 435,
+        "reference_words": 130,
+        "word_edits": 122
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "hi",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 2,
+    "both_character_exact_CER0": 2,
+    "either_judge_character_mismatch": 24,
+    "LLM_normalized_exact": 15,
+    "CTC_normalized_exact": 2,
+    "judge_transcripts_disagree": 23,
+    "unique_ASR_audio_script_evidence": 26,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 624,
+        "character_edits": 26,
+        "reference_words": 208,
+        "word_edits": 20
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 624,
+        "character_edits": 595,
+        "reference_words": 208,
+        "word_edits": 179
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "hr",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 3,
+    "both_character_exact_CER0": 5,
+    "either_judge_character_mismatch": 21,
+    "LLM_normalized_exact": 10,
+    "CTC_normalized_exact": 5,
+    "judge_transcripts_disagree": 21,
+    "unique_ASR_audio_script_evidence": 23,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 520,
+        "character_edits": 33,
+        "reference_words": 130,
+        "word_edits": 42
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 520,
+        "character_edits": 73,
+        "reference_words": 130,
+        "word_edits": 64
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "ht",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 0,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 26,
+    "unique_ASR_audio_script_evidence": 24,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 624,
+        "character_edits": 178,
+        "reference_words": 156,
+        "word_edits": 126
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 624,
+        "character_edits": 168,
+        "reference_words": 156,
+        "word_edits": 154
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "hu",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 2,
+    "both_character_exact_CER0": 2,
+    "either_judge_character_mismatch": 24,
+    "LLM_normalized_exact": 2,
+    "CTC_normalized_exact": 3,
+    "judge_transcripts_disagree": 24,
+    "unique_ASR_audio_script_evidence": 19,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 546,
+        "character_edits": 96,
+        "reference_words": 130,
+        "word_edits": 59
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 546,
+        "character_edits": 75,
+        "reference_words": 130,
+        "word_edits": 96
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "hy",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 8,
+    "both_character_exact_CER0": 10,
+    "either_judge_character_mismatch": 16,
+    "LLM_normalized_exact": 12,
+    "CTC_normalized_exact": 10,
+    "judge_transcripts_disagree": 16,
+    "unique_ASR_audio_script_evidence": 23,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 624,
+        "character_edits": 81,
+        "reference_words": 130,
+        "word_edits": 36
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 624,
+        "character_edits": 284,
+        "reference_words": 130,
+        "word_edits": 65
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "id",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 3,
+    "both_character_exact_CER0": 3,
+    "either_judge_character_mismatch": 23,
+    "LLM_normalized_exact": 23,
+    "CTC_normalized_exact": 3,
+    "judge_transcripts_disagree": 23,
+    "unique_ASR_audio_script_evidence": 24,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 754,
+        "character_edits": 9,
+        "reference_words": 156,
+        "word_edits": 8
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 754,
+        "character_edits": 46,
+        "reference_words": 156,
+        "word_edits": 97
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "ig",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 0,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 26,
+    "unique_ASR_audio_script_evidence": 25,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 624,
+        "character_edits": 187,
+        "reference_words": 156,
+        "word_edits": 134
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 624,
+        "character_edits": 206,
+        "reference_words": 156,
+        "word_edits": 163
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "it",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 4,
+    "both_character_exact_CER0": 4,
+    "either_judge_character_mismatch": 22,
+    "LLM_normalized_exact": 10,
+    "CTC_normalized_exact": 4,
+    "judge_transcripts_disagree": 22,
+    "unique_ASR_audio_script_evidence": 22,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 546,
+        "character_edits": 108,
+        "reference_words": 104,
+        "word_edits": 50
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 546,
+        "character_edits": 115,
+        "reference_words": 104,
+        "word_edits": 85
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "ja",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 0,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 17,
+    "unique_ASR_audio_script_evidence": 23,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 390,
+        "character_edits": 171,
+        "reference_words": 26,
+        "word_edits": 109
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 390,
+        "character_edits": 259,
+        "reference_words": 26,
+        "word_edits": 79
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "jv",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 5,
+    "both_character_exact_CER0": 5,
+    "either_judge_character_mismatch": 21,
+    "LLM_normalized_exact": 15,
+    "CTC_normalized_exact": 5,
+    "judge_transcripts_disagree": 21,
+    "unique_ASR_audio_script_evidence": 23,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 754,
+        "character_edits": 98,
+        "reference_words": 182,
+        "word_edits": 43
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 754,
+        "character_edits": 79,
+        "reference_words": 182,
+        "word_edits": 70
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "ka",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 9,
+    "both_character_exact_CER0": 9,
+    "either_judge_character_mismatch": 17,
+    "LLM_normalized_exact": 17,
+    "CTC_normalized_exact": 9,
+    "judge_transcripts_disagree": 17,
+    "unique_ASR_audio_script_evidence": 22,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 390,
+        "character_edits": 11,
+        "reference_words": 78,
+        "word_edits": 15
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 390,
+        "character_edits": 152,
+        "reference_words": 78,
+        "word_edits": 45
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "kk",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 12,
+    "both_character_exact_CER0": 12,
+    "either_judge_character_mismatch": 14,
+    "LLM_normalized_exact": 20,
+    "CTC_normalized_exact": 14,
+    "judge_transcripts_disagree": 14,
+    "unique_ASR_audio_script_evidence": 20,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 728,
+        "character_edits": 13,
+        "reference_words": 130,
+        "word_edits": 7
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 728,
+        "character_edits": 177,
+        "reference_words": 130,
+        "word_edits": 48
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "km",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 0,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 26,
+    "unique_ASR_audio_script_evidence": 25,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 1066,
+        "character_edits": 292,
+        "reference_words": 26,
+        "word_edits": 29
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 1066,
+        "character_edits": 938,
+        "reference_words": 26,
+        "word_edits": 192
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "kn",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 0,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 10,
+    "unique_ASR_audio_script_evidence": 24,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 806,
+        "character_edits": 80,
+        "reference_words": 104,
+        "word_edits": 41
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 806,
+        "character_edits": 250,
+        "reference_words": 104,
+        "word_edits": 70
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "ko",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 8,
+    "both_character_exact_CER0": 14,
+    "either_judge_character_mismatch": 12,
+    "LLM_normalized_exact": 23,
+    "CTC_normalized_exact": 8,
+    "judge_transcripts_disagree": 18,
+    "unique_ASR_audio_script_evidence": 24,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 286,
+        "character_edits": 7,
+        "reference_words": 104,
+        "word_edits": 7
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 286,
+        "character_edits": 208,
+        "reference_words": 104,
+        "word_edits": 65
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "ln",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 6,
+    "either_judge_character_mismatch": 20,
+    "LLM_normalized_exact": 10,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 26,
+    "unique_ASR_audio_script_evidence": 23,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 858,
+        "character_edits": 96,
+        "reference_words": 208,
+        "word_edits": 40
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 858,
+        "character_edits": 118,
+        "reference_words": 208,
+        "word_edits": 107
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "lo",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 0,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 23,
+    "unique_ASR_audio_script_evidence": 23,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 936,
+        "character_edits": 141,
+        "reference_words": 26,
+        "word_edits": 129
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 936,
+        "character_edits": 532,
+        "reference_words": 26,
+        "word_edits": 71
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "lt",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 0,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 26,
+    "unique_ASR_audio_script_evidence": 22,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 546,
+        "character_edits": 78,
+        "reference_words": 104,
+        "word_edits": 32
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 546,
+        "character_edits": 107,
+        "reference_words": 104,
+        "word_edits": 51
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "mai",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 0,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 26,
+    "unique_ASR_audio_script_evidence": 24,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 624,
+        "character_edits": 184,
+        "reference_words": 130,
+        "word_edits": 95
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 624,
+        "character_edits": 554,
+        "reference_words": 130,
+        "word_edits": 133
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "mi",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 4,
+    "both_character_exact_CER0": 4,
+    "either_judge_character_mismatch": 22,
+    "LLM_normalized_exact": 9,
+    "CTC_normalized_exact": 8,
+    "judge_transcripts_disagree": 22,
+    "unique_ASR_audio_script_evidence": 22,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 832,
+        "character_edits": 73,
+        "reference_words": 260,
+        "word_edits": 36
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 832,
+        "character_edits": 95,
+        "reference_words": 260,
+        "word_edits": 61
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "mk",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 4,
+    "both_character_exact_CER0": 5,
+    "either_judge_character_mismatch": 21,
+    "LLM_normalized_exact": 17,
+    "CTC_normalized_exact": 4,
+    "judge_transcripts_disagree": 22,
+    "unique_ASR_audio_script_evidence": 22,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 598,
+        "character_edits": 16,
+        "reference_words": 104,
+        "word_edits": 26
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 598,
+        "character_edits": 338,
+        "reference_words": 104,
+        "word_edits": 83
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "ml",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 13,
+    "both_character_exact_CER0": 13,
+    "either_judge_character_mismatch": 13,
+    "LLM_normalized_exact": 17,
+    "CTC_normalized_exact": 16,
+    "judge_transcripts_disagree": 12,
+    "unique_ASR_audio_script_evidence": 25,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 1118,
+        "character_edits": 19,
+        "reference_words": 78,
+        "word_edits": 19
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 1118,
+        "character_edits": 18,
+        "reference_words": 78,
+        "word_edits": 19
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "mn",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 3,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 26,
+    "unique_ASR_audio_script_evidence": 22,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 676,
+        "character_edits": 106,
+        "reference_words": 156,
+        "word_edits": 68
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 676,
+        "character_edits": 642,
+        "reference_words": 156,
+        "word_edits": 154
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "mr",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 11,
+    "either_judge_character_mismatch": 15,
+    "LLM_normalized_exact": 3,
+    "CTC_normalized_exact": 2,
+    "judge_transcripts_disagree": 20,
+    "unique_ASR_audio_script_evidence": 22,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 650,
+        "character_edits": 41,
+        "reference_words": 104,
+        "word_edits": 51
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 650,
+        "character_edits": 166,
+        "reference_words": 104,
+        "word_edits": 70
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "ms",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 2,
+    "both_character_exact_CER0": 2,
+    "either_judge_character_mismatch": 24,
+    "LLM_normalized_exact": 11,
+    "CTC_normalized_exact": 2,
+    "judge_transcripts_disagree": 24,
+    "unique_ASR_audio_script_evidence": 22,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 1066,
+        "character_edits": 43,
+        "reference_words": 182,
+        "word_edits": 38
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 1066,
+        "character_edits": 119,
+        "reference_words": 182,
+        "word_edits": 107
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "my",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 2,
+    "either_judge_character_mismatch": 24,
+    "LLM_normalized_exact": 0,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 24,
+    "unique_ASR_audio_script_evidence": 23,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 936,
+        "character_edits": 174,
+        "reference_words": 104,
+        "word_edits": 73
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 936,
+        "character_edits": 426,
+        "reference_words": 104,
+        "word_edits": 91
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "nan",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 0,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 26,
+    "unique_ASR_audio_script_evidence": 21,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 1118,
+        "character_edits": 438,
+        "reference_words": 338,
+        "word_edits": 234
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 1118,
+        "character_edits": 557,
+        "reference_words": 338,
+        "word_edits": 335
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "ne",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 1,
+    "either_judge_character_mismatch": 25,
+    "LLM_normalized_exact": 18,
+    "CTC_normalized_exact": 1,
+    "judge_transcripts_disagree": 26,
+    "unique_ASR_audio_script_evidence": 20,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 546,
+        "character_edits": 23,
+        "reference_words": 78,
+        "word_edits": 22
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 546,
+        "character_edits": 233,
+        "reference_words": 78,
+        "word_edits": 83
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "nl",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 2,
+    "both_character_exact_CER0": 2,
+    "either_judge_character_mismatch": 24,
+    "LLM_normalized_exact": 2,
+    "CTC_normalized_exact": 4,
+    "judge_transcripts_disagree": 24,
+    "unique_ASR_audio_script_evidence": 23,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 728,
+        "character_edits": 71,
+        "reference_words": 156,
+        "word_edits": 53
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 728,
+        "character_edits": 179,
+        "reference_words": 156,
+        "word_edits": 85
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "no",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 8,
+    "both_character_exact_CER0": 8,
+    "either_judge_character_mismatch": 18,
+    "LLM_normalized_exact": 13,
+    "CTC_normalized_exact": 8,
+    "judge_transcripts_disagree": 16,
+    "unique_ASR_audio_script_evidence": 24,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 598,
+        "character_edits": 42,
+        "reference_words": 130,
+        "word_edits": 32
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 598,
+        "character_edits": 64,
+        "reference_words": 130,
+        "word_edits": 53
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "nso",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 0,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 25,
+    "unique_ASR_audio_script_evidence": 24,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 728,
+        "character_edits": 240,
+        "reference_words": 260,
+        "word_edits": 145
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 728,
+        "character_edits": 230,
+        "reference_words": 260,
+        "word_edits": 208
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "ny",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 3,
+    "either_judge_character_mismatch": 23,
+    "LLM_normalized_exact": 4,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 26,
+    "unique_ASR_audio_script_evidence": 23,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 650,
+        "character_edits": 38,
+        "reference_words": 104,
+        "word_edits": 58
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 650,
+        "character_edits": 104,
+        "reference_words": 104,
+        "word_edits": 94
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "pa",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 8,
+    "both_character_exact_CER0": 8,
+    "either_judge_character_mismatch": 18,
+    "LLM_normalized_exact": 13,
+    "CTC_normalized_exact": 8,
+    "judge_transcripts_disagree": 18,
+    "unique_ASR_audio_script_evidence": 26,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 676,
+        "character_edits": 46,
+        "reference_words": 182,
+        "word_edits": 36
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 676,
+        "character_edits": 446,
+        "reference_words": 182,
+        "word_edits": 119
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "pcm",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 1,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 25,
+    "unique_ASR_audio_script_evidence": 23,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 806,
+        "character_edits": 118,
+        "reference_words": 208,
+        "word_edits": 45
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 806,
+        "character_edits": 168,
+        "reference_words": 208,
+        "word_edits": 101
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "pl",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 26,
+    "both_character_exact_CER0": 26,
+    "either_judge_character_mismatch": 0,
+    "LLM_normalized_exact": 26,
+    "CTC_normalized_exact": 26,
+    "judge_transcripts_disagree": 0,
+    "unique_ASR_audio_script_evidence": 22,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 624,
+        "character_edits": 0,
+        "reference_words": 130,
+        "word_edits": 0
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 624,
+        "character_edits": 0,
+        "reference_words": 130,
+        "word_edits": 0
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "pt",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 16,
+    "both_character_exact_CER0": 16,
+    "either_judge_character_mismatch": 10,
+    "LLM_normalized_exact": 23,
+    "CTC_normalized_exact": 17,
+    "judge_transcripts_disagree": 10,
+    "unique_ASR_audio_script_evidence": 23,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 832,
+        "character_edits": 7,
+        "reference_words": 130,
+        "word_edits": 3
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 832,
+        "character_edits": 48,
+        "reference_words": 130,
+        "word_edits": 34
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "ro",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 2,
+    "both_character_exact_CER0": 2,
+    "either_judge_character_mismatch": 24,
+    "LLM_normalized_exact": 16,
+    "CTC_normalized_exact": 2,
+    "judge_transcripts_disagree": 24,
+    "unique_ASR_audio_script_evidence": 22,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 676,
+        "character_edits": 15,
+        "reference_words": 156,
+        "word_edits": 19
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 676,
+        "character_edits": 45,
+        "reference_words": 156,
+        "word_edits": 83
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "ru",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 22,
+    "both_character_exact_CER0": 22,
+    "either_judge_character_mismatch": 4,
+    "LLM_normalized_exact": 25,
+    "CTC_normalized_exact": 22,
+    "judge_transcripts_disagree": 4,
+    "unique_ASR_audio_script_evidence": 23,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 546,
+        "character_edits": 4,
+        "reference_words": 130,
+        "word_edits": 3
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 546,
+        "character_edits": 25,
+        "reference_words": 130,
+        "word_edits": 18
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "rw",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 5,
+    "both_character_exact_CER0": 18,
+    "either_judge_character_mismatch": 8,
+    "LLM_normalized_exact": 19,
+    "CTC_normalized_exact": 5,
+    "judge_transcripts_disagree": 19,
+    "unique_ASR_audio_script_evidence": 24,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 884,
+        "character_edits": 15,
+        "reference_words": 234,
+        "word_edits": 11
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 884,
+        "character_edits": 16,
+        "reference_words": 234,
+        "word_edits": 50
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "sd",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 0,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 26,
+    "unique_ASR_audio_script_evidence": 23,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 624,
+        "character_edits": 586,
+        "reference_words": 182,
+        "word_edits": 161
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 624,
+        "character_edits": 624,
+        "reference_words": 182,
+        "word_edits": 178
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "si",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 0,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 24,
+    "unique_ASR_audio_script_evidence": 23,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 780,
+        "character_edits": 179,
+        "reference_words": 182,
+        "word_edits": 128
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 780,
+        "character_edits": 774,
+        "reference_words": 182,
+        "word_edits": 169
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "sk",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 2,
+    "both_character_exact_CER0": 2,
+    "either_judge_character_mismatch": 24,
+    "LLM_normalized_exact": 2,
+    "CTC_normalized_exact": 2,
+    "judge_transcripts_disagree": 19,
+    "unique_ASR_audio_script_evidence": 21,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 598,
+        "character_edits": 50,
+        "reference_words": 156,
+        "word_edits": 32
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 598,
+        "character_edits": 55,
+        "reference_words": 156,
+        "word_edits": 51
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "skr",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 0,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 26,
+    "unique_ASR_audio_script_evidence": 23,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 676,
+        "character_edits": 125,
+        "reference_words": 182,
+        "word_edits": 105
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 676,
+        "character_edits": 601,
+        "reference_words": 182,
+        "word_edits": 169
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "sl",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 18,
+    "both_character_exact_CER0": 18,
+    "either_judge_character_mismatch": 8,
+    "LLM_normalized_exact": 23,
+    "CTC_normalized_exact": 18,
+    "judge_transcripts_disagree": 5,
+    "unique_ASR_audio_script_evidence": 22,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 624,
+        "character_edits": 3,
+        "reference_words": 130,
+        "word_edits": 3
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 624,
+        "character_edits": 12,
+        "reference_words": 130,
+        "word_edits": 15
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "sn",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 18,
+    "CTC_normalized_exact": 2,
+    "judge_transcripts_disagree": 24,
+    "unique_ASR_audio_script_evidence": 21,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 676,
+        "character_edits": 59,
+        "reference_words": 130,
+        "word_edits": 18
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 676,
+        "character_edits": 93,
+        "reference_words": 130,
+        "word_edits": 50
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "so",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 25,
+    "invalid_audio": 1,
+    "both_judges_present": 25,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 25,
+    "LLM_normalized_exact": 0,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 25,
+    "unique_ASR_audio_script_evidence": 22,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 575,
+        "character_edits": 147,
+        "reference_words": 100,
+        "word_edits": 83
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 575,
+        "character_edits": 261,
+        "reference_words": 100,
+        "word_edits": 92
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "sq",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 1,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 26,
+    "unique_ASR_audio_script_evidence": 24,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 676,
+        "character_edits": 66,
+        "reference_words": 130,
+        "word_edits": 43
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 676,
+        "character_edits": 162,
+        "reference_words": 130,
+        "word_edits": 115
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "sr",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 1,
+    "both_character_exact_CER0": 1,
+    "either_judge_character_mismatch": 25,
+    "LLM_normalized_exact": 12,
+    "CTC_normalized_exact": 1,
+    "judge_transcripts_disagree": 25,
+    "unique_ASR_audio_script_evidence": 22,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 702,
+        "character_edits": 58,
+        "reference_words": 156,
+        "word_edits": 65
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 702,
+        "character_edits": 646,
+        "reference_words": 156,
+        "word_edits": 146
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "sv",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 11,
+    "both_character_exact_CER0": 11,
+    "either_judge_character_mismatch": 15,
+    "LLM_normalized_exact": 14,
+    "CTC_normalized_exact": 12,
+    "judge_transcripts_disagree": 14,
+    "unique_ASR_audio_script_evidence": 22,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 494,
+        "character_edits": 28,
+        "reference_words": 104,
+        "word_edits": 31
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 494,
+        "character_edits": 56,
+        "reference_words": 104,
+        "word_edits": 46
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "sw",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 11,
+    "both_character_exact_CER0": 11,
+    "either_judge_character_mismatch": 15,
+    "LLM_normalized_exact": 20,
+    "CTC_normalized_exact": 14,
+    "judge_transcripts_disagree": 15,
+    "unique_ASR_audio_script_evidence": 23,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 754,
+        "character_edits": 7,
+        "reference_words": 156,
+        "word_edits": 22
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 754,
+        "character_edits": 26,
+        "reference_words": 156,
+        "word_edits": 44
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "ta",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 2,
+    "both_character_exact_CER0": 2,
+    "either_judge_character_mismatch": 24,
+    "LLM_normalized_exact": 2,
+    "CTC_normalized_exact": 2,
+    "judge_transcripts_disagree": 24,
+    "unique_ASR_audio_script_evidence": 22,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 702,
+        "character_edits": 139,
+        "reference_words": 78,
+        "word_edits": 51
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 702,
+        "character_edits": 648,
+        "reference_words": 78,
+        "word_edits": 109
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "te",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 0,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 22,
+    "unique_ASR_audio_script_evidence": 22,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 650,
+        "character_edits": 422,
+        "reference_words": 104,
+        "word_edits": 92
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 650,
+        "character_edits": 600,
+        "reference_words": 104,
+        "word_edits": 99
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "tg",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 6,
+    "both_character_exact_CER0": 6,
+    "either_judge_character_mismatch": 20,
+    "LLM_normalized_exact": 21,
+    "CTC_normalized_exact": 6,
+    "judge_transcripts_disagree": 19,
+    "unique_ASR_audio_script_evidence": 24,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 676,
+        "character_edits": 25,
+        "reference_words": 156,
+        "word_edits": 11
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 676,
+        "character_edits": 399,
+        "reference_words": 156,
+        "word_edits": 109
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "th",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 3,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 26,
+    "unique_ASR_audio_script_evidence": 23,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 806,
+        "character_edits": 286,
+        "reference_words": 26,
+        "word_edits": 72
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 806,
+        "character_edits": 544,
+        "reference_words": 26,
+        "word_edits": 129
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "ti",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 1,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 26,
+    "unique_ASR_audio_script_evidence": 25,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 624,
+        "character_edits": 90,
+        "reference_words": 208,
+        "word_edits": 83
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 624,
+        "character_edits": 708,
+        "reference_words": 208,
+        "word_edits": 199
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "tk",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 24,
+    "invalid_audio": 2,
+    "both_judges_present": 24,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 24,
+    "LLM_normalized_exact": 3,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 24,
+    "unique_ASR_audio_script_evidence": 21,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 408,
+        "character_edits": 81,
+        "reference_words": 120,
+        "word_edits": 59
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 408,
+        "character_edits": 165,
+        "reference_words": 120,
+        "word_edits": 118
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "tn",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 1,
+    "either_judge_character_mismatch": 25,
+    "LLM_normalized_exact": 0,
+    "CTC_normalized_exact": 1,
+    "judge_transcripts_disagree": 26,
+    "unique_ASR_audio_script_evidence": 24,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 598,
+        "character_edits": 128,
+        "reference_words": 208,
+        "word_edits": 114
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 598,
+        "character_edits": 137,
+        "reference_words": 208,
+        "word_edits": 168
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "tr",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 1,
+    "both_character_exact_CER0": 1,
+    "either_judge_character_mismatch": 25,
+    "LLM_normalized_exact": 6,
+    "CTC_normalized_exact": 1,
+    "judge_transcripts_disagree": 24,
+    "unique_ASR_audio_script_evidence": 24,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 624,
+        "character_edits": 72,
+        "reference_words": 104,
+        "word_edits": 44
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 624,
+        "character_edits": 103,
+        "reference_words": 104,
+        "word_edits": 75
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "tw",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 0,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 26,
+    "unique_ASR_audio_script_evidence": 20,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 26,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 494,
+        "character_edits": 102,
+        "reference_words": 156,
+        "word_edits": 87
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 494,
+        "character_edits": 134,
+        "reference_words": 156,
+        "word_edits": 126
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "ug",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 2,
+    "either_judge_character_mismatch": 24,
+    "LLM_normalized_exact": 21,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 26,
+    "unique_ASR_audio_script_evidence": 24,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 494,
+        "character_edits": 14,
+        "reference_words": 104,
+        "word_edits": 9
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 494,
+        "character_edits": 446,
+        "reference_words": 104,
+        "word_edits": 119
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "uk",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 4,
+    "both_character_exact_CER0": 7,
+    "either_judge_character_mismatch": 19,
+    "LLM_normalized_exact": 7,
+    "CTC_normalized_exact": 6,
+    "judge_transcripts_disagree": 18,
+    "unique_ASR_audio_script_evidence": 25,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 754,
+        "character_edits": 31,
+        "reference_words": 130,
+        "word_edits": 43
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 754,
+        "character_edits": 55,
+        "reference_words": 130,
+        "word_edits": 44
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "ur",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 10,
+    "both_character_exact_CER0": 10,
+    "either_judge_character_mismatch": 16,
+    "LLM_normalized_exact": 23,
+    "CTC_normalized_exact": 13,
+    "judge_transcripts_disagree": 16,
+    "unique_ASR_audio_script_evidence": 24,
+    "native_reference": 6,
+    "EN_fallback_reference": 18,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 18,
+      "control_ASR_mismatch_review": 6,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "control_ASR_partial_or_mismatch_review": 20,
+      "control_ASR_mismatch_review": 6
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 780,
+        "character_edits": 3,
+        "reference_words": 182,
+        "word_edits": 3
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 780,
+        "character_edits": 364,
+        "reference_words": 182,
+        "word_edits": 87
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "vi",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 4,
+    "both_character_exact_CER0": 4,
+    "either_judge_character_mismatch": 22,
+    "LLM_normalized_exact": 14,
+    "CTC_normalized_exact": 4,
+    "judge_transcripts_disagree": 22,
+    "unique_ASR_audio_script_evidence": 23,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 572,
+        "character_edits": 50,
+        "reference_words": 182,
+        "word_edits": 18
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 572,
+        "character_edits": 309,
+        "reference_words": 182,
+        "word_edits": 144
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "xh",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 15,
+    "both_character_exact_CER0": 18,
+    "either_judge_character_mismatch": 8,
+    "LLM_normalized_exact": 18,
+    "CTC_normalized_exact": 15,
+    "judge_transcripts_disagree": 5,
+    "unique_ASR_audio_script_evidence": 25,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 858,
+        "character_edits": 15,
+        "reference_words": 104,
+        "word_edits": 10
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 858,
+        "character_edits": 15,
+        "reference_words": 104,
+        "word_edits": 16
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "yo",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 0,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 26,
+    "unique_ASR_audio_script_evidence": 23,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 520,
+        "character_edits": 181,
+        "reference_words": 182,
+        "word_edits": 133
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 520,
+        "character_edits": 277,
+        "reference_words": 182,
+        "word_edits": 177
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "yue",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 0,
+    "both_character_exact_CER0": 0,
+    "either_judge_character_mismatch": 26,
+    "LLM_normalized_exact": 0,
+    "CTC_normalized_exact": 0,
+    "judge_transcripts_disagree": 26,
+    "unique_ASR_audio_script_evidence": 22,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 182,
+        "character_edits": 241,
+        "reference_words": 26,
+        "word_edits": 68
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 182,
+        "character_edits": 384,
+        "reference_words": 26,
+        "word_edits": 113
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "zh",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 1,
+    "both_character_exact_CER0": 1,
+    "either_judge_character_mismatch": 25,
+    "LLM_normalized_exact": 2,
+    "CTC_normalized_exact": 1,
+    "judge_transcripts_disagree": 25,
+    "unique_ASR_audio_script_evidence": 23,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 156,
+        "character_edits": 110,
+        "reference_words": 26,
+        "word_edits": 30
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 156,
+        "character_edits": 328,
+        "reference_words": 26,
+        "word_edits": 82
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  {
+    "language": "zu",
+    "offered": 26,
+    "HTTP200": 26,
+    "signal_valid": 26,
+    "invalid_audio": 0,
+    "both_judges_present": 26,
+    "both_normalized_exact": 1,
+    "both_character_exact_CER0": 7,
+    "either_judge_character_mismatch": 19,
+    "LLM_normalized_exact": 13,
+    "CTC_normalized_exact": 2,
+    "judge_transcripts_disagree": 25,
+    "unique_ASR_audio_script_evidence": 21,
+    "native_reference": 0,
+    "EN_fallback_reference": 24,
+    "no_reference": 2,
+    "ASR_mapping_proxy": 0,
+    "actual_reference_calibration_status": {
+      "control_ASR_screen_matches": 24,
+      "exact_reference_control_not_available": 2
+    },
+    "target_language_calibration_status": {
+      "target_language_control_not_available": 26
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 884,
+        "character_edits": 22,
+        "reference_words": 104,
+        "word_edits": 19
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 884,
+        "character_edits": 50,
+        "reference_words": 104,
+        "word_edits": 77
+      }
+    },
+    "native_or_human_quality_certified": false
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "path": "cases2704.jsonl",
+    "sha256": "b371f43aaa415cf538206319db6bd8466fa466e81f6c9b733c96ec0d85e227af",
+    "bytes": 9331248
+  },
+  {
+    "path": "invalid-audio4.json",
+    "sha256": "3d82ac472eb2ed25e3ecca052d18e2d2a632937b2280b456360ae90e74052d31",
+    "bytes": 35942
+  },
+  {
+    "path": "per-route104.csv",
+    "sha256": "9714a3e76ffb05493d7d66597258bf67ca9dcaae17b469fc80cf3105a4cb86d2",
+    "bytes": 3155
+  },
+  {
+    "path": "per-route104.json",
+    "sha256": "b18dbb3654509c3314c1a3e8d08f748dc33128a3af6ec46d472d9e4a650c4623",
+    "bytes": 122530
+  },
+  {
+    "path": "per-voice-configuration26.json",
+    "sha256": "0bac766317000963c819311e96d7e50b44cd3a7fe7120023d92e8257c601f5dc",
+    "bytes": 34580
+  },
+  {
+    "path": "provenance.json",
+    "sha256": "d2b128d613656081d5036e470a01658f6224c8c54691046f38ce71069ba8651c",
+    "bytes": 1737
+  },
+  {
+    "path": "reference-controls64.json",
+    "sha256": "67de84b0688e33c48dcea42ae614befe68c5e418e80fc6c89512c4b1dba92d29",
+    "bytes": 71406
+  },
+  {
+    "path": "report.md",
+    "sha256": "cf21090a1a1ec7ad00e3adfb43241985773766dda28d9e8a219057d6ab41d6ef",
+    "bytes": 4717
+  },
+  {
+    "path": "summary.json",
+    "sha256": "84e4002278d7b5f8eb40ec5703deca9b5a08b164fb5711022c5d95460342ad4f",
+    "bytes": 17108
+  },
+  {
+    "path": "weak-signal3.json",
+    "sha256": "1fe3b9038d1115879681752dee8e510a246a8f0f01e4cd690d89a48dd8c2c31f",
+    "bytes": 43132
+  }
+]

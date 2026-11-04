@@ -1,0 +1,209 @@
+{
+  "measurement_kind": "CPU-only exact per-request all-offer intersection; no model/GPU inference",
+  "TTS_GPU": "NVIDIA GeForce RTX4070Ti;12282MiBphysical/12481134592bytesvisible;driver610.57.04/CUDA12.8;2026-11-04",
+  "TTS_profile": "377de39b/hybridFP16/graph2/KVoff/splitoff/codec1/cache0;16steps/actualpresets;sequential;noASRco-load",
+  "ASR_hardware_and_protocols": {
+    "LLM": "RTX4070Ti/12282MiBphysical/12481134592bytesvisible/driver610.57.04/CUDA12.8",
+    "CTC": "RTX4070/12282MiBphysical/12450070528bytesvisible/driver580.95.05/CUDA12.8",
+    "omniASR_LLM_Unlimited_1B_v2": [
+      "modern59071593-batch1-v1-7f8784ef9d826da07f57"
+    ],
+    "omniASR_CTC_1B_v2": [
+      "legacy-batch1"
+    ]
+  },
+  "latency_definition": "complete_ms from original V5 request start through full HTTP body; threshold<=500ms; no cohort/word-conditioned p95",
+  "all": {
+    "all_offers_denominator": 2704,
+    "HTTP200_signal_valid": 2700,
+    "invalid_audio_in_denominator": 4,
+    "timing_missing": 0,
+    "HTTP200_signal_complete_le500ms": 1353,
+    "both_CER0_word_screen_separate": 535,
+    "both_normalized_exact_word_screen_separate": 463,
+    "JOINT_HTTP200_signal_le500ms_and_both_CER0": 304,
+    "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 283,
+    "JOINT_CER0_fraction_all_offers": 0.11242603550295859,
+    "JOINT_exact_fraction_all_offers": 0.10465976331360946,
+    "complete_ms_unconditioned_all_offers": {
+      "p50": 497.63979500858113,
+      "p95": 584.8576532007428,
+      "max": 1105.1810490025673
+    },
+    "proxy_offers": 26,
+    "proxy_joint_CER0": 0,
+    "joint_CER0_target_calibration": {
+      "control_ASR_screen_matches": 69,
+      "target_language_control_not_available": 217,
+      "control_ASR_mismatch_review": 7,
+      "control_ASR_partial_or_mismatch_review": 11
+    },
+    "joint_CER0_actual_reference_calibration": {
+      "control_ASR_screen_matches": 206,
+      "control_ASR_mismatch_review": 7,
+      "exact_reference_control_not_available": 91
+    },
+    "quality_certified": false
+  },
+  "by_configuration": {
+    "lingua-default": {
+      "all_offers_denominator": 832,
+      "HTTP200_signal_valid": 828,
+      "invalid_audio_in_denominator": 4,
+      "timing_missing": 0,
+      "HTTP200_signal_complete_le500ms": 472,
+      "both_CER0_word_screen_separate": 109,
+      "both_normalized_exact_word_screen_separate": 99,
+      "JOINT_HTTP200_signal_le500ms_and_both_CER0": 72,
+      "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 66,
+      "JOINT_CER0_fraction_all_offers": 0.08653846153846154,
+      "JOINT_exact_fraction_all_offers": 0.07932692307692307,
+      "complete_ms_unconditioned_all_offers": {
+        "p50": 491.63277698971797,
+        "p95": 581.8624974403065,
+        "max": 995.0225480133668
+      },
+      "proxy_offers": 8,
+      "proxy_joint_CER0": 0,
+      "joint_CER0_target_calibration": {
+        "control_ASR_screen_matches": 23,
+        "target_language_control_not_available": 46,
+        "control_ASR_mismatch_review": 3
+      },
+      "joint_CER0_actual_reference_calibration": {
+        "control_ASR_screen_matches": 69,
+        "control_ASR_mismatch_review": 3
+      },
+      "quality_certified": false
+    },
+    "lingua-tutor": {
+      "all_offers_denominator": 832,
+      "HTTP200_signal_valid": 832,
+      "invalid_audio_in_denominator": 0,
+      "timing_missing": 0,
+      "HTTP200_signal_complete_le500ms": 339,
+      "both_CER0_word_screen_separate": 165,
+      "both_normalized_exact_word_screen_separate": 141,
+      "JOINT_HTTP200_signal_le500ms_and_both_CER0": 71,
+      "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 69,
+      "JOINT_CER0_fraction_all_offers": 0.08533653846153846,
+      "JOINT_exact_fraction_all_offers": 0.0829326923076923,
+      "complete_ms_unconditioned_all_offers": {
+        "p50": 536.5204014960909,
+        "p95": 587.0157449593535,
+        "max": 1042.4281969899312
+      },
+      "proxy_offers": 8,
+      "proxy_joint_CER0": 0,
+      "joint_CER0_target_calibration": {
+        "control_ASR_screen_matches": 22,
+        "target_language_control_not_available": 47,
+        "control_ASR_mismatch_review": 2
+      },
+      "joint_CER0_actual_reference_calibration": {
+        "control_ASR_screen_matches": 69,
+        "control_ASR_mismatch_review": 2
+      },
+      "quality_certified": false
+    },
+    "lingua-video": {
+      "all_offers_denominator": 832,
+      "HTTP200_signal_valid": 832,
+      "invalid_audio_in_denominator": 0,
+      "timing_missing": 0,
+      "HTTP200_signal_complete_le500ms": 336,
+      "both_CER0_word_screen_separate": 170,
+      "both_normalized_exact_word_screen_separate": 143,
+      "JOINT_HTTP200_signal_le500ms_and_both_CER0": 70,
+      "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 68,
+      "JOINT_CER0_fraction_all_offers": 0.08413461538461539,
+      "JOINT_exact_fraction_all_offers": 0.08173076923076923,
+      "complete_ms_unconditioned_all_offers": {
+        "p50": 535.9889265091624,
+        "p95": 587.0138569996925,
+        "max": 1065.0935670128092
+      },
+      "proxy_offers": 8,
+      "proxy_joint_CER0": 0,
+      "joint_CER0_target_calibration": {
+        "control_ASR_screen_matches": 21,
+        "target_language_control_not_available": 47,
+        "control_ASR_mismatch_review": 2
+      },
+      "joint_CER0_actual_reference_calibration": {
+        "control_ASR_screen_matches": 68,
+        "control_ASR_mismatch_review": 2
+      },
+      "quality_certified": false
+    },
+    "worker-auto-not-current-Lingua-UI": {
+      "all_offers_denominator": 104,
+      "HTTP200_signal_valid": 104,
+      "invalid_audio_in_denominator": 0,
+      "timing_missing": 0,
+      "HTTP200_signal_complete_le500ms": 103,
+      "both_CER0_word_screen_separate": 43,
+      "both_normalized_exact_word_screen_separate": 39,
+      "JOINT_HTTP200_signal_le500ms_and_both_CER0": 43,
+      "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 39,
+      "JOINT_CER0_fraction_all_offers": 0.41346153846153844,
+      "JOINT_exact_fraction_all_offers": 0.375,
+      "complete_ms_unconditioned_all_offers": {
+        "p50": 257.4399575096322,
+        "p95": 301.09538655960927,
+        "max": 1105.1810490025673
+      },
+      "proxy_offers": 1,
+      "proxy_joint_CER0": 0,
+      "joint_CER0_target_calibration": {
+        "control_ASR_partial_or_mismatch_review": 5,
+        "target_language_control_not_available": 37,
+        "control_ASR_screen_matches": 1
+      },
+      "joint_CER0_actual_reference_calibration": {
+        "exact_reference_control_not_available": 43
+      },
+      "quality_certified": false
+    },
+    "worker-design-not-current-Lingua-UI": {
+      "all_offers_denominator": 104,
+      "HTTP200_signal_valid": 104,
+      "invalid_audio_in_denominator": 0,
+      "timing_missing": 0,
+      "HTTP200_signal_complete_le500ms": 103,
+      "both_CER0_word_screen_separate": 48,
+      "both_normalized_exact_word_screen_separate": 41,
+      "JOINT_HTTP200_signal_le500ms_and_both_CER0": 48,
+      "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 41,
+      "JOINT_CER0_fraction_all_offers": 0.46153846153846156,
+      "JOINT_exact_fraction_all_offers": 0.3942307692307692,
+      "complete_ms_unconditioned_all_offers": {
+        "p50": 259.83568049559835,
+        "p95": 303.4070538531523,
+        "max": 1093.961353006307
+      },
+      "proxy_offers": 1,
+      "proxy_joint_CER0": 0,
+      "joint_CER0_target_calibration": {
+        "control_ASR_partial_or_mismatch_review": 6,
+        "control_ASR_screen_matches": 2,
+        "target_language_control_not_available": 40
+      },
+      "joint_CER0_actual_reference_calibration": {
+        "exact_reference_control_not_available": 48
+      },
+      "quality_certified": false
+    }
+  },
+  "native_quality_or_SLO_certified": false,
+  "caveats": [
+    "ASR exactness/mismatch is not native pronunciation, word fidelity, MOS or speaker identity certification.",
+    "No global ASR confidence/calibration threshold exists. Two related judges can agree on an error.",
+    "192 native-reference clone cases and2304 English-fallback clone cases cover different languages; their rates do not isolate reference-language causality.",
+    "An English-reference transcript control match does not calibrate the target language.",
+    "Twi26cells use aka_Latn as an explicit broader Akan proxy; MinNan uses published romanized text. No native-language certification is inferred.",
+    "Only one short published text per route was used across this grid; continuous controls, all utterances and concurrent word quality were not exhaustively tested.",
+    "The four empty HTTP200 WAVs remain failures. Expected400 validation cases and unrelated cached responses are excluded by exact run+fixture identity.",
+    "Worker auto/design are experimental worker capabilities, not current Lingua UI voice cards."
+  ]
+}

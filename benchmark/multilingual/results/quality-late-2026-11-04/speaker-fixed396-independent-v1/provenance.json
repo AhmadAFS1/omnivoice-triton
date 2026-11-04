@@ -1,0 +1,41 @@
+{
+  "inputs": [
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/audit_fixed_speaker.py",
+      "sha256": "d4bfb0b156e9e5bf2b2e3bbf89f2abf63fcfff9475c679a16a00f21044af4dcf"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/report-global7405-v1/scored-logical-cases.jsonl",
+      "sha256": "b900ec369da5ea6be99b3bb5897a5f8574ebab1a1ec8e2b0aa09701d00999720"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/reference-fixed-duration-analysis-v1/paired132.jsonl",
+      "sha256": "ce6bb49323647fa839a18e97e6ae31d45fcfa432a2d86c0399edf6dc98dc87ab"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/speaker-fixed396-v1/summary.json",
+      "sha256": "5807fd922fc58242386fe050c5d3fdf6a80ed1b8a73731d78b723af4c49b9488"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/speaker-fixed396-v1/generated-scores.json",
+      "sha256": "cfe5df1f37ba3da677099d063c8d5830bd8d261203f54f2489e52c80e1fee1e7"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/speaker-fixed396-v1/reference-controls.json",
+      "sha256": "db5244e19bc5a80ab482260058f5d49063ce68b2c71f563b93167ca3dee94a00"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/speaker-fixed396-v1/metadata.json",
+      "sha256": "3ca63ebb73e1b9b3de75344427c381306c18d11fbdba2bea7d54ec4f4010e88c"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/speaker-fixed396-v1/paired-deltas.json",
+      "sha256": "07a73a17e5bbeb4bb2153de196aab2ace8a348684b81ae4373b459f9a59029ba"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/speaker-fixed396-v1/embeddings.jsonl",
+      "sha256": "9a3b8b4b0be315059057912f3a5008f13cea53f7cd6a102f26c009c524e54f8e"
+    }
+  ],
+  "interpretation": "ECAPA is a relative synthetic/multilingual speaker screen; Meta ASR can disagree or mistranscribe. No native listening or MOS certification, no default promotion."
+}

@@ -1,0 +1,325 @@
+{
+  "created_at": "2026-11-04T12:37:29.209920+00:00",
+  "measurement_kind": "CPU-only matched words from strict same-config twoASR outputs; no model inference",
+  "source_report": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/report-global7405-v1/scored-logical-cases.jsonl",
+  "pairs": 132,
+  "selected_comparison_pairs": 110,
+  "baseline": "full",
+  "quality_certified": false,
+  "variants": {
+    "full": {
+      "both_exact_all132": 37,
+      "both_exact_selected": 21,
+      "per_judge": {
+        "omniASR_LLM_Unlimited_1B_v2": {
+          "exact_all132": 54,
+          "exact_selected": 35,
+          "mean_CER_selected": 0.1287769644056198
+        },
+        "omniASR_CTC_1B_v2": {
+          "exact_all132": 42,
+          "exact_selected": 26,
+          "mean_CER_selected": 0.41653979777064337
+        }
+      }
+    },
+    "prefix10": {
+      "both_exact_all132": 55,
+      "both_exact_selected": 39,
+      "per_judge": {
+        "omniASR_LLM_Unlimited_1B_v2": {
+          "exact_all132": 80,
+          "exact_selected": 61,
+          "mean_CER_selected": 0.07479117248089387
+        },
+        "omniASR_CTC_1B_v2": {
+          "exact_all132": 57,
+          "exact_selected": 41,
+          "mean_CER_selected": 0.19604353130118418
+        }
+      },
+      "body_matches_all132": 22,
+      "both_CER_worse": 5,
+      "both_CER_better": 42,
+      "lost_both_exact": 3,
+      "gained_both_exact": 21,
+      "review_cases": [
+        {
+          "case_id": "nan-short--Aoede--lingua-video",
+          "language": "nan",
+          "voice_id": "Aoede",
+          "CER_delta": {
+            "omniASR_LLM_Unlimited_1B_v2": 0.09302325581395349,
+            "omniASR_CTC_1B_v2": 0.3255813953488372
+          },
+          "both_CER_worse": true,
+          "both_CER_better": false,
+          "lost_both_exact": false,
+          "gained_both_exact": false,
+          "body_equal": false
+        },
+        {
+          "case_id": "pcm-short--Aoede--lingua-video",
+          "language": "pcm",
+          "voice_id": "Aoede",
+          "CER_delta": {
+            "omniASR_LLM_Unlimited_1B_v2": 0.3225806451612903,
+            "omniASR_CTC_1B_v2": 0.03225806451612903
+          },
+          "both_CER_worse": true,
+          "both_CER_better": false,
+          "lost_both_exact": false,
+          "gained_both_exact": false,
+          "body_equal": false
+        },
+        {
+          "case_id": "ar-EG-short--Aoede--lingua-video",
+          "language": "ar-EG",
+          "voice_id": "Aoede",
+          "CER_delta": {
+            "omniASR_LLM_Unlimited_1B_v2": 0.17391304347826086,
+            "omniASR_CTC_1B_v2": 0.043478260869565216
+          },
+          "both_CER_worse": true,
+          "both_CER_better": false,
+          "lost_both_exact": true,
+          "gained_both_exact": false,
+          "body_equal": false
+        },
+        {
+          "case_id": "rw-short--Aoede--lingua-video",
+          "language": "rw",
+          "voice_id": "Aoede",
+          "CER_delta": {
+            "omniASR_LLM_Unlimited_1B_v2": 0.0,
+            "omniASR_CTC_1B_v2": 0.029411764705882353
+          },
+          "both_CER_worse": false,
+          "both_CER_better": false,
+          "lost_both_exact": true,
+          "gained_both_exact": false,
+          "body_equal": false
+        },
+        {
+          "case_id": "sl-short--Aoede--lingua-video",
+          "language": "sl",
+          "voice_id": "Aoede",
+          "CER_delta": {
+            "omniASR_LLM_Unlimited_1B_v2": 0.041666666666666664,
+            "omniASR_CTC_1B_v2": 0.0
+          },
+          "both_CER_worse": false,
+          "both_CER_better": false,
+          "lost_both_exact": true,
+          "gained_both_exact": false,
+          "body_equal": false
+        },
+        {
+          "case_id": "tw-short--Aoede--lingua-video",
+          "language": "tw",
+          "voice_id": "Aoede",
+          "CER_delta": {
+            "omniASR_LLM_Unlimited_1B_v2": 0.3157894736842105,
+            "omniASR_CTC_1B_v2": 0.15789473684210525
+          },
+          "both_CER_worse": true,
+          "both_CER_better": false,
+          "lost_both_exact": false,
+          "gained_both_exact": false,
+          "body_equal": false
+        },
+        {
+          "case_id": "mi-short--Aoede--lingua-video",
+          "language": "mi",
+          "voice_id": "Aoede",
+          "CER_delta": {
+            "omniASR_LLM_Unlimited_1B_v2": 0.03125,
+            "omniASR_CTC_1B_v2": 0.09375
+          },
+          "both_CER_worse": true,
+          "both_CER_better": false,
+          "lost_both_exact": false,
+          "gained_both_exact": false,
+          "body_equal": false
+        }
+      ]
+    },
+    "prefix17": {
+      "both_exact_all132": 48,
+      "both_exact_selected": 32,
+      "per_judge": {
+        "omniASR_LLM_Unlimited_1B_v2": {
+          "exact_all132": 74,
+          "exact_selected": 55,
+          "mean_CER_selected": 0.08702400937918052
+        },
+        "omniASR_CTC_1B_v2": {
+          "exact_all132": 50,
+          "exact_selected": 34,
+          "mean_CER_selected": 0.2869274603121235
+        }
+      },
+      "body_matches_all132": 22,
+      "both_CER_worse": 7,
+      "both_CER_better": 27,
+      "lost_both_exact": 4,
+      "gained_both_exact": 15,
+      "review_cases": [
+        {
+          "case_id": "hi-short--Kore--lingua-video",
+          "language": "hi",
+          "voice_id": "Kore",
+          "CER_delta": {
+            "omniASR_LLM_Unlimited_1B_v2": 0.2916666666666667,
+            "omniASR_CTC_1B_v2": 0.04166666666666674
+          },
+          "both_CER_worse": true,
+          "both_CER_better": false,
+          "lost_both_exact": false,
+          "gained_both_exact": false,
+          "body_equal": false
+        },
+        {
+          "case_id": "ko-short--Aoede--lingua-video",
+          "language": "ko",
+          "voice_id": "Aoede",
+          "CER_delta": {
+            "omniASR_LLM_Unlimited_1B_v2": 0.0,
+            "omniASR_CTC_1B_v2": 0.18181818181818182
+          },
+          "both_CER_worse": false,
+          "both_CER_better": false,
+          "lost_both_exact": true,
+          "gained_both_exact": false,
+          "body_equal": false
+        },
+        {
+          "case_id": "zh-short--Aoede--lingua-video",
+          "language": "zh",
+          "voice_id": "Aoede",
+          "CER_delta": {
+            "omniASR_LLM_Unlimited_1B_v2": 0.5000000000000001,
+            "omniASR_CTC_1B_v2": 0.16666666666666696
+          },
+          "both_CER_worse": true,
+          "both_CER_better": false,
+          "lost_both_exact": false,
+          "gained_both_exact": false,
+          "body_equal": false
+        },
+        {
+          "case_id": "nan-short--Aoede--lingua-video",
+          "language": "nan",
+          "voice_id": "Aoede",
+          "CER_delta": {
+            "omniASR_LLM_Unlimited_1B_v2": 0.23255813953488375,
+            "omniASR_CTC_1B_v2": 0.04651162790697677
+          },
+          "both_CER_worse": true,
+          "both_CER_better": false,
+          "lost_both_exact": false,
+          "gained_both_exact": false,
+          "body_equal": false
+        },
+        {
+          "case_id": "yo-short--Aoede--lingua-video",
+          "language": "yo",
+          "voice_id": "Aoede",
+          "CER_delta": {
+            "omniASR_LLM_Unlimited_1B_v2": 0.19999999999999998,
+            "omniASR_CTC_1B_v2": 0.19999999999999996
+          },
+          "both_CER_worse": true,
+          "both_CER_better": false,
+          "lost_both_exact": false,
+          "gained_both_exact": false,
+          "body_equal": false
+        },
+        {
+          "case_id": "rw-short--Aoede--lingua-video",
+          "language": "rw",
+          "voice_id": "Aoede",
+          "CER_delta": {
+            "omniASR_LLM_Unlimited_1B_v2": 0.0,
+            "omniASR_CTC_1B_v2": 0.0
+          },
+          "both_CER_worse": false,
+          "both_CER_better": false,
+          "lost_both_exact": true,
+          "gained_both_exact": false,
+          "body_equal": false
+        },
+        {
+          "case_id": "ht-short--Aoede--lingua-video",
+          "language": "ht",
+          "voice_id": "Aoede",
+          "CER_delta": {
+            "omniASR_LLM_Unlimited_1B_v2": 0.041666666666666685,
+            "omniASR_CTC_1B_v2": 0.20833333333333331
+          },
+          "both_CER_worse": true,
+          "both_CER_better": false,
+          "lost_both_exact": false,
+          "gained_both_exact": false,
+          "body_equal": false
+        },
+        {
+          "case_id": "dag-short--Aoede--lingua-video",
+          "language": "dag",
+          "voice_id": "Aoede",
+          "CER_delta": {
+            "omniASR_LLM_Unlimited_1B_v2": 0.045454545454545456,
+            "omniASR_CTC_1B_v2": 0.022727272727272735
+          },
+          "both_CER_worse": true,
+          "both_CER_better": false,
+          "lost_both_exact": false,
+          "gained_both_exact": false,
+          "body_equal": false
+        },
+        {
+          "case_id": "ar-SA-short--Aoede--lingua-video",
+          "language": "ar-SA",
+          "voice_id": "Aoede",
+          "CER_delta": {
+            "omniASR_LLM_Unlimited_1B_v2": 0.16666666666666666,
+            "omniASR_CTC_1B_v2": 0.0
+          },
+          "both_CER_worse": false,
+          "both_CER_better": false,
+          "lost_both_exact": true,
+          "gained_both_exact": false,
+          "body_equal": false
+        },
+        {
+          "case_id": "sl-short--Aoede--lingua-video",
+          "language": "sl",
+          "voice_id": "Aoede",
+          "CER_delta": {
+            "omniASR_LLM_Unlimited_1B_v2": 0.0,
+            "omniASR_CTC_1B_v2": 0.041666666666666664
+          },
+          "both_CER_worse": false,
+          "both_CER_better": false,
+          "lost_both_exact": true,
+          "gained_both_exact": false,
+          "body_equal": false
+        },
+        {
+          "case_id": "tw-short--Aoede--lingua-video",
+          "language": "tw",
+          "voice_id": "Aoede",
+          "CER_delta": {
+            "omniASR_LLM_Unlimited_1B_v2": 0.05263157894736842,
+            "omniASR_CTC_1B_v2": 0.05263157894736842
+          },
+          "both_CER_worse": true,
+          "both_CER_better": false,
+          "lost_both_exact": false,
+          "gained_both_exact": false,
+          "body_equal": false
+        }
+      ]
+    }
+  }
+}

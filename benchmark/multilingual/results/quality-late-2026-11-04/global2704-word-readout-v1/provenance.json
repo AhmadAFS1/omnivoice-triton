@@ -1,0 +1,31 @@
+{
+  "CPU_script": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/global2704_word_readout.py",
+  "CPU_script_sha256": "46a0fadff8a50d25807beaa3f9d14550fcb1a21cba0486a7b4d5fd79c00909c9",
+  "inputs": [
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/all104-all8voices-and-config-smoke.json",
+      "sha256": "39005ffe68948e87febe6760c7d793c57a524fd97f0531ff016be5520b01dccd"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/modern-v6-audit/per-run.json",
+      "sha256": "478378b6a9fb8a636b0d7bc708b422b11fc723b569a5be247bf2e927f4d9bcb3"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/modern-v6-audit/verified-audio.jsonl",
+      "sha256": "8fa5c516a3be52779a8452eae1e8d0a0ff0a888b5a8a1e0ab321272ef2be84f9"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/report-global4534-v1/scored-logical-cases.jsonl",
+      "sha256": "3564556de0ecf9c49b249cdb24b6ae626b96eb6226068e2310801749cfc6168f"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/report.py",
+      "sha256": "848e8fc5475ef3ac5345f727dd978c12ed1f4406d41b345af8b525e872782b4a"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/GLOBAL4534_TWO_JUDGE_COMPLETE.json",
+      "sha256": "7e7d02ee330711ece1ed32d0ff6624bf971ec8f27e74268d63ca954a1a618a6d"
+    }
+  ],
+  "source_GPU_results_unchanged": true
+}

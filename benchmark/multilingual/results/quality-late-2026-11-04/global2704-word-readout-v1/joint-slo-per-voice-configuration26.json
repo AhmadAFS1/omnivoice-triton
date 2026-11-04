@@ -1,0 +1,794 @@
+[
+  {
+    "voice": "Aoede",
+    "configuration": "lingua-default",
+    "all_offers_denominator": 104,
+    "HTTP200_signal_valid": 102,
+    "invalid_audio_in_denominator": 2,
+    "timing_missing": 0,
+    "HTTP200_signal_complete_le500ms": 83,
+    "both_CER0_word_screen_separate": 12,
+    "both_normalized_exact_word_screen_separate": 11,
+    "JOINT_HTTP200_signal_le500ms_and_both_CER0": 11,
+    "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 10,
+    "JOINT_CER0_fraction_all_offers": 0.10576923076923077,
+    "JOINT_exact_fraction_all_offers": 0.09615384615384616,
+    "complete_ms_unconditioned_all_offers": {
+      "p50": 478.08033900219016,
+      "p95": 551.5829919851967,
+      "max": 588.512743008323
+    },
+    "proxy_offers": 1,
+    "proxy_joint_CER0": 0,
+    "joint_CER0_target_calibration": {
+      "control_ASR_screen_matches": 4,
+      "target_language_control_not_available": 7
+    },
+    "joint_CER0_actual_reference_calibration": {
+      "control_ASR_screen_matches": 11
+    },
+    "quality_certified": false
+  },
+  {
+    "voice": "Aoede",
+    "configuration": "lingua-tutor",
+    "all_offers_denominator": 104,
+    "HTTP200_signal_valid": 104,
+    "invalid_audio_in_denominator": 0,
+    "timing_missing": 0,
+    "HTTP200_signal_complete_le500ms": 73,
+    "both_CER0_word_screen_separate": 18,
+    "both_normalized_exact_word_screen_separate": 17,
+    "JOINT_HTTP200_signal_le500ms_and_both_CER0": 14,
+    "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 13,
+    "JOINT_CER0_fraction_all_offers": 0.1346153846153846,
+    "JOINT_exact_fraction_all_offers": 0.125,
+    "complete_ms_unconditioned_all_offers": {
+      "p50": 480.0731419963995,
+      "p95": 560.7455926889088,
+      "max": 603.8908070186153
+    },
+    "proxy_offers": 1,
+    "proxy_joint_CER0": 0,
+    "joint_CER0_target_calibration": {
+      "control_ASR_screen_matches": 4,
+      "target_language_control_not_available": 10
+    },
+    "joint_CER0_actual_reference_calibration": {
+      "control_ASR_screen_matches": 14
+    },
+    "quality_certified": false
+  },
+  {
+    "voice": "Aoede",
+    "configuration": "lingua-video",
+    "all_offers_denominator": 104,
+    "HTTP200_signal_valid": 104,
+    "invalid_audio_in_denominator": 0,
+    "timing_missing": 0,
+    "HTTP200_signal_complete_le500ms": 72,
+    "both_CER0_word_screen_separate": 19,
+    "both_normalized_exact_word_screen_separate": 18,
+    "JOINT_HTTP200_signal_le500ms_and_both_CER0": 14,
+    "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 13,
+    "JOINT_CER0_fraction_all_offers": 0.1346153846153846,
+    "JOINT_exact_fraction_all_offers": 0.125,
+    "complete_ms_unconditioned_all_offers": {
+      "p50": 483.2531644933624,
+      "p95": 577.8320986530161,
+      "max": 939.9685729877092
+    },
+    "proxy_offers": 1,
+    "proxy_joint_CER0": 0,
+    "joint_CER0_target_calibration": {
+      "control_ASR_screen_matches": 4,
+      "target_language_control_not_available": 10
+    },
+    "joint_CER0_actual_reference_calibration": {
+      "control_ASR_screen_matches": 14
+    },
+    "quality_certified": false
+  },
+  {
+    "voice": "Charon",
+    "configuration": "lingua-default",
+    "all_offers_denominator": 104,
+    "HTTP200_signal_valid": 103,
+    "invalid_audio_in_denominator": 1,
+    "timing_missing": 0,
+    "HTTP200_signal_complete_le500ms": 81,
+    "both_CER0_word_screen_separate": 17,
+    "both_normalized_exact_word_screen_separate": 15,
+    "JOINT_HTTP200_signal_le500ms_and_both_CER0": 17,
+    "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 15,
+    "JOINT_CER0_fraction_all_offers": 0.16346153846153846,
+    "JOINT_exact_fraction_all_offers": 0.14423076923076922,
+    "complete_ms_unconditioned_all_offers": {
+      "p50": 479.98618699784856,
+      "p95": 560.8523130678805,
+      "max": 944.7055279742926
+    },
+    "proxy_offers": 1,
+    "proxy_joint_CER0": 0,
+    "joint_CER0_target_calibration": {
+      "control_ASR_screen_matches": 4,
+      "target_language_control_not_available": 13
+    },
+    "joint_CER0_actual_reference_calibration": {
+      "control_ASR_screen_matches": 17
+    },
+    "quality_certified": false
+  },
+  {
+    "voice": "Charon",
+    "configuration": "lingua-tutor",
+    "all_offers_denominator": 104,
+    "HTTP200_signal_valid": 104,
+    "invalid_audio_in_denominator": 0,
+    "timing_missing": 0,
+    "HTTP200_signal_complete_le500ms": 60,
+    "both_CER0_word_screen_separate": 23,
+    "both_normalized_exact_word_screen_separate": 21,
+    "JOINT_HTTP200_signal_le500ms_and_both_CER0": 17,
+    "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 16,
+    "JOINT_CER0_fraction_all_offers": 0.16346153846153846,
+    "JOINT_exact_fraction_all_offers": 0.15384615384615385,
+    "complete_ms_unconditioned_all_offers": {
+      "p50": 490.5856639961712,
+      "p95": 574.8635558513342,
+      "max": 942.070065997541
+    },
+    "proxy_offers": 1,
+    "proxy_joint_CER0": 0,
+    "joint_CER0_target_calibration": {
+      "control_ASR_screen_matches": 4,
+      "target_language_control_not_available": 13
+    },
+    "joint_CER0_actual_reference_calibration": {
+      "control_ASR_screen_matches": 17
+    },
+    "quality_certified": false
+  },
+  {
+    "voice": "Charon",
+    "configuration": "lingua-video",
+    "all_offers_denominator": 104,
+    "HTTP200_signal_valid": 104,
+    "invalid_audio_in_denominator": 0,
+    "timing_missing": 0,
+    "HTTP200_signal_complete_le500ms": 60,
+    "both_CER0_word_screen_separate": 23,
+    "both_normalized_exact_word_screen_separate": 21,
+    "JOINT_HTTP200_signal_le500ms_and_both_CER0": 16,
+    "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 15,
+    "JOINT_CER0_fraction_all_offers": 0.15384615384615385,
+    "JOINT_exact_fraction_all_offers": 0.14423076923076922,
+    "complete_ms_unconditioned_all_offers": {
+      "p50": 492.1154455078067,
+      "p95": 574.6424594151904,
+      "max": 948.0717850092333
+    },
+    "proxy_offers": 1,
+    "proxy_joint_CER0": 0,
+    "joint_CER0_target_calibration": {
+      "control_ASR_screen_matches": 3,
+      "target_language_control_not_available": 13
+    },
+    "joint_CER0_actual_reference_calibration": {
+      "control_ASR_screen_matches": 16
+    },
+    "quality_certified": false
+  },
+  {
+    "voice": "Despina",
+    "configuration": "lingua-default",
+    "all_offers_denominator": 104,
+    "HTTP200_signal_valid": 104,
+    "invalid_audio_in_denominator": 0,
+    "timing_missing": 0,
+    "HTTP200_signal_complete_le500ms": 5,
+    "both_CER0_word_screen_separate": 20,
+    "both_normalized_exact_word_screen_separate": 19,
+    "JOINT_HTTP200_signal_le500ms_and_both_CER0": 4,
+    "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 4,
+    "JOINT_CER0_fraction_all_offers": 0.038461538461538464,
+    "JOINT_exact_fraction_all_offers": 0.038461538461538464,
+    "complete_ms_unconditioned_all_offers": {
+      "p50": 560.4082029894926,
+      "p95": 599.0793024146113,
+      "max": 949.0212259988766
+    },
+    "proxy_offers": 1,
+    "proxy_joint_CER0": 0,
+    "joint_CER0_target_calibration": {
+      "control_ASR_screen_matches": 3,
+      "target_language_control_not_available": 1
+    },
+    "joint_CER0_actual_reference_calibration": {
+      "control_ASR_screen_matches": 4
+    },
+    "quality_certified": false
+  },
+  {
+    "voice": "Despina",
+    "configuration": "lingua-tutor",
+    "all_offers_denominator": 104,
+    "HTTP200_signal_valid": 104,
+    "invalid_audio_in_denominator": 0,
+    "timing_missing": 0,
+    "HTTP200_signal_complete_le500ms": 4,
+    "both_CER0_word_screen_separate": 24,
+    "both_normalized_exact_word_screen_separate": 19,
+    "JOINT_HTTP200_signal_le500ms_and_both_CER0": 2,
+    "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 2,
+    "JOINT_CER0_fraction_all_offers": 0.019230769230769232,
+    "JOINT_exact_fraction_all_offers": 0.019230769230769232,
+    "complete_ms_unconditioned_all_offers": {
+      "p50": 567.7093359990977,
+      "p95": 615.5632566937129,
+      "max": 964.8027380171698
+    },
+    "proxy_offers": 1,
+    "proxy_joint_CER0": 0,
+    "joint_CER0_target_calibration": {
+      "control_ASR_screen_matches": 2
+    },
+    "joint_CER0_actual_reference_calibration": {
+      "control_ASR_screen_matches": 2
+    },
+    "quality_certified": false
+  },
+  {
+    "voice": "Despina",
+    "configuration": "lingua-video",
+    "all_offers_denominator": 104,
+    "HTTP200_signal_valid": 104,
+    "invalid_audio_in_denominator": 0,
+    "timing_missing": 0,
+    "HTTP200_signal_complete_le500ms": 4,
+    "both_CER0_word_screen_separate": 28,
+    "both_normalized_exact_word_screen_separate": 21,
+    "JOINT_HTTP200_signal_le500ms_and_both_CER0": 2,
+    "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 2,
+    "JOINT_CER0_fraction_all_offers": 0.019230769230769232,
+    "JOINT_exact_fraction_all_offers": 0.019230769230769232,
+    "complete_ms_unconditioned_all_offers": {
+      "p50": 570.0906184938503,
+      "p95": 621.7573007845203,
+      "max": 1065.0935670128092
+    },
+    "proxy_offers": 1,
+    "proxy_joint_CER0": 0,
+    "joint_CER0_target_calibration": {
+      "control_ASR_screen_matches": 2
+    },
+    "joint_CER0_actual_reference_calibration": {
+      "control_ASR_screen_matches": 2
+    },
+    "quality_certified": false
+  },
+  {
+    "voice": "Fenrir",
+    "configuration": "lingua-default",
+    "all_offers_denominator": 104,
+    "HTTP200_signal_valid": 104,
+    "invalid_audio_in_denominator": 0,
+    "timing_missing": 0,
+    "HTTP200_signal_complete_le500ms": 79,
+    "both_CER0_word_screen_separate": 6,
+    "both_normalized_exact_word_screen_separate": 6,
+    "JOINT_HTTP200_signal_le500ms_and_both_CER0": 5,
+    "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 5,
+    "JOINT_CER0_fraction_all_offers": 0.04807692307692308,
+    "JOINT_exact_fraction_all_offers": 0.04807692307692308,
+    "complete_ms_unconditioned_all_offers": {
+      "p50": 479.63456199795473,
+      "p95": 553.7576363582048,
+      "max": 965.2727700013202
+    },
+    "proxy_offers": 1,
+    "proxy_joint_CER0": 0,
+    "joint_CER0_target_calibration": {
+      "control_ASR_mismatch_review": 1,
+      "target_language_control_not_available": 2,
+      "control_ASR_screen_matches": 2
+    },
+    "joint_CER0_actual_reference_calibration": {
+      "control_ASR_mismatch_review": 1,
+      "control_ASR_screen_matches": 4
+    },
+    "quality_certified": false
+  },
+  {
+    "voice": "Fenrir",
+    "configuration": "lingua-tutor",
+    "all_offers_denominator": 104,
+    "HTTP200_signal_valid": 104,
+    "invalid_audio_in_denominator": 0,
+    "timing_missing": 0,
+    "HTTP200_signal_complete_le500ms": 61,
+    "both_CER0_word_screen_separate": 15,
+    "both_normalized_exact_word_screen_separate": 12,
+    "JOINT_HTTP200_signal_le500ms_and_both_CER0": 8,
+    "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 8,
+    "JOINT_CER0_fraction_all_offers": 0.07692307692307693,
+    "JOINT_exact_fraction_all_offers": 0.07692307692307693,
+    "complete_ms_unconditioned_all_offers": {
+      "p50": 490.2322235138854,
+      "p95": 574.603820995253,
+      "max": 965.699594002217
+    },
+    "proxy_offers": 1,
+    "proxy_joint_CER0": 0,
+    "joint_CER0_target_calibration": {
+      "control_ASR_mismatch_review": 1,
+      "target_language_control_not_available": 6,
+      "control_ASR_screen_matches": 1
+    },
+    "joint_CER0_actual_reference_calibration": {
+      "control_ASR_mismatch_review": 1,
+      "control_ASR_screen_matches": 7
+    },
+    "quality_certified": false
+  },
+  {
+    "voice": "Fenrir",
+    "configuration": "lingua-video",
+    "all_offers_denominator": 104,
+    "HTTP200_signal_valid": 104,
+    "invalid_audio_in_denominator": 0,
+    "timing_missing": 0,
+    "HTTP200_signal_complete_le500ms": 61,
+    "both_CER0_word_screen_separate": 15,
+    "both_normalized_exact_word_screen_separate": 12,
+    "JOINT_HTTP200_signal_le500ms_and_both_CER0": 8,
+    "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 8,
+    "JOINT_CER0_fraction_all_offers": 0.07692307692307693,
+    "JOINT_exact_fraction_all_offers": 0.07692307692307693,
+    "complete_ms_unconditioned_all_offers": {
+      "p50": 491.6574179951567,
+      "p95": 577.3754125882988,
+      "max": 966.1247049807571
+    },
+    "proxy_offers": 1,
+    "proxy_joint_CER0": 0,
+    "joint_CER0_target_calibration": {
+      "control_ASR_mismatch_review": 1,
+      "target_language_control_not_available": 6,
+      "control_ASR_screen_matches": 1
+    },
+    "joint_CER0_actual_reference_calibration": {
+      "control_ASR_mismatch_review": 1,
+      "control_ASR_screen_matches": 7
+    },
+    "quality_certified": false
+  },
+  {
+    "voice": "Iapetus",
+    "configuration": "lingua-default",
+    "all_offers_denominator": 104,
+    "HTTP200_signal_valid": 103,
+    "invalid_audio_in_denominator": 1,
+    "timing_missing": 0,
+    "HTTP200_signal_complete_le500ms": 63,
+    "both_CER0_word_screen_separate": 14,
+    "both_normalized_exact_word_screen_separate": 13,
+    "JOINT_HTTP200_signal_le500ms_and_both_CER0": 10,
+    "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 10,
+    "JOINT_CER0_fraction_all_offers": 0.09615384615384616,
+    "JOINT_exact_fraction_all_offers": 0.09615384615384616,
+    "complete_ms_unconditioned_all_offers": {
+      "p50": 493.1365874945186,
+      "p95": 578.0282443913165,
+      "max": 968.9116080116946
+    },
+    "proxy_offers": 1,
+    "proxy_joint_CER0": 0,
+    "joint_CER0_target_calibration": {
+      "control_ASR_screen_matches": 4,
+      "target_language_control_not_available": 6
+    },
+    "joint_CER0_actual_reference_calibration": {
+      "control_ASR_screen_matches": 10
+    },
+    "quality_certified": false
+  },
+  {
+    "voice": "Iapetus",
+    "configuration": "lingua-tutor",
+    "all_offers_denominator": 104,
+    "HTTP200_signal_valid": 104,
+    "invalid_audio_in_denominator": 0,
+    "timing_missing": 0,
+    "HTTP200_signal_complete_le500ms": 35,
+    "both_CER0_word_screen_separate": 20,
+    "both_normalized_exact_word_screen_separate": 16,
+    "JOINT_HTTP200_signal_le500ms_and_both_CER0": 7,
+    "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 7,
+    "JOINT_CER0_fraction_all_offers": 0.0673076923076923,
+    "JOINT_exact_fraction_all_offers": 0.0673076923076923,
+    "complete_ms_unconditioned_all_offers": {
+      "p50": 536.8642655084841,
+      "p95": 585.6171331382939,
+      "max": 970.2692159917206
+    },
+    "proxy_offers": 1,
+    "proxy_joint_CER0": 0,
+    "joint_CER0_target_calibration": {
+      "control_ASR_screen_matches": 3,
+      "target_language_control_not_available": 4
+    },
+    "joint_CER0_actual_reference_calibration": {
+      "control_ASR_screen_matches": 7
+    },
+    "quality_certified": false
+  },
+  {
+    "voice": "Iapetus",
+    "configuration": "lingua-video",
+    "all_offers_denominator": 104,
+    "HTTP200_signal_valid": 104,
+    "invalid_audio_in_denominator": 0,
+    "timing_missing": 0,
+    "HTTP200_signal_complete_le500ms": 33,
+    "both_CER0_word_screen_separate": 18,
+    "both_normalized_exact_word_screen_separate": 14,
+    "JOINT_HTTP200_signal_le500ms_and_both_CER0": 7,
+    "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 7,
+    "JOINT_CER0_fraction_all_offers": 0.0673076923076923,
+    "JOINT_exact_fraction_all_offers": 0.0673076923076923,
+    "complete_ms_unconditioned_all_offers": {
+      "p50": 536.1028665065533,
+      "p95": 583.9794089930365,
+      "max": 964.6428079868201
+    },
+    "proxy_offers": 1,
+    "proxy_joint_CER0": 0,
+    "joint_CER0_target_calibration": {
+      "control_ASR_screen_matches": 3,
+      "target_language_control_not_available": 4
+    },
+    "joint_CER0_actual_reference_calibration": {
+      "control_ASR_screen_matches": 7
+    },
+    "quality_certified": false
+  },
+  {
+    "voice": "Kore",
+    "configuration": "lingua-default",
+    "all_offers_denominator": 104,
+    "HTTP200_signal_valid": 104,
+    "invalid_audio_in_denominator": 0,
+    "timing_missing": 0,
+    "HTTP200_signal_complete_le500ms": 80,
+    "both_CER0_word_screen_separate": 16,
+    "both_normalized_exact_word_screen_separate": 15,
+    "JOINT_HTTP200_signal_le500ms_and_both_CER0": 13,
+    "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 12,
+    "JOINT_CER0_fraction_all_offers": 0.125,
+    "JOINT_exact_fraction_all_offers": 0.11538461538461539,
+    "complete_ms_unconditioned_all_offers": {
+      "p50": 479.73158399690874,
+      "p95": 574.9709972456913,
+      "max": 970.6801369902678
+    },
+    "proxy_offers": 1,
+    "proxy_joint_CER0": 0,
+    "joint_CER0_target_calibration": {
+      "control_ASR_screen_matches": 3,
+      "target_language_control_not_available": 10
+    },
+    "joint_CER0_actual_reference_calibration": {
+      "control_ASR_screen_matches": 13
+    },
+    "quality_certified": false
+  },
+  {
+    "voice": "Kore",
+    "configuration": "lingua-tutor",
+    "all_offers_denominator": 104,
+    "HTTP200_signal_valid": 104,
+    "invalid_audio_in_denominator": 0,
+    "timing_missing": 0,
+    "HTTP200_signal_complete_le500ms": 64,
+    "both_CER0_word_screen_separate": 25,
+    "both_normalized_exact_word_screen_separate": 21,
+    "JOINT_HTTP200_signal_le500ms_and_both_CER0": 14,
+    "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 14,
+    "JOINT_CER0_fraction_all_offers": 0.1346153846153846,
+    "JOINT_exact_fraction_all_offers": 0.1346153846153846,
+    "complete_ms_unconditioned_all_offers": {
+      "p50": 492.88127350155264,
+      "p95": 578.4564986955957,
+      "max": 972.8813249967061
+    },
+    "proxy_offers": 1,
+    "proxy_joint_CER0": 0,
+    "joint_CER0_target_calibration": {
+      "control_ASR_screen_matches": 4,
+      "target_language_control_not_available": 10
+    },
+    "joint_CER0_actual_reference_calibration": {
+      "control_ASR_screen_matches": 14
+    },
+    "quality_certified": false
+  },
+  {
+    "voice": "Kore",
+    "configuration": "lingua-video",
+    "all_offers_denominator": 104,
+    "HTTP200_signal_valid": 104,
+    "invalid_audio_in_denominator": 0,
+    "timing_missing": 0,
+    "HTTP200_signal_complete_le500ms": 64,
+    "both_CER0_word_screen_separate": 26,
+    "both_normalized_exact_word_screen_separate": 22,
+    "JOINT_HTTP200_signal_le500ms_and_both_CER0": 14,
+    "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 14,
+    "JOINT_CER0_fraction_all_offers": 0.1346153846153846,
+    "JOINT_exact_fraction_all_offers": 0.1346153846153846,
+    "complete_ms_unconditioned_all_offers": {
+      "p50": 492.5350020203041,
+      "p95": 579.9584567372221,
+      "max": 974.6383010060526
+    },
+    "proxy_offers": 1,
+    "proxy_joint_CER0": 0,
+    "joint_CER0_target_calibration": {
+      "control_ASR_screen_matches": 4,
+      "target_language_control_not_available": 10
+    },
+    "joint_CER0_actual_reference_calibration": {
+      "control_ASR_screen_matches": 14
+    },
+    "quality_certified": false
+  },
+  {
+    "voice": "Umbriel",
+    "configuration": "lingua-default",
+    "all_offers_denominator": 104,
+    "HTTP200_signal_valid": 104,
+    "invalid_audio_in_denominator": 0,
+    "timing_missing": 0,
+    "HTTP200_signal_complete_le500ms": 64,
+    "both_CER0_word_screen_separate": 11,
+    "both_normalized_exact_word_screen_separate": 9,
+    "JOINT_HTTP200_signal_le500ms_and_both_CER0": 8,
+    "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 7,
+    "JOINT_CER0_fraction_all_offers": 0.07692307692307693,
+    "JOINT_exact_fraction_all_offers": 0.0673076923076923,
+    "complete_ms_unconditioned_all_offers": {
+      "p50": 490.7876835059142,
+      "p95": 581.8076285970164,
+      "max": 995.0225480133668
+    },
+    "proxy_offers": 1,
+    "proxy_joint_CER0": 0,
+    "joint_CER0_target_calibration": {
+      "control_ASR_screen_matches": 2,
+      "target_language_control_not_available": 5,
+      "control_ASR_mismatch_review": 1
+    },
+    "joint_CER0_actual_reference_calibration": {
+      "control_ASR_screen_matches": 7,
+      "control_ASR_mismatch_review": 1
+    },
+    "quality_certified": false
+  },
+  {
+    "voice": "Umbriel",
+    "configuration": "lingua-tutor",
+    "all_offers_denominator": 104,
+    "HTTP200_signal_valid": 104,
+    "invalid_audio_in_denominator": 0,
+    "timing_missing": 0,
+    "HTTP200_signal_complete_le500ms": 37,
+    "both_CER0_word_screen_separate": 20,
+    "both_normalized_exact_word_screen_separate": 18,
+    "JOINT_HTTP200_signal_le500ms_and_both_CER0": 7,
+    "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 7,
+    "JOINT_CER0_fraction_all_offers": 0.0673076923076923,
+    "JOINT_exact_fraction_all_offers": 0.0673076923076923,
+    "complete_ms_unconditioned_all_offers": {
+      "p50": 538.1039555068128,
+      "p95": 582.138808198215,
+      "max": 1042.4281969899312
+    },
+    "proxy_offers": 1,
+    "proxy_joint_CER0": 0,
+    "joint_CER0_target_calibration": {
+      "control_ASR_screen_matches": 2,
+      "target_language_control_not_available": 4,
+      "control_ASR_mismatch_review": 1
+    },
+    "joint_CER0_actual_reference_calibration": {
+      "control_ASR_screen_matches": 6,
+      "control_ASR_mismatch_review": 1
+    },
+    "quality_certified": false
+  },
+  {
+    "voice": "Umbriel",
+    "configuration": "lingua-video",
+    "all_offers_denominator": 104,
+    "HTTP200_signal_valid": 104,
+    "invalid_audio_in_denominator": 0,
+    "timing_missing": 0,
+    "HTTP200_signal_complete_le500ms": 37,
+    "both_CER0_word_screen_separate": 20,
+    "both_normalized_exact_word_screen_separate": 18,
+    "JOINT_HTTP200_signal_le500ms_and_both_CER0": 7,
+    "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 7,
+    "JOINT_CER0_fraction_all_offers": 0.0673076923076923,
+    "JOINT_exact_fraction_all_offers": 0.0673076923076923,
+    "complete_ms_unconditioned_all_offers": {
+      "p50": 535.3902454953641,
+      "p95": 580.2864528988721,
+      "max": 1044.1730190068483
+    },
+    "proxy_offers": 1,
+    "proxy_joint_CER0": 0,
+    "joint_CER0_target_calibration": {
+      "control_ASR_screen_matches": 2,
+      "target_language_control_not_available": 4,
+      "control_ASR_mismatch_review": 1
+    },
+    "joint_CER0_actual_reference_calibration": {
+      "control_ASR_screen_matches": 6,
+      "control_ASR_mismatch_review": 1
+    },
+    "quality_certified": false
+  },
+  {
+    "voice": "Zephyr",
+    "configuration": "lingua-default",
+    "all_offers_denominator": 104,
+    "HTTP200_signal_valid": 104,
+    "invalid_audio_in_denominator": 0,
+    "timing_missing": 0,
+    "HTTP200_signal_complete_le500ms": 17,
+    "both_CER0_word_screen_separate": 13,
+    "both_normalized_exact_word_screen_separate": 11,
+    "JOINT_HTTP200_signal_le500ms_and_both_CER0": 4,
+    "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 3,
+    "JOINT_CER0_fraction_all_offers": 0.038461538461538464,
+    "JOINT_exact_fraction_all_offers": 0.028846153846153848,
+    "complete_ms_unconditioned_all_offers": {
+      "p50": 542.0328469917877,
+      "p95": 588.0031174921896,
+      "max": 968.7522269960027
+    },
+    "proxy_offers": 1,
+    "proxy_joint_CER0": 0,
+    "joint_CER0_target_calibration": {
+      "control_ASR_screen_matches": 1,
+      "target_language_control_not_available": 2,
+      "control_ASR_mismatch_review": 1
+    },
+    "joint_CER0_actual_reference_calibration": {
+      "control_ASR_screen_matches": 3,
+      "control_ASR_mismatch_review": 1
+    },
+    "quality_certified": false
+  },
+  {
+    "voice": "Zephyr",
+    "configuration": "lingua-tutor",
+    "all_offers_denominator": 104,
+    "HTTP200_signal_valid": 104,
+    "invalid_audio_in_denominator": 0,
+    "timing_missing": 0,
+    "HTTP200_signal_complete_le500ms": 5,
+    "both_CER0_word_screen_separate": 20,
+    "both_normalized_exact_word_screen_separate": 17,
+    "JOINT_HTTP200_signal_le500ms_and_both_CER0": 2,
+    "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 2,
+    "JOINT_CER0_fraction_all_offers": 0.019230769230769232,
+    "JOINT_exact_fraction_all_offers": 0.019230769230769232,
+    "complete_ms_unconditioned_all_offers": {
+      "p50": 559.9063154950272,
+      "p95": 608.5754001440363,
+      "max": 982.9643109987956
+    },
+    "proxy_offers": 1,
+    "proxy_joint_CER0": 0,
+    "joint_CER0_target_calibration": {
+      "control_ASR_screen_matches": 2
+    },
+    "joint_CER0_actual_reference_calibration": {
+      "control_ASR_screen_matches": 2
+    },
+    "quality_certified": false
+  },
+  {
+    "voice": "Zephyr",
+    "configuration": "lingua-video",
+    "all_offers_denominator": 104,
+    "HTTP200_signal_valid": 104,
+    "invalid_audio_in_denominator": 0,
+    "timing_missing": 0,
+    "HTTP200_signal_complete_le500ms": 5,
+    "both_CER0_word_screen_separate": 21,
+    "both_normalized_exact_word_screen_separate": 17,
+    "JOINT_HTTP200_signal_le500ms_and_both_CER0": 2,
+    "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 2,
+    "JOINT_CER0_fraction_all_offers": 0.019230769230769232,
+    "JOINT_exact_fraction_all_offers": 0.019230769230769232,
+    "complete_ms_unconditioned_all_offers": {
+      "p50": 558.2674235047307,
+      "p95": 604.9845823479699,
+      "max": 980.1176550099626
+    },
+    "proxy_offers": 1,
+    "proxy_joint_CER0": 0,
+    "joint_CER0_target_calibration": {
+      "control_ASR_screen_matches": 2
+    },
+    "joint_CER0_actual_reference_calibration": {
+      "control_ASR_screen_matches": 2
+    },
+    "quality_certified": false
+  },
+  {
+    "voice": "no-stock-voice",
+    "configuration": "worker-auto-not-current-Lingua-UI",
+    "all_offers_denominator": 104,
+    "HTTP200_signal_valid": 104,
+    "invalid_audio_in_denominator": 0,
+    "timing_missing": 0,
+    "HTTP200_signal_complete_le500ms": 103,
+    "both_CER0_word_screen_separate": 43,
+    "both_normalized_exact_word_screen_separate": 39,
+    "JOINT_HTTP200_signal_le500ms_and_both_CER0": 43,
+    "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 39,
+    "JOINT_CER0_fraction_all_offers": 0.41346153846153844,
+    "JOINT_exact_fraction_all_offers": 0.375,
+    "complete_ms_unconditioned_all_offers": {
+      "p50": 257.4399575096322,
+      "p95": 301.09538655960927,
+      "max": 1105.1810490025673
+    },
+    "proxy_offers": 1,
+    "proxy_joint_CER0": 0,
+    "joint_CER0_target_calibration": {
+      "control_ASR_partial_or_mismatch_review": 5,
+      "target_language_control_not_available": 37,
+      "control_ASR_screen_matches": 1
+    },
+    "joint_CER0_actual_reference_calibration": {
+      "exact_reference_control_not_available": 43
+    },
+    "quality_certified": false
+  },
+  {
+    "voice": "no-stock-voice",
+    "configuration": "worker-design-not-current-Lingua-UI",
+    "all_offers_denominator": 104,
+    "HTTP200_signal_valid": 104,
+    "invalid_audio_in_denominator": 0,
+    "timing_missing": 0,
+    "HTTP200_signal_complete_le500ms": 103,
+    "both_CER0_word_screen_separate": 48,
+    "both_normalized_exact_word_screen_separate": 41,
+    "JOINT_HTTP200_signal_le500ms_and_both_CER0": 48,
+    "JOINT_HTTP200_signal_le500ms_and_both_normalized_exact": 41,
+    "JOINT_CER0_fraction_all_offers": 0.46153846153846156,
+    "JOINT_exact_fraction_all_offers": 0.3942307692307692,
+    "complete_ms_unconditioned_all_offers": {
+      "p50": 259.83568049559835,
+      "p95": 303.4070538531523,
+      "max": 1093.961353006307
+    },
+    "proxy_offers": 1,
+    "proxy_joint_CER0": 0,
+    "joint_CER0_target_calibration": {
+      "control_ASR_partial_or_mismatch_review": 6,
+      "control_ASR_screen_matches": 2,
+      "target_language_control_not_available": 40
+    },
+    "joint_CER0_actual_reference_calibration": {
+      "exact_reference_control_not_available": 48
+    },
+    "quality_certified": false
+  }
+]

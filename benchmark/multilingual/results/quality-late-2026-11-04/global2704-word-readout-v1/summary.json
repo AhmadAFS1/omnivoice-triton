@@ -1,0 +1,525 @@
+{
+  "measurement_kind": "Independent local CPU-only exact-fixture join/metric recomputation; no model inference",
+  "TTS_GPU": "NVIDIA GeForce RTX 4070 Ti",
+  "TTS_physical_VRAM_MiB": 12282,
+  "TTS_visible_VRAM_bytes": 12481134592,
+  "TTS_driver": "610.57.04",
+  "TTS_CUDA": "12.8",
+  "TTS_date": "2026-11-04",
+  "TTS_source": "377de39b5716266aea64adb05aaf1e674e5adffd",
+  "TTS_profile": "hybridFP16/graph2/KVoff/splitoff/codec1/cache0;16steps;actualpresetoptions;sequential",
+  "TTS_co_load": "Dedicated GPU timing leases with telemetry+health checks; no ASR/setup/transfers during inference timing",
+  "ASR_hardware": {
+    "LLM": "RTX4070Ti/12282MiBphysical/12481134592bytesvisible/driver610.57.04/CUDA12.8",
+    "CTC": "RTX4070/12282MiBphysical/12450070528bytesvisible/driver580.95.05/CUDA12.8"
+  },
+  "ASR_protocol_ids": {
+    "omniASR_LLM_Unlimited_1B_v2": [
+      "modern59071593-batch1-v1-7f8784ef9d826da07f57"
+    ],
+    "omniASR_CTC_1B_v2": [
+      "legacy-batch1"
+    ]
+  },
+  "hardware_evidence": "Each retained TTS metadata and published ASR metadata records fresh nvidia-smi physical VRAM and Torch visible bytes; CPU-only reused-data readout here",
+  "expected_fixture_ids": 2704,
+  "exact_ID_coverage": 2704,
+  "duplicate_or_missing_fixture_ids": 0,
+  "routes": 104,
+  "per_route_cells": 26,
+  "metric_rows_recomputed": 5400,
+  "all": {
+    "offered": 2704,
+    "HTTP200": 2704,
+    "signal_valid": 2700,
+    "invalid_audio": 4,
+    "both_judges_present": 2700,
+    "both_normalized_exact": 463,
+    "both_character_exact_CER0": 535,
+    "either_judge_character_mismatch": 2165,
+    "LLM_normalized_exact": 992,
+    "CTC_normalized_exact": 517,
+    "judge_transcripts_disagree": 2103,
+    "unique_ASR_audio_script_evidence": 2395,
+    "native_reference": 192,
+    "EN_fallback_reference": 2304,
+    "no_reference": 208,
+    "ASR_mapping_proxy": 26,
+    "actual_reference_calibration_status": {
+      "control_ASR_mismatch_review": 93,
+      "control_ASR_screen_matches": 2403,
+      "exact_reference_control_not_available": 208
+    },
+    "target_language_calibration_status": {
+      "control_ASR_mismatch_review": 93,
+      "control_ASR_screen_matches": 109,
+      "target_language_control_not_available": 2470,
+      "control_ASR_partial_or_mismatch_review": 32
+    },
+    "per_judge_micro": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "reference_characters": 67386,
+        "character_edits": 9132,
+        "reference_words": 14229,
+        "word_edits": 5190
+      },
+      "omniASR_CTC_1B_v2": {
+        "reference_characters": 67386,
+        "character_edits": 23793,
+        "reference_words": 14229,
+        "word_edits": 9180
+      }
+    },
+    "native_or_human_quality_certified": false
+  },
+  "by_configuration": {
+    "lingua-default": {
+      "offered": 832,
+      "HTTP200": 832,
+      "signal_valid": 828,
+      "invalid_audio": 4,
+      "both_judges_present": 828,
+      "both_normalized_exact": 99,
+      "both_character_exact_CER0": 109,
+      "either_judge_character_mismatch": 719,
+      "LLM_normalized_exact": 230,
+      "CTC_normalized_exact": 114,
+      "judge_transcripts_disagree": 686,
+      "unique_ASR_audio_script_evidence": 828,
+      "native_reference": 64,
+      "EN_fallback_reference": 768,
+      "no_reference": 0,
+      "ASR_mapping_proxy": 8,
+      "actual_reference_calibration_status": {
+        "control_ASR_mismatch_review": 31,
+        "control_ASR_screen_matches": 801
+      },
+      "target_language_calibration_status": {
+        "control_ASR_mismatch_review": 31,
+        "control_ASR_screen_matches": 35,
+        "target_language_control_not_available": 760,
+        "control_ASR_partial_or_mismatch_review": 6
+      },
+      "per_judge_micro": {
+        "omniASR_LLM_Unlimited_1B_v2": {
+          "reference_characters": 20676,
+          "character_edits": 3348,
+          "reference_words": 4365,
+          "word_edits": 1810
+        },
+        "omniASR_CTC_1B_v2": {
+          "reference_characters": 20676,
+          "character_edits": 8516,
+          "reference_words": 4365,
+          "word_edits": 3122
+        }
+      },
+      "native_or_human_quality_certified": false
+    },
+    "lingua-tutor": {
+      "offered": 832,
+      "HTTP200": 832,
+      "signal_valid": 832,
+      "invalid_audio": 0,
+      "both_judges_present": 832,
+      "both_normalized_exact": 141,
+      "both_character_exact_CER0": 165,
+      "either_judge_character_mismatch": 667,
+      "LLM_normalized_exact": 316,
+      "CTC_normalized_exact": 159,
+      "judge_transcripts_disagree": 653,
+      "unique_ASR_audio_script_evidence": 832,
+      "native_reference": 64,
+      "EN_fallback_reference": 768,
+      "no_reference": 0,
+      "ASR_mapping_proxy": 8,
+      "actual_reference_calibration_status": {
+        "control_ASR_mismatch_review": 31,
+        "control_ASR_screen_matches": 801
+      },
+      "target_language_calibration_status": {
+        "control_ASR_mismatch_review": 31,
+        "control_ASR_screen_matches": 35,
+        "target_language_control_not_available": 760,
+        "control_ASR_partial_or_mismatch_review": 6
+      },
+      "per_judge_micro": {
+        "omniASR_LLM_Unlimited_1B_v2": {
+          "reference_characters": 20760,
+          "character_edits": 2522,
+          "reference_words": 4384,
+          "word_edits": 1533
+        },
+        "omniASR_CTC_1B_v2": {
+          "reference_characters": 20760,
+          "character_edits": 7172,
+          "reference_words": 4384,
+          "word_edits": 2823
+        }
+      },
+      "native_or_human_quality_certified": false
+    },
+    "lingua-video": {
+      "offered": 832,
+      "HTTP200": 832,
+      "signal_valid": 832,
+      "invalid_audio": 0,
+      "both_judges_present": 832,
+      "both_normalized_exact": 143,
+      "both_character_exact_CER0": 170,
+      "either_judge_character_mismatch": 662,
+      "LLM_normalized_exact": 322,
+      "CTC_normalized_exact": 162,
+      "judge_transcripts_disagree": 652,
+      "unique_ASR_audio_script_evidence": 832,
+      "native_reference": 64,
+      "EN_fallback_reference": 768,
+      "no_reference": 0,
+      "ASR_mapping_proxy": 8,
+      "actual_reference_calibration_status": {
+        "control_ASR_mismatch_review": 31,
+        "control_ASR_screen_matches": 801
+      },
+      "target_language_calibration_status": {
+        "control_ASR_mismatch_review": 31,
+        "control_ASR_screen_matches": 35,
+        "target_language_control_not_available": 760,
+        "control_ASR_partial_or_mismatch_review": 6
+      },
+      "per_judge_micro": {
+        "omniASR_LLM_Unlimited_1B_v2": {
+          "reference_characters": 20760,
+          "character_edits": 2509,
+          "reference_words": 4384,
+          "word_edits": 1517
+        },
+        "omniASR_CTC_1B_v2": {
+          "reference_characters": 20760,
+          "character_edits": 7262,
+          "reference_words": 4384,
+          "word_edits": 2837
+        }
+      },
+      "native_or_human_quality_certified": false
+    },
+    "worker-auto-not-current-Lingua-UI": {
+      "offered": 104,
+      "HTTP200": 104,
+      "signal_valid": 104,
+      "invalid_audio": 0,
+      "both_judges_present": 104,
+      "both_normalized_exact": 39,
+      "both_character_exact_CER0": 43,
+      "either_judge_character_mismatch": 61,
+      "LLM_normalized_exact": 64,
+      "CTC_normalized_exact": 39,
+      "judge_transcripts_disagree": 58,
+      "unique_ASR_audio_script_evidence": 104,
+      "native_reference": 0,
+      "EN_fallback_reference": 0,
+      "no_reference": 104,
+      "ASR_mapping_proxy": 1,
+      "actual_reference_calibration_status": {
+        "exact_reference_control_not_available": 104
+      },
+      "target_language_calibration_status": {
+        "control_ASR_partial_or_mismatch_review": 7,
+        "control_ASR_screen_matches": 2,
+        "target_language_control_not_available": 95
+      },
+      "per_judge_micro": {
+        "omniASR_LLM_Unlimited_1B_v2": {
+          "reference_characters": 2595,
+          "character_edits": 302,
+          "reference_words": 548,
+          "word_edits": 125
+        },
+        "omniASR_CTC_1B_v2": {
+          "reference_characters": 2595,
+          "character_edits": 357,
+          "reference_words": 548,
+          "word_edits": 195
+        }
+      },
+      "native_or_human_quality_certified": false
+    },
+    "worker-design-not-current-Lingua-UI": {
+      "offered": 104,
+      "HTTP200": 104,
+      "signal_valid": 104,
+      "invalid_audio": 0,
+      "both_judges_present": 104,
+      "both_normalized_exact": 41,
+      "both_character_exact_CER0": 48,
+      "either_judge_character_mismatch": 56,
+      "LLM_normalized_exact": 60,
+      "CTC_normalized_exact": 43,
+      "judge_transcripts_disagree": 54,
+      "unique_ASR_audio_script_evidence": 104,
+      "native_reference": 0,
+      "EN_fallback_reference": 0,
+      "no_reference": 104,
+      "ASR_mapping_proxy": 1,
+      "actual_reference_calibration_status": {
+        "exact_reference_control_not_available": 104
+      },
+      "target_language_calibration_status": {
+        "control_ASR_partial_or_mismatch_review": 7,
+        "control_ASR_screen_matches": 2,
+        "target_language_control_not_available": 95
+      },
+      "per_judge_micro": {
+        "omniASR_LLM_Unlimited_1B_v2": {
+          "reference_characters": 2595,
+          "character_edits": 451,
+          "reference_words": 548,
+          "word_edits": 205
+        },
+        "omniASR_CTC_1B_v2": {
+          "reference_characters": 2595,
+          "character_edits": 486,
+          "reference_words": 548,
+          "word_edits": 203
+        }
+      },
+      "native_or_human_quality_certified": false
+    }
+  },
+  "by_reference_profile": {
+    "cross_language_english_reference": {
+      "offered": 2304,
+      "HTTP200": 2304,
+      "signal_valid": 2301,
+      "invalid_audio": 3,
+      "both_judges_present": 2301,
+      "both_normalized_exact": 253,
+      "both_character_exact_CER0": 314,
+      "either_judge_character_mismatch": 1987,
+      "LLM_normalized_exact": 710,
+      "CTC_normalized_exact": 304,
+      "judge_transcripts_disagree": 1946,
+      "unique_ASR_audio_script_evidence": 2013,
+      "native_reference": 0,
+      "EN_fallback_reference": 2304,
+      "no_reference": 0,
+      "ASR_mapping_proxy": 24,
+      "actual_reference_calibration_status": {
+        "control_ASR_screen_matches": 2304
+      },
+      "target_language_calibration_status": {
+        "target_language_control_not_available": 2280,
+        "control_ASR_partial_or_mismatch_review": 18,
+        "control_ASR_screen_matches": 6
+      },
+      "per_judge_micro": {
+        "omniASR_LLM_Unlimited_1B_v2": {
+          "reference_characters": 56469,
+          "character_edits": 8273,
+          "reference_words": 11926,
+          "word_edits": 4807
+        },
+        "omniASR_CTC_1B_v2": {
+          "reference_characters": 56469,
+          "character_edits": 22623,
+          "reference_words": 11926,
+          "word_edits": 8665
+        }
+      },
+      "native_or_human_quality_certified": false
+    },
+    "local_target_language_reference": {
+      "offered": 192,
+      "HTTP200": 192,
+      "signal_valid": 191,
+      "invalid_audio": 1,
+      "both_judges_present": 191,
+      "both_normalized_exact": 130,
+      "both_character_exact_CER0": 130,
+      "either_judge_character_mismatch": 61,
+      "LLM_normalized_exact": 158,
+      "CTC_normalized_exact": 131,
+      "judge_transcripts_disagree": 45,
+      "unique_ASR_audio_script_evidence": 174,
+      "native_reference": 192,
+      "EN_fallback_reference": 0,
+      "no_reference": 0,
+      "ASR_mapping_proxy": 0,
+      "actual_reference_calibration_status": {
+        "control_ASR_mismatch_review": 93,
+        "control_ASR_screen_matches": 99
+      },
+      "target_language_calibration_status": {
+        "control_ASR_mismatch_review": 93,
+        "control_ASR_screen_matches": 99
+      },
+      "per_judge_micro": {
+        "omniASR_LLM_Unlimited_1B_v2": {
+          "reference_characters": 5727,
+          "character_edits": 106,
+          "reference_words": 1207,
+          "word_edits": 53
+        },
+        "omniASR_CTC_1B_v2": {
+          "reference_characters": 5727,
+          "character_edits": 327,
+          "reference_words": 1207,
+          "word_edits": 117
+        }
+      },
+      "native_or_human_quality_certified": false
+    },
+    "worker_auto_no_reference": {
+      "offered": 104,
+      "HTTP200": 104,
+      "signal_valid": 104,
+      "invalid_audio": 0,
+      "both_judges_present": 104,
+      "both_normalized_exact": 39,
+      "both_character_exact_CER0": 43,
+      "either_judge_character_mismatch": 61,
+      "LLM_normalized_exact": 64,
+      "CTC_normalized_exact": 39,
+      "judge_transcripts_disagree": 58,
+      "unique_ASR_audio_script_evidence": 104,
+      "native_reference": 0,
+      "EN_fallback_reference": 0,
+      "no_reference": 104,
+      "ASR_mapping_proxy": 1,
+      "actual_reference_calibration_status": {
+        "exact_reference_control_not_available": 104
+      },
+      "target_language_calibration_status": {
+        "control_ASR_partial_or_mismatch_review": 7,
+        "control_ASR_screen_matches": 2,
+        "target_language_control_not_available": 95
+      },
+      "per_judge_micro": {
+        "omniASR_LLM_Unlimited_1B_v2": {
+          "reference_characters": 2595,
+          "character_edits": 302,
+          "reference_words": 548,
+          "word_edits": 125
+        },
+        "omniASR_CTC_1B_v2": {
+          "reference_characters": 2595,
+          "character_edits": 357,
+          "reference_words": 548,
+          "word_edits": 195
+        }
+      },
+      "native_or_human_quality_certified": false
+    },
+    "worker_design_no_reference": {
+      "offered": 104,
+      "HTTP200": 104,
+      "signal_valid": 104,
+      "invalid_audio": 0,
+      "both_judges_present": 104,
+      "both_normalized_exact": 41,
+      "both_character_exact_CER0": 48,
+      "either_judge_character_mismatch": 56,
+      "LLM_normalized_exact": 60,
+      "CTC_normalized_exact": 43,
+      "judge_transcripts_disagree": 54,
+      "unique_ASR_audio_script_evidence": 104,
+      "native_reference": 0,
+      "EN_fallback_reference": 0,
+      "no_reference": 104,
+      "ASR_mapping_proxy": 1,
+      "actual_reference_calibration_status": {
+        "exact_reference_control_not_available": 104
+      },
+      "target_language_calibration_status": {
+        "control_ASR_partial_or_mismatch_review": 7,
+        "control_ASR_screen_matches": 2,
+        "target_language_control_not_available": 95
+      },
+      "per_judge_micro": {
+        "omniASR_LLM_Unlimited_1B_v2": {
+          "reference_characters": 2595,
+          "character_edits": 451,
+          "reference_words": 548,
+          "word_edits": 205
+        },
+        "omniASR_CTC_1B_v2": {
+          "reference_characters": 2595,
+          "character_edits": 486,
+          "reference_words": 548,
+          "word_edits": 203
+        }
+      },
+      "native_or_human_quality_certified": false
+    }
+  },
+  "used_reference_controls": 64,
+  "reference_controls_both_ASR_exact": 33,
+  "reference_controls_mismatch_review": 31,
+  "routes_zero_both_normalized_exact": [
+    "af",
+    "am",
+    "ar-AE",
+    "ar-DZ",
+    "ar-TN",
+    "as",
+    "ayp",
+    "bjj",
+    "da",
+    "dag",
+    "dyu",
+    "gu",
+    "ha",
+    "haw",
+    "he",
+    "ht",
+    "ig",
+    "ja",
+    "km",
+    "kn",
+    "ln",
+    "lo",
+    "lt",
+    "mai",
+    "mn",
+    "mr",
+    "my",
+    "nan",
+    "ne",
+    "nso",
+    "ny",
+    "pcm",
+    "sd",
+    "si",
+    "skr",
+    "sn",
+    "so",
+    "sq",
+    "te",
+    "th",
+    "ti",
+    "tk",
+    "tn",
+    "tw",
+    "ug",
+    "yo",
+    "yue"
+  ],
+  "routes_all26_both_normalized_exact": [
+    "de",
+    "en",
+    "pl"
+  ],
+  "weak_nonempty_signal_selected_clips": 3,
+  "new_optimization_regression_count": null,
+  "comparison_limitation": "This V6 grid has no matched earlier 2704-case arm; word-screen mismatches describe tested behavior, not new optimization regressions or default-repo failures.",
+  "native_or_human_quality_certified": false,
+  "caveats": [
+    "ASR exactness/mismatch is not native pronunciation, word fidelity, MOS or speaker identity certification.",
+    "No global ASR confidence/calibration threshold exists. Two related judges can agree on an error.",
+    "192 native-reference clone cases and2304 English-fallback clone cases cover different languages; their rates do not isolate reference-language causality.",
+    "An English-reference transcript control match does not calibrate the target language.",
+    "Twi26cells use aka_Latn as an explicit broader Akan proxy; MinNan uses published romanized text. No native-language certification is inferred.",
+    "Only one short published text per route was used across this grid; continuous controls, all utterances and concurrent word quality were not exhaustively tested.",
+    "The four empty HTTP200 WAVs remain failures. Expected400 validation cases and unrelated cached responses are excluded by exact run+fixture identity.",
+    "Worker auto/design are experimental worker capabilities, not current Lingua UI voice cards."
+  ]
+}

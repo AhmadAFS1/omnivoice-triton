@@ -1,0 +1,112 @@
+{
+  "script": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/global2704_joint_slo.py",
+  "script_sha256": "e941ecae8d23168c93d17cf0f974429cb777643babd07eaafa6525b0e5bcf172",
+  "score_source": {
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/report-global4534-v1/scored-logical-cases.jsonl",
+    "sha256": "3564556de0ecf9c49b249cdb24b6ae626b96eb6226068e2310801749cfc6168f"
+  },
+  "fixture_sha256": "39005ffe68948e87febe6760c7d793c57a524fd97f0531ff016be5520b01dccd",
+  "original_request_timing_sources": [
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/modern-v6-diagnostic-grid-00-remaining100-Despina-lingua-video/requests.jsonl",
+      "sha256": "7ea063f319207242af945e15758d980a8e9b7361a1a54186717f7cf1b7ef57c8"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/modern-v6-diagnostic-grid-01-remaining100-Despina-lingua-default/requests.jsonl",
+      "sha256": "e12fe18b0c0ba6865b8291416021d47c45a59bfbdf2ee7264758591a69fdd779"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/modern-v6-diagnostic-grid-02-remaining100-Despina-lingua-tutor/requests.jsonl",
+      "sha256": "09cf0130ee2f94b4305be98a8fc390841dbfbcf04c35caa870a1006e8402a235"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/modern-v6-diagnostic-grid-03-remaining100-Zephyr-lingua-video/requests.jsonl",
+      "sha256": "7667ad22fa2c8982fafea19f5cd95a0812da14c11a97e5c26f87ce2d593e4911"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/modern-v6-diagnostic-grid-04-remaining100-Zephyr-lingua-default/requests.jsonl",
+      "sha256": "ec4cafa1589496bead5e5e57eb2668a230c582321b98c6fffb61ed62beff9679"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/modern-v6-diagnostic-grid-05-remaining100-Zephyr-lingua-tutor/requests.jsonl",
+      "sha256": "d0f537d616e13c5ee029adddf90d6039cebd062bf431dbf6f5f52d61749cd98f"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/modern-v6-diagnostic-grid-06-remaining100-Kore-lingua-video/requests.jsonl",
+      "sha256": "00e89d96eff1eeae6fd635ac1ee1161ca2649b1e57c1fa77309f83466dd5ae2a"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/modern-v6-diagnostic-grid-07-remaining100-Kore-lingua-default/requests.jsonl",
+      "sha256": "035d901a143f83a2012bbdd87305ba39d0af420af64b25b524c5cfcbf3ee10ba"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/modern-v6-diagnostic-grid-08-remaining100-Kore-lingua-tutor/requests.jsonl",
+      "sha256": "56bdba5dc45dce540cc8b65075bc998c84e51dea35d57604e975cb8d5244a47f"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/modern-v6-diagnostic-grid-09-remaining100-Charon-lingua-video/requests.jsonl",
+      "sha256": "14ab75bc7a4c87ce3f01b1ea3c9bd795c6a80f7ba1b75c756a4e6bacab90a57a"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/modern-v6-diagnostic-grid-10-remaining100-Charon-lingua-default/requests.jsonl",
+      "sha256": "c8270b0c53834e20247370d3aa1fa1e9722b777300872e737cb49c2db345a327"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/modern-v6-diagnostic-grid-11-remaining100-Charon-lingua-tutor/requests.jsonl",
+      "sha256": "5d5454cbbb7b85e8f1d90ccedc9f5def9e6b06e7ba66c39f70d2c3def25ac3aa"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/modern-v6-diagnostic-grid-12-remaining100-Iapetus-lingua-video/requests.jsonl",
+      "sha256": "2c8dae0bf7c4bc4f8ef1d9fb213bcb21b9f715def09d9ec123530e8633015ea4"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/modern-v6-diagnostic-grid-13-remaining100-Iapetus-lingua-default/requests.jsonl",
+      "sha256": "4310980ca49d8b9d051e2edd5724d707c634a79ad75f3c6c9a3a39edf9f9e7db"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/modern-v6-diagnostic-grid-14-remaining100-Iapetus-lingua-tutor/requests.jsonl",
+      "sha256": "c4ac80326ab399e43db562091f84758db883f79e428ec5edf8c5705125951205"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/modern-v6-diagnostic-grid-15-remaining100-Fenrir-lingua-video/requests.jsonl",
+      "sha256": "90e7767c75e64df81ac9cc5dc253ee9788e43be331e35512dd7ac77830f56db1"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/modern-v6-diagnostic-grid-16-remaining100-Fenrir-lingua-default/requests.jsonl",
+      "sha256": "1c64152728ec9a3abc93a77c9db1bcede8f4241882cd9e5eb711b05c25da6c8b"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/modern-v6-diagnostic-grid-17-remaining100-Fenrir-lingua-tutor/requests.jsonl",
+      "sha256": "59eaf9c5a68e9b913ce193cef866d336b4cc895f9fb3cc422baca491e754a947"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/modern-v6-diagnostic-grid-18-remaining100-Umbriel-lingua-video/requests.jsonl",
+      "sha256": "2cba9802eac6de537e68ea5b3aba4db5f1eb2b737fc355c149d8559011609a91"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/modern-v6-diagnostic-grid-19-remaining100-Umbriel-lingua-default/requests.jsonl",
+      "sha256": "9ac303c2fe20ae898a6b08eb67b05e4673055f1b1d70df5ea78554fe883ba927"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/modern-v6-diagnostic-grid-20-remaining100-Umbriel-lingua-tutor/requests.jsonl",
+      "sha256": "8ffbdb23f90c8c42f44c63374670ee0a4e8318de55b810f7dca657da444014d9"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/modern-v6-diagnostic-grid-21-remaining100-auto/requests.jsonl",
+      "sha256": "c3c677a6ee71efc49a6e559d001deef75e6866c0940a3c77d2dce9ad456c06a5"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/modern-v6-diagnostic-grid-22-remaining100-design/requests.jsonl",
+      "sha256": "09b250522e519d6e000ee48b5bd30508a29196f8c9d268d1c1fd8455ea294412"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/modern-v6-voice-gate104/requests.jsonl",
+      "sha256": "8bfd90543714e9f4bde222101f92c19c7509992d06570312468af435d1f70251"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/modern-v6-voice-primary300/requests.jsonl",
+      "sha256": "aadd5447410baae2d0fc329f7026240e938195196142c15d39ab6f5b5fcc6c32"
+    }
+  ],
+  "matched_timing_rows": 2704
+}

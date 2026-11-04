@@ -1,0 +1,33 @@
+{
+  "at": "2026-11-04T13:47:12.875561+00:00",
+  "measurement_kind": "CPU-only independent scalar cosine, audio hash and strict SHA+script ASR join; no new inference",
+  "generated": 396,
+  "pairs": 264,
+  "unique_embeddings": 376,
+  "unchanged_controls": 44,
+  "quality_certified": false,
+  "ASR_protocols": {
+    "omniASR_LLM_Unlimited_1B_v2": "modern59071593-batch1-v1-7f8784ef9d826da07f57",
+    "omniASR_CTC_1B_v2": "legacy-batch1"
+  },
+  "variants": {
+    "prefix10": {
+      "n": 110,
+      "median_own_cosine_delta": -0.05723690225630765,
+      "lost_top1": 3,
+      "gained_top1": 2,
+      "lost_both_exact": 3,
+      "gained_both_exact": 21,
+      "both_CER_worse": 5
+    },
+    "prefix17": {
+      "n": 110,
+      "median_own_cosine_delta": -0.026880774560862852,
+      "lost_top1": 1,
+      "gained_top1": 2,
+      "lost_both_exact": 4,
+      "gained_both_exact": 15,
+      "both_CER_worse": 7
+    }
+  }
+}
