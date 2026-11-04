@@ -1,6 +1,6 @@
 # Fresh synthesis, quality and scaling — November 4, 2026
 
-Updated at 15:35 UTC during the authorized timebox ending at 16:00 UTC today
+Updated at 15:56 UTC during the authorized timebox ending at 16:00 UTC today
 (10am Chicago). **The target of 1,000 fresh complete-audio responses in 1–2 seconds
 on one RTX 4070-class GPU remains unmet.** The best completed test of 1,000 novel
 inputs takes 374.738 seconds on the RTX 4070 Ti. A separate sequential fixture
@@ -24,6 +24,10 @@ latency; it is not a full speech-to-speech call measurement.
 | Ti, Triton eager B8/KV off, ce48 | 429.822 s | 410.688 s | 1,000/1,000 |
 | Ti, Triton eager B1/KV off, ce48 | **374.738 s** | **356.228 s** | 1,000/1,000 |
 | Ti, raw sockets, B1/collect0, ce48, cyclic 1,000 inputs | **1,857.899 s** | **1,765.744 s** | **5,000/5,000** |
+
+Burst and staggered p95 values use the recorded linear interpolation. The
+sequential table and capture-deferral section identify their differing methods;
+raw values and the independent nearest-rank recomputation remain available.
 
 Every offer remains in the success/failure denominator. Signal validity is
 separate from correct words and voice. The eager arms use 16 steps, speed1,
@@ -97,6 +101,8 @@ arm's first request, mean improved by only 0.9%. Fused startup warmup took
 mixed evidence, not a general eager-throughput speedup; the option stays off by
 default. Every OFF and ON body matches prior two-judge evidence by exact SHA,
 expected text and ASR language/script, requiring zero new ASR inputs.
+These two p95 values use linear interpolation; nearest-rank values are
+415.08→391.47 ms and do not change the interpretation.
 
 Capture deferral also remains optional and defaults to zero. A matched 528-request
 4070 screen returned all four arms' 132 WAVs valid, with N16/N64/eager each
@@ -173,8 +179,9 @@ a language is supported. The audio guard rejects empty/nonfinite/all-zero output
 it does not repair words or certify near-silent audio.
 
 The 16-step benchmark/Lingua request profile stays. The worker API fallback
-remains 32 steps when the client omits the parameter; all reported experiments
-explicitly supplied 16. Eight/four steps improve sequential speed but worsen
+remains 32 steps when the client omits the parameter. Baseline/load experiments
+explicitly supply 16; experimental step/control overrides remain labeled.
+Eight/four steps improve sequential speed but worsen
 both judges' CER on 22/50 of 104 matched routes. Reference shortening also remains
 experimental. With original target duration held fixed, English-reference p95
 falls 570.6→385.0/418.2 ms at ten/seventeen words, but three/four baseline-exact
@@ -213,6 +220,31 @@ The isolated Lingua SDK prepared-reference cache/control-forwarding work is
 pushed on its separate branch, with its checks recorded. This experiment does
 not claim an application deployment or MuseTalk change.
 
+To reproduce the measured serving configuration, use the pinned runtime and
+checkpoint above, register matching full references before timing, and launch:
+
+```sh
+python -m omnivoice_triton.cli.api_server \
+  --model /path/to/pinned/model --runner triton --device cuda --dtype fp16 \
+  --no-asr --ip 127.0.0.1 --port 18080 \
+  --batch-collect-ms 0 --max-batch-requests 1 \
+  --max-pending-requests 4 --max-pending-gpu-tasks 4 \
+  --max-batch-target-tokens 4096 --max-batch-conditioning-tokens 4096 \
+  --max-cuda-graphs 0 --audio-decode-batch-size 1 \
+  --disable-unused-kv-cache --response-cache-max-bytes 0
+```
+
+Supply `mode=clone`, `text=<input>`, its explicit `language` and registered
+`prompt_id`, then `num_step=16`, `speed=1`, `guidance_scale=2`, `class_temperature=0`,
+`position_temperature=5`, `t_shift=0.1`, `layer_penalty_factor=5`, `denoise=true`,
+`postprocess_mode=off` and `insert_pauses=false` with each measured request.
+The archived harness also applies startup seed 20261103 before import and
+records all transport/timing
+conditions; the command alone does not enforce request ordering or reproduce a
+published waveform. Keep experimental fusion/Split/short-reference/lower-step
+changes separate. The pending4 setting is the measured overload policy, not a
+guarantee of the 500 ms SLO.
+
 | Active calls, assuming one TTS turn per 20 s | Fresh offered RPS | Ideal workers at 2.669 RPS |
 |---|---:|---:|
 | 10 | 0.5 | 1 |
@@ -226,6 +258,17 @@ service p95 around 420 ms leaves little waiting time in a 500 ms full-audio
 budget. One thousand simultaneous fresh responses in two seconds need 500 RPS,
 about 187 times the current single-GPU observed rate before latency headroom.
 A production fleet/router has not been deployed or validated here.
+
+The next qualification should start with two and four matched workers at the
+measured low-rate schedules, then increase offered load while keeping all-offer
+latency, rejection and joint-word results visible. Use a global bounded router
+and prepared-reference locality; multiple queued requests on one GPU are not
+additional replicas. Test deadline/cancellation behavior without changing the
+full-WAV response contract. Before lowering steps or changing conditioning/math,
+compare the 16-step Lingua profile with the worker's 32-step baseline and expand
+native reference/listening calibration. The measured roughly187-fold throughput
+gap requires a larger computational or fleet change than these kernel gains;
+no single-GPU 500RPS result is established.
 
 The next serving design uses independent warmed workers behind deadline-aware
 routing by model and prepared-reference locality, bounded per-worker queues,
