@@ -356,8 +356,13 @@ class GenerationBatcher:
                 ),
             }
 
-    def close(self) -> None:
-        """Stop the worker and fail any queued requests."""
+    def close(self, timeout_s: float = 5.0) -> bool:
+        """Stop admission, fail queued work, and report whether the owner exited.
+
+        A cancelled HTTP waiter can leave an already-running batch on this thread.
+        False means the live model must stay allocated until the owner finishes or
+        the supervisor restarts the process; cancelling a waiter cannot stop CUDA.
+        """
         with self._condition:
             self._closed = True
             pending = list(self._pending)
@@ -367,7 +372,8 @@ class GenerationBatcher:
             self._condition.notify_all()
 
         self._fail_queued(pending, tasks, RuntimeError("Server is shutting down."))
-        self._worker.join(timeout=5.0)
+        self._worker.join(timeout=max(0.0, timeout_s))
+        return not self._worker.is_alive()
 
     def _raise_if_unavailable_locked(self) -> None:
         if self._closed:

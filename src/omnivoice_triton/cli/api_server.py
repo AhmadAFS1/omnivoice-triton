@@ -236,6 +236,16 @@ def build_parser() -> argparse.ArgumentParser:
         help="Patch all decoder layers for Triton/Hybrid runners.",
     )
     parser.add_argument(
+        "--disable-unused-kv-cache",
+        action="store_true",
+        help="Skip LLM KV-cache construction unused by iterative generation.",
+    )
+    parser.add_argument(
+        "--split-cfg",
+        action="store_true",
+        help="Experimental split guidance for faster/hybrid; changes FP16 numerics.",
+    )
+    parser.add_argument(
         "--device",
         default=None,
         help="Device to use. Auto-detected if not specified.",
@@ -257,6 +267,18 @@ def build_parser() -> argparse.ArgumentParser:
         type=float,
         default=600.0,
         help="WAV reuse lifetime in seconds; 0 only coalesces inflight duplicates.",
+    )
+    parser.add_argument(
+        "--response-cache-max-inflight-keys",
+        type=int,
+        default=64,
+        help="Maximum distinct shared responses being generated at once.",
+    )
+    parser.add_argument(
+        "--response-cache-max-waiters",
+        type=int,
+        default=4096,
+        help="Maximum callers waiting for shared responses (HTTP 429 when full).",
     )
     parser.add_argument("--ip", default="0.0.0.0", help="Server IP to bind to.")
     parser.add_argument("--port", type=int, default=DEFAULT_PORT, help="Server port.")
@@ -906,6 +928,8 @@ def _build_runner(
     audio_decode_batch_size: int,
     max_cuda_graphs: int,
     runner_factory: Callable[..., Any],
+    disable_unused_kv_cache: bool = False,
+    split_cfg: bool = False,
 ) -> Any:
     kwargs: dict[str, Any] = {
         "device": device,
@@ -916,6 +940,12 @@ def _build_runner(
     }
     if runner_name in {"faster", "hybrid"}:
         kwargs["max_cuda_graphs"] = max(0, int(max_cuda_graphs))
+    if disable_unused_kv_cache:
+        kwargs["disable_unused_kv_cache"] = True
+    if split_cfg:
+        if runner_name not in {"faster", "hybrid"}:
+            raise ValueError("--split-cfg is only supported for faster/hybrid runners.")
+        kwargs["split_cfg"] = True
     if full_triton_patch:
         if runner_name not in {"triton", "hybrid"}:
             raise ValueError(
@@ -962,10 +992,14 @@ def create_app(
     allow_lazy_asr: bool = False,
     enable_sage_attention: bool = False,
     full_triton_patch: bool = False,
+    disable_unused_kv_cache: bool = False,
+    split_cfg: bool = False,
     decode_postprocess_workers: int = DEFAULT_DECODE_POSTPROCESS_WORKERS,
     audio_decode_batch_size: int = 1,
     response_cache_max_bytes: int = 0,
     response_cache_ttl: float = 600.0,
+    response_cache_max_inflight_keys: int = 64,
+    response_cache_max_waiters: int = 4096,
     max_cuda_graphs: int = DEFAULT_MAX_CUDA_GRAPHS,
     save_dir: str | None = None,
     batch_collect_ms: float = DEFAULT_BATCH_COLLECT_MS,
@@ -994,6 +1028,8 @@ def create_app(
         raise ValueError("audio_decode_batch_size must be at least 1.")
     if response_cache_max_bytes < 0 or response_cache_ttl < 0:
         raise ValueError("Complete-response cache limits must be nonnegative.")
+    if response_cache_max_inflight_keys < 1 or response_cache_max_waiters < 1:
+        raise ValueError("Complete-response admission limits must be positive.")
     resolved_device = device or get_best_device()
     if resolved_device.startswith("cuda"):
         require_cuda_available()
@@ -1014,7 +1050,10 @@ def create_app(
         # shared AnyIO limiter used by /health, /drain and other control routes.
         # Construct inside the app's event loop, never as a process-global limiter.
         app.state.response_cache = CompleteResponseCache(
-            max_bytes=response_cache_max_bytes, ttl_s=response_cache_ttl
+            max_bytes=response_cache_max_bytes,
+            ttl_s=response_cache_ttl,
+            max_inflight_keys=response_cache_max_inflight_keys,
+            max_waiters=response_cache_max_waiters,
         )
         app.state.request_cpu_limiter = anyio.CapacityLimiter(
             DEFAULT_REQUEST_CPU_WORKERS
@@ -1030,6 +1069,8 @@ def create_app(
             dtype=dtype,
             enable_sage_attention=enable_sage_attention,
             full_triton_patch=full_triton_patch,
+            disable_unused_kv_cache=disable_unused_kv_cache,
+            split_cfg=split_cfg,
             decode_postprocess_workers=decode_postprocess_workers,
             audio_decode_batch_size=audio_decode_batch_size,
             max_cuda_graphs=max_cuda_graphs,
@@ -1151,6 +1192,15 @@ def create_app(
             if worker_reporter is not None:
                 worker_reporter.stop()
                 app.state.worker_lifecycle_reporter = None
+            if idle and app.state.batcher is not None:
+                # HTTP cancellation can detach a waiter from an already running
+                # CUDA batch. Request counters alone cannot prove GPU ownership
+                # has ended: the owner thread must actually stop before unload.
+                idle = await anyio.to_thread.run_sync(
+                    lambda: app.state.batcher.close(
+                        timeout_s=max(0.0, deadline - time.monotonic())
+                    )
+                )
             if not idle:
                 # A CUDA call cannot be preempted by cancelling its HTTP waiter.
                 # Keep resources alive until the supervisor restarts the process.
@@ -1159,7 +1209,6 @@ def create_app(
                     "model resources retained, process restart required."
                 )
             if app.state.batcher is not None:
-                app.state.batcher.close()
                 app.state.batcher = None
             app.state.gpu_metrics_monitor = None
             if app.state.runner is not None:
@@ -1182,6 +1231,8 @@ def create_app(
     app.state.full_triton_patch = full_triton_patch
     app.state.decode_postprocess_workers = decode_postprocess_workers
     app.state.audio_decode_batch_size = audio_decode_batch_size
+    app.state.disable_unused_kv_cache = disable_unused_kv_cache
+    app.state.split_cfg = split_cfg
     app.state.response_cache = None
     app.state.max_cuda_graphs = max(0, int(max_cuda_graphs))
     app.state.save_dir = Path(save_dir) if save_dir else None
@@ -1222,6 +1273,7 @@ def create_app(
         model = getattr(runner, "model", None)
         graph_metrics: dict[str, Any] = {}
         generation_metrics: dict[str, Any] = {}
+        inference_optimizations: dict[str, Any] = {}
         gpu_metrics: dict[str, Any] = {"available": False, "reason": "not_initialized"}
         last_batch_gpu_metrics: dict[str, Any] | None = None
         if runner is not None and hasattr(runner, "get_cuda_graph_metrics"):
@@ -1234,6 +1286,11 @@ def create_app(
                 generation_metrics = runner.get_generation_metrics()
             except Exception:  # pragma: no cover - health should stay resilient
                 logger.exception("Failed to collect generation metrics.")
+        if runner is not None and hasattr(runner, "get_inference_optimization_metrics"):
+            try:
+                inference_optimizations = runner.get_inference_optimization_metrics()
+            except Exception:  # pragma: no cover - health should stay resilient
+                logger.exception("Failed to collect inference optimization metrics.")
         gpu_monitor = app.state.gpu_metrics_monitor
         if gpu_monitor is not None:
             try:
@@ -1260,6 +1317,12 @@ def create_app(
             "full_triton_patch": bool(app.state.full_triton_patch),
             "decode_postprocess_workers": int(app.state.decode_postprocess_workers),
             "audio_decode_batch_size": int(app.state.audio_decode_batch_size),
+            "disable_unused_kv_cache": bool(app.state.disable_unused_kv_cache),
+            "llm_use_cache": getattr(
+                getattr(getattr(model, "llm", None), "config", None), "use_cache", None
+            ),
+            "split_cfg": bool(app.state.split_cfg),
+            "inference_optimizations": inference_optimizations,
             "response_cache": app.state.response_cache.snapshot(),
             "max_cuda_graphs": int(app.state.max_cuda_graphs),
             "batch_collect_ms": app.state.batch_collect_ms,
@@ -2430,10 +2493,14 @@ def main(argv: list[str] | None = None) -> None:
         allow_lazy_asr=args.allow_lazy_asr,
         enable_sage_attention=args.sage_attention,
         full_triton_patch=args.full_triton_patch,
+        disable_unused_kv_cache=args.disable_unused_kv_cache,
+        split_cfg=args.split_cfg,
         decode_postprocess_workers=args.decode_postprocess_workers,
         audio_decode_batch_size=args.audio_decode_batch_size,
         response_cache_max_bytes=args.response_cache_max_bytes,
         response_cache_ttl=args.response_cache_ttl,
+        response_cache_max_inflight_keys=args.response_cache_max_inflight_keys,
+        response_cache_max_waiters=args.response_cache_max_waiters,
         max_cuda_graphs=args.max_cuda_graphs,
         save_dir=args.save_dir,
         batch_collect_ms=args.batch_collect_ms,

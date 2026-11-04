@@ -128,10 +128,12 @@ class _CUDAGraphForward:
         self._graphs[key] = entry
         self._graphs.move_to_end(key)
         while self.max_graphs > 0 and len(self._graphs) > self.max_graphs:
-            evicted_key, _ = self._graphs.popitem(last=False)
+            evicted_key, evicted_entry = self._graphs.popitem(last=False)
+            # Drop the graph and static buffers immediately. The caching allocator
+            # can reuse their storage; flushing its global cache on every LRU
+            # eviction also disrupts allocations unrelated to this graph.
+            del evicted_entry
             logger.info("Evicted CUDA Graph for shape %s", evicted_key)
-            if torch.cuda.is_available():
-                torch.cuda.empty_cache()
         logger.info("CUDA Graph captured for shape %s", key)
         return entry
 
@@ -228,9 +230,7 @@ class _CUDAGraphForward:
             )
         )
 
-        expected_codebooks = int(
-            getattr(self._model.config, "num_audio_codebook", 0)
-        )
+        expected_codebooks = int(getattr(self._model.config, "num_audio_codebook", 0))
         if num_audio_codebook != expected_codebooks:
             raise ValueError(
                 "CUDA Graph prewarm shape codebook dimension does not match "
@@ -266,6 +266,8 @@ class FasterRunner(BaseRunner):
         dtype: Model dtype string.
     """
 
+    _supports_split_cfg = True
+
     def __init__(
         self,
         device: str = "cuda",
@@ -274,6 +276,8 @@ class FasterRunner(BaseRunner):
         decode_postprocess_workers: int = 0,
         max_cuda_graphs: int = 32,
         audio_decode_batch_size: int = 1,
+        disable_unused_kv_cache: bool = False,
+        split_cfg: bool = False,
     ) -> None:
         super().__init__(
             device=device,
@@ -281,6 +285,8 @@ class FasterRunner(BaseRunner):
             dtype=dtype,
             decode_postprocess_workers=decode_postprocess_workers,
             audio_decode_batch_size=audio_decode_batch_size,
+            disable_unused_kv_cache=disable_unused_kv_cache,
+            split_cfg=split_cfg,
         )
         self._graph_forward: _CUDAGraphForward | None = None
         self.max_cuda_graphs = max(0, int(max_cuda_graphs))
@@ -293,6 +299,7 @@ class FasterRunner(BaseRunner):
             max_graphs=self.max_cuda_graphs,
         )
         self._model.forward = self._graph_forward
+        self._install_split_cfg()
         logger.info(
             "FasterRunner ready (CUDA Graph wrapper installed, max_graphs=%d).",
             self.max_cuda_graphs,
@@ -318,6 +325,11 @@ class FasterRunner(BaseRunner):
         """Pre-capture CUDA Graphs for known hot-path shapes."""
         if self._graph_forward is None:
             return {"capture_count": 0, "shapes": [], "warmed_shapes": []}
+        if self.split_cfg and shapes:
+            raise ValueError(
+                "Split CFG prewarm needs conditional/target lengths; warm through "
+                "real generation requests instead of raw shape tuples."
+            )
 
         warmed_shapes: list[list[int]] = []
         for shape in shapes:

@@ -269,6 +269,51 @@ def test_async_cancellation_during_inference_does_not_break_worker() -> None:
         batcher.close()
 
 
+def test_close_reports_live_owner_after_http_waiter_is_cancelled(monkeypatch) -> None:
+    """CPU-only owner lifetime contract; no CUDA/model inference is performed."""
+    monkeypatch.setattr(torch.cuda, "is_available", lambda: False)
+    entered, release = threading.Event(), threading.Event()
+
+    def generate(**kwargs):
+        entered.set()
+        assert release.wait(5)
+        return [np.zeros(10, dtype=np.float32) for _ in kwargs["text"]]
+
+    model = SimpleNamespace(generate=generate)
+    batcher = GenerationBatcher(model, collect_ms=0)
+    pending = _pending_generation("in-flight-at-shutdown")
+
+    async def run():
+        waiter = asyncio.create_task(batcher.submit_async(pending))
+        assert await asyncio.to_thread(entered.wait, 2)
+        assert pending.future.running()
+        waiter.cancel()
+        with pytest.raises(asyncio.CancelledError):
+            await waiter
+        assert not pending.future.cancelled()
+
+        queued = batcher._enqueue(_pending_generation("queued-at-shutdown"))
+        assert await asyncio.to_thread(batcher.close, 0.001) is False
+        assert batcher._worker.is_alive()
+        assert batcher._model is model
+        with pytest.raises(RuntimeError, match="shutting down"):
+            queued.result(timeout=1)
+        with pytest.raises(RuntimeError, match="closed"):
+            batcher._enqueue(_pending_generation("late-arrival"))
+
+        release.set()
+        assert await asyncio.to_thread(batcher.close, 2) is True
+        assert not batcher._worker.is_alive()
+        assert pending.future.result(timeout=1).audio.shape == (10,)
+        assert batcher.close(timeout_s=0) is True
+
+    try:
+        asyncio.run(run())
+    finally:
+        release.set()
+        assert batcher.close(timeout_s=2)
+
+
 def test_failed_gpu_task_releases_its_frames(batcher_and_faults, monkeypatch) -> None:
     """A failed call's locals (GPU tensors in production) must not outlive it."""
     batcher, _ = batcher_and_faults

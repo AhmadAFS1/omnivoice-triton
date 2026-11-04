@@ -39,6 +39,8 @@ class TritonRunner(BaseRunner):
         dtype: str = "fp16",
         decode_postprocess_workers: int = 0,
         audio_decode_batch_size: int = 1,
+        disable_unused_kv_cache: bool = False,
+        split_cfg: bool = False,
     ) -> None:
         super().__init__(
             device=device,
@@ -46,6 +48,8 @@ class TritonRunner(BaseRunner):
             dtype=dtype,
             decode_postprocess_workers=decode_postprocess_workers,
             audio_decode_batch_size=audio_decode_batch_size,
+            disable_unused_kv_cache=disable_unused_kv_cache,
+            split_cfg=split_cfg,
         )
         self.patch_range = patch_range
         self.enable_sage_attention = enable_sage_attention

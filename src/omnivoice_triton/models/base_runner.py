@@ -6,6 +6,7 @@ import time
 from collections import defaultdict
 from collections.abc import Callable
 from concurrent.futures import ThreadPoolExecutor
+from importlib.metadata import version
 from typing import Any
 
 import numpy as np
@@ -224,6 +225,8 @@ class BaseRunner:
         dtype: Model dtype ("bf16", "fp16", "fp32").
     """
 
+    _supports_split_cfg = False
+
     def __init__(
         self,
         device: str = "cuda",
@@ -231,12 +234,19 @@ class BaseRunner:
         dtype: str | torch.dtype = "fp16",
         decode_postprocess_workers: int = 0,
         audio_decode_batch_size: int = 1,
+        disable_unused_kv_cache: bool = False,
+        split_cfg: bool = False,
     ) -> None:
         self.device = device
         self.model_id = model_id
         self.dtype = _resolve_dtype(dtype)
         self.decode_postprocess_workers = max(0, int(decode_postprocess_workers))
         self.audio_decode_batch_size = max(1, int(audio_decode_batch_size))
+        self.disable_unused_kv_cache = bool(disable_unused_kv_cache)
+        self.split_cfg = bool(split_cfg)
+        if self.split_cfg and not self._supports_split_cfg:
+            raise ValueError("Experimental split CFG requires faster or hybrid runner.")
+        self._split_cfg_patch: Any | None = None
         self._model: Any = None
         self._decode_postprocess_executor: ThreadPoolExecutor | None = None
         self._generation_metrics_lock = threading.Lock()
@@ -257,6 +267,14 @@ class BaseRunner:
             dtype=self.dtype,
         )
 
+        if self.disable_unused_kv_cache:
+            llm_config = getattr(getattr(self._model, "llm", None), "config", None)
+            if llm_config is None or not hasattr(llm_config, "use_cache"):
+                raise RuntimeError("Loaded model does not expose llm.config.use_cache.")
+            # Iterative bidirectional inference never reuses the returned KV state.
+            # Configure this before any graph capture, never on live cached graphs.
+            llm_config.use_cache = False
+
         if self.decode_postprocess_workers > 1:
             self._decode_postprocess_executor = ThreadPoolExecutor(
                 max_workers=self.decode_postprocess_workers,
@@ -265,6 +283,36 @@ class BaseRunner:
         self._install_generation_metrics(self._model)
         vram_gb = _max_memory_allocated_gb()
         logger.info("Model loaded. VRAM: %.2f GB", vram_gb)
+
+    def _install_split_cfg(self) -> None:
+        """Install outside the CUDA Graph wrapper after a supported runner loads."""
+        if not self.split_cfg:
+            return
+        if version("omnivoice") != "0.1.4":
+            raise RuntimeError(
+                "Experimental split CFG requires pinned OmniVoice 0.1.4."
+            )
+        if self._split_cfg_patch is not None:
+            raise RuntimeError(
+                "Unload the previous model before reinstalling split CFG."
+            )
+        from omnivoice_triton.models.split_cfg import SplitGuidancePatch
+
+        self._split_cfg_patch = SplitGuidancePatch(self._model)
+        self._split_cfg_patch.enable()
+
+    def get_inference_optimization_metrics(self) -> dict[str, Any]:
+        """Report effective settings without touching CUDA from a health thread."""
+        llm_config = getattr(getattr(self._model, "llm", None), "config", None)
+        patch = self._split_cfg_patch
+        return {
+            "disable_unused_kv_cache": self.disable_unused_kv_cache,
+            "llm_use_cache": getattr(llm_config, "use_cache", None),
+            "split_cfg_requested": self.split_cfg,
+            "split_cfg_enabled": bool(patch is not None and patch.active),
+            "split_cfg_experimental": True,
+            "split_cfg_metrics": patch.metrics() if patch is not None else None,
+        }
 
     @property
     def model(self) -> Any:
@@ -439,6 +487,9 @@ class BaseRunner:
 
     def unload_model(self) -> None:
         """Free model from GPU memory."""
+        if self._split_cfg_patch is not None:
+            self._split_cfg_patch.disable()
+            self._split_cfg_patch = None
         if self._decode_postprocess_executor is not None:
             self._decode_postprocess_executor.shutdown(wait=True)
             self._decode_postprocess_executor = None
@@ -612,9 +663,7 @@ class BaseRunner:
                     _post_process_audio_array(audio, rms, gen_config)
                     for audio, rms in decode_inputs
                 ]
-            post_process_audio_ms = (
-                time.perf_counter() - postprocess_started
-            ) * 1000.0
+            post_process_audio_ms = (time.perf_counter() - postprocess_started) * 1000.0
             _record_metric("post_process_audio_ms", post_process_audio_ms)
             _record_metric(
                 "decode_postprocess_ms",
@@ -637,6 +686,7 @@ class BaseRunner:
                     self._last_generation_metrics = dict(metrics)
 
         if original_prepare is not None:
+
             def wrapped_prepare(*args: Any, **kwargs: Any) -> Any:
                 started = time.perf_counter()
                 try:
@@ -650,6 +700,7 @@ class BaseRunner:
             model._prepare_inference_inputs = wrapped_prepare
 
         if original_iterative is not None:
+
             def wrapped_iterative(*args: Any, **kwargs: Any) -> Any:
                 started = time.perf_counter()
                 try:
@@ -663,6 +714,7 @@ class BaseRunner:
             model._generate_iterative = wrapped_iterative
 
         if original_chunked is not None:
+
             def wrapped_chunked(*args: Any, **kwargs: Any) -> Any:
                 started = time.perf_counter()
                 try:
@@ -676,6 +728,7 @@ class BaseRunner:
             model._generate_chunked = wrapped_chunked
 
         if original_decode is not None:
+
             def wrapped_decode(*args: Any, **kwargs: Any) -> Any:
                 started = time.perf_counter()
                 try:

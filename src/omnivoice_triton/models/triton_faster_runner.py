@@ -43,6 +43,8 @@ class TritonFasterRunner(FasterRunner):
         decode_postprocess_workers: int = 0,
         max_cuda_graphs: int = 32,
         audio_decode_batch_size: int = 1,
+        disable_unused_kv_cache: bool = False,
+        split_cfg: bool = False,
     ) -> None:
         super().__init__(
             device=device,
@@ -51,6 +53,8 @@ class TritonFasterRunner(FasterRunner):
             decode_postprocess_workers=decode_postprocess_workers,
             max_cuda_graphs=max_cuda_graphs,
             audio_decode_batch_size=audio_decode_batch_size,
+            disable_unused_kv_cache=disable_unused_kv_cache,
+            split_cfg=split_cfg,
         )
         self.patch_range = patch_range
         self.enable_sage_attention = enable_sage_attention
@@ -78,6 +82,7 @@ class TritonFasterRunner(FasterRunner):
             max_graphs=self.max_cuda_graphs,
         )
         self._model.forward = self._graph_forward
+        self._install_split_cfg()
 
         logger.info(
             "HybridRunner ready (Triton kernels + CUDA Graph wrapper installed, "

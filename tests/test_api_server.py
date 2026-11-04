@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import asyncio
 import threading
 import time
 from concurrent.futures import ThreadPoolExecutor
@@ -1407,9 +1408,19 @@ def test_failed_requests_clear_cuda_graphs_only_on_the_batcher_thread(
 
 def test_complete_response_cache_preserves_bytes_and_separates_settings(tmp_path):
     created = []
-    app = _make_app(tmp_path, created, load_asr=False, response_cache_max_bytes=1000000)
+    app = _make_app(
+        tmp_path,
+        created,
+        load_asr=False,
+        response_cache_max_bytes=1000000,
+        response_cache_max_inflight_keys=1200,
+        response_cache_max_waiters=6000,
+    )
     app.state.save_dir = None
     with TestClient(app) as client:
+        limits = client.get("/health").json()["response_cache"]
+        assert limits["max_inflight_keys"] == 1200
+        assert limits["max_waiters"] == 6000
         request = _design_request()
         first = client.post("/generate", **request)
         hit = client.post("/generate", **request)
@@ -1507,3 +1518,43 @@ def test_generate_without_lifespan_keeps_not_ready_503(tmp_path):
         assert client.post("/generate", **_design_request()).status_code == 503
     finally:
         client.close()
+
+
+def test_shutdown_retains_model_when_abandoned_gpu_owner_is_still_running(
+    tmp_path, monkeypatch
+):
+    monkeypatch.setenv("LINGUA_WORKER_DRAIN_TIMEOUT_SECONDS", "0.03")
+    created = []
+    app = _make_app(tmp_path, created, load_asr=False)
+    entered, release = threading.Event(), threading.Event()
+
+    def blocked_gpu_task():
+        entered.set()
+        assert release.wait(timeout=5)
+
+    async def exercise():
+        lifespan = app.router.lifespan_context(app)
+        await lifespan.__aenter__()
+        batcher = app.state.batcher
+        waiter = asyncio.create_task(
+            asyncio.to_thread(
+                batcher.run_on_gpu_thread, blocked_gpu_task, name="abandoned-gpu"
+            )
+        )
+        try:
+            assert await asyncio.to_thread(entered.wait, 2)
+            waiter.cancel()
+            with pytest.raises(asyncio.CancelledError):
+                await waiter
+            # No live HTTP request remains, but CUDA ownership has not ended.
+            assert app.state.worker_runtime.wait_for_idle(0)
+            with pytest.raises(RuntimeError, match="model resources retained"):
+                await lifespan.__aexit__(None, None, None)
+            assert not created[0].unloaded
+            assert app.state.runner is created[0]
+            assert app.state.batcher is batcher
+        finally:
+            release.set()
+            assert await asyncio.to_thread(batcher.close, timeout_s=2)
+
+    asyncio.run(exercise())
