@@ -1584,3 +1584,124 @@ def test_nonfinite_voice_controls_are_rejected_before_gpu_admission(tmp_path):
         assert client.get("/healthz").status_code == 200
         assert client.post("/generate", **_design_request()).status_code == 200
         assert len(created[0].model.calls) == 1
+
+
+def test_clone_registration_coalesces_encoding_and_keeps_health_responsive(tmp_path):
+    created = []
+    app = _make_app(tmp_path, created, load_asr=False, max_pending_gpu_tasks=1)
+    entered, release = threading.Event(), threading.Event()
+    with TestClient(app) as client:
+        model = created[0].model
+        original = model.create_voice_clone_prompt
+
+        def blocked_encoder(**kwargs):
+            entered.set()
+            assert release.wait(timeout=5)
+            return original(**kwargs)
+
+        model.create_voice_clone_prompt = blocked_encoder
+
+        def register(_):
+            return client.post(
+                "/clone-prompts",
+                data={"ref_text": "One shared reference."},
+                files={"ref_audio": ("voice.wav", _fake_wav_bytes(), "audio/wav")},
+            )
+
+        with ThreadPoolExecutor(max_workers=48) as pool:
+            futures = [pool.submit(register, n) for n in range(48)]
+            try:
+                assert entered.wait(timeout=2)
+                assert client.get("/healthz").status_code == 200
+            finally:
+                release.set()
+            responses = [future.result(timeout=5) for future in futures]
+        assert all(r.status_code == 200 for r in responses)
+        assert len({r.json()["prompt_id"] for r in responses}) == 1
+        assert len({r.json()["request_id"] for r in responses}) == 48
+        assert len(model.prompt_calls) == 1
+        assert model.prompt_threads == ["omnivoice-batcher"]
+
+
+def test_clone_registration_reuses_preparation_and_cleans_evicted_identity(tmp_path):
+    created = []
+    app = _make_app(
+        tmp_path, created, load_asr=False, registered_clone_prompt_store_size=1
+    )
+    with TestClient(app) as client:
+
+        def register(text, preprocess="true", audio=None):
+            response = client.post(
+                "/clone-prompts",
+                data={"ref_text": text, "preprocess_prompt": preprocess},
+                files={
+                    "ref_audio": ("voice.wav", audio or _fake_wav_bytes(), "audio/wav")
+                },
+            )
+            assert response.status_code == 200
+            return response.json()["prompt_id"]
+
+        first = register("First transcript.")
+        assert register("First transcript.") == first
+        second = register("Second transcript.")
+        replacement = register("First transcript.")
+        assert len({first, second, replacement}) == 3
+        # Only the registry entry expired; its prepared CPU tokens remain valid.
+        assert len(created[0].model.prompt_calls) == 2
+        assert app.state.registered_clone_prompts.get(first) is None
+        assert app.state.registered_clone_prompts.get(second) is None
+        assert app.state.registered_clone_prompts.get(replacement) is not None
+        changed_preprocess = register("First transcript.", "false")
+        assert changed_preprocess != replacement
+        assert len(created[0].model.prompt_calls) == 3
+        changed_audio = _fake_wav_bytes()[:-2] + b"\x01\x00"
+        assert (
+            register("First transcript.", "false", changed_audio) != changed_preprocess
+        )
+        assert len(created[0].model.prompt_calls) == 4
+        store = app.state.registered_clone_prompts
+        assert len(store) == len(store._reference_ids) == len(store._id_references) == 1
+
+
+def test_clone_registration_preparation_cache_can_be_disabled(tmp_path):
+    created = []
+    app = _make_app(tmp_path, created, load_asr=False, clone_prompt_cache_size=0)
+    with TestClient(app) as client:
+        responses = [
+            client.post(
+                "/clone-prompts",
+                data={"ref_text": "Uncached reference."},
+                files={"ref_audio": ("voice.wav", _fake_wav_bytes(), "audio/wav")},
+            )
+            for _ in range(2)
+        ]
+        assert all(r.status_code == 200 for r in responses)
+        assert responses[0].json()["prompt_id"] != responses[1].json()["prompt_id"]
+        assert all(r.json()["cache_source"] == "disabled" for r in responses)
+        assert len(created[0].model.prompt_calls) == 2
+
+
+def test_clone_registration_reuses_warmed_prompt_and_recovers_from_prepare_error(
+    tmp_path,
+):
+    created = []
+    app = _make_app(tmp_path, created, load_asr=False)
+    with TestClient(app) as client:
+        model = created[0].model
+        model.prompt_error = ValueError("Invalid reference audio")
+        data = {"ref_text": "Prepared reference."}
+        upload = {"ref_audio": ("voice.wav", _fake_wav_bytes(), "audio/wav")}
+        assert client.post("/clone-prompts", data=data, files=upload).status_code == 400
+        assert len(app.state.registered_clone_prompts) == 0
+        model.prompt_error = None
+        warm = client.post(
+            "/cache/warm?wait=true", data={"mode": "clone", **data}, files=upload
+        )
+        assert warm.status_code == 200
+        before = len(model.prompt_calls)
+        registered = client.post("/clone-prompts", data=data, files=upload)
+        assert registered.status_code == 200
+        assert registered.json()["cache_source"] == "prepared_hit"
+        assert len(model.prompt_calls) == before
+        assert not app.state.clone_prompt_cache._inflight
+        assert not app.state.registered_clone_prompts._registration_events

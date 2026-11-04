@@ -132,18 +132,82 @@ class RegisteredClonePromptStore:
         self.storage_device = storage_device
         self._lock = threading.Lock()
         self._entries: OrderedDict[str, Any] = OrderedDict()
+        self._reference_ids: dict[tuple[str, str | None, bool], str] = {}
+        self._id_references: dict[str, tuple[str, str | None, bool]] = {}
+        self._registration_events: dict[
+            tuple[str, str | None, bool], threading.Event
+        ] = {}
 
-    def register(self, prompt: Any) -> str:
+    def reference_id(self, key: tuple[str, str | None, bool]) -> str | None:
+        with self._lock:
+            prompt_id = self._reference_ids.get(key)
+            if prompt_id is not None and prompt_id in self._entries:
+                self._entries.move_to_end(prompt_id)
+                return prompt_id
+            if prompt_id is not None:
+                self._reference_ids.pop(key, None)
+                self._id_references.pop(prompt_id, None)
+            return None
+
+    def get_or_register(
+        self, key: tuple[str, str | None, bool], factory: Callable[[], str]
+    ) -> str:
+        """Coalesce registration outside the CUDA owner and registry lock.
+
+        HTTP callers use the bounded preparation pool. Never call this blocking
+        method on the CUDA owner: its factory submits work to that same owner.
+        """
+        while True:
+            existing_id = self.reference_id(key)
+            if existing_id is not None:
+                return existing_id
+            with self._lock:
+                event = self._registration_events.get(key)
+                if event is None:
+                    event = threading.Event()
+                    self._registration_events[key] = event
+                    break
+            event.wait()
+        try:
+            return factory()
+        finally:
+            with self._lock:
+                self._registration_events.pop(key, None)
+                event.set()
+
+    def register(
+        self,
+        prompt: Any,
+        *,
+        reference_key: tuple[str, str | None, bool] | None = None,
+    ) -> str:
         if self.max_size <= 0:
             raise RuntimeError("Registered clone prompt store is disabled.")
+        if reference_key is not None:
+            existing_id = self.reference_id(reference_key)
+            if existing_id is not None:
+                return existing_id
 
         prompt_id = uuid4().hex[:12]
         stored = self._prepare_prompt(prompt)
         with self._lock:
+            # GPU registration is serialized by the owner thread. Keep the
+            # registry correct for direct concurrent callers too.
+            if reference_key is not None:
+                existing_id = self._reference_ids.get(reference_key)
+                if existing_id is not None and existing_id in self._entries:
+                    self._entries.move_to_end(existing_id)
+                    return existing_id
             self._entries[prompt_id] = stored
             self._entries.move_to_end(prompt_id)
+            if reference_key is not None:
+                self._reference_ids[reference_key] = prompt_id
+                self._id_references[prompt_id] = reference_key
             while len(self._entries) > self.max_size:
-                self._entries.popitem(last=False)
+                evicted_id, _ = self._entries.popitem(last=False)
+                evicted_key = self._id_references.pop(evicted_id, None)
+                if evicted_key is not None:
+                    self._reference_ids.pop(evicted_key, None)
         return prompt_id
 
     def get(self, prompt_id: str) -> Any | None:
@@ -1460,7 +1524,7 @@ def create_app(
         return worker_status()
 
     @app.post("/clone-prompts")
-    def register_clone_prompt(
+    async def register_clone_prompt(
         ref_audio: UploadFile = File(...),
         ref_text: str | None = Form(None),
         preprocess_prompt: bool = Form(True),
@@ -1485,22 +1549,65 @@ def create_app(
         ref_text_value = _normalize_text(ref_text)
 
         try:
-            ref_audio_bytes = ref_audio.file.read()
+            ref_audio_bytes = await ref_audio.read()
             if not ref_audio_bytes:
                 raise HTTPException(400, detail="ref_audio is empty.")
 
-            prompt_id = _on_gpu_thread(
-                "clone_prompt_register",
-                lambda: prompt_store.register(
-                    _create_voice_clone_prompt(
-                        runner.model,
-                        ref_audio_bytes=ref_audio_bytes,
-                        ref_text=ref_text_value,
-                        preprocess_prompt=preprocess_prompt,
-                        asr_load_lock=app.state.asr_load_lock,
-                        allow_lazy_asr=app.state.allow_lazy_asr,
+            def _create_prompt() -> Any:
+                return _create_voice_clone_prompt(
+                    runner.model,
+                    ref_audio_bytes=ref_audio_bytes,
+                    ref_text=ref_text_value,
+                    preprocess_prompt=preprocess_prompt,
+                    asr_load_lock=app.state.asr_load_lock,
+                    allow_lazy_asr=app.state.allow_lazy_asr,
+                )
+
+            def _register() -> tuple[str, str]:
+                cache = app.state.clone_prompt_cache
+                if cache is None or cache.max_size <= 0:
+                    return (
+                        _on_gpu_thread(
+                            "clone_prompt_register",
+                            lambda: prompt_store.register(_create_prompt()),
+                        ),
+                        "disabled",
                     )
-                ),
+                reference_key = (
+                    hashlib.sha256(ref_audio_bytes).hexdigest(),
+                    ref_text_value,
+                    preprocess_prompt,
+                )
+                existing_id = prompt_store.reference_id(reference_key)
+                if existing_id is not None:
+                    return existing_id, "registered_hit"
+                # Block only this dedicated preparation pool, never the shared
+                # health/control pool or the CUDA owner. The factory completes
+                # its GPU-to-CPU copy on that owner before publishing the prompt.
+                prepared = cache.get_or_create(
+                    ref_audio_bytes=ref_audio_bytes,
+                    ref_text=ref_text_value,
+                    preprocess_prompt=preprocess_prompt,
+                    factory=lambda: _on_gpu_thread(
+                        "clone_prompt_prepare",
+                        lambda: prompt_to_cpu(_create_prompt()),
+                    ),
+                )
+                return (
+                    prompt_store.get_or_register(
+                        reference_key,
+                        lambda: _on_gpu_thread(
+                            "clone_prompt_register_cached",
+                            lambda: prompt_store.register(
+                                prepared.prompt, reference_key=reference_key
+                            ),
+                        ),
+                    ),
+                    "prepared_" + prepared.source,
+                )
+
+            prompt_id, cache_source = await anyio.to_thread.run_sync(
+                _register, limiter=app.state.prompt_prepare_limiter
             )
             finished_at = _utc_now()
             duration_ms = (time.perf_counter() - started_perf) * 1000.0
@@ -1540,6 +1647,7 @@ def create_app(
                 "prompt_audio_tokens": prompt_audio_tokens,
                 "ref_text": getattr(stored_prompt, "ref_text", None),
                 "stored_device": stored_device,
+                "cache_source": cache_source,
             }
         except HTTPException:
             raise
