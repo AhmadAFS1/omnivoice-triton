@@ -1,0 +1,42 @@
+{
+  "measurement_kind": "CPU-only completed download/hash/package evidence check",
+  "date_utc": "2026-11-04T06:13:02.479342+00:00",
+  "assets": [
+    {
+      "name": "omniASR_tokenizer_written_v2",
+      "url": "https://dl.fbaipublicfiles.com/mms/omniASR_tokenizer_written_v2.model",
+      "path": "/root/.cache/fairseq2/assets/e7be1a6acb8f76fdbca19dce/omniASR_tokenizer_written_v2.model",
+      "bytes": 91481,
+      "sha256": "8aa11a1092142ef472537476ef6e76541123e2f0d789b79f3ebd119008240b1e",
+      "download_and_hash_wall_s": 0.0017874159384518862
+    },
+    {
+      "name": "omniASR_LLM_Unlimited_1B_v2",
+      "url": "https://dl.fbaipublicfiles.com/mms/omniASR-LLM-Unlimited-1B-v2.pt",
+      "path": "/root/.cache/fairseq2/assets/cc18d8a62471f2f461e87839/omniASR-LLM-Unlimited-1B-v2.pt",
+      "bytes": 9118766620,
+      "sha256": "f3cda9ddd8d7991c396cce58714269824457ae3c8807ca6cd0297e8d275bea66",
+      "download_and_hash_wall_s": 69.87484290800057
+    },
+    {
+      "name": "omniASR_CTC_1B_v2",
+      "url": "https://dl.fbaipublicfiles.com/mms/omniASR-CTC-1B-v2.pt",
+      "path": "/root/.cache/fairseq2/assets/fca49af82b51089226da7de9/omniASR-CTC-1B-v2.pt",
+      "bytes": 3902956068,
+      "sha256": "354f981756aa8f41591ea363e45b9c4eba1ec5144c2273af82e747efbb08919c",
+      "download_and_hash_wall_s": 30.074747933074832
+    }
+  ],
+  "baseline_package_freeze_unchanged": true,
+  "baseline_freeze_sha256": "b00c13050b0656fed52e03e087b815c3c9aafeb8fd12a6ab314ce6e02e6ae5bf",
+  "packages": {
+    "torch": "2.8.0+cu128",
+    "torchaudio": "2.8.0+cu128",
+    "fairseq2": "0.6",
+    "fairseq2n": "0.6+cu128",
+    "pyarrow": "20.0.0"
+  },
+  "method": "Separate ASR virtualenv; UV reused baseline wheel cache with online index metadata. No shared .pth, Torch symlinks or baseline package mutations.",
+  "gpu_model_load_or_inference_performed": false,
+  "note": "Hashes were computed over full files by prefetch.py after download. GPU execution remains reserved for root release after TTS timing."
+}

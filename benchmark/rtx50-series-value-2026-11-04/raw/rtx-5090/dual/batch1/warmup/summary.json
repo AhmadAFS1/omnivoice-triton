@@ -1,0 +1,118 @@
+{
+  "offers": 104,
+  "valid_complete_wavs": 104,
+  "status_counts": {
+    "200": 104
+  },
+  "wall_s": 24.366098511964083,
+  "complete_requests_per_s": 4.268225376702577,
+  "valid_complete_within_first_second": 0,
+  "request_latency_p50_ms": 449.65257099829614,
+  "request_latency_p95_ms": 476.9442958990112,
+  "valid_request_latency_within_1s": 102,
+  "completion_counts_per_1s_from_phase_start": {
+    "0": 0,
+    "1": 4,
+    "2": 4,
+    "3": 6,
+    "4": 4,
+    "5": 4,
+    "6": 4,
+    "7": 5,
+    "8": 4,
+    "9": 5,
+    "10": 4,
+    "11": 5,
+    "12": 4,
+    "13": 4,
+    "14": 4,
+    "15": 6,
+    "16": 4,
+    "17": 4,
+    "18": 4,
+    "19": 6,
+    "20": 4,
+    "21": 4,
+    "22": 4,
+    "23": 6,
+    "24": 1
+  },
+  "max_completions_in_aligned_1s_bin": 6,
+  "audio_duration_mean_s": 2.818076923076923,
+  "audio_seconds_per_wall_second": 12.02818743657684,
+  "actual_batch_size_distribution_per_response": {
+    "1": 104
+  },
+  "timing_headers_per_response_ms": {
+    "x-omnivoice-audio-decode-ms": {
+      "mean": 14.463750000000001,
+      "p50": 18.69,
+      "p95": 19.4655
+    },
+    "x-omnivoice-batch-estimate-ms": {
+      "mean": 1.526923076923077,
+      "p50": 1.495,
+      "p95": 1.975999999999999
+    },
+    "x-omnivoice-batch-exec-ms": {
+      "mean": 453.8286538461538,
+      "p50": 440.365,
+      "p95": 466.6565
+    },
+    "x-omnivoice-decode-postprocess-ms": {
+      "mean": 14.883846153846154,
+      "p50": 19.200000000000003,
+      "p95": 20.25
+    },
+    "x-omnivoice-generate-total-ms": {
+      "mean": 453.44124999999997,
+      "p50": 439.95,
+      "p95": 466.28749999999997
+    },
+    "x-omnivoice-iterative-generate-ms": {
+      "mean": 435.44134615384615,
+      "p50": 419.21000000000004,
+      "p95": 444.71999999999997
+    },
+    "x-omnivoice-latency-ms": {
+      "mean": 458.3777884615384,
+      "p50": 444.15999999999997,
+      "p95": 471.1345
+    },
+    "x-omnivoice-post-process-audio-ms": {
+      "mean": 0.4204807692307692,
+      "p50": 0.375,
+      "p95": 0.8069999999999999
+    },
+    "x-omnivoice-pre-batch-ms": {
+      "mean": 1.8623076923076924,
+      "p50": 1.83,
+      "p95": 2.397
+    },
+    "x-omnivoice-prepare-inference-inputs-ms": {
+      "mean": 1.0079807692307692,
+      "p50": 0.94,
+      "p95": 1.1
+    },
+    "x-omnivoice-prompt-prepare-ms": {
+      "mean": 0.31480769230769223,
+      "p50": 0.3,
+      "p95": 0.39849999999999997
+    },
+    "x-omnivoice-queue-wait-ms": {
+      "mean": 0.2359615384615385,
+      "p50": 0.24,
+      "p95": 0.27
+    },
+    "x-omnivoice-response-encode-ms": {
+      "mean": 1.9078846153846152,
+      "p50": 1.83,
+      "p95": 2.6794999999999995
+    }
+  },
+  "note": "Batch timing is shared by members; response-weighted means are not a sum of GPU work. First-second count starts at the phase barrier. All offers are kept.",
+  "phase": "warmup",
+  "concurrency": 2,
+  "clone_mode_only": true,
+  "response_cache": false
+}

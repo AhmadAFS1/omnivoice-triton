@@ -1,0 +1,6 @@
+{"phase": "warmup", "offers": 104, "valid_complete_wavs": 104, "wall_s": 89.9708967859624, "complete_requests_per_s": 1.1559293473245282, "valid_complete_within_first_second": 0, "request_latency_p95_ms": 959.364707354689}
+{"phase": "poisson-rps0_5", "offers": 30, "valid_complete_wavs": 30, "wall_s": 40.43659987900173, "complete_requests_per_s": 0.7419021403819528, "valid_complete_within_first_second": 1, "request_latency_p95_ms": 2033.8041674374826}
+{"phase": "poisson-rps1", "offers": 41, "valid_complete_wavs": 41, "wall_s": 40.003103423980065, "complete_requests_per_s": 1.0249204809300456, "valid_complete_within_first_second": 1, "request_latency_p95_ms": 2622.8211109992117}
+{"phase": "poisson-rps2", "offers": 81, "valid_complete_wavs": 52, "wall_s": 42.40565476199845, "complete_requests_per_s": 1.226251552814118, "valid_complete_within_first_second": 1, "request_latency_p95_ms": 4178.624871958164}
+{"phase": "poisson-rps4", "offers": 162, "valid_complete_wavs": 54, "wall_s": 43.03407457796857, "complete_requests_per_s": 1.2548195942302307, "valid_complete_within_first_second": 1, "request_latency_p95_ms": 4324.5931531564565}
+{"phase": "poisson-rps8", "offers": 340, "valid_complete_wavs": 52, "wall_s": 43.13033061200986, "complete_requests_per_s": 1.2056480732266943, "valid_complete_within_first_second": 1, "request_latency_p95_ms": 4432.656661374494}

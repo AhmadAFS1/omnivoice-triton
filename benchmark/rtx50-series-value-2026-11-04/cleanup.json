@@ -1,0 +1,28 @@
+{
+  "utc": "2026-11-04T23:15:09.319470+00:00",
+  "verified": true,
+  "remaining_task_ids": [],
+  "task_instances_created": 8,
+  "scope": "Only omnivoice-50series-value-20261104 task-owned contracts; no claim about unrelated production servers",
+  "owned_contract_ids": [
+    59166781,
+    59166785,
+    59167078,
+    59167088,
+    59167099,
+    59167113,
+    59168131,
+    59168148
+  ],
+  "all_six_full_TTS_backups_SHA256_verified": true,
+  "all_ASR_shards_SHA256_verified": true,
+  "task_private_SSH_key_removed": true,
+  "final_ASR_GPU_idle_proof": {
+    "utc": "2026-11-04T23:15:06.384735+00:00",
+    "final_ASR_host_GPU": "NVIDIA GeForce RTX 5090, GPU-694a2f09-ee4a-12f1-07c6-5fa2e0dab6f2, 32607 MiB, 2 MiB, 595.84, 600.00 W",
+    "GPU_idle": true,
+    "all24_TTS_product_sources_unchanged_after_ASR": true,
+    "TTS_freeze_unchanged_after_ASR": true,
+    "TTS_freeze_sha256": "8779229305a5bb1f9aa182171e9ddd89a26f789a3cadd5334858143826ce4823"
+  }
+}

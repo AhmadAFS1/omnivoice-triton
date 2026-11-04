@@ -1,0 +1,4 @@
+{"phase": "warmup", "offers": 104, "valid_complete_wavs": 104, "wall_s": 39.76425388001371, "complete_requests_per_s": 2.615414344597383, "valid_complete_within_first_second": 0, "request_latency_p95_ms": 756.4165724150371}
+{"phase": "dual-b1-c2", "offers": 104, "valid_complete_wavs": 104, "wall_s": 37.817325882962905, "complete_requests_per_s": 2.750062241890378, "valid_complete_within_first_second": 2, "request_latency_p95_ms": 736.5541076200316}
+{"phase": "dual-b1-c8", "offers": 104, "valid_complete_wavs": 104, "wall_s": 37.50629225902958, "complete_requests_per_s": 2.772868063890324, "valid_complete_within_first_second": 2, "request_latency_p95_ms": 2908.5359876597067}
+{"phase": "dual-b1-c32", "offers": 104, "valid_complete_wavs": 104, "wall_s": 37.736150703975, "complete_requests_per_s": 2.7559779696619926, "valid_complete_within_first_second": 2, "request_latency_p95_ms": 11622.972255569766}

@@ -1,0 +1,43 @@
+{
+  "utc": "2026-11-04T22:11:30.564382+00:00",
+  "actual_GPU": "NVIDIA GeForce RTX 5070, GPU-4cd0ef5c-21f5-71da-1943-227011235392, 12227 MiB, 595.99.02, 250.00 W",
+  "ticket": {
+    "id": 59168131,
+    "gpu": "RTX 5070",
+    "label": "omnivoice-50series-value-20261104-rtx-5070",
+    "hourly": 0.19962962962962966
+  },
+  "environment": {
+    "OMP_NUM_THREADS": "8",
+    "MKL_NUM_THREADS": "8",
+    "OPENBLAS_NUM_THREADS": "8",
+    "TASK_GPU_UUID": "GPU-4cd0ef5c-21f5-71da-1943-227011235392"
+  },
+  "stages": [
+    [
+      "single",
+      "run_capacity.py",
+      1900
+    ],
+    [
+      "profile",
+      "profile_pipeline.py",
+      600
+    ],
+    [
+      "ordinary-dual",
+      "run_dual.py",
+      1900
+    ],
+    [
+      "MPS",
+      "run_mps.py",
+      2100
+    ],
+    [
+      "staggered",
+      "run_staggered.py",
+      900
+    ]
+  ]
+}

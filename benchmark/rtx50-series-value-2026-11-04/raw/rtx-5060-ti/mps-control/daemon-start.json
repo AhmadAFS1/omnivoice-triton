@@ -1,0 +1,10 @@
+{
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "",
+  "scoped_environment": {
+    "CUDA_VISIBLE_DEVICES": "GPU-3aecc320-1682-b687-2826-3ffa70df217d",
+    "CUDA_MPS_PIPE_DIRECTORY": "/workspace/omnivoice-50series-value/mps-control/pipe",
+    "CUDA_MPS_LOG_DIRECTORY": "/workspace/omnivoice-50series-value/mps-control/logs"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "utc": "2026-11-04T23:23:42.114736+00:00",
+  "validation_hardware": "CPU-only audit on operator Mac; actual TTS/ASR GPUs recorded per run",
+  "all_published_source_and_saved_SHA256_match": true,
+  "all_gzip_decompressed_bytes_match": true,
+  "all_local_Markdown_links_exist": true,
+  "Markdown_links_checked": 14,
+  "GPU_models": 6,
+  "timed_offers": 26124,
+  "warmup_offers": 7488,
+  "verified_load_WAVs": 27946,
+  "published_selected_WAVs": 54,
+  "generated_logical_Omnilingual_cases": 1872,
+  "reference_calibration_cases": 9,
+  "Omnilingual_models": 2,
+  "Whisper_core_cases": 240,
+  "byte_identical_baseline_graph_pairs": 624,
+  "all_task_rentals_absent": true,
+  "task_private_SSH_key_removed": true,
+  "report_SHA256": "2480c2ae3d5e2c6a23befa5fb0415ec06286c18eae628873d9462ee440d52779",
+  "publication_manifest_SHA256": "f67f1f99c783fec9ee1665ea55268373787b1a68d0decb111ebfaf2ebd89a79c"
+}

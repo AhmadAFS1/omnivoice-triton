@@ -1,0 +1,36 @@
+{
+  "case": {
+    "text": "No one was inside the apartment.",
+    "language": "en"
+  },
+  "reference": {
+    "id": "en-aoede",
+    "reference_id": "en-aoede",
+    "language": "en",
+    "lang": "en",
+    "api_language": "en",
+    "omnilingual_language": "eng_Latn",
+    "file": "en-aoede.wav",
+    "path": "en-aoede.wav",
+    "text": "I usually enjoy taking a long walk through the park during the afternoon to clear my mind, feel the fresh breeze, and watch the sun slowly set behind the tall trees in the distance.",
+    "expected": "I usually enjoy taking a long walk through the park during the afternoon to clear my mind, feel the fresh breeze, and watch the sun slowly set behind the tall trees in the distance.",
+    "sha256": "d0adc9563e1c71781c87d163b80e9fa27859529ba9b5c7bf28a88ee6ae641e66",
+    "duration_s": 13.930958333333333,
+    "sample_rate": 24000,
+    "channels": 1,
+    "voice": "Aoede",
+    "source": "backend/tmp/gemini_tts_clone_samples/en/en_english_aoede.wav",
+    "source_model": "gemini-2.5-pro-preview-tts",
+    "source_generated_at": "2026-03-30T20:46:55.677975+00:00",
+    "transcript_status": "existing product seed transcript; needs ASR control/native review",
+    "reference_type": "previously synthesized Gemini reference; no new API call",
+    "quality_note": "Reference is longer than normal 3-10 second guidance"
+  },
+  "steps": 16,
+  "runner": "triton",
+  "KV": false,
+  "codec_batch": 1,
+  "fused_rope": false,
+  "split": false,
+  "scope": "single cloned English voice; B1/B8; profiler is not HTTP capacity"
+}

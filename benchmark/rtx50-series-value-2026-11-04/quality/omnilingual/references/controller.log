@@ -1,0 +1,287 @@
+
+{"id": "reference-ar-aoede", "model": "omniASR_CTC_1B_v2", "asr_wall_s": 0.46520615101326257}
+{"id": "reference-da-aoede", "model": "omniASR_CTC_1B_v2", "asr_wall_s": 0.05145371798425913}
+{"id": "reference-de-aoede", "model": "omniASR_CTC_1B_v2", "asr_wall_s": 0.0595509450067766}
+{"id": "reference-el-aoede", "model": "omniASR_CTC_1B_v2", "asr_wall_s": 0.0574317789869383}
+{"id": "reference-en-aoede", "model": "omniASR_CTC_1B_v2", "asr_wall_s": 0.07181080203736201}
+{"id": "reference-es-aoede", "model": "omniASR_CTC_1B_v2", "asr_wall_s": 0.060122444992884994}
+{"id": "reference-fi-aoede", "model": "omniASR_CTC_1B_v2", "asr_wall_s": 0.06711118598468602}
+{"id": "reference-fr-aoede", "model": "omniASR_CTC_1B_v2", "asr_wall_s": 0.05614597402745858}
+{"id": "reference-ur-aoede", "model": "omniASR_CTC_1B_v2", "asr_wall_s": 0.0450050940271467}
+
+{"id": "reference-ar-aoede", "model": "omniASR_LLM_Unlimited_1B_v2", "asr_wall_s": 2.507530177012086}
+{"id": "reference-da-aoede", "model": "omniASR_LLM_Unlimited_1B_v2", "asr_wall_s": 1.727790108998306}
+{"id": "reference-de-aoede", "model": "omniASR_LLM_Unlimited_1B_v2", "asr_wall_s": 1.9257378709735349}
+{"id": "reference-el-aoede", "model": "omniASR_LLM_Unlimited_1B_v2", "asr_wall_s": 1.7167791710235178}
+{"id": "reference-en-aoede", "model": "omniASR_LLM_Unlimited_1B_v2", "asr_wall_s": 1.9511897659976967}
+{"id": "reference-es-aoede", "model": "omniASR_LLM_Unlimited_1B_v2", "asr_wall_s": 1.9040540629648603}
+{"id": "reference-fi-aoede", "model": "omniASR_LLM_Unlimited_1B_v2", "asr_wall_s": 1.9949329099617898}
+{"id": "reference-fr-aoede", "model": "omniASR_LLM_Unlimited_1B_v2", "asr_wall_s": 1.8788944630068727}
+{"id": "reference-ur-aoede", "model": "omniASR_LLM_Unlimited_1B_v2", "asr_wall_s": 1.368747069966048}
+{
+  "cases": 9,
+  "unique_original_audio_hashes": 9,
+  "flagged_cases": 5,
+  "status": "review_required",
+  "models": {
+    "omniASR_CTC_1B_v2": {
+      "exact_cases": 5,
+      "word_edits": 36,
+      "spacing_only_cases": 0,
+      "exact_character_cases_ignoring_whitespace": 5,
+      "actual_asr_inferences": 9,
+      "reference_words": 256,
+      "aggregate_wer": 0.140625,
+      "aggregate_cer": 0.08807045636509207,
+      "asr_wall_s": 0.9338380940607749,
+      "per_language": {
+        "arb_Arab": {
+          "cases": 1,
+          "exact_cases": 1,
+          "spacing_only_cases": 0,
+          "reference_words": 25,
+          "word_edits": 0,
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 0,
+          "aggregate_wer": 0.0,
+          "aggregate_cer": 0.0
+        },
+        "dan_Latn": {
+          "cases": 1,
+          "exact_cases": 0,
+          "spacing_only_cases": 0,
+          "reference_words": 29,
+          "word_edits": 5,
+          "substitutions": 4,
+          "deletions": 1,
+          "insertions": 0,
+          "aggregate_wer": 0.1724137931034483,
+          "aggregate_cer": 0.022222222222222223
+        },
+        "deu_Latn": {
+          "cases": 1,
+          "exact_cases": 1,
+          "spacing_only_cases": 0,
+          "reference_words": 30,
+          "word_edits": 0,
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 0,
+          "aggregate_wer": 0.0,
+          "aggregate_cer": 0.0
+        },
+        "ell_Grek": {
+          "cases": 1,
+          "exact_cases": 0,
+          "spacing_only_cases": 0,
+          "reference_words": 29,
+          "word_edits": 3,
+          "substitutions": 3,
+          "deletions": 0,
+          "insertions": 0,
+          "aggregate_wer": 0.10344827586206896,
+          "aggregate_cer": 0.022556390977443608
+        },
+        "eng_Latn": {
+          "cases": 1,
+          "exact_cases": 1,
+          "spacing_only_cases": 0,
+          "reference_words": 34,
+          "word_edits": 0,
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 0,
+          "aggregate_wer": 0.0,
+          "aggregate_cer": 0.0
+        },
+        "fin_Latn": {
+          "cases": 1,
+          "exact_cases": 0,
+          "spacing_only_cases": 0,
+          "reference_words": 23,
+          "word_edits": 1,
+          "substitutions": 1,
+          "deletions": 0,
+          "insertions": 0,
+          "aggregate_wer": 0.043478260869565216,
+          "aggregate_cer": 0.006211180124223602
+        },
+        "fra_Latn": {
+          "cases": 1,
+          "exact_cases": 1,
+          "spacing_only_cases": 0,
+          "reference_words": 28,
+          "word_edits": 0,
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 0,
+          "aggregate_wer": 0.0,
+          "aggregate_cer": 0.0
+        },
+        "spa_Latn": {
+          "cases": 1,
+          "exact_cases": 1,
+          "spacing_only_cases": 0,
+          "reference_words": 31,
+          "word_edits": 0,
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 0,
+          "aggregate_wer": 0.0,
+          "aggregate_cer": 0.0
+        },
+        "urd_Arab": {
+          "cases": 1,
+          "exact_cases": 0,
+          "spacing_only_cases": 0,
+          "reference_words": 27,
+          "word_edits": 27,
+          "substitutions": 27,
+          "deletions": 0,
+          "insertions": 0,
+          "aggregate_wer": 1.0,
+          "aggregate_cer": 1.0404040404040404
+        }
+      }
+    },
+    "omniASR_LLM_Unlimited_1B_v2": {
+      "exact_cases": 4,
+      "word_edits": 8,
+      "spacing_only_cases": 0,
+      "exact_character_cases_ignoring_whitespace": 4,
+      "actual_asr_inferences": 9,
+      "reference_words": 256,
+      "aggregate_wer": 0.03125,
+      "aggregate_cer": 0.01200960768614892,
+      "asr_wall_s": 16.975655599904712,
+      "per_language": {
+        "arb_Arab": {
+          "cases": 1,
+          "exact_cases": 0,
+          "spacing_only_cases": 0,
+          "reference_words": 25,
+          "word_edits": 1,
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 1,
+          "aggregate_wer": 0.04,
+          "aggregate_cer": 0.0546875
+        },
+        "dan_Latn": {
+          "cases": 1,
+          "exact_cases": 0,
+          "spacing_only_cases": 0,
+          "reference_words": 29,
+          "word_edits": 3,
+          "substitutions": 2,
+          "deletions": 1,
+          "insertions": 0,
+          "aggregate_wer": 0.10344827586206896,
+          "aggregate_cer": 0.007407407407407408
+        },
+        "deu_Latn": {
+          "cases": 1,
+          "exact_cases": 1,
+          "spacing_only_cases": 0,
+          "reference_words": 30,
+          "word_edits": 0,
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 0,
+          "aggregate_wer": 0.0,
+          "aggregate_cer": 0.0
+        },
+        "ell_Grek": {
+          "cases": 1,
+          "exact_cases": 0,
+          "spacing_only_cases": 0,
+          "reference_words": 29,
+          "word_edits": 1,
+          "substitutions": 1,
+          "deletions": 0,
+          "insertions": 0,
+          "aggregate_wer": 0.034482758620689655,
+          "aggregate_cer": 0.007518796992481203
+        },
+        "eng_Latn": {
+          "cases": 1,
+          "exact_cases": 1,
+          "spacing_only_cases": 0,
+          "reference_words": 34,
+          "word_edits": 0,
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 0,
+          "aggregate_wer": 0.0,
+          "aggregate_cer": 0.0
+        },
+        "fin_Latn": {
+          "cases": 1,
+          "exact_cases": 0,
+          "spacing_only_cases": 0,
+          "reference_words": 23,
+          "word_edits": 1,
+          "substitutions": 1,
+          "deletions": 0,
+          "insertions": 0,
+          "aggregate_wer": 0.043478260869565216,
+          "aggregate_cer": 0.006211180124223602
+        },
+        "fra_Latn": {
+          "cases": 1,
+          "exact_cases": 1,
+          "spacing_only_cases": 0,
+          "reference_words": 28,
+          "word_edits": 0,
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 0,
+          "aggregate_wer": 0.0,
+          "aggregate_cer": 0.0
+        },
+        "spa_Latn": {
+          "cases": 1,
+          "exact_cases": 1,
+          "spacing_only_cases": 0,
+          "reference_words": 31,
+          "word_edits": 0,
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 0,
+          "aggregate_wer": 0.0,
+          "aggregate_cer": 0.0
+        },
+        "urd_Arab": {
+          "cases": 1,
+          "exact_cases": 0,
+          "spacing_only_cases": 0,
+          "reference_words": 27,
+          "word_edits": 2,
+          "substitutions": 1,
+          "deletions": 0,
+          "insertions": 1,
+          "aggregate_wer": 0.07407407407407407,
+          "aggregate_cer": 0.050505050505050504
+        }
+      }
+    }
+  },
+  "languages_observed": [
+    "arb_Arab",
+    "dan_Latn",
+    "deu_Latn",
+    "ell_Grek",
+    "eng_Latn",
+    "fin_Latn",
+    "fra_Latn",
+    "spa_Latn",
+    "urd_Arab"
+  ],
+  "limitations": [
+    "Two variants share the Omnilingual family and are not independent ground truth.",
+    "No MOS, human listening, or speaker similarity measurement.",
+    "No calibrated ASR confidence available.",
+    "Language support is not per-language quality qualification."
+  ]
+}

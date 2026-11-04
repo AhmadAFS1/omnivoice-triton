@@ -1,0 +1,21 @@
+{
+  "GPU": "RTX 5060 Ti",
+  "rental_id": 59166781,
+  "cases": 312,
+  "unique_audio_language_inputs": 207,
+  "selection": [
+    [
+      "baseline",
+      "results/batch1/b1-c1"
+    ],
+    [
+      "graphs",
+      "hybrid-wide/batch1/b1-c1"
+    ],
+    [
+      "throughput",
+      "dual-mps/batch1/dual-b1-c32"
+    ]
+  ],
+  "note": "104 routes each; ASR screen of these three arms only; no MOS/speaker/native-language certification"
+}

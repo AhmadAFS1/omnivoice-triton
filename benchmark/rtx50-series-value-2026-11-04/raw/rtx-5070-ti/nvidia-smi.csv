@@ -1,0 +1,2 @@
+name, uuid, memory.total [MiB], driver_version, power.limit [W]
+NVIDIA GeForce RTX 5070 Ti, GPU-f61bb968-3352-4b58-3f29-71acfe742e28, 16303 MiB, 595.91.07, 300.00 W

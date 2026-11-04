@@ -1,0 +1,132 @@
+[
+  {
+    "batch": 1,
+    "rep": 0,
+    "synchronized_full_model_ms": 398.6996170133352,
+    "stages_host_wall_ms": {
+      "prepare_inference_inputs_ms": 0.5287099920678884,
+      "iterative_generate_ms": 367.8613180236425,
+      "audio_decode_ms": 28.462518006563187,
+      "post_process_audio_ms": 0.14047601143829525,
+      "decode_postprocess_ms": 28.602994018001482,
+      "generate_total_ms": 398.6575880262535
+    }
+  },
+  {
+    "batch": 1,
+    "rep": 1,
+    "synchronized_full_model_ms": 399.4774880120531,
+    "stages_host_wall_ms": {
+      "prepare_inference_inputs_ms": 0.5154450191184878,
+      "iterative_generate_ms": 368.29370600753464,
+      "audio_decode_ms": 28.675559995463118,
+      "post_process_audio_ms": 0.26376897585578263,
+      "decode_postprocess_ms": 28.9393289713189,
+      "generate_total_ms": 399.42407701164484
+    }
+  },
+  {
+    "batch": 1,
+    "rep": 2,
+    "synchronized_full_model_ms": 399.60832201177254,
+    "stages_host_wall_ms": {
+      "prepare_inference_inputs_ms": 0.5428160075098276,
+      "iterative_generate_ms": 368.5654269938823,
+      "audio_decode_ms": 28.45072402851656,
+      "post_process_audio_ms": 0.24652600404806435,
+      "decode_postprocess_ms": 28.697250032564625,
+      "generate_total_ms": 399.5668540010229
+    }
+  },
+  {
+    "batch": 1,
+    "rep": 3,
+    "synchronized_full_model_ms": 400.30067099723965,
+    "stages_host_wall_ms": {
+      "prepare_inference_inputs_ms": 0.5090219783596694,
+      "iterative_generate_ms": 369.5156629837584,
+      "audio_decode_ms": 28.31807400798425,
+      "post_process_audio_ms": 0.2502440183889121,
+      "decode_postprocess_ms": 28.568318026373163,
+      "generate_total_ms": 400.25681801489554
+    }
+  },
+  {
+    "batch": 1,
+    "rep": 4,
+    "synchronized_full_model_ms": 398.92843502457254,
+    "stages_host_wall_ms": {
+      "prepare_inference_inputs_ms": 0.5212149990256876,
+      "iterative_generate_ms": 367.93159699300304,
+      "audio_decode_ms": 28.521197993541136,
+      "post_process_audio_ms": 0.2541799913160503,
+      "decode_postprocess_ms": 28.775377984857187,
+      "generate_total_ms": 398.8860950048547
+    }
+  },
+  {
+    "batch": 8,
+    "rep": 0,
+    "synchronized_full_model_ms": 3155.9086380002555,
+    "stages_host_wall_ms": {
+      "prepare_inference_inputs_ms": 3.318752977065742,
+      "iterative_generate_ms": 2954.3650679988787,
+      "audio_decode_ms": 197.6465939951595,
+      "post_process_audio_ms": 1.4141530264168978,
+      "decode_postprocess_ms": 199.0607470215764,
+      "generate_total_ms": 3155.853824020596
+    }
+  },
+  {
+    "batch": 8,
+    "rep": 1,
+    "synchronized_full_model_ms": 3151.0450259956997,
+    "stages_host_wall_ms": {
+      "prepare_inference_inputs_ms": 3.2901980448514223,
+      "iterative_generate_ms": 2945.864398003323,
+      "audio_decode_ms": 200.96513998578303,
+      "post_process_audio_ms": 1.6609489975962788,
+      "decode_postprocess_ms": 202.6260889833793,
+      "generate_total_ms": 3150.986604974605
+    }
+  },
+  {
+    "batch": 8,
+    "rep": 2,
+    "synchronized_full_model_ms": 3154.7593489813153,
+    "stages_host_wall_ms": {
+      "prepare_inference_inputs_ms": 3.6109859647694975,
+      "iterative_generate_ms": 2953.609475021949,
+      "audio_decode_ms": 196.84516699635424,
+      "post_process_audio_ms": 1.594875007867813,
+      "decode_postprocess_ms": 198.44004200422205,
+      "generate_total_ms": 3154.7064789920114
+    }
+  },
+  {
+    "batch": 8,
+    "rep": 3,
+    "synchronized_full_model_ms": 3156.202870013658,
+    "stages_host_wall_ms": {
+      "prepare_inference_inputs_ms": 3.3074120292440057,
+      "iterative_generate_ms": 2954.0447860199492,
+      "audio_decode_ms": 197.75045299320482,
+      "post_process_audio_ms": 1.8530719971749932,
+      "decode_postprocess_ms": 199.6035249903798,
+      "generate_total_ms": 3156.1425359977875
+    }
+  },
+  {
+    "batch": 8,
+    "rep": 4,
+    "synchronized_full_model_ms": 3150.3257639997173,
+    "stages_host_wall_ms": {
+      "prepare_inference_inputs_ms": 3.8035599573049694,
+      "iterative_generate_ms": 2948.912804014981,
+      "audio_decode_ms": 196.78946200292557,
+      "post_process_audio_ms": 1.5771299949847162,
+      "decode_postprocess_ms": 198.3665919979103,
+      "generate_total_ms": 3150.26085198042
+    }
+  }
+]

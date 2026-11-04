@@ -1,0 +1,2 @@
+name, uuid, memory.total [MiB], driver_version, power.limit [W]
+NVIDIA GeForce RTX 5090, GPU-694a2f09-ee4a-12f1-07c6-5fa2e0dab6f2, 32607 MiB, 595.84, 600.00 W

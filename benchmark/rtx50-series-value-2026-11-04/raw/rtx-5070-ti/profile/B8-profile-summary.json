@@ -1,0 +1,51 @@
+{
+  "batch": 8,
+  "profiled_full_ms": 2392.7630690159276,
+  "profiled_host_stage_ms": {
+    "prepare_inference_inputs_ms": 7.293080969247967,
+    "iterative_generate_ms": 2157.325684966054,
+    "audio_decode_ms": 228.78793498966843,
+    "post_process_audio_ms": 2.9525210266001523,
+    "decode_postprocess_ms": 231.74045601626858,
+    "generate_total_ms": 2392.677741998341
+  },
+  "profiling_preserved_float_audio_exactly": true,
+  "kernels": 23636,
+  "kernel_sum_ms": 2256.739998,
+  "kernel_interval_union_ms": 2256.739985839844,
+  "kernel_span_ms": 2386.7456967773437,
+  "kernel_categories": {
+    "concat-copy": {
+      "calls": 920,
+      "sum_ms": 77.585832
+    },
+    "elementwise/copy": {
+      "calls": 15004,
+      "sum_ms": 389.4876010000001
+    },
+    "other": {
+      "calls": 1936,
+      "sum_ms": 25.32518600000003
+    },
+    "GEMM": {
+      "calls": 3408,
+      "sum_ms": 1151.8253699999987
+    },
+    "RMSNorm": {
+      "calls": 1536,
+      "sum_ms": 78.36704800000017
+    },
+    "attention": {
+      "calls": 448,
+      "sum_ms": 477.87537799999984
+    },
+    "SwiGLU": {
+      "calls": 384,
+      "sum_ms": 56.273583
+    }
+  },
+  "linear_FLOPs_observed_per_generate": 105012487258112,
+  "linears_count": 3224,
+  "peak_allocated_bytes": 2643519488,
+  "note": "Kernel active intervals do not prove SM/Tensor Core saturation. Sum may overlap. Host metrics are not separately synchronized GPU stage times."
+}

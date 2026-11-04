@@ -1,0 +1,14 @@
+[
+  {
+    "script": "run_hybrid_wide.py",
+    "returncode": 0,
+    "start_utc": "2026-11-04T22:58:49.296209+00:00",
+    "wall_s": 287.62683057785034
+  },
+  {
+    "script": "run_staggered_wide.py",
+    "returncode": 0,
+    "start_utc": "2026-11-04T23:03:36.950347+00:00",
+    "wall_s": 293.6180467605591
+  }
+]

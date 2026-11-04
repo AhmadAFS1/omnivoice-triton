@@ -1,0 +1,24 @@
+{
+  "utc": "2026-11-04T22:28:44.273312+00:00",
+  "status": "completed",
+  "probe_server_list": {
+    "returncode": 0,
+    "stdout": "6473\n",
+    "stderr": ""
+  },
+  "probe_clients": {
+    "6473": {
+      "returncode": 0,
+      "stdout": "6463\n",
+      "stderr": ""
+    }
+  },
+  "verified_probe_client": true,
+  "dual_returncode": 0,
+  "single_mps_returncode": 0,
+  "daemon_quit": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+}

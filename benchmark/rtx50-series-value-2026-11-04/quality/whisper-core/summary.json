@@ -1,0 +1,30 @@
+{
+  "cases": 240,
+  "languages": [
+    "en",
+    "es",
+    "ar",
+    "zh",
+    "fr",
+    "de",
+    "it",
+    "pt",
+    "ru",
+    "hi",
+    "ja",
+    "ko",
+    "nl",
+    "pl",
+    "tr",
+    "vi",
+    "id",
+    "ur",
+    "el",
+    "fi"
+  ],
+  "unique_recognizer_inputs": 240,
+  "exact_character_cases": 188,
+  "aggregate_CER": 0.01957831325301205,
+  "quality_certified": false,
+  "note": "20 standard languages only. Remaining84 routes not screened by this model; full104-route coverage is the two Omnilingual models. ASR mismatch is not a verified TTS failure."
+}

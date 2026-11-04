@@ -1,0 +1,43 @@
+{
+  "utc": "2026-11-04T22:00:40.023930+00:00",
+  "actual_GPU": "NVIDIA GeForce RTX 5060 Ti, GPU-3aecc320-1682-b687-2826-3ffa70df217d, 16311 MiB, 580.95.05, 180.00 W",
+  "ticket": {
+    "id": 59166781,
+    "gpu": "RTX 5060 Ti",
+    "label": "omnivoice-50series-value-20261104-rtx-5060-ti",
+    "hourly": 0.19777777777777777
+  },
+  "environment": {
+    "OMP_NUM_THREADS": "8",
+    "MKL_NUM_THREADS": "8",
+    "OPENBLAS_NUM_THREADS": "8",
+    "TASK_GPU_UUID": "GPU-3aecc320-1682-b687-2826-3ffa70df217d"
+  },
+  "stages": [
+    [
+      "single",
+      "run_capacity.py",
+      1900
+    ],
+    [
+      "profile",
+      "profile_pipeline.py",
+      600
+    ],
+    [
+      "ordinary-dual",
+      "run_dual.py",
+      1900
+    ],
+    [
+      "MPS",
+      "run_mps.py",
+      2100
+    ],
+    [
+      "staggered",
+      "run_staggered.py",
+      900
+    ]
+  ]
+}

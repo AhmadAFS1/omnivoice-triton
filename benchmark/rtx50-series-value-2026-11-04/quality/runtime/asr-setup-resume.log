@@ -1,0 +1,111 @@
+Using Python 3.12.3 environment at: source/.venv
+{"utc": "2026-11-04T22:35:52.273236+00:00", "command": ["/workspace/omnivoice-50series-value/asr-venv/bin/python", "-c", "import importlib.metadata as m; assert m.version('torch')=='2.8.0+cu128'; assert m.version('torchaudio')=='2.8.0+cu128'"]}
+{"utc": "2026-11-04T22:35:52.387704+00:00", "command": ["/root/.local/bin/uv", "pip", "install", "--python", "/workspace/omnivoice-50series-value/asr-venv/bin/python", "--index-strategy", "unsafe-best-match", "fairseq2n==0.6+cu128", "--extra-index-url", "https://fair.pkg.atmeta.com/fairseq2/whl/pt2.8.0/cu128"]}
+Using Python 3.12.3 environment at: asr-venv
+Resolved 28 packages in 2.44s
+Downloading tcmlib (2.7MiB)
+Downloading tbb (6.5MiB)
+Downloading fairseq2n (3.1MiB)
+ Downloaded fairseq2n
+ Downloaded tcmlib
+ Downloaded tbb
+Prepared 3 packages in 319ms
+Installed 3 packages in 7ms
+ + fairseq2n==0.6+cu128
+ + tbb==2023.2.0
+ + tcmlib==1.6.0
+{"utc": "2026-11-04T22:35:55.207403+00:00", "command": ["/root/.local/bin/uv", "pip", "install", "--python", "/workspace/omnivoice-50series-value/asr-venv/bin/python", "--index-strategy", "unsafe-best-match", "fairseq2[arrow]==0.6", "omnilingual-asr @ git+https://github.com/facebookresearch/omnilingual-asr.git@81f51e224ce9e74b02cc2a3eaf21b2d91d743455", "numpy==1.26.4", "pyarrow==20.0.0", "soundfile==0.13.1", "jiwer==4.0.0"]}
+Using Python 3.12.3 environment at: asr-venv
+   Updating https://github.com/facebookresearch/omnilingual-asr.git (81f51e224ce9e74b02cc2a3eaf21b2d91d743455)
+    Updated https://github.com/facebookresearch/omnilingual-asr.git (81f51e224ce9e74b02cc2a3eaf21b2d91d743455)
+Resolved 81 packages in 15.45s
+   Building omnilingual-asr @ git+https://github.com/facebookresearch/omnilingual-asr.git@81f51e224ce9e74b02cc2a3eaf21b2d91d743455
+Downloading polars-runtime-32 (51.4MiB)
+Downloading llvmlite (56.9MiB)
+Downloading pyarrow (40.3MiB)
+      Built omnilingual-asr @ git+https://github.com/facebookresearch/omnilingual-asr.git@81f51e224ce9e74b02cc2a3eaf21b2d91d743455
+ Downloaded polars-runtime-32
+ Downloaded pyarrow
+Downloading numpy (17.1MiB)
+Downloading pandas (10.3MiB)
+ Downloaded llvmlite
+Downloading lxml (5.0MiB)
+ Downloaded pandas
+ Downloaded lxml
+Downloading hf-xet (4.1MiB)
+Downloading numba (3.7MiB)
+ Downloaded hf-xet
+ Downloaded numba
+Downloading pycryptodomex (2.2MiB)
+Downloading pygments (1.2MiB)
+ Downloaded numpy
+Downloading tiktoken (1.1MiB)
+ Downloaded pycryptodomex
+ Downloaded tiktoken
+ Downloaded pygments
+   Building kenlm==0.3.0
+      Built kenlm==0.3.0
+Prepared 47 packages in 42.48s
+Installed 52 packages in 127ms
+ + blobfile==3.0.0
+ + certifi==2026.10.23
+ + cffi==2.1.1
+ + charset-normalizer==3.5.2
+ + click==8.5.0
+ + colorama==0.4.6
+ + editdistance==0.8.1
+ + fairseq2==0.6
+ + hf-xet==1.8.0
+ + huggingface-hub==0.36.2
+ + idna==3.20
+ + importlib-metadata==7.2.1
+ + importlib-resources==6.5.2
+ + jiwer==4.0.0
+ + kenlm==0.3.0
+ + llvmlite==0.50.0
+ + lxml==6.1.3
+ + markdown-it-py==4.2.0
+ + mdurl==0.1.2
+ + mypy-extensions==1.2.0
+ + numba==0.68.1
+ + numpy==1.26.4
+ + omnilingual-asr==0.2.0 (from git+https://github.com/facebookresearch/omnilingual-asr.git@81f51e224ce9e74b02cc2a3eaf21b2d91d743455)
+ + packaging==24.2
+ + pandas==3.0.6
+ + polars==2.1.0
+ + polars-runtime-32==2.1.0
+ + portalocker==4.4.2
+ + psutil==5.9.8
+ + pyarrow==20.0.0
+ + pycparser==3.12
+ + pycryptodomex==3.24.1
+ + pygments==2.21.0
+ + python-dateutil==4.0.0
+ + pyyaml==6.0.3
+ + rapidfuzz==3.14.6
+ + regex==2026.9.29
+ + requests==2.34.2
+ + retrying==1.3.7
+ + rich==13.9.4
+ + ruamel-yaml==0.19.1
+ + sacrebleu==2.6.0
+ + safetensors==0.8.0
+ + soundfile==0.13.1
+ + tabulate==0.10.0
+ + tiktoken==0.14.0
+ + torcheval==0.0.7
+ + tqdm==4.70.1
+ + tzdata==2026.6
+ + urllib3==2.8.0
+ + xxhash==3.8.2
+ + zipp==4.1.2
+{"utc": "2026-11-04T22:36:53.509944+00:00", "command": ["/root/.local/bin/uv", "pip", "check", "--python", "/workspace/omnivoice-50series-value/asr-venv/bin/python"]}
+Using Python 3.12.3 environment at: asr-venv
+Checked 81 packages in 3ms
+All installed packages are compatible
+Using Python 3.12.3 environment at: asr-venv
+{"utc": "2026-11-04T22:36:53.560440+00:00", "command": ["/workspace/omnivoice-50series-value/asr-venv/bin/python", "/workspace/omnivoice-50series-value/asr/prefetch.py", "--output", "/workspace/omnivoice-50series-value/asr/assets.json"]}
+{"name": "omniASR_tokenizer_written_v2", "url": "https://dl.fbaipublicfiles.com/mms/omniASR_tokenizer_written_v2.model", "path": "/root/.cache/fairseq2/assets/e7be1a6acb8f76fdbca19dce/omniASR_tokenizer_written_v2.model", "bytes": 91481, "sha256": "8aa11a1092142ef472537476ef6e76541123e2f0d789b79f3ebd119008240b1e", "download_and_hash_wall_s": 0.2760806159931235}
+{"name": "omniASR_LLM_Unlimited_1B_v2", "url": "https://dl.fbaipublicfiles.com/mms/omniASR-LLM-Unlimited-1B-v2.pt", "path": "/root/.cache/fairseq2/assets/cc18d8a62471f2f461e87839/omniASR-LLM-Unlimited-1B-v2.pt", "bytes": 9118766620, "sha256": "f3cda9ddd8d7991c396cce58714269824457ae3c8807ca6cd0297e8d275bea66", "download_and_hash_wall_s": 204.59402480500285}
+{"name": "omniASR_CTC_1B_v2", "url": "https://dl.fbaipublicfiles.com/mms/omniASR-CTC-1B-v2.pt", "path": "/root/.cache/fairseq2/assets/fca49af82b51089226da7de9/omniASR-CTC-1B-v2.pt", "bytes": 3902956068, "sha256": "354f981756aa8f41591ea363e45b9c4eba1ec5144c2273af82e747efbb08919c", "download_and_hash_wall_s": 43.97951653500786}
+Using Python 3.12.3 environment at: source/.venv

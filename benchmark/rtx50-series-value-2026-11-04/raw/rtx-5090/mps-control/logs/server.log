@@ -1,0 +1,79 @@
+[2026-11-04 22:08:59.572 Server  5943] Startup
+[2026-11-04 22:08:59.572 Server  5943] Attempting to raise file descriptor limit from 1024 to 4096
+[2026-11-04 22:08:59.572 Server  5943] Connecting to control daemon on socket: /workspace/omnivoice-50series-value/mps-control/pipe/control
+[2026-11-04 22:08:59.572 Server  5943] Initializing server process
+[2026-11-04 22:08:59.661 Server  5943] Creating server context on device 0 (NVIDIA GeForce RTX 5090)
+[2026-11-04 22:08:59.737 Server  5943] Created anonymous shared memory region mps.shm.0.5943
+[2026-11-04 22:08:59.737 Server  5943] CUDA MPS Server for Linux/Unix. Binary version: 13020
+[2026-11-04 22:08:59.737 Server  5943] Display Driver version: 595
+[2026-11-04 22:08:59.737 Server  5943] Active Threads Percentage set to 100.0
+[2026-11-04 22:08:59.737 Server  5943] Server Priority set to 0
+[2026-11-04 22:08:59.737 Server  5943] Static Partitioning mode disabled
+[2026-11-04 22:08:59.737 Server  5943] Server has started
+[2026-11-04 22:08:59.737 Server  5943] Received new client request from PID 5934
+[2026-11-04 22:08:59.737 Server  5943] Priority level of client {5934} is: 0 (NORMAL)
+[2026-11-04 22:08:59.737 Server  5943] Client {PID: 5934, Context ID: 0} connected
+[2026-11-04 22:08:59.737 Server  5943] Creating worker thread for client {PID: 5934, Context ID: 0}
+[2026-11-04 22:08:59.782 Client  5934] Attempting to raise file descriptor limit from 1024 to 4096
+[2026-11-04 22:08:59.782 Server  5943] Received new client request from PID 5934
+[2026-11-04 22:08:59.782 Server  5943] Priority level of client {5934} is: 0 (NORMAL)
+[2026-11-04 22:08:59.782 Server  5943] Client {PID: 5934, Context ID: 1} connected
+[2026-11-04 22:08:59.782 Server  5943] Creating worker thread for client {PID: 5934, Context ID: 1}
+[2026-11-04 22:08:59.782 Server  5943] Device NVIDIA GeForce RTX 5090 (uuid GPU-694a2f09-ee4a-12f1-07c6-5fa2e0dab6f2) is associated
+[2026-11-04 22:08:59.782 Server  5943] Status of client {PID: 5934, Context ID: 1} is ACTIVE
+[2026-11-04 22:08:59.783 Client  5934] Static partitioning mode disabled
+[2026-11-04 22:09:00.325 Server  5943] Server failed to receive command: the remote procedural call between the MPS server and the MPS client failed, assuming client {PID: 5934, Context ID: 1} exit
+[2026-11-04 22:09:00.325 Server  5943] Client {PID: 5934, Context ID: 1} exiting. Number of active client contexts is 0.
+[2026-11-04 22:09:00.404 Server  5943] Server failed to receive command: the remote procedural call between the MPS server and the MPS client failed, assuming client {PID: 5934, Context ID: 0} exit
+[2026-11-04 22:09:00.404 Server  5943] Client process 5934 disconnected
+[2026-11-04 22:09:02.069 Server  5943] Received new client request from PID 5965
+[2026-11-04 22:09:02.069 Server  5943] Priority level of client {5965} is: 0 (NORMAL)
+[2026-11-04 22:09:02.069 Server  5943] Client {PID: 5965, Context ID: 0} connected
+[2026-11-04 22:09:02.069 Server  5943] Creating worker thread for client {PID: 5965, Context ID: 0}
+[2026-11-04 22:09:02.108 Server  5943] Received new client request from PID 5966
+[2026-11-04 22:09:02.108 Server  5943] Priority level of client {5966} is: 0 (NORMAL)
+[2026-11-04 22:09:02.108 Server  5943] Client {PID: 5966, Context ID: 0} connected
+[2026-11-04 22:09:02.108 Server  5943] Creating worker thread for client {PID: 5966, Context ID: 0}
+[2026-11-04 22:09:05.633 Client  5965] Attempting to raise file descriptor limit from 1024 to 4096
+[2026-11-04 22:09:05.634 Server  5943] Received new client request from PID 5965
+[2026-11-04 22:09:05.634 Server  5943] Priority level of client {5965} is: 0 (NORMAL)
+[2026-11-04 22:09:05.634 Server  5943] Client {PID: 5965, Context ID: 1} connected
+[2026-11-04 22:09:05.634 Server  5943] Creating worker thread for client {PID: 5965, Context ID: 1}
+[2026-11-04 22:09:05.634 Server  5943] Device NVIDIA GeForce RTX 5090 (uuid GPU-694a2f09-ee4a-12f1-07c6-5fa2e0dab6f2) is associated
+[2026-11-04 22:09:05.634 Server  5943] Status of client {PID: 5965, Context ID: 1} is ACTIVE
+[2026-11-04 22:09:05.635 Client  5965] Static partitioning mode disabled
+[2026-11-04 22:09:05.674 Client  5966] Attempting to raise file descriptor limit from 1024 to 4096
+[2026-11-04 22:09:05.682 Server  5943] Received new client request from PID 5966
+[2026-11-04 22:09:05.682 Server  5943] Priority level of client {5966} is: 0 (NORMAL)
+[2026-11-04 22:09:05.682 Server  5943] Client {PID: 5966, Context ID: 1} connected
+[2026-11-04 22:09:05.682 Server  5943] Creating worker thread for client {PID: 5966, Context ID: 1}
+[2026-11-04 22:09:05.682 Server  5943] Device NVIDIA GeForce RTX 5090 (uuid GPU-694a2f09-ee4a-12f1-07c6-5fa2e0dab6f2) is associated
+[2026-11-04 22:09:05.682 Server  5943] Status of client {PID: 5966, Context ID: 1} is ACTIVE
+[2026-11-04 22:09:05.683 Client  5966] Static partitioning mode disabled
+[2026-11-04 22:10:56.667 Server  5943] Server failed to receive command: the remote procedural call between the MPS server and the MPS client failed, assuming client {PID: 5965, Context ID: 1} exit
+[2026-11-04 22:10:56.667 Server  5943] Client {PID: 5965, Context ID: 1} exiting. Number of active client contexts is 1.
+[2026-11-04 22:10:56.915 Server  5943] Server failed to receive command: the remote procedural call between the MPS server and the MPS client failed, assuming client {PID: 5965, Context ID: 0} exit
+[2026-11-04 22:10:56.915 Server  5943] Client process 5965 disconnected
+[2026-11-04 22:10:57.177 Server  5943] Server failed to receive command: the remote procedural call between the MPS server and the MPS client failed, assuming client {PID: 5966, Context ID: 1} exit
+[2026-11-04 22:10:57.177 Server  5943] Client {PID: 5966, Context ID: 1} exiting. Number of active client contexts is 0.
+[2026-11-04 22:10:57.434 Server  5943] Server failed to receive command: the remote procedural call between the MPS server and the MPS client failed, assuming client {PID: 5966, Context ID: 0} exit
+[2026-11-04 22:10:57.434 Server  5943] Client process 5966 disconnected
+[2026-11-04 22:10:59.174 Server  5943] Received new client request from PID 6842
+[2026-11-04 22:10:59.174 Server  5943] Priority level of client {6842} is: 0 (NORMAL)
+[2026-11-04 22:10:59.174 Server  5943] Client {PID: 6842, Context ID: 0} connected
+[2026-11-04 22:10:59.174 Server  5943] Creating worker thread for client {PID: 6842, Context ID: 0}
+[2026-11-04 22:11:02.672 Client  6842] Attempting to raise file descriptor limit from 1024 to 4096
+[2026-11-04 22:11:02.673 Server  5943] Received new client request from PID 6842
+[2026-11-04 22:11:02.673 Server  5943] Priority level of client {6842} is: 0 (NORMAL)
+[2026-11-04 22:11:02.673 Server  5943] Client {PID: 6842, Context ID: 1} connected
+[2026-11-04 22:11:02.673 Server  5943] Creating worker thread for client {PID: 6842, Context ID: 1}
+[2026-11-04 22:11:02.673 Server  5943] Device NVIDIA GeForce RTX 5090 (uuid GPU-694a2f09-ee4a-12f1-07c6-5fa2e0dab6f2) is associated
+[2026-11-04 22:11:02.673 Server  5943] Status of client {PID: 6842, Context ID: 1} is ACTIVE
+[2026-11-04 22:11:02.674 Client  6842] Static partitioning mode disabled
+[2026-11-04 22:14:23.502 Server  5943] Server failed to receive command: the remote procedural call between the MPS server and the MPS client failed, assuming client {PID: 6842, Context ID: 1} exit
+[2026-11-04 22:14:23.502 Server  5943] Client {PID: 6842, Context ID: 1} exiting. Number of active client contexts is 0.
+[2026-11-04 22:14:23.759 Server  5943] Server failed to receive command: the remote procedural call between the MPS server and the MPS client failed, assuming client {PID: 6842, Context ID: 0} exit
+[2026-11-04 22:14:23.759 Server  5943] Client process 6842 disconnected
+[2026-11-04 22:14:23.906 Server  5943] Server has been notified to shutdown
+[2026-11-04 22:14:23.906 Server  5943] Waiting for current clients to finish
+[2026-11-04 22:14:23.906 Server  5943] Exiting

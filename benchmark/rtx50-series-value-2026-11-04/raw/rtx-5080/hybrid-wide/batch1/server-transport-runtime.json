@@ -1,0 +1,5 @@
+{
+  "timeout_keep_alive": 600,
+  "resolved_HTTP_protocol_class": "uvicorn.protocols.http.h11_impl.H11Protocol",
+  "uvicorn_version": "0.44.0"
+}

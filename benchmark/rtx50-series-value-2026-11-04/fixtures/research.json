@@ -1,0 +1,44 @@
+{
+  "retrieved_UTC_date": "2026-11-04",
+  "primary_sources": [
+    {
+      "title": "NVIDIA RTX Blackwell GPU Architecture v1.1",
+      "url": "https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf",
+      "locations": "Tables 3–6; especially table6, pages53–55",
+      "RTX5070_vs_RTX4070": {
+        "shader_FP32_TFLOPs": [30.9,29.1],
+        "dense_FP16_BF16_Tensor_FP32_accumulate_TFLOPs": [61.7,58.3],
+        "memory_bandwidth_GBps": [672,504],
+        "L2_MiB": [48,36],
+        "SMs": [48,46]
+      },
+      "interpretation": "FP16 arithmetic gain is modest; bandwidth/cache gains larger. FP4 sparse AI TOPS are not this FP16 workload. INT32 pipelines improve some mixed instruction workloads, but this experiment does not isolate that contribution."
+    },
+    {
+      "title": "NVIDIA RTX5060 family specifications",
+      "url": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5060-family/",
+      "facts": "RTX5060Ti has 16GB and8GB GDDR7 variants,180W reference TGP, compute capability12.0. Actual rental is16GB. Product search cache lists448GB/s; current rendered full-spec table omits bandwidth."
+    },
+    {
+      "title": "NVIDIA Blackwell Tuning Guide12.8",
+      "url": "https://docs.nvidia.com/cuda/archive/12.8.1/blackwell-tuning-guide/index.html",
+      "interpretation": "Compute12.0 and10.0 have different limits; B200 HBM/NVLink/shared-memory claims must not be assigned to consumer RTX50 cards."
+    },
+    {
+      "title": "PyTorch CUDA semantics / CUDA Graphs",
+      "url": "https://docs.pytorch.org/docs/main/notes/cuda.html",
+      "interpretation": "Graph replay reduces CPU launch overhead; dynamic shapes/control flow may prevent reuse. Existing fork hybrid runner combines its Triton patches and CUDA Graphs."
+    },
+    {
+      "title": "NVIDIA MPS architecture",
+      "url": "https://docs.nvidia.com/deploy/mps/architecture.html",
+      "interpretation": "Independent contexts ordinarily time slice compute queues; MPS permits cross-process concurrent scheduling when resources permit. More VRAM does not itself guarantee more throughput."
+    },
+    {
+      "title": "Dissecting the NVIDIA Blackwell Architecture with Microbenchmarks, Jarmusch et al.2025",
+      "url": "https://arxiv.org/abs/2507.10789",
+      "interpretation": "This primary study tests RTX5080 versus H100 PCIe; it reports both gains and regressions. It is not a5070-versus4070 OmniVoice measurement, so our direct tests determine the recommendation."
+    }
+  ],
+  "not_used_as_evidence_of_TTS_speed": ["DLSS gaming ratios","sparse FP4 AI TOPS versus dense FP16","data-center Blackwell tcgen05/TensorMemory/HBM features assumed on SM120","VRAM capacity equated with memory bandwidth","nvidia-smi GPU busy percent equated with theoretical FLOP utilization"]
+}

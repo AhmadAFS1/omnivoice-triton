@@ -1,0 +1,30 @@
+{
+  "product_ref": "b7cced4a0274f18aca541f7837c490bb81d8744e",
+  "source_archive_sha256": "a1de5675d138983472efd6028e01ec2ee0241730b81675d51161e71b0974fc0f",
+  "expected_GPUs": [
+    "RTX 5060 Ti",
+    "RTX 5070",
+    "RTX 5070 Ti",
+    "RTX 5080",
+    "RTX 5090",
+    "RTX 4070"
+  ],
+  "routes": 104,
+  "steps": 16,
+  "response_cache": false,
+  "OMP_MKL_OPENBLAS_threads": 8,
+  "rental_lifetime_guard_hours": 1.5,
+  "comparisons": [
+    "single B1/B8 C1/8/32",
+    "ordinary dual B1 C2/8/32",
+    "MPS dual B1 C2/8/32 + single B1 control",
+    "Poisson scheduled arrival full-WAV SLO rates0.5,1,2,4,8 for40s each",
+    "full model CUDA kernel/shape and synthetic bandwidth/GEMM diagnosis",
+    "existing hybrid graph runner B1/B8 C1/8",
+    "hybrid graph Poisson scheduled arrival same rates/schedules",
+    "matched wider graph cache B1/B8 C1/8 and same Poisson:64 graphs/65536 row tokens; unchanged generation/model"
+  ],
+  "quality_selection_plan": "104 routes each: eager B1 C1 baseline, wider-cache hybrid B1 C1, best finite throughput arm; plus nine reference calibration clips",
+  "ASR_host_max_age_hours": 2.5,
+  "ASR_execution": "Sequential isolated GPU shards on RTX5090, float32 batch1; other GPUs may continue TTS on different physical rentals; each TTS-only rental retired after all outputs fully copied and hashed"
+}

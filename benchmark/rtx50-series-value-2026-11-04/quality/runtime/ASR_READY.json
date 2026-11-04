@@ -1,0 +1,33 @@
+{
+  "utc": "2026-11-04T22:41:06.388456+00:00",
+  "assets": [
+    {
+      "name": "omniASR_tokenizer_written_v2",
+      "url": "https://dl.fbaipublicfiles.com/mms/omniASR_tokenizer_written_v2.model",
+      "path": "/root/.cache/fairseq2/assets/e7be1a6acb8f76fdbca19dce/omniASR_tokenizer_written_v2.model",
+      "bytes": 91481,
+      "sha256": "8aa11a1092142ef472537476ef6e76541123e2f0d789b79f3ebd119008240b1e",
+      "download_and_hash_wall_s": 0.2760806159931235
+    },
+    {
+      "name": "omniASR_LLM_Unlimited_1B_v2",
+      "url": "https://dl.fbaipublicfiles.com/mms/omniASR-LLM-Unlimited-1B-v2.pt",
+      "path": "/root/.cache/fairseq2/assets/cc18d8a62471f2f461e87839/omniASR-LLM-Unlimited-1B-v2.pt",
+      "bytes": 9118766620,
+      "sha256": "f3cda9ddd8d7991c396cce58714269824457ae3c8807ca6cd0297e8d275bea66",
+      "download_and_hash_wall_s": 204.59402480500285
+    },
+    {
+      "name": "omniASR_CTC_1B_v2",
+      "url": "https://dl.fbaipublicfiles.com/mms/omniASR-CTC-1B-v2.pt",
+      "path": "/root/.cache/fairseq2/assets/fca49af82b51089226da7de9/omniASR-CTC-1B-v2.pt",
+      "bytes": 3902956068,
+      "sha256": "354f981756aa8f41591ea363e45b9c4eba1ec5144c2273af82e747efbb08919c",
+      "download_and_hash_wall_s": 43.97951653500786
+    }
+  ],
+  "baseline_freeze_unchanged": true,
+  "freeze_sha256": "52111bb162893afddefe39e26b9c55d41d521e1f900ffb59a3e4281370a5007f",
+  "model_inference_performed": false,
+  "ASR_source_commit": "81f51e224ce9e74b02cc2a3eaf21b2d91d743455"
+}

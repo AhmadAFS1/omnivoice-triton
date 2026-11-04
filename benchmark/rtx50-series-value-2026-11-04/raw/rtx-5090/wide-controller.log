@@ -1,0 +1,2 @@
+{"script": "run_hybrid_wide.py", "returncode": 0, "start_utc": "2026-11-04T22:28:25.258130+00:00", "wall_s": 182.55036449432373}
+{"script": "run_staggered_wide.py", "returncode": 0, "start_utc": "2026-11-04T22:31:27.841990+00:00", "wall_s": 264.2185411453247}

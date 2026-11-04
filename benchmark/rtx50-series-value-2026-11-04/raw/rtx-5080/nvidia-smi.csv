@@ -1,0 +1,2 @@
+name, uuid, memory.total [MiB], driver_version, power.limit [W]
+NVIDIA GeForce RTX 5080, GPU-0cbb3f87-be36-5809-9e8e-a23fed32eeeb, 16303 MiB, 580.159.03, 360.00 W

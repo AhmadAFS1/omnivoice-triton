@@ -1,0 +1,404 @@
+{
+  "status": "ok",
+  "cuda_fault": null,
+  "model": "/workspace/omnivoice-50series-value/model",
+  "runner": "hybrid",
+  "device": "cuda",
+  "dtype": "fp16",
+  "sample_rate": 24000,
+  "load_asr": false,
+  "allow_lazy_asr": false,
+  "asr_loaded": false,
+  "save_dir": null,
+  "sage_attention": false,
+  "full_triton_patch": false,
+  "decode_postprocess_workers": 4,
+  "audio_decode_batch_size": 1,
+  "disable_unused_kv_cache": true,
+  "llm_use_cache": false,
+  "split_cfg": false,
+  "fused_rope": false,
+  "inference_optimizations": {
+    "disable_unused_kv_cache": true,
+    "llm_use_cache": false,
+    "split_cfg_requested": false,
+    "split_cfg_enabled": false,
+    "split_cfg_experimental": true,
+    "split_cfg_metrics": null,
+    "fused_rope_requested": false,
+    "fused_rope_enabled": false,
+    "fused_rope_ready": false,
+    "fused_rope_experimental": true,
+    "fused_rope_metrics": null,
+    "max_cuda_graph_row_tokens": 65536,
+    "cuda_graph_capture_after_calls": 0,
+    "cuda_graph_memory": {
+      "enabled": true,
+      "max_cuda_graph_row_tokens": 65536,
+      "capture_after_calls": 0,
+      "deferred_calls": 0,
+      "observed_shape_keys": 0,
+      "max_shape_observations": 4096,
+      "estimate_kind": "Heuristic architecture/dtype row tokens and headroom; NOT a rigorous total VRAM bound",
+      "qualification_scope": "actual_model_architecture_and_runtime",
+      "profile": {
+        "qualified": true,
+        "reason": "",
+        "revision": null,
+        "dtype_bytes": 2,
+        "use_cache": false,
+        "layers": 28,
+        "hidden": 1024,
+        "intermediate": 3072,
+        "heads": 16,
+        "kv_heads": 8,
+        "head_dim": 128,
+        "codebooks": 8,
+        "audio_vocab": 1025
+      },
+      "retained_row_tokens": 62520,
+      "unqualified_graph_keys": 0,
+      "resident_graphs": 16,
+      "max_graphs": 64,
+      "calls": 3744,
+      "hits": 3654,
+      "captures": 90,
+      "evictions": 74,
+      "evicted_row_tokens": 103224,
+      "eager_fallbacks": {},
+      "pressure_cleanups": 0,
+      "admission_rejections": 0,
+      "capture_failures": 0,
+      "clears": 0,
+      "last_owner_memory_snapshot": {
+        "free_bytes": 4232511488,
+        "total_bytes": 12536250368,
+        "required_estimated_bytes": 600371712,
+        "device": "cuda:0"
+      },
+      "last_decision": "replay",
+      "resident_shapes": [
+        {
+          "shape": [
+            8,
+            8,
+            517
+          ],
+          "normalized_row_tokens": 4136
+        },
+        {
+          "shape": [
+            8,
+            8,
+            548
+          ],
+          "normalized_row_tokens": 4384
+        },
+        {
+          "shape": [
+            8,
+            8,
+            505
+          ],
+          "normalized_row_tokens": 4040
+        },
+        {
+          "shape": [
+            8,
+            8,
+            521
+          ],
+          "normalized_row_tokens": 4168
+        },
+        {
+          "shape": [
+            8,
+            8,
+            535
+          ],
+          "normalized_row_tokens": 4280
+        },
+        {
+          "shape": [
+            8,
+            8,
+            489
+          ],
+          "normalized_row_tokens": 3912
+        },
+        {
+          "shape": [
+            8,
+            8,
+            523
+          ],
+          "normalized_row_tokens": 4184
+        },
+        {
+          "shape": [
+            8,
+            8,
+            518
+          ],
+          "normalized_row_tokens": 4144
+        },
+        {
+          "shape": [
+            8,
+            8,
+            477
+          ],
+          "normalized_row_tokens": 3816
+        },
+        {
+          "shape": [
+            8,
+            8,
+            482
+          ],
+          "normalized_row_tokens": 3856
+        },
+        {
+          "shape": [
+            8,
+            8,
+            600
+          ],
+          "normalized_row_tokens": 4800
+        },
+        {
+          "shape": [
+            8,
+            8,
+            469
+          ],
+          "normalized_row_tokens": 3752
+        },
+        {
+          "shape": [
+            8,
+            8,
+            451
+          ],
+          "normalized_row_tokens": 3608
+        },
+        {
+          "shape": [
+            8,
+            8,
+            463
+          ],
+          "normalized_row_tokens": 3704
+        },
+        {
+          "shape": [
+            8,
+            8,
+            475
+          ],
+          "normalized_row_tokens": 3800
+        },
+        {
+          "shape": [
+            4,
+            8,
+            484
+          ],
+          "normalized_row_tokens": 1936
+        }
+      ]
+    }
+  },
+  "response_cache": {
+    "enabled": false,
+    "max_bytes": 0,
+    "bytes": 0,
+    "entries": 0,
+    "max_entries": 4096,
+    "ttl_s": 600.0,
+    "inflight_keys": 0,
+    "waiters": 0,
+    "max_inflight_keys": 64,
+    "max_waiters": 4096,
+    "hits": 0,
+    "producer_jobs_started": 0,
+    "coalesced": 0,
+    "evictions": 0,
+    "closed": false
+  },
+  "max_cuda_graphs": 64,
+  "max_cuda_graph_row_tokens": 65536,
+  "cuda_graph_capture_after_calls": 0,
+  "batch_collect_ms": 0.0,
+  "max_batch_requests": 8,
+  "batcher_queue": {
+    "pending_requests": 0,
+    "pending_gpu_tasks": 0,
+    "max_pending_requests": 128,
+    "max_pending_gpu_tasks": 16,
+    "oldest_pending_ms": 0.0,
+    "benchmark_raw_burst_v1": {
+      "batches_started": 234,
+      "members_started": 312,
+      "members_succeeded": 312,
+      "members_failed": 0
+    }
+  },
+  "max_batch_target_tokens": 24000,
+  "max_batch_conditioning_tokens": 12000,
+  "max_batch_padding_ratio": 1.5,
+  "clone_prompt_cache_size": 128,
+  "registered_clone_prompt_store_size": 256,
+  "registered_clone_prompt_count": 9,
+  "token_estimate_cache_size": 4096,
+  "token_estimate_cache_entries": 208,
+  "batch_bucket_sizes": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32
+  ],
+  "prewarm_clone_batch_sizes": [],
+  "prewarm_clone_sequence_lengths": [],
+  "cuda_graph_capture_count": 16,
+  "cuda_graph_max_graphs": 64,
+  "cuda_graph_shapes": [
+    [
+      4,
+      8,
+      484
+    ],
+    [
+      8,
+      8,
+      451
+    ],
+    [
+      8,
+      8,
+      463
+    ],
+    [
+      8,
+      8,
+      469
+    ],
+    [
+      8,
+      8,
+      475
+    ],
+    [
+      8,
+      8,
+      477
+    ],
+    [
+      8,
+      8,
+      482
+    ],
+    [
+      8,
+      8,
+      489
+    ],
+    [
+      8,
+      8,
+      505
+    ],
+    [
+      8,
+      8,
+      517
+    ],
+    [
+      8,
+      8,
+      518
+    ],
+    [
+      8,
+      8,
+      521
+    ],
+    [
+      8,
+      8,
+      523
+    ],
+    [
+      8,
+      8,
+      535
+    ],
+    [
+      8,
+      8,
+      548
+    ],
+    [
+      8,
+      8,
+      600
+    ]
+  ],
+  "cuda_graph_prewarm": {
+    "requested_batch_sizes": [],
+    "requested_sequence_lengths": [],
+    "requested_shapes": [],
+    "warmed_shapes": [],
+    "supported": true,
+    "duration_ms": 0.0
+  },
+  "last_generation_metrics": {
+    "prepare_inference_inputs_ms": 3.4557610051706433,
+    "iterative_generate_ms": 808.585632010363,
+    "audio_decode_ms": 306.8884880049154,
+    "post_process_audio_ms": 0.9839149424806237,
+    "decode_postprocess_ms": 307.87240294739604,
+    "generate_total_ms": 1119.1553799435496
+  },
+  "gpu_metrics": {
+    "available": true,
+    "device": "cuda",
+    "device_index": 0,
+    "device_name": "NVIDIA GeForce RTX 4070",
+    "sample_interval_ms": 25.0,
+    "memory_total_gb": 11.994140625,
+    "gpu_util_pct": 100.0,
+    "device_vram_used_gb": 8.05230712890625,
+    "device_vram_util_pct": 67.13534033545025
+  },
+  "last_batch_gpu_metrics": {
+    "sample_count": 39,
+    "gpu_util_avg_pct": 67.17948717948718,
+    "gpu_util_peak_pct": 100.0,
+    "device_vram_used_gb_avg": 8.095726600060097,
+    "device_vram_used_gb_peak": 8.54254150390625,
+    "device_vram_util_avg_pct": 67.4973460223216,
+    "device_vram_util_peak_pct": 71.22262253704608,
+    "process_peak_vram_gb": 3.269552707672119
+  },
+  "worker": {
+    "worker_type": "tts",
+    "worker_id": null,
+    "instance_id": null,
+    "base_url": null,
+    "endpoint_url": null,
+    "public_ip": null,
+    "public_port": null,
+    "internal_port": null,
+    "callback_enabled": false,
+    "status": "healthy",
+    "active_requests": 0,
+    "queue_depth": 0,
+    "capacity": 1,
+    "assignable": true,
+    "draining": false,
+    "cuda_fault": null
+  }
+}

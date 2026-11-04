@@ -1,0 +1,166 @@
+{
+  "utc": "2026-11-04T23:05:40.556709+00:00",
+  "ASR_source_files": [
+    {
+      "path": "omnilingual_asr/__init__.py",
+      "bytes": 1953,
+      "sha256": "1a35a7783b57015efa8a77f7c5d5e0a396e6a7f957036d936425ce4f69753dd8"
+    },
+    {
+      "path": "omnilingual_asr/datasets/__init__.py",
+      "bytes": 613,
+      "sha256": "5a045ab5e822c10636439597c3ef47eb635fe5b784e9431600afbc1cd563d561"
+    },
+    {
+      "path": "omnilingual_asr/datasets/impl/manifest_asr_dataset.py",
+      "bytes": 2631,
+      "sha256": "bf6187df11c50bbddb801811923e8ad92da97535c48da2281e3bf704b970e895"
+    },
+    {
+      "path": "omnilingual_asr/datasets/impl/mixture_parquet_asr_dataset.py",
+      "bytes": 2799,
+      "sha256": "abe1d3c72d4cd32303bf175040dcbf03bf3e87844e9ba753378e25619d48b18c"
+    },
+    {
+      "path": "omnilingual_asr/datasets/interfaces/storage_interface.py",
+      "bytes": 1419,
+      "sha256": "db835d9371d099e94d429d8a3db71a45028b85c86318500d5c42c3e0b198cbbd"
+    },
+    {
+      "path": "omnilingual_asr/datasets/interfaces/task_interface.py",
+      "bytes": 1147,
+      "sha256": "44f238e15c3260bdd5512f0ab1480d3a31debfc41ba9bd45cacad76e6d25ab75"
+    },
+    {
+      "path": "omnilingual_asr/datasets/storage/manifest_storage.py",
+      "bytes": 6053,
+      "sha256": "1bdbe18409e1bfb1eba5b227305ddfba04c488c96ec6d1692927d960108fab48"
+    },
+    {
+      "path": "omnilingual_asr/datasets/storage/mixture_parquet_storage.py",
+      "bytes": 20048,
+      "sha256": "5262bd17dae76a476211b268ba53698cdf10f1b9105b6fc50c9e0a0040849105"
+    },
+    {
+      "path": "omnilingual_asr/datasets/tasks/asr_task.py",
+      "bytes": 16085,
+      "sha256": "e75c76a65df2f8d29753dd9cc5ca86999f657d7c33f74915b1827a5c9a13bb83"
+    },
+    {
+      "path": "omnilingual_asr/datasets/tasks/ssl_task.py",
+      "bytes": 13363,
+      "sha256": "5df01786119a281de433c3be31b01a43fe5fac3558bbd5d59a1d39c0532bb689"
+    },
+    {
+      "path": "omnilingual_asr/datasets/utils/audio.py",
+      "bytes": 7492,
+      "sha256": "e4a36129233325f95ab342939ad294fe37ac4eadaff6366524d60dc7ab8ea69e"
+    },
+    {
+      "path": "omnilingual_asr/datasets/utils/batching.py",
+      "bytes": 2137,
+      "sha256": "3116bfe4c0c8a1ed3651dd27e7e2234c32ba52fdeb8a0711505a95cbff9cfab6"
+    },
+    {
+      "path": "omnilingual_asr/datasets/utils/text.py",
+      "bytes": 2690,
+      "sha256": "1e9f742ce6c2c66a5a51aea007730f33f04be8177fa591f738574f338d035824"
+    },
+    {
+      "path": "omnilingual_asr/models/__init__.py",
+      "bytes": 299,
+      "sha256": "99633ec808d7d361f8d3f1e49a76d1ed07cbd859de30ff49aa7f181b0cb70541"
+    },
+    {
+      "path": "omnilingual_asr/models/inference/__init__.py",
+      "bytes": 378,
+      "sha256": "0530f6b7737411dc3106696907da59cd2d9539af200beec83e114de631650ec6"
+    },
+    {
+      "path": "omnilingual_asr/models/inference/pipeline.py",
+      "bytes": 27907,
+      "sha256": "766728688901376dfce1b36115b8e780c1dfc3055798ab49d78a4b9df41fd863"
+    },
+    {
+      "path": "omnilingual_asr/models/wav2vec2_asr/__init__.py",
+      "bytes": 436,
+      "sha256": "6411c9af375cb6b408cc574f7c8e694c0055b7b6ed7e9f28baeb4028fc8fe531"
+    },
+    {
+      "path": "omnilingual_asr/models/wav2vec2_asr/config.py",
+      "bytes": 6224,
+      "sha256": "83d5f87d20919df49b8a9da87ed14a9a7ad3a661a5d2ea24e52f746ef3d79cba"
+    },
+    {
+      "path": "omnilingual_asr/models/wav2vec2_llama/__init__.py",
+      "bytes": 2010,
+      "sha256": "a994459204fab0aa50a8f5993ee8141717c496e2546e2322d807a0ffc18ba91a"
+    },
+    {
+      "path": "omnilingual_asr/models/wav2vec2_llama/beamsearch.py",
+      "bytes": 22198,
+      "sha256": "91233570765a2fbd3199f3b65508e53b1be0199cf9e33bcddf9c9b9c2f575481"
+    },
+    {
+      "path": "omnilingual_asr/models/wav2vec2_llama/config.py",
+      "bytes": 13263,
+      "sha256": "5e1e0f5aa011f70928a4ded0421574c0dbcea446bba4ad9dd1f7baac3fe431ae"
+    },
+    {
+      "path": "omnilingual_asr/models/wav2vec2_llama/factory.py",
+      "bytes": 9775,
+      "sha256": "4f7c5d666b84d3ed3fb5ee12dc711c0b3e37558d279f3d63a3dbd6c62366dbb3"
+    },
+    {
+      "path": "omnilingual_asr/models/wav2vec2_llama/fsdp.py",
+      "bytes": 1196,
+      "sha256": "6eecaa55c637ed61a3f17ba58f985a48b6aa105f115c45f9cf00fde6a10c3bfa"
+    },
+    {
+      "path": "omnilingual_asr/models/wav2vec2_llama/hub.py",
+      "bytes": 598,
+      "sha256": "c2b5d84a75fd34a31af21d493434caca0c46154797a97ef0ff5c5dfcc467e229"
+    },
+    {
+      "path": "omnilingual_asr/models/wav2vec2_llama/interop.py",
+      "bytes": 789,
+      "sha256": "41333c666eb4d55d86c9664ae8b8089d8ec9a5e95ed45476694bbc9f2c251d78"
+    },
+    {
+      "path": "omnilingual_asr/models/wav2vec2_llama/lang_ids.py",
+      "bytes": 27052,
+      "sha256": "675b8a263aed48269020d4e9f06b3063d5b4e0d5399b2c3e0e06160e08d24f8e"
+    },
+    {
+      "path": "omnilingual_asr/models/wav2vec2_llama/model.py",
+      "bytes": 48350,
+      "sha256": "2396193455d10a5d43e0d2904c1714677fded7f714f14f1c1bf284bbfeffd8e4"
+    },
+    {
+      "path": "omnilingual_asr/models/wav2vec2_llama/syntax.py",
+      "bytes": 3625,
+      "sha256": "2518cb386e1952c236f3bd03a97c47817b77bd32bb1f6a56c6477b55e2a67229"
+    },
+    {
+      "path": "omnilingual_asr/models/wav2vec2_ssl/__init__.py",
+      "bytes": 208,
+      "sha256": "31dddc0870fb027a3d915d793ea19b89c8143be44c761e1a572d722a20edff11"
+    },
+    {
+      "path": "omnilingual_asr/models/wav2vec2_ssl/config.py",
+      "bytes": 2150,
+      "sha256": "550c6840b9b594226959948b4a48eb0e696171e9c5ac4fc070a9ea2c3d346414"
+    }
+  ],
+  "TTS_pip_freeze_sha256": "8779229305a5bb1f9aa182171e9ddd89a26f789a3cadd5334858143826ce4823",
+  "ASR_package_direct_URL": {
+    "url": "https://github.com/facebookresearch/omnilingual-asr.git",
+    "vcs_info": {
+      "vcs": "git",
+      "commit_id": "81f51e224ce9e74b02cc2a3eaf21b2d91d743455",
+      "requested_revision": "81f51e224ce9e74b02cc2a3eaf21b2d91d743455"
+    }
+  },
+  "initial_ASR_install_last_log_mtime_UTC": "2026-11-04T22:29:00.210194+00:00",
+  "first_wide_timed_C1_UTC": "2026-11-04T22:29:14.186131+00:00"
+}

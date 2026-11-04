@@ -1,0 +1,79 @@
+[2026-11-04 22:22:39.588 Server  6473] Startup
+[2026-11-04 22:22:39.588 Server  6473] Attempting to raise file descriptor limit from 1024 to 4096
+[2026-11-04 22:22:39.588 Server  6473] Connecting to control daemon on socket: /workspace/omnivoice-50series-value/mps-control/pipe/control
+[2026-11-04 22:22:39.588 Server  6473] Initializing server process
+[2026-11-04 22:22:39.659 Server  6473] Creating server context on device 0 (NVIDIA GeForce RTX 5070)
+[2026-11-04 22:22:39.717 Server  6473] Created anonymous shared memory region mps.shm.0.6473
+[2026-11-04 22:22:39.717 Server  6473] CUDA MPS Server for Linux/Unix. Binary version: 13020
+[2026-11-04 22:22:39.717 Server  6473] Display Driver version: 595
+[2026-11-04 22:22:39.717 Server  6473] Active Threads Percentage set to 100.0
+[2026-11-04 22:22:39.717 Server  6473] Server Priority set to 0
+[2026-11-04 22:22:39.717 Server  6473] Static Partitioning mode disabled
+[2026-11-04 22:22:39.717 Server  6473] Server has started
+[2026-11-04 22:22:39.717 Server  6473] Received new client request from PID 6463
+[2026-11-04 22:22:39.717 Server  6473] Priority level of client {6463} is: 0 (NORMAL)
+[2026-11-04 22:22:39.717 Server  6473] Client {PID: 6463, Context ID: 0} connected
+[2026-11-04 22:22:39.717 Server  6473] Creating worker thread for client {PID: 6463, Context ID: 0}
+[2026-11-04 22:22:39.750 Client  6463] Attempting to raise file descriptor limit from 1024 to 4096
+[2026-11-04 22:22:39.750 Server  6473] Received new client request from PID 6463
+[2026-11-04 22:22:39.750 Server  6473] Priority level of client {6463} is: 0 (NORMAL)
+[2026-11-04 22:22:39.750 Server  6473] Client {PID: 6463, Context ID: 1} connected
+[2026-11-04 22:22:39.750 Server  6473] Creating worker thread for client {PID: 6463, Context ID: 1}
+[2026-11-04 22:22:39.750 Server  6473] Device NVIDIA GeForce RTX 5070 (uuid GPU-4cd0ef5c-21f5-71da-1943-227011235392) is associated
+[2026-11-04 22:22:39.750 Server  6473] Status of client {PID: 6463, Context ID: 1} is ACTIVE
+[2026-11-04 22:22:39.751 Client  6463] Static partitioning mode disabled
+[2026-11-04 22:22:40.119 Server  6473] Server failed to receive command: the remote procedural call between the MPS server and the MPS client failed, assuming client {PID: 6463, Context ID: 1} exit
+[2026-11-04 22:22:40.119 Server  6473] Client {PID: 6463, Context ID: 1} exiting. Number of active client contexts is 0.
+[2026-11-04 22:22:40.174 Server  6473] Server failed to receive command: the remote procedural call between the MPS server and the MPS client failed, assuming client {PID: 6463, Context ID: 0} exit
+[2026-11-04 22:22:40.174 Server  6473] Client process 6463 disconnected
+[2026-11-04 22:22:41.505 Server  6473] Received new client request from PID 6496
+[2026-11-04 22:22:41.505 Server  6473] Priority level of client {6496} is: 0 (NORMAL)
+[2026-11-04 22:22:41.505 Server  6473] Client {PID: 6496, Context ID: 0} connected
+[2026-11-04 22:22:41.505 Server  6473] Creating worker thread for client {PID: 6496, Context ID: 0}
+[2026-11-04 22:22:41.553 Server  6473] Received new client request from PID 6495
+[2026-11-04 22:22:41.553 Server  6473] Priority level of client {6495} is: 0 (NORMAL)
+[2026-11-04 22:22:41.553 Server  6473] Client {PID: 6495, Context ID: 0} connected
+[2026-11-04 22:22:41.553 Server  6473] Creating worker thread for client {PID: 6495, Context ID: 0}
+[2026-11-04 22:22:44.294 Client  6496] Attempting to raise file descriptor limit from 1024 to 4096
+[2026-11-04 22:22:44.295 Server  6473] Received new client request from PID 6496
+[2026-11-04 22:22:44.295 Server  6473] Priority level of client {6496} is: 0 (NORMAL)
+[2026-11-04 22:22:44.295 Server  6473] Client {PID: 6496, Context ID: 1} connected
+[2026-11-04 22:22:44.295 Server  6473] Creating worker thread for client {PID: 6496, Context ID: 1}
+[2026-11-04 22:22:44.295 Server  6473] Device NVIDIA GeForce RTX 5070 (uuid GPU-4cd0ef5c-21f5-71da-1943-227011235392) is associated
+[2026-11-04 22:22:44.295 Server  6473] Status of client {PID: 6496, Context ID: 1} is ACTIVE
+[2026-11-04 22:22:44.295 Client  6496] Static partitioning mode disabled
+[2026-11-04 22:22:44.442 Client  6495] Attempting to raise file descriptor limit from 1024 to 4096
+[2026-11-04 22:22:44.453 Server  6473] Received new client request from PID 6495
+[2026-11-04 22:22:44.453 Server  6473] Priority level of client {6495} is: 0 (NORMAL)
+[2026-11-04 22:22:44.453 Server  6473] Client {PID: 6495, Context ID: 1} connected
+[2026-11-04 22:22:44.453 Server  6473] Creating worker thread for client {PID: 6495, Context ID: 1}
+[2026-11-04 22:22:44.453 Server  6473] Device NVIDIA GeForce RTX 5070 (uuid GPU-4cd0ef5c-21f5-71da-1943-227011235392) is associated
+[2026-11-04 22:22:44.453 Server  6473] Status of client {PID: 6495, Context ID: 1} is ACTIVE
+[2026-11-04 22:22:44.454 Client  6495] Static partitioning mode disabled
+[2026-11-04 22:25:33.240 Server  6473] Server failed to receive command: the remote procedural call between the MPS server and the MPS client failed, assuming client {PID: 6495, Context ID: 1} exit
+[2026-11-04 22:25:33.240 Server  6473] Client {PID: 6495, Context ID: 1} exiting. Number of active client contexts is 1.
+[2026-11-04 22:25:33.448 Server  6473] Server failed to receive command: the remote procedural call between the MPS server and the MPS client failed, assuming client {PID: 6495, Context ID: 0} exit
+[2026-11-04 22:25:33.448 Server  6473] Client process 6495 disconnected
+[2026-11-04 22:25:33.640 Server  6473] Server failed to receive command: the remote procedural call between the MPS server and the MPS client failed, assuming client {PID: 6496, Context ID: 1} exit
+[2026-11-04 22:25:33.640 Server  6473] Client {PID: 6496, Context ID: 1} exiting. Number of active client contexts is 0.
+[2026-11-04 22:25:33.852 Server  6473] Server failed to receive command: the remote procedural call between the MPS server and the MPS client failed, assuming client {PID: 6496, Context ID: 0} exit
+[2026-11-04 22:25:33.852 Server  6473] Client process 6496 disconnected
+[2026-11-04 22:25:35.277 Server  6473] Received new client request from PID 7511
+[2026-11-04 22:25:35.277 Server  6473] Priority level of client {7511} is: 0 (NORMAL)
+[2026-11-04 22:25:35.277 Server  6473] Client {PID: 7511, Context ID: 0} connected
+[2026-11-04 22:25:35.277 Server  6473] Creating worker thread for client {PID: 7511, Context ID: 0}
+[2026-11-04 22:25:37.988 Client  7511] Attempting to raise file descriptor limit from 1024 to 4096
+[2026-11-04 22:25:37.988 Server  6473] Received new client request from PID 7511
+[2026-11-04 22:25:37.988 Server  6473] Priority level of client {7511} is: 0 (NORMAL)
+[2026-11-04 22:25:37.988 Server  6473] Client {PID: 7511, Context ID: 1} connected
+[2026-11-04 22:25:37.988 Server  6473] Creating worker thread for client {PID: 7511, Context ID: 1}
+[2026-11-04 22:25:37.988 Server  6473] Device NVIDIA GeForce RTX 5070 (uuid GPU-4cd0ef5c-21f5-71da-1943-227011235392) is associated
+[2026-11-04 22:25:37.988 Server  6473] Status of client {PID: 7511, Context ID: 1} is ACTIVE
+[2026-11-04 22:25:37.989 Client  7511] Static partitioning mode disabled
+[2026-11-04 22:28:43.866 Server  6473] Server failed to receive command: the remote procedural call between the MPS server and the MPS client failed, assuming client {PID: 7511, Context ID: 1} exit
+[2026-11-04 22:28:43.866 Server  6473] Client {PID: 7511, Context ID: 1} exiting. Number of active client contexts is 0.
+[2026-11-04 22:28:44.082 Server  6473] Server failed to receive command: the remote procedural call between the MPS server and the MPS client failed, assuming client {PID: 7511, Context ID: 0} exit
+[2026-11-04 22:28:44.082 Server  6473] Client process 7511 disconnected
+[2026-11-04 22:28:44.203 Server  6473] Server has been notified to shutdown
+[2026-11-04 22:28:44.203 Server  6473] Waiting for current clients to finish
+[2026-11-04 22:28:44.203 Server  6473] Exiting

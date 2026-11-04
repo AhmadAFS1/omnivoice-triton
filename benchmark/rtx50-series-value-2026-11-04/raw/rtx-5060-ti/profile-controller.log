@@ -1,0 +1,13 @@
+Loading weights:   0%|          | 0/313 [00:00<?, ?it/s]Loading weights:  20%|██        | 63/313 [00:00<00:00, 521.75it/s]Loading weights:  37%|███▋      | 117/313 [00:00<00:00, 530.24it/s]Loading weights:  55%|█████▍    | 171/313 [00:00<00:00, 530.64it/s]Loading weights:  72%|███████▏  | 225/313 [00:00<00:00, 531.21it/s]Loading weights:  89%|████████▉ | 279/313 [00:00<00:00, 519.41it/s]Loading weights: 100%|██████████| 313/313 [00:00<00:00, 559.25it/s]
+Loading weights:   0%|          | 0/527 [00:00<?, ?it/s]Loading weights:  39%|███▊      | 204/527 [00:00<00:00, 1914.29it/s]Loading weights:  75%|███████▌  | 396/527 [00:00<00:00, 1595.85it/s]Loading weights: 100%|██████████| 527/527 [00:00<00:00, 1569.62it/s]
+WARNING:2026-11-04 22:13:24 5151:5151 init.cpp:107] function cbapi->getCuptiStatus() failed with error CUPTI_ERROR_INVALID_DEVICE (2)
+WARNING:2026-11-04 22:13:24 5151:5151 init.cpp:108] CUPTI initialization failed - CUDA profiler activities will be missing
+INFO:2026-11-04 22:13:24 5151:5151 init.cpp:110] If you see CUPTI_ERROR_INSUFFICIENT_PRIVILEGES, refer to https://developer.nvidia.com/nvidia-development-tools-solutions-err-nvgpuctrperm-cupti
+Traceback (most recent call last):
+  File "/workspace/omnivoice-50series-value/profile_pipeline.py", line 179, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/omnivoice-50series-value/profile_pipeline.py", line 132, in main
+    span=(max(e['ts']+e['dur'] for e in kernels)-min(e['ts'] for e in kernels))/1000
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: max() iterable argument is empty

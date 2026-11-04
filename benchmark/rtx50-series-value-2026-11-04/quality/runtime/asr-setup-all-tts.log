@@ -1,0 +1,68 @@
+Using Python 3.12.3 environment at: source/.venv
+{"utc": "2026-11-04T22:27:57.503690+00:00", "command": ["/root/.local/bin/uv", "venv", "--python", "/usr/bin/python3.12", "/workspace/omnivoice-50series-value/asr-venv"]}
+Using CPython 3.12.3 interpreter at: /usr/bin/python3.12
+Creating virtual environment at: asr-venv
+Activate with: source asr-venv/bin/activate
+{"utc": "2026-11-04T22:27:57.519885+00:00", "command": ["/root/.local/bin/uv", "pip", "install", "--python", "/workspace/omnivoice-50series-value/asr-venv/bin/python", "--index-strategy", "unsafe-best-match", "torch==2.8.0+cu128", "torchaudio==2.8.0+cu128", "--index-url", "https://download.pytorch.org/whl/cu128"]}
+Using Python 3.12.3 environment at: asr-venv
+Resolved 26 packages in 1.87s
+Downloading nvidia-cusolver-cu12 (255.1MiB)
+Downloading nvidia-nvjitlink-cu12 (37.4MiB)
+Downloading nvidia-cublas-cu12 (566.8MiB)
+ Downloaded nvidia-nvjitlink-cu12
+Downloading triton (148.4MiB)
+ Downloaded triton
+Downloading setuptools (1.2MiB)
+ Downloaded setuptools
+Downloading nvidia-cuda-nvrtc-cu12 (84.0MiB)
+ Downloaded nvidia-cusolver-cu12
+Downloading nvidia-cusparse-cu12 (274.9MiB)
+ Downloaded nvidia-cuda-nvrtc-cu12
+Downloading sympy (6.0MiB)
+ Downloaded sympy
+Downloading nvidia-cusparselt-cu12 (273.9MiB)
+ Downloaded nvidia-cusparse-cu12
+Downloading nvidia-curand-cu12 (60.7MiB)
+ Downloaded nvidia-cublas-cu12
+Downloading nvidia-cufft-cu12 (184.2MiB)
+ Downloaded nvidia-cusparselt-cu12
+Downloading nvidia-cuda-cupti-cu12 (9.8MiB)
+ Downloaded nvidia-cuda-cupti-cu12
+ Downloaded nvidia-curand-cu12
+Downloading nvidia-cudnn-cu12 (674.0MiB)
+Downloading nvidia-nccl-cu12 (307.4MiB)
+ Downloaded nvidia-cufft-cu12
+Downloading nvidia-cufile-cu12 (1.1MiB)
+ Downloaded nvidia-cufile-cu12
+Downloading networkx (2.0MiB)
+ Downloaded networkx
+ Downloaded nvidia-nccl-cu12
+ Downloaded nvidia-cudnn-cu12
+Prepared 24 packages in 1m 00s
+Installed 26 packages in 443ms
+ + filelock==4.2.4
+ + fsspec==2026.9.0
+ + jinja2==3.1.6
+ + markupsafe==3.0.3
+ + mpmath==1.3.0
+ + networkx==3.7
+ + nvidia-cublas-cu12==12.8.4.1
+ + nvidia-cuda-cupti-cu12==12.8.90
+ + nvidia-cuda-nvrtc-cu12==12.8.93
+ + nvidia-cuda-runtime-cu12==12.8.90
+ + nvidia-cudnn-cu12==9.10.2.21
+ + nvidia-cufft-cu12==11.3.3.83
+ + nvidia-cufile-cu12==1.13.1.3
+ + nvidia-curand-cu12==10.3.9.90
+ + nvidia-cusolver-cu12==11.7.3.90
+ + nvidia-cusparse-cu12==12.5.8.93
+ + nvidia-cusparselt-cu12==0.7.1
+ + nvidia-nccl-cu12==2.27.3
+ + nvidia-nvjitlink-cu12==12.8.93
+ + nvidia-nvtx-cu12==12.8.90
+ + setuptools==78.1.0
+ + sympy==1.14.0
+ + torch==2.8.0+cu128
+ + torchaudio==2.8.0+cu128
+ + triton==3.4.0
+ + typing-extensions==4.16.0

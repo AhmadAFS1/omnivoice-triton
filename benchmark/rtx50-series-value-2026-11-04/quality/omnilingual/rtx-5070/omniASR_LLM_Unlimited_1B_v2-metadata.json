@@ -1,0 +1,35 @@
+{
+  "date_utc": "2026-11-04T22:55:53Z",
+  "packages": {
+    "omnilingual-asr": "0.2.0",
+    "fairseq2": "0.6",
+    "fairseq2n": "0.6+cu128",
+    "torch": "2.8.0+cu128",
+    "torchaudio": "2.8.0+cu128",
+    "numpy": "1.26.4",
+    "soundfile": "0.13.1",
+    "jiwer": "4.0.0"
+  },
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "cuda_runtime": "12.8",
+  "physical_gpu_nvidia_smi": "NVIDIA GeForce RTX 5090, GPU-694a2f09-ee4a-12f1-07c6-5fa2e0dab6f2, 32607 MiB, 595.84",
+  "co_resident_gpu_processes": "",
+  "torch_visible_gpu": [
+    {
+      "name": "NVIDIA GeForce RTX 5090",
+      "total_memory_bytes": 33670758400
+    }
+  ],
+  "measurement_kind": "GPU ASR inference, separate from TTS latency measurements",
+  "model_card": "omniASR_LLM_Unlimited_1B_v2",
+  "dtype": "float32",
+  "device": "cuda:0",
+  "confidence": null,
+  "confidence_note": "Reference pipeline returns text only; no calibrated confidence available.",
+  "blind": true,
+  "batch_size": 1,
+  "language_conditioning": "known language/script only; ignored by CTC",
+  "expected_text_prompt": false,
+  "supported_language_script_ids": 1672,
+  "load_wall_s": 7.8971660660463385
+}

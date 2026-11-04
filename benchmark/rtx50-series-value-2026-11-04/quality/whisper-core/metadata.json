@@ -1,0 +1,29 @@
+{
+  "started_utc": "2026-11-04T22:49:45.921465+00:00",
+  "GPU": {
+    "device_name": "Apple M5 Pro",
+    "max_recommended_working_set_size": 19069665280,
+    "memory_size": 25769803776,
+    "architecture": "applegpu_g17s",
+    "max_buffer_length": 14302248960,
+    "resource_limit": 499000
+  },
+  "physical_unified_system_memory_bytes": 25769803776,
+  "memory_note": "Apple integrated GPU shares unified system RAM; no separate dedicated VRAM",
+  "measurement_kind": "Offline GPU ASR diagnostic on Apple M5 Pro; independent of timed rented RTX TTS",
+  "model": "/Users/ahmadsmacair/.cache/huggingface/hub/models--mlx-community--whisper-large-v3-turbo/snapshots/a4aaeec0636e6fef84abdcbe3544cb2bf7e9f6fb",
+  "weight_sha256": "951ed3fc1203e6a62467abb2144a96ce7eafca8fa77e3704fdb8635ff3e7f8a6",
+  "script_sha256": "ed5b48446fa00b322e63ad7dfa4969e52ab468269295db1be55c75481e26c978",
+  "language_mapping": "Exact20 supported standard language IDs; no dialect substitution",
+  "packages": {
+    "mlx": "0.32.4",
+    "mlx-whisper": "0.4.3",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "soundfile": "0.14.0"
+  },
+  "expected_supplied_to_recognizer": false,
+  "model_download_bytes": 0,
+  "paid_API_calls": 0,
+  "finished_utc": "2026-11-04T23:10:30.938118+00:00"
+}

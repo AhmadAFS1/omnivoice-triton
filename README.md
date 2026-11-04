@@ -263,6 +263,12 @@ make smoke-test    # Tier 3: Fast E2E check
 > **Hybrid (Faster+Triton)** achieves **3.4x** faster inference than PyTorch baseline at equivalent VRAM on RTX 5090.
 <!-- BENCH:SUMMARY:END -->
 
+[Cloned-voice GPU comparison — November 4, 2026](docs/rtx50-series-value-2026-11-04.md):
+actual RTX 5060 Ti 16GB, RTX 5070 12GB, RTX 5070 Ti 16GB, RTX 5080 16GB,
+RTX 5090 32GB and RTX 4070 12GB; Torch 2.8/CUDA 12.8, 16 steps, complete WAVs
+and response caching disabled. The report records physical/visible VRAM and
+drivers per card, latency, cost, hardware use, quality flags and retained audio.
+
 ### 🏗️ Optimization Modes
 
 ```mermaid

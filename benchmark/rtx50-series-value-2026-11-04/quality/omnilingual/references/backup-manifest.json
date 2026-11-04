@@ -1,0 +1,89 @@
+{
+  "files": [
+    {
+      "path": "asr-input/000000-000.wav",
+      "bytes": 1456492,
+      "sha256": "723568f828eb6cdcb16860e16e3a0c358a498a7a5b6e5ad78c98389764333d42"
+    },
+    {
+      "path": "asr-input/000001-000.wav",
+      "bytes": 915052,
+      "sha256": "3950f40d5c4dc24832c7d410e7f450cf16139e3a30b5c7d6d54457e90f83e72b"
+    },
+    {
+      "path": "asr-input/000002-000.wav",
+      "bytes": 1164652,
+      "sha256": "2a2dc5a4cd97c688e755ba9360c0276d7855905642574caceaa69ea40d9d850b"
+    },
+    {
+      "path": "asr-input/000003-000.wav",
+      "bytes": 1068652,
+      "sha256": "bae2886c8ff8a1a863b0ad0c6879ec66a984ed691fdf250391d113c24782e244"
+    },
+    {
+      "path": "asr-input/000004-000.wav",
+      "bytes": 1337452,
+      "sha256": "0a3d7f294f2b54bcad52e4a868c3048c2efbbd6af86e5a59ce4100544b391544"
+    },
+    {
+      "path": "asr-input/000005-000.wav",
+      "bytes": 1180012,
+      "sha256": "4d44f1d93c8830cb6bf3c986d8a21824c4324c55b5936dea3ddae17088d19b7e"
+    },
+    {
+      "path": "asr-input/000006-000.wav",
+      "bytes": 1406572,
+      "sha256": "61120d2657d70f46be588661b3eeebac42907ec6013b1da8c479401d09dedee7"
+    },
+    {
+      "path": "asr-input/000007-000.wav",
+      "bytes": 1053292,
+      "sha256": "463368087bafbfd4e1d404f899251e1c74607b5f93985de47e64d7a5b877fc06"
+    },
+    {
+      "path": "asr-input/000008-000.wav",
+      "bytes": 899692,
+      "sha256": "bdc5486363186d066da65326ab575e2ff9c63f884a1cb7b88555464ce284c93c"
+    },
+    {
+      "path": "controller.log",
+      "bytes": 9215,
+      "sha256": "6e52b01941408315d017910e3fb1954c3651700457b8d93b3bfca6df23fb7de0"
+    },
+    {
+      "path": "omniASR_CTC_1B_v2-metadata.json",
+      "bytes": 1147,
+      "sha256": "880fb08b55603dd0fd19a7be63c2dccd86d5487ae75cd06ca6d202b9034ebc84"
+    },
+    {
+      "path": "omniASR_CTC_1B_v2.jsonl",
+      "bytes": 6464,
+      "sha256": "a1590eeface1c6824d54bcf6c38ce8cd35a34aee364bb18f4b685b75bad5a8ad"
+    },
+    {
+      "path": "omniASR_LLM_Unlimited_1B_v2-metadata.json",
+      "bytes": 1158,
+      "sha256": "cabe011e3b49b4d22925d7311d16e4bbd4e5cb509f938da714c8eb6123b9ad94"
+    },
+    {
+      "path": "omniASR_LLM_Unlimited_1B_v2.jsonl",
+      "bytes": 6356,
+      "sha256": "c4aecbadc27fb06e1a638a6b68e093a63e7f2df0f75283e622737739577768d2"
+    },
+    {
+      "path": "prepared.json",
+      "bytes": 28366,
+      "sha256": "fbf55782d028322149ff1107ae1ad35572924236d77949e3ab2099386e853a91"
+    },
+    {
+      "path": "scored.json",
+      "bytes": 62217,
+      "sha256": "f105a775e902d1140b9f58f95e8fd6a62171dbd2cf9cfd6e9b473a463aff1ac7"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 7445,
+      "sha256": "b1f0f890314413f36a1c8756ff0e201a3b53324c6106bd6fdcbec7103d5354fe"
+    }
+  ]
+}

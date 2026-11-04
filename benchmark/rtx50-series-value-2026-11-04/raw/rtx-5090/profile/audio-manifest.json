@@ -1,0 +1,146 @@
+[
+  {
+    "batch": 1,
+    "arm": "unprofiled",
+    "path": "B1-unprofiled-0.wav",
+    "sha256": "aa9ce23d9d468a08de4ef7e0a862a3aca3720be9c9ada2b7ac3e9934e56a44ac",
+    "expected": "No one was inside the apartment.",
+    "language": "en"
+  },
+  {
+    "batch": 1,
+    "arm": "profiled",
+    "path": "B1-profiled-0.wav",
+    "sha256": "aa9ce23d9d468a08de4ef7e0a862a3aca3720be9c9ada2b7ac3e9934e56a44ac",
+    "expected": "No one was inside the apartment.",
+    "language": "en"
+  },
+  {
+    "batch": 8,
+    "arm": "unprofiled",
+    "path": "B8-unprofiled-0.wav",
+    "sha256": "c8355e1ae3b33083e80031fe55c3ef3adfb0db19636e18555ff6986531c63681",
+    "expected": "No one was inside the apartment.",
+    "language": "en"
+  },
+  {
+    "batch": 8,
+    "arm": "unprofiled",
+    "path": "B8-unprofiled-1.wav",
+    "sha256": "e4acde6f47a04355bd233fc5904131196f307f9b28986c981ce6c473bef7eb44",
+    "expected": "No one was inside the apartment.",
+    "language": "en"
+  },
+  {
+    "batch": 8,
+    "arm": "unprofiled",
+    "path": "B8-unprofiled-2.wav",
+    "sha256": "32f687f405eee46795e49a8708fd3dda4f96bcbb848377526d2d13733c16cae4",
+    "expected": "No one was inside the apartment.",
+    "language": "en"
+  },
+  {
+    "batch": 8,
+    "arm": "unprofiled",
+    "path": "B8-unprofiled-3.wav",
+    "sha256": "f7aeec43d5b7984d90d0f6c95fc0a20ca3a182b699897ac4d3065669feeda234",
+    "expected": "No one was inside the apartment.",
+    "language": "en"
+  },
+  {
+    "batch": 8,
+    "arm": "unprofiled",
+    "path": "B8-unprofiled-4.wav",
+    "sha256": "9d7faea06bb9b65c16771f7715615c5b917d344bf38f113c7637067a318bf236",
+    "expected": "No one was inside the apartment.",
+    "language": "en"
+  },
+  {
+    "batch": 8,
+    "arm": "unprofiled",
+    "path": "B8-unprofiled-5.wav",
+    "sha256": "1fa00d3c12dbca532d3f89c1da9cd58b2c29e51763baa1c30d76da851fb2423e",
+    "expected": "No one was inside the apartment.",
+    "language": "en"
+  },
+  {
+    "batch": 8,
+    "arm": "unprofiled",
+    "path": "B8-unprofiled-6.wav",
+    "sha256": "fd4ebc8455659ff572e0ff98a15c8e1c2c8eb36556414f46a66a28d18ffad0ad",
+    "expected": "No one was inside the apartment.",
+    "language": "en"
+  },
+  {
+    "batch": 8,
+    "arm": "unprofiled",
+    "path": "B8-unprofiled-7.wav",
+    "sha256": "e5b4f93434e1e293b815be3f0339b54b5d43f0e0575d1cbebdfcf8a87f5bd092",
+    "expected": "No one was inside the apartment.",
+    "language": "en"
+  },
+  {
+    "batch": 8,
+    "arm": "profiled",
+    "path": "B8-profiled-0.wav",
+    "sha256": "c8355e1ae3b33083e80031fe55c3ef3adfb0db19636e18555ff6986531c63681",
+    "expected": "No one was inside the apartment.",
+    "language": "en"
+  },
+  {
+    "batch": 8,
+    "arm": "profiled",
+    "path": "B8-profiled-1.wav",
+    "sha256": "e4acde6f47a04355bd233fc5904131196f307f9b28986c981ce6c473bef7eb44",
+    "expected": "No one was inside the apartment.",
+    "language": "en"
+  },
+  {
+    "batch": 8,
+    "arm": "profiled",
+    "path": "B8-profiled-2.wav",
+    "sha256": "32f687f405eee46795e49a8708fd3dda4f96bcbb848377526d2d13733c16cae4",
+    "expected": "No one was inside the apartment.",
+    "language": "en"
+  },
+  {
+    "batch": 8,
+    "arm": "profiled",
+    "path": "B8-profiled-3.wav",
+    "sha256": "f7aeec43d5b7984d90d0f6c95fc0a20ca3a182b699897ac4d3065669feeda234",
+    "expected": "No one was inside the apartment.",
+    "language": "en"
+  },
+  {
+    "batch": 8,
+    "arm": "profiled",
+    "path": "B8-profiled-4.wav",
+    "sha256": "9d7faea06bb9b65c16771f7715615c5b917d344bf38f113c7637067a318bf236",
+    "expected": "No one was inside the apartment.",
+    "language": "en"
+  },
+  {
+    "batch": 8,
+    "arm": "profiled",
+    "path": "B8-profiled-5.wav",
+    "sha256": "1fa00d3c12dbca532d3f89c1da9cd58b2c29e51763baa1c30d76da851fb2423e",
+    "expected": "No one was inside the apartment.",
+    "language": "en"
+  },
+  {
+    "batch": 8,
+    "arm": "profiled",
+    "path": "B8-profiled-6.wav",
+    "sha256": "fd4ebc8455659ff572e0ff98a15c8e1c2c8eb36556414f46a66a28d18ffad0ad",
+    "expected": "No one was inside the apartment.",
+    "language": "en"
+  },
+  {
+    "batch": 8,
+    "arm": "profiled",
+    "path": "B8-profiled-7.wav",
+    "sha256": "e5b4f93434e1e293b815be3f0339b54b5d43f0e0575d1cbebdfcf8a87f5bd092",
+    "expected": "No one was inside the apartment.",
+    "language": "en"
+  }
+]

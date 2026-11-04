@@ -1,0 +1,212 @@
+[
+  {
+    "threads": 8,
+    "rep": 0,
+    "synchronized_full_model_ms": 791.9053970254026,
+    "float_audio_equal_to_original_threads": true,
+    "stages_host_wall_ms": {
+      "prepare_inference_inputs_ms": 0.7904180092737079,
+      "iterative_generate_ms": 775.678189995233,
+      "audio_decode_ms": 13.019419042393565,
+      "post_process_audio_ms": 0.31856901478022337,
+      "decode_postprocess_ms": 13.337988057173789,
+      "generate_total_ms": 791.8297510477714
+    }
+  },
+  {
+    "threads": 8,
+    "rep": 1,
+    "synchronized_full_model_ms": 791.6502940352075,
+    "float_audio_equal_to_original_threads": true,
+    "stages_host_wall_ms": {
+      "prepare_inference_inputs_ms": 0.9633969748392701,
+      "iterative_generate_ms": 776.3853670330718,
+      "audio_decode_ms": 11.47398300236091,
+      "post_process_audio_ms": 0.24100899463519454,
+      "decode_postprocess_ms": 11.714991996996105,
+      "generate_total_ms": 791.5824590018019
+    }
+  },
+  {
+    "threads": 8,
+    "rep": 2,
+    "synchronized_full_model_ms": 778.6651959759183,
+    "float_audio_equal_to_original_threads": true,
+    "stages_host_wall_ms": {
+      "prepare_inference_inputs_ms": 0.8534049848094583,
+      "iterative_generate_ms": 764.1879720031284,
+      "audio_decode_ms": 11.266773974057287,
+      "post_process_audio_ms": 0.2026159781962633,
+      "decode_postprocess_ms": 11.46938995225355,
+      "generate_total_ms": 778.6079160287045
+    }
+  },
+  {
+    "threads": 8,
+    "rep": 3,
+    "synchronized_full_model_ms": 783.8064389652573,
+    "float_audio_equal_to_original_threads": true,
+    "stages_host_wall_ms": {
+      "prepare_inference_inputs_ms": 0.7919759955257177,
+      "iterative_generate_ms": 769.5253920392133,
+      "audio_decode_ms": 11.261239007581025,
+      "post_process_audio_ms": 0.193332030903548,
+      "decode_postprocess_ms": 11.454571038484573,
+      "generate_total_ms": 783.7506799842231
+    }
+  },
+  {
+    "threads": 8,
+    "rep": 4,
+    "synchronized_full_model_ms": 781.4637889969163,
+    "float_audio_equal_to_original_threads": true,
+    "stages_host_wall_ms": {
+      "prepare_inference_inputs_ms": 0.7865880033932626,
+      "iterative_generate_ms": 767.1425630105659,
+      "audio_decode_ms": 11.286433029454201,
+      "post_process_audio_ms": 0.19244698341935873,
+      "decode_postprocess_ms": 11.47888001287356,
+      "generate_total_ms": 781.4075520145707
+    }
+  },
+  {
+    "threads": 1,
+    "rep": 0,
+    "synchronized_full_model_ms": 775.9047890431248,
+    "float_audio_equal_to_original_threads": true,
+    "stages_host_wall_ms": {
+      "prepare_inference_inputs_ms": 0.7872710120864213,
+      "iterative_generate_ms": 761.5518750390038,
+      "audio_decode_ms": 11.291522008832544,
+      "post_process_audio_ms": 0.1894520246423781,
+      "decode_postprocess_ms": 11.480974033474922,
+      "generate_total_ms": 775.8489510160871
+    }
+  },
+  {
+    "threads": 1,
+    "rep": 1,
+    "synchronized_full_model_ms": 789.1593490494415,
+    "float_audio_equal_to_original_threads": true,
+    "stages_host_wall_ms": {
+      "prepare_inference_inputs_ms": 0.7808639784343541,
+      "iterative_generate_ms": 774.4361770455725,
+      "audio_decode_ms": 11.593100032769144,
+      "post_process_audio_ms": 0.24871097411960363,
+      "decode_postprocess_ms": 11.841811006888747,
+      "generate_total_ms": 789.0892829746008
+    }
+  },
+  {
+    "threads": 1,
+    "rep": 2,
+    "synchronized_full_model_ms": 779.6055169892497,
+    "float_audio_equal_to_original_threads": true,
+    "stages_host_wall_ms": {
+      "prepare_inference_inputs_ms": 0.8903080015443265,
+      "iterative_generate_ms": 764.5496790064499,
+      "audio_decode_ms": 11.786311981268227,
+      "post_process_audio_ms": 0.20626600598916411,
+      "decode_postprocess_ms": 11.992577987257391,
+      "generate_total_ms": 779.5488700503483
+    }
+  },
+  {
+    "threads": 1,
+    "rep": 3,
+    "synchronized_full_model_ms": 777.8349529835396,
+    "float_audio_equal_to_original_threads": true,
+    "stages_host_wall_ms": {
+      "prepare_inference_inputs_ms": 0.7770800148136914,
+      "iterative_generate_ms": 762.9676910000853,
+      "audio_decode_ms": 11.800871987361461,
+      "post_process_audio_ms": 0.19516900647431612,
+      "decode_postprocess_ms": 11.996040993835777,
+      "generate_total_ms": 777.7698719874024
+    }
+  },
+  {
+    "threads": 1,
+    "rep": 4,
+    "synchronized_full_model_ms": 780.8045250130817,
+    "float_audio_equal_to_original_threads": true,
+    "stages_host_wall_ms": {
+      "prepare_inference_inputs_ms": 0.7723600137978792,
+      "iterative_generate_ms": 766.1597679834813,
+      "audio_decode_ms": 11.535763973370194,
+      "post_process_audio_ms": 0.1965870033018291,
+      "decode_postprocess_ms": 11.732350976672024,
+      "generate_total_ms": 780.7279260014184
+    }
+  },
+  {
+    "threads": 4,
+    "rep": 0,
+    "synchronized_full_model_ms": 783.2915569888428,
+    "float_audio_equal_to_original_threads": true,
+    "stages_host_wall_ms": {
+      "prepare_inference_inputs_ms": 0.7984290132299066,
+      "iterative_generate_ms": 768.8074300531298,
+      "audio_decode_ms": 11.359209020156413,
+      "post_process_audio_ms": 0.19248301396146417,
+      "decode_postprocess_ms": 11.551692034117877,
+      "generate_total_ms": 783.2361100008711
+    }
+  },
+  {
+    "threads": 4,
+    "rep": 1,
+    "synchronized_full_model_ms": 784.9858909612522,
+    "float_audio_equal_to_original_threads": true,
+    "stages_host_wall_ms": {
+      "prepare_inference_inputs_ms": 0.7840209873393178,
+      "iterative_generate_ms": 770.3432910493575,
+      "audio_decode_ms": 11.518599989358336,
+      "post_process_audio_ms": 0.2498950343579054,
+      "decode_postprocess_ms": 11.768495023716241,
+      "generate_total_ms": 784.9094269913621
+    }
+  },
+  {
+    "threads": 4,
+    "rep": 2,
+    "synchronized_full_model_ms": 785.9570209984668,
+    "float_audio_equal_to_original_threads": true,
+    "stages_host_wall_ms": {
+      "prepare_inference_inputs_ms": 0.891801028046757,
+      "iterative_generate_ms": 769.5747539983131,
+      "audio_decode_ms": 13.029068999458104,
+      "post_process_audio_ms": 0.29258697759360075,
+      "decode_postprocess_ms": 13.321655977051705,
+      "generate_total_ms": 785.8818389941007
+    }
+  },
+  {
+    "threads": 4,
+    "rep": 3,
+    "synchronized_full_model_ms": 796.1651850491762,
+    "float_audio_equal_to_original_threads": true,
+    "stages_host_wall_ms": {
+      "prepare_inference_inputs_ms": 0.9754790225997567,
+      "iterative_generate_ms": 780.9085260378197,
+      "audio_decode_ms": 11.544039007276297,
+      "post_process_audio_ms": 0.2516739768907428,
+      "decode_postprocess_ms": 11.79571298416704,
+      "generate_total_ms": 796.0941190249287
+    }
+  },
+  {
+    "threads": 4,
+    "rep": 4,
+    "synchronized_full_model_ms": 777.1110030007549,
+    "float_audio_equal_to_original_threads": true,
+    "stages_host_wall_ms": {
+      "prepare_inference_inputs_ms": 0.8811880252324045,
+      "iterative_generate_ms": 762.5716009642929,
+      "audio_decode_ms": 11.26438396750018,
+      "post_process_audio_ms": 0.20590401254594326,
+      "decode_postprocess_ms": 11.470287980046123,
+      "generate_total_ms": 777.0546909887344
+    }
+  }
+]

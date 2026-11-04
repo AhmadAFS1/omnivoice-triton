@@ -1,0 +1,1028 @@
+{
+  "status": "ok",
+  "cuda_fault": null,
+  "model": "/workspace/omnivoice-50series-value/model",
+  "runner": "hybrid",
+  "device": "cuda",
+  "dtype": "fp16",
+  "sample_rate": 24000,
+  "load_asr": false,
+  "allow_lazy_asr": false,
+  "asr_loaded": false,
+  "save_dir": null,
+  "sage_attention": false,
+  "full_triton_patch": false,
+  "decode_postprocess_workers": 4,
+  "audio_decode_batch_size": 1,
+  "disable_unused_kv_cache": true,
+  "llm_use_cache": false,
+  "split_cfg": false,
+  "fused_rope": false,
+  "inference_optimizations": {
+    "disable_unused_kv_cache": true,
+    "llm_use_cache": false,
+    "split_cfg_requested": false,
+    "split_cfg_enabled": false,
+    "split_cfg_experimental": true,
+    "split_cfg_metrics": null,
+    "fused_rope_requested": false,
+    "fused_rope_enabled": false,
+    "fused_rope_ready": false,
+    "fused_rope_experimental": true,
+    "fused_rope_metrics": null,
+    "max_cuda_graph_row_tokens": 65536,
+    "cuda_graph_capture_after_calls": 0,
+    "cuda_graph_memory": {
+      "enabled": true,
+      "max_cuda_graph_row_tokens": 65536,
+      "capture_after_calls": 0,
+      "deferred_calls": 0,
+      "observed_shape_keys": 0,
+      "max_shape_observations": 4096,
+      "estimate_kind": "Heuristic architecture/dtype row tokens and headroom; NOT a rigorous total VRAM bound",
+      "qualification_scope": "actual_model_architecture_and_runtime",
+      "profile": {
+        "qualified": true,
+        "reason": "",
+        "revision": null,
+        "dtype_bytes": 2,
+        "use_cache": false,
+        "layers": 28,
+        "hidden": 1024,
+        "intermediate": 3072,
+        "heads": 16,
+        "kv_heads": 8,
+        "head_dim": 128,
+        "codebooks": 8,
+        "audio_vocab": 1025
+      },
+      "retained_row_tokens": 60816,
+      "unqualified_graph_keys": 0,
+      "resident_graphs": 64,
+      "max_graphs": 64,
+      "calls": 1664,
+      "hits": 1600,
+      "captures": 64,
+      "evictions": 0,
+      "evicted_row_tokens": 0,
+      "eager_fallbacks": {},
+      "pressure_cleanups": 0,
+      "admission_rejections": 0,
+      "capture_failures": 0,
+      "clears": 0,
+      "last_owner_memory_snapshot": {
+        "free_bytes": 10213523456,
+        "total_bytes": 16600596480,
+        "required_estimated_bytes": 565669312,
+        "device": "cuda:0"
+      },
+      "last_decision": "replay",
+      "resident_shapes": [
+        {
+          "shape": [
+            2,
+            8,
+            513
+          ],
+          "normalized_row_tokens": 1026
+        },
+        {
+          "shape": [
+            2,
+            8,
+            357
+          ],
+          "normalized_row_tokens": 714
+        },
+        {
+          "shape": [
+            2,
+            8,
+            431
+          ],
+          "normalized_row_tokens": 862
+        },
+        {
+          "shape": [
+            2,
+            8,
+            457
+          ],
+          "normalized_row_tokens": 914
+        },
+        {
+          "shape": [
+            2,
+            8,
+            427
+          ],
+          "normalized_row_tokens": 854
+        },
+        {
+          "shape": [
+            2,
+            8,
+            409
+          ],
+          "normalized_row_tokens": 818
+        },
+        {
+          "shape": [
+            2,
+            8,
+            486
+          ],
+          "normalized_row_tokens": 972
+        },
+        {
+          "shape": [
+            2,
+            8,
+            473
+          ],
+          "normalized_row_tokens": 946
+        },
+        {
+          "shape": [
+            2,
+            8,
+            498
+          ],
+          "normalized_row_tokens": 996
+        },
+        {
+          "shape": [
+            2,
+            8,
+            464
+          ],
+          "normalized_row_tokens": 928
+        },
+        {
+          "shape": [
+            2,
+            8,
+            470
+          ],
+          "normalized_row_tokens": 940
+        },
+        {
+          "shape": [
+            2,
+            8,
+            420
+          ],
+          "normalized_row_tokens": 840
+        },
+        {
+          "shape": [
+            2,
+            8,
+            495
+          ],
+          "normalized_row_tokens": 990
+        },
+        {
+          "shape": [
+            2,
+            8,
+            497
+          ],
+          "normalized_row_tokens": 994
+        },
+        {
+          "shape": [
+            2,
+            8,
+            488
+          ],
+          "normalized_row_tokens": 976
+        },
+        {
+          "shape": [
+            2,
+            8,
+            526
+          ],
+          "normalized_row_tokens": 1052
+        },
+        {
+          "shape": [
+            2,
+            8,
+            501
+          ],
+          "normalized_row_tokens": 1002
+        },
+        {
+          "shape": [
+            2,
+            8,
+            478
+          ],
+          "normalized_row_tokens": 956
+        },
+        {
+          "shape": [
+            2,
+            8,
+            549
+          ],
+          "normalized_row_tokens": 1098
+        },
+        {
+          "shape": [
+            2,
+            8,
+            462
+          ],
+          "normalized_row_tokens": 924
+        },
+        {
+          "shape": [
+            2,
+            8,
+            485
+          ],
+          "normalized_row_tokens": 970
+        },
+        {
+          "shape": [
+            2,
+            8,
+            517
+          ],
+          "normalized_row_tokens": 1034
+        },
+        {
+          "shape": [
+            2,
+            8,
+            442
+          ],
+          "normalized_row_tokens": 884
+        },
+        {
+          "shape": [
+            2,
+            8,
+            494
+          ],
+          "normalized_row_tokens": 988
+        },
+        {
+          "shape": [
+            2,
+            8,
+            548
+          ],
+          "normalized_row_tokens": 1096
+        },
+        {
+          "shape": [
+            2,
+            8,
+            506
+          ],
+          "normalized_row_tokens": 1012
+        },
+        {
+          "shape": [
+            2,
+            8,
+            505
+          ],
+          "normalized_row_tokens": 1010
+        },
+        {
+          "shape": [
+            2,
+            8,
+            461
+          ],
+          "normalized_row_tokens": 922
+        },
+        {
+          "shape": [
+            2,
+            8,
+            481
+          ],
+          "normalized_row_tokens": 962
+        },
+        {
+          "shape": [
+            2,
+            8,
+            480
+          ],
+          "normalized_row_tokens": 960
+        },
+        {
+          "shape": [
+            2,
+            8,
+            521
+          ],
+          "normalized_row_tokens": 1042
+        },
+        {
+          "shape": [
+            2,
+            8,
+            535
+          ],
+          "normalized_row_tokens": 1070
+        },
+        {
+          "shape": [
+            2,
+            8,
+            467
+          ],
+          "normalized_row_tokens": 934
+        },
+        {
+          "shape": [
+            2,
+            8,
+            489
+          ],
+          "normalized_row_tokens": 978
+        },
+        {
+          "shape": [
+            2,
+            8,
+            523
+          ],
+          "normalized_row_tokens": 1046
+        },
+        {
+          "shape": [
+            2,
+            8,
+            471
+          ],
+          "normalized_row_tokens": 942
+        },
+        {
+          "shape": [
+            2,
+            8,
+            458
+          ],
+          "normalized_row_tokens": 916
+        },
+        {
+          "shape": [
+            2,
+            8,
+            518
+          ],
+          "normalized_row_tokens": 1036
+        },
+        {
+          "shape": [
+            2,
+            8,
+            483
+          ],
+          "normalized_row_tokens": 966
+        },
+        {
+          "shape": [
+            2,
+            8,
+            472
+          ],
+          "normalized_row_tokens": 944
+        },
+        {
+          "shape": [
+            2,
+            8,
+            460
+          ],
+          "normalized_row_tokens": 920
+        },
+        {
+          "shape": [
+            2,
+            8,
+            445
+          ],
+          "normalized_row_tokens": 890
+        },
+        {
+          "shape": [
+            2,
+            8,
+            477
+          ],
+          "normalized_row_tokens": 954
+        },
+        {
+          "shape": [
+            2,
+            8,
+            443
+          ],
+          "normalized_row_tokens": 886
+        },
+        {
+          "shape": [
+            2,
+            8,
+            444
+          ],
+          "normalized_row_tokens": 888
+        },
+        {
+          "shape": [
+            2,
+            8,
+            466
+          ],
+          "normalized_row_tokens": 932
+        },
+        {
+          "shape": [
+            2,
+            8,
+            448
+          ],
+          "normalized_row_tokens": 896
+        },
+        {
+          "shape": [
+            2,
+            8,
+            482
+          ],
+          "normalized_row_tokens": 964
+        },
+        {
+          "shape": [
+            2,
+            8,
+            453
+          ],
+          "normalized_row_tokens": 906
+        },
+        {
+          "shape": [
+            2,
+            8,
+            476
+          ],
+          "normalized_row_tokens": 952
+        },
+        {
+          "shape": [
+            2,
+            8,
+            600
+          ],
+          "normalized_row_tokens": 1200
+        },
+        {
+          "shape": [
+            2,
+            8,
+            469
+          ],
+          "normalized_row_tokens": 938
+        },
+        {
+          "shape": [
+            2,
+            8,
+            450
+          ],
+          "normalized_row_tokens": 900
+        },
+        {
+          "shape": [
+            2,
+            8,
+            454
+          ],
+          "normalized_row_tokens": 908
+        },
+        {
+          "shape": [
+            2,
+            8,
+            447
+          ],
+          "normalized_row_tokens": 894
+        },
+        {
+          "shape": [
+            2,
+            8,
+            451
+          ],
+          "normalized_row_tokens": 902
+        },
+        {
+          "shape": [
+            2,
+            8,
+            463
+          ],
+          "normalized_row_tokens": 926
+        },
+        {
+          "shape": [
+            2,
+            8,
+            452
+          ],
+          "normalized_row_tokens": 904
+        },
+        {
+          "shape": [
+            2,
+            8,
+            475
+          ],
+          "normalized_row_tokens": 950
+        },
+        {
+          "shape": [
+            2,
+            8,
+            468
+          ],
+          "normalized_row_tokens": 936
+        },
+        {
+          "shape": [
+            2,
+            8,
+            456
+          ],
+          "normalized_row_tokens": 912
+        },
+        {
+          "shape": [
+            2,
+            8,
+            449
+          ],
+          "normalized_row_tokens": 898
+        },
+        {
+          "shape": [
+            2,
+            8,
+            484
+          ],
+          "normalized_row_tokens": 968
+        },
+        {
+          "shape": [
+            2,
+            8,
+            439
+          ],
+          "normalized_row_tokens": 878
+        }
+      ]
+    }
+  },
+  "response_cache": {
+    "enabled": false,
+    "max_bytes": 0,
+    "bytes": 0,
+    "entries": 0,
+    "max_entries": 4096,
+    "ttl_s": 600.0,
+    "inflight_keys": 0,
+    "waiters": 0,
+    "max_inflight_keys": 64,
+    "max_waiters": 4096,
+    "hits": 0,
+    "producer_jobs_started": 0,
+    "coalesced": 0,
+    "evictions": 0,
+    "closed": false
+  },
+  "max_cuda_graphs": 64,
+  "max_cuda_graph_row_tokens": 65536,
+  "cuda_graph_capture_after_calls": 0,
+  "batch_collect_ms": 0.0,
+  "max_batch_requests": 1,
+  "batcher_queue": {
+    "pending_requests": 0,
+    "pending_gpu_tasks": 0,
+    "max_pending_requests": 4,
+    "max_pending_gpu_tasks": 16,
+    "oldest_pending_ms": 0.0,
+    "benchmark_raw_burst_v1": {
+      "batches_started": 104,
+      "members_started": 104,
+      "members_succeeded": 104,
+      "members_failed": 0
+    }
+  },
+  "max_batch_target_tokens": 24000,
+  "max_batch_conditioning_tokens": 12000,
+  "max_batch_padding_ratio": 1.5,
+  "clone_prompt_cache_size": 128,
+  "registered_clone_prompt_store_size": 256,
+  "registered_clone_prompt_count": 9,
+  "token_estimate_cache_size": 4096,
+  "token_estimate_cache_entries": 208,
+  "batch_bucket_sizes": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32
+  ],
+  "prewarm_clone_batch_sizes": [],
+  "prewarm_clone_sequence_lengths": [],
+  "cuda_graph_capture_count": 64,
+  "cuda_graph_max_graphs": 64,
+  "cuda_graph_shapes": [
+    [
+      2,
+      8,
+      357
+    ],
+    [
+      2,
+      8,
+      409
+    ],
+    [
+      2,
+      8,
+      420
+    ],
+    [
+      2,
+      8,
+      427
+    ],
+    [
+      2,
+      8,
+      431
+    ],
+    [
+      2,
+      8,
+      439
+    ],
+    [
+      2,
+      8,
+      442
+    ],
+    [
+      2,
+      8,
+      443
+    ],
+    [
+      2,
+      8,
+      444
+    ],
+    [
+      2,
+      8,
+      445
+    ],
+    [
+      2,
+      8,
+      447
+    ],
+    [
+      2,
+      8,
+      448
+    ],
+    [
+      2,
+      8,
+      449
+    ],
+    [
+      2,
+      8,
+      450
+    ],
+    [
+      2,
+      8,
+      451
+    ],
+    [
+      2,
+      8,
+      452
+    ],
+    [
+      2,
+      8,
+      453
+    ],
+    [
+      2,
+      8,
+      454
+    ],
+    [
+      2,
+      8,
+      456
+    ],
+    [
+      2,
+      8,
+      457
+    ],
+    [
+      2,
+      8,
+      458
+    ],
+    [
+      2,
+      8,
+      460
+    ],
+    [
+      2,
+      8,
+      461
+    ],
+    [
+      2,
+      8,
+      462
+    ],
+    [
+      2,
+      8,
+      463
+    ],
+    [
+      2,
+      8,
+      464
+    ],
+    [
+      2,
+      8,
+      466
+    ],
+    [
+      2,
+      8,
+      467
+    ],
+    [
+      2,
+      8,
+      468
+    ],
+    [
+      2,
+      8,
+      469
+    ],
+    [
+      2,
+      8,
+      470
+    ],
+    [
+      2,
+      8,
+      471
+    ],
+    [
+      2,
+      8,
+      472
+    ],
+    [
+      2,
+      8,
+      473
+    ],
+    [
+      2,
+      8,
+      475
+    ],
+    [
+      2,
+      8,
+      476
+    ],
+    [
+      2,
+      8,
+      477
+    ],
+    [
+      2,
+      8,
+      478
+    ],
+    [
+      2,
+      8,
+      480
+    ],
+    [
+      2,
+      8,
+      481
+    ],
+    [
+      2,
+      8,
+      482
+    ],
+    [
+      2,
+      8,
+      483
+    ],
+    [
+      2,
+      8,
+      484
+    ],
+    [
+      2,
+      8,
+      485
+    ],
+    [
+      2,
+      8,
+      486
+    ],
+    [
+      2,
+      8,
+      488
+    ],
+    [
+      2,
+      8,
+      489
+    ],
+    [
+      2,
+      8,
+      494
+    ],
+    [
+      2,
+      8,
+      495
+    ],
+    [
+      2,
+      8,
+      497
+    ],
+    [
+      2,
+      8,
+      498
+    ],
+    [
+      2,
+      8,
+      501
+    ],
+    [
+      2,
+      8,
+      505
+    ],
+    [
+      2,
+      8,
+      506
+    ],
+    [
+      2,
+      8,
+      513
+    ],
+    [
+      2,
+      8,
+      517
+    ],
+    [
+      2,
+      8,
+      518
+    ],
+    [
+      2,
+      8,
+      521
+    ],
+    [
+      2,
+      8,
+      523
+    ],
+    [
+      2,
+      8,
+      526
+    ],
+    [
+      2,
+      8,
+      535
+    ],
+    [
+      2,
+      8,
+      548
+    ],
+    [
+      2,
+      8,
+      549
+    ],
+    [
+      2,
+      8,
+      600
+    ]
+  ],
+  "cuda_graph_prewarm": {
+    "requested_batch_sizes": [],
+    "requested_sequence_lengths": [],
+    "requested_shapes": [],
+    "warmed_shapes": [],
+    "supported": true,
+    "duration_ms": 0.0
+  },
+  "last_generation_metrics": {
+    "prepare_inference_inputs_ms": 0.6979059980949387,
+    "iterative_generate_ms": 73.38370800425764,
+    "audio_decode_ms": 173.88387001119554,
+    "post_process_audio_ms": 0.12697599595412612,
+    "decode_postprocess_ms": 174.01084600714967,
+    "generate_total_ms": 249.9407040013466
+  },
+  "gpu_metrics": {
+    "available": true,
+    "device": "cuda",
+    "device_index": 0,
+    "device_name": "NVIDIA GeForce RTX 5080",
+    "sample_interval_ms": 25.0,
+    "memory_total_gb": 15.9208984375,
+    "gpu_util_pct": 0.0,
+    "device_vram_used_gb": 6.4107666015625,
+    "device_vram_util_pct": 40.26636201926026
+  },
+  "last_batch_gpu_metrics": {
+    "sample_count": 10,
+    "gpu_util_avg_pct": 100.0,
+    "gpu_util_peak_pct": 100.0,
+    "device_vram_used_gb_avg": 6.4088134765625,
+    "device_vram_used_gb_peak": 6.4088134765625,
+    "device_vram_util_avg_pct": 40.25409433846532,
+    "device_vram_util_peak_pct": 40.254094338465315,
+    "process_peak_vram_gb": 3.1675710678100586
+  },
+  "worker": {
+    "worker_type": "tts",
+    "worker_id": null,
+    "instance_id": null,
+    "base_url": null,
+    "endpoint_url": null,
+    "public_ip": null,
+    "public_port": null,
+    "internal_port": null,
+    "callback_enabled": false,
+    "status": "healthy",
+    "active_requests": 0,
+    "queue_depth": 0,
+    "capacity": 1,
+    "assignable": true,
+    "draining": false,
+    "cuda_fault": null
+  }
+}

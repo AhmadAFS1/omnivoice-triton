@@ -1,0 +1,40 @@
+{
+  "utc": "2026-11-04T22:31:15.911021+00:00",
+  "stage_outcomes": [
+    {
+      "stage": "single",
+      "script": "run_capacity.py",
+      "returncode": 0,
+      "start_utc": "2026-11-04T22:13:17.252235+00:00",
+      "wall_s": 317.97343730926514
+    },
+    {
+      "stage": "profile",
+      "script": "profile_pipeline.py",
+      "returncode": 0,
+      "start_utc": "2026-11-04T22:18:37.249495+00:00",
+      "wall_s": 63.52606773376465
+    },
+    {
+      "stage": "ordinary-dual",
+      "script": "run_dual.py",
+      "returncode": 0,
+      "start_utc": "2026-11-04T22:19:42.799447+00:00",
+      "wall_s": 142.18270707130432
+    },
+    {
+      "stage": "MPS",
+      "script": "run_mps.py",
+      "returncode": 0,
+      "start_utc": "2026-11-04T22:22:07.006769+00:00",
+      "wall_s": 279.6603755950928
+    },
+    {
+      "stage": "staggered",
+      "script": "run_staggered.py",
+      "returncode": 0,
+      "start_utc": "2026-11-04T22:26:48.690168+00:00",
+      "wall_s": 265.2201552391052
+    }
+  ]
+}

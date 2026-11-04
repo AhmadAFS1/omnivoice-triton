@@ -1,0 +1,524 @@
+[
+  {
+    "id": "reference-ar-aoede",
+    "path": "/workspace/omnivoice-50series-value/quality-input/references/audio/dfb87da4364e14ed0e2117944eeaf6a425975670cbd6df874c9c5aec25e5c933.wav",
+    "sha256": "dfb87da4364e14ed0e2117944eeaf6a425975670cbd6df874c9c5aec25e5c933",
+    "text": "في هذا الصباح الجميل، قررت أن أخرج للتنزه في الحديقة الواسعة القريبة من منزلي وأستمتع بنسمات الهواء العليل وصوت العصافير المغردة فوق غصون الأشجار الخضراء.",
+    "language": "ar",
+    "lang_id": "arb_Arab",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-50series-value/quality-results/references/asr-input/000000-000.wav",
+        "start_s": 0.0,
+        "end_s": 15.170958333333333,
+        "sha256": "723568f828eb6cdcb16860e16e3a0c358a498a7a5b6e5ad78c98389764333d42"
+      }
+    ],
+    "duration_s": 15.170958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.924774169921875,
+      "rms": 0.1171765848994255,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-calibration",
+    "phase": null,
+    "source": {
+      "id": "reference-ar-aoede",
+      "sha256": "dfb87da4364e14ed0e2117944eeaf6a425975670cbd6df874c9c5aec25e5c933",
+      "text": "في هذا الصباح الجميل، قررت أن أخرج للتنزه في الحديقة الواسعة القريبة من منزلي وأستمتع بنسمات الهواء العليل وصوت العصافير المغردة فوق غصون الأشجار الخضراء.",
+      "language": "ar",
+      "lang_id": "arb_Arab",
+      "run": "reference-calibration",
+      "reference": {
+        "id": "ar-aoede",
+        "reference_id": "ar-aoede",
+        "language": "ar",
+        "lang": "ar",
+        "api_language": "arb",
+        "omnilingual_language": "arb_Arab",
+        "file": "ar-aoede.wav",
+        "path": "ar-aoede.wav",
+        "text": "في هذا الصباح الجميل، قررت أن أخرج للتنزه في الحديقة الواسعة القريبة من منزلي وأستمتع بنسمات الهواء العليل وصوت العصافير المغردة فوق غصون الأشجار الخضراء.",
+        "expected": "في هذا الصباح الجميل، قررت أن أخرج للتنزه في الحديقة الواسعة القريبة من منزلي وأستمتع بنسمات الهواء العليل وصوت العصافير المغردة فوق غصون الأشجار الخضراء.",
+        "sha256": "dfb87da4364e14ed0e2117944eeaf6a425975670cbd6df874c9c5aec25e5c933",
+        "duration_s": 15.170958333333333,
+        "sample_rate": 24000,
+        "channels": 1,
+        "voice": "Aoede",
+        "source": "backend/tmp/gemini_tts_clone_samples/ar/ar_arabic_aoede.wav",
+        "source_model": "gemini-2.5-pro-preview-tts",
+        "source_generated_at": "2026-03-30T20:40:33.957181+00:00",
+        "transcript_status": "existing product seed transcript; needs ASR control/native review",
+        "reference_type": "previously synthesized Gemini reference; no new API call",
+        "quality_note": "Reference is longer than normal 3-10 second guidance"
+      },
+      "source_generation_hardware": "unverified external Aoede reference; current5090 is ASR hardware only",
+      "path": "audio/dfb87da4364e14ed0e2117944eeaf6a425975670cbd6df874c9c5aec25e5c933.wav"
+    }
+  },
+  {
+    "id": "reference-da-aoede",
+    "path": "/workspace/omnivoice-50series-value/quality-input/references/audio/901703970b23d3e204d7a523eb90da6325ecd09a609f5ccd17a303765813cf83.wav",
+    "sha256": "901703970b23d3e204d7a523eb90da6325ecd09a609f5ccd17a303765813cf83",
+    "text": "Den lille kat løber hurtigt hen over den grønne græsplæne for at fange en farvet sommerfugl i det varme solskin, mens de voksne sidder og drikker kaffe på terrassen.",
+    "language": "da",
+    "lang_id": "dan_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-50series-value/quality-results/references/asr-input/000001-000.wav",
+        "start_s": 0.0,
+        "end_s": 9.530958333333333,
+        "sha256": "3950f40d5c4dc24832c7d410e7f450cf16139e3a30b5c7d6d54457e90f83e72b"
+      }
+    ],
+    "duration_s": 9.530958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.856414794921875,
+      "rms": 0.09906897693872452,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-calibration",
+    "phase": null,
+    "source": {
+      "id": "reference-da-aoede",
+      "sha256": "901703970b23d3e204d7a523eb90da6325ecd09a609f5ccd17a303765813cf83",
+      "text": "Den lille kat løber hurtigt hen over den grønne græsplæne for at fange en farvet sommerfugl i det varme solskin, mens de voksne sidder og drikker kaffe på terrassen.",
+      "language": "da",
+      "lang_id": "dan_Latn",
+      "run": "reference-calibration",
+      "reference": {
+        "id": "da-aoede",
+        "reference_id": "da-aoede",
+        "language": "da",
+        "lang": "da",
+        "api_language": "da",
+        "omnilingual_language": "dan_Latn",
+        "file": "da-aoede.wav",
+        "path": "da-aoede.wav",
+        "text": "Den lille kat løber hurtigt hen over den grønne græsplæne for at fange en farvet sommerfugl i det varme solskin, mens de voksne sidder og drikker kaffe på terrassen.",
+        "expected": "Den lille kat løber hurtigt hen over den grønne græsplæne for at fange en farvet sommerfugl i det varme solskin, mens de voksne sidder og drikker kaffe på terrassen.",
+        "sha256": "901703970b23d3e204d7a523eb90da6325ecd09a609f5ccd17a303765813cf83",
+        "duration_s": 9.530958333333333,
+        "sample_rate": 24000,
+        "channels": 1,
+        "voice": "Aoede",
+        "source": "backend/tmp/gemini_tts_clone_samples/da/da_danish_aoede.wav",
+        "source_model": "gemini-2.5-pro-preview-tts",
+        "source_generated_at": "2026-03-30T20:40:35.802225+00:00",
+        "transcript_status": "existing product seed transcript; needs ASR control/native review",
+        "reference_type": "previously synthesized Gemini reference; no new API call",
+        "quality_note": null
+      },
+      "source_generation_hardware": "unverified external Aoede reference; current5090 is ASR hardware only",
+      "path": "audio/901703970b23d3e204d7a523eb90da6325ecd09a609f5ccd17a303765813cf83.wav"
+    }
+  },
+  {
+    "id": "reference-de-aoede",
+    "path": "/workspace/omnivoice-50series-value/quality-input/references/audio/8c79b7fec00d0072ea12343d39aa13b3ca315dbb5e62155afcbd048ebc8640e8.wav",
+    "sha256": "8c79b7fec00d0072ea12343d39aa13b3ca315dbb5e62155afcbd048ebc8640e8",
+    "text": "Morgens trinke ich gerne eine Tasse heißen Kaffee und schaue dabei aus dem Fenster auf die ruhige Straße vor unserem Haus, während die Vögel in den hohen Bäumen fröhlich zwitschern.",
+    "language": "de",
+    "lang_id": "deu_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-50series-value/quality-results/references/asr-input/000002-000.wav",
+        "start_s": 0.0,
+        "end_s": 12.130958333333334,
+        "sha256": "2a2dc5a4cd97c688e755ba9360c0276d7855905642574caceaa69ea40d9d850b"
+      }
+    ],
+    "duration_s": 12.130958333333334,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.593719482421875,
+      "rms": 0.06575068831443787,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-calibration",
+    "phase": null,
+    "source": {
+      "id": "reference-de-aoede",
+      "sha256": "8c79b7fec00d0072ea12343d39aa13b3ca315dbb5e62155afcbd048ebc8640e8",
+      "text": "Morgens trinke ich gerne eine Tasse heißen Kaffee und schaue dabei aus dem Fenster auf die ruhige Straße vor unserem Haus, während die Vögel in den hohen Bäumen fröhlich zwitschern.",
+      "language": "de",
+      "lang_id": "deu_Latn",
+      "run": "reference-calibration",
+      "reference": {
+        "id": "de-aoede",
+        "reference_id": "de-aoede",
+        "language": "de",
+        "lang": "de",
+        "api_language": "de",
+        "omnilingual_language": "deu_Latn",
+        "file": "de-aoede.wav",
+        "path": "de-aoede.wav",
+        "text": "Morgens trinke ich gerne eine Tasse heißen Kaffee und schaue dabei aus dem Fenster auf die ruhige Straße vor unserem Haus, während die Vögel in den hohen Bäumen fröhlich zwitschern.",
+        "expected": "Morgens trinke ich gerne eine Tasse heißen Kaffee und schaue dabei aus dem Fenster auf die ruhige Straße vor unserem Haus, während die Vögel in den hohen Bäumen fröhlich zwitschern.",
+        "sha256": "8c79b7fec00d0072ea12343d39aa13b3ca315dbb5e62155afcbd048ebc8640e8",
+        "duration_s": 12.130958333333334,
+        "sample_rate": 24000,
+        "channels": 1,
+        "voice": "Aoede",
+        "source": "backend/tmp/gemini_tts_clone_samples/de/de_german_aoede.wav",
+        "source_model": "gemini-2.5-pro-preview-tts",
+        "source_generated_at": "2026-03-30T20:40:50.065316+00:00",
+        "transcript_status": "existing product seed transcript; needs ASR control/native review",
+        "reference_type": "previously synthesized Gemini reference; no new API call",
+        "quality_note": "Reference is longer than normal 3-10 second guidance"
+      },
+      "source_generation_hardware": "unverified external Aoede reference; current5090 is ASR hardware only",
+      "path": "audio/8c79b7fec00d0072ea12343d39aa13b3ca315dbb5e62155afcbd048ebc8640e8.wav"
+    }
+  },
+  {
+    "id": "reference-el-aoede",
+    "path": "/workspace/omnivoice-50series-value/quality-input/references/audio/42f0dbdb2bce862c5d0b5bd0d131776b6ea53167d9961e8aea3db2b9fbde2838.wav",
+    "sha256": "42f0dbdb2bce862c5d0b5bd0d131776b6ea53167d9961e8aea3db2b9fbde2838",
+    "text": "Το καλοκαίρι μου αρέσει να περπατάω στην αμμουδιά και να ακούω τον ήχο από τα κύματα της θάλασσας κάτω από τον λαμπερό ήλιο, νιώθοντας την απόλυτη γαλήνη γύρω μου.",
+    "language": "el",
+    "lang_id": "ell_Grek",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-50series-value/quality-results/references/asr-input/000003-000.wav",
+        "start_s": 0.0,
+        "end_s": 11.130958333333334,
+        "sha256": "bae2886c8ff8a1a863b0ad0c6879ec66a984ed691fdf250391d113c24782e244"
+      }
+    ],
+    "duration_s": 11.130958333333334,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.569305419921875,
+      "rms": 0.09488877654075623,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-calibration",
+    "phase": null,
+    "source": {
+      "id": "reference-el-aoede",
+      "sha256": "42f0dbdb2bce862c5d0b5bd0d131776b6ea53167d9961e8aea3db2b9fbde2838",
+      "text": "Το καλοκαίρι μου αρέσει να περπατάω στην αμμουδιά και να ακούω τον ήχο από τα κύματα της θάλασσας κάτω από τον λαμπερό ήλιο, νιώθοντας την απόλυτη γαλήνη γύρω μου.",
+      "language": "el",
+      "lang_id": "ell_Grek",
+      "run": "reference-calibration",
+      "reference": {
+        "id": "el-aoede",
+        "reference_id": "el-aoede",
+        "language": "el",
+        "lang": "el",
+        "api_language": "el",
+        "omnilingual_language": "ell_Grek",
+        "file": "el-aoede.wav",
+        "path": "el-aoede.wav",
+        "text": "Το καλοκαίρι μου αρέσει να περπατάω στην αμμουδιά και να ακούω τον ήχο από τα κύματα της θάλασσας κάτω από τον λαμπερό ήλιο, νιώθοντας την απόλυτη γαλήνη γύρω μου.",
+        "expected": "Το καλοκαίρι μου αρέσει να περπατάω στην αμμουδιά και να ακούω τον ήχο από τα κύματα της θάλασσας κάτω από τον λαμπερό ήλιο, νιώθοντας την απόλυτη γαλήνη γύρω μου.",
+        "sha256": "42f0dbdb2bce862c5d0b5bd0d131776b6ea53167d9961e8aea3db2b9fbde2838",
+        "duration_s": 11.130958333333334,
+        "sample_rate": 24000,
+        "channels": 1,
+        "voice": "Aoede",
+        "source": "backend/tmp/gemini_tts_clone_samples/el/el_greek_aoede.wav",
+        "source_model": "gemini-2.5-pro-preview-tts",
+        "source_generated_at": "2026-03-30T20:43:19.489838+00:00",
+        "transcript_status": "existing product seed transcript; needs ASR control/native review",
+        "reference_type": "previously synthesized Gemini reference; no new API call",
+        "quality_note": "Reference is longer than normal 3-10 second guidance"
+      },
+      "source_generation_hardware": "unverified external Aoede reference; current5090 is ASR hardware only",
+      "path": "audio/42f0dbdb2bce862c5d0b5bd0d131776b6ea53167d9961e8aea3db2b9fbde2838.wav"
+    }
+  },
+  {
+    "id": "reference-en-aoede",
+    "path": "/workspace/omnivoice-50series-value/quality-input/references/audio/d0adc9563e1c71781c87d163b80e9fa27859529ba9b5c7bf28a88ee6ae641e66.wav",
+    "sha256": "d0adc9563e1c71781c87d163b80e9fa27859529ba9b5c7bf28a88ee6ae641e66",
+    "text": "I usually enjoy taking a long walk through the park during the afternoon to clear my mind, feel the fresh breeze, and watch the sun slowly set behind the tall trees in the distance.",
+    "language": "en",
+    "lang_id": "eng_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-50series-value/quality-results/references/asr-input/000004-000.wav",
+        "start_s": 0.0,
+        "end_s": 13.930958333333333,
+        "sha256": "0a3d7f294f2b54bcad52e4a868c3048c2efbbd6af86e5a59ce4100544b391544"
+      }
+    ],
+    "duration_s": 13.930958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.718719482421875,
+      "rms": 0.09489870071411133,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-calibration",
+    "phase": null,
+    "source": {
+      "id": "reference-en-aoede",
+      "sha256": "d0adc9563e1c71781c87d163b80e9fa27859529ba9b5c7bf28a88ee6ae641e66",
+      "text": "I usually enjoy taking a long walk through the park during the afternoon to clear my mind, feel the fresh breeze, and watch the sun slowly set behind the tall trees in the distance.",
+      "language": "en",
+      "lang_id": "eng_Latn",
+      "run": "reference-calibration",
+      "reference": {
+        "id": "en-aoede",
+        "reference_id": "en-aoede",
+        "language": "en",
+        "lang": "en",
+        "api_language": "en",
+        "omnilingual_language": "eng_Latn",
+        "file": "en-aoede.wav",
+        "path": "en-aoede.wav",
+        "text": "I usually enjoy taking a long walk through the park during the afternoon to clear my mind, feel the fresh breeze, and watch the sun slowly set behind the tall trees in the distance.",
+        "expected": "I usually enjoy taking a long walk through the park during the afternoon to clear my mind, feel the fresh breeze, and watch the sun slowly set behind the tall trees in the distance.",
+        "sha256": "d0adc9563e1c71781c87d163b80e9fa27859529ba9b5c7bf28a88ee6ae641e66",
+        "duration_s": 13.930958333333333,
+        "sample_rate": 24000,
+        "channels": 1,
+        "voice": "Aoede",
+        "source": "backend/tmp/gemini_tts_clone_samples/en/en_english_aoede.wav",
+        "source_model": "gemini-2.5-pro-preview-tts",
+        "source_generated_at": "2026-03-30T20:46:55.677975+00:00",
+        "transcript_status": "existing product seed transcript; needs ASR control/native review",
+        "reference_type": "previously synthesized Gemini reference; no new API call",
+        "quality_note": "Reference is longer than normal 3-10 second guidance"
+      },
+      "source_generation_hardware": "unverified external Aoede reference; current5090 is ASR hardware only",
+      "path": "audio/d0adc9563e1c71781c87d163b80e9fa27859529ba9b5c7bf28a88ee6ae641e66.wav"
+    }
+  },
+  {
+    "id": "reference-es-aoede",
+    "path": "/workspace/omnivoice-50series-value/quality-input/references/audio/4206e6da660b66548d8a185ca36f86f58830edf2e1e143f0b718180b68d0ce36.wav",
+    "sha256": "4206e6da660b66548d8a185ca36f86f58830edf2e1e143f0b718180b68d0ce36",
+    "text": "Espero que hoy sea un día muy tranquilo y podamos disfrutar de una buena comida con toda la familia en el jardín de casa mientras compartimos historias divertidas bajo la sombra.",
+    "language": "es",
+    "lang_id": "spa_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-50series-value/quality-results/references/asr-input/000005-000.wav",
+        "start_s": 0.0,
+        "end_s": 12.290958333333334,
+        "sha256": "4d44f1d93c8830cb6bf3c986d8a21824c4324c55b5936dea3ddae17088d19b7e"
+      }
+    ],
+    "duration_s": 12.290958333333334,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.486297607421875,
+      "rms": 0.07341720908880234,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-calibration",
+    "phase": null,
+    "source": {
+      "id": "reference-es-aoede",
+      "sha256": "4206e6da660b66548d8a185ca36f86f58830edf2e1e143f0b718180b68d0ce36",
+      "text": "Espero que hoy sea un día muy tranquilo y podamos disfrutar de una buena comida con toda la familia en el jardín de casa mientras compartimos historias divertidas bajo la sombra.",
+      "language": "es",
+      "lang_id": "spa_Latn",
+      "run": "reference-calibration",
+      "reference": {
+        "id": "es-aoede",
+        "reference_id": "es-aoede",
+        "language": "es",
+        "lang": "es",
+        "api_language": "es",
+        "omnilingual_language": "spa_Latn",
+        "file": "es-aoede.wav",
+        "path": "es-aoede.wav",
+        "text": "Espero que hoy sea un día muy tranquilo y podamos disfrutar de una buena comida con toda la familia en el jardín de casa mientras compartimos historias divertidas bajo la sombra.",
+        "expected": "Espero que hoy sea un día muy tranquilo y podamos disfrutar de una buena comida con toda la familia en el jardín de casa mientras compartimos historias divertidas bajo la sombra.",
+        "sha256": "4206e6da660b66548d8a185ca36f86f58830edf2e1e143f0b718180b68d0ce36",
+        "duration_s": 12.290958333333334,
+        "sample_rate": 24000,
+        "channels": 1,
+        "voice": "Aoede",
+        "source": "backend/tmp/gemini_tts_clone_samples/es/es_spanish_aoede.wav",
+        "source_model": "gemini-2.5-pro-preview-tts",
+        "source_generated_at": "2026-03-30T20:49:55.150855+00:00",
+        "transcript_status": "existing product seed transcript; needs ASR control/native review",
+        "reference_type": "previously synthesized Gemini reference; no new API call",
+        "quality_note": "Reference is longer than normal 3-10 second guidance"
+      },
+      "source_generation_hardware": "unverified external Aoede reference; current5090 is ASR hardware only",
+      "path": "audio/4206e6da660b66548d8a185ca36f86f58830edf2e1e143f0b718180b68d0ce36.wav"
+    }
+  },
+  {
+    "id": "reference-fi-aoede",
+    "path": "/workspace/omnivoice-50series-value/quality-input/references/audio/bf34be8df7c7626599ea98086af75b960543d6c2361896aa0ca48acf26dacb6b.wav",
+    "sha256": "bf34be8df7c7626599ea98086af75b960543d6c2361896aa0ca48acf26dacb6b",
+    "text": "Aurinko paistaa kirkkaasti taivaalta ja linnut laulavat kauniisti metsän siimeksessä, kun kävelen rauhassa kotiin päin ja nautin hiljaisuudesta ja puhtaasta luonnosta täysin siemauksin.",
+    "language": "fi",
+    "lang_id": "fin_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-50series-value/quality-results/references/asr-input/000006-000.wav",
+        "start_s": 0.0,
+        "end_s": 14.650958333333334,
+        "sha256": "61120d2657d70f46be588661b3eeebac42907ec6013b1da8c479401d09dedee7"
+      }
+    ],
+    "duration_s": 14.650958333333334,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.802703857421875,
+      "rms": 0.10667646676301956,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-calibration",
+    "phase": null,
+    "source": {
+      "id": "reference-fi-aoede",
+      "sha256": "bf34be8df7c7626599ea98086af75b960543d6c2361896aa0ca48acf26dacb6b",
+      "text": "Aurinko paistaa kirkkaasti taivaalta ja linnut laulavat kauniisti metsän siimeksessä, kun kävelen rauhassa kotiin päin ja nautin hiljaisuudesta ja puhtaasta luonnosta täysin siemauksin.",
+      "language": "fi",
+      "lang_id": "fin_Latn",
+      "run": "reference-calibration",
+      "reference": {
+        "id": "fi-aoede",
+        "reference_id": "fi-aoede",
+        "language": "fi",
+        "lang": "fi",
+        "api_language": "fi",
+        "omnilingual_language": "fin_Latn",
+        "file": "fi-aoede.wav",
+        "path": "fi-aoede.wav",
+        "text": "Aurinko paistaa kirkkaasti taivaalta ja linnut laulavat kauniisti metsän siimeksessä, kun kävelen rauhassa kotiin päin ja nautin hiljaisuudesta ja puhtaasta luonnosta täysin siemauksin.",
+        "expected": "Aurinko paistaa kirkkaasti taivaalta ja linnut laulavat kauniisti metsän siimeksessä, kun kävelen rauhassa kotiin päin ja nautin hiljaisuudesta ja puhtaasta luonnosta täysin siemauksin.",
+        "sha256": "bf34be8df7c7626599ea98086af75b960543d6c2361896aa0ca48acf26dacb6b",
+        "duration_s": 14.650958333333334,
+        "sample_rate": 24000,
+        "channels": 1,
+        "voice": "Aoede",
+        "source": "backend/tmp/gemini_tts_clone_samples/fi/fi_finnish_aoede.wav",
+        "source_model": "gemini-2.5-pro-preview-tts",
+        "source_generated_at": "2026-03-30T20:53:20.539163+00:00",
+        "transcript_status": "existing product seed transcript; needs ASR control/native review",
+        "reference_type": "previously synthesized Gemini reference; no new API call",
+        "quality_note": "Reference is longer than normal 3-10 second guidance"
+      },
+      "source_generation_hardware": "unverified external Aoede reference; current5090 is ASR hardware only",
+      "path": "audio/bf34be8df7c7626599ea98086af75b960543d6c2361896aa0ca48acf26dacb6b.wav"
+    }
+  },
+  {
+    "id": "reference-fr-aoede",
+    "path": "/workspace/omnivoice-50series-value/quality-input/references/audio/b8810d1e5a27a325308e1b35a986d89a6db5608d1a47bc12dc5d89321a8d76c1.wav",
+    "sha256": "b8810d1e5a27a325308e1b35a986d89a6db5608d1a47bc12dc5d89321a8d76c1",
+    "text": "Le vent souffle doucement à travers les feuilles des arbres pendant que nous marchons tranquillement le long de la rivière étincelante sous un ciel d'azur absolument magnifique.",
+    "language": "fr",
+    "lang_id": "fra_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-50series-value/quality-results/references/asr-input/000007-000.wav",
+        "start_s": 0.0,
+        "end_s": 10.970958333333334,
+        "sha256": "463368087bafbfd4e1d404f899251e1c74607b5f93985de47e64d7a5b877fc06"
+      }
+    ],
+    "duration_s": 10.970958333333334,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.616180419921875,
+      "rms": 0.08861590176820755,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-calibration",
+    "phase": null,
+    "source": {
+      "id": "reference-fr-aoede",
+      "sha256": "b8810d1e5a27a325308e1b35a986d89a6db5608d1a47bc12dc5d89321a8d76c1",
+      "text": "Le vent souffle doucement à travers les feuilles des arbres pendant que nous marchons tranquillement le long de la rivière étincelante sous un ciel d'azur absolument magnifique.",
+      "language": "fr",
+      "lang_id": "fra_Latn",
+      "run": "reference-calibration",
+      "reference": {
+        "id": "fr-aoede",
+        "reference_id": "fr-aoede",
+        "language": "fr",
+        "lang": "fr",
+        "api_language": "fr",
+        "omnilingual_language": "fra_Latn",
+        "file": "fr-aoede.wav",
+        "path": "fr-aoede.wav",
+        "text": "Le vent souffle doucement à travers les feuilles des arbres pendant que nous marchons tranquillement le long de la rivière étincelante sous un ciel d'azur absolument magnifique.",
+        "expected": "Le vent souffle doucement à travers les feuilles des arbres pendant que nous marchons tranquillement le long de la rivière étincelante sous un ciel d'azur absolument magnifique.",
+        "sha256": "b8810d1e5a27a325308e1b35a986d89a6db5608d1a47bc12dc5d89321a8d76c1",
+        "duration_s": 10.970958333333334,
+        "sample_rate": 24000,
+        "channels": 1,
+        "voice": "Aoede",
+        "source": "backend/tmp/gemini_tts_clone_samples/fr/fr_french_aoede.wav",
+        "source_model": "gemini-2.5-pro-preview-tts",
+        "source_generated_at": "2026-03-30T20:57:18.687874+00:00",
+        "transcript_status": "existing product seed transcript; needs ASR control/native review",
+        "reference_type": "previously synthesized Gemini reference; no new API call",
+        "quality_note": "Reference is longer than normal 3-10 second guidance"
+      },
+      "source_generation_hardware": "unverified external Aoede reference; current5090 is ASR hardware only",
+      "path": "audio/b8810d1e5a27a325308e1b35a986d89a6db5608d1a47bc12dc5d89321a8d76c1.wav"
+    }
+  },
+  {
+    "id": "reference-ur-aoede",
+    "path": "/workspace/omnivoice-50series-value/quality-input/references/audio/98ad50f96dff772683449bb6a5028b612696146e247924c1a4dbb0a1b4d9005a.wav",
+    "sha256": "98ad50f96dff772683449bb6a5028b612696146e247924c1a4dbb0a1b4d9005a",
+    "text": "صبح سویرے ٹھنڈی ہوا میں باغ کی سیر کرنا بہت اچھا لگتا ہے، کیونکہ وہاں پرندوں کے چہچہانے کی آوازیں دل کو سکون اور خوشی دیتی ہیں۔",
+    "language": "ur",
+    "lang_id": "urd_Arab",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-50series-value/quality-results/references/asr-input/000008-000.wav",
+        "start_s": 0.0,
+        "end_s": 9.370958333333334,
+        "sha256": "bdc5486363186d066da65326ab575e2ff9c63f884a1cb7b88555464ce284c93c"
+      }
+    ],
+    "duration_s": 9.370958333333334,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.648406982421875,
+      "rms": 0.10008708387613297,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-calibration",
+    "phase": null,
+    "source": {
+      "id": "reference-ur-aoede",
+      "sha256": "98ad50f96dff772683449bb6a5028b612696146e247924c1a4dbb0a1b4d9005a",
+      "text": "صبح سویرے ٹھنڈی ہوا میں باغ کی سیر کرنا بہت اچھا لگتا ہے، کیونکہ وہاں پرندوں کے چہچہانے کی آوازیں دل کو سکون اور خوشی دیتی ہیں۔",
+      "language": "ur",
+      "lang_id": "urd_Arab",
+      "run": "reference-calibration",
+      "reference": {
+        "id": "ur-aoede",
+        "reference_id": "ur-aoede",
+        "language": "ur",
+        "lang": "ur",
+        "api_language": "ur",
+        "omnilingual_language": "urd_Arab",
+        "file": "ur-aoede.wav",
+        "path": "ur-aoede.wav",
+        "text": "صبح سویرے ٹھنڈی ہوا میں باغ کی سیر کرنا بہت اچھا لگتا ہے، کیونکہ وہاں پرندوں کے چہچہانے کی آوازیں دل کو سکون اور خوشی دیتی ہیں۔",
+        "expected": "صبح سویرے ٹھنڈی ہوا میں باغ کی سیر کرنا بہت اچھا لگتا ہے، کیونکہ وہاں پرندوں کے چہچہانے کی آوازیں دل کو سکون اور خوشی دیتی ہیں۔",
+        "sha256": "98ad50f96dff772683449bb6a5028b612696146e247924c1a4dbb0a1b4d9005a",
+        "duration_s": 9.370958333333334,
+        "sample_rate": 24000,
+        "channels": 1,
+        "voice": "Aoede",
+        "source": "backend/tmp/gemini_tts_clone_samples/ur/ur_urdu_aoede.wav",
+        "source_model": "gemini-2.5-pro-preview-tts",
+        "source_generated_at": "2026-03-30T02:14:59.036452+00:00",
+        "transcript_status": "existing product seed transcript; needs ASR control/native review",
+        "reference_type": "previously synthesized Gemini reference; no new API call",
+        "quality_note": null
+      },
+      "source_generation_hardware": "unverified external Aoede reference; current5090 is ASR hardware only",
+      "path": "audio/98ad50f96dff772683449bb6a5028b612696146e247924c1a4dbb0a1b4d9005a.wav"
+    }
+  }
+]

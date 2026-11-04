@@ -1,0 +1,23 @@
+{
+  "batch": 1,
+  "profiled_full_ms": 1010.2841329644434,
+  "profiled_host_stage_ms": {
+    "prepare_inference_inputs_ms": 2.00800399761647,
+    "iterative_generate_ms": 990.3621369739994,
+    "audio_decode_ms": 14.302215015050024,
+    "post_process_audio_ms": 0.9050510125234723,
+    "decode_postprocess_ms": 15.207266027573496,
+    "generate_total_ms": 1010.1667279959656
+  },
+  "profiling_preserved_float_audio_exactly": true,
+  "CUDA_kernel_trace_available": false,
+  "kernels": 0,
+  "kernel_sum_ms": 0.0,
+  "kernel_interval_union_ms": 0.0,
+  "kernel_span_ms": null,
+  "kernel_categories": {},
+  "linear_FLOPs_observed_per_generate": 13126560907264,
+  "linears_count": 3161,
+  "peak_allocated_bytes": 2550179328,
+  "note": "Kernel active intervals do not prove SM/Tensor Core saturation. Sum may overlap. Host metrics are not separately synchronized GPU stage times."
+}

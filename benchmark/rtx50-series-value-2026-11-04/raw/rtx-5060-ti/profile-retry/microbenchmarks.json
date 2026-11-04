@@ -1,0 +1,139 @@
+[
+  {
+    "kind": "device_copy",
+    "bytes_read_plus_write": 268435456,
+    "ms": 0.6942809295654296,
+    "effective_GB_per_s": 386.6380949971094,
+    "note": "Synthetic read+write bandwidth, not model DRAM-counter measurement"
+  },
+  {
+    "kind": "FP16_GEMM",
+    "M": 914,
+    "N": 1024,
+    "K": 1024,
+    "ms": 0.04832640091578166,
+    "TFLOPs_per_s": 39.663556393127614,
+    "minimum_tensor_arithmetic_intensity_FLOPs_per_byte": 328.16830294530155,
+    "note": "Synthetic contiguous matrices at observed dimensions, not measured model GEMM traffic/kernel attribution"
+  },
+  {
+    "kind": "FP16_GEMM",
+    "M": 914,
+    "N": 1024,
+    "K": 2048,
+    "ms": 0.08836692969004313,
+    "TFLOPs_per_s": 43.382675730013005,
+    "minimum_tensor_arithmetic_intensity_FLOPs_per_byte": 390.7874739039666,
+    "note": "Synthetic contiguous matrices at observed dimensions, not measured model GEMM traffic/kernel attribution"
+  },
+  {
+    "kind": "FP16_GEMM",
+    "M": 914,
+    "N": 1024,
+    "K": 3072,
+    "ms": 0.12932906945546468,
+    "TFLOPs_per_s": 44.46325028249109,
+    "minimum_tensor_arithmetic_intensity_FLOPs_per_byte": 417.3317479191439,
+    "note": "Synthetic contiguous matrices at observed dimensions, not measured model GEMM traffic/kernel attribution"
+  },
+  {
+    "kind": "FP16_GEMM",
+    "M": 914,
+    "N": 2048,
+    "K": 1024,
+    "ms": 0.08836266994476319,
+    "TFLOPs_per_s": 43.38476710127066,
+    "minimum_tensor_arithmetic_intensity_FLOPs_per_byte": 390.7874739039666,
+    "note": "Synthetic contiguous matrices at observed dimensions, not measured model GEMM traffic/kernel attribution"
+  },
+  {
+    "kind": "FP16_GEMM",
+    "M": 914,
+    "N": 3072,
+    "K": 1024,
+    "ms": 0.1253930648167928,
+    "TFLOPs_per_s": 45.85892204167499,
+    "minimum_tensor_arithmetic_intensity_FLOPs_per_byte": 417.3317479191439,
+    "note": "Synthetic contiguous matrices at observed dimensions, not measured model GEMM traffic/kernel attribution"
+  },
+  {
+    "kind": "FP16_GEMM",
+    "M": 914,
+    "N": 8200,
+    "K": 1024,
+    "ms": 0.34002345403035483,
+    "TFLOPs_per_s": 45.142034227526324,
+    "minimum_tensor_arithmetic_intensity_FLOPs_per_byte": 456.07837059448275,
+    "note": "Synthetic contiguous matrices at observed dimensions, not measured model GEMM traffic/kernel attribution"
+  },
+  {
+    "kind": "FP16_GEMM",
+    "M": 4096,
+    "N": 4096,
+    "K": 4096,
+    "ms": 2.678491719563802,
+    "TFLOPs_per_s": 51.31206957562752,
+    "minimum_tensor_arithmetic_intensity_FLOPs_per_byte": 1365.3333333333333,
+    "note": "Synthetic contiguous matrices at observed dimensions, not measured model GEMM traffic/kernel attribution"
+  },
+  {
+    "kind": "FP16_GEMM",
+    "M": 7312,
+    "N": 1024,
+    "K": 1024,
+    "ms": 0.3145621299743652,
+    "TFLOPs_per_s": 48.74832016571624,
+    "minimum_tensor_arithmetic_intensity_FLOPs_per_byte": 478.4948875255624,
+    "note": "Synthetic contiguous matrices at observed dimensions, not measured model GEMM traffic/kernel attribution"
+  },
+  {
+    "kind": "FP16_GEMM",
+    "M": 7312,
+    "N": 1024,
+    "K": 2048,
+    "ms": 0.6175701141357421,
+    "TFLOPs_per_s": 49.66035458325141,
+    "minimum_tensor_arithmetic_intensity_FLOPs_per_byte": 624.3735823882588,
+    "note": "Synthetic contiguous matrices at observed dimensions, not measured model GEMM traffic/kernel attribution"
+  },
+  {
+    "kind": "FP16_GEMM",
+    "M": 7312,
+    "N": 1024,
+    "K": 3072,
+    "ms": 0.9223978678385417,
+    "TFLOPs_per_s": 49.87340916105898,
+    "minimum_tensor_arithmetic_intensity_FLOPs_per_byte": 695.0019801980199,
+    "note": "Synthetic contiguous matrices at observed dimensions, not measured model GEMM traffic/kernel attribution"
+  },
+  {
+    "kind": "FP16_GEMM",
+    "M": 7312,
+    "N": 2048,
+    "K": 1024,
+    "ms": 0.6190058390299479,
+    "TFLOPs_per_s": 49.54517213611651,
+    "minimum_tensor_arithmetic_intensity_FLOPs_per_byte": 624.3735823882588,
+    "note": "Synthetic contiguous matrices at observed dimensions, not measured model GEMM traffic/kernel attribution"
+  },
+  {
+    "kind": "FP16_GEMM",
+    "M": 7312,
+    "N": 3072,
+    "K": 1024,
+    "ms": 0.9242730458577474,
+    "TFLOPs_per_s": 49.7722252944291,
+    "minimum_tensor_arithmetic_intensity_FLOPs_per_byte": 695.0019801980199,
+    "note": "Synthetic contiguous matrices at observed dimensions, not measured model GEMM traffic/kernel attribution"
+  },
+  {
+    "kind": "FP16_GEMM",
+    "M": 7312,
+    "N": 8200,
+    "K": 1024,
+    "ms": 2.5637908935546876,
+    "TFLOPs_per_s": 47.89579505438738,
+    "minimum_tensor_arithmetic_intensity_FLOPs_per_byte": 809.5362020924152,
+    "note": "Synthetic contiguous matrices at observed dimensions, not measured model GEMM traffic/kernel attribution"
+  }
+]

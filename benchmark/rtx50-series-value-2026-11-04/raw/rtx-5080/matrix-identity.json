@@ -1,0 +1,43 @@
+{
+  "utc": "2026-11-04T22:13:17.229965+00:00",
+  "actual_GPU": "NVIDIA GeForce RTX 5080, GPU-0cbb3f87-be36-5809-9e8e-a23fed32eeeb, 16303 MiB, 580.159.03, 360.00 W",
+  "ticket": {
+    "id": 59168148,
+    "gpu": "RTX 5080",
+    "label": "omnivoice-50series-value-20261104-rtx-5080",
+    "hourly": 0.3211111111111111
+  },
+  "environment": {
+    "OMP_NUM_THREADS": "8",
+    "MKL_NUM_THREADS": "8",
+    "OPENBLAS_NUM_THREADS": "8",
+    "TASK_GPU_UUID": "GPU-0cbb3f87-be36-5809-9e8e-a23fed32eeeb"
+  },
+  "stages": [
+    [
+      "single",
+      "run_capacity.py",
+      1900
+    ],
+    [
+      "profile",
+      "profile_pipeline.py",
+      600
+    ],
+    [
+      "ordinary-dual",
+      "run_dual.py",
+      1900
+    ],
+    [
+      "MPS",
+      "run_mps.py",
+      2100
+    ],
+    [
+      "staggered",
+      "run_staggered.py",
+      900
+    ]
+  ]
+}

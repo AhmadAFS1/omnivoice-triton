@@ -1,0 +1,13 @@
+{
+  "timeout_keep_alive": 600,
+  "product_default_changed": false,
+  "seed_applied_before_API_import": true,
+  "counters": "CPU-only observer around pinned _execute_batch/future completion and queue_snapshot; no model/queue/output changes",
+  "scope": "This benchmark process only",
+  "uvicorn_kwargs": {
+    "host": "127.0.0.1",
+    "port": 8003,
+    "root_path": "",
+    "timeout_keep_alive": 600
+  }
+}
