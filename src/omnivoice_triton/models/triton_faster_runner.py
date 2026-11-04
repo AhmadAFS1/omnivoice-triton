@@ -46,6 +46,7 @@ class TritonFasterRunner(FasterRunner):
         disable_unused_kv_cache: bool = False,
         split_cfg: bool = False,
         max_cuda_graph_row_tokens: int = 0,
+        cuda_graph_capture_after_calls: int = 0,
     ) -> None:
         super().__init__(
             device=device,
@@ -57,6 +58,7 @@ class TritonFasterRunner(FasterRunner):
             disable_unused_kv_cache=disable_unused_kv_cache,
             split_cfg=split_cfg,
             max_cuda_graph_row_tokens=max_cuda_graph_row_tokens,
+            cuda_graph_capture_after_calls=cuda_graph_capture_after_calls,
         )
         self.patch_range = patch_range
         self.enable_sage_attention = enable_sage_attention

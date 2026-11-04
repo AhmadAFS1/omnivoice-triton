@@ -22,6 +22,15 @@ from omnivoice_triton.models.graph_memory import GraphMemoryAdmissionError
 from omnivoice_triton.serving import QueueFullError, WorkerLifecycleReporter
 
 
+@pytest.fixture(autouse=True)
+def _fake_cuda_preflight_for_fake_runners(monkeypatch):
+    # This module exercises CPU fake models behind a CUDA-named API runner.
+    # Keep it independent of hardware discovery without changing product code.
+    monkeypatch.setattr(
+        "omnivoice_triton.cli.api_server.require_cuda_available", lambda: None
+    )
+
+
 class _FakeTokenizer:
     def __init__(self) -> None:
         self.calls: list[tuple[str, bool]] = []
@@ -331,6 +340,38 @@ def test_graph_memory_budget_is_opt_in_and_forwarded(tmp_path: Path) -> None:
     with TestClient(app) as client:
         assert client.get("/health").json()["max_cuda_graph_row_tokens"] == 16384
     assert created[0].kwargs["max_cuda_graph_row_tokens"] == 16384
+
+
+def test_deferred_graph_capture_is_opt_in_and_forwarded(tmp_path: Path) -> None:
+    parser = build_parser()
+    assert parser.parse_args([]).cuda_graph_capture_after_calls == 0
+    assert (
+        parser.parse_args(
+            ["--cuda-graph-capture-after-calls", "16"]
+        ).cuda_graph_capture_after_calls
+        == 16
+    )
+    created: list[_FakeRunner] = []
+    app = _make_app(
+        tmp_path,
+        created,
+        max_cuda_graph_row_tokens=16384,
+        cuda_graph_capture_after_calls=16,
+    )
+    with TestClient(app) as client:
+        assert client.get("/health").json()["cuda_graph_capture_after_calls"] == 16
+    assert created[0].kwargs["cuda_graph_capture_after_calls"] == 16
+
+
+@pytest.mark.parametrize("value", [-1, 1.5, True, "16"])
+def test_deferred_graph_capture_rejects_invalid_values(value: Any) -> None:
+    with pytest.raises(ValueError, match="cuda_graph_capture_after_calls"):
+        create_app(cuda_graph_capture_after_calls=value)
+
+
+def test_deferred_graph_capture_requires_memory_policy() -> None:
+    with pytest.raises(ValueError, match="requires faster/hybrid"):
+        create_app(cuda_graph_capture_after_calls=16)
 
 
 @pytest.mark.parametrize("value", [-1, 1.5, True, "16384"])

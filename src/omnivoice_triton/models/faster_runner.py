@@ -280,7 +280,16 @@ class FasterRunner(BaseRunner):
         disable_unused_kv_cache: bool = False,
         split_cfg: bool = False,
         max_cuda_graph_row_tokens: int = 0,
+        cuda_graph_capture_after_calls: int = 0,
     ) -> None:
+        if (
+            not isinstance(cuda_graph_capture_after_calls, int)
+            or isinstance(cuda_graph_capture_after_calls, bool)
+            or cuda_graph_capture_after_calls < 0
+        ):
+            raise ValueError("cuda_graph_capture_after_calls must be an integer >= 0")
+        if cuda_graph_capture_after_calls and not max_cuda_graph_row_tokens:
+            raise ValueError("Deferred capture requires --max-cuda-graph-row-tokens")
         super().__init__(
             device=device,
             model_id=model_id,
@@ -294,6 +303,7 @@ class FasterRunner(BaseRunner):
         self._graph_forward: _CUDAGraphForward | None = None
         self._graph_memory: Any | None = None
         self.max_cuda_graphs = max(0, int(max_cuda_graphs))
+        self.cuda_graph_capture_after_calls = cuda_graph_capture_after_calls
 
     def load_model(self) -> None:
         """Load model and install CUDA Graph forward wrapper."""
@@ -321,6 +331,7 @@ class FasterRunner(BaseRunner):
         self._graph_memory = MemoryBoundGraphForward(
             self._graph_forward,
             max_row_tokens=self.max_cuda_graph_row_tokens,
+            capture_after_calls=self.cuda_graph_capture_after_calls,
         )
         self._model.forward = self._graph_memory
         if not self._graph_memory.profile.qualified:
@@ -332,6 +343,7 @@ class FasterRunner(BaseRunner):
     def get_inference_optimization_metrics(self) -> dict[str, Any]:
         metrics = super().get_inference_optimization_metrics()
         metrics["max_cuda_graph_row_tokens"] = self.max_cuda_graph_row_tokens
+        metrics["cuda_graph_capture_after_calls"] = self.cuda_graph_capture_after_calls
         metrics["cuda_graph_memory"] = (
             self._graph_memory.metrics() if self._graph_memory is not None else None
         )

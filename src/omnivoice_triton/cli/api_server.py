@@ -467,6 +467,17 @@ def build_parser() -> argparse.ArgumentParser:
         ),
     )
     parser.add_argument(
+        "--cuda-graph-capture-after-calls",
+        type=int,
+        default=0,
+        help=(
+            "Opt-in eager model forwards per new shape before graph capture "
+            "(faster/hybrid; requires --max-cuda-graph-row-tokens). "
+            "Counts denoising steps, not HTTP requests. 0 preserves capture on "
+            "first use; 16 defers the first sixteen forwards."
+        ),
+    )
+    parser.add_argument(
         "--batch-bucket-sizes",
         default="1,2,4,8,16,32",
         help="Preferred merged request-count buckets, comma-separated.",
@@ -1021,6 +1032,7 @@ def _build_runner(
     disable_unused_kv_cache: bool = False,
     split_cfg: bool = False,
     max_cuda_graph_row_tokens: int = 0,
+    cuda_graph_capture_after_calls: int = 0,
 ) -> Any:
     kwargs: dict[str, Any] = {
         "device": device,
@@ -1038,6 +1050,13 @@ def _build_runner(
                 "faster/hybrid runners."
             )
         kwargs["max_cuda_graph_row_tokens"] = max_cuda_graph_row_tokens
+    if cuda_graph_capture_after_calls:
+        if runner_name not in {"faster", "hybrid"} or not max_cuda_graph_row_tokens:
+            raise ValueError(
+                "Deferred capture requires faster/hybrid and "
+                "--max-cuda-graph-row-tokens."
+            )
+        kwargs["cuda_graph_capture_after_calls"] = cuda_graph_capture_after_calls
     if disable_unused_kv_cache:
         kwargs["disable_unused_kv_cache"] = True
     if split_cfg:
@@ -1100,6 +1119,7 @@ def create_app(
     response_cache_max_waiters: int = 4096,
     max_cuda_graphs: int = DEFAULT_MAX_CUDA_GRAPHS,
     max_cuda_graph_row_tokens: int = 0,
+    cuda_graph_capture_after_calls: int = 0,
     save_dir: str | None = None,
     batch_collect_ms: float = DEFAULT_BATCH_COLLECT_MS,
     max_batch_requests: int = DEFAULT_MAX_BATCH_REQUESTS,
@@ -1134,6 +1154,18 @@ def create_app(
     if max_cuda_graph_row_tokens and runner_name not in {"faster", "hybrid"}:
         raise ValueError(
             "--max-cuda-graph-row-tokens is only supported for faster/hybrid runners."
+        )
+    if (
+        not isinstance(cuda_graph_capture_after_calls, int)
+        or isinstance(cuda_graph_capture_after_calls, bool)
+        or cuda_graph_capture_after_calls < 0
+    ):
+        raise ValueError("cuda_graph_capture_after_calls must be an integer >= 0.")
+    if cuda_graph_capture_after_calls and (
+        runner_name not in {"faster", "hybrid"} or not max_cuda_graph_row_tokens
+    ):
+        raise ValueError(
+            "Deferred capture requires faster/hybrid and --max-cuda-graph-row-tokens."
         )
     if response_cache_max_bytes < 0 or response_cache_ttl < 0:
         raise ValueError("Complete-response cache limits must be nonnegative.")
@@ -1184,6 +1216,7 @@ def create_app(
             audio_decode_batch_size=audio_decode_batch_size,
             max_cuda_graphs=max_cuda_graphs,
             max_cuda_graph_row_tokens=max_cuda_graph_row_tokens,
+            cuda_graph_capture_after_calls=cuda_graph_capture_after_calls,
             runner_factory=factory,
         )
         runner.load_model()
@@ -1346,6 +1379,7 @@ def create_app(
     app.state.response_cache = None
     app.state.max_cuda_graphs = max(0, int(max_cuda_graphs))
     app.state.max_cuda_graph_row_tokens = max_cuda_graph_row_tokens
+    app.state.cuda_graph_capture_after_calls = cuda_graph_capture_after_calls
     app.state.save_dir = Path(save_dir) if save_dir else None
     app.state.runner = None
     app.state.sample_rate = DEFAULT_SAMPLE_RATE
@@ -1437,6 +1471,7 @@ def create_app(
             "response_cache": app.state.response_cache.snapshot(),
             "max_cuda_graphs": int(app.state.max_cuda_graphs),
             "max_cuda_graph_row_tokens": app.state.max_cuda_graph_row_tokens,
+            "cuda_graph_capture_after_calls": app.state.cuda_graph_capture_after_calls,
             "batch_collect_ms": app.state.batch_collect_ms,
             "max_batch_requests": app.state.max_batch_requests,
             "batcher_queue": app.state.batcher.queue_snapshot(),
@@ -2669,6 +2704,7 @@ def main(argv: list[str] | None = None) -> None:
         response_cache_max_waiters=args.response_cache_max_waiters,
         max_cuda_graphs=args.max_cuda_graphs,
         max_cuda_graph_row_tokens=args.max_cuda_graph_row_tokens,
+        cuda_graph_capture_after_calls=args.cuda_graph_capture_after_calls,
         save_dir=args.save_dir,
         batch_collect_ms=args.batch_collect_ms,
         max_batch_requests=args.max_batch_requests,

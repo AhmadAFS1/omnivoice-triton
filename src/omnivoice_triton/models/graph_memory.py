@@ -10,7 +10,7 @@ from __future__ import annotations
 
 import math
 import threading
-from collections import Counter
+from collections import Counter, OrderedDict
 from dataclasses import asdict, dataclass
 
 import torch
@@ -137,11 +137,14 @@ class GraphMemoryProfile:
 
 
 class MemoryBoundGraphForward:
+    MAX_SHAPE_OBSERVATIONS = 4096
+
     def __init__(
         self,
         graph_forward,
         *,
         max_row_tokens=0,
+        capture_after_calls=0,
         profile=None,
         revision=None,
         memory_info=None,
@@ -155,8 +158,19 @@ class MemoryBoundGraphForward:
             raise ValueError(
                 "max_row_tokens must be an integer>=0;0 preserves legacy behavior"
             )
+        if (
+            not isinstance(capture_after_calls, int)
+            or isinstance(capture_after_calls, bool)
+            or capture_after_calls < 0
+        ):
+            raise ValueError("capture_after_calls must be an integer >= 0")
+        if capture_after_calls and not max_row_tokens:
+            raise ValueError("Deferred capture requires a positive max_row_tokens")
         self.graph = graph_forward
         self.max_row_tokens = max_row_tokens
+        self.capture_after_calls = capture_after_calls
+        self._shape_calls = OrderedDict()
+        self.deferred_calls = 0
         self.profile = (
             profile
             if profile is not None
@@ -219,6 +233,7 @@ class MemoryBoundGraphForward:
             return False
         weight = self._weight(key)
         entry = self._graphs.pop(key)
+        self._shape_calls.pop(key, None)
         del entry  # Drop every local graph/buffer reference before querying/freeing.
         self.evictions += 1
         self.evicted_weight += weight
@@ -360,6 +375,20 @@ class MemoryBoundGraphForward:
             self.hits += 1
             self.last_decision = "replay"
             return self.graph(input_ids, audio_mask, attention_mask=attention_mask)
+        if self.capture_after_calls:
+            seen = self._shape_calls.get(key, 0)
+            if seen < self.capture_after_calls:
+                # A forward call is one denoising step, not one HTTP request.
+                # Keep all eager workspace/owner guards while avoiding the
+                # first capture's extra warmup and graph-recording forwards.
+                result = raw("shape_not_hot", guard=True)
+                self.deferred_calls += 1
+                self._shape_calls[key] = seen + 1
+                self._shape_calls.move_to_end(key)
+                while len(self._shape_calls) > self.MAX_SHAPE_OBSERVATIONS:
+                    self._shape_calls.popitem(last=False)
+                return result
+            self._shape_calls.move_to_end(key)
         while self._graphs and (
             len(self._graphs) + 1 > self.max_graphs
             or self.retained_weight() + weight > self.max_row_tokens
@@ -387,6 +416,7 @@ class MemoryBoundGraphForward:
         ):
             raise RuntimeError("Graph memory policy clear requires GPU owner thread")
         self.graph.clear()
+        self._shape_calls.clear()
         self.clears += 1
         self.last_decision = "clear"
 
@@ -413,6 +443,10 @@ class MemoryBoundGraphForward:
         return {
             "enabled": bool(self.max_row_tokens),
             "max_cuda_graph_row_tokens": self.max_row_tokens,
+            "capture_after_calls": self.capture_after_calls,
+            "deferred_calls": self.deferred_calls,
+            "observed_shape_keys": len(self._shape_calls),
+            "max_shape_observations": self.MAX_SHAPE_OBSERVATIONS,
             "estimate_kind": (
                 "Heuristic architecture/dtype row tokens and headroom; "
                 "NOT a rigorous total VRAM bound"

@@ -67,13 +67,149 @@ def data(s, b=1):
     )
 
 
-def wrapper(g, cap, *, free=16 * GiB, profile=None, cleanup=None):
+def wrapper(
+    g, cap, *, free=16 * GiB, profile=None, cleanup=None, capture_after_calls=0
+):
     return MemoryBoundGraphForward(
         g,
         max_row_tokens=cap,
+        capture_after_calls=capture_after_calls,
         profile=profile or GraphMemoryProfile(True),
         memory_info=lambda device: (free, 16 * GiB),
         cleanup=cleanup or (lambda device: None),
+    )
+
+
+@torch.inference_mode()
+def test_deferred_capture_runs_exact_number_of_guarded_eager_forwards():
+    graph = Graph()
+    policy = wrapper(graph, 100, capture_after_calls=2)
+    ids, audio = data(10)
+    for offset in range(4):
+        output = policy(ids + offset, audio)
+        assert torch.equal(output.logits[..., 0], (ids + offset).double())
+        if offset < 2:
+            assert not graph.capture_states and not policy._graphs
+        elif offset == 2:
+            assert len(graph.capture_states) == 1
+    assert policy.deferred_calls == 2
+    assert policy.captures == 1 and policy.hits == 1
+    assert policy.metrics()["observed_shape_keys"] == 1
+
+
+@torch.inference_mode()
+def test_failed_deferred_model_call_does_not_warm_the_shape():
+    graph = Graph()
+    original = graph._original_forward
+    attempts = []
+
+    def failing_once(*args, **kwargs):
+        attempts.append(1)
+        if len(attempts) == 1:
+            raise RuntimeError("injected model failure")
+        return original(*args, **kwargs)
+
+    graph._original_forward = failing_once
+    policy = wrapper(graph, 100, capture_after_calls=1)
+    with pytest.raises(RuntimeError, match="injected model failure"):
+        policy(*data(10))
+    assert policy.deferred_calls == 0 and not policy._shape_calls
+    policy(*data(10))
+    assert policy.deferred_calls == 1 and not graph.capture_states
+    policy(*data(10))
+    assert policy.captures == 1
+
+
+@torch.inference_mode()
+def test_evicted_shape_defers_again_instead_of_recapturing_on_first_return():
+    graph = Graph(1)
+    policy = wrapper(graph, 100, capture_after_calls=1)
+    for sequence in (1, 1, 2, 2):
+        policy(*data(sequence))
+    assert policy.captures == 2 and policy.evictions == 1
+    assert (1, 8, 1) not in policy._shape_calls
+    policy(*data(1))
+    assert policy.deferred_calls == 3 and policy.captures == 2
+    assert list(graph._graphs) == [(1, 8, 2)]
+
+
+@torch.inference_mode()
+def test_deferred_capture_keeps_existing_eager_memory_admission():
+    class TinyProfile(GraphMemoryProfile):
+        def eager_headroom(self, key):
+            return 2
+
+        def capture_headroom(self, key):
+            raise AssertionError("A deferred shape must not attempt capture admission")
+
+    graph = Graph()
+    policy = wrapper(
+        graph, 100, free=1, profile=TinyProfile(True), capture_after_calls=1
+    )
+    with pytest.raises(GraphMemoryAdmissionError, match="eager workspace"):
+        policy(*data(10))
+    assert not graph.capture_states and graph.raw_calls == 0
+    assert policy.deferred_calls == 0 and not policy._shape_calls
+    assert policy.admission_rejections == 1
+
+
+@torch.inference_mode()
+def test_deferred_capture_observations_are_bounded_and_reset_on_clear(monkeypatch):
+    graph = Graph()
+    policy = wrapper(graph, 100, capture_after_calls=1)
+    monkeypatch.setattr(policy, "MAX_SHAPE_OBSERVATIONS", 2)
+    for sequence in (1, 2, 3, 1):
+        policy(*data(sequence))
+    assert policy.deferred_calls == 4
+    assert list(policy._shape_calls) == [(1, 8, 3), (1, 8, 1)]
+    assert not graph.capture_states
+    policy(*data(1))
+    assert policy.captures == 1
+    policy.clear()
+    assert not policy._shape_calls and not policy._graphs
+    policy(*data(1))
+    assert policy.deferred_calls == 5 and policy.captures == 1
+
+
+@torch.inference_mode()
+def test_default_capture_keeps_no_shape_observation_cache():
+    graph = Graph()
+    policy = wrapper(graph, 100)
+    policy(*data(10))
+    assert policy.captures == 1 and policy.deferred_calls == 0
+    assert not policy._shape_calls
+
+
+@pytest.mark.parametrize("invalid", [True, -1, 1.5, None])
+def test_deferred_capture_rejects_invalid_limits(invalid):
+    with pytest.raises(ValueError, match="capture_after_calls"):
+        wrapper(Graph(), 100, capture_after_calls=invalid)
+
+
+def test_deferred_capture_requires_memory_policy():
+    with pytest.raises(ValueError, match="positive max_row_tokens"):
+        MemoryBoundGraphForward(Graph(), capture_after_calls=1)
+
+
+@pytest.mark.parametrize("name", ["faster", "hybrid"])
+def test_runner_deferred_capture_requires_memory_policy_and_valid_limit(name):
+    from omnivoice_triton import create_runner
+
+    for invalid in (-1, True, 1.5):
+        with pytest.raises(ValueError, match="cuda_graph_capture_after_calls"):
+            create_runner(name, device="cpu", cuda_graph_capture_after_calls=invalid)
+    with pytest.raises(ValueError, match="max-cuda-graph-row-tokens"):
+        create_runner(name, device="cpu", cuda_graph_capture_after_calls=16)
+    runner = create_runner(
+        name,
+        device="cpu",
+        max_cuda_graph_row_tokens=16384,
+        cuda_graph_capture_after_calls=16,
+    )
+    assert runner.cuda_graph_capture_after_calls == 16
+    assert (
+        runner.get_inference_optimization_metrics()["cuda_graph_capture_after_calls"]
+        == 16
     )
 
 
