@@ -1,0 +1,8 @@
+{
+  "status": "failed",
+  "at": "2026-11-04T13:37:23.183690+00:00",
+  "pairs_checked": 0,
+  "saved_WAVs": 2,
+  "model_unloaded": true,
+  "GPU_idle_requires_parent_confirmation": true
+}

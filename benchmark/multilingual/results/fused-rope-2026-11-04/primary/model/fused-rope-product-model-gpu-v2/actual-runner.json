@@ -1,0 +1,8 @@
+{
+  "class": "TritonFasterRunner",
+  "mode": "hybrid",
+  "graph_options": {
+    "max_cuda_graphs": 8,
+    "max_cuda_graph_row_tokens": 16384
+  }
+}

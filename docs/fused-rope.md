@@ -71,7 +71,29 @@ partial runs were preserved. Model parity overlapped approved CPU/SSH transfer
 work, so its timings are excluded. The 132-request API run began after explicit
 CPU/I/O release and was independently rehashed and decoded after local retention.
 
-A clean RTX 4070 Ti eager-Triton OFF/ON API comparison is still pending. These
-gates establish exact output preservation for the measured scope; they do not
-establish a speedup, certify every language's pronunciation, or fix existing
-speech errors. Earlier prototype speed measurements are separate evidence.
+The subsequent clean RTX 4070 Ti eager-Triton comparison completed all 264 API
+requests with 132/132 paired WAV bodies byte-identical and zero fallback. It used
+B1, collect 0 ms, graphs off and the same pinned source, checkpoint, seed, order
+and full references. Physical VRAM was 12,282 MiB, Torch-visible VRAM was
+12,481,134,592 bytes, driver 610.57.04 and CUDA 12.8, with a Ryzen 7 5700X host.
+
+| Complete-WAV latency | OFF | ON |
+| --- | ---: | ---: |
+| Median | 328.70 ms | 338.65 ms |
+| Mean | 353.92 ms | 349.04 ms |
+| p95 | 413.80 ms | 390.44 ms |
+
+This is a mixed result: median worsened 3.0%, while mean improved 1.4% and p95
+improved 5.6%. Excluding the first request gives a 0.9% mean reduction. The OFF
+worker ran first, with one run per arm; order, cache state and hardware drift
+limit causal interpretation. The ON startup warmup took 512.44 ms before
+readiness and preserved both RNG states. Keep the option experimental and off
+by default; a general eager speedup is unproven.
+
+All 264 actual WAV hashes, ASR language/script IDs and exact expected texts
+matched the prior 9,532-input canonical set. No new ASR inputs were required;
+the exact bodies inherit existing two-judge evidence. These gates preserve
+existing speech errors and do not certify every language's pronunciation.
+Earlier prototype speed measurements are separate evidence. Inspect the
+[curated proofs and latency](../benchmark/multilingual/results/fused-rope-2026-11-04/README.md)
+and [all 264 paired samples](../benchmark/multilingual/samples/rtx4070ti-fused-rope-2026-11-04/README.md).

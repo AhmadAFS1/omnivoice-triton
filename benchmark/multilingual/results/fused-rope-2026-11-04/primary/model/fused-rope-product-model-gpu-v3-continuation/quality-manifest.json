@@ -1,0 +1,178 @@
+[
+  {
+    "id": "ar-short-B8-reference-parity-r0-000",
+    "path": "ar-short-B8-reference-parity-r0-000.wav",
+    "sha256": "dbf731e47162a291c42a53764a42f4e4bdc2d66ff29af8cb7ed0064ada5fecf1",
+    "language": "ar",
+    "omnilingual_language": "arb_Arab",
+    "expected": "لم يتواجد أحد داخل الشقة.",
+    "reference_id": "ar-aoede",
+    "arm": "reference",
+    "phase": "parity"
+  },
+  {
+    "id": "ar-short-B8-reference-parity-r0-001",
+    "path": "ar-short-B8-reference-parity-r0-001.wav",
+    "sha256": "3b3023c0fb1c7d371f857b2deb01279480cd8c1a67f0849719b7c0487b874f29",
+    "language": "ar",
+    "omnilingual_language": "arb_Arab",
+    "expected": "لم يتواجد أحد داخل الشقة.",
+    "reference_id": "ar-aoede",
+    "arm": "reference",
+    "phase": "parity"
+  },
+  {
+    "id": "ar-short-B8-reference-parity-r0-002",
+    "path": "ar-short-B8-reference-parity-r0-002.wav",
+    "sha256": "e4675c467527c60403b8146dd99f6d27d5f8a6eb699f20f4e59570a9270bd4e6",
+    "language": "ar",
+    "omnilingual_language": "arb_Arab",
+    "expected": "لم يتواجد أحد داخل الشقة.",
+    "reference_id": "ar-aoede",
+    "arm": "reference",
+    "phase": "parity"
+  },
+  {
+    "id": "ar-short-B8-reference-parity-r0-003",
+    "path": "ar-short-B8-reference-parity-r0-003.wav",
+    "sha256": "c58b544bfd6f0c402053ca370edd9f67d614551d1bbb2dd1dbeac989f078b794",
+    "language": "ar",
+    "omnilingual_language": "arb_Arab",
+    "expected": "لم يتواجد أحد داخل الشقة.",
+    "reference_id": "ar-aoede",
+    "arm": "reference",
+    "phase": "parity"
+  },
+  {
+    "id": "ar-short-B8-reference-parity-r0-004",
+    "path": "ar-short-B8-reference-parity-r0-004.wav",
+    "sha256": "a79ec92afdf1bfaa7320695c1f351287f37eccc1a350c3a7e7437ca9ad9ea3ec",
+    "language": "ar",
+    "omnilingual_language": "arb_Arab",
+    "expected": "لم يتواجد أحد داخل الشقة.",
+    "reference_id": "ar-aoede",
+    "arm": "reference",
+    "phase": "parity"
+  },
+  {
+    "id": "ar-short-B8-reference-parity-r0-005",
+    "path": "ar-short-B8-reference-parity-r0-005.wav",
+    "sha256": "65b1051e7aa9d860aa87d9a8e27b3f82a1eec59be0ae3e168d6ea0c3d54da0bb",
+    "language": "ar",
+    "omnilingual_language": "arb_Arab",
+    "expected": "لم يتواجد أحد داخل الشقة.",
+    "reference_id": "ar-aoede",
+    "arm": "reference",
+    "phase": "parity"
+  },
+  {
+    "id": "ar-short-B8-reference-parity-r0-006",
+    "path": "ar-short-B8-reference-parity-r0-006.wav",
+    "sha256": "d40074d39d0252f260fe278d9aab3bbf7af4eab4ee99b864c12d88782803c84e",
+    "language": "ar",
+    "omnilingual_language": "arb_Arab",
+    "expected": "لم يتواجد أحد داخل الشقة.",
+    "reference_id": "ar-aoede",
+    "arm": "reference",
+    "phase": "parity"
+  },
+  {
+    "id": "ar-short-B8-reference-parity-r0-007",
+    "path": "ar-short-B8-reference-parity-r0-007.wav",
+    "sha256": "4a59b05ac63d6c0194013635fcbf87ab3d51c476a89513a246c431bc6d9bcb23",
+    "language": "ar",
+    "omnilingual_language": "arb_Arab",
+    "expected": "لم يتواجد أحد داخل الشقة.",
+    "reference_id": "ar-aoede",
+    "arm": "reference",
+    "phase": "parity"
+  },
+  {
+    "id": "ar-short-B8-fused-rope-first24-parity-r0-000",
+    "path": "ar-short-B8-fused-rope-first24-parity-r0-000.wav",
+    "sha256": "dbf731e47162a291c42a53764a42f4e4bdc2d66ff29af8cb7ed0064ada5fecf1",
+    "language": "ar",
+    "omnilingual_language": "arb_Arab",
+    "expected": "لم يتواجد أحد داخل الشقة.",
+    "reference_id": "ar-aoede",
+    "arm": "fused-rope-first24",
+    "phase": "parity"
+  },
+  {
+    "id": "ar-short-B8-fused-rope-first24-parity-r0-001",
+    "path": "ar-short-B8-fused-rope-first24-parity-r0-001.wav",
+    "sha256": "3b3023c0fb1c7d371f857b2deb01279480cd8c1a67f0849719b7c0487b874f29",
+    "language": "ar",
+    "omnilingual_language": "arb_Arab",
+    "expected": "لم يتواجد أحد داخل الشقة.",
+    "reference_id": "ar-aoede",
+    "arm": "fused-rope-first24",
+    "phase": "parity"
+  },
+  {
+    "id": "ar-short-B8-fused-rope-first24-parity-r0-002",
+    "path": "ar-short-B8-fused-rope-first24-parity-r0-002.wav",
+    "sha256": "e4675c467527c60403b8146dd99f6d27d5f8a6eb699f20f4e59570a9270bd4e6",
+    "language": "ar",
+    "omnilingual_language": "arb_Arab",
+    "expected": "لم يتواجد أحد داخل الشقة.",
+    "reference_id": "ar-aoede",
+    "arm": "fused-rope-first24",
+    "phase": "parity"
+  },
+  {
+    "id": "ar-short-B8-fused-rope-first24-parity-r0-003",
+    "path": "ar-short-B8-fused-rope-first24-parity-r0-003.wav",
+    "sha256": "c58b544bfd6f0c402053ca370edd9f67d614551d1bbb2dd1dbeac989f078b794",
+    "language": "ar",
+    "omnilingual_language": "arb_Arab",
+    "expected": "لم يتواجد أحد داخل الشقة.",
+    "reference_id": "ar-aoede",
+    "arm": "fused-rope-first24",
+    "phase": "parity"
+  },
+  {
+    "id": "ar-short-B8-fused-rope-first24-parity-r0-004",
+    "path": "ar-short-B8-fused-rope-first24-parity-r0-004.wav",
+    "sha256": "a79ec92afdf1bfaa7320695c1f351287f37eccc1a350c3a7e7437ca9ad9ea3ec",
+    "language": "ar",
+    "omnilingual_language": "arb_Arab",
+    "expected": "لم يتواجد أحد داخل الشقة.",
+    "reference_id": "ar-aoede",
+    "arm": "fused-rope-first24",
+    "phase": "parity"
+  },
+  {
+    "id": "ar-short-B8-fused-rope-first24-parity-r0-005",
+    "path": "ar-short-B8-fused-rope-first24-parity-r0-005.wav",
+    "sha256": "65b1051e7aa9d860aa87d9a8e27b3f82a1eec59be0ae3e168d6ea0c3d54da0bb",
+    "language": "ar",
+    "omnilingual_language": "arb_Arab",
+    "expected": "لم يتواجد أحد داخل الشقة.",
+    "reference_id": "ar-aoede",
+    "arm": "fused-rope-first24",
+    "phase": "parity"
+  },
+  {
+    "id": "ar-short-B8-fused-rope-first24-parity-r0-006",
+    "path": "ar-short-B8-fused-rope-first24-parity-r0-006.wav",
+    "sha256": "d40074d39d0252f260fe278d9aab3bbf7af4eab4ee99b864c12d88782803c84e",
+    "language": "ar",
+    "omnilingual_language": "arb_Arab",
+    "expected": "لم يتواجد أحد داخل الشقة.",
+    "reference_id": "ar-aoede",
+    "arm": "fused-rope-first24",
+    "phase": "parity"
+  },
+  {
+    "id": "ar-short-B8-fused-rope-first24-parity-r0-007",
+    "path": "ar-short-B8-fused-rope-first24-parity-r0-007.wav",
+    "sha256": "4a59b05ac63d6c0194013635fcbf87ab3d51c476a89513a246c431bc6d9bcb23",
+    "language": "ar",
+    "omnilingual_language": "arb_Arab",
+    "expected": "لم يتواجد أحد داخل الشقة.",
+    "reference_id": "ar-aoede",
+    "arm": "fused-rope-first24",
+    "phase": "parity"
+  }
+]

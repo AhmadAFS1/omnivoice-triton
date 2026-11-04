@@ -1,0 +1,6 @@
+{
+  "v1_reporting_error_sha256": "cfdf61bba47d9e073e4202a2607ff2ee5e0ebdab61454d0f9867d3fb7678a7b0",
+  "v2_corrected_adapter_sha256": "a260686f365454edd669d9dd72562cf101853f3247291df59dfa414d488a5467",
+  "v3_remaining_only_sha256": "c44e3535df61638279ab3d99330200647d5db85bd600165187319dbd9d888dfc",
+  "note": "Historical v1/v2 source bodies reconstructed by reversing only the recorded adapter/continuation edits; their exact bytes were SHA-verified against each actual run metadata before publication. No GPU rerun."
+}

@@ -1,0 +1,917 @@
+[
+  {
+    "case_id": "en-short",
+    "batch": 1,
+    "seed": 20261105,
+    "arms": {
+      "reference": {
+        "full_model_ms": [],
+        "optimizations": {
+          "disable_unused_kv_cache": true,
+          "llm_use_cache": false,
+          "split_cfg_requested": false,
+          "split_cfg_enabled": false,
+          "split_cfg_experimental": true,
+          "split_cfg_metrics": null,
+          "fused_rope_requested": false,
+          "fused_rope_enabled": false,
+          "fused_rope_ready": false,
+          "fused_rope_experimental": true,
+          "fused_rope_metrics": null,
+          "max_cuda_graph_row_tokens": 16384,
+          "cuda_graph_capture_after_calls": 0,
+          "cuda_graph_memory": {
+            "enabled": true,
+            "max_cuda_graph_row_tokens": 16384,
+            "capture_after_calls": 0,
+            "deferred_calls": 0,
+            "observed_shape_keys": 0,
+            "max_shape_observations": 4096,
+            "estimate_kind": "Heuristic architecture/dtype row tokens and headroom; NOT a rigorous total VRAM bound",
+            "qualification_scope": "actual_model_architecture_and_runtime",
+            "profile": {
+              "qualified": true,
+              "reason": "",
+              "revision": null,
+              "dtype_bytes": 2,
+              "use_cache": false,
+              "layers": 28,
+              "hidden": 1024,
+              "intermediate": 3072,
+              "heads": 16,
+              "kv_heads": 8,
+              "head_dim": 128,
+              "codebooks": 8,
+              "audio_vocab": 1025
+            },
+            "retained_row_tokens": 914,
+            "unqualified_graph_keys": 0,
+            "resident_graphs": 1,
+            "max_graphs": 8,
+            "calls": 16,
+            "hits": 15,
+            "captures": 1,
+            "evictions": 0,
+            "evicted_row_tokens": 0,
+            "eager_fallbacks": {},
+            "pressure_cleanups": 0,
+            "admission_rejections": 0,
+            "capture_failures": 0,
+            "clears": 1,
+            "last_owner_memory_snapshot": {
+              "free_bytes": 9993388032,
+              "total_bytes": 12450070528,
+              "required_estimated_bytes": 566850112,
+              "device": "cuda:0"
+            },
+            "last_decision": "replay",
+            "resident_shapes": [
+              {
+                "shape": [
+                  2,
+                  8,
+                  457
+                ],
+                "normalized_row_tokens": 914
+              }
+            ]
+          }
+        }
+      },
+      "fused-rope-first24": {
+        "full_model_ms": [],
+        "optimizations": {
+          "disable_unused_kv_cache": true,
+          "llm_use_cache": false,
+          "split_cfg_requested": false,
+          "split_cfg_enabled": false,
+          "split_cfg_experimental": true,
+          "split_cfg_metrics": null,
+          "fused_rope_requested": true,
+          "fused_rope_enabled": true,
+          "fused_rope_ready": true,
+          "fused_rope_experimental": true,
+          "fused_rope_metrics": {
+            "active": true,
+            "ready": true,
+            "experimental": true,
+            "retiring": false,
+            "patch_range": [
+              0,
+              24
+            ],
+            "forward_calls": 16,
+            "fused_calls": 48,
+            "fallbacks": {},
+            "counter_scope": "Forward calls include graph replay; rotary counters count Python capture/eager calls.",
+            "startup_warmup": {
+              "device": "cuda:0",
+              "startup_thread_id": 136769157058880,
+              "duration_ms": 31.469221925362945,
+              "CPU_RNG_unchanged": true,
+              "CUDA_RNG_unchanged": true,
+              "head_shapes": [
+                16,
+                8
+              ],
+              "sequence_length": 1,
+              "input_kind": "Deterministic zeros/ones; no model or sampling calls"
+            },
+            "scope": "Pinned runtime/source/Qwen3 architecture; checkpoint bytes are not rehashed by this option"
+          },
+          "max_cuda_graph_row_tokens": 16384,
+          "cuda_graph_capture_after_calls": 0,
+          "cuda_graph_memory": {
+            "enabled": true,
+            "max_cuda_graph_row_tokens": 16384,
+            "capture_after_calls": 0,
+            "deferred_calls": 0,
+            "observed_shape_keys": 0,
+            "max_shape_observations": 4096,
+            "estimate_kind": "Heuristic architecture/dtype row tokens and headroom; NOT a rigorous total VRAM bound",
+            "qualification_scope": "actual_model_architecture_and_runtime",
+            "profile": {
+              "qualified": true,
+              "reason": "",
+              "revision": null,
+              "dtype_bytes": 2,
+              "use_cache": false,
+              "layers": 28,
+              "hidden": 1024,
+              "intermediate": 3072,
+              "heads": 16,
+              "kv_heads": 8,
+              "head_dim": 128,
+              "codebooks": 8,
+              "audio_vocab": 1025
+            },
+            "retained_row_tokens": 914,
+            "unqualified_graph_keys": 0,
+            "resident_graphs": 1,
+            "max_graphs": 8,
+            "calls": 32,
+            "hits": 30,
+            "captures": 2,
+            "evictions": 0,
+            "evicted_row_tokens": 0,
+            "eager_fallbacks": {},
+            "pressure_cleanups": 0,
+            "admission_rejections": 0,
+            "capture_failures": 0,
+            "clears": 3,
+            "last_owner_memory_snapshot": {
+              "free_bytes": 9951444992,
+              "total_bytes": 12450070528,
+              "required_estimated_bytes": 566850112,
+              "device": "cuda:0"
+            },
+            "last_decision": "replay",
+            "resident_shapes": [
+              {
+                "shape": [
+                  2,
+                  8,
+                  457
+                ],
+                "normalized_row_tokens": 914
+              }
+            ]
+          }
+        }
+      }
+    },
+    "exact": true
+  },
+  {
+    "case_id": "en-short",
+    "batch": 8,
+    "seed": 20261112,
+    "arms": {
+      "reference": {
+        "full_model_ms": [],
+        "optimizations": {
+          "disable_unused_kv_cache": true,
+          "llm_use_cache": false,
+          "split_cfg_requested": false,
+          "split_cfg_enabled": false,
+          "split_cfg_experimental": true,
+          "split_cfg_metrics": null,
+          "fused_rope_requested": false,
+          "fused_rope_enabled": false,
+          "fused_rope_ready": false,
+          "fused_rope_experimental": true,
+          "fused_rope_metrics": null,
+          "max_cuda_graph_row_tokens": 16384,
+          "cuda_graph_capture_after_calls": 0,
+          "cuda_graph_memory": {
+            "enabled": true,
+            "max_cuda_graph_row_tokens": 16384,
+            "capture_after_calls": 0,
+            "deferred_calls": 0,
+            "observed_shape_keys": 0,
+            "max_shape_observations": 4096,
+            "estimate_kind": "Heuristic architecture/dtype row tokens and headroom; NOT a rigorous total VRAM bound",
+            "qualification_scope": "actual_model_architecture_and_runtime",
+            "profile": {
+              "qualified": true,
+              "reason": "",
+              "revision": null,
+              "dtype_bytes": 2,
+              "use_cache": false,
+              "layers": 28,
+              "hidden": 1024,
+              "intermediate": 3072,
+              "heads": 16,
+              "kv_heads": 8,
+              "head_dim": 128,
+              "codebooks": 8,
+              "audio_vocab": 1025
+            },
+            "retained_row_tokens": 7312,
+            "unqualified_graph_keys": 0,
+            "resident_graphs": 1,
+            "max_graphs": 8,
+            "calls": 48,
+            "hits": 45,
+            "captures": 3,
+            "evictions": 0,
+            "evicted_row_tokens": 0,
+            "eager_fallbacks": {},
+            "pressure_cleanups": 0,
+            "admission_rejections": 0,
+            "capture_failures": 0,
+            "clears": 5,
+            "last_owner_memory_snapshot": {
+              "free_bytes": 8911257600,
+              "total_bytes": 12450070528,
+              "required_estimated_bytes": 776704512,
+              "device": "cuda:0"
+            },
+            "last_decision": "replay",
+            "resident_shapes": [
+              {
+                "shape": [
+                  16,
+                  8,
+                  457
+                ],
+                "normalized_row_tokens": 7312
+              }
+            ]
+          }
+        }
+      },
+      "fused-rope-first24": {
+        "full_model_ms": [],
+        "optimizations": {
+          "disable_unused_kv_cache": true,
+          "llm_use_cache": false,
+          "split_cfg_requested": false,
+          "split_cfg_enabled": false,
+          "split_cfg_experimental": true,
+          "split_cfg_metrics": null,
+          "fused_rope_requested": true,
+          "fused_rope_enabled": true,
+          "fused_rope_ready": true,
+          "fused_rope_experimental": true,
+          "fused_rope_metrics": {
+            "active": true,
+            "ready": true,
+            "experimental": true,
+            "retiring": false,
+            "patch_range": [
+              0,
+              24
+            ],
+            "forward_calls": 16,
+            "fused_calls": 48,
+            "fallbacks": {},
+            "counter_scope": "Forward calls include graph replay; rotary counters count Python capture/eager calls.",
+            "startup_warmup": {
+              "device": "cuda:0",
+              "startup_thread_id": 136769157058880,
+              "duration_ms": 2.4897761177271605,
+              "CPU_RNG_unchanged": true,
+              "CUDA_RNG_unchanged": true,
+              "head_shapes": [
+                16,
+                8
+              ],
+              "sequence_length": 1,
+              "input_kind": "Deterministic zeros/ones; no model or sampling calls"
+            },
+            "scope": "Pinned runtime/source/Qwen3 architecture; checkpoint bytes are not rehashed by this option"
+          },
+          "max_cuda_graph_row_tokens": 16384,
+          "cuda_graph_capture_after_calls": 0,
+          "cuda_graph_memory": {
+            "enabled": true,
+            "max_cuda_graph_row_tokens": 16384,
+            "capture_after_calls": 0,
+            "deferred_calls": 0,
+            "observed_shape_keys": 0,
+            "max_shape_observations": 4096,
+            "estimate_kind": "Heuristic architecture/dtype row tokens and headroom; NOT a rigorous total VRAM bound",
+            "qualification_scope": "actual_model_architecture_and_runtime",
+            "profile": {
+              "qualified": true,
+              "reason": "",
+              "revision": null,
+              "dtype_bytes": 2,
+              "use_cache": false,
+              "layers": 28,
+              "hidden": 1024,
+              "intermediate": 3072,
+              "heads": 16,
+              "kv_heads": 8,
+              "head_dim": 128,
+              "codebooks": 8,
+              "audio_vocab": 1025
+            },
+            "retained_row_tokens": 7312,
+            "unqualified_graph_keys": 0,
+            "resident_graphs": 1,
+            "max_graphs": 8,
+            "calls": 64,
+            "hits": 60,
+            "captures": 4,
+            "evictions": 0,
+            "evicted_row_tokens": 0,
+            "eager_fallbacks": {},
+            "pressure_cleanups": 0,
+            "admission_rejections": 0,
+            "capture_failures": 0,
+            "clears": 7,
+            "last_owner_memory_snapshot": {
+              "free_bytes": 8972075008,
+              "total_bytes": 12450070528,
+              "required_estimated_bytes": 776704512,
+              "device": "cuda:0"
+            },
+            "last_decision": "replay",
+            "resident_shapes": [
+              {
+                "shape": [
+                  16,
+                  8,
+                  457
+                ],
+                "normalized_row_tokens": 7312
+              }
+            ]
+          }
+        }
+      }
+    },
+    "exact": true
+  },
+  {
+    "case_id": "es-short",
+    "batch": 1,
+    "seed": 20261205,
+    "arms": {
+      "reference": {
+        "full_model_ms": [],
+        "optimizations": {
+          "disable_unused_kv_cache": true,
+          "llm_use_cache": false,
+          "split_cfg_requested": false,
+          "split_cfg_enabled": false,
+          "split_cfg_experimental": true,
+          "split_cfg_metrics": null,
+          "fused_rope_requested": false,
+          "fused_rope_enabled": false,
+          "fused_rope_ready": false,
+          "fused_rope_experimental": true,
+          "fused_rope_metrics": null,
+          "max_cuda_graph_row_tokens": 16384,
+          "cuda_graph_capture_after_calls": 0,
+          "cuda_graph_memory": {
+            "enabled": true,
+            "max_cuda_graph_row_tokens": 16384,
+            "capture_after_calls": 0,
+            "deferred_calls": 0,
+            "observed_shape_keys": 0,
+            "max_shape_observations": 4096,
+            "estimate_kind": "Heuristic architecture/dtype row tokens and headroom; NOT a rigorous total VRAM bound",
+            "qualification_scope": "actual_model_architecture_and_runtime",
+            "profile": {
+              "qualified": true,
+              "reason": "",
+              "revision": null,
+              "dtype_bytes": 2,
+              "use_cache": false,
+              "layers": 28,
+              "hidden": 1024,
+              "intermediate": 3072,
+              "heads": 16,
+              "kv_heads": 8,
+              "head_dim": 128,
+              "codebooks": 8,
+              "audio_vocab": 1025
+            },
+            "retained_row_tokens": 854,
+            "unqualified_graph_keys": 0,
+            "resident_graphs": 1,
+            "max_graphs": 8,
+            "calls": 80,
+            "hits": 75,
+            "captures": 5,
+            "evictions": 0,
+            "evicted_row_tokens": 0,
+            "eager_fallbacks": {},
+            "pressure_cleanups": 0,
+            "admission_rejections": 0,
+            "capture_failures": 0,
+            "clears": 9,
+            "last_owner_memory_snapshot": {
+              "free_bytes": 9903210496,
+              "total_bytes": 12450070528,
+              "required_estimated_bytes": 564882112,
+              "device": "cuda:0"
+            },
+            "last_decision": "replay",
+            "resident_shapes": [
+              {
+                "shape": [
+                  2,
+                  8,
+                  427
+                ],
+                "normalized_row_tokens": 854
+              }
+            ]
+          }
+        }
+      },
+      "fused-rope-first24": {
+        "full_model_ms": [],
+        "optimizations": {
+          "disable_unused_kv_cache": true,
+          "llm_use_cache": false,
+          "split_cfg_requested": false,
+          "split_cfg_enabled": false,
+          "split_cfg_experimental": true,
+          "split_cfg_metrics": null,
+          "fused_rope_requested": true,
+          "fused_rope_enabled": true,
+          "fused_rope_ready": true,
+          "fused_rope_experimental": true,
+          "fused_rope_metrics": {
+            "active": true,
+            "ready": true,
+            "experimental": true,
+            "retiring": false,
+            "patch_range": [
+              0,
+              24
+            ],
+            "forward_calls": 16,
+            "fused_calls": 48,
+            "fallbacks": {},
+            "counter_scope": "Forward calls include graph replay; rotary counters count Python capture/eager calls.",
+            "startup_warmup": {
+              "device": "cuda:0",
+              "startup_thread_id": 136769157058880,
+              "duration_ms": 1.9245401490479708,
+              "CPU_RNG_unchanged": true,
+              "CUDA_RNG_unchanged": true,
+              "head_shapes": [
+                16,
+                8
+              ],
+              "sequence_length": 1,
+              "input_kind": "Deterministic zeros/ones; no model or sampling calls"
+            },
+            "scope": "Pinned runtime/source/Qwen3 architecture; checkpoint bytes are not rehashed by this option"
+          },
+          "max_cuda_graph_row_tokens": 16384,
+          "cuda_graph_capture_after_calls": 0,
+          "cuda_graph_memory": {
+            "enabled": true,
+            "max_cuda_graph_row_tokens": 16384,
+            "capture_after_calls": 0,
+            "deferred_calls": 0,
+            "observed_shape_keys": 0,
+            "max_shape_observations": 4096,
+            "estimate_kind": "Heuristic architecture/dtype row tokens and headroom; NOT a rigorous total VRAM bound",
+            "qualification_scope": "actual_model_architecture_and_runtime",
+            "profile": {
+              "qualified": true,
+              "reason": "",
+              "revision": null,
+              "dtype_bytes": 2,
+              "use_cache": false,
+              "layers": 28,
+              "hidden": 1024,
+              "intermediate": 3072,
+              "heads": 16,
+              "kv_heads": 8,
+              "head_dim": 128,
+              "codebooks": 8,
+              "audio_vocab": 1025
+            },
+            "retained_row_tokens": 854,
+            "unqualified_graph_keys": 0,
+            "resident_graphs": 1,
+            "max_graphs": 8,
+            "calls": 96,
+            "hits": 90,
+            "captures": 6,
+            "evictions": 0,
+            "evicted_row_tokens": 0,
+            "eager_fallbacks": {},
+            "pressure_cleanups": 0,
+            "admission_rejections": 0,
+            "capture_failures": 0,
+            "clears": 11,
+            "last_owner_memory_snapshot": {
+              "free_bytes": 9882238976,
+              "total_bytes": 12450070528,
+              "required_estimated_bytes": 564882112,
+              "device": "cuda:0"
+            },
+            "last_decision": "replay",
+            "resident_shapes": [
+              {
+                "shape": [
+                  2,
+                  8,
+                  427
+                ],
+                "normalized_row_tokens": 854
+              }
+            ]
+          }
+        }
+      }
+    },
+    "exact": true
+  },
+  {
+    "case_id": "es-short",
+    "batch": 8,
+    "seed": 20261212,
+    "arms": {
+      "reference": {
+        "full_model_ms": [],
+        "optimizations": {
+          "disable_unused_kv_cache": true,
+          "llm_use_cache": false,
+          "split_cfg_requested": false,
+          "split_cfg_enabled": false,
+          "split_cfg_experimental": true,
+          "split_cfg_metrics": null,
+          "fused_rope_requested": false,
+          "fused_rope_enabled": false,
+          "fused_rope_ready": false,
+          "fused_rope_experimental": true,
+          "fused_rope_metrics": null,
+          "max_cuda_graph_row_tokens": 16384,
+          "cuda_graph_capture_after_calls": 0,
+          "cuda_graph_memory": {
+            "enabled": true,
+            "max_cuda_graph_row_tokens": 16384,
+            "capture_after_calls": 0,
+            "deferred_calls": 0,
+            "observed_shape_keys": 0,
+            "max_shape_observations": 4096,
+            "estimate_kind": "Heuristic architecture/dtype row tokens and headroom; NOT a rigorous total VRAM bound",
+            "qualification_scope": "actual_model_architecture_and_runtime",
+            "profile": {
+              "qualified": true,
+              "reason": "",
+              "revision": null,
+              "dtype_bytes": 2,
+              "use_cache": false,
+              "layers": 28,
+              "hidden": 1024,
+              "intermediate": 3072,
+              "heads": 16,
+              "kv_heads": 8,
+              "head_dim": 128,
+              "codebooks": 8,
+              "audio_vocab": 1025
+            },
+            "retained_row_tokens": 6832,
+            "unqualified_graph_keys": 0,
+            "resident_graphs": 1,
+            "max_graphs": 8,
+            "calls": 112,
+            "hits": 105,
+            "captures": 7,
+            "evictions": 0,
+            "evicted_row_tokens": 0,
+            "eager_fallbacks": {},
+            "pressure_cleanups": 0,
+            "admission_rejections": 0,
+            "capture_failures": 0,
+            "clears": 13,
+            "last_owner_memory_snapshot": {
+              "free_bytes": 8961589248,
+              "total_bytes": 12450070528,
+              "required_estimated_bytes": 760960512,
+              "device": "cuda:0"
+            },
+            "last_decision": "replay",
+            "resident_shapes": [
+              {
+                "shape": [
+                  16,
+                  8,
+                  427
+                ],
+                "normalized_row_tokens": 6832
+              }
+            ]
+          }
+        }
+      },
+      "fused-rope-first24": {
+        "full_model_ms": [],
+        "optimizations": {
+          "disable_unused_kv_cache": true,
+          "llm_use_cache": false,
+          "split_cfg_requested": false,
+          "split_cfg_enabled": false,
+          "split_cfg_experimental": true,
+          "split_cfg_metrics": null,
+          "fused_rope_requested": true,
+          "fused_rope_enabled": true,
+          "fused_rope_ready": true,
+          "fused_rope_experimental": true,
+          "fused_rope_metrics": {
+            "active": true,
+            "ready": true,
+            "experimental": true,
+            "retiring": false,
+            "patch_range": [
+              0,
+              24
+            ],
+            "forward_calls": 16,
+            "fused_calls": 48,
+            "fallbacks": {},
+            "counter_scope": "Forward calls include graph replay; rotary counters count Python capture/eager calls.",
+            "startup_warmup": {
+              "device": "cuda:0",
+              "startup_thread_id": 136769157058880,
+              "duration_ms": 3.516090800985694,
+              "CPU_RNG_unchanged": true,
+              "CUDA_RNG_unchanged": true,
+              "head_shapes": [
+                16,
+                8
+              ],
+              "sequence_length": 1,
+              "input_kind": "Deterministic zeros/ones; no model or sampling calls"
+            },
+            "scope": "Pinned runtime/source/Qwen3 architecture; checkpoint bytes are not rehashed by this option"
+          },
+          "max_cuda_graph_row_tokens": 16384,
+          "cuda_graph_capture_after_calls": 0,
+          "cuda_graph_memory": {
+            "enabled": true,
+            "max_cuda_graph_row_tokens": 16384,
+            "capture_after_calls": 0,
+            "deferred_calls": 0,
+            "observed_shape_keys": 0,
+            "max_shape_observations": 4096,
+            "estimate_kind": "Heuristic architecture/dtype row tokens and headroom; NOT a rigorous total VRAM bound",
+            "qualification_scope": "actual_model_architecture_and_runtime",
+            "profile": {
+              "qualified": true,
+              "reason": "",
+              "revision": null,
+              "dtype_bytes": 2,
+              "use_cache": false,
+              "layers": 28,
+              "hidden": 1024,
+              "intermediate": 3072,
+              "heads": 16,
+              "kv_heads": 8,
+              "head_dim": 128,
+              "codebooks": 8,
+              "audio_vocab": 1025
+            },
+            "retained_row_tokens": 6832,
+            "unqualified_graph_keys": 0,
+            "resident_graphs": 1,
+            "max_graphs": 8,
+            "calls": 128,
+            "hits": 120,
+            "captures": 8,
+            "evictions": 0,
+            "evicted_row_tokens": 0,
+            "eager_fallbacks": {},
+            "pressure_cleanups": 0,
+            "admission_rejections": 0,
+            "capture_failures": 0,
+            "clears": 15,
+            "last_owner_memory_snapshot": {
+              "free_bytes": 8976269312,
+              "total_bytes": 12450070528,
+              "required_estimated_bytes": 760960512,
+              "device": "cuda:0"
+            },
+            "last_decision": "replay",
+            "resident_shapes": [
+              {
+                "shape": [
+                  16,
+                  8,
+                  427
+                ],
+                "normalized_row_tokens": 6832
+              }
+            ]
+          }
+        }
+      }
+    },
+    "exact": true
+  },
+  {
+    "case_id": "ar-short",
+    "batch": 1,
+    "seed": 20261305,
+    "arms": {
+      "reference": {
+        "full_model_ms": [],
+        "optimizations": {
+          "disable_unused_kv_cache": true,
+          "llm_use_cache": false,
+          "split_cfg_requested": false,
+          "split_cfg_enabled": false,
+          "split_cfg_experimental": true,
+          "split_cfg_metrics": null,
+          "fused_rope_requested": false,
+          "fused_rope_enabled": false,
+          "fused_rope_ready": false,
+          "fused_rope_experimental": true,
+          "fused_rope_metrics": null,
+          "max_cuda_graph_row_tokens": 16384,
+          "cuda_graph_capture_after_calls": 0,
+          "cuda_graph_memory": {
+            "enabled": true,
+            "max_cuda_graph_row_tokens": 16384,
+            "capture_after_calls": 0,
+            "deferred_calls": 0,
+            "observed_shape_keys": 0,
+            "max_shape_observations": 4096,
+            "estimate_kind": "Heuristic architecture/dtype row tokens and headroom; NOT a rigorous total VRAM bound",
+            "qualification_scope": "actual_model_architecture_and_runtime",
+            "profile": {
+              "qualified": true,
+              "reason": "",
+              "revision": null,
+              "dtype_bytes": 2,
+              "use_cache": false,
+              "layers": 28,
+              "hidden": 1024,
+              "intermediate": 3072,
+              "heads": 16,
+              "kv_heads": 8,
+              "head_dim": 128,
+              "codebooks": 8,
+              "audio_vocab": 1025
+            },
+            "retained_row_tokens": 1026,
+            "unqualified_graph_keys": 0,
+            "resident_graphs": 1,
+            "max_graphs": 8,
+            "calls": 144,
+            "hits": 135,
+            "captures": 9,
+            "evictions": 0,
+            "evicted_row_tokens": 0,
+            "eager_fallbacks": {},
+            "pressure_cleanups": 0,
+            "admission_rejections": 0,
+            "capture_failures": 0,
+            "clears": 17,
+            "last_owner_memory_snapshot": {
+              "free_bytes": 9819324416,
+              "total_bytes": 12450070528,
+              "required_estimated_bytes": 570523712,
+              "device": "cuda:0"
+            },
+            "last_decision": "replay",
+            "resident_shapes": [
+              {
+                "shape": [
+                  2,
+                  8,
+                  513
+                ],
+                "normalized_row_tokens": 1026
+              }
+            ]
+          }
+        }
+      },
+      "fused-rope-first24": {
+        "full_model_ms": [],
+        "optimizations": {
+          "disable_unused_kv_cache": true,
+          "llm_use_cache": false,
+          "split_cfg_requested": false,
+          "split_cfg_enabled": false,
+          "split_cfg_experimental": true,
+          "split_cfg_metrics": null,
+          "fused_rope_requested": true,
+          "fused_rope_enabled": true,
+          "fused_rope_ready": true,
+          "fused_rope_experimental": true,
+          "fused_rope_metrics": {
+            "active": true,
+            "ready": true,
+            "experimental": true,
+            "retiring": false,
+            "patch_range": [
+              0,
+              24
+            ],
+            "forward_calls": 16,
+            "fused_calls": 48,
+            "fallbacks": {},
+            "counter_scope": "Forward calls include graph replay; rotary counters count Python capture/eager calls.",
+            "startup_warmup": {
+              "device": "cuda:0",
+              "startup_thread_id": 136769157058880,
+              "duration_ms": 2.8306329622864723,
+              "CPU_RNG_unchanged": true,
+              "CUDA_RNG_unchanged": true,
+              "head_shapes": [
+                16,
+                8
+              ],
+              "sequence_length": 1,
+              "input_kind": "Deterministic zeros/ones; no model or sampling calls"
+            },
+            "scope": "Pinned runtime/source/Qwen3 architecture; checkpoint bytes are not rehashed by this option"
+          },
+          "max_cuda_graph_row_tokens": 16384,
+          "cuda_graph_capture_after_calls": 0,
+          "cuda_graph_memory": {
+            "enabled": true,
+            "max_cuda_graph_row_tokens": 16384,
+            "capture_after_calls": 0,
+            "deferred_calls": 0,
+            "observed_shape_keys": 0,
+            "max_shape_observations": 4096,
+            "estimate_kind": "Heuristic architecture/dtype row tokens and headroom; NOT a rigorous total VRAM bound",
+            "qualification_scope": "actual_model_architecture_and_runtime",
+            "profile": {
+              "qualified": true,
+              "reason": "",
+              "revision": null,
+              "dtype_bytes": 2,
+              "use_cache": false,
+              "layers": 28,
+              "hidden": 1024,
+              "intermediate": 3072,
+              "heads": 16,
+              "kv_heads": 8,
+              "head_dim": 128,
+              "codebooks": 8,
+              "audio_vocab": 1025
+            },
+            "retained_row_tokens": 1026,
+            "unqualified_graph_keys": 0,
+            "resident_graphs": 1,
+            "max_graphs": 8,
+            "calls": 160,
+            "hits": 150,
+            "captures": 10,
+            "evictions": 0,
+            "evicted_row_tokens": 0,
+            "eager_fallbacks": {},
+            "pressure_cleanups": 0,
+            "admission_rejections": 0,
+            "capture_failures": 0,
+            "clears": 19,
+            "last_owner_memory_snapshot": {
+              "free_bytes": 9798352896,
+              "total_bytes": 12450070528,
+              "required_estimated_bytes": 570523712,
+              "device": "cuda:0"
+            },
+            "last_decision": "replay",
+            "resident_shapes": [
+              {
+                "shape": [
+                  2,
+                  8,
+                  513
+                ],
+                "normalized_row_tokens": 1026
+              }
+            ]
+          }
+        }
+      }
+    },
+    "exact": true
+  }
+]

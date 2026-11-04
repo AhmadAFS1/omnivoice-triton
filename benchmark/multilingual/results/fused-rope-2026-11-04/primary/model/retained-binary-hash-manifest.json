@@ -1,0 +1,664 @@
+{
+  "scope": "Model-probe WAV/NPZ binaries remain fully local in the SHA-verified retained archive; only their hashes are published here. The separately published samples contain only modern OFF/ON API-generated WAVs.",
+  "retained_archive_sha256": "40f5b6d8588d1ecfae4dcd5d95aa90652c80d177211e69458c6a27508197dcfc",
+  "files": [
+    {
+      "retained_run": "fused-rope-product-model-gpu-v1",
+      "file": "en-short-B1-reference-parity-r0-float-audio.npz",
+      "bytes": 220532,
+      "sha256": "e56e76c54e799efe974818ce38d9a67172345bc731126dac0543738e64e907ac",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v1",
+      "file": "en-short-B1-fused-rope-first24-parity-r0-float-audio.npz",
+      "bytes": 220532,
+      "sha256": "e56e76c54e799efe974818ce38d9a67172345bc731126dac0543738e64e907ac",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v1",
+      "file": "en-short-B1-fused-rope-first24-parity-r0-tokens.npz",
+      "bytes": 1239,
+      "sha256": "9f547c710a5d0032e265cc274db3d6e93738f509b6dd72e752b799af1b39b843",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v1",
+      "file": "en-short-B1-reference-parity-r0-000.wav",
+      "bytes": 126764,
+      "sha256": "2ae4feae3d60dd3b4c0b9b84bda95e5966db6db9a44e787d51800a78c5108810",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v1",
+      "file": "en-short-B1-reference-parity-r0-tokens.npz",
+      "bytes": 1239,
+      "sha256": "9f547c710a5d0032e265cc274db3d6e93738f509b6dd72e752b799af1b39b843",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v1",
+      "file": "en-short-B1-fused-rope-first24-parity-r0-000.wav",
+      "bytes": 126764,
+      "sha256": "2ae4feae3d60dd3b4c0b9b84bda95e5966db6db9a44e787d51800a78c5108810",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "en-short-B8-reference-parity-r0-004.wav",
+      "bytes": 126764,
+      "sha256": "f4fffbad6a45fdcfb442d930b9c3d45c2783eabbdd24d4db1f2abecc70d51726",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "en-short-B8-reference-parity-r0-005.wav",
+      "bytes": 126764,
+      "sha256": "13b41b6349ef3effd181f0fb2044555e100556ac4aad7b957204132071f87721",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "en-short-B8-reference-parity-r0-007.wav",
+      "bytes": 126764,
+      "sha256": "04190524e17d06f36cceb7a95b9424bb0110e92b2cd8a44f92d0f7694e905707",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "ar-short-B8-reference-parity-r0-float-audio.npz",
+      "bytes": 1695698,
+      "sha256": "9747589a10d88627a7fb543f74ffcd2eeef0afd45a1b345f4196ab4858b35b3a",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "en-short-B8-reference-parity-r0-006.wav",
+      "bytes": 126764,
+      "sha256": "f8a236ed54f1dc8ef8ecd0b3b2be87744f67d43d10f5195430984ae693a6f841",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "en-short-B8-reference-parity-r0-002.wav",
+      "bytes": 126764,
+      "sha256": "fb640ac5ccc47b3d9f9b8695506c25ff1a463941b81cdb7fac1dcf8c4e7863c8",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "ar-short-B8-reference-parity-r0-tokens.npz",
+      "bytes": 9597,
+      "sha256": "3b539c6928f6f80d89dd10dcc1bc07cac01402362e3190fec539c37c3258f600",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "es-short-B8-reference-parity-r0-tokens.npz",
+      "bytes": 10578,
+      "sha256": "493b524cbf0ec983203a924299f96d15bf1d19a902ced93ec9ae99ef46c76a74",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "en-short-B8-reference-parity-r0-003.wav",
+      "bytes": 126764,
+      "sha256": "b9168b7eb68df6075825acc7785fe4d4cacc298b1d8ba270697f406570a80e01",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "ar-short-B1-fused-rope-first24-parity-r0-float-audio.npz",
+      "bytes": 212043,
+      "sha256": "f5ab9371a98ef67df0f5bec9e7e6c7be2642fccb9c8abeefc7d6e127e4f85742",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "en-short-B8-reference-parity-r0-001.wav",
+      "bytes": 126764,
+      "sha256": "12f9df8d1c8f90a08d97563cecd13e0a3bb391f0bbc6a6d838255f4a6387c3b4",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "en-short-B8-reference-parity-r0-tokens.npz",
+      "bytes": 9849,
+      "sha256": "055579164a4591813fc29651339bfd30c0687248714b6025457c1c4f58c6ee60",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "en-short-B8-reference-parity-r0-float-audio.npz",
+      "bytes": 1758739,
+      "sha256": "83b7dc468ae9b135ecbd5eaead50e1d82d9afc4704e13dec7ccca877eecd2699",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "es-short-B1-fused-rope-first24-parity-r0-tokens.npz",
+      "bytes": 1346,
+      "sha256": "52c38951c4145efe6d0388d4c5a320758def7010dbc3d89917a040b8402b60c1",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "es-short-B1-reference-parity-r0-float-audio.npz",
+      "bytes": 233722,
+      "sha256": "f328e5fd51481810b15d2ffe831939997d7675d9a8bb0429dfa86abecaa7f5b8",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "en-short-B8-reference-parity-r0-000.wav",
+      "bytes": 126764,
+      "sha256": "a066b4a3f174ea9833de0d6f15cc1e394444d31a816c9160e4935ac5957360ca",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "en-short-B8-fused-rope-first24-parity-r0-float-audio.npz",
+      "bytes": 1758739,
+      "sha256": "83b7dc468ae9b135ecbd5eaead50e1d82d9afc4704e13dec7ccca877eecd2699",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "es-short-B8-reference-parity-r0-006.wav",
+      "bytes": 134444,
+      "sha256": "c149d7e0a5b9bb6486537f76d3f3a65c32365c9d38da5742856b87bbb87ca031",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "ar-short-B8-reference-parity-r0-002.wav",
+      "bytes": 122924,
+      "sha256": "e4675c467527c60403b8146dd99f6d27d5f8a6eb699f20f4e59570a9270bd4e6",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "ar-short-B1-reference-parity-r0-float-audio.npz",
+      "bytes": 212043,
+      "sha256": "f5ab9371a98ef67df0f5bec9e7e6c7be2642fccb9c8abeefc7d6e127e4f85742",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "en-short-B8-fused-rope-first24-parity-r0-000.wav",
+      "bytes": 126764,
+      "sha256": "a066b4a3f174ea9833de0d6f15cc1e394444d31a816c9160e4935ac5957360ca",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "es-short-B1-fused-rope-first24-parity-r0-float-audio.npz",
+      "bytes": 233722,
+      "sha256": "f328e5fd51481810b15d2ffe831939997d7675d9a8bb0429dfa86abecaa7f5b8",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "en-short-B8-fused-rope-first24-parity-r0-001.wav",
+      "bytes": 126764,
+      "sha256": "12f9df8d1c8f90a08d97563cecd13e0a3bb391f0bbc6a6d838255f4a6387c3b4",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "ar-short-B8-reference-parity-r0-003.wav",
+      "bytes": 122924,
+      "sha256": "c58b544bfd6f0c402053ca370edd9f67d614551d1bbb2dd1dbeac989f078b794",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "es-short-B8-reference-parity-r0-007.wav",
+      "bytes": 134444,
+      "sha256": "dab804637ce86a85b1de7832bc8f8bb1ad259b5fb91050467344f4884e865726",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "es-short-B1-fused-rope-first24-parity-r0-000.wav",
+      "bytes": 134444,
+      "sha256": "ff44efecf012f68aa2d885956112ac7f5164b071401d2eb7977710fa7f7c6368",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "es-short-B8-reference-parity-r0-005.wav",
+      "bytes": 134444,
+      "sha256": "53b7b59522b253b918a3a7081ac34390d17981738525a35f196146abd08a6f54",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "ar-short-B8-reference-parity-r0-001.wav",
+      "bytes": 122924,
+      "sha256": "3b3023c0fb1c7d371f857b2deb01279480cd8c1a67f0849719b7c0487b874f29",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "en-short-B8-fused-rope-first24-parity-r0-003.wav",
+      "bytes": 126764,
+      "sha256": "b9168b7eb68df6075825acc7785fe4d4cacc298b1d8ba270697f406570a80e01",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "en-short-B8-fused-rope-first24-parity-r0-002.wav",
+      "bytes": 126764,
+      "sha256": "fb640ac5ccc47b3d9f9b8695506c25ff1a463941b81cdb7fac1dcf8c4e7863c8",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "ar-short-B8-reference-parity-r0-000.wav",
+      "bytes": 122924,
+      "sha256": "dbf731e47162a291c42a53764a42f4e4bdc2d66ff29af8cb7ed0064ada5fecf1",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "es-short-B8-reference-parity-r0-004.wav",
+      "bytes": 134444,
+      "sha256": "196b0d7e5df140337af449b4778672b65a7217b88f5827e4c9ef5b009ef16cd2",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "ar-short-B1-fused-rope-first24-parity-r0-tokens.npz",
+      "bytes": 1238,
+      "sha256": "6cc82d81ebc45f2233c965bea1066533e4bcf972a33990bc1ef5b3394568070b",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "es-short-B8-reference-parity-r0-000.wav",
+      "bytes": 134444,
+      "sha256": "03e056a1202b9614eed05052aeb91f217201db7e514ee126d79fc98f2eff90c7",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "ar-short-B8-reference-parity-r0-004.wav",
+      "bytes": 122924,
+      "sha256": "a79ec92afdf1bfaa7320695c1f351287f37eccc1a350c3a7e7437ca9ad9ea3ec",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "es-short-B8-fused-rope-first24-parity-r0-tokens.npz",
+      "bytes": 10578,
+      "sha256": "493b524cbf0ec983203a924299f96d15bf1d19a902ced93ec9ae99ef46c76a74",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "es-short-B8-reference-parity-r0-float-audio.npz",
+      "bytes": 1872212,
+      "sha256": "32afad691794be344c646b560acd6379f9ea903542f834ce835ee777d083fc72",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "en-short-B8-fused-rope-first24-parity-r0-006.wav",
+      "bytes": 126764,
+      "sha256": "f8a236ed54f1dc8ef8ecd0b3b2be87744f67d43d10f5195430984ae693a6f841",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "en-short-B1-reference-parity-r0-float-audio.npz",
+      "bytes": 220532,
+      "sha256": "e56e76c54e799efe974818ce38d9a67172345bc731126dac0543738e64e907ac",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "en-short-B8-fused-rope-first24-parity-r0-007.wav",
+      "bytes": 126764,
+      "sha256": "04190524e17d06f36cceb7a95b9424bb0110e92b2cd8a44f92d0f7694e905707",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "ar-short-B8-reference-parity-r0-005.wav",
+      "bytes": 122924,
+      "sha256": "65b1051e7aa9d860aa87d9a8e27b3f82a1eec59be0ae3e168d6ea0c3d54da0bb",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "es-short-B8-reference-parity-r0-001.wav",
+      "bytes": 134444,
+      "sha256": "36a998be65937327805c16de29a3ec941bd1163312b74f078a7c4a0a46381db5",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "es-short-B8-reference-parity-r0-003.wav",
+      "bytes": 134444,
+      "sha256": "3a5658e180f0c4b996d6ad21dbcccfdd1912d9bef32f792dbca18e53c99a3a1b",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "ar-short-B8-reference-parity-r0-007.wav",
+      "bytes": 122924,
+      "sha256": "4a59b05ac63d6c0194013635fcbf87ab3d51c476a89513a246c431bc6d9bcb23",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "en-short-B8-fused-rope-first24-parity-r0-005.wav",
+      "bytes": 126764,
+      "sha256": "13b41b6349ef3effd181f0fb2044555e100556ac4aad7b957204132071f87721",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "en-short-B8-fused-rope-first24-parity-r0-004.wav",
+      "bytes": 126764,
+      "sha256": "f4fffbad6a45fdcfb442d930b9c3d45c2783eabbdd24d4db1f2abecc70d51726",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "ar-short-B8-reference-parity-r0-006.wav",
+      "bytes": 122924,
+      "sha256": "d40074d39d0252f260fe278d9aab3bbf7af4eab4ee99b864c12d88782803c84e",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "es-short-B8-reference-parity-r0-002.wav",
+      "bytes": 134444,
+      "sha256": "9cfa4a4648d541518d79e8283cbcd54f33ee99d2833eda6eb4580b69e052495b",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "ar-short-B1-reference-parity-r0-000.wav",
+      "bytes": 122924,
+      "sha256": "ca8a2123fcf0db9b3b75fe172110293ca659460df4b17e96945c06f4d640aad2",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "en-short-B1-fused-rope-first24-parity-r0-float-audio.npz",
+      "bytes": 220532,
+      "sha256": "e56e76c54e799efe974818ce38d9a67172345bc731126dac0543738e64e907ac",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "es-short-B8-fused-rope-first24-parity-r0-float-audio.npz",
+      "bytes": 1872212,
+      "sha256": "32afad691794be344c646b560acd6379f9ea903542f834ce835ee777d083fc72",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "en-short-B1-fused-rope-first24-parity-r0-tokens.npz",
+      "bytes": 1239,
+      "sha256": "9f547c710a5d0032e265cc274db3d6e93738f509b6dd72e752b799af1b39b843",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "ar-short-B1-fused-rope-first24-parity-r0-000.wav",
+      "bytes": 122924,
+      "sha256": "ca8a2123fcf0db9b3b75fe172110293ca659460df4b17e96945c06f4d640aad2",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "es-short-B1-reference-parity-r0-000.wav",
+      "bytes": 134444,
+      "sha256": "ff44efecf012f68aa2d885956112ac7f5164b071401d2eb7977710fa7f7c6368",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "es-short-B8-fused-rope-first24-parity-r0-007.wav",
+      "bytes": 134444,
+      "sha256": "dab804637ce86a85b1de7832bc8f8bb1ad259b5fb91050467344f4884e865726",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "es-short-B8-fused-rope-first24-parity-r0-006.wav",
+      "bytes": 134444,
+      "sha256": "c149d7e0a5b9bb6486537f76d3f3a65c32365c9d38da5742856b87bbb87ca031",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "es-short-B8-fused-rope-first24-parity-r0-004.wav",
+      "bytes": 134444,
+      "sha256": "196b0d7e5df140337af449b4778672b65a7217b88f5827e4c9ef5b009ef16cd2",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "es-short-B8-fused-rope-first24-parity-r0-005.wav",
+      "bytes": 134444,
+      "sha256": "53b7b59522b253b918a3a7081ac34390d17981738525a35f196146abd08a6f54",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "es-short-B8-fused-rope-first24-parity-r0-001.wav",
+      "bytes": 134444,
+      "sha256": "36a998be65937327805c16de29a3ec941bd1163312b74f078a7c4a0a46381db5",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "en-short-B1-reference-parity-r0-000.wav",
+      "bytes": 126764,
+      "sha256": "2ae4feae3d60dd3b4c0b9b84bda95e5966db6db9a44e787d51800a78c5108810",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "ar-short-B1-reference-parity-r0-tokens.npz",
+      "bytes": 1238,
+      "sha256": "6cc82d81ebc45f2233c965bea1066533e4bcf972a33990bc1ef5b3394568070b",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "es-short-B1-reference-parity-r0-tokens.npz",
+      "bytes": 1346,
+      "sha256": "52c38951c4145efe6d0388d4c5a320758def7010dbc3d89917a040b8402b60c1",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "es-short-B8-fused-rope-first24-parity-r0-000.wav",
+      "bytes": 134444,
+      "sha256": "03e056a1202b9614eed05052aeb91f217201db7e514ee126d79fc98f2eff90c7",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "es-short-B8-fused-rope-first24-parity-r0-002.wav",
+      "bytes": 134444,
+      "sha256": "9cfa4a4648d541518d79e8283cbcd54f33ee99d2833eda6eb4580b69e052495b",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "en-short-B1-reference-parity-r0-tokens.npz",
+      "bytes": 1239,
+      "sha256": "9f547c710a5d0032e265cc274db3d6e93738f509b6dd72e752b799af1b39b843",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "en-short-B8-fused-rope-first24-parity-r0-tokens.npz",
+      "bytes": 9849,
+      "sha256": "055579164a4591813fc29651339bfd30c0687248714b6025457c1c4f58c6ee60",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "en-short-B1-fused-rope-first24-parity-r0-000.wav",
+      "bytes": 126764,
+      "sha256": "2ae4feae3d60dd3b4c0b9b84bda95e5966db6db9a44e787d51800a78c5108810",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v2",
+      "file": "es-short-B8-fused-rope-first24-parity-r0-003.wav",
+      "bytes": 134444,
+      "sha256": "3a5658e180f0c4b996d6ad21dbcccfdd1912d9bef32f792dbca18e53c99a3a1b",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v3-continuation",
+      "file": "ar-short-B8-fused-rope-first24-parity-r0-000.wav",
+      "bytes": 122924,
+      "sha256": "dbf731e47162a291c42a53764a42f4e4bdc2d66ff29af8cb7ed0064ada5fecf1",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v3-continuation",
+      "file": "ar-short-B8-fused-rope-first24-parity-r0-001.wav",
+      "bytes": 122924,
+      "sha256": "3b3023c0fb1c7d371f857b2deb01279480cd8c1a67f0849719b7c0487b874f29",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v3-continuation",
+      "file": "ar-short-B8-fused-rope-first24-parity-r0-003.wav",
+      "bytes": 122924,
+      "sha256": "c58b544bfd6f0c402053ca370edd9f67d614551d1bbb2dd1dbeac989f078b794",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v3-continuation",
+      "file": "ar-short-B8-reference-parity-r0-float-audio.npz",
+      "bytes": 1695698,
+      "sha256": "9747589a10d88627a7fb543f74ffcd2eeef0afd45a1b345f4196ab4858b35b3a",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v3-continuation",
+      "file": "ar-short-B8-fused-rope-first24-parity-r0-002.wav",
+      "bytes": 122924,
+      "sha256": "e4675c467527c60403b8146dd99f6d27d5f8a6eb699f20f4e59570a9270bd4e6",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v3-continuation",
+      "file": "ar-short-B8-fused-rope-first24-parity-r0-006.wav",
+      "bytes": 122924,
+      "sha256": "d40074d39d0252f260fe278d9aab3bbf7af4eab4ee99b864c12d88782803c84e",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v3-continuation",
+      "file": "ar-short-B8-reference-parity-r0-tokens.npz",
+      "bytes": 9597,
+      "sha256": "3b539c6928f6f80d89dd10dcc1bc07cac01402362e3190fec539c37c3258f600",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v3-continuation",
+      "file": "ar-short-B8-fused-rope-first24-parity-r0-007.wav",
+      "bytes": 122924,
+      "sha256": "4a59b05ac63d6c0194013635fcbf87ab3d51c476a89513a246c431bc6d9bcb23",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v3-continuation",
+      "file": "ar-short-B8-fused-rope-first24-parity-r0-005.wav",
+      "bytes": 122924,
+      "sha256": "65b1051e7aa9d860aa87d9a8e27b3f82a1eec59be0ae3e168d6ea0c3d54da0bb",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v3-continuation",
+      "file": "ar-short-B8-fused-rope-first24-parity-r0-tokens.npz",
+      "bytes": 9597,
+      "sha256": "3b539c6928f6f80d89dd10dcc1bc07cac01402362e3190fec539c37c3258f600",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v3-continuation",
+      "file": "ar-short-B8-fused-rope-first24-parity-r0-004.wav",
+      "bytes": 122924,
+      "sha256": "a79ec92afdf1bfaa7320695c1f351287f37eccc1a350c3a7e7437ca9ad9ea3ec",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v3-continuation",
+      "file": "ar-short-B8-reference-parity-r0-002.wav",
+      "bytes": 122924,
+      "sha256": "e4675c467527c60403b8146dd99f6d27d5f8a6eb699f20f4e59570a9270bd4e6",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v3-continuation",
+      "file": "ar-short-B8-reference-parity-r0-003.wav",
+      "bytes": 122924,
+      "sha256": "c58b544bfd6f0c402053ca370edd9f67d614551d1bbb2dd1dbeac989f078b794",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v3-continuation",
+      "file": "ar-short-B8-reference-parity-r0-001.wav",
+      "bytes": 122924,
+      "sha256": "3b3023c0fb1c7d371f857b2deb01279480cd8c1a67f0849719b7c0487b874f29",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v3-continuation",
+      "file": "ar-short-B8-reference-parity-r0-000.wav",
+      "bytes": 122924,
+      "sha256": "dbf731e47162a291c42a53764a42f4e4bdc2d66ff29af8cb7ed0064ada5fecf1",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v3-continuation",
+      "file": "ar-short-B8-reference-parity-r0-004.wav",
+      "bytes": 122924,
+      "sha256": "a79ec92afdf1bfaa7320695c1f351287f37eccc1a350c3a7e7437ca9ad9ea3ec",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v3-continuation",
+      "file": "ar-short-B8-reference-parity-r0-005.wav",
+      "bytes": 122924,
+      "sha256": "65b1051e7aa9d860aa87d9a8e27b3f82a1eec59be0ae3e168d6ea0c3d54da0bb",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v3-continuation",
+      "file": "ar-short-B8-reference-parity-r0-007.wav",
+      "bytes": 122924,
+      "sha256": "4a59b05ac63d6c0194013635fcbf87ab3d51c476a89513a246c431bc6d9bcb23",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v3-continuation",
+      "file": "ar-short-B8-reference-parity-r0-006.wav",
+      "bytes": 122924,
+      "sha256": "d40074d39d0252f260fe278d9aab3bbf7af4eab4ee99b864c12d88782803c84e",
+      "published_binary": false
+    },
+    {
+      "retained_run": "fused-rope-product-model-gpu-v3-continuation",
+      "file": "ar-short-B8-fused-rope-first24-parity-r0-float-audio.npz",
+      "bytes": 1695698,
+      "sha256": "9747589a10d88627a7fb543f74ffcd2eeef0afd45a1b345f4196ab4858b35b3a",
+      "published_binary": false
+    }
+  ]
+}

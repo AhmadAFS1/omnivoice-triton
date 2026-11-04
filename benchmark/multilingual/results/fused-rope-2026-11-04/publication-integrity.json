@@ -1,0 +1,88 @@
+{
+  "at": "2026-11-04T14:44:13.026610+00:00",
+  "independent_publication_verification": "Reopened publication files, rehashed all264actualWAVs and decoded PCMheaders/data lengths; checked132pairSHAs,104routes/8voices,42exact966source files, licenses, and localMarkdownlinks",
+  "WAV_files": 264,
+  "paired_cases": 132,
+  "language_routes": 104,
+  "voices": 8,
+  "source_files_match966": 42,
+  "local_links_verified": 18,
+  "source_archive_sha256": "966a9afcf5913c8a4d9a3f29888e95ac2cfff18042356522e5416a805c2e2ccb",
+  "excluded_model_weights_conditioning_audio_private_keys_large_NPZ": true,
+  "sample_bytes": 35907936,
+  "result_bytes_before_integrity": 2345743,
+  "links": [
+    {
+      "file": "benchmark/multilingual/results/fused-rope-2026-11-04/README.md",
+      "target": "source/fused-rope-product-cpu-v3.tar.gz"
+    },
+    {
+      "file": "benchmark/multilingual/results/fused-rope-2026-11-04/README.md",
+      "target": "fused-rope-modern264-latency-analysis-v1.json"
+    },
+    {
+      "file": "benchmark/multilingual/results/fused-rope-2026-11-04/README.md",
+      "target": "modern/MODERN_FUSED_ROPE_EAGER264_COMPLETE.json"
+    },
+    {
+      "file": "benchmark/multilingual/results/fused-rope-2026-11-04/README.md",
+      "target": "modern/off/metadata.json"
+    },
+    {
+      "file": "benchmark/multilingual/results/fused-rope-2026-11-04/README.md",
+      "target": "modern/on/metadata.json"
+    },
+    {
+      "file": "benchmark/multilingual/results/fused-rope-2026-11-04/README.md",
+      "target": "../../samples/rtx4070ti-fused-rope-2026-11-04/README.md"
+    },
+    {
+      "file": "benchmark/multilingual/results/fused-rope-2026-11-04/README.md",
+      "target": "fused-rope-modern264-strict-ASR-reuse-v1.json"
+    },
+    {
+      "file": "benchmark/multilingual/results/fused-rope-2026-11-04/README.md",
+      "target": "primary/CPU219-tests.log"
+    },
+    {
+      "file": "benchmark/multilingual/results/fused-rope-2026-11-04/README.md",
+      "target": "primary/raw-kernel/outcome.json"
+    },
+    {
+      "file": "benchmark/multilingual/results/fused-rope-2026-11-04/README.md",
+      "target": "primary/FUSED_ROPE_PRODUCT_MODEL_JOINED_PARITY.json"
+    },
+    {
+      "file": "benchmark/multilingual/results/fused-rope-2026-11-04/README.md",
+      "target": "primary/FUSED_ROPE_PRODUCT_API132_COMPLETE.json"
+    },
+    {
+      "file": "benchmark/multilingual/results/fused-rope-2026-11-04/README.md",
+      "target": "primary/model/retained-binary-hash-manifest.json"
+    },
+    {
+      "file": "benchmark/multilingual/samples/rtx4070ti-fused-rope-2026-11-04/README.md",
+      "target": "manifest.json"
+    },
+    {
+      "file": "benchmark/multilingual/samples/rtx4070ti-fused-rope-2026-11-04/README.md",
+      "target": "paired-manifest.json"
+    },
+    {
+      "file": "benchmark/multilingual/samples/rtx4070ti-fused-rope-2026-11-04/README.md",
+      "target": "../../results/fused-rope-2026-11-04/README.md"
+    },
+    {
+      "file": "benchmark/multilingual/samples/rtx4070ti-fused-rope-2026-11-04/README.md",
+      "target": "../../../../LICENSE"
+    },
+    {
+      "file": "docs/fused-rope.md",
+      "target": "../benchmark/multilingual/results/fused-rope-2026-11-04/README.md"
+    },
+    {
+      "file": "docs/fused-rope.md",
+      "target": "../benchmark/multilingual/samples/rtx4070ti-fused-rope-2026-11-04/README.md"
+    }
+  ]
+}

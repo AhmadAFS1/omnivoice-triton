@@ -1,0 +1,24 @@
+[
+  {
+    "id": "en-short-B1-reference-parity-r0-000",
+    "path": "en-short-B1-reference-parity-r0-000.wav",
+    "sha256": "2ae4feae3d60dd3b4c0b9b84bda95e5966db6db9a44e787d51800a78c5108810",
+    "language": "en",
+    "omnilingual_language": "eng_Latn",
+    "expected": "No one was inside the apartment.",
+    "reference_id": "en-aoede",
+    "arm": "reference",
+    "phase": "parity"
+  },
+  {
+    "id": "en-short-B1-fused-rope-first24-parity-r0-000",
+    "path": "en-short-B1-fused-rope-first24-parity-r0-000.wav",
+    "sha256": "2ae4feae3d60dd3b4c0b9b84bda95e5966db6db9a44e787d51800a78c5108810",
+    "language": "en",
+    "omnilingual_language": "eng_Latn",
+    "expected": "No one was inside the apartment.",
+    "reference_id": "en-aoede",
+    "arm": "fused-rope-first24",
+    "phase": "parity"
+  }
+]

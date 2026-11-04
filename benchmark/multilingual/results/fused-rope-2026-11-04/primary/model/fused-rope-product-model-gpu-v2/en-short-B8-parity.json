@@ -1,0 +1,32 @@
+{
+  "every_full_logit_bit_and_input_token_wave_equal": true,
+  "patched_python_calls": 48,
+  "product_metrics": {
+    "active": true,
+    "ready": true,
+    "experimental": true,
+    "retiring": false,
+    "patch_range": [
+      0,
+      24
+    ],
+    "forward_calls": 16,
+    "fused_calls": 48,
+    "fallbacks": {},
+    "counter_scope": "Forward calls include graph replay; rotary counters count Python capture/eager calls.",
+    "startup_warmup": {
+      "device": "cuda:0",
+      "startup_thread_id": 136769157058880,
+      "duration_ms": 2.4897761177271605,
+      "CPU_RNG_unchanged": true,
+      "CUDA_RNG_unchanged": true,
+      "head_shapes": [
+        16,
+        8
+      ],
+      "sequence_length": 1,
+      "input_kind": "Deterministic zeros/ones; no model or sampling calls"
+    },
+    "scope": "Pinned runtime/source/Qwen3 architecture; checkpoint bytes are not rehashed by this option"
+  }
+}

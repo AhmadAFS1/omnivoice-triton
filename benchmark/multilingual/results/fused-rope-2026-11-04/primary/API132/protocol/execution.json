@@ -1,0 +1,17 @@
+{
+  "at": "2026-11-04T13:57:43.285096+00:00",
+  "lease": {
+    "at": "2026-11-04T13:57:42.809938+00:00",
+    "root_authorized_API132": true,
+    "CPU_IO_quiet": true,
+    "CPU_IO_quiet_at": "2026-11-04T13:57:10+00:00",
+    "quiet_source": "Load explicit final relay/receive release; no remote work remaining",
+    "source_ref": "966a9afcf5913c8a4d9a3f29888e95ac2cfff18042356522e5416a805c2e2ccb",
+    "controller_sha256": "04ffe08159f5e8f5bdf37cc7ebdc7e443d235e72693569e8a83ada5f8411cb97",
+    "config_sha256": "5013a513d9afe43d14638571cfaa5d64fd4eecad7083afd046aebeff8797b3d7",
+    "fresh_compute_processes": "",
+    "scope": "Root reviewed actual132 complete-body parity API gate, no causal timing claim"
+  },
+  "controller_sha256": "04ffe08159f5e8f5bdf37cc7ebdc7e443d235e72693569e8a83ada5f8411cb97",
+  "config_sha256": "5013a513d9afe43d14638571cfaa5d64fd4eecad7083afd046aebeff8797b3d7"
+}

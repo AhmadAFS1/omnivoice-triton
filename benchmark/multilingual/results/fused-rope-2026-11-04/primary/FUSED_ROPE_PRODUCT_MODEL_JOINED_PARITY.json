@@ -1,0 +1,265 @@
+{
+  "at": "2026-11-04T13:55:43.026679+00:00",
+  "source_ref": "966a9afcf5913c8a4d9a3f29888e95ac2cfff18042356522e5416a805c2e2ccb",
+  "six_pairs_exact": true,
+  "distinct_complete_pairs": 6,
+  "verified_WAVs_for_complete_pairs": 54,
+  "unique_WAV_sha256": 27,
+  "pairs": [
+    {
+      "case": "en-short",
+      "batch": 1,
+      "run": "fused-rope-product-model-gpu-v2",
+      "parity_sha256": "c529f1b22d5284fc6f2b328a4dc0e410704b9bbe463d20259e429841c007e20e"
+    },
+    {
+      "case": "en-short",
+      "batch": 8,
+      "run": "fused-rope-product-model-gpu-v2",
+      "parity_sha256": "a2144f837ff7d5cf397db7fce37c3a22b749fb012b5bd3c9d44cdb9a8ec5c05c"
+    },
+    {
+      "case": "es-short",
+      "batch": 1,
+      "run": "fused-rope-product-model-gpu-v2",
+      "parity_sha256": "9f1d346129375c054ad95eea0e062d0e92f31042f493daaf6f77edb11cdb6a49"
+    },
+    {
+      "case": "es-short",
+      "batch": 8,
+      "run": "fused-rope-product-model-gpu-v2",
+      "parity_sha256": "1b795679073b1fdfe602fe7aab38aabbfe218ea69d5bffa23f9a63b023e74300"
+    },
+    {
+      "case": "ar-short",
+      "batch": 1,
+      "run": "fused-rope-product-model-gpu-v2",
+      "parity_sha256": "03783844e775a5752d066bb68909a5e818522eb596948775396950fa497f815d"
+    },
+    {
+      "case": "ar-short",
+      "batch": 8,
+      "run": "fused-rope-product-model-gpu-v3-continuation",
+      "parity_sha256": "10e90d6aaba8af9a849c59b61d5012d1230d16bc259e40bb35fd284218baf4ba"
+    }
+  ],
+  "bodies": [
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/en-short-B1-reference-parity-r0-000.wav",
+      "sha256": "2ae4feae3d60dd3b4c0b9b84bda95e5966db6db9a44e787d51800a78c5108810"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/en-short-B1-fused-rope-first24-parity-r0-000.wav",
+      "sha256": "2ae4feae3d60dd3b4c0b9b84bda95e5966db6db9a44e787d51800a78c5108810"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/en-short-B8-reference-parity-r0-000.wav",
+      "sha256": "a066b4a3f174ea9833de0d6f15cc1e394444d31a816c9160e4935ac5957360ca"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/en-short-B8-fused-rope-first24-parity-r0-000.wav",
+      "sha256": "a066b4a3f174ea9833de0d6f15cc1e394444d31a816c9160e4935ac5957360ca"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/en-short-B8-reference-parity-r0-001.wav",
+      "sha256": "12f9df8d1c8f90a08d97563cecd13e0a3bb391f0bbc6a6d838255f4a6387c3b4"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/en-short-B8-fused-rope-first24-parity-r0-001.wav",
+      "sha256": "12f9df8d1c8f90a08d97563cecd13e0a3bb391f0bbc6a6d838255f4a6387c3b4"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/en-short-B8-reference-parity-r0-002.wav",
+      "sha256": "fb640ac5ccc47b3d9f9b8695506c25ff1a463941b81cdb7fac1dcf8c4e7863c8"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/en-short-B8-fused-rope-first24-parity-r0-002.wav",
+      "sha256": "fb640ac5ccc47b3d9f9b8695506c25ff1a463941b81cdb7fac1dcf8c4e7863c8"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/en-short-B8-reference-parity-r0-003.wav",
+      "sha256": "b9168b7eb68df6075825acc7785fe4d4cacc298b1d8ba270697f406570a80e01"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/en-short-B8-fused-rope-first24-parity-r0-003.wav",
+      "sha256": "b9168b7eb68df6075825acc7785fe4d4cacc298b1d8ba270697f406570a80e01"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/en-short-B8-reference-parity-r0-004.wav",
+      "sha256": "f4fffbad6a45fdcfb442d930b9c3d45c2783eabbdd24d4db1f2abecc70d51726"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/en-short-B8-fused-rope-first24-parity-r0-004.wav",
+      "sha256": "f4fffbad6a45fdcfb442d930b9c3d45c2783eabbdd24d4db1f2abecc70d51726"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/en-short-B8-reference-parity-r0-005.wav",
+      "sha256": "13b41b6349ef3effd181f0fb2044555e100556ac4aad7b957204132071f87721"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/en-short-B8-fused-rope-first24-parity-r0-005.wav",
+      "sha256": "13b41b6349ef3effd181f0fb2044555e100556ac4aad7b957204132071f87721"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/en-short-B8-reference-parity-r0-006.wav",
+      "sha256": "f8a236ed54f1dc8ef8ecd0b3b2be87744f67d43d10f5195430984ae693a6f841"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/en-short-B8-fused-rope-first24-parity-r0-006.wav",
+      "sha256": "f8a236ed54f1dc8ef8ecd0b3b2be87744f67d43d10f5195430984ae693a6f841"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/en-short-B8-reference-parity-r0-007.wav",
+      "sha256": "04190524e17d06f36cceb7a95b9424bb0110e92b2cd8a44f92d0f7694e905707"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/en-short-B8-fused-rope-first24-parity-r0-007.wav",
+      "sha256": "04190524e17d06f36cceb7a95b9424bb0110e92b2cd8a44f92d0f7694e905707"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/es-short-B1-reference-parity-r0-000.wav",
+      "sha256": "ff44efecf012f68aa2d885956112ac7f5164b071401d2eb7977710fa7f7c6368"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/es-short-B1-fused-rope-first24-parity-r0-000.wav",
+      "sha256": "ff44efecf012f68aa2d885956112ac7f5164b071401d2eb7977710fa7f7c6368"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/es-short-B8-reference-parity-r0-000.wav",
+      "sha256": "03e056a1202b9614eed05052aeb91f217201db7e514ee126d79fc98f2eff90c7"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/es-short-B8-fused-rope-first24-parity-r0-000.wav",
+      "sha256": "03e056a1202b9614eed05052aeb91f217201db7e514ee126d79fc98f2eff90c7"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/es-short-B8-reference-parity-r0-001.wav",
+      "sha256": "36a998be65937327805c16de29a3ec941bd1163312b74f078a7c4a0a46381db5"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/es-short-B8-fused-rope-first24-parity-r0-001.wav",
+      "sha256": "36a998be65937327805c16de29a3ec941bd1163312b74f078a7c4a0a46381db5"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/es-short-B8-reference-parity-r0-002.wav",
+      "sha256": "9cfa4a4648d541518d79e8283cbcd54f33ee99d2833eda6eb4580b69e052495b"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/es-short-B8-fused-rope-first24-parity-r0-002.wav",
+      "sha256": "9cfa4a4648d541518d79e8283cbcd54f33ee99d2833eda6eb4580b69e052495b"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/es-short-B8-reference-parity-r0-003.wav",
+      "sha256": "3a5658e180f0c4b996d6ad21dbcccfdd1912d9bef32f792dbca18e53c99a3a1b"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/es-short-B8-fused-rope-first24-parity-r0-003.wav",
+      "sha256": "3a5658e180f0c4b996d6ad21dbcccfdd1912d9bef32f792dbca18e53c99a3a1b"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/es-short-B8-reference-parity-r0-004.wav",
+      "sha256": "196b0d7e5df140337af449b4778672b65a7217b88f5827e4c9ef5b009ef16cd2"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/es-short-B8-fused-rope-first24-parity-r0-004.wav",
+      "sha256": "196b0d7e5df140337af449b4778672b65a7217b88f5827e4c9ef5b009ef16cd2"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/es-short-B8-reference-parity-r0-005.wav",
+      "sha256": "53b7b59522b253b918a3a7081ac34390d17981738525a35f196146abd08a6f54"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/es-short-B8-fused-rope-first24-parity-r0-005.wav",
+      "sha256": "53b7b59522b253b918a3a7081ac34390d17981738525a35f196146abd08a6f54"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/es-short-B8-reference-parity-r0-006.wav",
+      "sha256": "c149d7e0a5b9bb6486537f76d3f3a65c32365c9d38da5742856b87bbb87ca031"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/es-short-B8-fused-rope-first24-parity-r0-006.wav",
+      "sha256": "c149d7e0a5b9bb6486537f76d3f3a65c32365c9d38da5742856b87bbb87ca031"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/es-short-B8-reference-parity-r0-007.wav",
+      "sha256": "dab804637ce86a85b1de7832bc8f8bb1ad259b5fb91050467344f4884e865726"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/es-short-B8-fused-rope-first24-parity-r0-007.wav",
+      "sha256": "dab804637ce86a85b1de7832bc8f8bb1ad259b5fb91050467344f4884e865726"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/ar-short-B1-reference-parity-r0-000.wav",
+      "sha256": "ca8a2123fcf0db9b3b75fe172110293ca659460df4b17e96945c06f4d640aad2"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2/ar-short-B1-fused-rope-first24-parity-r0-000.wav",
+      "sha256": "ca8a2123fcf0db9b3b75fe172110293ca659460df4b17e96945c06f4d640aad2"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v3-continuation/ar-short-B8-reference-parity-r0-000.wav",
+      "sha256": "dbf731e47162a291c42a53764a42f4e4bdc2d66ff29af8cb7ed0064ada5fecf1"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v3-continuation/ar-short-B8-fused-rope-first24-parity-r0-000.wav",
+      "sha256": "dbf731e47162a291c42a53764a42f4e4bdc2d66ff29af8cb7ed0064ada5fecf1"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v3-continuation/ar-short-B8-reference-parity-r0-001.wav",
+      "sha256": "3b3023c0fb1c7d371f857b2deb01279480cd8c1a67f0849719b7c0487b874f29"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v3-continuation/ar-short-B8-fused-rope-first24-parity-r0-001.wav",
+      "sha256": "3b3023c0fb1c7d371f857b2deb01279480cd8c1a67f0849719b7c0487b874f29"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v3-continuation/ar-short-B8-reference-parity-r0-002.wav",
+      "sha256": "e4675c467527c60403b8146dd99f6d27d5f8a6eb699f20f4e59570a9270bd4e6"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v3-continuation/ar-short-B8-fused-rope-first24-parity-r0-002.wav",
+      "sha256": "e4675c467527c60403b8146dd99f6d27d5f8a6eb699f20f4e59570a9270bd4e6"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v3-continuation/ar-short-B8-reference-parity-r0-003.wav",
+      "sha256": "c58b544bfd6f0c402053ca370edd9f67d614551d1bbb2dd1dbeac989f078b794"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v3-continuation/ar-short-B8-fused-rope-first24-parity-r0-003.wav",
+      "sha256": "c58b544bfd6f0c402053ca370edd9f67d614551d1bbb2dd1dbeac989f078b794"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v3-continuation/ar-short-B8-reference-parity-r0-004.wav",
+      "sha256": "a79ec92afdf1bfaa7320695c1f351287f37eccc1a350c3a7e7437ca9ad9ea3ec"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v3-continuation/ar-short-B8-fused-rope-first24-parity-r0-004.wav",
+      "sha256": "a79ec92afdf1bfaa7320695c1f351287f37eccc1a350c3a7e7437ca9ad9ea3ec"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v3-continuation/ar-short-B8-reference-parity-r0-005.wav",
+      "sha256": "65b1051e7aa9d860aa87d9a8e27b3f82a1eec59be0ae3e168d6ea0c3d54da0bb"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v3-continuation/ar-short-B8-fused-rope-first24-parity-r0-005.wav",
+      "sha256": "65b1051e7aa9d860aa87d9a8e27b3f82a1eec59be0ae3e168d6ea0c3d54da0bb"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v3-continuation/ar-short-B8-reference-parity-r0-006.wav",
+      "sha256": "d40074d39d0252f260fe278d9aab3bbf7af4eab4ee99b864c12d88782803c84e"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v3-continuation/ar-short-B8-fused-rope-first24-parity-r0-006.wav",
+      "sha256": "d40074d39d0252f260fe278d9aab3bbf7af4eab4ee99b864c12d88782803c84e"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v3-continuation/ar-short-B8-reference-parity-r0-007.wav",
+      "sha256": "4a59b05ac63d6c0194013635fcbf87ab3d51c476a89513a246c431bc6d9bcb23"
+    },
+    {
+      "path": "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v3-continuation/ar-short-B8-fused-rope-first24-parity-r0-007.wav",
+      "sha256": "4a59b05ac63d6c0194013635fcbf87ab3d51c476a89513a246c431bc6d9bcb23"
+    }
+  ],
+  "scope": "CPU-verified exact16step full-logit/input hashes, raw token/float array bytes and PCM WAV bytes. Five pairs in bounded v2 plus explicitly authorized remaining AR B8 v3. Failed/partial prior outputs retained; no timing claim."
+}

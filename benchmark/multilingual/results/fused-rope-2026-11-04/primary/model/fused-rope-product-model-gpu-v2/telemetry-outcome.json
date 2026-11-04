@@ -1,0 +1,24 @@
+{
+  "finished_utc": "2026-11-04T13:50:28.524408+00:00",
+  "wall_s": 297.0505585561041,
+  "samples": 297,
+  "sampling_overruns": 0,
+  "interrupted": null,
+  "wrapped_exit_code": 1,
+  "sampler_self_cpu_s": 17.177215,
+  "gpu_sampler_observed_cpu_s": 7.63,
+  "sampler_setup_child_cpu_s": 0.047076999999999994,
+  "observed_total_sampler_cpu_pct_one_core_100": 8.367024159392637,
+  "sampler_max_rss_raw": 18552,
+  "sampler_io_counter_delta": {
+    "rchar": 549095278,
+    "wchar": 21014181,
+    "syscr": 472834,
+    "syscw": 7103,
+    "read_bytes": 0,
+    "write_bytes": 21712896,
+    "cancelled_write_bytes": 8192
+  },
+  "sampler_max_rss_unit": "KiB",
+  "overhead_note": "SelfCPU includes sampling/serialization/setup/waits. Nvidia childCPU uses lifetimeCPU; targetCPU stays separate."
+}

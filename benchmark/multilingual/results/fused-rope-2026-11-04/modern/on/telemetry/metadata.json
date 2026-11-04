@@ -1,0 +1,148 @@
+{
+  "measurement_kind": "Passive OS/NVML telemetry; no CUDA/model imports",
+  "started_utc": "2026-11-04T14:28:38.031327+00:00",
+  "monotonic_ns": 174226983398840,
+  "sampler_pid": 213960,
+  "platform": "Linux-6.8.0-147-generic-x86_64-with-glibc2.39",
+  "protocol_sha256": "4255dcc5dedbe0bc5bcc022757b38d33f071def47287ba963d795c89799c1e37",
+  "interval_s": 1.0,
+  "thread_detail_limit": 8,
+  "clock_ticks_per_second": 100,
+  "cgroup": {
+    "version": 2,
+    "directory": "/sys/fs/cgroup",
+    "membership": [
+      {
+        "hierarchy": "0",
+        "controllers": "",
+        "path": "/"
+      }
+    ]
+  },
+  "topology": {
+    "cpu_model": "AMD Ryzen 7 5700X 8-Core Processor",
+    "logical_host_cpu_count": 16,
+    "sampler_allowed_cpus": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "numa_node_cpu_lists": {
+      "node0": "0-15"
+    },
+    "nvidia_pci_numa_affinity": {
+      "0000:09:00.0": {
+        "numa_node": "-1\n",
+        "local_cpu_list": "0-15\n"
+      },
+      "0000:09:00.1": {
+        "numa_node": "-1\n",
+        "local_cpu_list": "0-15\n"
+      }
+    },
+    "physical_memory": "32782520 kB"
+  },
+  "gpu": {
+    "available": true,
+    "fields": [
+      "timestamp",
+      "index",
+      "name",
+      "uuid",
+      "driver_version",
+      "pci.bus_id",
+      "memory.total",
+      "memory.used",
+      "utilization.gpu",
+      "utilization.memory",
+      "power.draw",
+      "power.limit",
+      "temperature.gpu",
+      "clocks.current.sm",
+      "clocks.current.graphics",
+      "clocks.current.memory",
+      "pstate",
+      "clocks_event_reasons.active"
+    ],
+    "command": [
+      "stdbuf",
+      "-oL",
+      "nvidia-smi",
+      "--query-gpu=timestamp,index,name,uuid,driver_version,pci.bus_id,memory.total,memory.used,utilization.gpu,utilization.memory,power.draw,power.limit,temperature.gpu,clocks.current.sm,clocks.current.graphics,clocks.current.memory,pstate,clocks_event_reasons.active",
+      "--format=csv,noheader,nounits",
+      "--loop-ms=1000"
+    ],
+    "pid": 213964,
+    "units": "nvidia-smi nounits; field schema retained"
+  },
+  "wrapped_command": [
+    "/workspace/omnivoice-max-concurency/baseline/.venv/bin/python",
+    "/workspace/omnivoice-max-concurency/load/run_v5.py",
+    "--source",
+    "/workspace/omnivoice-max-concurency/candidate-rope-cpu-v3",
+    "--source-ref",
+    "966a9afcf5913c8a4d9a3f29888e95ac2cfff18042356522e5416a805c2e2ccb",
+    "--model",
+    "/workspace/omnivoice-max-concurency/model",
+    "--model-revision",
+    "c5fdb5ccb189668d56333f77ba2629f4cd7535f4",
+    "--references",
+    "/workspace/omnivoice-max-concurency/quality/fused-rope-modern-eager264-v1/references30.json",
+    "--corpus",
+    "/workspace/omnivoice-max-concurency/quality/fused-rope-modern-eager264-v1/corpus132.json",
+    "--plan",
+    "/workspace/omnivoice-max-concurency/quality/fused-rope-modern-eager264-v1/plan132.json",
+    "--label",
+    "modern-fused-rope-eager132-on-v1",
+    "--output",
+    "/workspace/omnivoice-max-concurency/results/modern-fused-rope-eager132-on-v1",
+    "--steps",
+    "16",
+    "--max-cuda-graphs",
+    "0",
+    "--audio-decode-batch-size",
+    "1",
+    "--startup-seed",
+    "20261103",
+    "--response-cache-max-bytes",
+    "0",
+    "--server-extra-flags-json",
+    "[\"--disable-unused-kv-cache\", \"--fused-rope\"]",
+    "--expected-health-json",
+    "{\"runner\": \"triton\", \"disable_unused_kv_cache\": true, \"llm_use_cache\": false, \"split_cfg\": false, \"inference_optimizations.split_cfg_enabled\": false, \"max_cuda_graph_row_tokens\": 0, \"response_cache.enabled\": false, \"sage_attention\": false, \"full_triton_patch\": false, \"cuda_graph_capture_after_calls\": 0, \"fused_rope\": true, \"inference_optimizations.fused_rope_enabled\": true, \"inference_optimizations.fused_rope_ready\": true, \"inference_optimizations.fused_rope_metrics.startup_warmup.CPU_RNG_unchanged\": true, \"inference_optimizations.fused_rope_metrics.startup_warmup.CUDA_RNG_unchanged\": true}",
+    "--runner",
+    "triton",
+    "--startup-timeout",
+    "90",
+    "--phase-timeout",
+    "180",
+    "--request-timeout",
+    "30",
+    "--collect-ms",
+    "0",
+    "--max-batch-requests",
+    "1"
+  ],
+  "tracked_root_pids": [],
+  "scope_notes": [
+    "100% processCPU means oneCPU core",
+    "Host pressure/load may include work outside this container",
+    "CPU MHz is the kernel-reported value, not a guaranteed clock",
+    "GPU timestamps use TZ=UTC; physicalVRAM uses nvidia-smi memory.total. Torch-visibleVRAM is in paired TTS metadata.",
+    "NUMA evidence uses allowed nodes and cgroup memory.numa_stat; no expensive per-process numa_maps walk is performed"
+  ],
+  "wrapped_pid": 213966
+}

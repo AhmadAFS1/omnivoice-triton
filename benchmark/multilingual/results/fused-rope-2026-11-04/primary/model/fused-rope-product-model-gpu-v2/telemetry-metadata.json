@@ -1,0 +1,205 @@
+{
+  "measurement_kind": "Passive OS/NVML telemetry; no CUDA/model imports",
+  "started_utc": "2026-11-04T13:45:31.531463+00:00",
+  "monotonic_ns": 1927430108660982,
+  "sampler_pid": 489484,
+  "platform": "Linux-6.8.0-86-generic-x86_64-with-glibc2.39",
+  "protocol_sha256": "4255dcc5dedbe0bc5bcc022757b38d33f071def47287ba963d795c89799c1e37",
+  "interval_s": 1.0,
+  "thread_detail_limit": 8,
+  "clock_ticks_per_second": 100,
+  "cgroup": {
+    "version": 2,
+    "directory": "/sys/fs/cgroup",
+    "membership": [
+      {
+        "hierarchy": "0",
+        "controllers": "",
+        "path": "/"
+      }
+    ]
+  },
+  "topology": {
+    "cpu_model": "Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz",
+    "logical_host_cpu_count": 72,
+    "sampler_allowed_cpus": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71
+    ],
+    "numa_node_cpu_lists": {
+      "node0": "0-17,36-53",
+      "node1": "18-35,54-71"
+    },
+    "nvidia_pci_numa_affinity": {
+      "0000:03:00.0": {
+        "numa_node": "0\n",
+        "local_cpu_list": "0-17,36-53\n"
+      },
+      "0000:02:00.0": {
+        "numa_node": "0\n",
+        "local_cpu_list": "0-17,36-53\n"
+      },
+      "0000:83:00.0": {
+        "numa_node": "1\n",
+        "local_cpu_list": "18-35,54-71\n"
+      },
+      "0000:82:00.0": {
+        "numa_node": "1\n",
+        "local_cpu_list": "18-35,54-71\n"
+      },
+      "0000:03:00.1": {
+        "numa_node": "0\n",
+        "local_cpu_list": "0-17,36-53\n"
+      },
+      "0000:02:00.1": {
+        "numa_node": "0\n",
+        "local_cpu_list": "0-17,36-53\n"
+      },
+      "0000:83:00.1": {
+        "numa_node": "1\n",
+        "local_cpu_list": "18-35,54-71\n"
+      },
+      "0000:82:00.1": {
+        "numa_node": "1\n",
+        "local_cpu_list": "18-35,54-71\n"
+      }
+    },
+    "physical_memory": "131849504 kB"
+  },
+  "gpu": {
+    "available": true,
+    "fields": [
+      "timestamp",
+      "index",
+      "name",
+      "uuid",
+      "driver_version",
+      "pci.bus_id",
+      "memory.total",
+      "memory.used",
+      "utilization.gpu",
+      "utilization.memory",
+      "power.draw",
+      "power.limit",
+      "temperature.gpu",
+      "clocks.current.sm",
+      "clocks.current.graphics",
+      "clocks.current.memory",
+      "pstate",
+      "clocks_event_reasons.active"
+    ],
+    "command": [
+      "stdbuf",
+      "-oL",
+      "nvidia-smi",
+      "--query-gpu=timestamp,index,name,uuid,driver_version,pci.bus_id,memory.total,memory.used,utilization.gpu,utilization.memory,power.draw,power.limit,temperature.gpu,clocks.current.sm,clocks.current.graphics,clocks.current.memory,pstate,clocks_event_reasons.active",
+      "--format=csv,noheader,nounits",
+      "--loop-ms=1000"
+    ],
+    "pid": 489487,
+    "units": "nvidia-smi nounits; field schema retained"
+  },
+  "wrapped_command": [
+    "timeout",
+    "--signal=INT",
+    "--kill-after=25",
+    "300",
+    "/workspace/omnivoice-max-concurency/baseline/.venv/bin/python",
+    "/workspace/omnivoice-max-concurency/prototypes/run_fused_rope_product_model_probe.py",
+    "--execute",
+    "--parity-only",
+    "--model",
+    "/workspace/omnivoice-max-concurency/model",
+    "--corpus",
+    "/workspace/omnivoice-max-concurency/languages/corpus.json",
+    "--references",
+    "/workspace/omnivoice-max-concurency/languages/references/manifest.json",
+    "--source-ref",
+    "966a9afcf5913c8a4d9a3f29888e95ac2cfff18042356522e5416a805c2e2ccb",
+    "--tensor-gate",
+    "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-raw-gpu-v1",
+    "--gpu-release",
+    "/workspace/omnivoice-max-concurency/FUSED_ROPE_PRODUCT_MODEL_RELEASE_V2.json",
+    "--output",
+    "/workspace/omnivoice-max-concurency/prototypes/fused-rope-product-model-gpu-v2"
+  ],
+  "tracked_root_pids": [],
+  "scope_notes": [
+    "100% processCPU means oneCPU core",
+    "Host pressure/load may include work outside this container",
+    "CPU MHz is the kernel-reported value, not a guaranteed clock",
+    "GPU timestamps use TZ=UTC; physicalVRAM uses nvidia-smi memory.total. Torch-visibleVRAM is in paired TTS metadata.",
+    "NUMA evidence uses allowed nodes and cgroup memory.numa_stat; no expensive per-process numa_maps walk is performed"
+  ],
+  "wrapped_pid": 489490
+}

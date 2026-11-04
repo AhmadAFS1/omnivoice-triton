@@ -1,0 +1,299 @@
+{
+  "started_at": "2026-11-04T13:57:51.533125+00:00",
+  "label": "primary-fused-rope-product-api132-v1-hybrid",
+  "source_ref": "966a9afcf5913c8a4d9a3f29888e95ac2cfff18042356522e5416a805c2e2ccb",
+  "source": {
+    "source_ref": "archive; see --source-ref and source digest",
+    "source_tree_sha256": "cdce417690fecddcc3ed5e7ce6e2e1a783aa90c8fa7dc8a3f3c3c7e226b29459",
+    "files": [
+      {
+        "path": "src/omnivoice_triton/__init__.py",
+        "sha256": "3c0138bd3f9ec486070d75d46d6fc8d82e4284922dc34caa66ba3b8aa60df447"
+      },
+      {
+        "path": "src/omnivoice_triton/cli/__init__.py",
+        "sha256": "7b26600786dcf276ff6dcf9a5dd922465b04583ebc04b176c880527a81f78b82"
+      },
+      {
+        "path": "src/omnivoice_triton/cli/api_server.py",
+        "sha256": "cb2e745a5e6e77a019f479e50d923fb6b8a6abb5bd0da1e3db2a20b165a0c2bc"
+      },
+      {
+        "path": "src/omnivoice_triton/kernels/__init__.py",
+        "sha256": "fb81a896cdde1e229dbe3dfe30743e991df3b4847eb98f459d140279b728afa6"
+      },
+      {
+        "path": "src/omnivoice_triton/kernels/fused_norm_residual.py",
+        "sha256": "c293215514a35871a8ecb8f702748826a61df5f12aa8cbf271e4bc1606765204"
+      },
+      {
+        "path": "src/omnivoice_triton/kernels/rms_norm.py",
+        "sha256": "e14b417ea05cfd454ba91aa40b36eb20f0b56ab11a63c8f6a35764eb125b23d7"
+      },
+      {
+        "path": "src/omnivoice_triton/kernels/rotary.py",
+        "sha256": "1e2126bf7ea6c3c2146f8c87889a3a3c3714976fc9ddb8907d7609ce37ba122c"
+      },
+      {
+        "path": "src/omnivoice_triton/kernels/swiglu.py",
+        "sha256": "46dc719304ca0d0691497dfdb0e67b8bdb89a7a5d4ac192235aafd80c5bdf9d4"
+      },
+      {
+        "path": "src/omnivoice_triton/kernels/utils.py",
+        "sha256": "8fc3f5aaab7c4bf9c4aba9ca9af273ba4fdf967746f2a594940ccde4159588dc"
+      },
+      {
+        "path": "src/omnivoice_triton/models/__init__.py",
+        "sha256": "00d9490528b8dbd54c6a4c2a7d01c64586870fbd3866f885e7e44fb4ec9ad5e1"
+      },
+      {
+        "path": "src/omnivoice_triton/models/base_runner.py",
+        "sha256": "ff46bf494b317607f98d8de219e6684196e23b7464a15cc12327f3c10375880e"
+      },
+      {
+        "path": "src/omnivoice_triton/models/faster_runner.py",
+        "sha256": "702b0f65a22ee3745d92a843b2627ba58a2412668b2b3d2de8c646873170dc99"
+      },
+      {
+        "path": "src/omnivoice_triton/models/graph_memory.py",
+        "sha256": "8a998ab722fbbd013120a13cbf2e940963d82a87899ac8c7a35823f9921ac137"
+      },
+      {
+        "path": "src/omnivoice_triton/models/patching.py",
+        "sha256": "50b2d39035904c11994d40d67775754df46cdb1d952d6b01b14e3894a242d882"
+      },
+      {
+        "path": "src/omnivoice_triton/models/rotary.py",
+        "sha256": "dc740554a9c8b382b13677d35aa7cbdb76b8bea887b78334b06aebad268c6b16"
+      },
+      {
+        "path": "src/omnivoice_triton/models/split_cfg.py",
+        "sha256": "ec197a59c59fc5ace2723524176a85cdb8a00d0b3bf50a21c2988f228f8346f1"
+      },
+      {
+        "path": "src/omnivoice_triton/models/triton_faster_runner.py",
+        "sha256": "c0a9aa7e5e266650b317663ea96e1ea448ff6d17379143ed8b5929a409921fb7"
+      },
+      {
+        "path": "src/omnivoice_triton/models/triton_runner.py",
+        "sha256": "e85cc76e3bc44a302010a163f425702f802f96ced37422dda0e8d163285d174d"
+      },
+      {
+        "path": "src/omnivoice_triton/serving/__init__.py",
+        "sha256": "f324f7744163c8aa17caa8b5cef712db011a879883307320cae9523318fd4a8e"
+      },
+      {
+        "path": "src/omnivoice_triton/serving/batching.py",
+        "sha256": "8e180ec3933ea99d676136deb2db4f096d416f0416c55ca6753fa6a26b3e051c"
+      },
+      {
+        "path": "src/omnivoice_triton/serving/gpu_metrics.py",
+        "sha256": "352a70e997ce6d180bf9bbd186ad67ad6442b9eb76483258e7691d41d68d8c12"
+      },
+      {
+        "path": "src/omnivoice_triton/serving/response_cache.py",
+        "sha256": "1be8585153780b6bc25e154ef127fcfce4afb11d99aaea2aa6e874837196130a"
+      },
+      {
+        "path": "src/omnivoice_triton/serving/sentence_pauses.py",
+        "sha256": "6126a88a103399fb38048a806d9617475433f585c23386c50641527a87d4bbbc"
+      },
+      {
+        "path": "src/omnivoice_triton/serving/worker_lifecycle.py",
+        "sha256": "c04f2760330a5ce9c93287afee8cb93902f60327c5104d8e57469e287902724a"
+      }
+    ]
+  },
+  "hardware": {
+    "collected_at": "2026-11-04T13:57:49.233436+00:00",
+    "python": "3.12.3",
+    "platform": "Linux-6.8.0-86-generic-x86_64-with-glibc2.39",
+    "cpu_logical": 72,
+    "cpu": "Architecture:                         x86_64\nCPU op-mode(s):                       32-bit, 64-bit\nAddress sizes:                        46 bits physical, 48 bits virtual\nByte Order:                           Little Endian\nCPU(s):                               72\nOn-line CPU(s) list:                  0-71\nVendor ID:                            GenuineIntel\nModel name:                           Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz\nCPU family:                           6\nModel:                                79\nThread(s) per core:                   2\nCore(s) per socket:                   18\nSocket(s):                            2\nStepping:                             1\nCPU(s) scaling MHz:                   54%\nCPU max MHz:                          3000.0000\nCPU min MHz:                          1200.0000\nBogoMIPS:                             4599.81\nFlags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 pti intel_ppin ssbd ibrs ibpb stibp tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a rdseed adx smap intel_pt xsaveopt cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts vnmi md_clear flush_l1d\nVirtualization:                       VT-x\nL1d cache:                            1.1 MiB (36 instances)\nL1i cache:                            1.1 MiB (36 instances)\nL2 cache:                             9 MiB (36 instances)\nL3 cache:                             90 MiB (2 instances)\nNUMA node(s):                         2\nNUMA node0 CPU(s):                    0-17,36-53\nNUMA node1 CPU(s):                    18-35,54-71\nVulnerability Gather data sampling:   Not affected\nVulnerability Itlb multihit:          KVM: Mitigation: Split huge pages\nVulnerability L1tf:                   Mitigation; PTE Inversion; VMX conditional cache flushes, SMT vulnerable\nVulnerability Mds:                    Mitigation; Clear CPU buffers; SMT vulnerable\nVulnerability Meltdown:               Mitigation; PTI\nVulnerability Mmio stale data:        Mitigation; Clear CPU buffers; SMT vulnerable\nVulnerability Reg file data sampling: Not affected\nVulnerability Retbleed:               Not affected\nVulnerability Spec rstack overflow:   Not affected\nVulnerability Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:             Mitigation; Retpolines; IBPB conditional; IBRS_FW; STIBP conditional; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected\nVulnerability Srbds:                  Not affected\nVulnerability Tsx async abort:        Mitigation; Clear CPU buffers; SMT vulnerable",
+    "packages": {
+      "torch": "2.8.0+cu128",
+      "torchaudio": "2.8.0+cu128",
+      "triton": "3.4.0",
+      "transformers": "5.5.4",
+      "omnivoice": "0.1.4",
+      "fastapi": "0.136.0",
+      "starlette": "1.0.0",
+      "anyio": "4.12.1",
+      "uvicorn": "0.44.0",
+      "httpx": "0.28.1",
+      "numpy": "2.4.4",
+      "soundfile": "0.13.1"
+    },
+    "torch_cuda_runtime": "12.8",
+    "torch_cuda_devices": [
+      {
+        "index": 0,
+        "name": "NVIDIA GeForce RTX 4070",
+        "visible_vram_bytes": 12450070528,
+        "compute_capability": [
+          8,
+          9
+        ]
+      }
+    ],
+    "nvidia_smi_gpu": "name, uuid, memory.total [MiB], memory.used [MiB], driver_version, power.limit [W]\nNVIDIA GeForce RTX 4070, GPU-6eb0a2a5-d251-a91e-8e98-82bc0e371e33, 12282 MiB, 4 MiB, 580.95.05, 200.00 W",
+    "nvidia_smi_processes": "pid, process_name, used_gpu_memory [MiB]",
+    "physical_vram_evidence": "nvidia-smi memory.total; visible memory independently from torch device properties"
+  },
+  "file_descriptor_limits": {
+    "resource": "RLIMIT_NOFILE",
+    "before_soft_hard": [
+      1024,
+      1048576
+    ],
+    "after_soft_hard": [
+      16384,
+      1048576
+    ],
+    "minimum_required": 4096,
+    "configured_http_connection_cap": 128,
+    "scope": "Only this harness process and its newly spawned descendants",
+    "server_inherits_limit": true
+  },
+  "command": [
+    "/workspace/omnivoice-max-concurency/baseline/.venv/bin/python",
+    "/workspace/omnivoice-max-concurency/load/seeded_server.py",
+    "--seed",
+    "20261103",
+    "--evidence",
+    "/workspace/omnivoice-max-concurency/results/primary-fused-rope-product-api132-v1-hybrid/server-seed.json",
+    "--model",
+    "/workspace/omnivoice-max-concurency/model",
+    "--runner",
+    "hybrid",
+    "--device",
+    "cuda",
+    "--dtype",
+    "fp16",
+    "--no-asr",
+    "--ip",
+    "127.0.0.1",
+    "--port",
+    "18080",
+    "--batch-collect-ms",
+    "5.0",
+    "--max-batch-requests",
+    "8",
+    "--max-pending-requests",
+    "16",
+    "--max-pending-gpu-tasks",
+    "4",
+    "--max-batch-target-tokens",
+    "4096",
+    "--max-batch-conditioning-tokens",
+    "4096",
+    "--batch-bucket-sizes",
+    "1,2,4,8,16,32",
+    "--max-cuda-graphs",
+    "8",
+    "--audio-decode-batch-size",
+    "1",
+    "--response-cache-max-bytes",
+    "0",
+    "--disable-unused-kv-cache",
+    "--max-cuda-graph-row-tokens",
+    "16384",
+    "--cuda-graph-capture-after-calls",
+    "0",
+    "--fused-rope"
+  ],
+  "protocol_sha256": "1a077901bd91b8b7c16bd2424b52519f092935db2de4f74d068e288b1eb89302",
+  "runtime_sha256": "52fc933b64f70f5e6010d17a91b4457b433938afe1d1607e78891bb071e0b1f2",
+  "seed_wrapper_sha256": "72b3860d1e8e70981ae4bcb2f9944d543489f19ab46e23a2083a03b8ac99dfe6",
+  "corpus_sha256": "794e58a0260384c7f9cee6008fb0c6833ee88a8312f313e254dfa9a55b2041a7",
+  "plan_sha256": "c31073d09b9e87e99610fed74099c61fa2ca75ced1a7259e17d2d30e83699429",
+  "requested_args": {
+    "source": "/workspace/omnivoice-max-concurency/candidate-rope-cpu-v3",
+    "corpus": "/workspace/omnivoice-max-concurency/quality/primary-deferred-capture132-v1/corpus132.json",
+    "plan": "/workspace/omnivoice-max-concurency/quality/primary-deferred-capture132-v1/plan132.json",
+    "output": "/workspace/omnivoice-max-concurency/results/primary-fused-rope-product-api132-v1-hybrid",
+    "references": "/workspace/omnivoice-max-concurency/quality/primary-deferred-capture132-v1/references30.json",
+    "source_ref": "966a9afcf5913c8a4d9a3f29888e95ac2cfff18042356522e5416a805c2e2ccb",
+    "model": "/workspace/omnivoice-max-concurency/model",
+    "model_revision": "c5fdb5ccb189668d56333f77ba2629f4cd7535f4",
+    "label": "primary-fused-rope-product-api132-v1-hybrid",
+    "runner": "hybrid",
+    "port": 18080,
+    "steps": 16,
+    "collect_ms": 5.0,
+    "max_batch_requests": 8,
+    "max_pending_requests": 16,
+    "max_pending_gpu_tasks": 4,
+    "max_batch_target_tokens": 4096,
+    "max_batch_conditioning_tokens": 4096,
+    "batch_bucket_sizes": "1,2,4,8,16,32",
+    "max_cuda_graphs": 8,
+    "audio_decode_batch_size": 1,
+    "server_extra_flags_json": "[\"--disable-unused-kv-cache\", \"--max-cuda-graph-row-tokens\", \"16384\", \"--cuda-graph-capture-after-calls\", \"0\", \"--fused-rope\"]",
+    "expected_health_json": "{\"runner\": \"hybrid\", \"disable_unused_kv_cache\": true, \"llm_use_cache\": false, \"split_cfg\": false, \"inference_optimizations.split_cfg_enabled\": false, \"max_cuda_graph_row_tokens\": 16384, \"response_cache.enabled\": false, \"sage_attention\": false, \"full_triton_patch\": false, \"cuda_graph_capture_after_calls\": 0, \"fused_rope\": true, \"inference_optimizations.fused_rope_enabled\": true, \"inference_optimizations.fused_rope_ready\": true, \"inference_optimizations.fused_rope_metrics.startup_warmup.CPU_RNG_unchanged\": true, \"inference_optimizations.fused_rope_metrics.startup_warmup.CUDA_RNG_unchanged\": true}",
+    "response_cache_max_bytes": 0,
+    "response_cache_ttl": null,
+    "startup_seed": 20261103,
+    "connections": 128,
+    "keepalive_expiry": 600,
+    "startup_timeout": 180.0,
+    "request_timeout": 60.0,
+    "phase_timeout": 600.0
+  },
+  "profile": {
+    "generation_defaults": {
+      "num_step": 16,
+      "guidance_scale": 2.0,
+      "t_shift": 0.1,
+      "layer_penalty_factor": 5.0,
+      "position_temperature": 5.0,
+      "class_temperature": 0.0,
+      "speed": 1.0,
+      "duration": null,
+      "denoise": true,
+      "preprocess_prompt": true,
+      "postprocess_mode": "off",
+      "insert_pauses": false
+    },
+    "per_case_options": "Every worker_options value is posted and logged",
+    "identity_schema": "V5 worker fields + text/mode/language/instruct + reference WAV SHA/transcript/preprocess; random UUIDs excluded",
+    "return": "complete WAV"
+  },
+  "interpretation": "All language/mode/reference mappings are explicit. Cached voices do not imply cached generated audio; repeated input is labeled. Only all-HTTP200 completion from the common barrier measures a whole burst. No ASR GPU inference runs during TTS measurement.",
+  "runtime_validation": {
+    "actual_health_checked": {
+      "runner": "hybrid",
+      "device": "cuda",
+      "dtype": "fp16",
+      "batch_collect_ms": 5.0,
+      "max_batch_requests": 8,
+      "max_batch_target_tokens": 4096,
+      "max_batch_conditioning_tokens": 4096,
+      "max_cuda_graphs": 8,
+      "audio_decode_batch_size": 1,
+      "disable_unused_kv_cache": true,
+      "llm_use_cache": false,
+      "split_cfg": false,
+      "inference_optimizations.split_cfg_enabled": false,
+      "max_cuda_graph_row_tokens": 16384,
+      "response_cache.enabled": false,
+      "sage_attention": false,
+      "full_triton_patch": false,
+      "cuda_graph_capture_after_calls": 0,
+      "fused_rope": true,
+      "inference_optimizations.fused_rope_enabled": true,
+      "inference_optimizations.fused_rope_ready": true,
+      "inference_optimizations.fused_rope_metrics.startup_warmup.CPU_RNG_unchanged": true,
+      "inference_optimizations.fused_rope_metrics.startup_warmup.CUDA_RNG_unchanged": true,
+      "response_cache.max_bytes": 0
+    },
+    "startup_seed_evidence": {
+      "requested_seed": 20261103,
+      "torch_initial_seed": 20261103,
+      "cuda_initial_seed": 20261103,
+      "applied_before_module_import": true,
+      "torch_version": "2.8.0+cu128",
+      "note": "Startup seed only; does not enforce deterministic kernels or concurrent scheduling."
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "at": "2026-11-04T14:27:40.160656+00:00",
+  "lease": {
+    "at": "2026-11-04T14:27:40.051249+00:00",
+    "root_authorized_modern264": true,
+    "CPU_IO_quiet": true,
+    "CPU_IO_quiet_at": "2026-11-04T14:26:08+00:00",
+    "release_source": "Language explicit raw5k retained+independentSMIidle/I/Oquiet; Load modernASR held",
+    "raw5k_release_sha256": "b79c1e21d645a60074e79e53b82e253eede847ec3a68a5c3bac016770987e427",
+    "source_ref": "966a9afcf5913c8a4d9a3f29888e95ac2cfff18042356522e5416a805c2e2ccb",
+    "controller_sha256": "e0ce7eb06d18ad460848fe86beb9679f0d34bcf5335c321848c37a173d5ca842",
+    "config_sha256": "431a183e619f1aab2c1de2f16f84598bb987cb407b41ce9f463feeb0ed89b7d0",
+    "fresh_model_files_verified": 13,
+    "model_integrity_sha256": "c718de8e13c31853a26571eaf59f6b62b489a29c669516defaa224900698111b",
+    "baseline_package_map_unchanged": true,
+    "package_count": 109,
+    "fresh_physical_GPU": "NVIDIA GeForce RTX 4070 Ti, GPU-5aada52f-9af2-4506-47f7-75e99aaf51ee, 12282 MiB, 610.57.04, 285.00 W",
+    "compute_processes": "",
+    "setup_seconds": 1.8371103619865607,
+    "scope": "Root-approved modern eagerTriton132OFF+132ON exactWAV pair,300s total; baseline-first order caveat; startup separate"
+  },
+  "config_sha256": "431a183e619f1aab2c1de2f16f84598bb987cb407b41ce9f463feeb0ed89b7d0",
+  "controller_sha256": "e0ce7eb06d18ad460848fe86beb9679f0d34bcf5335c321848c37a173d5ca842"
+}

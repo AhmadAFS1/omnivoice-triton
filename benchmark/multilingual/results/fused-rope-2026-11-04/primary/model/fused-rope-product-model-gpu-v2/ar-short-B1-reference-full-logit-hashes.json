@@ -1,0 +1,1010 @@
+[
+  {
+    "step": 0,
+    "logits": {
+      "shape": [
+        2,
+        8,
+        513,
+        1025
+      ],
+      "stride": [
+        4206600,
+        1025,
+        8200,
+        1
+      ],
+      "dtype": "torch.float16",
+      "sha256": "e77fba89c680a46017714903f05cb3e58451f9591d97fad20d4c9fa57b0f109b"
+    },
+    "inputs": {
+      "input_ids": {
+        "shape": [
+          2,
+          8,
+          513
+        ],
+        "stride": [
+          4104,
+          513,
+          1
+        ],
+        "dtype": "torch.int64",
+        "sha256": "94859442767b1531943812c05dd197dd773e302cffe5b3459ee6f04f780038da"
+      },
+      "audio_mask": {
+        "shape": [
+          2,
+          513
+        ],
+        "stride": [
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "1c2e6ceb08cd04d74017bc8c2eea12b3133fa4c5d9397d06e2e728493e1465c3"
+      },
+      "attention_mask": {
+        "shape": [
+          2,
+          1,
+          513,
+          513
+        ],
+        "stride": [
+          263169,
+          263169,
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "81e9a82af07f1cf0a8c77bf1648b5d891c90d98748ba63391776e20ef472d6aa"
+      }
+    }
+  },
+  {
+    "step": 1,
+    "logits": {
+      "shape": [
+        2,
+        8,
+        513,
+        1025
+      ],
+      "stride": [
+        4206600,
+        1025,
+        8200,
+        1
+      ],
+      "dtype": "torch.float16",
+      "sha256": "d0dab4b2caa045286de211011ef9f457b4e3fb806770225c98a01df602e53734"
+    },
+    "inputs": {
+      "input_ids": {
+        "shape": [
+          2,
+          8,
+          513
+        ],
+        "stride": [
+          4104,
+          513,
+          1
+        ],
+        "dtype": "torch.int64",
+        "sha256": "fb7f507d97355a61482cde8bb3767e375620e90085a75c4f578995d383cb9808"
+      },
+      "audio_mask": {
+        "shape": [
+          2,
+          513
+        ],
+        "stride": [
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "1c2e6ceb08cd04d74017bc8c2eea12b3133fa4c5d9397d06e2e728493e1465c3"
+      },
+      "attention_mask": {
+        "shape": [
+          2,
+          1,
+          513,
+          513
+        ],
+        "stride": [
+          263169,
+          263169,
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "81e9a82af07f1cf0a8c77bf1648b5d891c90d98748ba63391776e20ef472d6aa"
+      }
+    }
+  },
+  {
+    "step": 2,
+    "logits": {
+      "shape": [
+        2,
+        8,
+        513,
+        1025
+      ],
+      "stride": [
+        4206600,
+        1025,
+        8200,
+        1
+      ],
+      "dtype": "torch.float16",
+      "sha256": "47e04f86576579482edf09a67e362bf437be8e97371f6d2d59fc75abe3884bcd"
+    },
+    "inputs": {
+      "input_ids": {
+        "shape": [
+          2,
+          8,
+          513
+        ],
+        "stride": [
+          4104,
+          513,
+          1
+        ],
+        "dtype": "torch.int64",
+        "sha256": "acea1bb3e0e170c25626854b5d9c8585fadce7013b4accc0ff1118e528bccb63"
+      },
+      "audio_mask": {
+        "shape": [
+          2,
+          513
+        ],
+        "stride": [
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "1c2e6ceb08cd04d74017bc8c2eea12b3133fa4c5d9397d06e2e728493e1465c3"
+      },
+      "attention_mask": {
+        "shape": [
+          2,
+          1,
+          513,
+          513
+        ],
+        "stride": [
+          263169,
+          263169,
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "81e9a82af07f1cf0a8c77bf1648b5d891c90d98748ba63391776e20ef472d6aa"
+      }
+    }
+  },
+  {
+    "step": 3,
+    "logits": {
+      "shape": [
+        2,
+        8,
+        513,
+        1025
+      ],
+      "stride": [
+        4206600,
+        1025,
+        8200,
+        1
+      ],
+      "dtype": "torch.float16",
+      "sha256": "b2b60d160b07f9b1f2418d074cd6968cd2dc294beb3abeae09843e5d5235c0e0"
+    },
+    "inputs": {
+      "input_ids": {
+        "shape": [
+          2,
+          8,
+          513
+        ],
+        "stride": [
+          4104,
+          513,
+          1
+        ],
+        "dtype": "torch.int64",
+        "sha256": "40407590e9f602181b3a7fd1db8df6582fd5326ea9ad912fc38665c940b6a2ec"
+      },
+      "audio_mask": {
+        "shape": [
+          2,
+          513
+        ],
+        "stride": [
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "1c2e6ceb08cd04d74017bc8c2eea12b3133fa4c5d9397d06e2e728493e1465c3"
+      },
+      "attention_mask": {
+        "shape": [
+          2,
+          1,
+          513,
+          513
+        ],
+        "stride": [
+          263169,
+          263169,
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "81e9a82af07f1cf0a8c77bf1648b5d891c90d98748ba63391776e20ef472d6aa"
+      }
+    }
+  },
+  {
+    "step": 4,
+    "logits": {
+      "shape": [
+        2,
+        8,
+        513,
+        1025
+      ],
+      "stride": [
+        4206600,
+        1025,
+        8200,
+        1
+      ],
+      "dtype": "torch.float16",
+      "sha256": "8f08a57d13abc00b6387b3ea8ec2f88ff648cfd5b96e144eb09cda1279fe300b"
+    },
+    "inputs": {
+      "input_ids": {
+        "shape": [
+          2,
+          8,
+          513
+        ],
+        "stride": [
+          4104,
+          513,
+          1
+        ],
+        "dtype": "torch.int64",
+        "sha256": "cbc70c2191e8a7fb798a3260f64b58f494ec0415b4c7887d95ccc598ea7028d1"
+      },
+      "audio_mask": {
+        "shape": [
+          2,
+          513
+        ],
+        "stride": [
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "1c2e6ceb08cd04d74017bc8c2eea12b3133fa4c5d9397d06e2e728493e1465c3"
+      },
+      "attention_mask": {
+        "shape": [
+          2,
+          1,
+          513,
+          513
+        ],
+        "stride": [
+          263169,
+          263169,
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "81e9a82af07f1cf0a8c77bf1648b5d891c90d98748ba63391776e20ef472d6aa"
+      }
+    }
+  },
+  {
+    "step": 5,
+    "logits": {
+      "shape": [
+        2,
+        8,
+        513,
+        1025
+      ],
+      "stride": [
+        4206600,
+        1025,
+        8200,
+        1
+      ],
+      "dtype": "torch.float16",
+      "sha256": "6ad48996026ecbabcc36ffbca6fb952068c23e37589ce4a46d0f1b7b1cccb63c"
+    },
+    "inputs": {
+      "input_ids": {
+        "shape": [
+          2,
+          8,
+          513
+        ],
+        "stride": [
+          4104,
+          513,
+          1
+        ],
+        "dtype": "torch.int64",
+        "sha256": "0cb53cd539be5db23e386c23ecfb76eebfe9eb3172e678e4c572aca60f6b56bf"
+      },
+      "audio_mask": {
+        "shape": [
+          2,
+          513
+        ],
+        "stride": [
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "1c2e6ceb08cd04d74017bc8c2eea12b3133fa4c5d9397d06e2e728493e1465c3"
+      },
+      "attention_mask": {
+        "shape": [
+          2,
+          1,
+          513,
+          513
+        ],
+        "stride": [
+          263169,
+          263169,
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "81e9a82af07f1cf0a8c77bf1648b5d891c90d98748ba63391776e20ef472d6aa"
+      }
+    }
+  },
+  {
+    "step": 6,
+    "logits": {
+      "shape": [
+        2,
+        8,
+        513,
+        1025
+      ],
+      "stride": [
+        4206600,
+        1025,
+        8200,
+        1
+      ],
+      "dtype": "torch.float16",
+      "sha256": "c00f0b11f4d83b5dc4b2b3472daa02e8212558643db8d12dc618b183ee74e544"
+    },
+    "inputs": {
+      "input_ids": {
+        "shape": [
+          2,
+          8,
+          513
+        ],
+        "stride": [
+          4104,
+          513,
+          1
+        ],
+        "dtype": "torch.int64",
+        "sha256": "ed4629476fdf01ead2cb961bafafd421da50daa6a173ad3c6562424c08962a8c"
+      },
+      "audio_mask": {
+        "shape": [
+          2,
+          513
+        ],
+        "stride": [
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "1c2e6ceb08cd04d74017bc8c2eea12b3133fa4c5d9397d06e2e728493e1465c3"
+      },
+      "attention_mask": {
+        "shape": [
+          2,
+          1,
+          513,
+          513
+        ],
+        "stride": [
+          263169,
+          263169,
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "81e9a82af07f1cf0a8c77bf1648b5d891c90d98748ba63391776e20ef472d6aa"
+      }
+    }
+  },
+  {
+    "step": 7,
+    "logits": {
+      "shape": [
+        2,
+        8,
+        513,
+        1025
+      ],
+      "stride": [
+        4206600,
+        1025,
+        8200,
+        1
+      ],
+      "dtype": "torch.float16",
+      "sha256": "f59dfd3e5a2d82e95083c4070a0255964225c62f208714daafab3851b78e6af1"
+    },
+    "inputs": {
+      "input_ids": {
+        "shape": [
+          2,
+          8,
+          513
+        ],
+        "stride": [
+          4104,
+          513,
+          1
+        ],
+        "dtype": "torch.int64",
+        "sha256": "ab78b25eae35d4122596db5a88acd640f485cb7f005055a0ca8ecd1e289f5267"
+      },
+      "audio_mask": {
+        "shape": [
+          2,
+          513
+        ],
+        "stride": [
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "1c2e6ceb08cd04d74017bc8c2eea12b3133fa4c5d9397d06e2e728493e1465c3"
+      },
+      "attention_mask": {
+        "shape": [
+          2,
+          1,
+          513,
+          513
+        ],
+        "stride": [
+          263169,
+          263169,
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "81e9a82af07f1cf0a8c77bf1648b5d891c90d98748ba63391776e20ef472d6aa"
+      }
+    }
+  },
+  {
+    "step": 8,
+    "logits": {
+      "shape": [
+        2,
+        8,
+        513,
+        1025
+      ],
+      "stride": [
+        4206600,
+        1025,
+        8200,
+        1
+      ],
+      "dtype": "torch.float16",
+      "sha256": "f535bf04fae59769b0a9be0f1b3f59e5bf2ed8559cf0687ad1fc2d5f81b86803"
+    },
+    "inputs": {
+      "input_ids": {
+        "shape": [
+          2,
+          8,
+          513
+        ],
+        "stride": [
+          4104,
+          513,
+          1
+        ],
+        "dtype": "torch.int64",
+        "sha256": "5bd009822bfc4206006d6c1fd60c3732e76eac6ae1556f141ee04c551afe24fc"
+      },
+      "audio_mask": {
+        "shape": [
+          2,
+          513
+        ],
+        "stride": [
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "1c2e6ceb08cd04d74017bc8c2eea12b3133fa4c5d9397d06e2e728493e1465c3"
+      },
+      "attention_mask": {
+        "shape": [
+          2,
+          1,
+          513,
+          513
+        ],
+        "stride": [
+          263169,
+          263169,
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "81e9a82af07f1cf0a8c77bf1648b5d891c90d98748ba63391776e20ef472d6aa"
+      }
+    }
+  },
+  {
+    "step": 9,
+    "logits": {
+      "shape": [
+        2,
+        8,
+        513,
+        1025
+      ],
+      "stride": [
+        4206600,
+        1025,
+        8200,
+        1
+      ],
+      "dtype": "torch.float16",
+      "sha256": "c2026fd3db92ca1b86eccfd7f93721648ca1f8e9bd4409cf9550bc1359a9020b"
+    },
+    "inputs": {
+      "input_ids": {
+        "shape": [
+          2,
+          8,
+          513
+        ],
+        "stride": [
+          4104,
+          513,
+          1
+        ],
+        "dtype": "torch.int64",
+        "sha256": "5bb1140ad5f83b876c4738d38e1e962d28043ebe793ab58d1dc18cedb8ff4e04"
+      },
+      "audio_mask": {
+        "shape": [
+          2,
+          513
+        ],
+        "stride": [
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "1c2e6ceb08cd04d74017bc8c2eea12b3133fa4c5d9397d06e2e728493e1465c3"
+      },
+      "attention_mask": {
+        "shape": [
+          2,
+          1,
+          513,
+          513
+        ],
+        "stride": [
+          263169,
+          263169,
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "81e9a82af07f1cf0a8c77bf1648b5d891c90d98748ba63391776e20ef472d6aa"
+      }
+    }
+  },
+  {
+    "step": 10,
+    "logits": {
+      "shape": [
+        2,
+        8,
+        513,
+        1025
+      ],
+      "stride": [
+        4206600,
+        1025,
+        8200,
+        1
+      ],
+      "dtype": "torch.float16",
+      "sha256": "22061248059e0d880e3a7672e786e4f65e21903f4dd5cc9b052557aefc2d6741"
+    },
+    "inputs": {
+      "input_ids": {
+        "shape": [
+          2,
+          8,
+          513
+        ],
+        "stride": [
+          4104,
+          513,
+          1
+        ],
+        "dtype": "torch.int64",
+        "sha256": "0bee803e21c77cc37a5c39ef864862784ff1254025783b6a5dd7beb32d9a4db8"
+      },
+      "audio_mask": {
+        "shape": [
+          2,
+          513
+        ],
+        "stride": [
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "1c2e6ceb08cd04d74017bc8c2eea12b3133fa4c5d9397d06e2e728493e1465c3"
+      },
+      "attention_mask": {
+        "shape": [
+          2,
+          1,
+          513,
+          513
+        ],
+        "stride": [
+          263169,
+          263169,
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "81e9a82af07f1cf0a8c77bf1648b5d891c90d98748ba63391776e20ef472d6aa"
+      }
+    }
+  },
+  {
+    "step": 11,
+    "logits": {
+      "shape": [
+        2,
+        8,
+        513,
+        1025
+      ],
+      "stride": [
+        4206600,
+        1025,
+        8200,
+        1
+      ],
+      "dtype": "torch.float16",
+      "sha256": "0e859b722ae0132572fe06a5f911ab3d5cabc6c4237030b00aced2f1c2f460ea"
+    },
+    "inputs": {
+      "input_ids": {
+        "shape": [
+          2,
+          8,
+          513
+        ],
+        "stride": [
+          4104,
+          513,
+          1
+        ],
+        "dtype": "torch.int64",
+        "sha256": "e4a0fe6b40d0ba1311cbe5cae1c07e16d0412050128b7bb41384637940a9becc"
+      },
+      "audio_mask": {
+        "shape": [
+          2,
+          513
+        ],
+        "stride": [
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "1c2e6ceb08cd04d74017bc8c2eea12b3133fa4c5d9397d06e2e728493e1465c3"
+      },
+      "attention_mask": {
+        "shape": [
+          2,
+          1,
+          513,
+          513
+        ],
+        "stride": [
+          263169,
+          263169,
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "81e9a82af07f1cf0a8c77bf1648b5d891c90d98748ba63391776e20ef472d6aa"
+      }
+    }
+  },
+  {
+    "step": 12,
+    "logits": {
+      "shape": [
+        2,
+        8,
+        513,
+        1025
+      ],
+      "stride": [
+        4206600,
+        1025,
+        8200,
+        1
+      ],
+      "dtype": "torch.float16",
+      "sha256": "7600b36c2f34042e5acf0d08b48d005d892876a320e11146f67b56a77bcdff89"
+    },
+    "inputs": {
+      "input_ids": {
+        "shape": [
+          2,
+          8,
+          513
+        ],
+        "stride": [
+          4104,
+          513,
+          1
+        ],
+        "dtype": "torch.int64",
+        "sha256": "7a54df7bc9358c8961fdd7e75a76635f243fcd8d0961d28c8daa7a4a5091c45d"
+      },
+      "audio_mask": {
+        "shape": [
+          2,
+          513
+        ],
+        "stride": [
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "1c2e6ceb08cd04d74017bc8c2eea12b3133fa4c5d9397d06e2e728493e1465c3"
+      },
+      "attention_mask": {
+        "shape": [
+          2,
+          1,
+          513,
+          513
+        ],
+        "stride": [
+          263169,
+          263169,
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "81e9a82af07f1cf0a8c77bf1648b5d891c90d98748ba63391776e20ef472d6aa"
+      }
+    }
+  },
+  {
+    "step": 13,
+    "logits": {
+      "shape": [
+        2,
+        8,
+        513,
+        1025
+      ],
+      "stride": [
+        4206600,
+        1025,
+        8200,
+        1
+      ],
+      "dtype": "torch.float16",
+      "sha256": "0764a7d73b70457346bf35d214b02a68fe539e3c62d9c2419ba5c09edd3e305b"
+    },
+    "inputs": {
+      "input_ids": {
+        "shape": [
+          2,
+          8,
+          513
+        ],
+        "stride": [
+          4104,
+          513,
+          1
+        ],
+        "dtype": "torch.int64",
+        "sha256": "204ba63dfa2dba075cf4add22f6f91a226d06a4bc5a86d9314d613beea38cc2f"
+      },
+      "audio_mask": {
+        "shape": [
+          2,
+          513
+        ],
+        "stride": [
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "1c2e6ceb08cd04d74017bc8c2eea12b3133fa4c5d9397d06e2e728493e1465c3"
+      },
+      "attention_mask": {
+        "shape": [
+          2,
+          1,
+          513,
+          513
+        ],
+        "stride": [
+          263169,
+          263169,
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "81e9a82af07f1cf0a8c77bf1648b5d891c90d98748ba63391776e20ef472d6aa"
+      }
+    }
+  },
+  {
+    "step": 14,
+    "logits": {
+      "shape": [
+        2,
+        8,
+        513,
+        1025
+      ],
+      "stride": [
+        4206600,
+        1025,
+        8200,
+        1
+      ],
+      "dtype": "torch.float16",
+      "sha256": "b1477a8b9cb4eca4072d7915f8872eb91606f18b640d2d887296d744d91d6885"
+    },
+    "inputs": {
+      "input_ids": {
+        "shape": [
+          2,
+          8,
+          513
+        ],
+        "stride": [
+          4104,
+          513,
+          1
+        ],
+        "dtype": "torch.int64",
+        "sha256": "5df0c94310dfa1bef450ac9c272a27c5aefd530a9fb025dab95004a5a636ad44"
+      },
+      "audio_mask": {
+        "shape": [
+          2,
+          513
+        ],
+        "stride": [
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "1c2e6ceb08cd04d74017bc8c2eea12b3133fa4c5d9397d06e2e728493e1465c3"
+      },
+      "attention_mask": {
+        "shape": [
+          2,
+          1,
+          513,
+          513
+        ],
+        "stride": [
+          263169,
+          263169,
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "81e9a82af07f1cf0a8c77bf1648b5d891c90d98748ba63391776e20ef472d6aa"
+      }
+    }
+  },
+  {
+    "step": 15,
+    "logits": {
+      "shape": [
+        2,
+        8,
+        513,
+        1025
+      ],
+      "stride": [
+        4206600,
+        1025,
+        8200,
+        1
+      ],
+      "dtype": "torch.float16",
+      "sha256": "53b432445bae30cf18fc264d4008e0e1fe8aaeda74b1eda9881a92cf67a4a63c"
+    },
+    "inputs": {
+      "input_ids": {
+        "shape": [
+          2,
+          8,
+          513
+        ],
+        "stride": [
+          4104,
+          513,
+          1
+        ],
+        "dtype": "torch.int64",
+        "sha256": "161c4231746098ecb38944c048c7d0a089227b76aac2c6839aa9eb8d52b4b6a1"
+      },
+      "audio_mask": {
+        "shape": [
+          2,
+          513
+        ],
+        "stride": [
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "1c2e6ceb08cd04d74017bc8c2eea12b3133fa4c5d9397d06e2e728493e1465c3"
+      },
+      "attention_mask": {
+        "shape": [
+          2,
+          1,
+          513,
+          513
+        ],
+        "stride": [
+          263169,
+          263169,
+          513,
+          1
+        ],
+        "dtype": "torch.bool",
+        "sha256": "81e9a82af07f1cf0a8c77bf1648b5d891c90d98748ba63391776e20ef472d6aa"
+      }
+    }
+  }
+]
