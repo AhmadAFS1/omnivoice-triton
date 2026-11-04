@@ -1,0 +1,27 @@
+{
+  "started_at": "2026-11-04T20:53:09.040738+00:00",
+  "hardware": {
+    "device_name": "Apple M5 Pro",
+    "max_recommended_working_set_size": 19069665280,
+    "memory_size": 25769803776,
+    "architecture": "applegpu_g17s",
+    "max_buffer_length": 14302248960,
+    "resource_limit": 499000
+  },
+  "measurement_kind": "Offline ASR on Apple M5 Pro integrated GPU; no co-resident ASR on RTX4070 during TTS",
+  "model": "/Users/ahmadsmacair/.cache/huggingface/hub/models--mlx-community--whisper-large-v3-turbo/snapshots/a4aaeec0636e6fef84abdcbe3544cb2bf7e9f6fb",
+  "weight_sha256": "951ed3fc1203e6a62467abb2144a96ce7eafca8fa77e3704fdb8635ff3e7f8a6",
+  "script_sha256": "5709a394eb63e2e09d80e0fc3ef731e1029ecbbe61e3e6546334dec3cb3c0d9a",
+  "packages": {
+    "mlx": "0.32.4",
+    "mlx-whisper": "0.4.3",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "soundfile": "0.14.0"
+  },
+  "model_download_bytes": 0,
+  "inference_API_calls": 0,
+  "expected_supplied_to_recognizer": false,
+  "mapping": "Arabic dialect routes use family hint ar, not dialect-specific validation. All other route codes require exact Whisper support.",
+  "finished_at": "2026-11-04T20:55:01.679503+00:00"
+}

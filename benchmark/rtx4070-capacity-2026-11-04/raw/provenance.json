@@ -1,0 +1,291 @@
+{
+  "utc": "2026-11-04T20:58:46.746060+00:00",
+  "source_ref": "096946d75e2ddcb2797c375b0ee50a1933793b36",
+  "source_archive": {
+    "path": "source.tar.gz",
+    "bytes": 612627,
+    "sha256": "df56850ebb8a730d544ce9beebe3d1196cce06b080c26680689ad67a43a253e1"
+  },
+  "product_python_sources": [
+    {
+      "path": "source/src/omnivoice_triton/__init__.py",
+      "bytes": 2210,
+      "sha256": "3c0138bd3f9ec486070d75d46d6fc8d82e4284922dc34caa66ba3b8aa60df447"
+    },
+    {
+      "path": "source/src/omnivoice_triton/cli/__init__.py",
+      "bytes": 44,
+      "sha256": "7b26600786dcf276ff6dcf9a5dd922465b04583ebc04b176c880527a81f78b82"
+    },
+    {
+      "path": "source/src/omnivoice_triton/cli/api_server.py",
+      "bytes": 111688,
+      "sha256": "cb2e745a5e6e77a019f479e50d923fb6b8a6abb5bd0da1e3db2a20b165a0c2bc"
+    },
+    {
+      "path": "source/src/omnivoice_triton/kernels/__init__.py",
+      "bytes": 1038,
+      "sha256": "fb81a896cdde1e229dbe3dfe30743e991df3b4847eb98f459d140279b728afa6"
+    },
+    {
+      "path": "source/src/omnivoice_triton/kernels/fused_norm_residual.py",
+      "bytes": 4686,
+      "sha256": "c293215514a35871a8ecb8f702748826a61df5f12aa8cbf271e4bc1606765204"
+    },
+    {
+      "path": "source/src/omnivoice_triton/kernels/rms_norm.py",
+      "bytes": 3562,
+      "sha256": "e14b417ea05cfd454ba91aa40b36eb20f0b56ab11a63c8f6a35764eb125b23d7"
+    },
+    {
+      "path": "source/src/omnivoice_triton/kernels/rotary.py",
+      "bytes": 7350,
+      "sha256": "1e2126bf7ea6c3c2146f8c87889a3a3c3714976fc9ddb8907d7609ce37ba122c"
+    },
+    {
+      "path": "source/src/omnivoice_triton/kernels/swiglu.py",
+      "bytes": 3234,
+      "sha256": "46dc719304ca0d0691497dfdb0e67b8bdb89a7a5d4ac192235aafd80c5bdf9d4"
+    },
+    {
+      "path": "source/src/omnivoice_triton/kernels/utils.py",
+      "bytes": 919,
+      "sha256": "8fc3f5aaab7c4bf9c4aba9ca9af273ba4fdf967746f2a594940ccde4159588dc"
+    },
+    {
+      "path": "source/src/omnivoice_triton/models/__init__.py",
+      "bytes": 1392,
+      "sha256": "00d9490528b8dbd54c6a4c2a7d01c64586870fbd3866f885e7e44fb4ec9ad5e1"
+    },
+    {
+      "path": "source/src/omnivoice_triton/models/base_runner.py",
+      "bytes": 31042,
+      "sha256": "ff46bf494b317607f98d8de219e6684196e23b7464a15cc12327f3c10375880e"
+    },
+    {
+      "path": "source/src/omnivoice_triton/models/faster_runner.py",
+      "bytes": 16208,
+      "sha256": "702b0f65a22ee3745d92a843b2627ba58a2412668b2b3d2de8c646873170dc99"
+    },
+    {
+      "path": "source/src/omnivoice_triton/models/graph_memory.py",
+      "bytes": 17195,
+      "sha256": "8a998ab722fbbd013120a13cbf2e940963d82a87899ac8c7a35823f9921ac137"
+    },
+    {
+      "path": "source/src/omnivoice_triton/models/patching.py",
+      "bytes": 15366,
+      "sha256": "50b2d39035904c11994d40d67775754df46cdb1d952d6b01b14e3894a242d882"
+    },
+    {
+      "path": "source/src/omnivoice_triton/models/rotary.py",
+      "bytes": 16280,
+      "sha256": "dc740554a9c8b382b13677d35aa7cbdb76b8bea887b78334b06aebad268c6b16"
+    },
+    {
+      "path": "source/src/omnivoice_triton/models/split_cfg.py",
+      "bytes": 7897,
+      "sha256": "ec197a59c59fc5ace2723524176a85cdb8a00d0b3bf50a21c2988f228f8346f1"
+    },
+    {
+      "path": "source/src/omnivoice_triton/models/triton_faster_runner.py",
+      "bytes": 3955,
+      "sha256": "c0a9aa7e5e266650b317663ea96e1ea448ff6d17379143ed8b5929a409921fb7"
+    },
+    {
+      "path": "source/src/omnivoice_triton/models/triton_runner.py",
+      "bytes": 3004,
+      "sha256": "e85cc76e3bc44a302010a163f425702f802f96ced37422dda0e8d163285d174d"
+    },
+    {
+      "path": "source/src/omnivoice_triton/serving/__init__.py",
+      "bytes": 886,
+      "sha256": "f324f7744163c8aa17caa8b5cef712db011a879883307320cae9523318fd4a8e"
+    },
+    {
+      "path": "source/src/omnivoice_triton/serving/batching.py",
+      "bytes": 30197,
+      "sha256": "8e180ec3933ea99d676136deb2db4f096d416f0416c55ca6753fa6a26b3e051c"
+    },
+    {
+      "path": "source/src/omnivoice_triton/serving/gpu_metrics.py",
+      "bytes": 9015,
+      "sha256": "352a70e997ce6d180bf9bbd186ad67ad6442b9eb76483258e7691d41d68d8c12"
+    },
+    {
+      "path": "source/src/omnivoice_triton/serving/response_cache.py",
+      "bytes": 7971,
+      "sha256": "1be8585153780b6bc25e154ef127fcfce4afb11d99aaea2aa6e874837196130a"
+    },
+    {
+      "path": "source/src/omnivoice_triton/serving/sentence_pauses.py",
+      "bytes": 1094,
+      "sha256": "6126a88a103399fb38048a806d9617475433f585c23386c50641527a87d4bbbc"
+    },
+    {
+      "path": "source/src/omnivoice_triton/serving/worker_lifecycle.py",
+      "bytes": 15152,
+      "sha256": "c04f2760330a5ce9c93287afee8cb93902f60327c5104d8e57469e287902724a"
+    }
+  ],
+  "model_pin": {
+    "repo_id": "k2-fsa/OmniVoice",
+    "revision": "c5fdb5ccb189668d56333f77ba2629f4cd7535f4"
+  },
+  "model_files_hashes_only_not_backed_up": [
+    {
+      "path": "model/.gitattributes",
+      "bytes": 1570,
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930"
+    },
+    {
+      "path": "model/README.md",
+      "bytes": 9424,
+      "sha256": "b5d645a1874baa96a460a0e3a7d5a262811d682d04ce235878a16d5fed287fd3"
+    },
+    {
+      "path": "model/audio_tokenizer/.gitattributes",
+      "bytes": 1519,
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
+    },
+    {
+      "path": "model/audio_tokenizer/LICENSE",
+      "bytes": 9171,
+      "sha256": "ac933dc084d119bd20401956b90d11ae87c248b2da62622cd580d82cdf2fa049"
+    },
+    {
+      "path": "model/audio_tokenizer/README.md",
+      "bytes": 5174,
+      "sha256": "0336368f8274a5ed09f54cee8d56a851ecee96026d9f391a6735762c16608a60"
+    },
+    {
+      "path": "model/audio_tokenizer/config.json",
+      "bytes": 2531,
+      "sha256": "eefb20806f7104e77c9a5277c9df0f9bb8826b08eb1d4e8ab2b9829b6ef9fac1"
+    },
+    {
+      "path": "model/audio_tokenizer/model.safetensors",
+      "bytes": 805665628,
+      "sha256": "fe7c5e8785e0a05833e1bfc3e002ec7f55af21e306b2e7154a448c1f54ccfb0d"
+    },
+    {
+      "path": "model/audio_tokenizer/preprocessor_config.json",
+      "bytes": 206,
+      "sha256": "ae61eea88558608ee2fa86d2aec9fce8d99a5ff75d09cb7651ccce21ae1d9084"
+    },
+    {
+      "path": "model/chat_template.jinja",
+      "bytes": 4168,
+      "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+    },
+    {
+      "path": "model/config.json",
+      "bytes": 2238,
+      "sha256": "5e359117e13b420c5e0c925d4aba650d624767131f1d1746928f8b850d5dc372"
+    },
+    {
+      "path": "model/model.safetensors",
+      "bytes": 2450344112,
+      "sha256": "730839316de585f4c8298ec0e1712efc10fb19c6fa4e36eb741cb8d51ebcf6aa"
+    },
+    {
+      "path": "model/tokenizer.json",
+      "bytes": 11423986,
+      "sha256": "408f669b7e2b045fdf54201d815bd364e6667dbd845115da81239c40bc6dcfd1"
+    },
+    {
+      "path": "model/tokenizer_config.json",
+      "bytes": 533,
+      "sha256": "49f78845596a82bf15c83673794bdf9f76f812b11f60ab6a2239d9be65b00676"
+    }
+  ],
+  "model_bytes": 3267470260,
+  "packages": {
+    "torch": "2.8.0+cu128",
+    "triton": "3.4.0",
+    "omnivoice": "0.1.4",
+    "transformers": "5.5.4",
+    "httpx": "0.28.1",
+    "uvicorn": "0.44.0",
+    "numpy": "2.4.4",
+    "soundfile": "0.13.1"
+  },
+  "final_GPU_idle": true,
+  "final_GPU": "name, uuid, memory.total [MiB], memory.used [MiB], driver_version, power.limit [W]\nNVIDIA GeForce RTX 4070, GPU-794dbd73-3f73-b50b-45b3-8dbce083e264, 12282 MiB, 2 MiB, 615.71.09, 200.00 W\n",
+  "MPS_outcome": {
+    "utc": "2026-11-04T20:57:56.672925+00:00",
+    "status": "completed",
+    "probe_server_list": {
+      "returncode": 0,
+      "stdout": "7022\n",
+      "stderr": ""
+    },
+    "probe_clients": {
+      "7022": {
+        "returncode": 0,
+        "stdout": "6988\n",
+        "stderr": ""
+      }
+    },
+    "verified_probe_client": true,
+    "dual_returncode": 0,
+    "single_mps_returncode": 0,
+    "daemon_quit": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  },
+  "scripts": [
+    {
+      "path": "capture_provenance.py",
+      "bytes": 2719,
+      "sha256": "f233b831707232f361bce1e57d97f17c569558ceeeae20e89b397839f5062d03"
+    },
+    {
+      "path": "ncu_probe.py",
+      "bytes": 419,
+      "sha256": "13689cc439385cd09ed35058ff888e1f2040cfea91fff702a9517d452fe80738"
+    },
+    {
+      "path": "profile_pipeline.py",
+      "bytes": 11491,
+      "sha256": "977ad714bd1425fa25dabb4d519bdd749ec7b59d63f0cac8d334b31d26a45386"
+    },
+    {
+      "path": "run_capacity.py",
+      "bytes": 10967,
+      "sha256": "051a1cd902cb2a77afbfcd69e8753665c22d5c2c966fcc1b9c51a48bbaa3e771"
+    },
+    {
+      "path": "run_capacity_single_executed.py",
+      "bytes": 10649,
+      "sha256": "3e516a6e0223b56c94384a55af6b5625a6f81b40af6e7b6079905bf32c39e730"
+    },
+    {
+      "path": "run_dual.py",
+      "bytes": 6161,
+      "sha256": "41e17c61b97bd2dbfdf12287eb8743371d1a0babdd8416b6eba3987789364be5"
+    },
+    {
+      "path": "run_dual_no_mps_executed.py",
+      "bytes": 5167,
+      "sha256": "d524dab29c95408d93b995c8127c0b249a70a0bf60a9ddcb255ce97382c6b1b0"
+    },
+    {
+      "path": "run_mps.py",
+      "bytes": 5221,
+      "sha256": "5330e1a686a59a6ffd08c273abc3543d9ebde849b7f2a7e1eaec3e674f3b2524"
+    },
+    {
+      "path": "seeded_server.py",
+      "bytes": 1203,
+      "sha256": "72b3860d1e8e70981ae4bcb2f9944d543489f19ab46e23a2083a03b8ac99dfe6"
+    },
+    {
+      "path": "server_observer.py",
+      "bytes": 4116,
+      "sha256": "7a9087c32a7bca6f69afcab96818e83eb9d939250b4a2b80248021f10475bac6"
+    }
+  ]
+}

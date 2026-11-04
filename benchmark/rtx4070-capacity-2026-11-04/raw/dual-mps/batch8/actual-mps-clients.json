@@ -1,0 +1,14 @@
+{
+  "server_list": "7022\n",
+  "stderr": "",
+  "model_processes": [
+    7804,
+    7805
+  ],
+  "clients": {
+    "7022": {
+      "stdout": "7805\n7804\n",
+      "stderr": ""
+    }
+  }
+}

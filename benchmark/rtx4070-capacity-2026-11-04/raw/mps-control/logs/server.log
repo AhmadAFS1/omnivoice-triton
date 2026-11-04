@@ -1,0 +1,838 @@
+[2026-11-04 20:52:05.275 Other INFO  6988] Using MPS V2 protocol
+[2026-11-04 20:52:05.288 Server INFO  7022] Starting MPS Server
+[2026-11-04 20:52:05.288 Server INFO  7022] Attempting to raise file descriptor limit from 1024 to 4096
+[2026-11-04 20:52:05.288 Server INFO  7022] Connected to control daemon on socket: /workspace/omnivoice-4070-rps/mps-control/pipe/control
+[2026-11-04 20:52:05.375 Server INFO  7022] Creating server context on device 0 (NVIDIA GeForce RTX 4070)
+[2026-11-04 20:52:05.454 Server INFO  7022] Created anonymous shared memory region mps.shm.0.7022
+[2026-11-04 20:52:05.454 Server INFO  7022] CUDA MPS Server for Linux/Unix. Binary version: 13040
+[2026-11-04 20:52:05.454 Server INFO  7022] Display Driver version: 615
+[2026-11-04 20:52:05.454 Server INFO  7022] Active Threads Percentage set to 100.0
+[2026-11-04 20:52:05.454 Server INFO  7022] Server Priority set to 0
+[2026-11-04 20:52:05.454 Server INFO  7022] Static Partitioning mode disabled
+[2026-11-04 20:52:05.454 Server INFO  7022] Server has started
+[2026-11-04 20:52:05.454 Client INFO  6988] MPS server type: V2, Compatibility mode: Enabled
+[2026-11-04 20:52:05.454 Server INFO  7022] Received new client request from PID 6988
+[2026-11-04 20:52:05.454 Server INFO  7022] Priority level of client {6988} is: 0 (NORMAL)
+[2026-11-04 20:52:05.454 Server INFO  7022] Client {PID: 6988, Context ID: 0} connected
+[2026-11-04 20:52:05.454 Server INFO  7022] Creating worker thread for client {PID: 6988, Context ID: 0}
+[2026-11-04 20:52:05.468 Client ERROR  6988] No CUDA context is current to the calling thread
+[2026-11-04 20:52:05.468 Client ERROR  6988] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:05.469 Client ERROR  6988] No CUDA context is current to the calling thread
+[2026-11-04 20:52:05.469 Client ERROR  6988] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:05.469 Client ERROR  6988] No CUDA context is current to the calling thread
+[2026-11-04 20:52:05.469 Client ERROR  6988] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:05.490 Client ERROR  6988] No CUDA context is current to the calling thread
+[2026-11-04 20:52:05.490 Client ERROR  6988] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:05.490 Client ERROR  6988] No CUDA context is current to the calling thread
+[2026-11-04 20:52:05.490 Client ERROR  6988] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:05.490 Client ERROR  6988] No CUDA context is current to the calling thread
+[2026-11-04 20:52:05.490 Client ERROR  6988] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:05.505 Client INFO  6988] Attempting to raise file descriptor limit from 1024 to 4096
+[2026-11-04 20:52:05.505 Client INFO  6988] Using MPS V2 protocol
+[2026-11-04 20:52:05.505 Client INFO  6988] MPS server type: V2, Compatibility mode: Enabled
+[2026-11-04 20:52:05.505 Server INFO  7022] Received new client request from PID 6988
+[2026-11-04 20:52:05.505 Server INFO  7022] Priority level of client {6988} is: 0 (NORMAL)
+[2026-11-04 20:52:05.505 Server INFO  7022] Client {PID: 6988, Context ID: 1} connected
+[2026-11-04 20:52:05.505 Server INFO  7022] Creating worker thread for client {PID: 6988, Context ID: 1}
+[2026-11-04 20:52:05.505 Server INFO  7022] Device NVIDIA GeForce RTX 4070 (uuid GPU-794dbd73-3f73-b50b-45b3-8dbce083e264) is associated
+[2026-11-04 20:52:05.505 Server INFO  7022] Status of client {PID: 6988, Context ID: 1} is ACTIVE
+[2026-11-04 20:52:05.506 Client INFO  6988] Static partitioning mode disabled
+[2026-11-04 20:52:05.875 Server ERROR  7022] Message receive failed, assuming the other end is dead
+[2026-11-04 20:52:05.875 Server ERROR  7022] Server failed to receive command: the remote procedural call between the MPS server and the MPS client failed, assuming client {PID: 6988, Context ID: 1} has exited
+[2026-11-04 20:52:05.875 Server WARN  7022] Client {PID: 6988, Context ID: 1} exiting. Number of active client contexts is 0.
+[2026-11-04 20:52:05.942 Server ERROR  7022] Message receive failed, assuming the other end is dead
+[2026-11-04 20:52:05.942 Server ERROR  7022] Server failed to receive command: the remote procedural call between the MPS server and the MPS client failed, assuming client {PID: 6988, Context ID: 0} has exited
+[2026-11-04 20:52:05.942 Server WARN  7022] Client process 6988 disconnected
+[2026-11-04 20:52:07.528 Other INFO  7068] Using MPS V2 protocol
+[2026-11-04 20:52:07.528 Client INFO  7068] MPS server type: V2, Compatibility mode: Enabled
+[2026-11-04 20:52:07.528 Server INFO  7022] Received new client request from PID 7068
+[2026-11-04 20:52:07.528 Server INFO  7022] Priority level of client {7068} is: 0 (NORMAL)
+[2026-11-04 20:52:07.528 Server INFO  7022] Client {PID: 7068, Context ID: 0} connected
+[2026-11-04 20:52:07.529 Server INFO  7022] Creating worker thread for client {PID: 7068, Context ID: 0}
+[2026-11-04 20:52:07.542 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:07.542 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:07.542 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:07.542 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:07.542 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:07.542 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:07.558 Other INFO  7069] Using MPS V2 protocol
+[2026-11-04 20:52:07.558 Client INFO  7069] MPS server type: V2, Compatibility mode: Enabled
+[2026-11-04 20:52:07.558 Server INFO  7022] Received new client request from PID 7069
+[2026-11-04 20:52:07.558 Server INFO  7022] Priority level of client {7069} is: 0 (NORMAL)
+[2026-11-04 20:52:07.558 Server INFO  7022] Client {PID: 7069, Context ID: 0} connected
+[2026-11-04 20:52:07.558 Server INFO  7022] Creating worker thread for client {PID: 7069, Context ID: 0}
+[2026-11-04 20:52:07.566 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:07.566 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:07.566 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:07.566 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:07.566 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:07.566 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:07.571 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:07.571 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:07.571 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:07.571 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:07.571 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:07.571 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:07.592 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:07.592 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:07.592 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:07.592 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:07.592 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:07.592 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.631 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.631 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.680 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.680 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.708 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.708 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.717 Client INFO  7069] Attempting to raise file descriptor limit from 1024 to 4096
+[2026-11-04 20:52:10.717 Client INFO  7069] Using MPS V2 protocol
+[2026-11-04 20:52:10.717 Client INFO  7069] MPS server type: V2, Compatibility mode: Enabled
+[2026-11-04 20:52:10.717 Server INFO  7022] Received new client request from PID 7069
+[2026-11-04 20:52:10.717 Server INFO  7022] Priority level of client {7069} is: 0 (NORMAL)
+[2026-11-04 20:52:10.717 Server INFO  7022] Client {PID: 7069, Context ID: 1} connected
+[2026-11-04 20:52:10.717 Server INFO  7022] Creating worker thread for client {PID: 7069, Context ID: 1}
+[2026-11-04 20:52:10.717 Server INFO  7022] Device NVIDIA GeForce RTX 4070 (uuid GPU-794dbd73-3f73-b50b-45b3-8dbce083e264) is associated
+[2026-11-04 20:52:10.717 Server INFO  7022] Status of client {PID: 7069, Context ID: 1} is ACTIVE
+[2026-11-04 20:52:10.718 Client INFO  7069] Static partitioning mode disabled
+[2026-11-04 20:52:10.757 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.757 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.758 Client INFO  7068] Attempting to raise file descriptor limit from 1024 to 4096
+[2026-11-04 20:52:10.758 Client INFO  7068] Using MPS V2 protocol
+[2026-11-04 20:52:10.770 Client INFO  7068] MPS server type: V2, Compatibility mode: Enabled
+[2026-11-04 20:52:10.770 Server INFO  7022] Received new client request from PID 7068
+[2026-11-04 20:52:10.770 Server INFO  7022] Priority level of client {7068} is: 0 (NORMAL)
+[2026-11-04 20:52:10.770 Server INFO  7022] Client {PID: 7068, Context ID: 1} connected
+[2026-11-04 20:52:10.770 Server INFO  7022] Creating worker thread for client {PID: 7068, Context ID: 1}
+[2026-11-04 20:52:10.770 Server INFO  7022] Device NVIDIA GeForce RTX 4070 (uuid GPU-794dbd73-3f73-b50b-45b3-8dbce083e264) is associated
+[2026-11-04 20:52:10.770 Server INFO  7022] Status of client {PID: 7068, Context ID: 1} is ACTIVE
+[2026-11-04 20:52:10.771 Client INFO  7068] Static partitioning mode disabled
+[2026-11-04 20:52:10.824 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.824 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.824 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.824 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.824 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.824 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.824 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.824 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.824 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.824 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.826 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.826 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.826 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.826 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.826 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.826 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.826 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.826 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.826 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.826 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.830 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.830 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.830 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.830 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.830 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.830 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.830 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.830 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.838 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.838 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.838 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.838 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.838 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.838 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.838 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.838 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.838 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.838 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.841 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.841 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.841 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.841 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.842 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.842 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.842 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.842 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.865 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.865 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.865 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.865 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.865 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.865 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.865 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.865 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.865 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.865 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.865 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.865 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.865 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.865 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.865 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.865 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.865 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.865 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.865 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.865 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.865 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.865 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.865 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.865 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.867 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.867 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.867 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.867 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.885 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.885 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.885 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.885 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.885 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.885 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.885 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.885 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.885 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.885 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.885 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.885 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.885 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.885 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.900 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.900 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.900 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.900 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.915 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.916 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.916 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.916 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.916 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.916 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:10.916 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:10.916 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.022 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.022 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.022 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.022 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.022 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.022 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.022 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.022 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.022 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.022 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.022 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.022 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.023 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.023 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.023 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.023 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.023 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.023 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.023 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.023 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.023 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.023 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.023 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.023 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.023 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.023 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.023 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.023 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.023 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.023 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.023 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.023 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.023 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.023 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.023 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.023 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.023 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.023 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.023 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.023 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.023 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.023 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.060 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.060 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.060 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.060 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.060 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.060 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.060 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.060 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.060 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.060 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.060 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.060 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.060 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.060 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.126 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.126 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.126 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.126 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.126 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.126 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.126 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.126 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.126 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.126 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.126 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.126 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.126 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.126 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.133 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.133 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.133 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.133 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.133 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.133 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.133 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.133 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.133 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.133 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.133 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.133 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.133 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.133 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.139 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.139 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.139 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.139 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.139 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.139 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.139 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.139 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.139 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.139 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.139 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.139 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.139 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.139 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.177 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.177 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.177 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.177 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.177 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.177 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.178 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.178 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.178 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.178 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.178 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.178 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:12.178 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:12.178 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:13.370 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:13.370 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:13.370 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:13.370 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:13.370 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:13.370 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:13.370 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:13.370 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:13.370 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:13.370 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:13.370 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:13.370 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:13.370 Client ERROR  7068] No CUDA context is current to the calling thread
+[2026-11-04 20:52:13.370 Client ERROR  7068] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:14.616 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:14.616 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:14.616 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:14.616 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:14.616 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:14.616 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:14.616 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:14.616 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:14.616 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:14.616 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:14.616 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:14.616 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:52:14.616 Client ERROR  7069] No CUDA context is current to the calling thread
+[2026-11-04 20:52:14.616 Client ERROR  7069] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:53:56.462 Server ERROR  7022] Message receive failed, assuming the other end is dead
+[2026-11-04 20:53:56.462 Server ERROR  7022] Server failed to receive command: the remote procedural call between the MPS server and the MPS client failed, assuming client {PID: 7068, Context ID: 1} has exited
+[2026-11-04 20:53:56.462 Server WARN  7022] Client {PID: 7068, Context ID: 1} exiting. Number of active client contexts is 1.
+[2026-11-04 20:53:56.685 Server ERROR  7022] Message receive failed, assuming the other end is dead
+[2026-11-04 20:53:56.685 Server ERROR  7022] Server failed to receive command: the remote procedural call between the MPS server and the MPS client failed, assuming client {PID: 7068, Context ID: 0} has exited
+[2026-11-04 20:53:56.685 Server WARN  7022] Client process 7068 disconnected
+[2026-11-04 20:53:56.883 Server ERROR  7022] Message receive failed, assuming the other end is dead
+[2026-11-04 20:53:56.883 Server ERROR  7022] Server failed to receive command: the remote procedural call between the MPS server and the MPS client failed, assuming client {PID: 7069, Context ID: 1} has exited
+[2026-11-04 20:53:56.883 Server WARN  7022] Client {PID: 7069, Context ID: 1} exiting. Number of active client contexts is 0.
+[2026-11-04 20:53:57.124 Server ERROR  7022] Message receive failed, assuming the other end is dead
+[2026-11-04 20:53:57.124 Server ERROR  7022] Server failed to receive command: the remote procedural call between the MPS server and the MPS client failed, assuming client {PID: 7069, Context ID: 0} has exited
+[2026-11-04 20:53:57.124 Server WARN  7022] Client process 7069 disconnected
+[2026-11-04 20:53:58.440 Other INFO  7804] Using MPS V2 protocol
+[2026-11-04 20:53:58.441 Client INFO  7804] MPS server type: V2, Compatibility mode: Enabled
+[2026-11-04 20:53:58.441 Server INFO  7022] Received new client request from PID 7804
+[2026-11-04 20:53:58.441 Server INFO  7022] Priority level of client {7804} is: 0 (NORMAL)
+[2026-11-04 20:53:58.441 Server INFO  7022] Client {PID: 7804, Context ID: 0} connected
+[2026-11-04 20:53:58.441 Server INFO  7022] Creating worker thread for client {PID: 7804, Context ID: 0}
+[2026-11-04 20:53:58.452 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:53:58.453 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:53:58.453 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:53:58.453 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:53:58.453 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:53:58.453 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:53:58.453 Other INFO  7805] Using MPS V2 protocol
+[2026-11-04 20:53:58.453 Client INFO  7805] MPS server type: V2, Compatibility mode: Enabled
+[2026-11-04 20:53:58.453 Server INFO  7022] Received new client request from PID 7805
+[2026-11-04 20:53:58.453 Server INFO  7022] Priority level of client {7805} is: 0 (NORMAL)
+[2026-11-04 20:53:58.453 Server INFO  7022] Client {PID: 7805, Context ID: 0} connected
+[2026-11-04 20:53:58.453 Server INFO  7022] Creating worker thread for client {PID: 7805, Context ID: 0}
+[2026-11-04 20:53:58.465 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:53:58.465 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:53:58.465 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:53:58.465 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:53:58.465 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:53:58.465 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:53:58.474 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:53:58.474 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:53:58.474 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:53:58.474 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:53:58.474 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:53:58.474 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:53:58.485 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:53:58.485 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:53:58.485 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:53:58.485 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:53:58.485 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:53:58.485 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.631 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.631 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.656 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.656 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.709 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.709 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.716 Client INFO  7805] Attempting to raise file descriptor limit from 1024 to 4096
+[2026-11-04 20:54:01.716 Client INFO  7805] Using MPS V2 protocol
+[2026-11-04 20:54:01.716 Client INFO  7805] MPS server type: V2, Compatibility mode: Enabled
+[2026-11-04 20:54:01.716 Server INFO  7022] Received new client request from PID 7805
+[2026-11-04 20:54:01.717 Server INFO  7022] Priority level of client {7805} is: 0 (NORMAL)
+[2026-11-04 20:54:01.717 Server INFO  7022] Client {PID: 7805, Context ID: 1} connected
+[2026-11-04 20:54:01.717 Server INFO  7022] Creating worker thread for client {PID: 7805, Context ID: 1}
+[2026-11-04 20:54:01.717 Server INFO  7022] Device NVIDIA GeForce RTX 4070 (uuid GPU-794dbd73-3f73-b50b-45b3-8dbce083e264) is associated
+[2026-11-04 20:54:01.717 Server INFO  7022] Status of client {PID: 7805, Context ID: 1} is ACTIVE
+[2026-11-04 20:54:01.717 Client INFO  7805] Static partitioning mode disabled
+[2026-11-04 20:54:01.733 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.733 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.734 Client INFO  7804] Attempting to raise file descriptor limit from 1024 to 4096
+[2026-11-04 20:54:01.734 Client INFO  7804] Using MPS V2 protocol
+[2026-11-04 20:54:01.734 Client INFO  7804] MPS server type: V2, Compatibility mode: Enabled
+[2026-11-04 20:54:01.734 Server INFO  7022] Received new client request from PID 7804
+[2026-11-04 20:54:01.734 Server INFO  7022] Priority level of client {7804} is: 0 (NORMAL)
+[2026-11-04 20:54:01.734 Server INFO  7022] Client {PID: 7804, Context ID: 1} connected
+[2026-11-04 20:54:01.734 Server INFO  7022] Creating worker thread for client {PID: 7804, Context ID: 1}
+[2026-11-04 20:54:01.735 Server INFO  7022] Device NVIDIA GeForce RTX 4070 (uuid GPU-794dbd73-3f73-b50b-45b3-8dbce083e264) is associated
+[2026-11-04 20:54:01.735 Server INFO  7022] Status of client {PID: 7804, Context ID: 1} is ACTIVE
+[2026-11-04 20:54:01.735 Client INFO  7804] Static partitioning mode disabled
+[2026-11-04 20:54:01.823 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.823 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.823 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.823 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.823 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.823 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.823 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.823 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.823 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.823 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.823 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.823 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.823 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.823 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.823 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.823 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.824 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.824 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.824 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.824 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.824 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.824 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.824 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.824 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.824 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.824 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.824 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.824 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.825 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.825 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.825 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.825 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.825 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.825 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.831 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.831 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.831 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.831 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.834 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.834 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.834 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.834 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.834 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.834 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.834 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.834 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.834 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.834 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.835 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.835 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.835 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.835 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.835 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.835 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.835 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.835 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.835 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.835 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.838 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.838 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.838 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.838 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.847 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.847 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.847 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.847 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.858 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.858 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.858 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.858 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.861 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.861 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.861 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.861 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.861 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.861 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.861 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.861 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.869 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.869 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.869 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.869 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.869 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.869 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.869 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.869 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.869 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.869 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.870 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.870 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.870 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.870 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.896 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.896 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.896 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.896 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.914 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.914 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:01.914 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:01.914 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:02.963 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:02.963 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:02.963 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:02.963 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:02.963 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:02.963 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:02.963 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:02.963 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:02.963 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:02.963 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:02.963 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:02.963 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:02.963 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:02.963 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:02.964 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:02.964 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:02.964 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:02.964 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:02.964 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:02.964 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:02.964 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:02.964 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:02.964 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:02.964 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:02.964 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:02.964 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:02.964 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:02.964 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:02.964 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:02.964 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:02.964 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:02.964 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:02.964 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:02.964 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:02.964 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:02.964 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:02.964 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:02.964 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:02.964 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:02.964 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:02.964 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:02.964 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:02.991 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:02.991 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:02.991 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:02.991 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:02.991 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:02.991 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:02.991 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:02.991 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:02.991 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:02.991 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:02.991 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:02.991 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:02.991 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:02.991 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.032 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.032 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.032 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.032 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.032 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.032 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.032 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.032 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.032 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.032 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.032 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.032 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.032 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.032 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.038 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.038 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.038 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.038 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.038 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.038 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.038 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.038 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.038 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.038 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.038 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.038 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.038 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.038 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.043 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.043 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.043 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.043 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.043 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.043 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.043 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.043 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.043 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.043 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.044 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.044 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.044 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.044 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.059 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.059 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.059 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.059 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.059 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.059 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.059 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.059 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.059 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.059 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.059 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.059 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.059 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.059 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.265 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.265 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.265 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.265 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.265 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.265 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.265 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.265 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.265 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.265 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.265 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.265 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:03.265 Client ERROR  7804] No CUDA context is current to the calling thread
+[2026-11-04 20:54:03.265 Client ERROR  7804] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:04.502 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:04.502 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:04.502 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:04.502 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:04.502 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:04.502 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:04.502 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:04.502 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:04.502 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:04.502 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:04.502 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:04.502 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:54:04.502 Client ERROR  7805] No CUDA context is current to the calling thread
+[2026-11-04 20:54:04.502 Client ERROR  7805] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:53.387 Server ERROR  7022] Message receive failed, assuming the other end is dead
+[2026-11-04 20:55:53.387 Server ERROR  7022] Server failed to receive command: the remote procedural call between the MPS server and the MPS client failed, assuming client {PID: 7804, Context ID: 1} has exited
+[2026-11-04 20:55:53.387 Server WARN  7022] Client {PID: 7804, Context ID: 1} exiting. Number of active client contexts is 1.
+[2026-11-04 20:55:53.631 Server ERROR  7022] Message receive failed, assuming the other end is dead
+[2026-11-04 20:55:53.631 Server ERROR  7022] Server failed to receive command: the remote procedural call between the MPS server and the MPS client failed, assuming client {PID: 7804, Context ID: 0} has exited
+[2026-11-04 20:55:53.631 Server WARN  7022] Client process 7804 disconnected
+[2026-11-04 20:55:53.869 Server ERROR  7022] Message receive failed, assuming the other end is dead
+[2026-11-04 20:55:53.869 Server ERROR  7022] Server failed to receive command: the remote procedural call between the MPS server and the MPS client failed, assuming client {PID: 7805, Context ID: 1} has exited
+[2026-11-04 20:55:53.869 Server WARN  7022] Client {PID: 7805, Context ID: 1} exiting. Number of active client contexts is 0.
+[2026-11-04 20:55:54.122 Server ERROR  7022] Message receive failed, assuming the other end is dead
+[2026-11-04 20:55:54.122 Server ERROR  7022] Server failed to receive command: the remote procedural call between the MPS server and the MPS client failed, assuming client {PID: 7805, Context ID: 0} has exited
+[2026-11-04 20:55:54.122 Server WARN  7022] Client process 7805 disconnected
+[2026-11-04 20:55:55.719 Other INFO  8472] Using MPS V2 protocol
+[2026-11-04 20:55:55.720 Client INFO  8472] MPS server type: V2, Compatibility mode: Enabled
+[2026-11-04 20:55:55.720 Server INFO  7022] Received new client request from PID 8472
+[2026-11-04 20:55:55.720 Server INFO  7022] Priority level of client {8472} is: 0 (NORMAL)
+[2026-11-04 20:55:55.720 Server INFO  7022] Client {PID: 8472, Context ID: 0} connected
+[2026-11-04 20:55:55.720 Server INFO  7022] Creating worker thread for client {PID: 8472, Context ID: 0}
+[2026-11-04 20:55:55.733 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:55.733 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:55.733 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:55.733 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:55.733 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:55.733 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:55.754 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:55.754 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:55.754 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:55.754 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:55.754 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:55.754 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:58.739 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:58.739 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:58.815 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:58.815 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:58.822 Client INFO  8472] Attempting to raise file descriptor limit from 1024 to 4096
+[2026-11-04 20:55:58.822 Client INFO  8472] Using MPS V2 protocol
+[2026-11-04 20:55:58.822 Client INFO  8472] MPS server type: V2, Compatibility mode: Enabled
+[2026-11-04 20:55:58.822 Server INFO  7022] Received new client request from PID 8472
+[2026-11-04 20:55:58.822 Server INFO  7022] Priority level of client {8472} is: 0 (NORMAL)
+[2026-11-04 20:55:58.822 Server INFO  7022] Client {PID: 8472, Context ID: 1} connected
+[2026-11-04 20:55:58.822 Server INFO  7022] Creating worker thread for client {PID: 8472, Context ID: 1}
+[2026-11-04 20:55:58.822 Server INFO  7022] Device NVIDIA GeForce RTX 4070 (uuid GPU-794dbd73-3f73-b50b-45b3-8dbce083e264) is associated
+[2026-11-04 20:55:58.823 Server INFO  7022] Status of client {PID: 8472, Context ID: 1} is ACTIVE
+[2026-11-04 20:55:58.823 Client INFO  8472] Static partitioning mode disabled
+[2026-11-04 20:55:58.902 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:58.902 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:58.902 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:58.902 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:58.902 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:58.902 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:58.902 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:58.902 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:58.903 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:58.903 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:58.903 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:58.903 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:58.903 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:58.903 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:58.903 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:58.903 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:58.903 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:58.903 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:58.903 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:58.903 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:58.904 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:58.904 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:58.904 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:58.904 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:58.904 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:58.904 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:58.904 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:58.904 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:58.917 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:58.917 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:58.917 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:58.917 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:58.918 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:58.918 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:58.918 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:58.918 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:58.921 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:58.921 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:58.921 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:58.921 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:58.921 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:58.921 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:58.921 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:58.921 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:58.921 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:58.921 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:58.968 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:58.968 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:55:58.968 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:55:58.968 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.064 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.064 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.064 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.064 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.064 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.064 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.064 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.064 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.064 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.064 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.064 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.064 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.064 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.064 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.065 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.065 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.065 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.065 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.065 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.065 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.065 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.065 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.065 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.065 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.065 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.065 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.065 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.065 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.076 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.076 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.076 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.076 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.076 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.076 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.076 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.076 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.076 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.076 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.076 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.076 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.076 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.076 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.087 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.087 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.087 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.087 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.087 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.087 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.087 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.087 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.087 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.087 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.087 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.087 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.087 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.087 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.615 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.615 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.615 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.615 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.615 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.615 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.615 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.615 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.615 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.615 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.615 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.615 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:56:00.615 Client ERROR  8472] No CUDA context is current to the calling thread
+[2026-11-04 20:56:00.615 Client ERROR  8472] Returning 201 (CUDA_ERROR_INVALID_CONTEXT) from cuCtxGetDevice
+[2026-11-04 20:57:56.265 Server ERROR  7022] Message receive failed, assuming the other end is dead
+[2026-11-04 20:57:56.265 Server ERROR  7022] Server failed to receive command: the remote procedural call between the MPS server and the MPS client failed, assuming client {PID: 8472, Context ID: 1} has exited
+[2026-11-04 20:57:56.265 Server WARN  7022] Client {PID: 8472, Context ID: 1} exiting. Number of active client contexts is 0.
+[2026-11-04 20:57:56.505 Server ERROR  7022] Message receive failed, assuming the other end is dead
+[2026-11-04 20:57:56.505 Server ERROR  7022] Server failed to receive command: the remote procedural call between the MPS server and the MPS client failed, assuming client {PID: 8472, Context ID: 0} has exited
+[2026-11-04 20:57:56.505 Server WARN  7022] Client process 8472 disconnected
+[2026-11-04 20:57:56.628 Server WARN  7022] Server has been notified to shut down
+[2026-11-04 20:57:56.628 Server INFO  7022] Waiting for current clients to finish
+[2026-11-04 20:57:56.628 Server INFO  7022] Exiting

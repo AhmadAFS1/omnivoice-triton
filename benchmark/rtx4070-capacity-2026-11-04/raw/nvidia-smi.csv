@@ -1,0 +1,2 @@
+name, uuid, memory.total [MiB], driver_version, power.limit [W]
+NVIDIA GeForce RTX 4070, GPU-794dbd73-3f73-b50b-45b3-8dbce083e264, 12282 MiB, 615.71.09, 200.00 W

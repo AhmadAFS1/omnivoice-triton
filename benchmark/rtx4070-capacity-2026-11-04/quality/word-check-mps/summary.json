@@ -1,0 +1,55 @@
+{
+  "total_timed_outputs": 540,
+  "screened": 459,
+  "unsupported_skips": 81,
+  "unique_recognizer_inputs": 404,
+  "phases": {
+    "dual-mps/dual-b1-c2": {
+      "screened": 51,
+      "normalized_exact": 19,
+      "mean_CER": 0.524681810963508
+    },
+    "dual-mps/dual-b1-c32": {
+      "screened": 51,
+      "normalized_exact": 21,
+      "mean_CER": 0.3534469224218252
+    },
+    "dual-mps/dual-b1-c8": {
+      "screened": 51,
+      "normalized_exact": 20,
+      "mean_CER": 0.35966643527425723
+    },
+    "dual-mps/dual-b8-c2": {
+      "screened": 51,
+      "normalized_exact": 19,
+      "mean_CER": 0.524681810963508
+    },
+    "dual-mps/dual-b8-c32": {
+      "screened": 51,
+      "normalized_exact": 21,
+      "mean_CER": 0.45809059125569385
+    },
+    "dual-mps/dual-b8-c8": {
+      "screened": 51,
+      "normalized_exact": 23,
+      "mean_CER": 0.4100170509616116
+    },
+    "single-mps/b1-c1": {
+      "screened": 51,
+      "normalized_exact": 22,
+      "mean_CER": 0.47857953767497163
+    },
+    "single-mps/b1-c32": {
+      "screened": 51,
+      "normalized_exact": 22,
+      "mean_CER": 0.4162496730599219
+    },
+    "single-mps/b1-c8": {
+      "screened": 51,
+      "normalized_exact": 21,
+      "mean_CER": 0.42349051582603664
+    }
+  },
+  "ASR_wall_s": 88.92819875013083,
+  "warning": "Recognition agreement is a diagnostic, not native quality or proof of the spoken words. Unsupported languages not cleared."
+}

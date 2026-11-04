@@ -1,0 +1,83 @@
+/workspace/omnivoice-4070-rps/source/.venv/lib/python3.12/site-packages/pydub/utils.py:300: SyntaxWarning: invalid escape sequence '\('
+  m = re.match('([su]([0-9]{1,2})p?) \(([0-9]{1,2}) bit\)$', token)
+/workspace/omnivoice-4070-rps/source/.venv/lib/python3.12/site-packages/pydub/utils.py:301: SyntaxWarning: invalid escape sequence '\('
+  m2 = re.match('([su]([0-9]{1,2})p?)( \(default\))?$', token)
+/workspace/omnivoice-4070-rps/source/.venv/lib/python3.12/site-packages/pydub/utils.py:310: SyntaxWarning: invalid escape sequence '\('
+  elif re.match('(flt)p?( \(default\))?$', token):
+/workspace/omnivoice-4070-rps/source/.venv/lib/python3.12/site-packages/pydub/utils.py:314: SyntaxWarning: invalid escape sequence '\('
+  elif re.match('(dbl)p?( \(default\))?$', token):
+INFO:     Started server process [3808]
+INFO:     Waiting for application startup.
+2026-11-04 20:39:18,629 omnivoice_triton.models.base_runner INFO: Loading /workspace/omnivoice-4070-rps/model ...
+Loading weights:   0%|          | 0/313 [00:00<?, ?it/s]Loading weights:  62%|██████▏   | 194/313 [00:00<00:00, 1920.31it/s]Loading weights: 100%|██████████| 313/313 [00:00<00:00, 2286.40it/s]
+Loading weights:   0%|          | 0/527 [00:00<?, ?it/s]Loading weights:  69%|██████▊   | 361/527 [00:00<00:00, 3566.00it/s]Loading weights: 100%|██████████| 527/527 [00:00<00:00, 3559.34it/s]
+2026-11-04 20:39:20,270 omnivoice_triton.models.base_runner INFO: Model loaded. VRAM: 1.91 GB
+2026-11-04 20:39:20,276 omnivoice_triton.models.patching INFO: [Partial] Layers [0, 24): 96 RMSNorm, 24 MLP, 24 FusedNormResidual
+2026-11-04 20:39:20,276 omnivoice_triton.models.triton_runner INFO: TritonRunner ready (Triton kernels applied).
+2026-11-04 20:39:20,277 __main__ INFO: API server ready runner=triton model=/workspace/omnivoice-4070-rps/model device=cuda dtype=fp16 asr_loaded=False batch_collect_ms=0.0 max_batch_requests=1 batch_bucket_sizes=[1, 2, 4, 8, 16, 32] full_triton_patch=False decode_postprocess_workers=4 max_cuda_graphs=0 allow_lazy_asr=False prewarm_clone_batch_sizes=[] prewarm_clone_sequence_lengths=[] gpu_metrics_available=True gpu_device=NVIDIA GeForce RTX 4070
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8002 (Press CTRL+C to quit)
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39934 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60242 - "GET /healthz HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-11-04 20:40:18,431 omnivoice_triton.models.base_runner INFO: Model unloaded.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3808]

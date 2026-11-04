@@ -1,0 +1,31 @@
+{
+  "verified_at": "2026-11-04T21:09:21.072387+00:00",
+  "published_entries": 309,
+  "gzip_streams_decompressed_and_source_SHA_verified": 53,
+  "all_published_source_bytes_match_local": true,
+  "profiler_complete_WAV_pairs_exact": 9,
+  "backup": {
+    "verified_at": "2026-11-04T20:59:15.357331+00:00",
+    "files": 2025,
+    "bytes": 376782346,
+    "all_size_and_SHA256_match": true,
+    "product_source_files_match_local": 24,
+    "GPU_idle_before_backup": true,
+    "backup_manifest_sha256": "d3cde48e143ae73ea3bfe6c70c3f2abc7e30cbb1c4644d068e8a11a62bc9c9fd"
+  },
+  "task_rental_absence": {
+    "instance_id": 59158267,
+    "GPU": "RTX 4070",
+    "label": "omnivoice-4070-rps-20261104-rtx-4070",
+    "created_at": "2026-11-04T20:33:59.865402+00:00",
+    "destroyed_at": "2026-11-04T20:59:34.998494+00:00",
+    "absence_verified_at": "2026-11-04T20:59:36.268255+00:00",
+    "recorded_hourly_rate": 0.24851851851851853,
+    "verified_no_task_instances": true,
+    "remaining_task_ids": []
+  },
+  "report_capacity_table_rows_independently_matched": 21,
+  "report_and_bundle_relative_links_checked": 12,
+  "API_full_waveform_hash_decode_signal_checks": 1680,
+  "actual_timed_inference_member_count": 1260
+}

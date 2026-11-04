@@ -1,0 +1,10 @@
+{
+  "source_ref": "096946d75e2ddcb2797c375b0ee50a1933793b36",
+  "source_archive_sha256": "df56850ebb8a730d544ce9beebe3d1196cce06b080c26680689ad67a43a253e1",
+  "goal": "RTX4070 fresh full-WAV completion rate, first second and sustained, plus pipeline/kernel profile",
+  "steps": 16,
+  "cache": false,
+  "fused_rope": false,
+  "split_cfg": false,
+  "rental_max_hours": 1.25
+}

@@ -1,0 +1,2656 @@
+{
+  "scope": "Offline Whisper diagnostic only; no Meta ASR run in this new experiment. No native/speaker/MOS quality certification. Different two-process RNG streams confound paired quality attribution.",
+  "timed_outputs": 1260,
+  "screened_logical_outputs": 1071,
+  "unsupported_skips": 189,
+  "unique_wave_language_recognizer_inputs": 655,
+  "duplicate_transcripts_consistent": true,
+  "single_vs_single_MPS_C1_full_body_exact": 60,
+  "single_vs_single_MPS_C1_pairs": [
+    {
+      "case_id": "ar-short",
+      "language": "ar",
+      "before": "4c81b324b5662abf745a99723ed522033a07649d3c41341afce28591b45e0eb5",
+      "after": "4c81b324b5662abf745a99723ed522033a07649d3c41341afce28591b45e0eb5",
+      "byte_identical": true
+    },
+    {
+      "case_id": "da-short",
+      "language": "da",
+      "before": "a795a325fa93937f30e14633facbb8572bc8c05e951f2c66f1e916bed0a9d527",
+      "after": "a795a325fa93937f30e14633facbb8572bc8c05e951f2c66f1e916bed0a9d527",
+      "byte_identical": true
+    },
+    {
+      "case_id": "de-short",
+      "language": "de",
+      "before": "a2909fe522e7e98611ebecd2248d53fc56734d90a2a6d3f223688b158496fe9b",
+      "after": "a2909fe522e7e98611ebecd2248d53fc56734d90a2a6d3f223688b158496fe9b",
+      "byte_identical": true
+    },
+    {
+      "case_id": "el-short",
+      "language": "el",
+      "before": "83fb6d8bbbe2fb953692cb70125c116ff92e88fc4c5d36c001cc2b08c5813ca0",
+      "after": "83fb6d8bbbe2fb953692cb70125c116ff92e88fc4c5d36c001cc2b08c5813ca0",
+      "byte_identical": true
+    },
+    {
+      "case_id": "en-short",
+      "language": "en",
+      "before": "68eb7ffd220f979d20309d5fe44a43182e90ba267d351e5d7bf522c4e7ba9b58",
+      "after": "68eb7ffd220f979d20309d5fe44a43182e90ba267d351e5d7bf522c4e7ba9b58",
+      "byte_identical": true
+    },
+    {
+      "case_id": "es-short",
+      "language": "es",
+      "before": "d01bcc08d134a16bf5cc5d3d23f7c6bf69f82504ea1b33ad06384e6fa5ab41be",
+      "after": "d01bcc08d134a16bf5cc5d3d23f7c6bf69f82504ea1b33ad06384e6fa5ab41be",
+      "byte_identical": true
+    },
+    {
+      "case_id": "fi-short",
+      "language": "fi",
+      "before": "c463ac11bb79b1ac6504eaa4f32d7c73da35fc7b2fc2aa0e41507252b7eb5be8",
+      "after": "c463ac11bb79b1ac6504eaa4f32d7c73da35fc7b2fc2aa0e41507252b7eb5be8",
+      "byte_identical": true
+    },
+    {
+      "case_id": "fr-short",
+      "language": "fr",
+      "before": "8489fe029bdf9048765e25c4f4161462751ecccb5d5a2c4281a75e3633040575",
+      "after": "8489fe029bdf9048765e25c4f4161462751ecccb5d5a2c4281a75e3633040575",
+      "byte_identical": true
+    },
+    {
+      "case_id": "he-short",
+      "language": "he",
+      "before": "ee562c36b974d4a6c5592fbd599b82e4a0e28bcf8778f993908451623a8284bb",
+      "after": "ee562c36b974d4a6c5592fbd599b82e4a0e28bcf8778f993908451623a8284bb",
+      "byte_identical": true
+    },
+    {
+      "case_id": "hi-short",
+      "language": "hi",
+      "before": "31abe4802c0c1cbbd31029ae58adb8eb050f7cb37a3e07d28fff7c7bd92b2e98",
+      "after": "31abe4802c0c1cbbd31029ae58adb8eb050f7cb37a3e07d28fff7c7bd92b2e98",
+      "byte_identical": true
+    },
+    {
+      "case_id": "it-short",
+      "language": "it",
+      "before": "02b6a08a63842f57402b1e97762589ba32009d2d55c7e568bb641ef49cb261e9",
+      "after": "02b6a08a63842f57402b1e97762589ba32009d2d55c7e568bb641ef49cb261e9",
+      "byte_identical": true
+    },
+    {
+      "case_id": "ja-short",
+      "language": "ja",
+      "before": "0f3fbd4d41214caa28402b041656ce2c53ddf3b25a84710bdb6b3cef9b346279",
+      "after": "0f3fbd4d41214caa28402b041656ce2c53ddf3b25a84710bdb6b3cef9b346279",
+      "byte_identical": true
+    },
+    {
+      "case_id": "ko-short",
+      "language": "ko",
+      "before": "42d5c4376546bac0d707a57deecaffc22caabac08b42a97d595ab374d8120992",
+      "after": "42d5c4376546bac0d707a57deecaffc22caabac08b42a97d595ab374d8120992",
+      "byte_identical": true
+    },
+    {
+      "case_id": "ms-short",
+      "language": "ms",
+      "before": "c1eff857fb97400c4ea3043b48768665202f6e8c771ae97cbe2626c5898b1212",
+      "after": "c1eff857fb97400c4ea3043b48768665202f6e8c771ae97cbe2626c5898b1212",
+      "byte_identical": true
+    },
+    {
+      "case_id": "nl-short",
+      "language": "nl",
+      "before": "32d3c56d7a1b75aa884b828bdf72fc6ea75ee4544bd3336de9601d9f796a5fa9",
+      "after": "32d3c56d7a1b75aa884b828bdf72fc6ea75ee4544bd3336de9601d9f796a5fa9",
+      "byte_identical": true
+    },
+    {
+      "case_id": "no-short",
+      "language": "no",
+      "before": "5b2abfcf265c57bfb0b98da4de5c97339a1484479c577176bd488434b0b257fc",
+      "after": "5b2abfcf265c57bfb0b98da4de5c97339a1484479c577176bd488434b0b257fc",
+      "byte_identical": true
+    },
+    {
+      "case_id": "pl-short",
+      "language": "pl",
+      "before": "3536b4072d360bcb340814072248c500eb4d8a283307dd91856524cc8ace998f",
+      "after": "3536b4072d360bcb340814072248c500eb4d8a283307dd91856524cc8ace998f",
+      "byte_identical": true
+    },
+    {
+      "case_id": "pt-short",
+      "language": "pt",
+      "before": "0c20159186c0ce5a057c45191ec8b103835555e914ae413f0adf9ca48a0358db",
+      "after": "0c20159186c0ce5a057c45191ec8b103835555e914ae413f0adf9ca48a0358db",
+      "byte_identical": true
+    },
+    {
+      "case_id": "ru-short",
+      "language": "ru",
+      "before": "7d34626ab58e98e5328893ede293635fbf52439653d5cbe00978b92cd1a000c5",
+      "after": "7d34626ab58e98e5328893ede293635fbf52439653d5cbe00978b92cd1a000c5",
+      "byte_identical": true
+    },
+    {
+      "case_id": "sv-short",
+      "language": "sv",
+      "before": "6f86386953a0bd3da2b79d2f1e806295d468ff3486be388a92d13c5ff4dea222",
+      "after": "6f86386953a0bd3da2b79d2f1e806295d468ff3486be388a92d13c5ff4dea222",
+      "byte_identical": true
+    },
+    {
+      "case_id": "sw-short",
+      "language": "sw",
+      "before": "129ef93196df7b7db934704082afecfbffc35153aa1515d37d945345b85f1dac",
+      "after": "129ef93196df7b7db934704082afecfbffc35153aa1515d37d945345b85f1dac",
+      "byte_identical": true
+    },
+    {
+      "case_id": "tr-short",
+      "language": "tr",
+      "before": "d8da03e34eefcb4f13274e4fbbf5dfe6dfb484bf504af4b97946227651bd880e",
+      "after": "d8da03e34eefcb4f13274e4fbbf5dfe6dfb484bf504af4b97946227651bd880e",
+      "byte_identical": true
+    },
+    {
+      "case_id": "ur-short",
+      "language": "ur",
+      "before": "96116d7a6aca012bba3b938aa267450bc9a26d4a56bed37ed1d26d72cdd05a0b",
+      "after": "96116d7a6aca012bba3b938aa267450bc9a26d4a56bed37ed1d26d72cdd05a0b",
+      "byte_identical": true
+    },
+    {
+      "case_id": "zh-short",
+      "language": "zh",
+      "before": "8093830d6c778b18b7eba38d7f03e9df6d10ff28fdffc7c3d016010a17ca5189",
+      "after": "8093830d6c778b18b7eba38d7f03e9df6d10ff28fdffc7c3d016010a17ca5189",
+      "byte_identical": true
+    },
+    {
+      "case_id": "bn-short",
+      "language": "bn",
+      "before": "22ef81a8213c21735a1b257c343942af7da3e7e40e8f168de9a9b5add12191fe",
+      "after": "22ef81a8213c21735a1b257c343942af7da3e7e40e8f168de9a9b5add12191fe",
+      "byte_identical": true
+    },
+    {
+      "case_id": "pa-short",
+      "language": "pa",
+      "before": "2b4ab3c455618fde84b3ad486fbf4ec751265ff1e64ca53aa195f7ccd0523c46",
+      "after": "2b4ab3c455618fde84b3ad486fbf4ec751265ff1e64ca53aa195f7ccd0523c46",
+      "byte_identical": true
+    },
+    {
+      "case_id": "yue-short",
+      "language": "yue",
+      "before": "0d4fe9d8eca2bad7b85701c998eabfc7201a198749c66f042116027513aa8b15",
+      "after": "0d4fe9d8eca2bad7b85701c998eabfc7201a198749c66f042116027513aa8b15",
+      "byte_identical": true
+    },
+    {
+      "case_id": "mr-short",
+      "language": "mr",
+      "before": "c01e9669111eb8f7fb50be547f0b8b1d487d53c866f9034927f334bae49ebb4c",
+      "after": "c01e9669111eb8f7fb50be547f0b8b1d487d53c866f9034927f334bae49ebb4c",
+      "byte_identical": true
+    },
+    {
+      "case_id": "jv-short",
+      "language": "jv",
+      "before": "279506aacd55e2b78d7ec0332404a35a8686f470ef6c44fc2f5751be552d2183",
+      "after": "279506aacd55e2b78d7ec0332404a35a8686f470ef6c44fc2f5751be552d2183",
+      "byte_identical": true
+    },
+    {
+      "case_id": "te-short",
+      "language": "te",
+      "before": "cec01a0e97c008e0fba8b6f57d3eee16504e685557351feceacd922f11429af9",
+      "after": "cec01a0e97c008e0fba8b6f57d3eee16504e685557351feceacd922f11429af9",
+      "byte_identical": true
+    },
+    {
+      "case_id": "ta-short",
+      "language": "ta",
+      "before": "43c1ad42b6a9357693be8a889ad1f57ebf0c20131882962db048d13b8331c719",
+      "after": "43c1ad42b6a9357693be8a889ad1f57ebf0c20131882962db048d13b8331c719",
+      "byte_identical": true
+    },
+    {
+      "case_id": "vi-short",
+      "language": "vi",
+      "before": "eb97f666138b9bb1810940c132006bc2e4a98dc3c6132c1c704a4a96a71c4dc3",
+      "after": "eb97f666138b9bb1810940c132006bc2e4a98dc3c6132c1c704a4a96a71c4dc3",
+      "byte_identical": true
+    },
+    {
+      "case_id": "th-short",
+      "language": "th",
+      "before": "b9831e73527bf5df541abb1d5d418c66f3ffb79771b980f4b67f0207d62b77ef",
+      "after": "b9831e73527bf5df541abb1d5d418c66f3ffb79771b980f4b67f0207d62b77ef",
+      "byte_identical": true
+    },
+    {
+      "case_id": "ig-short",
+      "language": "ig",
+      "before": "e1c602b9acedf969ec84b97b169441a35dda30e01ea340b633c1f71d9bf9c465",
+      "after": "e1c602b9acedf969ec84b97b169441a35dda30e01ea340b633c1f71d9bf9c465",
+      "byte_identical": true
+    },
+    {
+      "case_id": "nan-short",
+      "language": "nan",
+      "before": "61bc29e89c978a7714e91e3734170be270652ec8e6b7ecdc4f5b956bafcf2fae",
+      "after": "61bc29e89c978a7714e91e3734170be270652ec8e6b7ecdc4f5b956bafcf2fae",
+      "byte_identical": true
+    },
+    {
+      "case_id": "gu-short",
+      "language": "gu",
+      "before": "cb4d62b1ef03c29e6e0dcc684d55065034fa77c0cb17a14077e5204c5f138f88",
+      "after": "cb4d62b1ef03c29e6e0dcc684d55065034fa77c0cb17a14077e5204c5f138f88",
+      "byte_identical": true
+    },
+    {
+      "case_id": "ha-short",
+      "language": "ha",
+      "before": "b76f64c7e968b7519d12f4a8b4cc8cb3fe08a099193ce4f7b10fb0f9ecfc0888",
+      "after": "b76f64c7e968b7519d12f4a8b4cc8cb3fe08a099193ce4f7b10fb0f9ecfc0888",
+      "byte_identical": true
+    },
+    {
+      "case_id": "bho-short",
+      "language": "bho",
+      "before": "7bcb6e5e247142da383d01d0e246adf52cc93cd1ec7208b8a00527c39d620bb6",
+      "after": "7bcb6e5e247142da383d01d0e246adf52cc93cd1ec7208b8a00527c39d620bb6",
+      "byte_identical": true
+    },
+    {
+      "case_id": "yo-short",
+      "language": "yo",
+      "before": "ce54b661ff9a7a9b95bf45a59d1d1f4ce76a4fa4687212cc55017a7947970981",
+      "after": "ce54b661ff9a7a9b95bf45a59d1d1f4ce76a4fa4687212cc55017a7947970981",
+      "byte_identical": true
+    },
+    {
+      "case_id": "kn-short",
+      "language": "kn",
+      "before": "714be06a7530cdac7647ac8dff9f301b809487c9b012ed2864240c1b95061bb3",
+      "after": "714be06a7530cdac7647ac8dff9f301b809487c9b012ed2864240c1b95061bb3",
+      "byte_identical": true
+    },
+    {
+      "case_id": "id-short",
+      "language": "id",
+      "before": "578377e67b76455b9d86a38b382440f9ea4124fceccd6158f608058bfe4e47b0",
+      "after": "578377e67b76455b9d86a38b382440f9ea4124fceccd6158f608058bfe4e47b0",
+      "byte_identical": true
+    },
+    {
+      "case_id": "ml-short",
+      "language": "ml",
+      "before": "170319cbf2e212e40b72ce61b41c2b7e811f31111e50162b81ab79e38a078b2c",
+      "after": "170319cbf2e212e40b72ce61b41c2b7e811f31111e50162b81ab79e38a078b2c",
+      "byte_identical": true
+    },
+    {
+      "case_id": "ar-DZ-short",
+      "language": "ar-DZ",
+      "before": "f450cb713163670907164166f899d65827e9964c239bbbef7d960c2b39427a05",
+      "after": "f450cb713163670907164166f899d65827e9964c239bbbef7d960c2b39427a05",
+      "byte_identical": true
+    },
+    {
+      "case_id": "mai-short",
+      "language": "mai",
+      "before": "854f7ae965595f3961d3d166ead36daaedf66f9e58cce4a6b6e8aad98bbffb10",
+      "after": "854f7ae965595f3961d3d166ead36daaedf66f9e58cce4a6b6e8aad98bbffb10",
+      "byte_identical": true
+    },
+    {
+      "case_id": "my-short",
+      "language": "my",
+      "before": "174becdd67406b071aed95241ec75b136df68d79316371f99ce80b9c1da93ee3",
+      "after": "174becdd67406b071aed95241ec75b136df68d79316371f99ce80b9c1da93ee3",
+      "byte_identical": true
+    },
+    {
+      "case_id": "ar-SD-short",
+      "language": "ar-SD",
+      "before": "0627185f0f7cd51853ad5614b95af9d426ac44ed114998a2609168b7c565dc29",
+      "after": "0627185f0f7cd51853ad5614b95af9d426ac44ed114998a2609168b7c565dc29",
+      "byte_identical": true
+    },
+    {
+      "case_id": "sd-short",
+      "language": "sd",
+      "before": "2e0aaafdb7a0e8ff23bb71b074d41bb709b73b3289e63900be2752d42f55f257",
+      "after": "2e0aaafdb7a0e8ff23bb71b074d41bb709b73b3289e63900be2752d42f55f257",
+      "byte_identical": true
+    },
+    {
+      "case_id": "am-short",
+      "language": "am",
+      "before": "35b016b46a62936f583feeff2fee3059744b52e17ffa8283b7556b8958405fc5",
+      "after": "35b016b46a62936f583feeff2fee3059744b52e17ffa8283b7556b8958405fc5",
+      "byte_identical": true
+    },
+    {
+      "case_id": "pcm-short",
+      "language": "pcm",
+      "before": "49a17177e941603f67f0cd0e9d8aba674811bc6b3f20ec789c1d92bdf0bea995",
+      "after": "49a17177e941603f67f0cd0e9d8aba674811bc6b3f20ec789c1d92bdf0bea995",
+      "byte_identical": true
+    },
+    {
+      "case_id": "fil-short",
+      "language": "fil",
+      "before": "96d68644a9fc9498d5af7bb642a650daf41074efd3f3e253238e19b6b22ea4f9",
+      "after": "96d68644a9fc9498d5af7bb642a650daf41074efd3f3e253238e19b6b22ea4f9",
+      "byte_identical": true
+    },
+    {
+      "case_id": "uk-short",
+      "language": "uk",
+      "before": "990a2154002c59028907d5ac431fd6dbbce647590091a9682ba349107c82193e",
+      "after": "990a2154002c59028907d5ac431fd6dbbce647590091a9682ba349107c82193e",
+      "byte_identical": true
+    },
+    {
+      "case_id": "skr-short",
+      "language": "skr",
+      "before": "5f933b293a2a77e7f3cbbb24afeec53f318066bb8e903be5054946b19425a80e",
+      "after": "5f933b293a2a77e7f3cbbb24afeec53f318066bb8e903be5054946b19425a80e",
+      "byte_identical": true
+    },
+    {
+      "case_id": "ro-short",
+      "language": "ro",
+      "before": "10309d4704e2309779b9d96666b6b9c8914a8960b08201295dc5a3cb72c1532c",
+      "after": "10309d4704e2309779b9d96666b6b9c8914a8960b08201295dc5a3cb72c1532c",
+      "byte_identical": true
+    },
+    {
+      "case_id": "so-short",
+      "language": "so",
+      "before": "2f06a21b8b5ecb2d508739595e403a4efd7d434a0ed360e0f7089910e45f707c",
+      "after": "2f06a21b8b5ecb2d508739595e403a4efd7d434a0ed360e0f7089910e45f707c",
+      "byte_identical": true
+    },
+    {
+      "case_id": "ceb-short",
+      "language": "ceb",
+      "before": "01c3f56c53cc43bf3d281995847fb88c3e437e66dd506ba3ab47a5964c00e082",
+      "after": "01c3f56c53cc43bf3d281995847fb88c3e437e66dd506ba3ab47a5964c00e082",
+      "byte_identical": true
+    },
+    {
+      "case_id": "lo-short",
+      "language": "lo",
+      "before": "1cfa086a84ef9c30251e71cbc0bb9e5ba71a4c17c137166e0452eb6d07e0bef6",
+      "after": "1cfa086a84ef9c30251e71cbc0bb9e5ba71a4c17c137166e0452eb6d07e0bef6",
+      "byte_identical": true
+    },
+    {
+      "case_id": "ln-short",
+      "language": "ln",
+      "before": "324983d686da9cbed97848e724daa8c5d43d33f7574cf1871893254ff70b67a4",
+      "after": "324983d686da9cbed97848e724daa8c5d43d33f7574cf1871893254ff70b67a4",
+      "byte_identical": true
+    },
+    {
+      "case_id": "ar-EG-short",
+      "language": "ar-EG",
+      "before": "4e87fe8e36f4a1200526d0ece0236a40426906203c0856af6714caaea2e9effd",
+      "after": "4e87fe8e36f4a1200526d0ece0236a40426906203c0856af6714caaea2e9effd",
+      "byte_identical": true
+    },
+    {
+      "case_id": "ar-IQ-short",
+      "language": "ar-IQ",
+      "before": "66d7e151b93f65bfb8ef96c8da1903d0cc97aae4573f99932ea1ce3b29ac685b",
+      "after": "66d7e151b93f65bfb8ef96c8da1903d0cc97aae4573f99932ea1ce3b29ac685b",
+      "byte_identical": true
+    },
+    {
+      "case_id": "hu-short",
+      "language": "hu",
+      "before": "24a69507f88bad97a67fc41d0adea142177a1fe0361fdd6b515e45b68e958668",
+      "after": "24a69507f88bad97a67fc41d0adea142177a1fe0361fdd6b515e45b68e958668",
+      "byte_identical": true
+    }
+  ],
+  "matched_C8_single_to_dual_MPS_supported_pairs": 51,
+  "Whisper_exact_lost": 4,
+  "Whisper_exact_gained": 2,
+  "Whisper_CER_worse": 14,
+  "Whisper_CER_better": 13,
+  "pairs": [
+    {
+      "language": "ar",
+      "expected": "لم يتواجد أحد داخل الشقة.",
+      "reference_id": "ar-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-000",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-000.wav",
+        "sha256": "7d0b640de23be0e64903c97f2abdfec7e5dbd2404c64997e4b3597a2fa95419e",
+        "language": "ar",
+        "hint": "ar",
+        "expected": "لم يتواجد أحد داخل الشقة.",
+        "reference_id": "ar-aoede",
+        "transcript": "لم يتواجد أحد داخل الشقة",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "لم يتواجد أحد داخل الشقة",
+          "asr_wall_s": 0.17781466711312532
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-000",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-000.wav",
+        "sha256": "2449e013d371c4ed2d2e2b8ec618a157ecacc67c619e3e567a3f20bebac192b6",
+        "language": "ar",
+        "hint": "ar",
+        "expected": "لم يتواجد أحد داخل الشقة.",
+        "reference_id": "ar-aoede",
+        "transcript": "لم يتواجد أحد داخل الشقة",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "لم يتواجد أحد داخل الشقة",
+          "asr_wall_s": 0.17869041627272964
+        }
+      }
+    },
+    {
+      "language": "da",
+      "expected": "Der var ikke nogen inde i lejligheden.",
+      "reference_id": "da-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-001",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-001.wav",
+        "sha256": "78ce392328db24164d3061872a856e234ed166c30ed823566ec2a58e43a04df2",
+        "language": "da",
+        "hint": "da",
+        "expected": "Der var ikke nogen inde i lejligheden.",
+        "reference_id": "da-aoede",
+        "transcript": "Der var ikke nogen inde i lejligheden.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "Der var ikke nogen inde i lejligheden.",
+          "asr_wall_s": 0.1751676658168435
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-001",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-001.wav",
+        "sha256": "697a6e60e5dd9dcdeadc6238b2c3a05d8f00a5a97d7fcba9a76ed3b2c745a69c",
+        "language": "da",
+        "hint": "da",
+        "expected": "Der var ikke nogen inde i lejligheden.",
+        "reference_id": "da-aoede",
+        "transcript": "Der var ikke nogen inde i lejligheden.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "Der var ikke nogen inde i lejligheden.",
+          "asr_wall_s": 0.17639595782384276
+        }
+      }
+    },
+    {
+      "language": "de",
+      "expected": "Es befand sich niemand in der Wohnung.",
+      "reference_id": "de-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-002",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-002.wav",
+        "sha256": "66d49bc6a43eaa619fab917859e278d7ad70ab69682639b773cc088b419f9dea",
+        "language": "de",
+        "hint": "de",
+        "expected": "Es befand sich niemand in der Wohnung.",
+        "reference_id": "de-aoede",
+        "transcript": "Es befand sich niemand in der Wohnung.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "Es befand sich niemand in der Wohnung.",
+          "asr_wall_s": 0.16906087519600987
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-002",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-002.wav",
+        "sha256": "f33d4e1f7a065cea81aa74c070f936497943308a2dff8bf04fcd99ffa016560a",
+        "language": "de",
+        "hint": "de",
+        "expected": "Es befand sich niemand in der Wohnung.",
+        "reference_id": "de-aoede",
+        "transcript": "Es befand sich niemand in der Wohnung.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "Es befand sich niemand in der Wohnung.",
+          "asr_wall_s": 0.1701815421693027
+        }
+      }
+    },
+    {
+      "language": "el",
+      "expected": "Μέσα στο διαμέρισμα δεν βρισκόταν κανένας.",
+      "reference_id": "el-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-003",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-003.wav",
+        "sha256": "0f2b0bebd2a7963a45f7d86594703a4385dec02fbacc95d169a281daeac8ed87",
+        "language": "el",
+        "hint": "el",
+        "expected": "Μέσα στο διαμέρισμα δεν βρισκόταν κανένας.",
+        "reference_id": "el-aoede",
+        "transcript": "Μέσα στο διαμέρισμα δεν βρισκόταν κανένας.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "Μέσα στο διαμέρισμα δεν βρισκόταν κανένας.",
+          "asr_wall_s": 0.19507520785555243
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-003",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-003.wav",
+        "sha256": "429010885bd5239ef7be2cefc0f044300b0f4f53fc3344db72e1700627c9703f",
+        "language": "el",
+        "hint": "el",
+        "expected": "Μέσα στο διαμέρισμα δεν βρισκόταν κανένας.",
+        "reference_id": "el-aoede",
+        "transcript": "Μέσα στο διαμέρισμα δεν βρισκόταν κανένας.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "Μέσα στο διαμέρισμα δεν βρισκόταν κανένας.",
+          "asr_wall_s": 0.20044262474402785
+        }
+      }
+    },
+    {
+      "language": "en",
+      "expected": "No one was inside the apartment.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-004",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-004.wav",
+        "sha256": "2b31df2f37ee93d0bd2b8566df36dc9b117222294ebd45ddd7cd71e2e8fd4ab9",
+        "language": "en",
+        "hint": "en",
+        "expected": "No one was inside the apartment.",
+        "reference_id": "en-aoede",
+        "transcript": "No one was inside the apartment.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "No one was inside the apartment.",
+          "asr_wall_s": 0.16589341592043638
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-004",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-004.wav",
+        "sha256": "513c0900dfc9a6cd2f5a870c3e6ff9a6bcfe5fea50e4d0eeaa3b3ebe65edeea8",
+        "language": "en",
+        "hint": "en",
+        "expected": "No one was inside the apartment.",
+        "reference_id": "en-aoede",
+        "transcript": "No one was was inside the apartment.",
+        "normalized_exact": false,
+        "cer": 0.11538461538461539,
+        "quality_certified": false,
+        "asr": {
+          "text": "No one was was inside the apartment.",
+          "asr_wall_s": 0.174645165912807
+        }
+      }
+    },
+    {
+      "language": "es",
+      "expected": "Dentro del apartamento no había nadie.",
+      "reference_id": "es-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-005",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-005.wav",
+        "sha256": "922bab32e7e53ff6586c64a3acd4c8c4eae1e05a2a27fb69ccae6d4c0e953fdc",
+        "language": "es",
+        "hint": "es",
+        "expected": "Dentro del apartamento no había nadie.",
+        "reference_id": "es-aoede",
+        "transcript": "Dentro del apartamento no había nadie.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "Dentro del apartamento no había nadie.",
+          "asr_wall_s": 0.16996229207143188
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-005",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-005.wav",
+        "sha256": "5766bdcede7f8ca01274fded3c2aeb1beb0814351a1579a8177883b56e8667d8",
+        "language": "es",
+        "hint": "es",
+        "expected": "Dentro del apartamento no había nadie.",
+        "reference_id": "es-aoede",
+        "transcript": "Dentro del apartamento no había nadie.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "Dentro del apartamento no había nadie.",
+          "asr_wall_s": 0.17558691697195172
+        }
+      }
+    },
+    {
+      "language": "fi",
+      "expected": "Asunnon sisällä ei ollut ketään.",
+      "reference_id": "fi-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-006",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-006.wav",
+        "sha256": "3ca6e834bdd48bcf5d18903c9fe860244333916bd5addb47791d248bfba2cff9",
+        "language": "fi",
+        "hint": "fi",
+        "expected": "Asunnon sisällä ei ollut ketään.",
+        "reference_id": "fi-aoede",
+        "transcript": "Asunnon sisällä ei ollut ketään.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "Asunnon sisällä ei ollut ketään.",
+          "asr_wall_s": 0.1730956668034196
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-006",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-006.wav",
+        "sha256": "23f76cc8e567568205bf674ccce59499f7b7a9d5c515af38b08733577a78d980",
+        "language": "fi",
+        "hint": "fi",
+        "expected": "Asunnon sisällä ei ollut ketään.",
+        "reference_id": "fi-aoede",
+        "transcript": "Asunnon sisällä ei ollut ketään.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "Asunnon sisällä ei ollut ketään.",
+          "asr_wall_s": 0.19062350038439035
+        }
+      }
+    },
+    {
+      "language": "fr",
+      "expected": "Personne n'était à l'intérieur de l'appartement.",
+      "reference_id": "fr-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-007",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-007.wav",
+        "sha256": "a2b1540b4a93a491f9b74e26f74255cdca54ba2a15ef60e3e6f374a2b07f9bd4",
+        "language": "fr",
+        "hint": "fr",
+        "expected": "Personne n'était à l'intérieur de l'appartement.",
+        "reference_id": "fr-aoede",
+        "transcript": "Personne n'était à l'intérieur de l'appartement.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "Personne n'était à l'intérieur de l'appartement.",
+          "asr_wall_s": 0.1835229997523129
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-007",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-007.wav",
+        "sha256": "878f96eeda43930429f7b560a2a191c7e13317028045240dd6236b37d245328f",
+        "language": "fr",
+        "hint": "fr",
+        "expected": "Personne n'était à l'intérieur de l'appartement.",
+        "reference_id": "fr-aoede",
+        "transcript": "Personne n'était à l'intérieur de l'appartement.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "Personne n'était à l'intérieur de l'appartement.",
+          "asr_wall_s": 0.20354908425360918
+        }
+      }
+    },
+    {
+      "language": "he",
+      "expected": "לא היה איש בתוך הדירה.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-008",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-008.wav",
+        "sha256": "fb8722ad1ca6bec7b8149a74f7fa6f4558be021ed8461462b643faa741abd63f",
+        "language": "he",
+        "hint": "he",
+        "expected": "לא היה איש בתוך הדירה.",
+        "reference_id": "en-aoede",
+        "transcript": "להייה יש בתוך חדירה",
+        "normalized_exact": false,
+        "cer": 0.23529411764705882,
+        "quality_certified": false,
+        "asr": {
+          "text": "להייה יש בתוך חדירה",
+          "asr_wall_s": 0.17061862535774708
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-008",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-008.wav",
+        "sha256": "0da7108616a50c8ba81a00cae7542a14e133d05cab1ec0db8947f6a7255fc111",
+        "language": "he",
+        "hint": "he",
+        "expected": "לא היה איש בתוך הדירה.",
+        "reference_id": "en-aoede",
+        "transcript": "לוהיה איש בתו הדירה",
+        "normalized_exact": false,
+        "cer": 0.11764705882352941,
+        "quality_certified": false,
+        "asr": {
+          "text": "לוהיה איש בתו הדירה",
+          "asr_wall_s": 0.1877157911658287
+        }
+      }
+    },
+    {
+      "language": "hi",
+      "expected": "कोई भी घर की अंदर मौजूद नहीं था |",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-009",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-009.wav",
+        "sha256": "e63853109d7a3a7377f8fcdcfc627732514351ec5e4c43cbeb09fd1637784281",
+        "language": "hi",
+        "hint": "hi",
+        "expected": "कोई भी घर की अंदर मौजूद नहीं था |",
+        "reference_id": "en-aoede",
+        "transcript": "कोई भी घर की अंदर मौजूद नहीं था",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "कोई भी घर की अंदर मौजूद नहीं था",
+          "asr_wall_s": 0.22192149981856346
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-009",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-009.wav",
+        "sha256": "1b94439c967c6d140b0f7ac520e4ebe9b39a8efc4fa12e717425c0d2f8e33a32",
+        "language": "hi",
+        "hint": "hi",
+        "expected": "कोई भी घर की अंदर मौजूद नहीं था |",
+        "reference_id": "en-aoede",
+        "transcript": "कोई भी घर की अंदर माजूद नहीं था",
+        "normalized_exact": false,
+        "cer": 0.041666666666666664,
+        "quality_certified": false,
+        "asr": {
+          "text": "कोई भी घर की अंदर माजूद नहीं था",
+          "asr_wall_s": 0.24042608309537172
+        }
+      }
+    },
+    {
+      "language": "it",
+      "expected": "L'appartamento era vuoto.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-010",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-010.wav",
+        "sha256": "faf10352e9bde619caa1d440030ba2ed321b66663bec8b5f957be72b51fa3576",
+        "language": "it",
+        "hint": "it",
+        "expected": "L'appartamento era vuoto.",
+        "reference_id": "en-aoede",
+        "transcript": "L'appartamento è avuto.",
+        "normalized_exact": false,
+        "cer": 0.14285714285714285,
+        "quality_certified": false,
+        "asr": {
+          "text": "L'appartamento è avuto.",
+          "asr_wall_s": 0.17062450014054775
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-010",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-010.wav",
+        "sha256": "6de324819d96d14db36f5894ba27c46981d060160a7477b005b4f380ec93f86c",
+        "language": "it",
+        "hint": "it",
+        "expected": "L'appartamento era vuoto.",
+        "reference_id": "en-aoede",
+        "transcript": "L'appartamento è avuto.",
+        "normalized_exact": false,
+        "cer": 0.14285714285714285,
+        "quality_certified": false,
+        "asr": {
+          "text": "L'appartamento è avuto.",
+          "asr_wall_s": 0.1736173341050744
+        }
+      }
+    },
+    {
+      "language": "ja",
+      "expected": "アパートには誰もいませんでした。",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-011",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-011.wav",
+        "sha256": "a3a072b4ed9de5853b4c08083bb52594e676b3b8816db4fce2bee76bef6f0948",
+        "language": "ja",
+        "hint": "ja",
+        "expected": "アパートには誰もいませんでした。",
+        "reference_id": "en-aoede",
+        "transcript": "アパートには誰もいませんでした",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "アパートには誰もいませんでした",
+          "asr_wall_s": 0.17174833314493299
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-011",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-011.wav",
+        "sha256": "b3802e685a857cf752dc8d9182164370b6f5049c45d6b6c2a6e1e43a572faf4d",
+        "language": "ja",
+        "hint": "ja",
+        "expected": "アパートには誰もいませんでした。",
+        "reference_id": "en-aoede",
+        "transcript": "アパートには誰もいませんでした。",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "アパートには誰もいませんでした。",
+          "asr_wall_s": 0.17324787518009543
+        }
+      }
+    },
+    {
+      "language": "ko",
+      "expected": "아파트 안에 아무도 없었다.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-012",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-012.wav",
+        "sha256": "fbeb9c705ea4297c42b1348626caf0d45843cf67f1d9e0570ce70c487dbfcd0f",
+        "language": "ko",
+        "hint": "ko",
+        "expected": "아파트 안에 아무도 없었다.",
+        "reference_id": "en-aoede",
+        "transcript": "아파트 안에 아무도 없었다.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "아파트 안에 아무도 없었다.",
+          "asr_wall_s": 0.16718916594982147
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-012",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-012.wav",
+        "sha256": "a802c32204d3ae9e01aef067cd2af3efc475cae98afd6457d38dcb6e5cfb440d",
+        "language": "ko",
+        "hint": "ko",
+        "expected": "아파트 안에 아무도 없었다.",
+        "reference_id": "en-aoede",
+        "transcript": "아파트 안에 아무도 없었다.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "아파트 안에 아무도 없었다.",
+          "asr_wall_s": 0.16837379103526473
+        }
+      }
+    },
+    {
+      "language": "ms",
+      "expected": "Tiada siapa berada di dalam pangsapuri tersebut.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-013",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-013.wav",
+        "sha256": "c94f9b7edce3005732da184a7e775456ce487d4b706024ccf89a51f5da5e095e",
+        "language": "ms",
+        "hint": "ms",
+        "expected": "Tiada siapa berada di dalam pangsapuri tersebut.",
+        "reference_id": "en-aoede",
+        "transcript": "Tiyadasyapa barada didalam pangsapuri tersebut.",
+        "normalized_exact": false,
+        "cer": 0.07317073170731707,
+        "quality_certified": false,
+        "asr": {
+          "text": "Tiyadasyapa barada didalam pangsapuri tersebut.",
+          "asr_wall_s": 0.18515137489885092
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-013",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-013.wav",
+        "sha256": "d15e390d9b103c56831350fd669e828bc90451a643cb0dafc8782508dd4ce4a9",
+        "language": "ms",
+        "hint": "ms",
+        "expected": "Tiada siapa berada di dalam pangsapuri tersebut.",
+        "reference_id": "en-aoede",
+        "transcript": "Tiyadis siapa barata didalam pangsapuri tersebut.",
+        "normalized_exact": false,
+        "cer": 0.12195121951219512,
+        "quality_certified": false,
+        "asr": {
+          "text": "Tiyadis siapa barata didalam pangsapuri tersebut.",
+          "asr_wall_s": 0.1923585832118988
+        }
+      }
+    },
+    {
+      "language": "nl",
+      "expected": "Er was niemand in het appartement.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-014",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-014.wav",
+        "sha256": "f4d704d99c37c350afb77b84e67f5d25887e0f3b1c2ff6896cc9cead5d941fa5",
+        "language": "nl",
+        "hint": "nl",
+        "expected": "Er was niemand in het appartement.",
+        "reference_id": "en-aoede",
+        "transcript": "Er was niemand in het appartement.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "Er was niemand in het appartement.",
+          "asr_wall_s": 0.16929220780730247
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-014",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-014.wav",
+        "sha256": "54512ac53f424f6501fb0903b7e1627b3924019013ec3a6707188f312c589947",
+        "language": "nl",
+        "hint": "nl",
+        "expected": "Er was niemand in het appartement.",
+        "reference_id": "en-aoede",
+        "transcript": "Er was niemand in het appartement.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "Er was niemand in het appartement.",
+          "asr_wall_s": 0.17278004065155983
+        }
+      }
+    },
+    {
+      "language": "no",
+      "expected": "Det var ingen i leiligheten.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-015",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-015.wav",
+        "sha256": "83860fb23cca1d40ce006b7d4512d8ff86f5c03affabf3e5bd2852607a950bff",
+        "language": "no",
+        "hint": "no",
+        "expected": "Det var ingen i leiligheten.",
+        "reference_id": "en-aoede",
+        "transcript": "Det var ingen i leiligheten.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "Det var ingen i leiligheten.",
+          "asr_wall_s": 0.16842283308506012
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-015",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-015.wav",
+        "sha256": "c817a9386db5263373500743972e1041e8e3a5c84ed3fd1157141d118cf2fffe",
+        "language": "no",
+        "hint": "no",
+        "expected": "Det var ingen i leiligheten.",
+        "reference_id": "en-aoede",
+        "transcript": "Det var ingen i leiligheten.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "Det var ingen i leiligheten.",
+          "asr_wall_s": 0.17171470867469907
+        }
+      }
+    },
+    {
+      "language": "pl",
+      "expected": "W mieszkaniu nie było nikogo.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-016",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-016.wav",
+        "sha256": "0a4a77bc907adcfe18a6a92c80f94aa06d24a14d73b102465bbdc90d64be43f9",
+        "language": "pl",
+        "hint": "pl",
+        "expected": "W mieszkaniu nie było nikogo.",
+        "reference_id": "en-aoede",
+        "transcript": "W mieszkaniu nie było deszbiogo.",
+        "normalized_exact": false,
+        "cer": 0.25,
+        "quality_certified": false,
+        "asr": {
+          "text": "W mieszkaniu nie było deszbiogo.",
+          "asr_wall_s": 0.17543700011447072
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-016",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-016.wav",
+        "sha256": "82e6de6aaa20c12a4a150c84b53f7063048fb4aeb0112527954450dd12fa34be",
+        "language": "pl",
+        "hint": "pl",
+        "expected": "W mieszkaniu nie było nikogo.",
+        "reference_id": "en-aoede",
+        "transcript": "W mieszkaniu nie było nikogo.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "W mieszkaniu nie było nikogo.",
+          "asr_wall_s": 0.1715985839255154
+        }
+      }
+    },
+    {
+      "language": "pt",
+      "expected": "Ninguém estava dentro do apartamento.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-017",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-017.wav",
+        "sha256": "3815c715caa27eb4368a3e3e58ffa593e0b6645e9c5bbac5b1da3eb013d8c234",
+        "language": "pt",
+        "hint": "pt",
+        "expected": "Ninguém estava dentro do apartamento.",
+        "reference_id": "en-aoede",
+        "transcript": "Ninguém estava dentro do apartamento.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "Ninguém estava dentro do apartamento.",
+          "asr_wall_s": 0.16877608327195048
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-017",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-017.wav",
+        "sha256": "05fa33975b227dde6d7c7c6d4ffc72e39a3573ba779bf3cb3a8a1d9c52ec39ca",
+        "language": "pt",
+        "hint": "pt",
+        "expected": "Ninguém estava dentro do apartamento.",
+        "reference_id": "en-aoede",
+        "transcript": "Ninguém estava dentro do apartamento.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "Ninguém estava dentro do apartamento.",
+          "asr_wall_s": 0.16837991634383798
+        }
+      }
+    },
+    {
+      "language": "ru",
+      "expected": "В квартире никого не было.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-018",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-018.wav",
+        "sha256": "daeeceb8780d13b0f20fba4a2fd41aa26ef6a4659ef88a15131443405dbb6ea5",
+        "language": "ru",
+        "hint": "ru",
+        "expected": "В квартире никого не было.",
+        "reference_id": "en-aoede",
+        "transcript": "В квартире никого не было.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "В квартире никого не было.",
+          "asr_wall_s": 0.16810933407396078
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-018",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-018.wav",
+        "sha256": "00cfe7505097ee6a5ed5f7ce16f28fe84ae240bdabcecb2e07b241fe54253db9",
+        "language": "ru",
+        "hint": "ru",
+        "expected": "В квартире никого не было.",
+        "reference_id": "en-aoede",
+        "transcript": "В квартире никого не было.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "В квартире никого не было.",
+          "asr_wall_s": 0.16840029181912541
+        }
+      }
+    },
+    {
+      "language": "sv",
+      "expected": "Ingen var i lägenheten.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-019",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-019.wav",
+        "sha256": "c7d10f2afa0e2fa619532bff19cee3e0c481101890e3bcbc627cf145ea576c9e",
+        "language": "sv",
+        "hint": "sv",
+        "expected": "Ingen var i lägenheten.",
+        "reference_id": "en-aoede",
+        "transcript": "Ingen var i lägenheten.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "Ingen var i lägenheten.",
+          "asr_wall_s": 0.17013129079714417
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-019",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-019.wav",
+        "sha256": "21aadd0603235079e84fe752272bdbff8b0a064c844a2968bc53f60b816842c6",
+        "language": "sv",
+        "hint": "sv",
+        "expected": "Ingen var i lägenheten.",
+        "reference_id": "en-aoede",
+        "transcript": "Ingen var i lägenheten.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "Ingen var i lägenheten.",
+          "asr_wall_s": 0.1685775830410421
+        }
+      }
+    },
+    {
+      "language": "sw",
+      "expected": "Hakuna mtu alikuwa ndani ya nyumba.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-020",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-020.wav",
+        "sha256": "4cb2e66f292da7a926e79c8836fbaec2d285c734d8155e023f50423bb5675563",
+        "language": "sw",
+        "hint": "sw",
+        "expected": "Hakuna mtu alikuwa ndani ya nyumba.",
+        "reference_id": "en-aoede",
+        "transcript": "Hakuna amtu alikuandani anyumba.",
+        "normalized_exact": false,
+        "cer": 0.10344827586206896,
+        "quality_certified": false,
+        "asr": {
+          "text": "Hakuna amtu alikuandani anyumba.",
+          "asr_wall_s": 0.17531070904806256
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-020",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-020.wav",
+        "sha256": "f132e770c535c36f69d296da8e9ffe121eebe791d6f8e8e418f1cc8baeccf415",
+        "language": "sw",
+        "hint": "sw",
+        "expected": "Hakuna mtu alikuwa ndani ya nyumba.",
+        "reference_id": "en-aoede",
+        "transcript": "Hakuna mtu alikwan Dani ya nyumba.",
+        "normalized_exact": false,
+        "cer": 0.034482758620689655,
+        "quality_certified": false,
+        "asr": {
+          "text": "Hakuna mtu alikwan Dani ya nyumba.",
+          "asr_wall_s": 0.17517916671931744
+        }
+      }
+    },
+    {
+      "language": "tr",
+      "expected": "Dairenin içinde kimse yoktu.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-021",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-021.wav",
+        "sha256": "4564d216dc0ff6ef9a56bf0aab0891d335e1775c6c59d07abe599dd55049ba78",
+        "language": "tr",
+        "hint": "tr",
+        "expected": "Dairenin içinde kimse yoktu.",
+        "reference_id": "en-aoede",
+        "transcript": "Dyer'nin içinde kimse yoktu.",
+        "normalized_exact": false,
+        "cer": 0.125,
+        "quality_certified": false,
+        "asr": {
+          "text": "Dyer'nin içinde kimse yoktu.",
+          "asr_wall_s": 0.16882704198360443
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-021",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-021.wav",
+        "sha256": "816bce583e2ba8fb4f97904b536399d31c36ccf35c724c594b8820d288ac0ae5",
+        "language": "tr",
+        "hint": "tr",
+        "expected": "Dairenin içinde kimse yoktu.",
+        "reference_id": "en-aoede",
+        "transcript": "Dayanın içinde kimse yoktu.",
+        "normalized_exact": false,
+        "cer": 0.16666666666666666,
+        "quality_certified": false,
+        "asr": {
+          "text": "Dayanın içinde kimse yoktu.",
+          "asr_wall_s": 0.1652559577487409
+        }
+      }
+    },
+    {
+      "language": "ur",
+      "expected": "اپارٹمنٹ کے اندر کوئی موجود نہیں تھا۔",
+      "reference_id": "ur-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-022",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-022.wav",
+        "sha256": "dab383805c8511101aca528e3ddabd6ba3136d3bc532a88319c514dc8e7176da",
+        "language": "ur",
+        "hint": "ur",
+        "expected": "اپارٹمنٹ کے اندر کوئی موجود نہیں تھا۔",
+        "reference_id": "ur-aoede",
+        "transcript": "اپارٹمنٹ کے اندر کوئی موجود نہیں تھا",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "اپارٹمنٹ کے اندر کوئی موجود نہیں تھا",
+          "asr_wall_s": 0.19102624990046024
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-022",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-022.wav",
+        "sha256": "ade951d21d517971f2d34bb3ec57676ee05e4a4b31808e5ed5e5c55cfc6db2d3",
+        "language": "ur",
+        "hint": "ur",
+        "expected": "اپارٹمنٹ کے اندر کوئی موجود نہیں تھا۔",
+        "reference_id": "ur-aoede",
+        "transcript": "اپارٹمنٹ کے اندر کوئی موجود نہیں تھا",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "اپارٹمنٹ کے اندر کوئی موجود نہیں تھا",
+          "asr_wall_s": 0.19113287515938282
+        }
+      }
+    },
+    {
+      "language": "zh",
+      "expected": "公寓里没有人。",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-023",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-023.wav",
+        "sha256": "ea364a4cc0b5322f695d35bb641844449d345da38c9af1f7fc990cba1efd3c80",
+        "language": "zh",
+        "hint": "zh",
+        "expected": "公寓里没有人。",
+        "reference_id": "en-aoede",
+        "transcript": "更有力美容人",
+        "normalized_exact": false,
+        "cer": 0.8333333333333334,
+        "quality_certified": false,
+        "asr": {
+          "text": "更有力美容人",
+          "asr_wall_s": 0.16483208304271102
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-023",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-023.wav",
+        "sha256": "06facfe3368753d2a3a41e86065ca4ed423af01e51f97e6b7f505d09733cd53a",
+        "language": "zh",
+        "hint": "zh",
+        "expected": "公寓里没有人。",
+        "reference_id": "en-aoede",
+        "transcript": "公寓里没有人",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "公寓里没有人",
+          "asr_wall_s": 0.16510995803400874
+        }
+      }
+    },
+    {
+      "language": "bn",
+      "expected": "অ্যাপার্টমেন্টের ভেতরে কেউ ছিল না।",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-024",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-024.wav",
+        "sha256": "ec000fa58d2d4893006542d2b3847993fc10e17778ae7420f4a1e28060b8e70e",
+        "language": "bn",
+        "hint": "bn",
+        "expected": "অ্যাপার্টমেন্টের ভেতরে কেউ ছিল না।",
+        "reference_id": "en-aoede",
+        "transcript": "আপরত মার্ত্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র�",
+        "normalized_exact": false,
+        "cer": 2.8620689655172415,
+        "quality_certified": false,
+        "asr": {
+          "text": "আপরত মার্ত্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র্র�",
+          "asr_wall_s": 0.6069470420479774
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-024",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-024.wav",
+        "sha256": "3c7f764106aaba16a45b5906bf17df38cb802dc0a0c74532eefe6d312c0e7a3c",
+        "language": "bn",
+        "hint": "bn",
+        "expected": "অ্যাপার্টমেন্টের ভেতরে কেউ ছিল না।",
+        "reference_id": "en-aoede",
+        "transcript": "আপরটমন্তের্ের্েটরে কে চিলোনা.",
+        "normalized_exact": false,
+        "cer": 0.5517241379310345,
+        "quality_certified": false,
+        "asr": {
+          "text": "আপরটমন্তের্ের্েটরে কে চিলোনা.",
+          "asr_wall_s": 0.28761725034564734
+        }
+      }
+    },
+    {
+      "language": "pa",
+      "expected": "ਅਪਾਰਟਮੈਂਟ ਦੇ ਅੰਦਰ ਕੋਈ ਵੀ ਨਹੀਂ ਸੀ।",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-025",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-025.wav",
+        "sha256": "8f92f599cd0f7596b86b3ec7e97514d0d47e7bd1d9a667f4c45546c2b401eb7f",
+        "language": "pa",
+        "hint": "pa",
+        "expected": "ਅਪਾਰਟਮੈਂਟ ਦੇ ਅੰਦਰ ਕੋਈ ਵੀ ਨਹੀਂ ਸੀ।",
+        "reference_id": "en-aoede",
+        "transcript": "ਅਪਰਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾ",
+        "normalized_exact": false,
+        "cer": 4.038461538461538,
+        "quality_certified": false,
+        "asr": {
+          "text": "ਅਪਰਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾਟਮਾ",
+          "asr_wall_s": 0.6097837500274181
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-025",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-025.wav",
+        "sha256": "28cc01df1cf8f26996d994081909b9583b2b4669136e2e43ee6386c964cba352",
+        "language": "pa",
+        "hint": "pa",
+        "expected": "ਅਪਾਰਟਮੈਂਟ ਦੇ ਅੰਦਰ ਕੋਈ ਵੀ ਨਹੀਂ ਸੀ।",
+        "reference_id": "en-aoede",
+        "transcript": "ਅਪਾਰਟਮਿਨਟ ਦੇ ਅਂਦਰ ਕੋਈ ਵੀ ਨੀ ਨੀ ਸੀ",
+        "normalized_exact": false,
+        "cer": 0.23076923076923078,
+        "quality_certified": false,
+        "asr": {
+          "text": "ਅਪਾਰਟਮਿਨਟ ਦੇ ਅਂਦਰ ਕੋਈ ਵੀ ਨੀ ਨੀ ਸੀ",
+          "asr_wall_s": 0.28525404119864106
+        }
+      }
+    },
+    {
+      "language": "yue",
+      "expected": "公寓裡空無一人。",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-026",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-026.wav",
+        "sha256": "da1c28b08846f45abf1ae63e30a543e7223e3b11e258f1dc6dc9791c1d8eaa06",
+        "language": "yue",
+        "hint": "yue",
+        "expected": "公寓裡空無一人。",
+        "reference_id": "en-aoede",
+        "transcript": "Gongyu lei hong mo yehzen.",
+        "normalized_exact": false,
+        "cer": 3.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "Gongyu lei hong mo yehzen.",
+          "asr_wall_s": 0.1713485410436988
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-026",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-026.wav",
+        "sha256": "7ce322278d009f72c6e53353cef99ec708f65d25a330de4ea248a41116387bf4",
+        "language": "yue",
+        "hint": "yue",
+        "expected": "公寓裡空無一人。",
+        "reference_id": "en-aoede",
+        "transcript": "Gongyu Lui Hong Mo Yitzen.",
+        "normalized_exact": false,
+        "cer": 3.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "Gongyu Lui Hong Mo Yitzen.",
+          "asr_wall_s": 0.1706803753040731
+        }
+      }
+    },
+    {
+      "language": "mr",
+      "expected": "अपार्टमेंट मध्ये कोणीही नाही.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-027",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-027.wav",
+        "sha256": "20111085b0a9bf9313369303c21c9f3b9ce38c5345938589bc90f0a5ca9cd748",
+        "language": "mr",
+        "hint": "mr",
+        "expected": "अपार्टमेंट मध्ये कोणीही नाही.",
+        "reference_id": "en-aoede",
+        "transcript": "अपार्टमेंट मधे कोणी ही नाही।",
+        "normalized_exact": false,
+        "cer": 0.08,
+        "quality_certified": false,
+        "asr": {
+          "text": "अपार्टमेंट मधे कोणी ही नाही।",
+          "asr_wall_s": 0.21537483390420675
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-027",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-027.wav",
+        "sha256": "f22f0da5796ff15c588e1b6c01665938dddd61ad500a8910015431bbf078b6ab",
+        "language": "mr",
+        "hint": "mr",
+        "expected": "अपार्टमेंट मध्ये कोणीही नाही.",
+        "reference_id": "en-aoede",
+        "transcript": "अपार्टमेंट मधे कोणी ही नहीं",
+        "normalized_exact": false,
+        "cer": 0.16,
+        "quality_certified": false,
+        "asr": {
+          "text": "अपार्टमेंट मधे कोणी ही नहीं",
+          "asr_wall_s": 0.21286824997514486
+        }
+      }
+    },
+    {
+      "language": "te",
+      "expected": "అపార్ట్‌మెంట్ లోపల ఎవరూ లేరు.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-029",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-029.wav",
+        "sha256": "582ecbdc5f6c4a3de5756fcd7278e1cdcc2a7e625726387d6d086ba7016f4143",
+        "language": "te",
+        "hint": "te",
+        "expected": "అపార్ట్‌మెంట్ లోపల ఎవరూ లేరు.",
+        "reference_id": "en-aoede",
+        "transcript": "కారట్మటలా యవరు లిరు.",
+        "normalized_exact": false,
+        "cer": 0.52,
+        "quality_certified": false,
+        "asr": {
+          "text": "కారట్మటలా యవరు లిరు.",
+          "asr_wall_s": 0.22804916743189096
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-029",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-029.wav",
+        "sha256": "89d4dd230fe3f9d57e45fbedc2ab95b0d4ac3243ed48b92e0410df18a7c61301",
+        "language": "te",
+        "hint": "te",
+        "expected": "అపార్ట్‌మెంట్ లోపల ఎవరూ లేరు.",
+        "reference_id": "en-aoede",
+        "transcript": "అపరట్మట్లుపలయరులు.",
+        "normalized_exact": false,
+        "cer": 0.44,
+        "quality_certified": false,
+        "asr": {
+          "text": "అపరట్మట్లుపలయరులు.",
+          "asr_wall_s": 0.2249186672270298
+        }
+      }
+    },
+    {
+      "language": "ta",
+      "expected": "குடியிருப்பினுள் எவரும் இல்லை.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-030",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-030.wav",
+        "sha256": "b749e972ff02f452858e619f7a967cba43186dcad3f871af6ddbd50d8c2e997a",
+        "language": "ta",
+        "hint": "ta",
+        "expected": "குடியிருப்பினுள் எவரும் இல்லை.",
+        "reference_id": "en-aoede",
+        "transcript": "குடியிருபின்லையவரம் இலை",
+        "normalized_exact": false,
+        "cer": 0.3333333333333333,
+        "quality_certified": false,
+        "asr": {
+          "text": "குடியிருபின்லையவரம் இலை",
+          "asr_wall_s": 0.19453662494197488
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-030",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-030.wav",
+        "sha256": "5fb4ca14ff53837dfbc81519d06a711a2081b315fc1088d4afaa41ac4232a1c2",
+        "language": "ta",
+        "hint": "ta",
+        "expected": "குடியிருப்பினுள் எவரும் இல்லை.",
+        "reference_id": "en-aoede",
+        "transcript": "குடியிருப்பின்லியவிருமின்லை",
+        "normalized_exact": false,
+        "cer": 0.2962962962962963,
+        "quality_certified": false,
+        "asr": {
+          "text": "குடியிருப்பின்லியவிருமின்லை",
+          "asr_wall_s": 0.2068610000424087
+        }
+      }
+    },
+    {
+      "language": "vi",
+      "expected": "Không ai có mặt trong căn hộ.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-031",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-031.wav",
+        "sha256": "2e443c5b99c7a1361d06e96373502131b97b5ebb79ab9389ea4c8dfea0f03fe2",
+        "language": "vi",
+        "hint": "vi",
+        "expected": "Không ai có mặt trong căn hộ.",
+        "reference_id": "en-aoede",
+        "transcript": "Không ai có mặt trong căn hộ",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "Không ai có mặt trong căn hộ",
+          "asr_wall_s": 0.1710099158808589
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-031",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-031.wav",
+        "sha256": "69429760f522b5e4388803808c0d2261973e04a64ef01035d961ed3ac7ffea40",
+        "language": "vi",
+        "hint": "vi",
+        "expected": "Không ai có mặt trong căn hộ.",
+        "reference_id": "en-aoede",
+        "transcript": "Không ai khó mặt trong căn hộ",
+        "normalized_exact": false,
+        "cer": 0.09090909090909091,
+        "quality_certified": false,
+        "asr": {
+          "text": "Không ai khó mặt trong căn hộ",
+          "asr_wall_s": 0.173375082667917
+        }
+      }
+    },
+    {
+      "language": "th",
+      "expected": "ไม่มีใครอยู่ในอะพาร์ตเมนต์สักคน",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-032",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-032.wav",
+        "sha256": "36700d9d7db86dc99db68d1a2cd3477d942c4c11be4db7a51e87bb729026a60d",
+        "language": "th",
+        "hint": "th",
+        "expected": "ไม่มีใครอยู่ในอะพาร์ตเมนต์สักคน",
+        "reference_id": "en-aoede",
+        "transcript": "ไม่มีคลาอยู่ในอัพทมนสักคุณ",
+        "normalized_exact": false,
+        "cer": 0.41935483870967744,
+        "quality_certified": false,
+        "asr": {
+          "text": "ไม่มีคลาอยู่ในอัพทมนสักคุณ",
+          "asr_wall_s": 0.19943508366122842
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-032",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-032.wav",
+        "sha256": "8839371ffdfd79d908ba3a44c823a33bb1e41a90ea34863ce564232ab03a377f",
+        "language": "th",
+        "hint": "th",
+        "expected": "ไม่มีใครอยู่ในอะพาร์ตเมนต์สักคน",
+        "reference_id": "en-aoede",
+        "transcript": "ไม่มีความเจอดีกว่า มีสักควน",
+        "normalized_exact": false,
+        "cer": 0.6129032258064516,
+        "quality_certified": false,
+        "asr": {
+          "text": "ไม่มีความเจอดีกว่า มีสักควน",
+          "asr_wall_s": 0.20298295794054866
+        }
+      }
+    },
+    {
+      "language": "gu",
+      "expected": "ઍપાર્ટમેન્ટની અંદર કોઈ ન હતું.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-035",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-035.wav",
+        "sha256": "908150381aa3ebe749e3dc58fc462b306ca8dd836932a0d80cf5b5f339cddfd8",
+        "language": "gu",
+        "hint": "gu",
+        "expected": "ઍપાર્ટમેન્ટની અંદર કોઈ ન હતું.",
+        "reference_id": "en-aoede",
+        "transcript": "એપારટમેટની અંદર કોઈ ના હતું",
+        "normalized_exact": false,
+        "cer": 0.2,
+        "quality_certified": false,
+        "asr": {
+          "text": "એપારટમેટની અંદર કોઈ ના હતું",
+          "asr_wall_s": 0.29973066598176956
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-035",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-035.wav",
+        "sha256": "7063b847f34e79b89905046a53f2f7dc82c91ee678108a1a5b4b904dda4f1941",
+        "language": "gu",
+        "hint": "gu",
+        "expected": "ઍપાર્ટમેન્ટની અંદર કોઈ ન હતું.",
+        "reference_id": "en-aoede",
+        "transcript": "એપરટમયાંટ ની આંદર કોઈ ના હટો",
+        "normalized_exact": false,
+        "cer": 0.44,
+        "quality_certified": false,
+        "asr": {
+          "text": "એપરટમયાંટ ની આંદર કોઈ ના હટો",
+          "asr_wall_s": 0.30275429179891944
+        }
+      }
+    },
+    {
+      "language": "ha",
+      "expected": "Babu wanda ya kasance cikin ɗakin.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-036",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-036.wav",
+        "sha256": "229ce6a5b4501b3c5db663f02bdc19ec36cd40b767f30b778e7700922291a45c",
+        "language": "ha",
+        "hint": "ha",
+        "expected": "Babu wanda ya kasance cikin ɗakin.",
+        "reference_id": "en-aoede",
+        "transcript": "Bab wende a kusun sa chikin daikin.",
+        "normalized_exact": false,
+        "cer": 0.39285714285714285,
+        "quality_certified": false,
+        "asr": {
+          "text": "Bab wende a kusun sa chikin daikin.",
+          "asr_wall_s": 0.181488917209208
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-036",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-036.wav",
+        "sha256": "eeb715e6474369c0754d4b87f1a056a04e1dd074527c16333d4cfd5639a0d24e",
+        "language": "ha",
+        "hint": "ha",
+        "expected": "Babu wanda ya kasance cikin ɗakin.",
+        "reference_id": "en-aoede",
+        "transcript": "Ba bu one daya kasınsın çikin dakin.",
+        "normalized_exact": false,
+        "cer": 0.32142857142857145,
+        "quality_certified": false,
+        "asr": {
+          "text": "Ba bu one daya kasınsın çikin dakin.",
+          "asr_wall_s": 0.18265641573816538
+        }
+      }
+    },
+    {
+      "language": "yo",
+      "expected": "Kò sí èyàn kan kan nílé ná.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-038",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-038.wav",
+        "sha256": "37fd6879cf92d051abb8854ab7f14ec9d313282f76a3e57e7a360cf6bcca5d96",
+        "language": "yo",
+        "hint": "yo",
+        "expected": "Kò sí èyàn kan kan nílé ná.",
+        "reference_id": "en-aoede",
+        "transcript": "Kho-siyangya kankani lay na.",
+        "normalized_exact": false,
+        "cer": 0.65,
+        "quality_certified": false,
+        "asr": {
+          "text": "Kho-siyangya kankani lay na.",
+          "asr_wall_s": 0.1772988336160779
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-038",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-038.wav",
+        "sha256": "acc29e220cc55782d48127867c8ccb6336e84b74bb476ce1920186f43276b12c",
+        "language": "yo",
+        "hint": "yo",
+        "expected": "Kò sí èyàn kan kan nílé ná.",
+        "reference_id": "en-aoede",
+        "transcript": "kōsī e yā kankā nī lēna.",
+        "normalized_exact": false,
+        "cer": 0.5,
+        "quality_certified": false,
+        "asr": {
+          "text": "kōsī e yā kankā nī lēna.",
+          "asr_wall_s": 0.18497400032356381
+        }
+      }
+    },
+    {
+      "language": "kn",
+      "expected": "ಅಪಾರ್ಟ್‍ಮೆಂಟ್‌ನ ಒಳಗಡೆ  ಯಾರೂ ಇರಲಿಲ್ಲ.  ",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-039",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-039.wav",
+        "sha256": "2e8cce042437bf44bf83757f5638efd694d6d147012ffc701aef475b9ba078f7",
+        "language": "kn",
+        "hint": "kn",
+        "expected": "ಅಪಾರ್ಟ್‍ಮೆಂಟ್‌ನ ಒಳಗಡೆ  ಯಾರೂ ಇರಲಿಲ್ಲ.  ",
+        "reference_id": "en-aoede",
+        "transcript": "ಅಪಾರ್ಟ್ಮೆಂಟ್ನ ವಳಗಡೆ ಯಾರು ಇರಲಿಲ್ಲ.",
+        "normalized_exact": false,
+        "cer": 0.12903225806451613,
+        "quality_certified": false,
+        "asr": {
+          "text": "ಅಪಾರ್ಟ್ಮೆಂಟ್ನ ವಳಗಡೆ ಯಾರು ಇರಲಿಲ್ಲ.",
+          "asr_wall_s": 0.26316683273762465
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-039",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-039.wav",
+        "sha256": "1ffd6f4f320f68df59f2ab90240bfbdf9de82509fa79e1aec22cd7f52b7b6c16",
+        "language": "kn",
+        "hint": "kn",
+        "expected": "ಅಪಾರ್ಟ್‍ಮೆಂಟ್‌ನ ಒಳಗಡೆ  ಯಾರೂ ಇರಲಿಲ್ಲ.  ",
+        "reference_id": "en-aoede",
+        "transcript": "Apartment now, Walagaday, yārū iral illa.",
+        "normalized_exact": false,
+        "cer": 1.064516129032258,
+        "quality_certified": false,
+        "asr": {
+          "text": "Apartment now, Walagaday, yārū iral illa.",
+          "asr_wall_s": 0.1922579579986632
+        }
+      }
+    },
+    {
+      "language": "id",
+      "expected": "Tidak ada orang di dalam apartemen.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-040",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-040.wav",
+        "sha256": "ca5167ed9a61868e92f6b3bc9f889588bf39db4fd2e6341e883a14337c2930c6",
+        "language": "id",
+        "hint": "id",
+        "expected": "Tidak ada orang di dalam apartemen.",
+        "reference_id": "en-aoede",
+        "transcript": "Tidak ada orang di dalam apartemen.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "Tidak ada orang di dalam apartemen.",
+          "asr_wall_s": 0.1718846671283245
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-040",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-040.wav",
+        "sha256": "88493c6004f88ac4e49bff9f933ac05462fdbcfbe7e9b95d1d000337ffa41d92",
+        "language": "id",
+        "hint": "id",
+        "expected": "Tidak ada orang di dalam apartemen.",
+        "reference_id": "en-aoede",
+        "transcript": "Tidak ada orang di dalam apartemen.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "Tidak ada orang di dalam apartemen.",
+          "asr_wall_s": 0.1722126668319106
+        }
+      }
+    },
+    {
+      "language": "ml",
+      "expected": "അപ്പാർട്ട്മെന്റിനുള്ളിൽ ആരും ഉണ്ടായിരുന്നില്ല.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-041",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-041.wav",
+        "sha256": "94757a6657423176645bee4c47ddf35579d3a1812d0cee232a5560305585ce0c",
+        "language": "ml",
+        "hint": "ml",
+        "expected": "അപ്പാർട്ട്മെന്റിനുള്ളിൽ ആരും ഉണ്ടായിരുന്നില്ല.",
+        "reference_id": "en-aoede",
+        "transcript": "അപാര്ട്മേണ്ട്യ്ള്ല് ആരുമ ഉന്ടായിരന്ദില്ലാ.",
+        "normalized_exact": false,
+        "cer": 0.4186046511627907,
+        "quality_certified": false,
+        "asr": {
+          "text": "അപാര്ട്മേണ്ട്യ്ള്ല് ആരുമ ഉന്ടായിരന്ദില്ലാ.",
+          "asr_wall_s": 0.347463209182024
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-041",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-041.wav",
+        "sha256": "73c6d83a0c487161eaa23b70486869569587e103135fb2d4fd902298051522c6",
+        "language": "ml",
+        "hint": "ml",
+        "expected": "അപ്പാർട്ട്മെന്റിനുള്ളിൽ ആരും ഉണ്ടായിരുന്നില്ല.",
+        "reference_id": "en-aoede",
+        "transcript": "അപാര്ട്മെണ്ട്യ്ളെല് ആരും ഉണ്ടായിരുന്ദില്ലാ.",
+        "normalized_exact": false,
+        "cer": 0.3488372093023256,
+        "quality_certified": false,
+        "asr": {
+          "text": "അപാര്ട്മെണ്ട്യ്ളെല് ആരും ഉണ്ടായിരുന്ദില്ലാ.",
+          "asr_wall_s": 0.3540409579873085
+        }
+      }
+    },
+    {
+      "language": "ar-DZ",
+      "expected": "راني نسنى فيك باي باي.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-042",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-042.wav",
+        "sha256": "3c827348a1cdfaa06d935822cb1f381763665f59bb49272874916b89b089c583",
+        "language": "ar-DZ",
+        "hint": "ar",
+        "expected": "راني نسنى فيك باي باي.",
+        "reference_id": "en-aoede",
+        "transcript": "راني نسنا فك بي بي",
+        "normalized_exact": false,
+        "cer": 0.23529411764705882,
+        "quality_certified": false,
+        "asr": {
+          "text": "راني نسنا فك بي بي",
+          "asr_wall_s": 0.1743233329616487
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-042",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-042.wav",
+        "sha256": "4aef5bebead76126f171d228976e7cc1a401cbbd68d578e4fce8495766a211b0",
+        "language": "ar-DZ",
+        "hint": "ar",
+        "expected": "راني نسنى فيك باي باي.",
+        "reference_id": "en-aoede",
+        "transcript": "راني نسنا فيك باي باي",
+        "normalized_exact": false,
+        "cer": 0.058823529411764705,
+        "quality_certified": false,
+        "asr": {
+          "text": "راني نسنا فيك باي باي",
+          "asr_wall_s": 0.18025479139760137
+        }
+      }
+    },
+    {
+      "language": "my",
+      "expected": "တိုက်ခန်းထဲမှာ တစ် ယောက်မှ မရှိခဲ့ပါဘူး။",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-044",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-044.wav",
+        "sha256": "6cfdf71806ab88d87b98464e8366b5028c3af9a41160d49e4a9c40c238598fe2",
+        "language": "my",
+        "hint": "my",
+        "expected": "တိုက်ခန်းထဲမှာ တစ် ယောက်မှ မရှိခဲ့ပါဘူး။",
+        "reference_id": "en-aoede",
+        "transcript": "ကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကက�",
+        "normalized_exact": false,
+        "cer": 2.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "ကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကက�",
+          "asr_wall_s": 0.6080967499874532
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-044",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-044.wav",
+        "sha256": "389eb32c7efdd1b92ce9a67712112a556bea52f0621e8800384b514209b9f977",
+        "language": "my",
+        "hint": "my",
+        "expected": "တိုက်ခန်းထဲမှာ တစ် ယောက်မှ မရှိခဲ့ပါဘူး။",
+        "reference_id": "en-aoede",
+        "transcript": "ကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကက�",
+        "normalized_exact": false,
+        "cer": 2.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "ကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကကက�",
+          "asr_wall_s": 0.6190265421755612
+        }
+      }
+    },
+    {
+      "language": "ar-SD",
+      "expected": "اللغة النوبية.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-045",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-045.wav",
+        "sha256": "2eebd1a81ad943b250f088392f618bba9c61fb2d69bd1a5860aa447c3288e3cf",
+        "language": "ar-SD",
+        "hint": "ar",
+        "expected": "اللغة النوبية.",
+        "reference_id": "en-aoede",
+        "transcript": "ألغة النبيا",
+        "normalized_exact": false,
+        "cer": 0.25,
+        "quality_certified": false,
+        "asr": {
+          "text": "ألغة النبيا",
+          "asr_wall_s": 0.16601941687986255
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-045",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-045.wav",
+        "sha256": "1a8ffb534c7e5bbcdcf3f9c2bc6233dcd155279a0be1ffd3a4c72dcfb9582813",
+        "language": "ar-SD",
+        "hint": "ar",
+        "expected": "اللغة النوبية.",
+        "reference_id": "en-aoede",
+        "transcript": "ألغة النبيا",
+        "normalized_exact": false,
+        "cer": 0.25,
+        "quality_certified": false,
+        "asr": {
+          "text": "ألغة النبيا",
+          "asr_wall_s": 0.1649207496084273
+        }
+      }
+    },
+    {
+      "language": "sd",
+      "expected": "اپارٽمينٽ جي اندر ڪير بہ نہ هو.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-046",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-046.wav",
+        "sha256": "d2e23da9b20891261b23c871280f681b3c139bb975c092d9535e4a56c7b26110",
+        "language": "sd",
+        "hint": "sd",
+        "expected": "اپارٽمينٽ جي اندر ڪير بہ نہ هو.",
+        "reference_id": "en-aoede",
+        "transcript": "Apartment g under gear bina hu.",
+        "normalized_exact": false,
+        "cer": 1.0416666666666667,
+        "quality_certified": false,
+        "asr": {
+          "text": "Apartment g under gear bina hu.",
+          "asr_wall_s": 0.1689257500693202
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-046",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-046.wav",
+        "sha256": "eb85090fead0f527c5bd3fc6fa98d0768b95b7fd1da0630fa643cac72235f30c",
+        "language": "sd",
+        "hint": "sd",
+        "expected": "اپارٽمينٽ جي اندر ڪير بہ نہ هو.",
+        "reference_id": "en-aoede",
+        "transcript": "Apartment ji under gear bay naho.",
+        "normalized_exact": false,
+        "cer": 1.125,
+        "quality_certified": false,
+        "asr": {
+          "text": "Apartment ji under gear bay naho.",
+          "asr_wall_s": 0.16971616726368666
+        }
+      }
+    },
+    {
+      "language": "am",
+      "expected": "በአፓርታማው ውስጥ ማንም አልነበረም።",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-047",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-047.wav",
+        "sha256": "f82ece4162b12b3781887897d299a5235ff73f116123596d9430a478844b8469",
+        "language": "am",
+        "hint": "am",
+        "expected": "በአፓርታማው ውስጥ ማንም አልነበረም።",
+        "reference_id": "en-aoede",
+        "transcript": "Ba' a par-tahm-maw wist-mānim al-nabbaram",
+        "normalized_exact": false,
+        "cer": 1.6842105263157894,
+        "quality_certified": false,
+        "asr": {
+          "text": "Ba' a par-tahm-maw wist-mānim al-nabbaram",
+          "asr_wall_s": 0.19667041581124067
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-047",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-047.wav",
+        "sha256": "742a5e3a1eaa0761b796af527de185b2cbbc3acf1241699bc18c27e848c2c6cf",
+        "language": "am",
+        "hint": "am",
+        "expected": "በአፓርታማው ውስጥ ማንም አልነበረም።",
+        "reference_id": "en-aoede",
+        "transcript": "እንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንን�",
+        "normalized_exact": false,
+        "cer": 3.8421052631578947,
+        "quality_certified": false,
+        "asr": {
+          "text": "እንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንንን�",
+          "asr_wall_s": 0.6101464997045696
+        }
+      }
+    },
+    {
+      "language": "uk",
+      "expected": "Нікого не було всередині квартири.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-050",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-050.wav",
+        "sha256": "99d3422f8349943eb7f39613f3c9d0e7c20e220320ec6f4127da73fbf2a1c92e",
+        "language": "uk",
+        "hint": "uk",
+        "expected": "Нікого не було всередині квартири.",
+        "reference_id": "en-aoede",
+        "transcript": "Нікого не було всередині квартири.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "Нікого не було всередині квартири.",
+          "asr_wall_s": 0.17510195821523666
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-050",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-050.wav",
+        "sha256": "53851b33f5733a6ed4ee8fbf677e80289ffe8de0b4804211d2d8bdb292b77686",
+        "language": "uk",
+        "hint": "uk",
+        "expected": "Нікого не було всередині квартири.",
+        "reference_id": "en-aoede",
+        "transcript": "Нікого не було всередині квартири.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "Нікого не було всередині квартири.",
+          "asr_wall_s": 0.1769432919099927
+        }
+      }
+    },
+    {
+      "language": "ro",
+      "expected": "Nu se afla nimeni în apartament.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-052",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-052.wav",
+        "sha256": "01fb752f91d7676d45b7a6d20abd285477bf4f0369ddd31a9f827179447ab37a",
+        "language": "ro",
+        "hint": "ro",
+        "expected": "Nu se afla nimeni în apartament.",
+        "reference_id": "en-aoede",
+        "transcript": "Nu se afla nimeni în apartament.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "Nu se afla nimeni în apartament.",
+          "asr_wall_s": 0.17148537514731288
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-052",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-052.wav",
+        "sha256": "3ba93126e0c03c7f2ae3da071a799410c004c1fefd3de61e84436838b5f6ed68",
+        "language": "ro",
+        "hint": "ro",
+        "expected": "Nu se afla nimeni în apartament.",
+        "reference_id": "en-aoede",
+        "transcript": "Nu se afla nimeni în apartament.",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "Nu se afla nimeni în apartament.",
+          "asr_wall_s": 0.17205099994316697
+        }
+      }
+    },
+    {
+      "language": "so",
+      "expected": "Cidina dhismaha kuma jirin.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-053",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-053.wav",
+        "sha256": "167bd44be6ef12a2093114ef14443e6d94d7d11da697d5bec447cea642f6f13a",
+        "language": "so",
+        "hint": "so",
+        "expected": "Cidina dhismaha kuma jirin.",
+        "reference_id": "en-aoede",
+        "transcript": "Shidina Dismaha Kumajiran.",
+        "normalized_exact": false,
+        "cer": 0.17391304347826086,
+        "quality_certified": false,
+        "asr": {
+          "text": "Shidina Dismaha Kumajiran.",
+          "asr_wall_s": 0.17266379203647375
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-053",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-053.wav",
+        "sha256": "3b05e20fc0f62ad476de208c9f5c10ad4f213836e6662bd291479dd32213a100",
+        "language": "so",
+        "hint": "so",
+        "expected": "Cidina dhismaha kuma jirin.",
+        "reference_id": "en-aoede",
+        "transcript": "خدین الدسمة كومة جرن.",
+        "normalized_exact": false,
+        "cer": 1.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "خدین الدسمة كومة جرن.",
+          "asr_wall_s": 0.1783134168945253
+        }
+      }
+    },
+    {
+      "language": "lo",
+      "expected": "ບໍ່ມີຄົນຈັກຄົນຢູ່ໃນອາພາດເມັນດັ່ງກ່າວ.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-055",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-055.wav",
+        "sha256": "f4e754970c6b419b50656d6ee8caf3dab5f7d4e0e898aa31b9f0ca863c0e7bf4",
+        "language": "lo",
+        "hint": "lo",
+        "expected": "ບໍ່ມີຄົນຈັກຄົນຢູ່ໃນອາພາດເມັນດັ່ງກ່າວ.",
+        "reference_id": "en-aoede",
+        "transcript": "บอมีค้นจักค้นอยู่ในอาภาศเมนดังเกาว.",
+        "normalized_exact": false,
+        "cer": 1.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "บอมีค้นจักค้นอยู่ในอาภาศเมนดังเกาว.",
+          "asr_wall_s": 0.22720945812761784
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-055",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-055.wav",
+        "sha256": "c33d6770bf39746e967c81a9ba81304e46e6fe3cf1470ab309a8ff772e82049a",
+        "language": "lo",
+        "hint": "lo",
+        "expected": "ບໍ່ມີຄົນຈັກຄົນຢູ່ໃນອາພາດເມັນດັ່ງກ່າວ.",
+        "reference_id": "en-aoede",
+        "transcript": "มีคนจักคนอยู่ในอาภาติเมนดังเกา",
+        "normalized_exact": false,
+        "cer": 1.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "มีคนจักคนอยู่ในอาภาติเมนดังเกา",
+          "asr_wall_s": 0.21062524989247322
+        }
+      }
+    },
+    {
+      "language": "ln",
+      "expected": "Moto moko te azalaki na kati ya apartema.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-056",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-056.wav",
+        "sha256": "5b6527ff7fa62a143b6743b992f57eb84108215319d007a5213930a931008386",
+        "language": "ln",
+        "hint": "ln",
+        "expected": "Moto moko te azalaki na kati ya apartema.",
+        "reference_id": "en-aoede",
+        "transcript": "Motomoko tea zalaki na kati ya apartema.",
+        "normalized_exact": false,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "Motomoko tea zalaki na kati ya apartema.",
+          "asr_wall_s": 0.17978270817548037
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-056",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-056.wav",
+        "sha256": "ee03b1df61624c90a367e8c6f2e892733cee3b0bcb995a69fa444077aa9b6da7",
+        "language": "ln",
+        "hint": "ln",
+        "expected": "Moto moko te azalaki na kati ya apartema.",
+        "reference_id": "en-aoede",
+        "transcript": "Motomoko te azalaki na katia apartema.",
+        "normalized_exact": false,
+        "cer": 0.030303030303030304,
+        "quality_certified": false,
+        "asr": {
+          "text": "Motomoko te azalaki na katia apartema.",
+          "asr_wall_s": 0.1771975001320243
+        }
+      }
+    },
+    {
+      "language": "ar-EG",
+      "expected": "معايا ابويا وامي ومرتي كمان",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-057",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-057.wav",
+        "sha256": "5980a73510e0a6814caa3f9dde5d47d05159fcfc7229e74f31101ae61027162b",
+        "language": "ar-EG",
+        "hint": "ar",
+        "expected": "معايا ابويا وامي ومرتي كمان",
+        "reference_id": "en-aoede",
+        "transcript": "معايا أبوي وأمي ومرتي كمان",
+        "normalized_exact": false,
+        "cer": 0.043478260869565216,
+        "quality_certified": false,
+        "asr": {
+          "text": "معايا أبوي وأمي ومرتي كمان",
+          "asr_wall_s": 0.18122612545266747
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-057",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-057.wav",
+        "sha256": "62475ccd96b8c6f3bb7b7c907027c2c0613317d0aa4377b6de5152ff58527dee",
+        "language": "ar-EG",
+        "hint": "ar",
+        "expected": "معايا ابويا وامي ومرتي كمان",
+        "reference_id": "en-aoede",
+        "transcript": "معايا أبوي وأمي ومرتي كمان",
+        "normalized_exact": false,
+        "cer": 0.043478260869565216,
+        "quality_certified": false,
+        "asr": {
+          "text": "معايا أبوي وأمي ومرتي كمان",
+          "asr_wall_s": 0.1810937919653952
+        }
+      }
+    },
+    {
+      "language": "ar-IQ",
+      "expected": "ما كان أكو أحد داخل الشقة.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-058",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-058.wav",
+        "sha256": "11cad27479640eb22b4bd0fce0097beb90d22235b5c25b25c0c1a2966d727eb0",
+        "language": "ar-IQ",
+        "hint": "ar",
+        "expected": "ما كان أكو أحد داخل الشقة.",
+        "reference_id": "en-aoede",
+        "transcript": "ما كان أكو أحد داخل الشقة",
+        "normalized_exact": true,
+        "cer": 0.0,
+        "quality_certified": false,
+        "asr": {
+          "text": "ما كان أكو أحد داخل الشقة",
+          "asr_wall_s": 0.17519833333790302
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-058",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-058.wav",
+        "sha256": "cdbf5d55c6a57d76f4a8c5fc5b73ac8eefc2e94573766c35bb9b67607ac5ff35",
+        "language": "ar-IQ",
+        "hint": "ar",
+        "expected": "ما كان أكو أحد داخل الشقة.",
+        "reference_id": "en-aoede",
+        "transcript": "ما كانك أحد داخل الشقة",
+        "normalized_exact": false,
+        "cer": 0.1,
+        "quality_certified": false,
+        "asr": {
+          "text": "ما كانك أحد داخل الشقة",
+          "asr_wall_s": 0.1710804169997573
+        }
+      }
+    },
+    {
+      "language": "hu",
+      "expected": "Senki nem volt a lakásban.",
+      "reference_id": "en-aoede",
+      "before": {
+        "phase": "results/b1-c8",
+        "id": "b1-c8-059",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/results/batch1/b1-c8/b1-c8-059.wav",
+        "sha256": "c4cd5279c109bc799d9d1cc2b845846129673dfb0281e34778caef7e1dbbe130",
+        "language": "hu",
+        "hint": "hu",
+        "expected": "Senki nem volt a lakásban.",
+        "reference_id": "en-aoede",
+        "transcript": "Sanky Nemvol de lakajban.",
+        "normalized_exact": false,
+        "cer": 0.2857142857142857,
+        "quality_certified": false,
+        "asr": {
+          "text": "Sanky Nemvol de lakajban.",
+          "asr_wall_s": 0.17365737492218614
+        }
+      },
+      "after": {
+        "phase": "dual-mps/dual-b1-c8",
+        "id": "dual-b1-c8-059",
+        "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-4070-rps-2026-11-04/retained/dual-mps/batch1/dual-b1-c8/dual-b1-c8-059.wav",
+        "sha256": "7037fd7a6f43d9c4bb6e7fc941739c64aee62fbd6ba11572bc27c778203f1fba",
+        "language": "hu",
+        "hint": "hu",
+        "expected": "Senki nem volt a lakásban.",
+        "reference_id": "en-aoede",
+        "transcript": "Senki nem volt a lakazban.",
+        "normalized_exact": false,
+        "cer": 0.09523809523809523,
+        "quality_certified": false,
+        "asr": {
+          "text": "Senki nem volt a lakazban.",
+          "asr_wall_s": 0.17042104108259082
+        }
+      }
+    }
+  ],
+  "summaries": {
+    "word-check-baseline": {
+      "total_timed_outputs": 720,
+      "screened": 612,
+      "unsupported_skips": 108,
+      "unique_recognizer_inputs": 501,
+      "phases": {
+        "dual/dual-b1-c2": {
+          "screened": 51,
+          "normalized_exact": 19,
+          "mean_CER": 0.524681810963508
+        },
+        "dual/dual-b1-c32": {
+          "screened": 51,
+          "normalized_exact": 21,
+          "mean_CER": 0.44473906569428007
+        },
+        "dual/dual-b1-c8": {
+          "screened": 51,
+          "normalized_exact": 19,
+          "mean_CER": 0.3628841326096016
+        },
+        "dual/dual-b8-c2": {
+          "screened": 51,
+          "normalized_exact": 19,
+          "mean_CER": 0.524681810963508
+        },
+        "dual/dual-b8-c32": {
+          "screened": 51,
+          "normalized_exact": 20,
+          "mean_CER": 0.3901083081729102
+        },
+        "dual/dual-b8-c8": {
+          "screened": 51,
+          "normalized_exact": 21,
+          "mean_CER": 0.4594672640555247
+        },
+        "results/b1-c1": {
+          "screened": 51,
+          "normalized_exact": 22,
+          "mean_CER": 0.47857953767497163
+        },
+        "results/b1-c32": {
+          "screened": 51,
+          "normalized_exact": 23,
+          "mean_CER": 0.4102959069851843
+        },
+        "results/b1-c8": {
+          "screened": 51,
+          "normalized_exact": 22,
+          "mean_CER": 0.42198222020009385
+        },
+        "results/b8-c1": {
+          "screened": 51,
+          "normalized_exact": 22,
+          "mean_CER": 0.47857953767497163
+        },
+        "results/b8-c32": {
+          "screened": 51,
+          "normalized_exact": 20,
+          "mean_CER": 0.5450775320603266
+        },
+        "results/b8-c8": {
+          "screened": 51,
+          "normalized_exact": 20,
+          "mean_CER": 0.6515739074768367
+        }
+      },
+      "ASR_wall_s": 112.07063820818439,
+      "warning": "Recognition agreement is a diagnostic, not native quality or proof of the spoken words. Unsupported languages not cleared."
+    },
+    "word-check-mps": {
+      "total_timed_outputs": 540,
+      "screened": 459,
+      "unsupported_skips": 81,
+      "unique_recognizer_inputs": 404,
+      "phases": {
+        "dual-mps/dual-b1-c2": {
+          "screened": 51,
+          "normalized_exact": 19,
+          "mean_CER": 0.524681810963508
+        },
+        "dual-mps/dual-b1-c32": {
+          "screened": 51,
+          "normalized_exact": 21,
+          "mean_CER": 0.3534469224218252
+        },
+        "dual-mps/dual-b1-c8": {
+          "screened": 51,
+          "normalized_exact": 20,
+          "mean_CER": 0.35966643527425723
+        },
+        "dual-mps/dual-b8-c2": {
+          "screened": 51,
+          "normalized_exact": 19,
+          "mean_CER": 0.524681810963508
+        },
+        "dual-mps/dual-b8-c32": {
+          "screened": 51,
+          "normalized_exact": 21,
+          "mean_CER": 0.45809059125569385
+        },
+        "dual-mps/dual-b8-c8": {
+          "screened": 51,
+          "normalized_exact": 23,
+          "mean_CER": 0.4100170509616116
+        },
+        "single-mps/b1-c1": {
+          "screened": 51,
+          "normalized_exact": 22,
+          "mean_CER": 0.47857953767497163
+        },
+        "single-mps/b1-c32": {
+          "screened": 51,
+          "normalized_exact": 22,
+          "mean_CER": 0.4162496730599219
+        },
+        "single-mps/b1-c8": {
+          "screened": 51,
+          "normalized_exact": 21,
+          "mean_CER": 0.42349051582603664
+        }
+      },
+      "ASR_wall_s": 88.92819875013083,
+      "warning": "Recognition agreement is a diagnostic, not native quality or proof of the spoken words. Unsupported languages not cleared."
+    }
+  }
+}
