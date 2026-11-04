@@ -1403,3 +1403,107 @@ def test_failed_requests_clear_cuda_graphs_only_on_the_batcher_thread(
 
     assert model.forward.clear_threads
     assert set(model.forward.clear_threads) == {"omnivoice-batcher"}
+
+
+def test_complete_response_cache_preserves_bytes_and_separates_settings(tmp_path):
+    created = []
+    app = _make_app(tmp_path, created, load_asr=False, response_cache_max_bytes=1000000)
+    app.state.save_dir = None
+    with TestClient(app) as client:
+        request = _design_request()
+        first = client.post("/generate", **request)
+        hit = client.post("/generate", **request)
+        assert first.status_code == hit.status_code == 200
+        assert first.content == hit.content
+        assert first.headers["x-omnivoice-response-source"] == "generated"
+        assert hit.headers["x-omnivoice-response-source"] == "cache"
+        assert (
+            first.headers["x-omnivoice-request-id"]
+            != hit.headers["x-omnivoice-request-id"]
+        )
+        assert hit.headers["x-omnivoice-inference-executed"] == "false"
+        assert float(hit.headers["x-omnivoice-batch-exec-ms"]) == 0
+        for field, value in [("language", "es"), ("num_step", "8"), ("speed", "1.1")]:
+            changed = dict(request["data"])
+            changed[field] = value
+            response = client.post("/generate", data=changed)
+            assert response.status_code == 200
+            assert response.headers["x-omnivoice-response-source"] == "generated"
+        assert len(created[0].model.calls) == 4
+        app.state.worker_runtime.request_drain()
+        assert client.post("/generate", **request).status_code == 503
+
+
+def test_complete_response_cache_does_not_hide_evicted_prompt(tmp_path):
+    created = []
+    app = _make_app(tmp_path, created, load_asr=False, response_cache_max_bytes=1000000)
+    app.state.save_dir = None
+    with TestClient(app) as client:
+        prompt = client.post(
+            "/clone-prompts",
+            files={"ref_audio": ("ref.wav", _fake_wav_bytes(), "audio/wav")},
+            data={"ref_text": "Reference."},
+        ).json()["prompt_id"]
+        data = {
+            "mode": "clone",
+            "text": "Hello.",
+            "language": "en",
+            "prompt_id": prompt,
+        }
+        assert client.post("/generate", data=data).status_code == 200
+        assert (
+            client.post("/generate", data=data).headers["x-omnivoice-response-source"]
+            == "cache"
+        )
+        with app.state.registered_clone_prompts._lock:
+            app.state.registered_clone_prompts._entries.clear()
+        assert client.post("/generate", data=data).status_code == 404
+
+
+def test_complete_response_cache_bypasses_server_side_save(tmp_path):
+    created = []
+    app = _make_app(tmp_path, created, load_asr=False, response_cache_max_bytes=1000000)
+    with TestClient(app) as client:
+        for _ in range(2):
+            assert client.post("/generate", **_design_request()).status_code == 200
+        assert len(created[0].model.calls) == 2
+        assert len(list(tmp_path.glob("*.wav"))) == 2
+
+
+def test_shared_http_requests_run_inference_once(tmp_path):
+    created = []
+    app = _make_app(
+        tmp_path,
+        created,
+        load_asr=False,
+        response_cache_max_bytes=1000000,
+        model_generate_delay_s=0.1,
+    )
+    app.state.save_dir = None
+    with TestClient(app) as client:
+        with ThreadPoolExecutor(max_workers=48) as pool:
+            responses = list(
+                pool.map(
+                    lambda _: client.post("/generate", **_design_request()), range(48)
+                )
+            )
+        assert all(r.status_code == 200 for r in responses)
+        assert len(created[0].model.calls) == 1
+        assert len({r.content for r in responses}) == 1
+        assert len({r.headers["x-omnivoice-request-id"] for r in responses}) == 48
+        assert len({r.headers["x-omnivoice-origin-request-id"] for r in responses}) == 1
+        assert (
+            sum(
+                r.headers["x-omnivoice-inference-executed"] == "true" for r in responses
+            )
+            == 1
+        )
+
+
+def test_generate_without_lifespan_keeps_not_ready_503(tmp_path):
+    app = _make_app(tmp_path, [], load_asr=False)
+    client = TestClient(app)
+    try:
+        assert client.post("/generate", **_design_request()).status_code == 503
+    finally:
+        client.close()

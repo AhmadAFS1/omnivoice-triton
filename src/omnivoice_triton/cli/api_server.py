@@ -4,7 +4,9 @@ from __future__ import annotations
 
 import argparse
 import gc
+import hashlib
 import io
+import json
 import logging
 import os
 import re
@@ -15,6 +17,7 @@ from contextlib import asynccontextmanager
 from dataclasses import replace
 from datetime import UTC, datetime
 from enum import Enum
+from functools import wraps
 from pathlib import Path
 from typing import Any, Callable
 from uuid import uuid4
@@ -44,6 +47,10 @@ from omnivoice_triton.serving import (
     WorkerRuntimeState,
     is_cuda_fault,
     prompt_to_cpu,
+)
+from omnivoice_triton.serving.response_cache import (
+    CompleteResponseCache,
+    ResponseCacheFullError,
 )
 from omnivoice_triton.serving.sentence_pauses import PAUSE_SECONDS, split_sentences
 
@@ -238,6 +245,18 @@ def build_parser() -> argparse.ArgumentParser:
         default="fp16",
         choices=["bf16", "fp16", "fp32"],
         help="Runner dtype.",
+    )
+    parser.add_argument(
+        "--response-cache-max-bytes",
+        type=int,
+        default=0,
+        help="Opt-in complete-WAV reuse and duplicate coalescing (0 disables).",
+    )
+    parser.add_argument(
+        "--response-cache-ttl",
+        type=float,
+        default=600.0,
+        help="WAV reuse lifetime in seconds; 0 only coalesces inflight duplicates.",
     )
     parser.add_argument("--ip", default="0.0.0.0", help="Server IP to bind to.")
     parser.add_argument("--port", type=int, default=DEFAULT_PORT, help="Server port.")
@@ -945,6 +964,8 @@ def create_app(
     full_triton_patch: bool = False,
     decode_postprocess_workers: int = DEFAULT_DECODE_POSTPROCESS_WORKERS,
     audio_decode_batch_size: int = 1,
+    response_cache_max_bytes: int = 0,
+    response_cache_ttl: float = 600.0,
     max_cuda_graphs: int = DEFAULT_MAX_CUDA_GRAPHS,
     save_dir: str | None = None,
     batch_collect_ms: float = DEFAULT_BATCH_COLLECT_MS,
@@ -971,6 +992,8 @@ def create_app(
     """Create the FastAPI app."""
     if audio_decode_batch_size < 1:
         raise ValueError("audio_decode_batch_size must be at least 1.")
+    if response_cache_max_bytes < 0 or response_cache_ttl < 0:
+        raise ValueError("Complete-response cache limits must be nonnegative.")
     resolved_device = device or get_best_device()
     if resolved_device.startswith("cuda"):
         require_cuda_available()
@@ -990,6 +1013,9 @@ def create_app(
         # Prompt preparation may wait for GPU work. Keep those waits outside the
         # shared AnyIO limiter used by /health, /drain and other control routes.
         # Construct inside the app's event loop, never as a process-global limiter.
+        app.state.response_cache = CompleteResponseCache(
+            max_bytes=response_cache_max_bytes, ttl_s=response_cache_ttl
+        )
         app.state.request_cpu_limiter = anyio.CapacityLimiter(
             DEFAULT_REQUEST_CPU_WORKERS
         )
@@ -1113,19 +1139,25 @@ def create_app(
         finally:
             worker_reporter = app.state.worker_lifecycle_reporter
             app.state.worker_runtime.request_drain()
-            idle = app.state.worker_runtime.wait_for_idle(
-                _parse_env_nonnegative_float(
-                    "LINGUA_WORKER_DRAIN_TIMEOUT_SECONDS", 30.0
-                )
+            timeout_s = _parse_env_nonnegative_float(
+                "LINGUA_WORKER_DRAIN_TIMEOUT_SECONDS", 30.0
             )
-            if not idle:
-                logger.warning(
-                    "Worker shutdown continuing with active_requests=%s",
-                    app.state.worker_runtime.snapshot()["active_requests"],
-                )
+            deadline = time.monotonic() + timeout_s
+            cache_idle = await app.state.response_cache.close(timeout_s=timeout_s)
+            idle = cache_idle and await anyio.to_thread.run_sync(
+                app.state.worker_runtime.wait_for_idle,
+                max(0.0, deadline - time.monotonic()),
+            )
             if worker_reporter is not None:
                 worker_reporter.stop()
                 app.state.worker_lifecycle_reporter = None
+            if not idle:
+                # A CUDA call cannot be preempted by cancelling its HTTP waiter.
+                # Keep resources alive until the supervisor restarts the process.
+                raise RuntimeError(
+                    "Worker shutdown timed out with active generation; "
+                    "model resources retained, process restart required."
+                )
             if app.state.batcher is not None:
                 app.state.batcher.close()
                 app.state.batcher = None
@@ -1150,6 +1182,7 @@ def create_app(
     app.state.full_triton_patch = full_triton_patch
     app.state.decode_postprocess_workers = decode_postprocess_workers
     app.state.audio_decode_batch_size = audio_decode_batch_size
+    app.state.response_cache = None
     app.state.max_cuda_graphs = max(0, int(max_cuda_graphs))
     app.state.save_dir = Path(save_dir) if save_dir else None
     app.state.runner = None
@@ -1227,6 +1260,7 @@ def create_app(
             "full_triton_patch": bool(app.state.full_triton_patch),
             "decode_postprocess_workers": int(app.state.decode_postprocess_workers),
             "audio_decode_batch_size": int(app.state.audio_decode_batch_size),
+            "response_cache": app.state.response_cache.snapshot(),
             "max_cuda_graphs": int(app.state.max_cuda_graphs),
             "batch_collect_ms": app.state.batch_collect_ms,
             "max_batch_requests": app.state.max_batch_requests,
@@ -1724,11 +1758,110 @@ def create_app(
             "clone_prompt_cache_entries": len(clone_prompt_cache or ()),
         }
 
+    def _reuse_complete_responses(function):
+        @wraps(function)
+        async def wrapped(**kwargs):
+            cache = app.state.response_cache
+            # Retain validation, upload lifetime and server-side save semantics.
+            if (
+                cache is None
+                or not cache.enabled
+                or app.state.save_dir is not None
+                or kwargs.get("ref_audio") is not None
+            ):
+                return await function(**kwargs)
+            runtime = app.state.worker_runtime.snapshot()
+            if runtime["draining"] or runtime["cuda_fault"] is not None:
+                return _worker_unavailable_response(app.state.worker_runtime)
+            if kwargs.get("mode") == GenerateMode.clone:
+                prompt = _normalize_text(kwargs.get("prompt_id"))
+                store = app.state.registered_clone_prompts
+                if (
+                    prompt is None
+                    or store is None
+                    or store.get(prompt) is None
+                    or kwargs.get("ref_text") is not None
+                ):
+                    return await function(**kwargs)
+            try:
+                # One loaded-model namespace per cache; include every bound form
+                # field. Never merge voices, languages or generation settings.
+                raw = json.dumps(
+                    kwargs,
+                    ensure_ascii=False,
+                    sort_keys=True,
+                    separators=(",", ":"),
+                    allow_nan=False,
+                )
+            except (TypeError, ValueError):
+                return await function(**kwargs)
+            key = hashlib.sha256(raw.encode()).hexdigest()
+            started = _utc_now()
+            started_perf = time.perf_counter()
+            try:
+                entry, source = await cache.run(key, lambda: function(**kwargs))
+            except ResponseCacheFullError as exc:
+                raise HTTPException(429, detail=str(exc)) from exc
+            # Every caller gets its own HTTP metadata. A copied WAV is not a new
+            # GPU execution; never copy old inference timing as new work.
+            finished = _utc_now()
+            headers = dict(entry.headers)
+            origin = headers.get("x-omnivoice-request-id", "")
+            if source != "generated":
+                for name in list(headers):
+                    if name.startswith("x-omnivoice-") and any(
+                        part in name
+                        for part in (
+                            "-ms",
+                            "batch-",
+                            "vram",
+                            "gpu-",
+                            "rtf",
+                            "saved-path",
+                        )
+                    ):
+                        del headers[name]
+                for name in ["queue-wait", "batch-exec", "generate-total"]:
+                    headers[f"X-OmniVoice-{name}-Ms"] = "0.00"
+                headers["X-OmniVoice-Batch-Requests"] = "0"
+            for name in [
+                "x-omnivoice-request-id",
+                "x-omnivoice-started-at",
+                "x-omnivoice-finished-at",
+                "x-omnivoice-latency-ms",
+            ]:
+                headers.pop(name, None)
+            elapsed_ms = (time.perf_counter() - started_perf) * 1000
+            headers.update(
+                {
+                    "X-OmniVoice-Request-Id": uuid4().hex[:12],
+                    "X-OmniVoice-Origin-Request-Id": origin,
+                    "X-OmniVoice-Started-At": _iso_utc(started),
+                    "X-OmniVoice-Finished-At": _iso_utc(finished),
+                    "X-OmniVoice-Latency-Ms": f"{elapsed_ms:.2f}",
+                    "X-OmniVoice-Response-Source": source,
+                    "X-OmniVoice-Inference-Executed": str(
+                        source == "generated"
+                        and entry.status_code == 200
+                        and entry.media_type == "audio/wav"
+                    ).lower(),
+                }
+            )
+            return Response(
+                entry.body,
+                status_code=entry.status_code,
+                media_type=entry.media_type,
+                headers=headers,
+            )
+
+        return wrapped
+
     @app.post(
         "/generate",
         response_class=Response,
         responses={200: {"content": {"audio/wav": {}}}},
     )
+    @_reuse_complete_responses
     async def generate(
         mode: GenerateMode = Form(...),
         text: str = Form(...),
@@ -2299,6 +2432,8 @@ def main(argv: list[str] | None = None) -> None:
         full_triton_patch=args.full_triton_patch,
         decode_postprocess_workers=args.decode_postprocess_workers,
         audio_decode_batch_size=args.audio_decode_batch_size,
+        response_cache_max_bytes=args.response_cache_max_bytes,
+        response_cache_ttl=args.response_cache_ttl,
         max_cuda_graphs=args.max_cuda_graphs,
         save_dir=args.save_dir,
         batch_collect_ms=args.batch_collect_ms,
