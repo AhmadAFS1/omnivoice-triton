@@ -8,6 +8,7 @@ import hashlib
 import io
 import json
 import logging
+import math
 import os
 import re
 import threading
@@ -506,8 +507,10 @@ def _parse_env_nonnegative_float(name: str, default: float) -> float:
     except ValueError:
         logger.warning("Ignoring invalid %s=%r; using %.2f", name, raw, default)
         return default
-    if parsed < 0.0:
-        logger.warning("Ignoring negative %s=%r; using %.2f", name, raw, default)
+    if not math.isfinite(parsed) or parsed < 0.0:
+        logger.warning(
+            "Ignoring nonfinite or negative %s=%r; using %.2f", name, raw, default
+        )
         return default
     return parsed
 
@@ -520,8 +523,8 @@ def _parse_nonnegative_float(name: str, raw: str | None, default: float) -> floa
         parsed = float(value)
     except ValueError as exc:
         raise HTTPException(400, detail=f"{name} must be a number.") from exc
-    if parsed < 0.0:
-        raise HTTPException(400, detail=f"{name} must be >= 0.")
+    if not math.isfinite(parsed) or parsed < 0.0:
+        raise HTTPException(400, detail=f"{name} must be finite and >= 0.")
     return parsed
 
 
@@ -533,8 +536,8 @@ def _parse_optional_positive_float(name: str, raw: str | None) -> float | None:
         parsed = float(value)
     except ValueError as exc:
         raise HTTPException(400, detail=f"{name} must be a number.") from exc
-    if parsed <= 0.0:
-        raise HTTPException(400, detail=f"{name} must be > 0.")
+    if not math.isfinite(parsed) or parsed <= 0.0:
+        raise HTTPException(400, detail=f"{name} must be finite and > 0.")
     return parsed
 
 
@@ -551,6 +554,8 @@ def _parse_optional_duration(raw: str | None) -> float | None:
         parsed = float(value)
     except ValueError as exc:
         raise HTTPException(400, detail="duration must be a number.") from exc
+    if not math.isfinite(parsed):
+        raise HTTPException(400, detail="duration must be finite.")
     if parsed <= 0.0:
         return None
     return parsed

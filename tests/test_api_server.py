@@ -1558,3 +1558,29 @@ def test_shutdown_retains_model_when_abandoned_gpu_owner_is_still_running(
             assert await asyncio.to_thread(batcher.close, timeout_s=2)
 
     asyncio.run(exercise())
+
+
+def test_nonfinite_voice_controls_are_rejected_before_gpu_admission(tmp_path):
+    created = []
+    app = _make_app(tmp_path, created, load_asr=False, response_cache_max_bytes=1000000)
+    app.state.save_dir = None
+    fields = [
+        "guidance_scale",
+        "t_shift",
+        "layer_penalty_factor",
+        "position_temperature",
+        "class_temperature",
+        "speed",
+        "duration",
+    ]
+    with TestClient(app) as client:
+        for field in fields:
+            for invalid in ["NaN", "Infinity", "-Infinity"]:
+                data = {**_design_request()["data"], field: invalid}
+                response = client.post("/generate", data=data)
+                assert response.status_code == 400, (field, invalid, response.text)
+                assert "finite" in response.json()["detail"]
+        assert not created[0].model.calls
+        assert client.get("/healthz").status_code == 200
+        assert client.post("/generate", **_design_request()).status_code == 200
+        assert len(created[0].model.calls) == 1
