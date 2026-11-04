@@ -698,12 +698,20 @@ def _parse_batch_bucket_sizes(raw: str | None) -> tuple[int, ...]:
 
 def _to_numpy(audio: Any) -> np.ndarray:
     if isinstance(audio, list):
+        if not audio:
+            raise HTTPException(500, detail="Model returned empty audio.")
         audio = audio[0]
     if isinstance(audio, torch.Tensor):
         audio = audio.squeeze().cpu().float().numpy()
     waveform = np.asarray(audio, dtype=np.float32).squeeze()
     if waveform.ndim != 1:
         waveform = waveform.reshape(-1)
+    if not waveform.size:
+        raise HTTPException(500, detail="Model returned empty audio.")
+    if not np.isfinite(waveform).all():
+        raise HTTPException(500, detail="Model returned non-finite audio.")
+    if not np.any(waveform):
+        raise HTTPException(500, detail="Model returned all-zero audio.")
     return np.clip(waveform, -1.0, 1.0)
 
 

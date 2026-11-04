@@ -1456,6 +1456,68 @@ def test_failed_requests_clear_cuda_graphs_only_on_the_batcher_thread(
     assert set(model.forward.clear_threads) == {"omnivoice-batcher"}
 
 
+@pytest.mark.parametrize(
+    "bad_audio",
+    [
+        np.array([], dtype=np.float32),
+        [],
+        np.array([0.1, np.nan], dtype=np.float32),
+        np.array([0.1, np.inf], dtype=np.float32),
+        np.array([0.1, -np.inf], dtype=np.float32),
+        np.zeros(2400, dtype=np.float32),
+    ],
+    ids=["empty-array", "empty-list", "nan", "positive-inf", "negative-inf", "zeros"],
+)
+def test_invalid_generated_audio_is_never_successful_or_cached(tmp_path, bad_audio):
+    created = []
+    app = _make_app(tmp_path, created, load_asr=False, response_cache_max_bytes=1000000)
+    app.state.save_dir = None
+    with TestClient(app) as client:
+        model = created[0].model
+        original_generate = model.generate
+        calls = []
+
+        def invalid_generate(**kwargs):
+            calls.append(kwargs)
+            return [bad_audio for _ in kwargs["text"]]
+
+        model.generate = invalid_generate
+        for _ in range(2):
+            failed = client.post("/generate", **_design_request())
+            assert failed.status_code == 500
+            assert "Model returned" in failed.json()["detail"]
+        assert len(calls) == 2
+        health = client.get("/health")
+        assert health.status_code == 200
+        assert health.json()["cuda_fault"] is None
+        assert health.json()["response_cache"]["entries"] == 0
+        model.generate = original_generate
+        valid = client.post("/generate", **_design_request())
+        assert valid.status_code == 200
+        assert len(valid.content) > 44
+        assert client.get("/health").json()["response_cache"]["entries"] == 1
+
+
+def test_invalid_sentence_cannot_be_hidden_by_inserted_silence(tmp_path):
+    created = []
+    app = _make_app(tmp_path, created, load_asr=False)
+    with TestClient(app) as client:
+        created[0].model.generate = lambda **kwargs: [
+            np.array([], dtype=np.float32)
+            if text.startswith("Goodbye")
+            else np.full(2400, 0.1, dtype=np.float32)
+            for text in kwargs["text"]
+        ]
+        failed = client.post(
+            "/generate",
+            data={"mode": "auto", "text": "Hello. Goodbye.", "insert_pauses": "true"},
+        )
+        assert failed.status_code == 500
+        assert "empty audio" in failed.json()["detail"]
+        assert client.get("/health").status_code == 200
+        assert not list(tmp_path.glob("*.wav"))
+
+
 def test_complete_response_cache_preserves_bytes_and_separates_settings(tmp_path):
     created = []
     app = _make_app(

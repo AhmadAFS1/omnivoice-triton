@@ -227,6 +227,12 @@ the existing batching environment settings. `/generate` still returns a complete
 WAV. Sentence splitting generates each sentence and joins every result before
 returning; it does not send partial audio to the client.
 
+Empty, non-finite or entirely zero generated audio returns HTTP 500 instead of a
+successful WAV. Validation happens before clipping, saving or complete-response
+caching and applies to every sentence before pause insertion. Such an output
+does not mark the CUDA worker dead. Quiet but nonzero audio still needs separate
+signal and word-quality checks; this guard does not certify speech quality.
+
 Typical startup:
 
 ```bash
