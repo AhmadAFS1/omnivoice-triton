@@ -36,6 +36,7 @@ from omnivoice.utils.lang_map import LANG_NAME_TO_ID, lang_display_name
 
 from omnivoice_triton import ALL_RUNNER_NAMES, __version__, create_runner
 from omnivoice_triton.models.base_runner import require_cuda_available
+from omnivoice_triton.models.graph_memory import GraphMemoryAdmissionError
 from omnivoice_triton.serving import (
     ClonePromptCache,
     GenerationBatcher,
@@ -456,6 +457,16 @@ def build_parser() -> argparse.ArgumentParser:
         ),
     )
     parser.add_argument(
+        "--max-cuda-graph-row-tokens",
+        type=int,
+        default=0,
+        help=(
+            "Opt-in normalized batch-times-sequence budget for retained CUDA Graphs "
+            "and estimated capture headroom admission (faster/hybrid only). "
+            "0 preserves existing behavior; this is not a total VRAM limit."
+        ),
+    )
+    parser.add_argument(
         "--batch-bucket-sizes",
         default="1,2,4,8,16,32",
         help="Preferred merged request-count buckets, comma-separated.",
@@ -559,6 +570,8 @@ def _runtime_error_status(exc: RuntimeError) -> int:
     """Distinguish overload, a failed CUDA context, and other runtime failures."""
     if isinstance(exc, QueueFullError):
         return 429
+    if isinstance(exc, GraphMemoryAdmissionError):
+        return 503
     return 503 if is_cuda_fault(exc) else 500
 
 
@@ -999,6 +1012,7 @@ def _build_runner(
     runner_factory: Callable[..., Any],
     disable_unused_kv_cache: bool = False,
     split_cfg: bool = False,
+    max_cuda_graph_row_tokens: int = 0,
 ) -> Any:
     kwargs: dict[str, Any] = {
         "device": device,
@@ -1009,6 +1023,13 @@ def _build_runner(
     }
     if runner_name in {"faster", "hybrid"}:
         kwargs["max_cuda_graphs"] = max(0, int(max_cuda_graphs))
+    if max_cuda_graph_row_tokens:
+        if runner_name not in {"faster", "hybrid"}:
+            raise ValueError(
+                "--max-cuda-graph-row-tokens is only supported for "
+                "faster/hybrid runners."
+            )
+        kwargs["max_cuda_graph_row_tokens"] = max_cuda_graph_row_tokens
     if disable_unused_kv_cache:
         kwargs["disable_unused_kv_cache"] = True
     if split_cfg:
@@ -1070,6 +1091,7 @@ def create_app(
     response_cache_max_inflight_keys: int = 64,
     response_cache_max_waiters: int = 4096,
     max_cuda_graphs: int = DEFAULT_MAX_CUDA_GRAPHS,
+    max_cuda_graph_row_tokens: int = 0,
     save_dir: str | None = None,
     batch_collect_ms: float = DEFAULT_BATCH_COLLECT_MS,
     max_batch_requests: int = DEFAULT_MAX_BATCH_REQUESTS,
@@ -1095,6 +1117,16 @@ def create_app(
     """Create the FastAPI app."""
     if audio_decode_batch_size < 1:
         raise ValueError("audio_decode_batch_size must be at least 1.")
+    if (
+        not isinstance(max_cuda_graph_row_tokens, int)
+        or isinstance(max_cuda_graph_row_tokens, bool)
+        or max_cuda_graph_row_tokens < 0
+    ):
+        raise ValueError("max_cuda_graph_row_tokens must be an integer >= 0.")
+    if max_cuda_graph_row_tokens and runner_name not in {"faster", "hybrid"}:
+        raise ValueError(
+            "--max-cuda-graph-row-tokens is only supported for faster/hybrid runners."
+        )
     if response_cache_max_bytes < 0 or response_cache_ttl < 0:
         raise ValueError("Complete-response cache limits must be nonnegative.")
     if response_cache_max_inflight_keys < 1 or response_cache_max_waiters < 1:
@@ -1143,6 +1175,7 @@ def create_app(
             decode_postprocess_workers=decode_postprocess_workers,
             audio_decode_batch_size=audio_decode_batch_size,
             max_cuda_graphs=max_cuda_graphs,
+            max_cuda_graph_row_tokens=max_cuda_graph_row_tokens,
             runner_factory=factory,
         )
         runner.load_model()
@@ -1304,6 +1337,7 @@ def create_app(
     app.state.split_cfg = split_cfg
     app.state.response_cache = None
     app.state.max_cuda_graphs = max(0, int(max_cuda_graphs))
+    app.state.max_cuda_graph_row_tokens = max_cuda_graph_row_tokens
     app.state.save_dir = Path(save_dir) if save_dir else None
     app.state.runner = None
     app.state.sample_rate = DEFAULT_SAMPLE_RATE
@@ -1394,6 +1428,7 @@ def create_app(
             "inference_optimizations": inference_optimizations,
             "response_cache": app.state.response_cache.snapshot(),
             "max_cuda_graphs": int(app.state.max_cuda_graphs),
+            "max_cuda_graph_row_tokens": app.state.max_cuda_graph_row_tokens,
             "batch_collect_ms": app.state.batch_collect_ms,
             "max_batch_requests": app.state.max_batch_requests,
             "batcher_queue": app.state.batcher.queue_snapshot(),
@@ -1655,7 +1690,7 @@ def create_app(
             raise HTTPException(status_code=400, detail=str(exc)) from exc
         except RuntimeError as exc:
             status_code = _runtime_error_status(exc)
-            if status_code == 429:
+            if status_code == 429 or isinstance(exc, GraphMemoryAdmissionError):
                 # Queue saturation is normal backpressure, not an inference fault.
                 # Tracebacks for thousands of rejected arrivals block the event loop.
                 logger.info(
@@ -1666,6 +1701,11 @@ def create_app(
             raise HTTPException(
                 status_code=status_code,
                 detail=str(exc),
+                headers=(
+                    {"Retry-After": "1"}
+                    if isinstance(exc, GraphMemoryAdmissionError)
+                    else None
+                ),
             ) from exc
         except Exception as exc:  # pragma: no cover - defensive server guard
             logger.exception("request_id=%s status=unexpected_error", request_id)
@@ -2543,8 +2583,8 @@ def create_app(
             raise HTTPException(status_code=400, detail=str(exc)) from exc
         except RuntimeError as exc:
             status_code = _runtime_error_status(exc)
-            if status_code == 429:
-                # Queue saturation is normal backpressure, not an inference fault.
+            if status_code == 429 or isinstance(exc, GraphMemoryAdmissionError):
+                # Admission rejection is normal backpressure, not an inference fault.
                 # Tracebacks for thousands of rejected arrivals block the event loop.
                 logger.info(
                     "request_id=%s status=overloaded reason=%s", request_id, exc
@@ -2554,6 +2594,11 @@ def create_app(
             raise HTTPException(
                 status_code=status_code,
                 detail=str(exc),
+                headers=(
+                    {"Retry-After": "1"}
+                    if isinstance(exc, GraphMemoryAdmissionError)
+                    else None
+                ),
             ) from exc
         except Exception as exc:  # pragma: no cover - defensive server guard
             logger.exception("request_id=%s status=unexpected_error", request_id)
@@ -2615,6 +2660,7 @@ def main(argv: list[str] | None = None) -> None:
         response_cache_max_inflight_keys=args.response_cache_max_inflight_keys,
         response_cache_max_waiters=args.response_cache_max_waiters,
         max_cuda_graphs=args.max_cuda_graphs,
+        max_cuda_graph_row_tokens=args.max_cuda_graph_row_tokens,
         save_dir=args.save_dir,
         batch_collect_ms=args.batch_collect_ms,
         max_batch_requests=args.max_batch_requests,

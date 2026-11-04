@@ -16,6 +16,7 @@ import torch
 from omnivoice import OmniVoiceGenerationConfig
 
 from omnivoice_triton.models.faster_runner import CudaGraphCaptureError
+from omnivoice_triton.models.graph_memory import GraphMemoryAdmissionError
 from omnivoice_triton.serving import (
     CudaFaultError,
     GenerationBatcher,
@@ -337,6 +338,83 @@ def test_failed_gpu_task_releases_its_frames(batcher_and_faults, monkeypatch) ->
 
     assert excinfo.value is not None  # the caller still holds the error...
     assert refs[0]() is None  # ...but not the failed call's frames
+
+
+@pytest.mark.parametrize("kind", ["generation", "gpu_task"])
+@pytest.mark.parametrize("admission_declined", [False, True])
+def test_memory_admission_skips_failure_cleanup_and_worker_recovers(
+    monkeypatch, kind: str, admission_declined: bool
+) -> None:
+    """A declined forward is backpressure; real failures retain owner-thread cleanup."""
+    from omnivoice_triton.serving import batching
+
+    monkeypatch.setattr(torch.cuda, "is_available", lambda: False)
+    cleanup_threads: list[int] = []
+    exception_log_threads: list[int] = []
+    monkeypatch.setattr(
+        batching,
+        "_cleanup_cuda_after_gpu_failure",
+        lambda *args: cleanup_threads.append(threading.get_ident()),
+    )
+    monkeypatch.setattr(
+        batching.logger,
+        "exception",
+        lambda *args, **kwargs: exception_log_threads.append(threading.get_ident()),
+    )
+    sampler_events: list[tuple[str, int, float | None]] = []
+
+    class Sampler:
+        def start(self):
+            sampler_events.append(("start", threading.get_ident(), None))
+
+        def stop(self, *, process_peak_vram_gb=None):
+            sampler_events.append(("stop", threading.get_ident(), process_peak_vram_gb))
+
+    class Payload:
+        pass
+
+    refs: list[weakref.ref[Payload]] = []
+    failure_threads: list[int] = []
+    error_type = GraphMemoryAdmissionError if admission_declined else RuntimeError
+
+    def fail():
+        payload = Payload()
+        refs.append(weakref.ref(payload))
+        failure_threads.append(threading.get_ident())
+        raise error_type("declined before forward" if admission_declined else "failure")
+
+    model = SimpleNamespace(generate=lambda **kwargs: fail())
+    monitor = SimpleNamespace(create_batch_sampler=Sampler)
+    faults: list[str] = []
+    batcher = GenerationBatcher(
+        model, collect_ms=0, gpu_metrics_monitor=monitor, on_cuda_fault=faults.append
+    )
+    try:
+        with pytest.raises(error_type) as excinfo:
+            if kind == "generation":
+                batcher.submit(_pending_generation("declined"))
+            else:
+                batcher.run_on_gpu_thread(fail, name="declined")
+        assert excinfo.value is not None
+        assert refs[0]() is None
+        owner = failure_threads[0]
+        assert owner != threading.get_ident()
+        expected = [] if admission_declined else [owner]
+        assert cleanup_threads == expected
+        assert exception_log_threads == expected
+        assert faults == [] and batcher.cuda_fault is None
+        if kind == "generation":
+            assert sampler_events == [
+                ("start", owner, None),
+                ("stop", owner, None if admission_declined else 0.0),
+            ]
+        assert batcher.run_on_gpu_thread(lambda: 42, name="after-decline") == 42
+        model.generate = lambda **kwargs: [
+            np.zeros(10, dtype=np.float32) for _ in kwargs["text"]
+        ]
+        assert len(batcher.submit(_pending_generation("after-decline")).audio) == 10
+    finally:
+        batcher.close()
 
 
 def test_cuda_fault_refuses_all_later_work(batcher_and_faults) -> None:

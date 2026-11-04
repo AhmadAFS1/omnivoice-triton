@@ -198,6 +198,22 @@ Main runtime flags:
 - `--decode-postprocess-workers`: CPU worker threads for audio postprocessing
 - `--max-cuda-graphs`: maximum CUDA Graph shapes retained by `faster` and
   `hybrid`; default `8`, and `0` disables graph caching
+- `--max-cuda-graph-row-tokens`: opt-in retained graph budget for `faster` and
+  `hybrid`; default `0` preserves existing behavior. The weight is batch rows
+  (including classifier-free guidance) × sequence length, normalized to FP16.
+  The policy evicts before capture, checks estimated free-memory headroom, and
+  uses eager inference when capture is unsafe. This heuristic does not bound
+  total VRAM or guarantee that a later allocation succeeds. Unsupported model
+  architectures use eager inference. Raw shape prewarming is rejected while
+  this policy is enabled; normal generation warmup remains available.
+
+Graph-memory admission can return HTTP 503 before allocating a new graph when
+estimated workspace is unavailable. That request fails, while `/health` remains
+healthy and later requests may proceed. An actual failed CUDA Graph capture
+still marks the worker dead and requires a restart. `/health` reports the
+configured row budget and `inference_optimizations.cuda_graph_memory` decisions,
+evictions and the last GPU-owner memory observation. The health handler does not
+query CUDA for these metrics. This option is experimental and disabled by default.
 
 When a pending queue is full, the request returns HTTP 429. This is overload
 protection, not a latency or successful-concurrency guarantee. `/health` exposes

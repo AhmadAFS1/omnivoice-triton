@@ -226,6 +226,7 @@ class BaseRunner:
     """
 
     _supports_split_cfg = False
+    _supports_graph_memory = False
 
     def __init__(
         self,
@@ -236,6 +237,7 @@ class BaseRunner:
         audio_decode_batch_size: int = 1,
         disable_unused_kv_cache: bool = False,
         split_cfg: bool = False,
+        max_cuda_graph_row_tokens: int = 0,
     ) -> None:
         self.device = device
         self.model_id = model_id
@@ -246,6 +248,17 @@ class BaseRunner:
         self.split_cfg = bool(split_cfg)
         if self.split_cfg and not self._supports_split_cfg:
             raise ValueError("Experimental split CFG requires faster or hybrid runner.")
+        if (
+            not isinstance(max_cuda_graph_row_tokens, int)
+            or isinstance(max_cuda_graph_row_tokens, bool)
+            or max_cuda_graph_row_tokens < 0
+        ):
+            raise ValueError("max_cuda_graph_row_tokens must be an integer >= 0.")
+        if max_cuda_graph_row_tokens and not self._supports_graph_memory:
+            raise ValueError(
+                "CUDA Graph memory policy requires faster or hybrid runner."
+            )
+        self.max_cuda_graph_row_tokens = max_cuda_graph_row_tokens
         self._split_cfg_patch: Any | None = None
         self._model: Any = None
         self._decode_postprocess_executor: ThreadPoolExecutor | None = None

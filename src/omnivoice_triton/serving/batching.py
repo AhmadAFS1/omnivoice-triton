@@ -18,6 +18,7 @@ import torch
 from omnivoice import OmniVoiceGenerationConfig
 
 from omnivoice_triton.models.faster_runner import CudaGraphCaptureError
+from omnivoice_triton.models.graph_memory import GraphMemoryAdmissionError
 from omnivoice_triton.serving.gpu_metrics import BatchGpuMetrics, GPUMetricsMonitor
 
 logger = logging.getLogger(__name__)
@@ -432,7 +433,10 @@ class GenerationBatcher:
         try:
             result = task.fn()
         except Exception as exc:
-            if isinstance(exc, RuntimeError):
+            if isinstance(exc, GraphMemoryAdmissionError):
+                logger.info("GPU task memory admission declined name=%s", task.name)
+                _release_failure_frames(exc)
+            elif isinstance(exc, RuntimeError):
                 logger.exception("GPU task failed name=%s", task.name)
                 _release_failure_frames(exc)
                 if is_cuda_fault(exc):
@@ -706,12 +710,11 @@ class GenerationBatcher:
                     )
                 )
         except Exception as exc:
+            admission_declined = isinstance(exc, GraphMemoryAdmissionError)
             try:
-                peak_vram_gb = (
-                    torch.cuda.max_memory_allocated() / 1024**3
-                    if torch.cuda.is_available()
-                    else 0.0
-                )
+                peak_vram_gb = None if admission_declined else 0.0
+                if not admission_declined and torch.cuda.is_available():
+                    peak_vram_gb = torch.cuda.max_memory_allocated() / 1024**3
                 if "batch_gpu_sampler" in locals() and batch_gpu_sampler is not None:
                     batch_gpu_sampler.stop(process_peak_vram_gb=peak_vram_gb)
             except Exception:  # pragma: no cover - metrics should not mask failures
@@ -719,13 +722,25 @@ class GenerationBatcher:
                     "Failed to stop GPU batch sampler after error.",
                     exc_info=True,
                 )
-            logger.exception(
-                "Batch execution failed lane=%s size=%d",
-                anchor.batch_key.lane,
-                len(batch),
-            )
+            if admission_declined:
+                logger.info(
+                    "Batch memory admission declined lane=%s size=%d",
+                    anchor.batch_key.lane,
+                    len(batch),
+                )
+            else:
+                logger.exception(
+                    "Batch execution failed lane=%s size=%d",
+                    anchor.batch_key.lane,
+                    len(batch),
+                )
             _release_failure_frames(exc)
-            if is_cuda_fault(exc):
+            if admission_declined:
+                # The policy already checked headroom and rejected before the
+                # next forward. Synchronizing/collecting here would turn normal
+                # backpressure into global CUDA cleanup on every declined batch.
+                pass
+            elif is_cuda_fault(exc):
                 self._mark_cuda_fault(_describe_fault(exc, "batch"))
             else:
                 _cleanup_cuda_after_gpu_failure(self._model, "failed batch")

@@ -41,6 +41,7 @@ class TritonRunner(BaseRunner):
         audio_decode_batch_size: int = 1,
         disable_unused_kv_cache: bool = False,
         split_cfg: bool = False,
+        max_cuda_graph_row_tokens: int = 0,
     ) -> None:
         super().__init__(
             device=device,
@@ -50,6 +51,7 @@ class TritonRunner(BaseRunner):
             audio_decode_batch_size=audio_decode_batch_size,
             disable_unused_kv_cache=disable_unused_kv_cache,
             split_cfg=split_cfg,
+            max_cuda_graph_row_tokens=max_cuda_graph_row_tokens,
         )
         self.patch_range = patch_range
         self.enable_sage_attention = enable_sage_attention

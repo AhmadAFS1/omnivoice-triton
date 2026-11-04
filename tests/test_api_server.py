@@ -18,6 +18,7 @@ import torch
 from fastapi.testclient import TestClient
 
 from omnivoice_triton.cli.api_server import build_parser, create_app
+from omnivoice_triton.models.graph_memory import GraphMemoryAdmissionError
 from omnivoice_triton.serving import QueueFullError, WorkerLifecycleReporter
 
 
@@ -251,6 +252,7 @@ def test_health_and_languages(tmp_path: Path) -> None:
         assert payload["decode_postprocess_workers"] == 3
         assert payload["audio_decode_batch_size"] == 8
         assert payload["max_cuda_graphs"] == 8
+        assert payload["max_cuda_graph_row_tokens"] == 0
         assert payload["batch_collect_ms"] == 10.0
         assert payload["max_batch_requests"] == 32
         assert payload["registered_clone_prompt_count"] == 0
@@ -300,6 +302,7 @@ def test_health_and_languages(tmp_path: Path) -> None:
     assert created[0].kwargs["decode_postprocess_workers"] == 3
     assert created[0].kwargs["audio_decode_batch_size"] == 8
     assert created[0].kwargs["max_cuda_graphs"] == 8
+    assert "max_cuda_graph_row_tokens" not in created[0].kwargs
     assert created[0].prewarmed_shapes == [[4, 8, 163], [8, 8, 163]]
 
 
@@ -312,6 +315,34 @@ def test_audio_decode_batch_size_defaults_to_serial_and_validates() -> None:
     )
     with pytest.raises(ValueError, match="audio_decode_batch_size"):
         create_app(audio_decode_batch_size=0)
+
+
+def test_graph_memory_budget_is_opt_in_and_forwarded(tmp_path: Path) -> None:
+    parser = build_parser()
+    assert parser.parse_args([]).max_cuda_graph_row_tokens == 0
+    assert (
+        parser.parse_args(
+            ["--max-cuda-graph-row-tokens", "16384"]
+        ).max_cuda_graph_row_tokens
+        == 16384
+    )
+    created: list[_FakeRunner] = []
+    app = _make_app(tmp_path, created, max_cuda_graph_row_tokens=16384)
+    with TestClient(app) as client:
+        assert client.get("/health").json()["max_cuda_graph_row_tokens"] == 16384
+    assert created[0].kwargs["max_cuda_graph_row_tokens"] == 16384
+
+
+@pytest.mark.parametrize("value", [-1, 1.5, True, "16384"])
+def test_graph_memory_budget_rejects_invalid_values(value: Any) -> None:
+    with pytest.raises(ValueError, match="max_cuda_graph_row_tokens"):
+        create_app(max_cuda_graph_row_tokens=value)
+
+
+@pytest.mark.parametrize("name", ["base", "triton"])
+def test_graph_memory_budget_rejects_unsupported_runners(name: str) -> None:
+    with pytest.raises(ValueError, match="only supported for faster/hybrid"):
+        create_app(runner_name=name, max_cuda_graph_row_tokens=16384)
 
 
 def test_worker_drain_rejects_new_generate_requests(tmp_path: Path) -> None:
@@ -1303,6 +1334,25 @@ def test_generate_queue_overload_is_429_and_health_remains_ok(
         assert health.status_code == 200
         assert health.json()["batcher_queue"]["pending_requests"] == 0
         assert health.json()["worker"]["active_requests"] == 0
+
+
+def test_graph_memory_admission_rejection_keeps_worker_healthy(tmp_path: Path) -> None:
+    created: list[_FakeRunner] = []
+    app = _make_app(tmp_path, created, load_asr=False, start_worker_callback=False)
+    with TestClient(app) as client:
+        created[0].model.generate_error = GraphMemoryAdmissionError(
+            "Estimated output workspace unavailable for graph hit"
+        )
+        failed = client.post("/generate", **_design_request())
+        assert failed.status_code == 503
+        assert "Estimated output workspace" in failed.json()["detail"]
+        assert failed.headers["retry-after"] == "1"
+        health = client.get("/health")
+        assert health.status_code == 200
+        assert health.json()["cuda_fault"] is None
+        assert health.json()["worker"]["active_requests"] == 0
+        created[0].model.generate_error = None
+        assert client.post("/generate", **_design_request()).status_code == 200
 
 
 def test_cuda_fault_in_batch_marks_worker_dead(tmp_path: Path) -> None:

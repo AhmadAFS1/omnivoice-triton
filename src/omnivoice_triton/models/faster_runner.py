@@ -267,6 +267,7 @@ class FasterRunner(BaseRunner):
     """
 
     _supports_split_cfg = True
+    _supports_graph_memory = True
 
     def __init__(
         self,
@@ -278,6 +279,7 @@ class FasterRunner(BaseRunner):
         audio_decode_batch_size: int = 1,
         disable_unused_kv_cache: bool = False,
         split_cfg: bool = False,
+        max_cuda_graph_row_tokens: int = 0,
     ) -> None:
         super().__init__(
             device=device,
@@ -287,8 +289,10 @@ class FasterRunner(BaseRunner):
             audio_decode_batch_size=audio_decode_batch_size,
             disable_unused_kv_cache=disable_unused_kv_cache,
             split_cfg=split_cfg,
+            max_cuda_graph_row_tokens=max_cuda_graph_row_tokens,
         )
         self._graph_forward: _CUDAGraphForward | None = None
+        self._graph_memory: Any | None = None
         self.max_cuda_graphs = max(0, int(max_cuda_graphs))
 
     def load_model(self) -> None:
@@ -299,14 +303,51 @@ class FasterRunner(BaseRunner):
             max_graphs=self.max_cuda_graphs,
         )
         self._model.forward = self._graph_forward
+        self._install_graph_memory_policy()
         self._install_split_cfg()
         logger.info(
             "FasterRunner ready (CUDA Graph wrapper installed, max_graphs=%d).",
             self.max_cuda_graphs,
         )
 
+    def _install_graph_memory_policy(self) -> None:
+        """Install before CFG, with every allocation decision on the GPU owner."""
+        if not self.max_cuda_graph_row_tokens:
+            return
+        if self._graph_forward is None:
+            raise RuntimeError("CUDA Graph wrapper must exist before memory policy.")
+        from omnivoice_triton.models.graph_memory import MemoryBoundGraphForward
+
+        self._graph_memory = MemoryBoundGraphForward(
+            self._graph_forward,
+            max_row_tokens=self.max_cuda_graph_row_tokens,
+        )
+        self._model.forward = self._graph_memory
+        if not self._graph_memory.profile.qualified:
+            logger.warning(
+                "Graph memory architecture is unqualified (%s); using eager forward.",
+                self._graph_memory.profile.reason,
+            )
+
+    def get_inference_optimization_metrics(self) -> dict[str, Any]:
+        metrics = super().get_inference_optimization_metrics()
+        metrics["max_cuda_graph_row_tokens"] = self.max_cuda_graph_row_tokens
+        metrics["cuda_graph_memory"] = (
+            self._graph_memory.metrics() if self._graph_memory is not None else None
+        )
+        return metrics
+
     def unload_model(self) -> None:
         """Release graphs and unload model."""
+        if self._graph_memory is not None:
+            # Split.disable restores its saved outer forward, so disable it before
+            # restoring the original forward and releasing the memory wrapper.
+            if self._split_cfg_patch is not None:
+                self._split_cfg_patch.disable()
+                self._split_cfg_patch = None
+            if self._model is not None and self._graph_forward is not None:
+                self._model.forward = self._graph_forward._original_forward
+            self._graph_memory = None
         if self._graph_forward is not None:
             self._graph_forward.clear()
             self._graph_forward = None
@@ -325,6 +366,11 @@ class FasterRunner(BaseRunner):
         """Pre-capture CUDA Graphs for known hot-path shapes."""
         if self._graph_forward is None:
             return {"capture_count": 0, "shapes": [], "warmed_shapes": []}
+        if self.max_cuda_graph_row_tokens and shapes:
+            raise ValueError(
+                "Graph memory policy prewarm must use real generation requests; "
+                "raw shape capture would bypass memory admission."
+            )
         if self.split_cfg and shapes:
             raise ValueError(
                 "Split CFG prewarm needs conditional/target lengths; warm through "
