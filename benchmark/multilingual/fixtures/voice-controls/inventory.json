@@ -1,0 +1,402 @@
+{
+  "created_at": "2026-11-04T06:40:39.335503+00:00",
+  "builder": {
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/build.py",
+    "sha256": "c78e61d1e4246e7271df9a64d39a6a45bbb2a45311df19d743e000144bf1cd29"
+  },
+  "hardware": {
+    "measurement_kind": "CPU-only file hashing, text scoring and report generation; no GPU/model inference",
+    "date_utc": "2026-11-04T06:40:39.335622+00:00",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "processor": "arm",
+    "cpu_model": "Apple M5 Pro",
+    "physical_memory_bytes": "25769803776",
+    "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 17.0.0 (clang-1700.6.4.2)]",
+    "script_sha256": "4a284e28cbb7d015116820fbf93ed4e28ecfdd0b768ae8840437c6b28f3302e5"
+  },
+  "status": "read-only inventory and finite unexecuted QA plan; no model/GPU/API execution",
+  "sources": [
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/shared/gemini_pro_tts_voices.json",
+      "sha256": "bd063f275daface507da09d0b263b0770c23953baabc52268a3b0e5dc7e4e68a"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/backend/tmp/gemini_tts_clone_samples/manifest.json",
+      "sha256": "b228ef018e5a17f806b68ea67d9b1605f1a1ba52bea76aae92fb464fe105d364"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/app/constants/defaultVoices.ts",
+      "sha256": "ee956860aa9d4ffc228e20f9612fa93f4d317824021bcd7ee1ded397bdca4fb3"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/src/ui/copy.ts",
+      "sha256": "4b44411bcc9a0ec887cebdc23e987ccec06d88591194bd3862f52479cd1806cc"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/app/createCharacter/VoiceSelection.tsx",
+      "sha256": "fcd730a817198bddc2bffc16bd2b3a150b54c2943611fcd511ae44b6e9d382b6"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/app/updateVoice.tsx",
+      "sha256": "fbc1ad946955ac9e34a9837b6d3e78b0099e65b2b7f88e1877fbbc06113c1997"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/app/components/APIutils.tsx",
+      "sha256": "bd4bacdf381f31e4a3ae5d3d0b433840b432dffd9db7bf426cf997f998965b02"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/app/utils/omnivoiceTTSConfig.ts",
+      "sha256": "931759497e994fffc2d096d3e0dff76b10d0a055ec35706fd478cd870d3a6791"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/app/components/VoiceCallScreen.tsx",
+      "sha256": "5c6b7cb5d64033a969d240dc34a13ee633c41a865bc1ca1cc68546ab4dbd284a"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/app/components/VideoCallScreen.tsx",
+      "sha256": "6fa647e29331a9794a9cf06d6efd0dcdbd323376adb837f89daceeae2463219a"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/app/components/dynamicLesson/LearnStage.tsx",
+      "sha256": "d1644947ead12df86266c1ff0c5f1ec26fc49d43bb16efe0a3eebecdd8a51222"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/app/components/chat/useMessageAudio.ts",
+      "sha256": "aa4365236e6757c7a1b2057af402521a69933150bfefd82767fdb959702ab790"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/backend/routes/ai_gateway.py",
+      "sha256": "2142903c80d88e6a5a43ff84240cf4052b99c12a4dd06a043088240969f3e726"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/backend/services/default_voice_samples.py",
+      "sha256": "6b470d8e56f4ea6977775405281fe62dea9d38186f9e1e500f58fcb7e8010ec3"
+    },
+    {
+      "path": "/Users/ahmadsmacair/omnivoice-triton/omnivoice-triton/src/omnivoice_triton/cli/api_server.py",
+      "sha256": "c518c9054a024df8de5b1883332e06c2418f5cd81a5064b998949598db7a7d99"
+    }
+  ],
+  "worker_fields": [
+    {
+      "field": "num_step",
+      "worker_default": 32,
+      "validation_contract": "positive integer; no API upper bound",
+      "finite_QA_values": [
+        4,
+        16,
+        32,
+        64
+      ],
+      "effect_note": "Upstream GUI4..64; Lingua default16"
+    },
+    {
+      "field": "guidance_scale",
+      "worker_default": 2.0,
+      "validation_contract": "nonnegative float; no API upper bound",
+      "finite_QA_values": [
+        0.0,
+        2.0,
+        4.0
+      ],
+      "effect_note": "GUI0..4; frontend guidanceScale is currently ignored"
+    },
+    {
+      "field": "t_shift",
+      "worker_default": 0.1,
+      "validation_contract": "nonnegative float; no API upper bound",
+      "finite_QA_values": [
+        0.0,
+        0.1,
+        1.0
+      ],
+      "effect_note": "API-only; zero is accepted but may be degenerate"
+    },
+    {
+      "field": "layer_penalty_factor",
+      "worker_default": 5.0,
+      "validation_contract": "nonnegative float; no API upper bound",
+      "finite_QA_values": [
+        0.0,
+        5.0
+      ],
+      "effect_note": "API-only"
+    },
+    {
+      "field": "position_temperature",
+      "worker_default": 5.0,
+      "validation_contract": "nonnegative float; no API upper bound",
+      "finite_QA_values": [
+        0.0,
+        5.0
+      ],
+      "effect_note": "API-only stochastic position scoring"
+    },
+    {
+      "field": "class_temperature",
+      "worker_default": 0.0,
+      "validation_contract": "nonnegative float; no API upper bound",
+      "finite_QA_values": [
+        0.0,
+        1.0
+      ],
+      "effect_note": "API-only token sampling temperature; not legacy temperature"
+    },
+    {
+      "field": "speed",
+      "worker_default": null,
+      "validation_contract": "positive float when supplied; no API upper bound",
+      "finite_QA_values": [
+        0.5,
+        1.0,
+        1.3,
+        1.5
+      ],
+      "effect_note": "GUI.5..1.5; model unset1; Lingua default1.3/video+tutor1"
+    },
+    {
+      "field": "duration",
+      "worker_default": null,
+      "validation_contract": "number; <=0 means unset, >0 overrides speed",
+      "finite_QA_values": [
+        null,
+        0,
+        -1,
+        3.0
+      ],
+      "effect_note": "Not exposed by Lingua builders; cannot use multi-sentence insert_pauses with duration"
+    },
+    {
+      "field": "denoise",
+      "worker_default": true,
+      "validation_contract": "boolean",
+      "finite_QA_values": [
+        true,
+        false
+      ],
+      "effect_note": "Denoise conditioning token applies only when reference audio exists"
+    },
+    {
+      "field": "preprocess_prompt",
+      "worker_default": true,
+      "validation_contract": "boolean",
+      "finite_QA_values": [
+        true,
+        false
+      ],
+      "effect_note": "Must vary at reference upload/registration; changing existing prompt_id does not reprocess it"
+    },
+    {
+      "field": "postprocess_mode",
+      "worker_default": "full",
+      "validation_contract": "full/light/off; aliases accepted",
+      "finite_QA_values": [
+        "full",
+        "light",
+        "off"
+      ],
+      "effect_note": "Lingua full; video off; tutor light"
+    },
+    {
+      "field": "insert_pauses",
+      "worker_default": false,
+      "validation_contract": "boolean",
+      "finite_QA_values": [
+        true,
+        false
+      ],
+      "effect_note": "Separately synthesize sentences then return one complete WAV"
+    }
+  ],
+  "Lingua_UI_voice_sliders_found": 0,
+  "Lingua_UI_controls": [
+    "8stock voice radio cards",
+    "custom recorded/uploaded reference sample",
+    "character gender orders/suggests voice cards; no acoustic gender override",
+    "preview/play; stored sample audio preview is not new synthesis"
+  ],
+  "voice_catalog": [
+    {
+      "voice_name": "Despina",
+      "gender": "female",
+      "persona": "Warm & Trusting",
+      "description": "Best for comfort, softness, and easy conversation."
+    },
+    {
+      "voice_name": "Aoede",
+      "gender": "female",
+      "persona": "Thoughtful & Calm",
+      "description": "Good default female voice for long sessions; intelligent, articulate, low-fatigue."
+    },
+    {
+      "voice_name": "Zephyr",
+      "gender": "female",
+      "persona": "Bright & Playful",
+      "description": "More upbeat and lively without being too intense."
+    },
+    {
+      "voice_name": "Kore",
+      "gender": "female",
+      "persona": "Confident & Youthful",
+      "description": "For users who want energy and a younger, more dynamic feel."
+    },
+    {
+      "voice_name": "Charon",
+      "gender": "male",
+      "persona": "Calm & Reassuring",
+      "description": "Smooth, approachable, trustworthy; very strong general-purpose male companion."
+    },
+    {
+      "voice_name": "Iapetus",
+      "gender": "male",
+      "persona": "Friendly & Casual",
+      "description": "Good everyday voice; easygoing and relatable."
+    },
+    {
+      "voice_name": "Fenrir",
+      "gender": "male",
+      "persona": "Clear & Helpful",
+      "description": "Natural, approachable, good for users who want clean, easy-to-follow speech."
+    },
+    {
+      "voice_name": "Umbriel",
+      "gender": "male",
+      "persona": "Mature & Grounded",
+      "description": "For users who want a more stable, deeper, more serious presence."
+    }
+  ],
+  "voice_descriptions_display": {
+    "Despina": "Soft and warm — easy, relaxed conversation.",
+    "Aoede": "Calm and articulate; comfortable for long sessions.",
+    "Zephyr": "Bright and upbeat without being loud.",
+    "Kore": "Confident and youthful.",
+    "Charon": "Smooth and reassuring.",
+    "Iapetus": "Easygoing and friendly.",
+    "Fenrir": "Clear and easy to follow.",
+    "Umbriel": "Deep, steady and grounded."
+  },
+  "voice_defaults": {
+    "resolver_default": "Aoede",
+    "wizard_first_female": "Despina",
+    "wizard_first_male": "Charon",
+    "wizard_other_gender_catalog_first": "Despina",
+    "runtime_legacy_alloy_alias": "Iapetus"
+  },
+  "voice_description_semantics": "Catalog/UI descriptions label the reference voice. They are not forwarded as instruct; gender only sorts/recommends card selection.",
+  "SDK_declared_but_not_forwarded_by_current_clone_builders": [
+    "instruct",
+    "guidanceScale",
+    "exaggeration",
+    "temperature",
+    "diffusionSteps",
+    "minP",
+    "topP",
+    "repetitionPenalty",
+    "seed",
+    "splitSentences",
+    "outputFormat"
+  ],
+  "backend_received_but_not_worker_generate_options": [
+    "exaggeration",
+    "temperature",
+    "min_p",
+    "top_p",
+    "repetition_penalty",
+    "seed",
+    "split_sentences"
+  ],
+  "backend_aliases": {
+    "diffusion_steps": "num_step only if num_step absent",
+    "tone": "instruct only for design mode, intentionally ignored in clone mode",
+    "voice_instruction": "helper recognizes it, but public extras constructors currently omit it"
+  },
+  "unsupported_arbitrary_controls": [
+    "emotion",
+    "numeric_pitch",
+    "freeform_voice_description"
+  ],
+  "pinned_upstream_GUI_sliders": {
+    "speed": {
+      "min": 0.5,
+      "max": 1.5,
+      "default": 1.0,
+      "step": 0.05
+    },
+    "num_step": {
+      "min": 4,
+      "max": 64,
+      "default": 32,
+      "step": 1
+    },
+    "guidance_scale": {
+      "min": 0.0,
+      "max": 4.0,
+      "default": 2.0,
+      "step": 0.1
+    }
+  },
+  "playback_only_controls": {
+    "message_slow_playback_rate": 0.7,
+    "preserve_pitch": true,
+    "device_drill_pitch": 1,
+    "note": "Expo playback/device speech path, not OmniVoice generation controls"
+  },
+  "reference_assets": {
+    "native_verified_local": 64,
+    "native_by_language": {
+      "ar": 8,
+      "da": 8,
+      "de": 8,
+      "el": 8,
+      "en": 8,
+      "es": 8,
+      "fi": 8,
+      "fr": 6,
+      "ur": 2
+    },
+    "bytes": 40358400,
+    "all8voices_x104routes": 832,
+    "native_pairs": 64,
+    "English_fallback_pairs": 768,
+    "production_body_verification_scope": "9Aoede files earlier, other local files match the deployed manifest but S3 bodies not reread"
+  },
+  "matrix": {
+    "all104_all8voice_product_profiles": 2496,
+    "all104_auto_design_direct_worker": 208,
+    "all104_smoke_total": 2704,
+    "pairwise_numeric_boolean_cases": 36,
+    "pairwise_attributes_cases": 60,
+    "accent_dialect_cases": 22,
+    "pairwise_boundary_total": 130,
+    "validation_only_expected_rejections": 28,
+    "representative_routes": [
+      "en",
+      "es",
+      "ar",
+      "ru",
+      "hi",
+      "zh",
+      "ja",
+      "ko",
+      "sw",
+      "tr",
+      "ta",
+      "th"
+    ],
+    "pairwise_verification": "Every unordered factor/value pair covered by deterministic greedy array; genetic family/native-quality coverage is not inferred"
+  },
+  "quality_caveats": [
+    "ASR agreement/mismatch is a screen, not perceptual quality or native-language certification.",
+    "The two Omnilingual variants share a model family and can share recognition errors.",
+    "WER is not comparable across scripts/tokenization; CER ignores whitespace only after documented normalization.",
+    "Published texts and existing reference transcripts have not been independently reviewed by native speakers.",
+    "An English clone reference is explicitly cross-language; it is not a native target-language voice reference.",
+    "Twi uses the broader aka_Latn Akan ASR proxy; exact Twi recognition quality is unqualified.",
+    "Repeated cached/coalesced WAVs are not independent quality evidence or fresh-inference throughput.",
+    "No calibrated ASR confidence, MOS, speaker similarity, or human listening judgment is inferred.",
+    "Hash differences can result from unseeded generation; a difference alone is not a quality regression.",
+    "All new cases unexecuted. Fixed attribute vocabulary accepted does not prove perceptual attribute realization.",
+    "All8voices require per-reference calibration, not one overwritten control per language.",
+    "Prompt preprocessing must be applied to reference registration or direct upload, not only generate with a previously registered prompt_id."
+  ]
+}

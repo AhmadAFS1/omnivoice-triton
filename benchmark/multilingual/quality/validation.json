@@ -1,0 +1,19 @@
+{
+  "measurement_kind": "CPU-only packaged-copy validation; no model/GPUcalls",
+  "tests": 8,
+  "status": "passed",
+  "hardware": {
+    "measurement_kind": "CPU-only file hashing, text scoring and report generation; no GPU/model inference",
+    "date_utc": "2026-11-04T09:24:34.798587+00:00",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "processor": "arm",
+    "cpu_model": "Apple M5 Pro",
+    "physical_memory_bytes": "25769803776",
+    "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 17.0.0 (clang-1700.6.4.2)]",
+    "script_sha256": "2e2f4f911a9e288c4078c26b922f5bdafc674753a22251ae7090fecc75ffbdef"
+  },
+  "packaged_helper_sha256": "2e2f4f911a9e288c4078c26b922f5bdafc674753a22251ae7090fecc75ffbdef",
+  "original_helper_sha256": "848e8fc5475ef3ac5345f727dd978c12ed1f4406d41b345af8b525e872782b4a",
+  "path_adaptation": "Only default fixture path selection changed in packaged helper",
+  "original_validation_snapshot": "history/validation-v4-before-package-adaptation.json"
+}

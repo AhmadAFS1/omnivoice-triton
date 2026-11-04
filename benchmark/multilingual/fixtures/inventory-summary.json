@@ -1,0 +1,81 @@
+{
+  "measurement_kind": "CPU-only static inventory and file/hash validation; no GPU inference or quality qualification",
+  "date_utc": "2026-11-04T05:00:44.802773+00:00",
+  "repo_head": "809cf46262375e5a2b806d970e121e95252a79c7",
+  "source_files": [
+    {
+      "path": "app/constants/languages.ts",
+      "sha256": "23ca604d783d7d8f4dce7dc5406a953c676a4a22d81991c045a0eb25334a783d"
+    },
+    {
+      "path": "app/constants/omnivoiceLanguages.ts",
+      "sha256": "ca359a605e03b3630110ae89f79387c0229e9b7f73462d6a594adc8bad7e50db"
+    },
+    {
+      "path": "app/components/characterWizard/languageOptions.ts",
+      "sha256": "9d952c4559823c96e94dc3aec5385bb5799975b22788074949f03ceb58c8c65b"
+    },
+    {
+      "path": "shared/omnivoice_language_capabilities.json",
+      "sha256": "14f5400dd6b4bb32497f62858b767321d9e46bbe2a533fc16a9ded715a7a6dae"
+    },
+    {
+      "path": "shared/legacy_voice_sample_languages.json",
+      "sha256": "4b819319bfaa536b55069ae6676bf36309d1c82ebf620f895d6543c9abc4c891"
+    },
+    {
+      "path": "backend/services/omnivoice_languages.py",
+      "sha256": "93be26dc9451f8fb600943088b74797af74f95198d94e1097ec5f89f03d651b6"
+    },
+    {
+      "path": "backend/services/default_voice_samples.py",
+      "sha256": "6b470d8e56f4ea6977775405281fe62dea9d38186f9e1e500f58fcb7e8010ec3"
+    },
+    {
+      "path": "backend/config.py",
+      "sha256": "14f5ed9f9d02d368a42ca9c84c3e55085a960460d29555d1d9d617c25442397e"
+    },
+    {
+      "path": "tests/omnivoiceLanguageCapabilities.test.ts",
+      "sha256": "537701b276231facd91d20bfda6ae1315b17e08b02d591020e40d170cf2a3194"
+    },
+    {
+      "path": "src/onboarding/content.ts",
+      "sha256": "fc362babe096c71c9aac8b3446cb340c73d0ba9b7252e22ed3c615b6674b0d0c"
+    },
+    {
+      "path": "shared/gemini_pro_tts_seed_sentences.json",
+      "sha256": "906ce954f42968e9fc0d0392f781810c89bbf1cc0c0f8d5a43c38713d1ec4e7c"
+    },
+    {
+      "path": "backend/tmp/gemini_tts_clone_samples/manifest.json",
+      "sha256": "b228ef018e5a17f806b68ea67d9b1605f1a1ba52bea76aae92fb464fe105d364"
+    }
+  ],
+  "counts": {
+    "raw_catalog_rows": 139,
+    "ready_labels_including_alias": 105,
+    "active_deduplicated_languages": 104,
+    "review_only_rows": 34,
+    "duplicate_alias_rows": 1,
+    "legacy_sample_registry_codes": 24,
+    "local_aoede_reference_languages": 9,
+    "active_languages_without_local_native_reference": 95,
+    "official_omnilingual_supported_language_script_ids": 1672,
+    "active_asr_exact_id_memberships": 104,
+    "active_asr_broader_language_proxies": 1
+  },
+  "capabilities_claim_source": "omnivoice-triton /languages",
+  "capabilities_validated_at": "2026-09-13",
+  "status_note": "Product ready means a configured provider route, not this benchmark has certified pronunciation, words, voice identity, or ASR accuracy.",
+  "asr_source": {
+    "url": "https://raw.githubusercontent.com/facebookresearch/omnilingual-asr/81f51e224ce9e74b02cc2a3eaf21b2d91d743455/src/omnilingual_asr/models/wav2vec2_llama/lang_ids.py",
+    "commit": "81f51e224ce9e74b02cc2a3eaf21b2d91d743455",
+    "sha256": "675b8a263aed48269020d4e9f06b3063d5b4e0d5399b2c3e0e06160e08d24f8e"
+  },
+  "references_note": "Local manifest/config declares24languages, but only9 Aoede references exist locally. Production EC2/S3 coverage is unverified; do not infer from configuration. Backend missing-reference fallback defaults to English.",
+  "corpus_source_pins": {
+    "omnilingual_dataset_revision": "8648ba8946377697b427ae952076e49fc0e5e44d",
+    "flores200_archive_sha256": "b8b0b76783024b85797e5cc75064eb83fc5288b41e9654dabc7be6ae944011f6"
+  }
+}

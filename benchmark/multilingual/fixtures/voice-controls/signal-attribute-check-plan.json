@@ -1,0 +1,130 @@
+{
+  "created_at": "2026-11-04T06:58:36.347843+00:00",
+  "status": "unexecuted finite signal/attribute QA plan; no GPU/model/API operation",
+  "planning_hardware": {
+    "measurement_kind": "CPU-only file hashing, text scoring and report generation; no GPU/model inference",
+    "date_utc": "2026-11-04T06:58:36.347987+00:00",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "processor": "arm",
+    "cpu_model": "Apple M5 Pro",
+    "physical_memory_bytes": "25769803776",
+    "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 17.0.0 (clang-1700.6.4.2)]",
+    "script_sha256": "d1d1902e6ec0427d792edf0e7979b3ef988f76942e2a3cea0b8f96ca273ffc81"
+  },
+  "source_inventory": {
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/inventory.json",
+    "sha256": "867ec617f7f18eea0039b96820311aba470fb46199d91cad43924e88bc49e8fa"
+  },
+  "source_reference_manifest": {
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/manifest.json",
+    "sha256": "0e199480e909da953464687d36e1fcf712343add844d7ca5ebfa7cda7116eac8"
+  },
+  "signal_checks": [
+    {
+      "id": "complete_WAV_integrity",
+      "controls": "allactualcases",
+      "check": [
+        "verify source and returned WAV SHA256",
+        "decode channel/rate/duration/finite values",
+        "peak, RMS, peak/rms dBFS, clipped samples, exact-zero samples",
+        "nonoverlapping20ms frame RMS fractions below.001 and.0001"
+      ],
+      "limits": "Measured thresholds are signal diagnostics, not perceptual silence or lexical correctness; no amplitude edits in production evidence"
+    },
+    {
+      "id": "speed_duration_monotonicity",
+      "controls": {
+        "speed": [
+          0.5,
+          1.0,
+          1.3,
+          1.5
+        ],
+        "duration": null,
+        "num_step": 16,
+        "postprocess_mode": "off",
+        "insert_pauses": false
+      },
+      "matching": "same exacttext/language/referenceSHA/transcript/preprocessing; record source/context/settings; use3repetitions percondition",
+      "check": [
+        "higher speed should reduce estimated/actual target-token count and median waveform duration",
+        "record violations and spread; no universal hard duration threshold before controls calibrated"
+      ],
+      "limits": "Startupseed is externalharness configuration, not a supported perrequestseed Formfield; stochastic delivery and codec padding can disturb strict pair ordering"
+    },
+    {
+      "id": "duration_overrides_speed",
+      "controls": {
+        "duration": 3.0,
+        "speed": [
+          0.5,
+          1.5
+        ],
+        "postprocess_mode": "off",
+        "insert_pauses": false
+      },
+      "check": [
+        "same actual tokenizer frame_rate from runtimeconfig",
+        "target duration tokens identical acrossspeed; inspect actualsavedtokens whenavailable",
+        "measure completeWAV duration with codec/padding tolerance derived fromruntime"
+      ],
+      "limits": "Never assume75fps; use actual tokenizerconfig and WAV sample count. Earlier ARB1actual2.240s is authoritative"
+    },
+    {
+      "id": "body_differentiation",
+      "controls": "same text acrossactualvoiceIDs/fixedpitchinstructions/generationoptions",
+      "check": [
+        "group by exactappliedsettings/referenceSHA/voice/lang; retainbodySHA",
+        "repeated samehash for materially different reference/pitchsettings -> review ignored-control/cache/reference selection",
+        "differenthash -> body changed only; not proofdesiredvoice orpitch achieved"
+      ],
+      "limits": "No samebody/differentbody automaticvoice-quality pass; separate novelinference fromhot/coalesced reuse"
+    },
+    {
+      "id": "estimated_F0_pitch_instruction",
+      "controls": {
+        "instruct_pitch": [
+          "very low pitch",
+          "low pitch",
+          "moderate pitch",
+          "high pitch",
+          "very high pitch"
+        ],
+        "mode": [
+          "design",
+          "clone_explicit_instruction"
+        ],
+        "postprocess_mode": "off"
+      },
+      "matching": "holdspeaker/ref,gender,age,text,language,speed,steps constant; testrepeat3, comparewithinvoicelanguage, neverbetweenunmatchedvoices",
+      "analysis": "OptionalofflineCPU pYIN/autocorrelation:voicedframefraction,medianF0,quartiles,estimator/searchrange+versions. Savefailure/unvoicedstatus,do notconvertunvoicedto0Hz",
+      "check": [
+        "rankdirection ofmedianvoicedF0 against5pitchranks whenenoughvoicedframes",
+        "flag octaveerrors/search-boundhits/verylowvoicing",
+        "native/listening review forpitchattributes; no universalpassrate withoutcalibratedcontrol"
+      ],
+      "limits": "Pitch is a fixed instruct token, not a numericAPIpitch knob. Whisperstylecanbeunvoiced; no F0monotonic expectation forwhisper"
+    },
+    {
+      "id": "RMS_volume",
+      "controls": "noactualvolume/gain Formfield exists",
+      "check": [
+        "RMS/peak/clipping measured forhealth andcomparison only",
+        "whisperinstructionrecognition alone doesnotprovequietness/perceivedwhisper"
+      ],
+      "limits": "Do not invent a working volume slider. Any linear gain experiment must be DERIVED and keep rawprimaryreports immutable"
+    },
+    {
+      "id": "identity_and_style",
+      "controls": "all8stockreferences,customreferencepath,age/gender/style/accent/dialectinstructions",
+      "check": [
+        "verifyactualrefSHA/text/preprocessing andworkerprompt mapping",
+        "ASRchecks words only",
+        "speakerembedding/F0/energy may supplement but requirecalibratedthresholds andlistening",
+        "English accents testedonlyEN;Chinese dialectsonlyZH; native/regionalreviewrequired"
+      ],
+      "limits": "ASR nevercertifies speakeridentity,age,gender,pitch,emotion,accent,fluencyorMOS. No arbitraryemotion/freeformdescription claim"
+    }
+  ],
+  "scope": "All104×8voice×3productpresets word/signal screening remains2704fixtureplan; 130pairwise/boundarycases probe finite controlinteractions. Continuousranges are not exhaustively tested. No productionqualityclaim untilactualoutputs exist."
+}

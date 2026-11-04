@@ -1,0 +1,27 @@
+{
+  "phases": [
+    {
+      "id": "fill-one-cache-key",
+      "kind": "sequential",
+      "case_ids": [
+        "en-short"
+      ],
+      "warmup": true,
+      "content_profile": "unique",
+      "deadline_s": 120
+    },
+    {
+      "id": "hot-identical5000",
+      "kind": "burst",
+      "case_ids": [
+        "en-short"
+      ],
+      "requests": 5000,
+      "content_profile": "identical-warm-cache",
+      "cache_intent": "warm",
+      "preconnect": 5000,
+      "deadline_s": 180,
+      "interpretation": "Optional retained-WAV warm-cache service stress. Use cache max-waiters6000; no novel inference capacity claim."
+    }
+  ]
+}

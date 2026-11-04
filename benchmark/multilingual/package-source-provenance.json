@@ -1,0 +1,423 @@
+{
+  "at": "2026-11-04T09:21:48.045530+00:00",
+  "measurement_kind": "CPU-only packaging of existing evidence/tools; no model/GPU calls",
+  "frozen_V4_runner_sha256": "df51c081d8108bf7dae5778adc2f21398e59d0ca8de394601f4251a55c521652",
+  "files": [
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/README.md",
+      "target": "load/README.md",
+      "source_sha256": "64acd7de96edda5aa87b29fa8f360d3b656963c65e081aaeeca30ae07e2f9ea3",
+      "packaged_sha256": "64acd7de96edda5aa87b29fa8f360d3b656963c65e081aaeeca30ae07e2f9ea3"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/V5-README.md",
+      "target": "load/V5-README.md",
+      "source_sha256": "e68ea4cbc876e713cdbb20968974e93d62a90165481fb91cb0c3ac6f25cc710c",
+      "packaged_sha256": "e68ea4cbc876e713cdbb20968974e93d62a90165481fb91cb0c3ac6f25cc710c"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/arrival_report.py",
+      "target": "load/arrival_report.py",
+      "source_sha256": "41faccb4eed279d4366dc64a92d416b959a4f84e4de64ac17d3712d9b0863bf7",
+      "packaged_sha256": "41faccb4eed279d4366dc64a92d416b959a4f84e4de64ac17d3712d9b0863bf7"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/build_plans.py",
+      "target": "load/build_plans.py",
+      "source_sha256": "3052ef5d541ea263f9a4f05481d7401b098f5f06a1a07abb7071057ff6c36508",
+      "packaged_sha256": "3052ef5d541ea263f9a4f05481d7401b098f5f06a1a07abb7071057ff6c36508"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/build_stagger500.py",
+      "target": "load/build_stagger500.py",
+      "source_sha256": "c1fa0e1a8e47a466b8c408347f787aa5b3fbdd286ce3e171b41f75d9baac1b28",
+      "packaged_sha256": "c1fa0e1a8e47a466b8c408347f787aa5b3fbdd286ce3e171b41f75d9baac1b28"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/build_step_frontier.py",
+      "target": "load/build_step_frontier.py",
+      "source_sha256": "fdcc3383e5fce630a848cc52da930f72ed7bb0a7b7a3a592506e54d669ce5fd4",
+      "packaged_sha256": "fdcc3383e5fce630a848cc52da930f72ed7bb0a7b7a3a592506e54d669ce5fd4"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/build_voice_plans_v5.py",
+      "target": "load/build_voice_plans_v5.py",
+      "source_sha256": "075fe35c26e82596d0c1b443c6f3d2c40d1fa47f98bd64ca83bff709ff4ea888",
+      "packaged_sha256": "075fe35c26e82596d0c1b443c6f3d2c40d1fa47f98bd64ca83bff709ff4ea888"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/orchestrate.py",
+      "target": "load/orchestrate.py",
+      "source_sha256": "447a5f79ffb865e721097f78d8487f4a8f1092c0e7aaab84ecc8c14f98907877",
+      "packaged_sha256": "447a5f79ffb865e721097f78d8487f4a8f1092c0e7aaab84ecc8c14f98907877"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/run.py",
+      "target": "load/run.py",
+      "source_sha256": "df51c081d8108bf7dae5778adc2f21398e59d0ca8de394601f4251a55c521652",
+      "packaged_sha256": "df51c081d8108bf7dae5778adc2f21398e59d0ca8de394601f4251a55c521652"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/run_candidate47_core.py",
+      "target": "load/run_candidate47_core.py",
+      "source_sha256": "7e4d30546a361d4c67dfb05e88e01fde84d95427ef34e955690ec0280313c0cc",
+      "packaged_sha256": "7e4d30546a361d4c67dfb05e88e01fde84d95427ef34e955690ec0280313c0cc"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/run_v5.py",
+      "target": "load/run_v5.py",
+      "source_sha256": "1a077901bd91b8b7c16bd2424b52519f092935db2de4f74d068e288b1eb89302",
+      "packaged_sha256": "1a077901bd91b8b7c16bd2424b52519f092935db2de4f74d068e288b1eb89302"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/runtime.py",
+      "target": "load/runtime.py",
+      "source_sha256": "52fc933b64f70f5e6010d17a91b4457b433938afe1d1607e78891bb071e0b1f2",
+      "packaged_sha256": "52fc933b64f70f5e6010d17a91b4457b433938afe1d1607e78891bb071e0b1f2"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/seeded_server.py",
+      "target": "load/seeded_server.py",
+      "source_sha256": "72b3860d1e8e70981ae4bcb2f9944d543489f19ab46e23a2083a03b8ac99dfe6",
+      "packaged_sha256": "72b3860d1e8e70981ae4bcb2f9944d543489f19ab46e23a2083a03b8ac99dfe6"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/smoke.py",
+      "target": "load/smoke.py",
+      "source_sha256": "669e32ff1ff5962986ae5553bcec59f24d2b4915c954d6d63ed3a19082cae418",
+      "packaged_sha256": "669e32ff1ff5962986ae5553bcec59f24d2b4915c954d6d63ed3a19082cae418"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/smoke_v5.py",
+      "target": "load/smoke_v5.py",
+      "source_sha256": "a825cc8031fbe9b44279ba76089ab4e8f42f97885fba42ee5ab98ec03f510187",
+      "packaged_sha256": "a825cc8031fbe9b44279ba76089ab4e8f42f97885fba42ee5ab98ec03f510187"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/telemetry-README.md",
+      "target": "load/telemetry-README.md",
+      "source_sha256": "98b6c47098ef40da32a7cf60bb526097f66aef0045e4abcecd347903939d8ee9",
+      "packaged_sha256": "98b6c47098ef40da32a7cf60bb526097f66aef0045e4abcecd347903939d8ee9"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/telemetry.py",
+      "target": "load/telemetry.py",
+      "source_sha256": "4255dcc5dedbe0bc5bcc022757b38d33f071def47287ba963d795c89799c1e37",
+      "packaged_sha256": "4255dcc5dedbe0bc5bcc022757b38d33f071def47287ba963d795c89799c1e37"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/test_arrival_report.py",
+      "target": "load/test_arrival_report.py",
+      "source_sha256": "524431a62d421fb9d017910bbd60c42cc1098d2d1ea06185192010c20db9c994",
+      "packaged_sha256": "524431a62d421fb9d017910bbd60c42cc1098d2d1ea06185192010c20db9c994"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/test_telemetry.py",
+      "target": "load/test_telemetry.py",
+      "source_sha256": "6df0fb105fb1c4b2cf96219df80a5ddcf9b2e74460d93f8feea4e8e590b3597b",
+      "packaged_sha256": "6df0fb105fb1c4b2cf96219df80a5ddcf9b2e74460d93f8feea4e8e590b3597b"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/verify.py",
+      "target": "load/verify.py",
+      "source_sha256": "35f2c4963a29147159cc2b95cf925465680afbe218ff9dc2a03c4849057cfcdf",
+      "packaged_sha256": "35f2c4963a29147159cc2b95cf925465680afbe218ff9dc2a03c4849057cfcdf"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/verify_v5.py",
+      "target": "load/verify_v5.py",
+      "source_sha256": "c5c501fd0e5d1ca4fd336c8ced156d4d10549e1a93ab446ed4338fecdb528103",
+      "packaged_sha256": "c5c501fd0e5d1ca4fd336c8ced156d4d10549e1a93ab446ed4338fecdb528103"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/wrap_plan_telemetry.py",
+      "target": "load/wrap_plan_telemetry.py",
+      "source_sha256": "b6e425196b09dcd9b3c5c872f49abf41d1e3e7c5ed1bf15f75c3bb10dd4ea4b9",
+      "packaged_sha256": "b6e425196b09dcd9b3c5c872f49abf41d1e3e7c5ed1bf15f75c3bb10dd4ea4b9"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/README.md",
+      "target": "load/asr/README.md",
+      "source_sha256": "f0162cbad7b8b83046441cafd48f8253b9a0ff0671831b74181f37692afe96bb",
+      "packaged_sha256": "f0162cbad7b8b83046441cafd48f8253b9a0ff0671831b74181f37692afe96bb"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/batch-probe-v1-report.md",
+      "target": "load/asr/batch-probe-v1-report.md",
+      "source_sha256": "24175a8d0cffd93fa3fce6e6abbff1c897a864d2564321566cc44a345065824c",
+      "packaged_sha256": "24175a8d0cffd93fa3fce6e6abbff1c897a864d2564321566cc44a345065824c"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/batch_prototype.py",
+      "target": "load/asr/batch_prototype.py",
+      "source_sha256": "e285faa8d63f669a1bc18d907a5fdae0f0817a48920f5abfc1948e45cdeba326",
+      "packaged_sha256": "e285faa8d63f669a1bc18d907a5fdae0f0817a48920f5abfc1948e45cdeba326"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/capture_assets.py",
+      "target": "load/asr/capture_assets.py",
+      "source_sha256": "3c7a5e9f173064993c6cfe63e1186a02ac79c1601452316d709a4c9fdb44e4b1",
+      "packaged_sha256": "3c7a5e9f173064993c6cfe63e1186a02ac79c1601452316d709a4c9fdb44e4b1"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/compare.py",
+      "target": "load/asr/compare.py",
+      "source_sha256": "6104d6273b64c50c7c02b935736a1ac33eb3a5a2fc38873a2db42e8ce57aba1f",
+      "packaged_sha256": "6104d6273b64c50c7c02b935736a1ac33eb3a5a2fc38873a2db42e8ce57aba1f"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/evaluate.py",
+      "target": "load/asr/evaluate.py",
+      "source_sha256": "db2e933104fd0cdd939f6cdf6661331e9e72cc3403e59f049a771b0a83567cdd",
+      "packaged_sha256": "db2e933104fd0cdd939f6cdf6661331e9e72cc3403e59f049a771b0a83567cdd"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/finalize.py",
+      "target": "load/asr/finalize.py",
+      "source_sha256": "a2355ce6622c621e86e4d30d0c03f199aa07dae14fdd431496fb7f79bd6a378d",
+      "packaged_sha256": "a2355ce6622c621e86e4d30d0c03f199aa07dae14fdd431496fb7f79bd6a378d"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/install.sh",
+      "target": "load/asr/install.sh",
+      "source_sha256": "eebc8f5004c971097a94024e95030ce3d8866b54fdfa3a44fb95b0b48e538ba0",
+      "packaged_sha256": "eebc8f5004c971097a94024e95030ce3d8866b54fdfa3a44fb95b0b48e538ba0"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/pair_audio.py",
+      "target": "load/asr/pair_audio.py",
+      "source_sha256": "f29be95d4957f456bc492278d636725711ff409830520df98408af6c2b449e03",
+      "packaged_sha256": "f29be95d4957f456bc492278d636725711ff409830520df98408af6c2b449e03"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/prefetch.py",
+      "target": "load/asr/prefetch.py",
+      "source_sha256": "3246329a56d3559c1278180610fc9bf226158876bbc27c2118043a7d914d44b5",
+      "packaged_sha256": "3246329a56d3559c1278180610fc9bf226158876bbc27c2118043a7d914d44b5"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/prefetch_ctc.py",
+      "target": "load/asr/prefetch_ctc.py",
+      "source_sha256": "b37c189163b73aed1694c47bee11de604109dec28f0280644909276f0caf11dc",
+      "packaged_sha256": "b37c189163b73aed1694c47bee11de604109dec28f0280644909276f0caf11dc"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/run_batch_probe.py",
+      "target": "load/asr/run_batch_probe.py",
+      "source_sha256": "90d7aa29937ae6b8bc8f9ff908619e21d45ec791fd20b06d1d2d7319b38a315d",
+      "packaged_sha256": "90d7aa29937ae6b8bc8f9ff908619e21d45ec791fd20b06d1d2d7319b38a315d"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/run_bounded.py",
+      "target": "load/asr/run_bounded.py",
+      "source_sha256": "95fecc53ae09801e379f53a5aab48e73e866413ae3a2b646672ad7e36af66079",
+      "packaged_sha256": "95fecc53ae09801e379f53a5aab48e73e866413ae3a2b646672ad7e36af66079"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/score_runs.py",
+      "target": "load/asr/score_runs.py",
+      "source_sha256": "ce3a1da67c262c177fae90cd6cf7a4be9dbacf2254239da75385f93606d7c9fc",
+      "packaged_sha256": "ce3a1da67c262c177fae90cd6cf7a4be9dbacf2254239da75385f93606d7c9fc"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/test_batch_prototype.py",
+      "target": "load/asr/test_batch_prototype.py",
+      "source_sha256": "1113ca0c88365e653eaae047ce4c694b9468336bd9c7282e683ea8d6d84f8647",
+      "packaged_sha256": "1113ca0c88365e653eaae047ce4c694b9468336bd9c7282e683ea8d6d84f8647"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/test_run_bounded.py",
+      "target": "load/asr/test_run_bounded.py",
+      "source_sha256": "a1b57e8edd04da1d640445eb1064fda19d0db97a22e527eb39b656e79d4ade8d",
+      "packaged_sha256": "a1b57e8edd04da1d640445eb1064fda19d0db97a22e527eb39b656e79d4ade8d"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/verify_assets.py",
+      "target": "load/asr/verify_assets.py",
+      "source_sha256": "9eaa58df25572a7cdf43c8b46176801befb85d8e653aeb43bc86a55089b005ca",
+      "packaged_sha256": "9eaa58df25572a7cdf43c8b46176801befb85d8e653aeb43bc86a55089b005ca"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/HARNESS_READY-v5.json",
+      "target": "load/HARNESS_READY-v5.json",
+      "source_sha256": "6b47ecd59c4d517fa362fdd91dd6a52d93c009a56c4e3e9aa995eca52584a316",
+      "packaged_sha256": "6b47ecd59c4d517fa362fdd91dd6a52d93c009a56c4e3e9aa995eca52584a316"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/TELEMETRY_READY.json",
+      "target": "load/TELEMETRY_READY.json",
+      "source_sha256": "098418a33e10fb86fab2ca395e2caca516d3139af68f8aa64938a575b2559ed4",
+      "packaged_sha256": "098418a33e10fb86fab2ca395e2caca516d3139af68f8aa64938a575b2559ed4"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/report.py",
+      "target": "quality/report.py",
+      "source_sha256": "848e8fc5475ef3ac5345f727dd978c12ed1f4406d41b345af8b525e872782b4a",
+      "packaged_sha256": "2e2f4f911a9e288c4078c26b922f5bdafc674753a22251ae7090fecc75ffbdef",
+      "package_only_adaptation": "Default fixtures directory if present; legacy languages fallback. No scoring, inference, or normalization changes."
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/test_report.py",
+      "target": "quality/test_report.py",
+      "source_sha256": "cc2771d0db6a47f50acc9c734107e7dd5947fb0d304e6f328da388fbf392b30a",
+      "packaged_sha256": "cc2771d0db6a47f50acc9c734107e7dd5947fb0d304e6f328da388fbf392b30a"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/README.md",
+      "target": "quality/README.md",
+      "source_sha256": "7e00030edb1dd8b343027d478a0a5cc857c459c97c4a2990f0ed7567b2029ed2",
+      "packaged_sha256": "7e00030edb1dd8b343027d478a0a5cc857c459c97c4a2990f0ed7567b2029ed2"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/validation.json",
+      "target": "quality/validation.json",
+      "source_sha256": "3a3af306d04579f8f3001d64634fda8f8caa7ce5d21afebfd1dc9b5c3edfc7fc",
+      "packaged_sha256": "5f4fb82685c999adff4e33a46f77e1143be3b2274dae8bf83af82f2a9df83220",
+      "package_only_adaptation": "New packaged-copy8test validation; unchanged prepackaging validation preserved in history."
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/history/report-v2-before-controls-validation.py",
+      "target": "quality/history/report-v2-before-controls-validation.py",
+      "source_sha256": "4a284e28cbb7d015116820fbf93ed4e28ecfdd0b768ae8840437c6b28f3302e5",
+      "packaged_sha256": "4a284e28cbb7d015116820fbf93ed4e28ecfdd0b768ae8840437c6b28f3302e5"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/history/report-v2-before-controls-validation.sha256.json",
+      "target": "quality/history/report-v2-before-controls-validation.sha256.json",
+      "source_sha256": "62ffd52f3f642192413cfab28b38e8b89acd3e8915833dc63e12930fa6bd18e0",
+      "packaged_sha256": "62ffd52f3f642192413cfab28b38e8b89acd3e8915833dc63e12930fa6bd18e0"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/history/report-v3-before-asr-protocol-guard.py",
+      "target": "quality/history/report-v3-before-asr-protocol-guard.py",
+      "source_sha256": "d1d1902e6ec0427d792edf0e7979b3ef988f76942e2a3cea0b8f96ca273ffc81",
+      "packaged_sha256": "d1d1902e6ec0427d792edf0e7979b3ef988f76942e2a3cea0b8f96ca273ffc81"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/history/validation-v3-before-asr-protocol-guard.json",
+      "target": "quality/history/validation-v3-before-asr-protocol-guard.json",
+      "source_sha256": "efa25f5ea65e8d159f9b8d5b85f11420f8b97dcf11393fe81c424aab31115259",
+      "packaged_sha256": "efa25f5ea65e8d159f9b8d5b85f11420f8b97dcf11393fe81c424aab31115259"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/all104-all8voices-and-config-smoke.json",
+      "target": "fixtures/voice-controls/all104-all8voices-and-config-smoke.json",
+      "source_sha256": "39005ffe68948e87febe6760c7d793c57a524fd97f0531ff016be5520b01dccd",
+      "packaged_sha256": "39005ffe68948e87febe6760c7d793c57a524fd97f0531ff016be5520b01dccd"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/pairwise-and-boundary-matrix.json",
+      "target": "fixtures/voice-controls/pairwise-and-boundary-matrix.json",
+      "source_sha256": "298371338091f11ef002753e606aeb9cb1d40c8459e947d08acb9c9d65de02a9",
+      "packaged_sha256": "298371338091f11ef002753e606aeb9cb1d40c8459e947d08acb9c9d65de02a9"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/validation-only-matrix.json",
+      "target": "fixtures/voice-controls/validation-only-matrix.json",
+      "source_sha256": "caffe52d7f60d68a649bbc54f422b6dd2aa0dd05f12a34eb7fbe8c6d73be66b7",
+      "packaged_sha256": "caffe52d7f60d68a649bbc54f422b6dd2aa0dd05f12a34eb7fbe8c6d73be66b7"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/instruction-vocabulary.json",
+      "target": "fixtures/voice-controls/instruction-vocabulary.json",
+      "source_sha256": "bc42254d1588724a3e0253a2ce82862c321916589986e582e7dfc86d1f8a18cb",
+      "packaged_sha256": "bc42254d1588724a3e0253a2ce82862c321916589986e582e7dfc86d1f8a18cb"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/product-profiles.json",
+      "target": "fixtures/voice-controls/product-profiles.json",
+      "source_sha256": "6d7d07f017d8eb6d445df2ab99a464de140214903850fa810745feb94f611c1f",
+      "packaged_sha256": "6d7d07f017d8eb6d445df2ab99a464de140214903850fa810745feb94f611c1f"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/signal-attribute-check-plan.json",
+      "target": "fixtures/voice-controls/signal-attribute-check-plan.json",
+      "source_sha256": "3919290d9ebe7318e17f72ebb8c3a28ec6151680cf5a0b86a501fb7345ac7c52",
+      "packaged_sha256": "3919290d9ebe7318e17f72ebb8c3a28ec6151680cf5a0b86a501fb7345ac7c52"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/inventory.json",
+      "target": "fixtures/voice-controls/inventory.json",
+      "source_sha256": "867ec617f7f18eea0039b96820311aba470fb46199d91cad43924e88bc49e8fa",
+      "packaged_sha256": "867ec617f7f18eea0039b96820311aba470fb46199d91cad43924e88bc49e8fa"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/README.md",
+      "target": "fixtures/voice-controls/README.md",
+      "source_sha256": "a054b3424e3668985e8bec97a0c6f0cc29e7641f4ae849e1b8538f71e9cb7ae6",
+      "packaged_sha256": "a054b3424e3668985e8bec97a0c6f0cc29e7641f4ae849e1b8538f71e9cb7ae6"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/languages/references/manifest.json",
+      "target": "fixtures/reference-profiles/original9-manifest.json",
+      "source_sha256": "594f04fc77f0fc0995e88531ed4fffb99db352026c2b11a4dff8a06c0b80a704",
+      "packaged_sha256": "594f04fc77f0fc0995e88531ed4fffb99db352026c2b11a4dff8a06c0b80a704"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/manifest.json",
+      "target": "fixtures/reference-profiles/native64-manifest.json",
+      "source_sha256": "0e199480e909da953464687d36e1fcf712343add844d7ca5ebfa7cda7116eac8",
+      "packaged_sha256": "0e199480e909da953464687d36e1fcf712343add844d7ca5ebfa7cda7116eac8"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/manifest.json",
+      "target": "fixtures/voice-controls/references/manifest.json",
+      "source_sha256": "0e199480e909da953464687d36e1fcf712343add844d7ca5ebfa7cda7116eac8",
+      "packaged_sha256": "0e199480e909da953464687d36e1fcf712343add844d7ca5ebfa7cda7116eac8"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/stage1-complete-analysis/report.md",
+      "target": "results/stage1/report.md",
+      "source_sha256": "f5abc72e0fea8c151790bd02bc774612742bee615d7852bccae4966784250894",
+      "packaged_sha256": "f5abc72e0fea8c151790bd02bc774612742bee615d7852bccae4966784250894"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/stage1-complete-analysis/analysis-summary.json",
+      "target": "results/stage1/analysis-summary.json",
+      "source_sha256": "8f1aeb19748fd7c611b60eba44982515ef3f3948272325fe1a0e2e0e602d4149",
+      "packaged_sha256": "8f1aeb19748fd7c611b60eba44982515ef3f3948272325fe1a0e2e0e602d4149"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/stage1-complete-analysis/per-language.json",
+      "target": "results/stage1/per-language.json",
+      "source_sha256": "e391a8e3fceadf5352192b83d32e19f2f1c57678fc92cad1cac78041a8e4ca2a",
+      "packaged_sha256": "e391a8e3fceadf5352192b83d32e19f2f1c57678fc92cad1cac78041a8e4ca2a"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/stage1-complete-analysis/paired-case-deltas.jsonl",
+      "target": "results/stage1/paired-case-deltas.jsonl",
+      "source_sha256": "a08d992246a0245d9108ba9722e9e0eb79b1ca6daf7d288095bc1b133c2f0141",
+      "packaged_sha256": "a08d992246a0245d9108ba9722e9e0eb79b1ca6daf7d288095bc1b133c2f0141"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/stage1-complete-analysis/review-priority.json",
+      "target": "results/stage1/review-priority.json",
+      "source_sha256": "4b6882670ec666c965bf5b9974c0101e458dc83eeba63331bed5f8fad9be934f",
+      "packaged_sha256": "4b6882670ec666c965bf5b9974c0101e458dc83eeba63331bed5f8fad9be934f"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/stage1-complete-analysis/model-probe-breakdown.json",
+      "target": "results/stage1/model-probe-breakdown.json",
+      "source_sha256": "0819ef2accc657970fc48584ec2c4cc2787f9850e9bc6decd9cd2bc37824f91c",
+      "packaged_sha256": "0819ef2accc657970fc48584ec2c4cc2787f9850e9bc6decd9cd2bc37824f91c"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/stage1-complete-analysis/reference-controls-raw-evidence.jsonl",
+      "target": "results/stage1/reference-controls-raw-evidence.jsonl",
+      "source_sha256": "23a420795d69b9b740bcc2acdf822c7b3c96e615ed64e34cec167d9c52f49ba5",
+      "packaged_sha256": "23a420795d69b9b740bcc2acdf822c7b3c96e615ed64e34cec167d9c52f49ba5"
+    },
+    {
+      "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/stage1-complete-analysis/source-summary.json",
+      "target": "results/stage1/source-summary.json",
+      "source_sha256": "70d3cf1ecb12fd4552bed6def7d4fa33f616232fcb31c168d65bd13bfd521f07",
+      "packaged_sha256": "70d3cf1ecb12fd4552bed6def7d4fa33f616232fcb31c168d65bd13bfd521f07"
+    }
+  ],
+  "not_bundled": [
+    "Reference WAV assets (nine initial Aoede /64stock-voice refs)",
+    "Model weights",
+    "Raw full299/load/voice-grid WAV runs outside104shortpairs",
+    "ASR batch-probe rawlogs/archives"
+  ]
+}

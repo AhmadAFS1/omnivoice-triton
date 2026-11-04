@@ -1,0 +1,263 @@
+{
+  "measurement_kind": "CPU-only analysis of existing GPU inference artifacts; no models run",
+  "postprocessing_hardware": {
+    "measurement_kind": "CPU-only file hashing, text scoring and report generation; no GPU/model inference",
+    "date_utc": "2026-11-04T08:54:33.101638+00:00",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "processor": "arm",
+    "cpu_model": "Apple M5 Pro",
+    "physical_memory_bytes": "25769803776",
+    "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 17.0.0 (clang-1700.6.4.2)]",
+    "script_sha256": "848e8fc5475ef3ac5345f727dd978c12ed1f4406d41b345af8b525e872782b4a"
+  },
+  "analysis_source": {
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/stage1-complete-analysis/analyze.py",
+    "sha256": "6ace03b955028860fc3e62e9979e54d39b32fe4041da0c53d823de6bf99a6913"
+  },
+  "source_reports": [
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/stage1-complete-analysis/source-summary.json",
+      "sha256": "70d3cf1ecb12fd4552bed6def7d4fa33f616232fcb31c168d65bd13bfd521f07"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/stage1-complete-analysis/source-scored-logical-cases.jsonl",
+      "sha256": "d726d2a564fa18e16cd06d51510d5e0c32e88bafde1ce875492ce6463e46db10"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/stage1-complete-analysis/source-paired-before-after.jsonl",
+      "sha256": "13599055fe2c901587f1c6cbfabe969cc4c432de800809e2c3a8947b8ec6b2be"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/stage1-complete-analysis/source-per-route.json",
+      "sha256": "3d541e31446df4338ab3e58384b3cc64febf27c66eab3ece4411c0d3fa55571e"
+    }
+  ],
+  "source_hardware_and_ASR_metadata": "See immutable source-summary.json; RTX4070 physical12282MiB, visible12450070528bytes, CUDA12.8, both Meta1B cards BF16, blind batch1, co-resident GPU processes empty at model-load checks.",
+  "recomputed_distinct_expected_transcript_pairs": 999,
+  "stored_metric_mismatches": [],
+  "arms": {
+    "before-all299": {
+      "rows": 299,
+      "both_normalized_exact": 30,
+      "both_CER0": 35,
+      "screen_status": {
+        "review_required": 293,
+        "ASR_screen_matches": 6
+      },
+      "flags": {
+        "target_language_ASR_uncalibrated_or_control_review": 287,
+        "asr_disagreement": 258,
+        "word_mismatch_review": 269,
+        "spacing_only_difference_present": 12,
+        "numeric_representation_review_not_proven_TTS_error": 64,
+        "proxy_language_mapping_unqualified": 3,
+        "critical_content_native_review_required": 91
+      },
+      "judges": {
+        "omniASR_LLM_Unlimited_1B_v2": {
+          "rows": 299,
+          "exact": 70,
+          "CER0": 77,
+          "micro_CER": 0.10184264404796724,
+          "micro_WER": 0.2967964824120603,
+          "macro_CER": 0.11589156706933805,
+          "macro_WER": 0.3966292055819988,
+          "median_CER": 0.057692307692307696,
+          "empty_transcripts": 1,
+          "character_bands": {
+            "normalized_exact": 70,
+            "CER_gt3_le15pct": 117,
+            "CER_gt15_le50pct": 67,
+            "nonzero_CER_le3pct": 28,
+            "CER_gt50pct": 10,
+            "spacing_only": 7
+          }
+        },
+        "omniASR_CTC_1B_v2": {
+          "rows": 299,
+          "exact": 33,
+          "CER0": 39,
+          "micro_CER": 0.18087159988300672,
+          "micro_WER": 0.43624371859296485,
+          "macro_CER": 0.2506958589025351,
+          "macro_WER": 0.5979848005606507,
+          "median_CER": 0.09523809523809523,
+          "empty_transcripts": 0,
+          "character_bands": {
+            "normalized_exact": 33,
+            "CER_gt3_le15pct": 124,
+            "CER_gt50pct": 46,
+            "CER_gt15_le50pct": 64,
+            "spacing_only": 6,
+            "nonzero_CER_le3pct": 26
+          }
+        }
+      }
+    },
+    "candidate-all299": {
+      "rows": 299,
+      "both_normalized_exact": 30,
+      "both_CER0": 35,
+      "screen_status": {
+        "review_required": 293,
+        "ASR_screen_matches": 6
+      },
+      "flags": {
+        "target_language_ASR_uncalibrated_or_control_review": 287,
+        "asr_disagreement": 258,
+        "word_mismatch_review": 269,
+        "spacing_only_difference_present": 12,
+        "numeric_representation_review_not_proven_TTS_error": 64,
+        "proxy_language_mapping_unqualified": 3,
+        "critical_content_native_review_required": 91
+      },
+      "judges": {
+        "omniASR_LLM_Unlimited_1B_v2": {
+          "rows": 299,
+          "exact": 70,
+          "CER0": 77,
+          "micro_CER": 0.10184264404796724,
+          "micro_WER": 0.2967964824120603,
+          "macro_CER": 0.11589156706933805,
+          "macro_WER": 0.3966292055819988,
+          "median_CER": 0.057692307692307696,
+          "empty_transcripts": 1,
+          "character_bands": {
+            "normalized_exact": 70,
+            "CER_gt3_le15pct": 117,
+            "CER_gt15_le50pct": 67,
+            "nonzero_CER_le3pct": 28,
+            "CER_gt50pct": 10,
+            "spacing_only": 7
+          }
+        },
+        "omniASR_CTC_1B_v2": {
+          "rows": 299,
+          "exact": 33,
+          "CER0": 39,
+          "micro_CER": 0.18087159988300672,
+          "micro_WER": 0.43624371859296485,
+          "macro_CER": 0.2506958589025351,
+          "macro_WER": 0.5979848005606507,
+          "median_CER": 0.09523809523809523,
+          "empty_transcripts": 0,
+          "character_bands": {
+            "normalized_exact": 33,
+            "CER_gt3_le15pct": 124,
+            "CER_gt50pct": 46,
+            "CER_gt15_le50pct": 64,
+            "spacing_only": 6,
+            "nonzero_CER_le3pct": 26
+          }
+        }
+      }
+    },
+    "experimental-all299": {
+      "rows": 299,
+      "both_normalized_exact": 32,
+      "both_CER0": 36,
+      "screen_status": {
+        "review_required": 293,
+        "ASR_screen_matches": 6
+      },
+      "flags": {
+        "target_language_ASR_uncalibrated_or_control_review": 287,
+        "asr_disagreement": 253,
+        "word_mismatch_review": 267,
+        "spacing_only_difference_present": 9,
+        "numeric_representation_review_not_proven_TTS_error": 62,
+        "proxy_language_mapping_unqualified": 3,
+        "critical_content_native_review_required": 91
+      },
+      "judges": {
+        "omniASR_LLM_Unlimited_1B_v2": {
+          "rows": 299,
+          "exact": 77,
+          "CER0": 82,
+          "micro_CER": 0.09926879204445745,
+          "micro_WER": 0.28863065326633164,
+          "macro_CER": 0.1139303300367404,
+          "macro_WER": 0.401195865929497,
+          "median_CER": 0.06382978723404255,
+          "empty_transcripts": 0,
+          "character_bands": {
+            "normalized_exact": 77,
+            "CER_gt15_le50pct": 69,
+            "CER_gt3_le15pct": 114,
+            "CER_gt50pct": 8,
+            "spacing_only": 5,
+            "nonzero_CER_le3pct": 26
+          }
+        },
+        "omniASR_CTC_1B_v2": {
+          "rows": 299,
+          "exact": 33,
+          "CER0": 38,
+          "micro_CER": 0.17987715706346885,
+          "micro_WER": 0.4277638190954774,
+          "macro_CER": 0.2470630308356681,
+          "macro_WER": 0.5743671366670986,
+          "median_CER": 0.09821428571428571,
+          "empty_transcripts": 0,
+          "character_bands": {
+            "normalized_exact": 33,
+            "CER_gt3_le15pct": 120,
+            "CER_gt50pct": 47,
+            "CER_gt15_le50pct": 64,
+            "spacing_only": 5,
+            "nonzero_CER_le3pct": 30
+          }
+        }
+      }
+    }
+  },
+  "paired": {
+    "cases": 299,
+    "KV_hash_equal": 299,
+    "legacy_KV_hash_equal_field_interpretation": "candidate-all299 is the combined1eb candidate (KVoff + graphLRU + serving changes); this legacy field does not isolate KV-only attribution",
+    "split_hash_equal": 0,
+    "both_judges_CER_worse": 39,
+    "both_judges_CER_better": 34,
+    "CER_transitions_by_judge": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "same": 153,
+        "better": 73,
+        "worse": 73
+      },
+      "omniASR_CTC_1B_v2": {
+        "same": 123,
+        "better": 87,
+        "worse": 89
+      }
+    },
+    "baseline_both_exact_to_split_both_mismatch": [
+      "cs-critical"
+    ],
+    "baseline_both_exact_to_any_split_mismatch": [
+      "cs-critical"
+    ],
+    "both_judges_CER_worse_min10pp": [
+      "so-short",
+      "bn-medium"
+    ],
+    "new_both_judge_digit_signature_loss": []
+  },
+  "reference_controls": {
+    "count": 9,
+    "both_exact": 4,
+    "mismatch_ids": [
+      "ar-aoede",
+      "da-aoede",
+      "el-aoede",
+      "fi-aoede",
+      "ur-aoede"
+    ]
+  },
+  "recommendation": "Keep split opt-in/unpromoted. Aggregate ASR CER is slightly better, but paired word/signal preservation is not established; review/repeat targeted regressions and baseline Arabic probe failure patterns before broader algorithm rollout. The combined candidate (unused-KV-cache disable plus graph LRU and serving changes) preserves all299 exact WAV bytes under this profile; isolated attribution requires the separate controlled runs.",
+  "caveats": [
+    "ASR review status includes calibration, proxy, corpus-provenance and critical-content flags; it is not an audible failure rate.",
+    "Character-distance bands are diagnostics, not native/perceptual judgments; CTC ignores language conditioning and can transliterate into a different script.",
+    "No automated semantic certification of negation/numbers or voice identity; digit signatures do not equate spoken numbers with digits.",
+    "One startup seed and one16-step/speed1/postprocess-off profile; no all-voice/preset or broad concurrency qualification."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "phases": [
+    {
+      "id": "warmup-disjoint-from-cold-key",
+      "kind": "sequential",
+      "case_ids": [
+        "ar-short"
+      ],
+      "warmup": true,
+      "content_profile": "unique",
+      "deadline_s": 120
+    },
+    {
+      "id": "cold-identical1000",
+      "kind": "burst",
+      "case_ids": [
+        "en-short"
+      ],
+      "requests": 1000,
+      "content_profile": "identical-inflight-coalescing",
+      "cache_intent": "target-key-cold",
+      "preconnect": 1000,
+      "deadline_s": 180
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "at": "2026-11-04T09:24:34.798343+00:00",
+  "measurement_kind": "CPU-only packaging/static/synthetic checks; no model/GPU inference",
+  "hardware": {
+    "measurement_kind": "CPU-only file hashing, text scoring and report generation; no GPU/model inference",
+    "date_utc": "2026-11-04T09:24:34.798587+00:00",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "processor": "arm",
+    "cpu_model": "Apple M5 Pro",
+    "physical_memory_bytes": "25769803776",
+    "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 17.0.0 (clang-1700.6.4.2)]",
+    "script_sha256": "2e2f4f911a9e288c4078c26b922f5bdafc674753a22251ae7090fecc75ffbdef"
+  },
+  "quality_CPU_tests": 8,
+  "quality_CPU_tests_status": "passed",
+  "packaged_quality_sha256": "2e2f4f911a9e288c4078c26b922f5bdafc674753a22251ae7090fecc75ffbdef",
+  "original_quality_source_sha256": "848e8fc5475ef3ac5345f727dd978c12ed1f4406d41b345af8b525e872782b4a",
+  "adaptation": "Only default fixture path selection changed in packaged helper",
+  "frozen_V4_runner_sha256": "df51c081d8108bf7dae5778adc2f21398e59d0ca8de394601f4251a55c521652",
+  "frozen_V5_runner_sha256": "1a077901bd91b8b7c16bd2424b52519f092935db2de4f74d068e288b1eb89302",
+  "stage1_results_bytes": 1740526,
+  "reference_WAVs_bundled": false,
+  "review_sample_WAVs": 208,
+  "DS_Store_present": false,
+  "full_GPU_quality_certification": false,
+  "load_arrival_CPU_tests": 2,
+  "load_telemetry_CPU_tests": 3,
+  "static_check_note": "Packaged quality source retains41pre-existing E501 long-string warnings under the fork Ruffconfig; non-format checks use --ignoreE501 to preserve source fidelity."
+}

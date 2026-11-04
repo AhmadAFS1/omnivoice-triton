@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-11-04T09:02:08.841855+00:00",
+  "postprocessing_hardware": {
+    "measurement_kind": "CPU-only file hashing, text scoring and report generation; no GPU/model inference",
+    "date_utc": "2026-11-04T09:02:08.841865+00:00",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "processor": "arm",
+    "cpu_model": "Apple M5 Pro",
+    "physical_memory_bytes": "25769803776",
+    "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 17.0.0 (clang-1700.6.4.2)]",
+    "script_sha256": "848e8fc5475ef3ac5345f727dd978c12ed1f4406d41b345af8b525e872782b4a"
+  },
+  "files": [
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/languages/active-languages.json",
+      "sha256": "3a1984c117817658e8bc1467baabafbd287e42abc43090e8a1e808028d7645e8",
+      "packaged_file": "active-languages.json"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/languages/corpus.json",
+      "sha256": "769ebe610c06f89a7de831df86b97ec0e5e66f08fba2c28cd9fea544a654f9fd",
+      "packaged_file": "corpus.json"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/languages/load-pool.json",
+      "sha256": "896597afd0fe0396e0162d0ba3849e803cc5e48101aeb8293519de91f1edfd2f",
+      "packaged_file": "load-pool.json"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/languages/README.md",
+      "sha256": "ce402c3d3c6c0c4dc51022a321341b08aac56724eb419172b41c18cd9268ef44",
+      "packaged_file": "README.md"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/languages/corpus-source-coverage.json",
+      "sha256": "2bd361d678179af8ef0b5816eca7ee082c622be26d2087acef93767c72481b9c",
+      "packaged_file": "corpus-source-coverage.json"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/languages/inventory-summary.json",
+      "sha256": "921d3bd00ab53633ef8fe990462c1c1eba3f2751f440d51ed527634fc497f395",
+      "packaged_file": "inventory-summary.json"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/languages/load-pool-summary.json",
+      "sha256": "39f972f0253d46829d6803f0cffd64251227262cdcc7b8cc34a5087b8a871d4f",
+      "packaged_file": "load-pool-summary.json"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/languages/dataset-readme.md",
+      "sha256": "ec52ce7ee1bd2960f3c8d3b76d734683be979e4f8c0dc087e90d6e9ecaebf836",
+      "packaged_file": "dataset-readme.md"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/languages/flores200_dataset/README",
+      "sha256": "a1b7eb3a097fd332fd541b563d9311c609f07f18b03ac7c0ca48e3cc9b6b937b",
+      "packaged_file": "FLORES-README.txt"
+    }
+  ],
+  "licenses": {
+    "FLORES200": "CC-BY-SA-4.0",
+    "Meta Omnilingual corpus": "CC-BY-4.0",
+    "Wikipedia excerpts": "CC-BY-SA-4.0"
+  },
+  "attribution": "Every corpus/load-pool record retains source dataset/page, revision/hash, sample/segment identifiers and license; read README.md for source-specific caveats."
+}

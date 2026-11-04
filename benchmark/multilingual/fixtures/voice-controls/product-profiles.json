@@ -1,0 +1,33 @@
+[
+  {
+    "id": "lingua-default",
+    "worker_options": {
+      "num_step": 16,
+      "denoise": true,
+      "preprocess_prompt": true,
+      "postprocess_mode": "full",
+      "speed": 1.3
+    }
+  },
+  {
+    "id": "lingua-video",
+    "worker_options": {
+      "num_step": 16,
+      "denoise": true,
+      "preprocess_prompt": true,
+      "postprocess_mode": "off",
+      "speed": 1.0
+    }
+  },
+  {
+    "id": "lingua-tutor",
+    "worker_options": {
+      "num_step": 16,
+      "denoise": true,
+      "preprocess_prompt": true,
+      "postprocess_mode": "light",
+      "speed": 1.0,
+      "insert_pauses": true
+    }
+  }
+]

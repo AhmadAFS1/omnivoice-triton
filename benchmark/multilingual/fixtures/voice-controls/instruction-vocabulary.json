@@ -1,0 +1,103 @@
+{
+  "source_archive": {
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-parity-2026-10-31/upstream-0.1.4.tar.gz",
+    "sha256": "bb04e71c400ad1a0a0d081ec3c3fea6cab2c9f89171e89d55be8b02930cef991"
+  },
+  "version": "0.1.4",
+  "categories": [
+    {
+      "name": "gender",
+      "values": [
+        "male",
+        "female"
+      ],
+      "Chinese_aliases": {
+        "male": "男",
+        "female": "女"
+      }
+    },
+    {
+      "name": "age",
+      "values": [
+        "child",
+        "teenager",
+        "young adult",
+        "middle-aged",
+        "elderly"
+      ],
+      "Chinese_aliases": {
+        "child": "儿童",
+        "teenager": "少年",
+        "young adult": "青年",
+        "middle-aged": "中年",
+        "elderly": "老年"
+      }
+    },
+    {
+      "name": "pitch",
+      "values": [
+        "very low pitch",
+        "low pitch",
+        "moderate pitch",
+        "high pitch",
+        "very high pitch"
+      ],
+      "Chinese_aliases": {
+        "very low pitch": "极低音调",
+        "low pitch": "低音调",
+        "moderate pitch": "中音调",
+        "high pitch": "高音调",
+        "very high pitch": "极高音调"
+      }
+    },
+    {
+      "name": "style",
+      "values": [
+        "whisper"
+      ],
+      "Chinese_aliases": {
+        "whisper": "耳语"
+      }
+    },
+    {
+      "name": "English_accent_only",
+      "values": [
+        "american accent",
+        "australian accent",
+        "british accent",
+        "canadian accent",
+        "chinese accent",
+        "indian accent",
+        "japanese accent",
+        "korean accent",
+        "portuguese accent",
+        "russian accent"
+      ],
+      "Chinese_aliases": null
+    },
+    {
+      "name": "Chinese_dialect_only",
+      "values": [
+        "东北话",
+        "云南话",
+        "四川话",
+        "宁夏话",
+        "桂林话",
+        "河南话",
+        "济南话",
+        "甘肃话",
+        "石家庄话",
+        "贵州话",
+        "陕西话",
+        "青岛话"
+      ],
+      "Chinese_aliases": null
+    }
+  ],
+  "constraints": [
+    "At most one token in each category",
+    "Do not mix English accent with Chinese dialect",
+    "English accents only effective for English; Chinese dialects only effective for Chinese",
+    "Arbitrary tone/emotion/descriptions such as sweet/warm/angry/sad are not supported fixed vocabulary"
+  ]
+}

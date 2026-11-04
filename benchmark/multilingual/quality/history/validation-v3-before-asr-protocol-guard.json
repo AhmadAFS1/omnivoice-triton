@@ -1,0 +1,54 @@
+{
+  "created_at": "2026-11-04T06:58:36.445470+00:00",
+  "status": "CPU-only synthetic tests and static checks passed; no real ASR/TTS result claimed",
+  "hardware": {
+    "measurement_kind": "CPU-only file hashing, text scoring and report generation; no GPU/model inference",
+    "date_utc": "2026-11-04T06:58:36.445587+00:00",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "processor": "arm",
+    "cpu_model": "Apple M5 Pro",
+    "physical_memory_bytes": "25769803776",
+    "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 17.0.0 (clang-1700.6.4.2)]",
+    "script_sha256": "d1d1902e6ec0427d792edf0e7979b3ef988f76942e2a3cea0b8f96ca273ffc81"
+  },
+  "tests": 7,
+  "checks": [
+    "python3 quality/test_report.py: 7 tests passed",
+    "python3 -m py_compile report.py test_report.py: passed",
+    "ruff check report.py test_report.py: passed"
+  ],
+  "synthetic_coverage": {
+    "logical_rows": 2005,
+    "verified_ASR_inputs_after_dedup": 3,
+    "same_file_hash_reads": 1,
+    "product_routes_retained": 104,
+    "source_corpus_cases": 299,
+    "paired_identical_fake_WAVs": 1000,
+    "proxy_mapping_review_kept": true,
+    "missing_model_output_never_passed": true,
+    "ambiguous_language_wrong_hash_and_conflicting_ASR_excluded": true,
+    "fake_GPU_sample_export_refused": true,
+    "non_HTTP_probes_kept_outside_API_counts": true,
+    "exact64_reference_controls_preserved": true,
+    "expected_rejections_and_unexpected200_excluded_from_quality": true,
+    "actual_V5_settings_and_reference_identity_retained": true
+  },
+  "files": [
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/report.py",
+      "sha256": "d1d1902e6ec0427d792edf0e7979b3ef988f76942e2a3cea0b8f96ca273ffc81"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/test_report.py",
+      "sha256": "436144cf4965b922911c2379c525f87a060776882fa99e18b83cd94d17ef181f"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/README.md",
+      "sha256": "01884a0d910929503416f96d69f13be3c3b6f9bffc24fcabf43bf974c7876d0e"
+    }
+  ],
+  "real_GPU_inference": false,
+  "real_ASR_inference": false,
+  "sample_export_performed": false,
+  "helper_format_version": 3
+}

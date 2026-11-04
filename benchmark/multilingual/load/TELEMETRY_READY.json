@@ -1,0 +1,15 @@
+{
+  "utc": "2026-11-04T06:45:29.922587+00:00",
+  "measurement_kind": "CPU-only development and syntheticfixtures; no remote telemetry/model/GPU inference launched",
+  "host": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "CPU_fixture_tests": 3,
+  "CPU_duration_smoke": true,
+  "CPU_wrapped_child_exitcode_check": true,
+  "frozen_V4_run_sha256": "df51c081d8108bf7dae5778adc2f21398e59d0ca8de394601f4251a55c521652",
+  "files": {
+    "load/telemetry.py": "4255dcc5dedbe0bc5bcc022757b38d33f071def47287ba963d795c89799c1e37",
+    "load/test_telemetry.py": "6df0fb105fb1c4b2cf96219df80a5ddcf9b2e74460d93f8feea4e8e590b3597b",
+    "load/wrap_plan_telemetry.py": "b6e425196b09dcd9b3c5c872f49abf41d1e3e7c5ed1bf15f75c3bb10dd4ea4b9",
+    "load/telemetry-README.md": "98b6c47098ef40da32a7cf60bb526097f66aef0045e4abcecd347903939d8ee9"
+  }
+}

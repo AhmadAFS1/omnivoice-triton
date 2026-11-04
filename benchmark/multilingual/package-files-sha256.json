@@ -1,0 +1,1563 @@
+{
+  "measurement_kind": "CPU-only package hash inventory; no inference",
+  "files": [
+    {
+      "file": "README.md",
+      "sha256": "a7206bd208d822e415fd468395f8b4ff2abf2affbfd23eaa5118cc964f1c629a",
+      "bytes": 6346
+    },
+    {
+      "file": "fixtures/FLORES-README.txt",
+      "sha256": "a1b7eb3a097fd332fd541b563d9311c609f07f18b03ac7c0ca48e3cc9b6b937b",
+      "bytes": 285
+    },
+    {
+      "file": "fixtures/README.md",
+      "sha256": "ce402c3d3c6c0c4dc51022a321341b08aac56724eb419172b41c18cd9268ef44",
+      "bytes": 8378
+    },
+    {
+      "file": "fixtures/active-languages.json",
+      "sha256": "3a1984c117817658e8bc1467baabafbd287e42abc43090e8a1e808028d7645e8",
+      "bytes": 89873
+    },
+    {
+      "file": "fixtures/corpus-source-coverage.json",
+      "sha256": "2bd361d678179af8ef0b5816eca7ee082c622be26d2087acef93767c72481b9c",
+      "bytes": 1149
+    },
+    {
+      "file": "fixtures/corpus.json",
+      "sha256": "769ebe610c06f89a7de831df86b97ec0e5e66f08fba2c28cd9fea544a654f9fd",
+      "bytes": 731429
+    },
+    {
+      "file": "fixtures/dataset-readme.md",
+      "sha256": "ec52ce7ee1bd2960f3c8d3b76d734683be979e4f8c0dc087e90d6e9ecaebf836",
+      "bytes": 64861
+    },
+    {
+      "file": "fixtures/fixture-provenance.json",
+      "sha256": "ce0649f65f7afe52ddcb061e250e948e4db1df09ca60965ecd7ac091fc44b844",
+      "bytes": 3324
+    },
+    {
+      "file": "fixtures/inventory-summary.json",
+      "sha256": "921d3bd00ab53633ef8fe990462c1c1eba3f2751f440d51ed527634fc497f395",
+      "bytes": 3609
+    },
+    {
+      "file": "fixtures/load-pool-summary.json",
+      "sha256": "39f972f0253d46829d6803f0cffd64251227262cdcc7b8cc34a5087b8a871d4f",
+      "bytes": 2086
+    },
+    {
+      "file": "fixtures/load-pool.json",
+      "sha256": "896597afd0fe0396e0162d0ba3849e803cc5e48101aeb8293519de91f1edfd2f",
+      "bytes": 2536227
+    },
+    {
+      "file": "fixtures/reference-profiles/native64-manifest.json",
+      "sha256": "0e199480e909da953464687d36e1fcf712343add844d7ca5ebfa7cda7116eac8",
+      "bytes": 119349
+    },
+    {
+      "file": "fixtures/reference-profiles/original9-manifest.json",
+      "sha256": "594f04fc77f0fc0995e88531ed4fffb99db352026c2b11a4dff8a06c0b80a704",
+      "bytes": 11693
+    },
+    {
+      "file": "fixtures/voice-controls/README.md",
+      "sha256": "a054b3424e3668985e8bec97a0c6f0cc29e7641f4ae849e1b8538f71e9cb7ae6",
+      "bytes": 13031
+    },
+    {
+      "file": "fixtures/voice-controls/all104-all8voices-and-config-smoke.json",
+      "sha256": "39005ffe68948e87febe6760c7d793c57a524fd97f0531ff016be5520b01dccd",
+      "bytes": 6982319
+    },
+    {
+      "file": "fixtures/voice-controls/instruction-vocabulary.json",
+      "sha256": "bc42254d1588724a3e0253a2ce82862c321916589986e582e7dfc86d1f8a18cb",
+      "bytes": 2402
+    },
+    {
+      "file": "fixtures/voice-controls/inventory.json",
+      "sha256": "867ec617f7f18eea0039b96820311aba470fb46199d91cad43924e88bc49e8fa",
+      "bytes": 13777
+    },
+    {
+      "file": "fixtures/voice-controls/pairwise-and-boundary-matrix.json",
+      "sha256": "298371338091f11ef002753e606aeb9cb1d40c8459e947d08acb9c9d65de02a9",
+      "bytes": 398630
+    },
+    {
+      "file": "fixtures/voice-controls/product-profiles.json",
+      "sha256": "6d7d07f017d8eb6d445df2ab99a464de140214903850fa810745feb94f611c1f",
+      "bytes": 622
+    },
+    {
+      "file": "fixtures/voice-controls/references/manifest.json",
+      "sha256": "0e199480e909da953464687d36e1fcf712343add844d7ca5ebfa7cda7116eac8",
+      "bytes": 119349
+    },
+    {
+      "file": "fixtures/voice-controls/signal-attribute-check-plan.json",
+      "sha256": "3919290d9ebe7318e17f72ebb8c3a28ec6151680cf5a0b86a501fb7345ac7c52",
+      "bytes": 6180
+    },
+    {
+      "file": "fixtures/voice-controls/validation-only-matrix.json",
+      "sha256": "caffe52d7f60d68a649bbc54f422b6dd2aa0dd05f12a34eb7fbe8c6d73be66b7",
+      "bytes": 76094
+    },
+    {
+      "file": "load/HARNESS_READY-v5.json",
+      "sha256": "6b47ecd59c4d517fa362fdd91dd6a52d93c009a56c4e3e9aa995eca52584a316",
+      "bytes": 970
+    },
+    {
+      "file": "load/README.md",
+      "sha256": "64acd7de96edda5aa87b29fa8f360d3b656963c65e081aaeeca30ae07e2f9ea3",
+      "bytes": 11071
+    },
+    {
+      "file": "load/TELEMETRY_READY.json",
+      "sha256": "098418a33e10fb86fab2ca395e2caca516d3139af68f8aa64938a575b2559ed4",
+      "bytes": 820
+    },
+    {
+      "file": "load/V5-README.md",
+      "sha256": "e68ea4cbc876e713cdbb20968974e93d62a90165481fb91cb0c3ac6f25cc710c",
+      "bytes": 5298
+    },
+    {
+      "file": "load/arrival_report.py",
+      "sha256": "41faccb4eed279d4366dc64a92d416b959a4f84e4de64ac17d3712d9b0863bf7",
+      "bytes": 6213
+    },
+    {
+      "file": "load/asr/README.md",
+      "sha256": "f0162cbad7b8b83046441cafd48f8253b9a0ff0671831b74181f37692afe96bb",
+      "bytes": 5792
+    },
+    {
+      "file": "load/asr/batch-probe-v1-report.md",
+      "sha256": "24175a8d0cffd93fa3fce6e6abbff1c897a864d2564321566cc44a345065824c",
+      "bytes": 3877
+    },
+    {
+      "file": "load/asr/batch_prototype.py",
+      "sha256": "e285faa8d63f669a1bc18d907a5fdae0f0817a48920f5abfc1948e45cdeba326",
+      "bytes": 19745
+    },
+    {
+      "file": "load/asr/capture_assets.py",
+      "sha256": "3c7a5e9f173064993c6cfe63e1186a02ac79c1601452316d709a4c9fdb44e4b1",
+      "bytes": 1891
+    },
+    {
+      "file": "load/asr/compare.py",
+      "sha256": "6104d6273b64c50c7c02b935736a1ac33eb3a5a2fc38873a2db42e8ce57aba1f",
+      "bytes": 8358
+    },
+    {
+      "file": "load/asr/evaluate.py",
+      "sha256": "db2e933104fd0cdd939f6cdf6661331e9e72cc3403e59f049a771b0a83567cdd",
+      "bytes": 19412
+    },
+    {
+      "file": "load/asr/finalize.py",
+      "sha256": "a2355ce6622c621e86e4d30d0c03f199aa07dae14fdd431496fb7f79bd6a378d",
+      "bytes": 1490
+    },
+    {
+      "file": "load/asr/install.sh",
+      "sha256": "eebc8f5004c971097a94024e95030ce3d8866b54fdfa3a44fb95b0b48e538ba0",
+      "bytes": 1649
+    },
+    {
+      "file": "load/asr/pair_audio.py",
+      "sha256": "f29be95d4957f456bc492278d636725711ff409830520df98408af6c2b449e03",
+      "bytes": 5259
+    },
+    {
+      "file": "load/asr/prefetch.py",
+      "sha256": "3246329a56d3559c1278180610fc9bf226158876bbc27c2118043a7d914d44b5",
+      "bytes": 2096
+    },
+    {
+      "file": "load/asr/prefetch_ctc.py",
+      "sha256": "b37c189163b73aed1694c47bee11de604109dec28f0280644909276f0caf11dc",
+      "bytes": 1237
+    },
+    {
+      "file": "load/asr/run_batch_probe.py",
+      "sha256": "90d7aa29937ae6b8bc8f9ff908619e21d45ec791fd20b06d1d2d7319b38a315d",
+      "bytes": 3727
+    },
+    {
+      "file": "load/asr/run_bounded.py",
+      "sha256": "95fecc53ae09801e379f53a5aab48e73e866413ae3a2b646672ad7e36af66079",
+      "bytes": 21000
+    },
+    {
+      "file": "load/asr/score_runs.py",
+      "sha256": "ce3a1da67c262c177fae90cd6cf7a4be9dbacf2254239da75385f93606d7c9fc",
+      "bytes": 8530
+    },
+    {
+      "file": "load/asr/test_batch_prototype.py",
+      "sha256": "1113ca0c88365e653eaae047ce4c694b9468336bd9c7282e683ea8d6d84f8647",
+      "bytes": 3611
+    },
+    {
+      "file": "load/asr/test_run_bounded.py",
+      "sha256": "a1b57e8edd04da1d640445eb1064fda19d0db97a22e527eb39b656e79d4ade8d",
+      "bytes": 9326
+    },
+    {
+      "file": "load/asr/verify_assets.py",
+      "sha256": "9eaa58df25572a7cdf43c8b46176801befb85d8e653aeb43bc86a55089b005ca",
+      "bytes": 2305
+    },
+    {
+      "file": "load/build_plans.py",
+      "sha256": "3052ef5d541ea263f9a4f05481d7401b098f5f06a1a07abb7071057ff6c36508",
+      "bytes": 11712
+    },
+    {
+      "file": "load/build_stagger500.py",
+      "sha256": "c1fa0e1a8e47a466b8c408347f787aa5b3fbdd286ce3e171b41f75d9baac1b28",
+      "bytes": 10068
+    },
+    {
+      "file": "load/build_step_frontier.py",
+      "sha256": "fdcc3383e5fce630a848cc52da930f72ed7bb0a7b7a3a592506e54d669ce5fd4",
+      "bytes": 5286
+    },
+    {
+      "file": "load/build_voice_plans_v5.py",
+      "sha256": "075fe35c26e82596d0c1b443c6f3d2c40d1fa47f98bd64ca83bff709ff4ea888",
+      "bytes": 9007
+    },
+    {
+      "file": "load/generated-plans-v3/basic-bursts.json",
+      "sha256": "3a1fc2e37f52e5e2becec9083f23dec6cec8d8345565489a058b7a467f4eb9c5",
+      "bytes": 3197
+    },
+    {
+      "file": "load/generated-plans-v3/burst1000-unique-short.json",
+      "sha256": "e7eca25a18a473cfbc8648c0ed48436dd8abcbc840646d496e54df8769eca04a",
+      "bytes": 31002
+    },
+    {
+      "file": "load/generated-plans-v3/bursts.json",
+      "sha256": "111f9219432428e3977a1555a5eb37d0d306999ed1bd5755d0bf66d3849cdc42",
+      "bytes": 3775
+    },
+    {
+      "file": "load/generated-plans-v3/cold-identical1000.json",
+      "sha256": "2664f302cabb7fdddcd476ab0049db527f9e6386df37ec7bdf1e7f71b95049a7",
+      "bytes": 527
+    },
+    {
+      "file": "load/generated-plans-v3/counts.json",
+      "sha256": "4238e7db4f1797a5988358967ff8851e89a478539539d1354b9a99c033a4e4be",
+      "bytes": 1527
+    },
+    {
+      "file": "load/generated-plans-v3/hot-identical1000.json",
+      "sha256": "0eb87c593f9d93cf28a1d27e55214a7a29dde2ee2f4609c0a7dd27277a26a21e",
+      "bytes": 495
+    },
+    {
+      "file": "load/generated-plans-v3/hot-identical5000-optional.json",
+      "sha256": "083e9cbdbfd07dd77dabc28f1d4a44e1419124f72d2b87b5b8b0f4fc61841289",
+      "bytes": 633
+    },
+    {
+      "file": "load/generated-plans-v3/hot-multilingual1000.json",
+      "sha256": "9218320120c21df82f71ef5d56fbc28c085e89cdcec3a5f1e7e87c0f3ed18bdc",
+      "bytes": 4710
+    },
+    {
+      "file": "load/generated-plans-v3/quality-all-languages.json",
+      "sha256": "0dffb12499c817da484ed6c0b4417b7000283b849721cdf81822312608668379",
+      "bytes": 7160
+    },
+    {
+      "file": "load/generated-plans-v3/staggered.json",
+      "sha256": "ec954ca5a66144eb60ad38b2b3f8c7902ff1b0ceffcdad28160588ef80816b9c",
+      "bytes": 24054
+    },
+    {
+      "file": "load/generated-plans-v3/staggered5000-optional.json",
+      "sha256": "0976af410670f35b9738bf529a0699c4b815816f35d785ad27a2197f6f1e44a9",
+      "bytes": 8304
+    },
+    {
+      "file": "load/generated-plans-v3/unique-load-corpus.json",
+      "sha256": "896597afd0fe0396e0162d0ba3849e803cc5e48101aeb8293519de91f1edfd2f",
+      "bytes": 2536227
+    },
+    {
+      "file": "load/orchestrate.py",
+      "sha256": "447a5f79ffb865e721097f78d8487f4a8f1092c0e7aaab84ecc8c14f98907877",
+      "bytes": 12497
+    },
+    {
+      "file": "load/run.py",
+      "sha256": "df51c081d8108bf7dae5778adc2f21398e59d0ca8de394601f4251a55c521652",
+      "bytes": 38498
+    },
+    {
+      "file": "load/run_candidate47_core.py",
+      "sha256": "7e4d30546a361d4c67dfb05e88e01fde84d95427ef34e955690ec0280313c0cc",
+      "bytes": 6552
+    },
+    {
+      "file": "load/run_v5.py",
+      "sha256": "1a077901bd91b8b7c16bd2424b52519f092935db2de4f74d068e288b1eb89302",
+      "bytes": 46280
+    },
+    {
+      "file": "load/runtime.py",
+      "sha256": "52fc933b64f70f5e6010d17a91b4457b433938afe1d1607e78891bb071e0b1f2",
+      "bytes": 4883
+    },
+    {
+      "file": "load/seeded_server.py",
+      "sha256": "72b3860d1e8e70981ae4bcb2f9944d543489f19ab46e23a2083a03b8ac99dfe6",
+      "bytes": 1203
+    },
+    {
+      "file": "load/smoke.py",
+      "sha256": "669e32ff1ff5962986ae5553bcec59f24d2b4915c954d6d63ed3a19082cae418",
+      "bytes": 10743
+    },
+    {
+      "file": "load/smoke_v5.py",
+      "sha256": "a825cc8031fbe9b44279ba76089ab4e8f42f97885fba42ee5ab98ec03f510187",
+      "bytes": 12940
+    },
+    {
+      "file": "load/telemetry-README.md",
+      "sha256": "98b6c47098ef40da32a7cf60bb526097f66aef0045e4abcecd347903939d8ee9",
+      "bytes": 3779
+    },
+    {
+      "file": "load/telemetry.py",
+      "sha256": "4255dcc5dedbe0bc5bcc022757b38d33f071def47287ba963d795c89799c1e37",
+      "bytes": 23347
+    },
+    {
+      "file": "load/test_arrival_report.py",
+      "sha256": "524431a62d421fb9d017910bbd60c42cc1098d2d1ea06185192010c20db9c994",
+      "bytes": 1696
+    },
+    {
+      "file": "load/test_telemetry.py",
+      "sha256": "6df0fb105fb1c4b2cf96219df80a5ddcf9b2e74460d93f8feea4e8e590b3597b",
+      "bytes": 3055
+    },
+    {
+      "file": "load/verify.py",
+      "sha256": "35f2c4963a29147159cc2b95cf925465680afbe218ff9dc2a03c4849057cfcdf",
+      "bytes": 6134
+    },
+    {
+      "file": "load/verify_v5.py",
+      "sha256": "c5c501fd0e5d1ca4fd336c8ced156d4d10549e1a93ab446ed4338fecdb528103",
+      "bytes": 8602
+    },
+    {
+      "file": "load/wrap_plan_telemetry.py",
+      "sha256": "b6e425196b09dcd9b3c5c872f49abf41d1e3e7c5ed1bf15f75c3bb10dd4ea4b9",
+      "bytes": 2368
+    },
+    {
+      "file": "package-source-provenance.json",
+      "sha256": "312afebe83691cf9cd684f682e0218a49319c3eaad5edecd197f9a83e3f59148",
+      "bytes": 26431
+    },
+    {
+      "file": "package-validation.json",
+      "sha256": "762694a5877647d881e7f478cc6ab182ba238e27067c1c1a02cc63a878ad445d",
+      "bytes": 1620
+    },
+    {
+      "file": "quality/README.md",
+      "sha256": "7e00030edb1dd8b343027d478a0a5cc857c459c97c4a2990f0ed7567b2029ed2",
+      "bytes": 11261
+    },
+    {
+      "file": "quality/history/report-v2-before-controls-validation.py",
+      "sha256": "4a284e28cbb7d015116820fbf93ed4e28ecfdd0b768ae8840437c6b28f3302e5",
+      "bytes": 64312
+    },
+    {
+      "file": "quality/history/report-v2-before-controls-validation.sha256.json",
+      "sha256": "62ffd52f3f642192413cfab28b38e8b89acd3e8915833dc63e12930fa6bd18e0",
+      "bytes": 363
+    },
+    {
+      "file": "quality/history/report-v3-before-asr-protocol-guard.py",
+      "sha256": "d1d1902e6ec0427d792edf0e7979b3ef988f76942e2a3cea0b8f96ca273ffc81",
+      "bytes": 73470
+    },
+    {
+      "file": "quality/history/validation-v3-before-asr-protocol-guard.json",
+      "sha256": "efa25f5ea65e8d159f9b8d5b85f11420f8b97dcf11393fe81c424aab31115259",
+      "bytes": 2327
+    },
+    {
+      "file": "quality/history/validation-v4-before-package-adaptation.json",
+      "sha256": "3a3af306d04579f8f3001d64634fda8f8caa7ce5d21afebfd1dc9b5c3edfc7fc",
+      "bytes": 2458
+    },
+    {
+      "file": "quality/report.py",
+      "sha256": "2e2f4f911a9e288c4078c26b922f5bdafc674753a22251ae7090fecc75ffbdef",
+      "bytes": 75360
+    },
+    {
+      "file": "quality/test_report.py",
+      "sha256": "cc2771d0db6a47f50acc9c734107e7dd5947fb0d304e6f328da388fbf392b30a",
+      "bytes": 29252
+    },
+    {
+      "file": "quality/validation.json",
+      "sha256": "5f4fb82685c999adff4e33a46f77e1143be3b2274dae8bf83af82f2a9df83220",
+      "bytes": 1000
+    },
+    {
+      "file": "results/stage1/analysis-summary.json",
+      "sha256": "8f1aeb19748fd7c611b60eba44982515ef3f3948272325fe1a0e2e0e602d4149",
+      "bytes": 9901
+    },
+    {
+      "file": "results/stage1/model-probe-breakdown.json",
+      "sha256": "0819ef2accc657970fc48584ec2c4cc2787f9850e9bc6decd9cd2bc37824f91c",
+      "bytes": 9769
+    },
+    {
+      "file": "results/stage1/paired-case-deltas.jsonl",
+      "sha256": "a08d992246a0245d9108ba9722e9e0eb79b1ca6daf7d288095bc1b133c2f0141",
+      "bytes": 929587
+    },
+    {
+      "file": "results/stage1/per-language.json",
+      "sha256": "e391a8e3fceadf5352192b83d32e19f2f1c57678fc92cad1cac78041a8e4ca2a",
+      "bytes": 334258
+    },
+    {
+      "file": "results/stage1/reference-controls-raw-evidence.jsonl",
+      "sha256": "23a420795d69b9b740bcc2acdf822c7b3c96e615ed64e34cec167d9c52f49ba5",
+      "bytes": 59530
+    },
+    {
+      "file": "results/stage1/report.md",
+      "sha256": "f5abc72e0fea8c151790bd02bc774612742bee615d7852bccae4966784250894",
+      "bytes": 10448
+    },
+    {
+      "file": "results/stage1/review-priority.json",
+      "sha256": "4b6882670ec666c965bf5b9974c0101e458dc83eeba63331bed5f8fad9be934f",
+      "bytes": 148518
+    },
+    {
+      "file": "results/stage1/source-summary.json",
+      "sha256": "70d3cf1ecb12fd4552bed6def7d4fa33f616232fcb31c168d65bd13bfd521f07",
+      "bytes": 238515
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/README.md",
+      "sha256": "5cba792c37e8c01e29a8172f00b8c368bedc01ef7444ab37350d3b875e37350f",
+      "bytes": 2519
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/af.wav",
+      "sha256": "56c876d6323ab7e2886dba81f7d97024c27f684a2c5268581a2d91108b0f9a9e",
+      "bytes": 140204
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/am.wav",
+      "sha256": "caae42e598dfc623345407dda38df0bd1994fcb31fa13ad9b16bacffa1fc93af",
+      "bytes": 259244
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/ar-AE.wav",
+      "sha256": "08495ae8f8f11763d6befb120407215f07f1b498dc03c115dbb9e085c21bf82e",
+      "bytes": 97964
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/ar-DZ.wav",
+      "sha256": "60c796de46279083d4dc09d6f501e4d7fe9604d7ab436e449191b35a8a5ca075",
+      "bytes": 124844
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/ar-EG.wav",
+      "sha256": "7ebdd7701a739b3215d480cc25017d5da6765e6b65f8c4bb101e67bc74d77a31",
+      "bytes": 161324
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/ar-IQ.wav",
+      "sha256": "46bbb44c417844b95438a53bb0c9df782a95e85ce6c03ff302f9b263ccca66ba",
+      "bytes": 144044
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/ar-SA.wav",
+      "sha256": "40168d89463e613bbef76762535d293fdc149040279b404142b15c6e635a9dad",
+      "bytes": 97964
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/ar-SD.wav",
+      "sha256": "8c6cb40239547329e961b98afbcd60183da3b237ef4a1e29360341e799cbfd96",
+      "bytes": 99884
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/ar-SY.wav",
+      "sha256": "3bc7f51d722424444b5ff38b2682dfa9539a8b4b9f5f055c293d225aacbd127c",
+      "bytes": 138284
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/ar-TN.wav",
+      "sha256": "f2d64f94f2ac3aa423e2cacb0a8fc72f07865aeb41dc71bf0e0959170c938bdc",
+      "bytes": 149804
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/ar.wav",
+      "sha256": "cad707e15d8393518ad4edb93dd2b038c0229cbef01df2852efb1867abae21ad",
+      "bytes": 122924
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/as.wav",
+      "sha256": "b5ecac75349d0de42f94c17efb84dec572cbf1ecfcaf340921bfca3c227eee0a",
+      "bytes": 182444
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/ayp.wav",
+      "sha256": "d67c44054278351c22d311bd7d70a6ae6407e8860d7838dd0b6881de6143a448",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/be.wav",
+      "sha256": "d493bf997dc4f8cf0fbcb871ba892fdddc199cb329800e9c1aa4fd203cb333fc",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/bho.wav",
+      "sha256": "57f0130388fbdf8e25eabe25beca603daae58085a823a7dbc0611ae32baf88bd",
+      "bytes": 122924
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/bjj.wav",
+      "sha256": "7ddbb3d9f074298f07f97ebd8f6ea66910c8cd5f45f8c97e7201bea8f81e73e7",
+      "bytes": 90284
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/bn.wav",
+      "sha256": "0f8a3180dd74368485af3652299d031454e1b442f9895c23410428a1d92cb959",
+      "bytes": 145964
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/bs.wav",
+      "sha256": "6dad08a22f526ff3acc5d44ec251f71bd34cf18e716b8184f6f0debd4f308d75",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/ceb.wav",
+      "sha256": "93950151764b59a8d779c2d7f927678bc733bedb6ed279f2458ae4f332a0cd27",
+      "bytes": 130604
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/cs.wav",
+      "sha256": "bd07c69e92c202404983ed594667d0f26ec03068eba75ad2e5322c1a78a0091f",
+      "bytes": 109484
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/da.wav",
+      "sha256": "56e71bd385b72cf399eaf2f1828304b8fa77d597044c8e19dcd80dd9c9b125d4",
+      "bytes": 111404
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/dag.wav",
+      "sha256": "b3b7eb2b70539799b773f23f47ec6d0c54fd74c67e6c454a2133ff71053b1619",
+      "bytes": 213164
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/dcc.wav",
+      "sha256": "c69859c5dad3f9f4b231e692d9fa37ab4b7768fc86938571eb3d7cd488a3b1c3",
+      "bytes": 94124
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/de.wav",
+      "sha256": "377b62f69e255b9f390a1aa297b8ab79314aff197652d8f61af1d74b9a0600c3",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/dyu.wav",
+      "sha256": "2233170b5aab591fc585b8bdb0346488704bff304b8dacf111bb548217b32be5",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/el.wav",
+      "sha256": "a69f5fd7657060d383cfb176a560ffd84a032dbf40525ef02b697fbb83204220",
+      "bytes": 149804
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/en.wav",
+      "sha256": "117dc28153f9bb3fd6a3933c097062c9b6effe10fa78d42b8e4a90627fc15ee6",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/es.wav",
+      "sha256": "8cf99c69662d42c36bcb7b5bf60fd88de9e8074a6b54db9bad00903f0593b517",
+      "bytes": 134444
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/et.wav",
+      "sha256": "85d15047837064cc98ce4dc3750314da979ac3ea4651cc1b87ac7fdec5907937",
+      "bytes": 101804
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/fi.wav",
+      "sha256": "991b4694697fb627354755b2e5f39d768eb9d01245c3c94ea021a0a6ac6a90a5",
+      "bytes": 128684
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/fil.wav",
+      "sha256": "37c27cbfc52aede502fe88ba0b7cb7e2e685a4c164f0747428c72afa5ddd9db0",
+      "bytes": 201644
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/fr.wav",
+      "sha256": "2e9e4c5a7cd8eb639eecda5419ee63a6d587ddbb1e77c1fcf4a82d9077be1955",
+      "bytes": 147884
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/gu.wav",
+      "sha256": "b130ae49a2181d58295f0986c5a6485cb8cc24c9d74fbf1b8647301e4db6ec22",
+      "bytes": 138284
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/ha.wav",
+      "sha256": "d60a5fff33c9537e28f334afacdcde6d6f043941678db4a0e7903080be7e8267",
+      "bytes": 136364
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/haw.wav",
+      "sha256": "afbb8a1d50b4032ee2f81250391e5c5bfe2e85bd1c1fe6adb9bd43a171ec44fc",
+      "bytes": 84524
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/he.wav",
+      "sha256": "aa48df1a203f86f2656268466c01eb61555e4a153024247a7e2355efc1538b3d",
+      "bytes": 124844
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/hi.wav",
+      "sha256": "0aa3dde996ebcf6e491fbc5c69827bcbad6e435c9b4d71cc0cd1d2752661f5c7",
+      "bytes": 134444
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/hr.wav",
+      "sha256": "c4aff984115f8471ab6160094b2ff85e290314754500cd3bb9b2cf7d9bff8f25",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/ht.wav",
+      "sha256": "2bb407ac8937db2dcaa9788329dc6074e73aed15f0d115ce19656d9a07e7ec5f",
+      "bytes": 119084
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/hu.wav",
+      "sha256": "0718055af2df660571316987b3f44c6cb7bf0c91f8c75a6c1a04d03d2494eea9",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/hy.wav",
+      "sha256": "5a31ed45f9189c1bb5643511462e14559634f9d9ca14c6f6d1bab98987555cfa",
+      "bytes": 117164
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/id.wav",
+      "sha256": "8b7d6b18675e94452d91f3e6a0415078d78b85ef40fc46b5b8af82ac9b53106e",
+      "bytes": 140204
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/ig.wav",
+      "sha256": "1e191b85dece2474d66c72929a716ea8608d5ac47339e7e5638f7025265e5c70",
+      "bytes": 117164
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/it.wav",
+      "sha256": "3b0ddefcaad1853047295697ffb287b60cdc02be129940ef750832f1be72f7e5",
+      "bytes": 105644
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/ja.wav",
+      "sha256": "f123f19bf61dc3a40a4a7767608cd2bd8078d587181fc981af1f1a394faa7d65",
+      "bytes": 155564
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/jv.wav",
+      "sha256": "47d12aa17803c660a8cb6f22f9845597c09ff150a4fcae9ba83b13f93dc37294",
+      "bytes": 140204
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/ka.wav",
+      "sha256": "017081b5ef4ca5a31db3557e81e9df63c42b3c865e043f216195dbc5c950791b",
+      "bytes": 94124
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/kk.wav",
+      "sha256": "51faa26f05bc4c6b2c6e9470b7f06d4293af5052f97cfe63f858bc3dab66e847",
+      "bytes": 134444
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/km.wav",
+      "sha256": "5fd2ab7b29fccf67508be21ef04c7d6e3dc094e032309ffe4a2c22fd147c0e0a",
+      "bytes": 195884
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/kn.wav",
+      "sha256": "aca7c71259eab567d6036e788307bd5efb5772a48fcc6826b5a27be6305ec9a3",
+      "bytes": 172844
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/ko.wav",
+      "sha256": "a8719e1b219df8d1b4d8a4f47516341b11b0f73d9b0f8bec628e120ff88004b7",
+      "bytes": 132524
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/ln.wav",
+      "sha256": "8c877f66884c2f28cce2c87cde5e1426ed1d1af81546edb5d78c92600e0d42ee",
+      "bytes": 159404
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/lo.wav",
+      "sha256": "37aec1da1b48b6d3c646674b5fe0401a3660501a09d788ea3b04370a9811f8ef",
+      "bytes": 165164
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/lt.wav",
+      "sha256": "5d8cb81e284887bd3c7e2e9e8390d02190b83663fb30ade17b0b4caaacb4a436",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/mai.wav",
+      "sha256": "51f1c295971ba0c9ff8dae34d985ea48f2e7ffbaf06d7d861a9c6710f3f95865",
+      "bytes": 138284
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/mi.wav",
+      "sha256": "cd53985836d5c2fc308785e2246c02b133a8abe329e7f6ebb7c73a0beac5f05d",
+      "bytes": 155564
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/mk.wav",
+      "sha256": "0bb646284f27f409d881026a8b1e30df1fa709bdf22594fecd6b946817e7b7b2",
+      "bytes": 111404
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/ml.wav",
+      "sha256": "a395b06520a85107b9dee2862d98ad4795a72976a60a2f21a768221c6eeed27f",
+      "bytes": 197804
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/mn.wav",
+      "sha256": "462ca48fa5322500c70e4ee0b09e1b357c94a0c898df84dd64e378769b603168",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/mr.wav",
+      "sha256": "212b6c8f9c5e921240439bdafa216a588f26d7998f50e0e6867756e8a9ca9b88",
+      "bytes": 121004
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/ms.wav",
+      "sha256": "ea110478aaafd88825a9b611106b24497f686d3e24b226f7a80b2c917e113709",
+      "bytes": 192044
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/my.wav",
+      "sha256": "5195b1f513a160b21c7d1dd50eca62ad1891862621fa1cb909b56592c30bb7bb",
+      "bytes": 136364
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/nan.wav",
+      "sha256": "9926d1d2ecc9c8e2f9a7a4dac7ae2e79a38cbb20a9bd689c79d507de3fcd75af",
+      "bytes": 207404
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/ne.wav",
+      "sha256": "e19eff73a516f4a91f1a12d7dd62e55bb8eae41e004f90dad45dd21577af415d",
+      "bytes": 113324
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/nl.wav",
+      "sha256": "138e1b7270ff05316839dc478bfac714efa9afaa6ae598f6e0f818a229a4c5cd",
+      "bytes": 136364
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/no.wav",
+      "sha256": "4fa24334ae2b260a3569b2387715740a87daa16d1c162ac932ae48f0be7a6c03",
+      "bytes": 113324
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/nso.wav",
+      "sha256": "9b90fc8efb4f73094a2f3eb1132f55a1d80d35cb3595bc278c46fcfd947d8db5",
+      "bytes": 138284
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/ny.wav",
+      "sha256": "53cd8a07dcb118c0918feb4781bae0b6bcf20b736c7866f2e23b4fc4c9175f52",
+      "bytes": 122924
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/pa.wav",
+      "sha256": "02426a8eb328569ed41d8727e5a18a021ea7d6112d29ecf137ed447efcf3fa1a",
+      "bytes": 140204
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/pcm.wav",
+      "sha256": "c372e1ece9ec261bd63b6ad2783af04b8566d07ce7e90cfca1139b601052c01a",
+      "bytes": 149804
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/pl.wav",
+      "sha256": "f77c79a8527e49519ee3cb2d18c4282c0b97383f74f0253b9e90061c5f1cfcfd",
+      "bytes": 117164
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/pt.wav",
+      "sha256": "56648c570adb2cafa30ddb19cc9c347c7e00f01799861f0d3cf0098e6e0b1816",
+      "bytes": 151724
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/ro.wav",
+      "sha256": "9ce1c5297dd881c137a8d18daffc11d28dc1aec8a859ec220cbb2d87a81e90ae",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/ru.wav",
+      "sha256": "235c7bfebaa1857505d2fbad2b737261ca56b5b34a7d05c266603c422d353c24",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/rw.wav",
+      "sha256": "7a8b53fd223c04abcb66a250f7c3f4dc960d8653b19105495775f0cfb4f6be12",
+      "bytes": 165164
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/sd.wav",
+      "sha256": "25816af816b1177c779cab8a74453b11ed12c74056e3fc76ef45d7fe87e5738d",
+      "bytes": 170924
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/si.wav",
+      "sha256": "27d58093f210444ec93025ac7537d072c4b66913b3d4db169d9f50f3e48f2f69",
+      "bytes": 155564
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/sk.wav",
+      "sha256": "7b63f553ae2a9e804c51d6a17599ecdaaf88fe5cf0703c0a8db8e6daf3a5cfe7",
+      "bytes": 113324
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/skr.wav",
+      "sha256": "b5350e173afc888973d69df0e6b918a27b2560f759353eed0a09b57f3031dc8f",
+      "bytes": 184364
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/sl.wav",
+      "sha256": "8f8163875c5e919e4b33dc4cd866d8f7550ae886710fcb16bc8c481f68d6893f",
+      "bytes": 117164
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/sn.wav",
+      "sha256": "9d0d1c2b11863272aecf480b8dc625127a174ff692df3aed6d07f76a3d7af51d",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/so.wav",
+      "sha256": "2e6977350ed705c98f6598669d96588d8ef84ce6e1999c07b9ad8f5001c038aa",
+      "bytes": 111404
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/sq.wav",
+      "sha256": "e9359df08a2df43fdbccd57c9f15ab83e400f139762fd9e831560d0c1394510e",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/sr.wav",
+      "sha256": "c6e945cfe59f2ee28f29d09ead0a63632a688ad697eb7ac6a3028a97005d1ec3",
+      "bytes": 130604
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/sv.wav",
+      "sha256": "1a392229b7cb881ca80a64b477bfabae5933351cb0641b6a701f5202fa2b773e",
+      "bytes": 101804
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/sw.wav",
+      "sha256": "cd63916c229696e409df58dcc882ad3919442f7813f3755e8df227c891dd777b",
+      "bytes": 140204
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/ta.wav",
+      "sha256": "c227a4b385bd2f740cf3c684ad8c4408b2877d5c2a325ce46178436e8c52c39c",
+      "bytes": 128684
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/te.wav",
+      "sha256": "ebe5d22b3eb3ed1a487af8c166cf0206f7f89026c850eadcabdcec5930e9dc72",
+      "bytes": 130604
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/tg.wav",
+      "sha256": "f493ca2a4ebe7ed0d222c88507389f61aa9b486ba27c5d9c3f7f2b03e695bc70",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/th.wav",
+      "sha256": "be5c841b83aa88b8fb3c1bfbe33cd79cc5cf69bd8efc7e3d7d35b379289b5f22",
+      "bytes": 163244
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/ti.wav",
+      "sha256": "7d386498b256fab869233573e88680cf14401ec93c54e1e49e52458e2f800ae5",
+      "bytes": 328364
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/tk.wav",
+      "sha256": "054a01f6533b7437e2c127b107d4f9bd4ec4c2a1313b8ca8623169aa3d324d70",
+      "bytes": 97964
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/tn.wav",
+      "sha256": "bf8621f0979bc257ccaca5f448aba3fbfc6396de9ae4aa5e022bde31158b63d9",
+      "bytes": 115244
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/tr.wav",
+      "sha256": "9ec4378a1a5051aed060c63ad87bba125eab1e10669491f0559f110984bd21f0",
+      "bytes": 117164
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/tw.wav",
+      "sha256": "23fb59f30defa882fb4daf7fc7c894b4a6acbce1a32bcddc14d0efb5897b9e73",
+      "bytes": 101804
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/ug.wav",
+      "sha256": "c3551505854861fa1067b596673de83aef7b80b3cdebd9e5c5676e93195671ab",
+      "bytes": 136364
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/uk.wav",
+      "sha256": "29623c65e7b42294b5f507354f49da8c86b234e4819f3030995b2dee8ba6f86d",
+      "bytes": 138284
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/ur.wav",
+      "sha256": "d65c2aea23ccbcab6d923083fa52486b4f28f7aa21457d71944f5675ce4c7d96",
+      "bytes": 140204
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/vi.wav",
+      "sha256": "3af2cb212c16f353042cb6909cd2d67d4f7bde39c04e130705362a3997ae6afb",
+      "bytes": 111404
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/xh.wav",
+      "sha256": "25f1e3842c1206c1ad3dc7b82ceec6b57be9afb975760c77d6c4f3f470c73fbf",
+      "bytes": 155564
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/yo.wav",
+      "sha256": "8c4c6474dde78e102585c6e917e49a9ac6718db566e92ac57aa9cb21b15b9be9",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/yue.wav",
+      "sha256": "911865de0e1cca11712ed4f69cfbdc8c2f96ad5b1b99af693e1f4710757a59b6",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/zh.wav",
+      "sha256": "82a2e2f2795691a9b0fce4fc04307ee991f27288f2ebe63b2fcb2664dfda19a3",
+      "bytes": 97964
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/after/zu.wav",
+      "sha256": "9a1e3d18dbc54d5923888fb3f77026b0de66ff7b5705058281312c08154e176c",
+      "bytes": 159404
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/asr-source-metadata/000-omniASR_CTC_1B_v2--omniASR_CTC_1B_v2-metadata.json",
+      "sha256": "d4aace4876f2555418a67ab4e5d7b90831282068798da8c75a283e33b6522bcc",
+      "bytes": 1153
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/asr-source-metadata/001-omniASR_LLM_Unlimited_1B_v2--omniASR_LLM_Unlimited_1B_v2-metadata.json",
+      "sha256": "0d92a21fc064dcce6c78fb0d556888989329c356b4e9d4b88af23f9054e1a2dc",
+      "bytes": 1163
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/asr-source-metadata/002-omniASR_LLM_Unlimited_1B_v2--omniASR_LLM_Unlimited_1B_v2-metadata.json",
+      "sha256": "5678fb17f90f967a732a3dbed7728ec885a60562b12dd14f03a15eaa35b09d6b",
+      "bytes": 1162
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/asr-source-metadata/manifest.json",
+      "sha256": "d888355ad79e8c59fc6e141c293dcd7680ca7fce4761c7969ce10c3fce84b91a",
+      "bytes": 1353
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/af.wav",
+      "sha256": "56c876d6323ab7e2886dba81f7d97024c27f684a2c5268581a2d91108b0f9a9e",
+      "bytes": 140204
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/am.wav",
+      "sha256": "caae42e598dfc623345407dda38df0bd1994fcb31fa13ad9b16bacffa1fc93af",
+      "bytes": 259244
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/ar-AE.wav",
+      "sha256": "08495ae8f8f11763d6befb120407215f07f1b498dc03c115dbb9e085c21bf82e",
+      "bytes": 97964
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/ar-DZ.wav",
+      "sha256": "60c796de46279083d4dc09d6f501e4d7fe9604d7ab436e449191b35a8a5ca075",
+      "bytes": 124844
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/ar-EG.wav",
+      "sha256": "7ebdd7701a739b3215d480cc25017d5da6765e6b65f8c4bb101e67bc74d77a31",
+      "bytes": 161324
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/ar-IQ.wav",
+      "sha256": "46bbb44c417844b95438a53bb0c9df782a95e85ce6c03ff302f9b263ccca66ba",
+      "bytes": 144044
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/ar-SA.wav",
+      "sha256": "40168d89463e613bbef76762535d293fdc149040279b404142b15c6e635a9dad",
+      "bytes": 97964
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/ar-SD.wav",
+      "sha256": "8c6cb40239547329e961b98afbcd60183da3b237ef4a1e29360341e799cbfd96",
+      "bytes": 99884
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/ar-SY.wav",
+      "sha256": "3bc7f51d722424444b5ff38b2682dfa9539a8b4b9f5f055c293d225aacbd127c",
+      "bytes": 138284
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/ar-TN.wav",
+      "sha256": "f2d64f94f2ac3aa423e2cacb0a8fc72f07865aeb41dc71bf0e0959170c938bdc",
+      "bytes": 149804
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/ar.wav",
+      "sha256": "cad707e15d8393518ad4edb93dd2b038c0229cbef01df2852efb1867abae21ad",
+      "bytes": 122924
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/as.wav",
+      "sha256": "b5ecac75349d0de42f94c17efb84dec572cbf1ecfcaf340921bfca3c227eee0a",
+      "bytes": 182444
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/ayp.wav",
+      "sha256": "d67c44054278351c22d311bd7d70a6ae6407e8860d7838dd0b6881de6143a448",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/be.wav",
+      "sha256": "d493bf997dc4f8cf0fbcb871ba892fdddc199cb329800e9c1aa4fd203cb333fc",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/bho.wav",
+      "sha256": "57f0130388fbdf8e25eabe25beca603daae58085a823a7dbc0611ae32baf88bd",
+      "bytes": 122924
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/bjj.wav",
+      "sha256": "7ddbb3d9f074298f07f97ebd8f6ea66910c8cd5f45f8c97e7201bea8f81e73e7",
+      "bytes": 90284
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/bn.wav",
+      "sha256": "0f8a3180dd74368485af3652299d031454e1b442f9895c23410428a1d92cb959",
+      "bytes": 145964
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/bs.wav",
+      "sha256": "6dad08a22f526ff3acc5d44ec251f71bd34cf18e716b8184f6f0debd4f308d75",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/ceb.wav",
+      "sha256": "93950151764b59a8d779c2d7f927678bc733bedb6ed279f2458ae4f332a0cd27",
+      "bytes": 130604
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/cs.wav",
+      "sha256": "bd07c69e92c202404983ed594667d0f26ec03068eba75ad2e5322c1a78a0091f",
+      "bytes": 109484
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/da.wav",
+      "sha256": "56e71bd385b72cf399eaf2f1828304b8fa77d597044c8e19dcd80dd9c9b125d4",
+      "bytes": 111404
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/dag.wav",
+      "sha256": "b3b7eb2b70539799b773f23f47ec6d0c54fd74c67e6c454a2133ff71053b1619",
+      "bytes": 213164
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/dcc.wav",
+      "sha256": "c69859c5dad3f9f4b231e692d9fa37ab4b7768fc86938571eb3d7cd488a3b1c3",
+      "bytes": 94124
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/de.wav",
+      "sha256": "377b62f69e255b9f390a1aa297b8ab79314aff197652d8f61af1d74b9a0600c3",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/dyu.wav",
+      "sha256": "2233170b5aab591fc585b8bdb0346488704bff304b8dacf111bb548217b32be5",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/el.wav",
+      "sha256": "a69f5fd7657060d383cfb176a560ffd84a032dbf40525ef02b697fbb83204220",
+      "bytes": 149804
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/en.wav",
+      "sha256": "117dc28153f9bb3fd6a3933c097062c9b6effe10fa78d42b8e4a90627fc15ee6",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/es.wav",
+      "sha256": "8cf99c69662d42c36bcb7b5bf60fd88de9e8074a6b54db9bad00903f0593b517",
+      "bytes": 134444
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/et.wav",
+      "sha256": "85d15047837064cc98ce4dc3750314da979ac3ea4651cc1b87ac7fdec5907937",
+      "bytes": 101804
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/fi.wav",
+      "sha256": "991b4694697fb627354755b2e5f39d768eb9d01245c3c94ea021a0a6ac6a90a5",
+      "bytes": 128684
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/fil.wav",
+      "sha256": "37c27cbfc52aede502fe88ba0b7cb7e2e685a4c164f0747428c72afa5ddd9db0",
+      "bytes": 201644
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/fr.wav",
+      "sha256": "2e9e4c5a7cd8eb639eecda5419ee63a6d587ddbb1e77c1fcf4a82d9077be1955",
+      "bytes": 147884
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/gu.wav",
+      "sha256": "b130ae49a2181d58295f0986c5a6485cb8cc24c9d74fbf1b8647301e4db6ec22",
+      "bytes": 138284
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/ha.wav",
+      "sha256": "d60a5fff33c9537e28f334afacdcde6d6f043941678db4a0e7903080be7e8267",
+      "bytes": 136364
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/haw.wav",
+      "sha256": "afbb8a1d50b4032ee2f81250391e5c5bfe2e85bd1c1fe6adb9bd43a171ec44fc",
+      "bytes": 84524
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/he.wav",
+      "sha256": "aa48df1a203f86f2656268466c01eb61555e4a153024247a7e2355efc1538b3d",
+      "bytes": 124844
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/hi.wav",
+      "sha256": "0aa3dde996ebcf6e491fbc5c69827bcbad6e435c9b4d71cc0cd1d2752661f5c7",
+      "bytes": 134444
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/hr.wav",
+      "sha256": "c4aff984115f8471ab6160094b2ff85e290314754500cd3bb9b2cf7d9bff8f25",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/ht.wav",
+      "sha256": "2bb407ac8937db2dcaa9788329dc6074e73aed15f0d115ce19656d9a07e7ec5f",
+      "bytes": 119084
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/hu.wav",
+      "sha256": "0718055af2df660571316987b3f44c6cb7bf0c91f8c75a6c1a04d03d2494eea9",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/hy.wav",
+      "sha256": "5a31ed45f9189c1bb5643511462e14559634f9d9ca14c6f6d1bab98987555cfa",
+      "bytes": 117164
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/id.wav",
+      "sha256": "8b7d6b18675e94452d91f3e6a0415078d78b85ef40fc46b5b8af82ac9b53106e",
+      "bytes": 140204
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/ig.wav",
+      "sha256": "1e191b85dece2474d66c72929a716ea8608d5ac47339e7e5638f7025265e5c70",
+      "bytes": 117164
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/it.wav",
+      "sha256": "3b0ddefcaad1853047295697ffb287b60cdc02be129940ef750832f1be72f7e5",
+      "bytes": 105644
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/ja.wav",
+      "sha256": "f123f19bf61dc3a40a4a7767608cd2bd8078d587181fc981af1f1a394faa7d65",
+      "bytes": 155564
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/jv.wav",
+      "sha256": "47d12aa17803c660a8cb6f22f9845597c09ff150a4fcae9ba83b13f93dc37294",
+      "bytes": 140204
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/ka.wav",
+      "sha256": "017081b5ef4ca5a31db3557e81e9df63c42b3c865e043f216195dbc5c950791b",
+      "bytes": 94124
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/kk.wav",
+      "sha256": "51faa26f05bc4c6b2c6e9470b7f06d4293af5052f97cfe63f858bc3dab66e847",
+      "bytes": 134444
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/km.wav",
+      "sha256": "5fd2ab7b29fccf67508be21ef04c7d6e3dc094e032309ffe4a2c22fd147c0e0a",
+      "bytes": 195884
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/kn.wav",
+      "sha256": "aca7c71259eab567d6036e788307bd5efb5772a48fcc6826b5a27be6305ec9a3",
+      "bytes": 172844
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/ko.wav",
+      "sha256": "a8719e1b219df8d1b4d8a4f47516341b11b0f73d9b0f8bec628e120ff88004b7",
+      "bytes": 132524
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/ln.wav",
+      "sha256": "8c877f66884c2f28cce2c87cde5e1426ed1d1af81546edb5d78c92600e0d42ee",
+      "bytes": 159404
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/lo.wav",
+      "sha256": "37aec1da1b48b6d3c646674b5fe0401a3660501a09d788ea3b04370a9811f8ef",
+      "bytes": 165164
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/lt.wav",
+      "sha256": "5d8cb81e284887bd3c7e2e9e8390d02190b83663fb30ade17b0b4caaacb4a436",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/mai.wav",
+      "sha256": "51f1c295971ba0c9ff8dae34d985ea48f2e7ffbaf06d7d861a9c6710f3f95865",
+      "bytes": 138284
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/mi.wav",
+      "sha256": "cd53985836d5c2fc308785e2246c02b133a8abe329e7f6ebb7c73a0beac5f05d",
+      "bytes": 155564
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/mk.wav",
+      "sha256": "0bb646284f27f409d881026a8b1e30df1fa709bdf22594fecd6b946817e7b7b2",
+      "bytes": 111404
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/ml.wav",
+      "sha256": "a395b06520a85107b9dee2862d98ad4795a72976a60a2f21a768221c6eeed27f",
+      "bytes": 197804
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/mn.wav",
+      "sha256": "462ca48fa5322500c70e4ee0b09e1b357c94a0c898df84dd64e378769b603168",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/mr.wav",
+      "sha256": "212b6c8f9c5e921240439bdafa216a588f26d7998f50e0e6867756e8a9ca9b88",
+      "bytes": 121004
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/ms.wav",
+      "sha256": "ea110478aaafd88825a9b611106b24497f686d3e24b226f7a80b2c917e113709",
+      "bytes": 192044
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/my.wav",
+      "sha256": "5195b1f513a160b21c7d1dd50eca62ad1891862621fa1cb909b56592c30bb7bb",
+      "bytes": 136364
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/nan.wav",
+      "sha256": "9926d1d2ecc9c8e2f9a7a4dac7ae2e79a38cbb20a9bd689c79d507de3fcd75af",
+      "bytes": 207404
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/ne.wav",
+      "sha256": "e19eff73a516f4a91f1a12d7dd62e55bb8eae41e004f90dad45dd21577af415d",
+      "bytes": 113324
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/nl.wav",
+      "sha256": "138e1b7270ff05316839dc478bfac714efa9afaa6ae598f6e0f818a229a4c5cd",
+      "bytes": 136364
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/no.wav",
+      "sha256": "4fa24334ae2b260a3569b2387715740a87daa16d1c162ac932ae48f0be7a6c03",
+      "bytes": 113324
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/nso.wav",
+      "sha256": "9b90fc8efb4f73094a2f3eb1132f55a1d80d35cb3595bc278c46fcfd947d8db5",
+      "bytes": 138284
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/ny.wav",
+      "sha256": "53cd8a07dcb118c0918feb4781bae0b6bcf20b736c7866f2e23b4fc4c9175f52",
+      "bytes": 122924
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/pa.wav",
+      "sha256": "02426a8eb328569ed41d8727e5a18a021ea7d6112d29ecf137ed447efcf3fa1a",
+      "bytes": 140204
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/pcm.wav",
+      "sha256": "c372e1ece9ec261bd63b6ad2783af04b8566d07ce7e90cfca1139b601052c01a",
+      "bytes": 149804
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/pl.wav",
+      "sha256": "f77c79a8527e49519ee3cb2d18c4282c0b97383f74f0253b9e90061c5f1cfcfd",
+      "bytes": 117164
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/pt.wav",
+      "sha256": "56648c570adb2cafa30ddb19cc9c347c7e00f01799861f0d3cf0098e6e0b1816",
+      "bytes": 151724
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/ro.wav",
+      "sha256": "9ce1c5297dd881c137a8d18daffc11d28dc1aec8a859ec220cbb2d87a81e90ae",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/ru.wav",
+      "sha256": "235c7bfebaa1857505d2fbad2b737261ca56b5b34a7d05c266603c422d353c24",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/rw.wav",
+      "sha256": "7a8b53fd223c04abcb66a250f7c3f4dc960d8653b19105495775f0cfb4f6be12",
+      "bytes": 165164
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/sd.wav",
+      "sha256": "25816af816b1177c779cab8a74453b11ed12c74056e3fc76ef45d7fe87e5738d",
+      "bytes": 170924
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/si.wav",
+      "sha256": "27d58093f210444ec93025ac7537d072c4b66913b3d4db169d9f50f3e48f2f69",
+      "bytes": 155564
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/sk.wav",
+      "sha256": "7b63f553ae2a9e804c51d6a17599ecdaaf88fe5cf0703c0a8db8e6daf3a5cfe7",
+      "bytes": 113324
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/skr.wav",
+      "sha256": "b5350e173afc888973d69df0e6b918a27b2560f759353eed0a09b57f3031dc8f",
+      "bytes": 184364
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/sl.wav",
+      "sha256": "8f8163875c5e919e4b33dc4cd866d8f7550ae886710fcb16bc8c481f68d6893f",
+      "bytes": 117164
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/sn.wav",
+      "sha256": "9d0d1c2b11863272aecf480b8dc625127a174ff692df3aed6d07f76a3d7af51d",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/so.wav",
+      "sha256": "2e6977350ed705c98f6598669d96588d8ef84ce6e1999c07b9ad8f5001c038aa",
+      "bytes": 111404
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/sq.wav",
+      "sha256": "e9359df08a2df43fdbccd57c9f15ab83e400f139762fd9e831560d0c1394510e",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/sr.wav",
+      "sha256": "c6e945cfe59f2ee28f29d09ead0a63632a688ad697eb7ac6a3028a97005d1ec3",
+      "bytes": 130604
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/sv.wav",
+      "sha256": "1a392229b7cb881ca80a64b477bfabae5933351cb0641b6a701f5202fa2b773e",
+      "bytes": 101804
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/sw.wav",
+      "sha256": "cd63916c229696e409df58dcc882ad3919442f7813f3755e8df227c891dd777b",
+      "bytes": 140204
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/ta.wav",
+      "sha256": "c227a4b385bd2f740cf3c684ad8c4408b2877d5c2a325ce46178436e8c52c39c",
+      "bytes": 128684
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/te.wav",
+      "sha256": "ebe5d22b3eb3ed1a487af8c166cf0206f7f89026c850eadcabdcec5930e9dc72",
+      "bytes": 130604
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/tg.wav",
+      "sha256": "f493ca2a4ebe7ed0d222c88507389f61aa9b486ba27c5d9c3f7f2b03e695bc70",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/th.wav",
+      "sha256": "be5c841b83aa88b8fb3c1bfbe33cd79cc5cf69bd8efc7e3d7d35b379289b5f22",
+      "bytes": 163244
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/ti.wav",
+      "sha256": "7d386498b256fab869233573e88680cf14401ec93c54e1e49e52458e2f800ae5",
+      "bytes": 328364
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/tk.wav",
+      "sha256": "054a01f6533b7437e2c127b107d4f9bd4ec4c2a1313b8ca8623169aa3d324d70",
+      "bytes": 97964
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/tn.wav",
+      "sha256": "bf8621f0979bc257ccaca5f448aba3fbfc6396de9ae4aa5e022bde31158b63d9",
+      "bytes": 115244
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/tr.wav",
+      "sha256": "9ec4378a1a5051aed060c63ad87bba125eab1e10669491f0559f110984bd21f0",
+      "bytes": 117164
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/tw.wav",
+      "sha256": "23fb59f30defa882fb4daf7fc7c894b4a6acbce1a32bcddc14d0efb5897b9e73",
+      "bytes": 101804
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/ug.wav",
+      "sha256": "c3551505854861fa1067b596673de83aef7b80b3cdebd9e5c5676e93195671ab",
+      "bytes": 136364
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/uk.wav",
+      "sha256": "29623c65e7b42294b5f507354f49da8c86b234e4819f3030995b2dee8ba6f86d",
+      "bytes": 138284
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/ur.wav",
+      "sha256": "d65c2aea23ccbcab6d923083fa52486b4f28f7aa21457d71944f5675ce4c7d96",
+      "bytes": 140204
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/vi.wav",
+      "sha256": "3af2cb212c16f353042cb6909cd2d67d4f7bde39c04e130705362a3997ae6afb",
+      "bytes": 111404
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/xh.wav",
+      "sha256": "25f1e3842c1206c1ad3dc7b82ceec6b57be9afb975760c77d6c4f3f470c73fbf",
+      "bytes": 155564
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/yo.wav",
+      "sha256": "8c4c6474dde78e102585c6e917e49a9ac6718db566e92ac57aa9cb21b15b9be9",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/yue.wav",
+      "sha256": "911865de0e1cca11712ed4f69cfbdc8c2f96ad5b1b99af693e1f4710757a59b6",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/zh.wav",
+      "sha256": "82a2e2f2795691a9b0fce4fc04307ee991f27288f2ebe63b2fcb2664dfda19a3",
+      "bytes": 97964
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/before/zu.wav",
+      "sha256": "9a1e3d18dbc54d5923888fb3f77026b0de66ff7b5705058281312c08154e176c",
+      "bytes": 159404
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/export-provenance.json",
+      "sha256": "eed867deb52243b7898b00b9eb8146529512da2c09fe861188e819c2b581baa6",
+      "bytes": 47634
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/paired-manifest.json",
+      "sha256": "cc538d1877660ad83db40571427a96e507c43441aa8e57b694a8b8f57c800ae9",
+      "bytes": 2287335
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/quality-summary.json",
+      "sha256": "f2b3fe688952a01d3c570c80418a1c9a1215ad238ad9b5a0c199bc0491374568",
+      "bytes": 342124
+    },
+    {
+      "file": "samples/rtx4070-2026-11-03/verification.json",
+      "sha256": "1e840b2f97dd14a2eb5b17cc1afb7a150085b87ce45616ad002c6563ecd4b116",
+      "bytes": 34206
+    }
+  ],
+  "total_bytes": 47066812,
+  "reference_audio_bundled": false,
+  "root_independent_validation_at": "2026-11-04T09:36:53.525629+00:00"
+}

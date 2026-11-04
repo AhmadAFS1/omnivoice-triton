@@ -1,0 +1,21 @@
+{
+  "measurement_kind": "Reused original blindGPUASR metadata; no new inference",
+  "protocol": "original legacy BF16/batch1; later batch-probe outputs excluded",
+  "files": [
+    {
+      "file": "000-omniASR_CTC_1B_v2--omniASR_CTC_1B_v2-metadata.json",
+      "source_path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained/asr-results/stage1/published/000-omniASR_CTC_1B_v2/omniASR_CTC_1B_v2-metadata.json",
+      "sha256": "d4aace4876f2555418a67ab4e5d7b90831282068798da8c75a283e33b6522bcc"
+    },
+    {
+      "file": "001-omniASR_LLM_Unlimited_1B_v2--omniASR_LLM_Unlimited_1B_v2-metadata.json",
+      "source_path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained/asr-results/stage1/published/001-omniASR_LLM_Unlimited_1B_v2/omniASR_LLM_Unlimited_1B_v2-metadata.json",
+      "sha256": "0d92a21fc064dcce6c78fb0d556888989329c356b4e9d4b88af23f9054e1a2dc"
+    },
+    {
+      "file": "002-omniASR_LLM_Unlimited_1B_v2--omniASR_LLM_Unlimited_1B_v2-metadata.json",
+      "source_path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained/asr-results/stage1/published/002-omniASR_LLM_Unlimited_1B_v2/omniASR_LLM_Unlimited_1B_v2-metadata.json",
+      "sha256": "5678fb17f90f967a732a3dbed7728ec885a60562b12dd14f03a15eaa35b09d6b"
+    }
+  ]
+}

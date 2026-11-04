@@ -1,0 +1,24 @@
+{
+  "measurement_kind": "CPU-only corpus assembly, no GPU inference or audio-quality qualification",
+  "date_utc": "2026-11-04T05:00:52.535886+00:00",
+  "active_product_languages": 104,
+  "corpus_cases": 299,
+  "languages_with_at_least_two_published_texts": 104,
+  "source_route_counts": {
+    "FLORES-200": 91,
+    "Wikimedia Wikipedia native-language article": 4,
+    "facebook/omnilingual-asr-corpus": 9
+  },
+  "native_reference_languages": 9,
+  "english_reference_fallback_languages": 95,
+  "exact_native_asr_certification": false,
+  "asr_broader_proxy_languages": [
+    "tw"
+  ],
+  "notes": [
+    "Published source text was selected rather than invented translations. No language has been newly quality-certified by building this corpus.",
+    "Two source texts per language minimum; FLORES routes additionally have a shared critical names/numbers/negation sentence.",
+    "Source licenses apply to text/data separately from benchmark code. Preserve row attribution/revision IDs and license notices.",
+    "Word segmentation differs by script. Retain CER and raw transcripts; ASR agreement alone does not certify words or pronunciation."
+  ]
+}

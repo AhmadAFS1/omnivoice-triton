@@ -1,0 +1,19 @@
+{
+  "version": 5,
+  "utc": "2026-11-04T07:24:02.934652+00:00",
+  "measurement_kind": "CPU-only Form/mock/fixture/schema/hash checks; no GPU/model inference",
+  "host": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "CPU_mock_HTTP_requests": 17,
+  "retained_HTTP200_WAVs": 15,
+  "expected_validation400": 2,
+  "worker_fields_observed": 12,
+  "fixture_preflight": "voice-plans-v5/CPU-PREFLIGHT.json",
+  "V4_run_sha256": "df51c081d8108bf7dae5778adc2f21398e59d0ca8de394601f4251a55c521652",
+  "files": {
+    "load/run_v5.py": "1a077901bd91b8b7c16bd2424b52519f092935db2de4f74d068e288b1eb89302",
+    "load/verify_v5.py": "c5c501fd0e5d1ca4fd336c8ced156d4d10549e1a93ab446ed4338fecdb528103",
+    "load/smoke_v5.py": "a825cc8031fbe9b44279ba76089ab4e8f42f97885fba42ee5ab98ec03f510187",
+    "load/build_voice_plans_v5.py": "075fe35c26e82596d0c1b443c6f3d2c40d1fa47f98bd64ca83bff709ff4ea888",
+    "load/V5-README.md": "e68ea4cbc876e713cdbb20968974e93d62a90165481fb91cb0c3ac6f25cc710c"
+  }
+}

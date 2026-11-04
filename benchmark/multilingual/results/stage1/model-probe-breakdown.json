@@ -1,0 +1,375 @@
+[
+  {
+    "arm": "kv-cache-probe-v1/kv-off",
+    "language": "en",
+    "rows": 9,
+    "both_exact": 2,
+    "both_CER0": 9,
+    "flags": {
+      "asr_disagreement": 7,
+      "non_HTTP_model_probe_failure_denominator_unknown": 9,
+      "probe_corpus_identity_mismatch": 9,
+      "probe_text_source_not_joined": 9,
+      "spacing_only_difference_present": 7,
+      "word_mismatch_review": 7
+    },
+    "judges": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "rows": 9,
+        "exact": 2,
+        "CER0": 9,
+        "micro_CER": 0.0,
+        "micro_WER": 0.25925925925925924,
+        "macro_CER": 0.0,
+        "macro_WER": 0.25925925925925924,
+        "median_CER": 0.0,
+        "empty_transcripts": 0,
+        "character_bands": {
+          "spacing_only": 7,
+          "normalized_exact": 2
+        }
+      },
+      "omniASR_CTC_1B_v2": {
+        "rows": 9,
+        "exact": 9,
+        "CER0": 9,
+        "micro_CER": 0.0,
+        "micro_WER": 0.0,
+        "macro_CER": 0.0,
+        "macro_WER": 0.0,
+        "median_CER": 0.0,
+        "empty_transcripts": 0,
+        "character_bands": {
+          "normalized_exact": 9
+        }
+      }
+    }
+  },
+  {
+    "arm": "kv-cache-probe-v1/kv-on",
+    "language": "en",
+    "rows": 9,
+    "both_exact": 2,
+    "both_CER0": 9,
+    "flags": {
+      "asr_disagreement": 7,
+      "non_HTTP_model_probe_failure_denominator_unknown": 9,
+      "probe_corpus_identity_mismatch": 9,
+      "probe_text_source_not_joined": 9,
+      "spacing_only_difference_present": 7,
+      "word_mismatch_review": 7
+    },
+    "judges": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "rows": 9,
+        "exact": 2,
+        "CER0": 9,
+        "micro_CER": 0.0,
+        "micro_WER": 0.25925925925925924,
+        "macro_CER": 0.0,
+        "macro_WER": 0.25925925925925924,
+        "median_CER": 0.0,
+        "empty_transcripts": 0,
+        "character_bands": {
+          "spacing_only": 7,
+          "normalized_exact": 2
+        }
+      },
+      "omniASR_CTC_1B_v2": {
+        "rows": 9,
+        "exact": 9,
+        "CER0": 9,
+        "micro_CER": 0.0,
+        "micro_WER": 0.0,
+        "macro_CER": 0.0,
+        "macro_WER": 0.0,
+        "median_CER": 0.0,
+        "empty_transcripts": 0,
+        "character_bands": {
+          "normalized_exact": 9
+        }
+      }
+    }
+  },
+  {
+    "arm": "split-cfg-probe-v1/baseline",
+    "language": "ar",
+    "rows": 11,
+    "both_exact": 6,
+    "both_CER0": 6,
+    "flags": {
+      "asr_disagreement": 3,
+      "non_HTTP_model_probe_failure_denominator_unknown": 11,
+      "probe_corpus_identity_mismatch": 11,
+      "probe_text_source_not_joined": 11,
+      "word_mismatch_review": 5,
+      "target_language_ASR_uncalibrated_or_control_review": 11
+    },
+    "judges": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "rows": 11,
+        "exact": 6,
+        "CER0": 6,
+        "micro_CER": 0.3689839572192513,
+        "micro_WER": 0.4090909090909091,
+        "macro_CER": 0.36898395721925137,
+        "macro_WER": 0.4090909090909091,
+        "median_CER": 0.0,
+        "empty_transcripts": 0,
+        "character_bands": {
+          "CER_gt50pct": 4,
+          "normalized_exact": 6,
+          "CER_gt15_le50pct": 1
+        }
+      },
+      "omniASR_CTC_1B_v2": {
+        "rows": 11,
+        "exact": 6,
+        "CER0": 6,
+        "micro_CER": 0.36363636363636365,
+        "micro_WER": 0.36363636363636365,
+        "macro_CER": 0.36363636363636365,
+        "macro_WER": 0.36363636363636365,
+        "median_CER": 0.0,
+        "empty_transcripts": 3,
+        "character_bands": {
+          "CER_gt50pct": 4,
+          "normalized_exact": 6,
+          "CER_gt15_le50pct": 1
+        }
+      }
+    }
+  },
+  {
+    "arm": "split-cfg-probe-v1/baseline",
+    "language": "en",
+    "rows": 11,
+    "both_exact": 3,
+    "both_CER0": 11,
+    "flags": {
+      "asr_disagreement": 8,
+      "non_HTTP_model_probe_failure_denominator_unknown": 11,
+      "probe_corpus_identity_mismatch": 11,
+      "probe_text_source_not_joined": 11,
+      "spacing_only_difference_present": 8,
+      "word_mismatch_review": 8
+    },
+    "judges": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "rows": 11,
+        "exact": 3,
+        "CER0": 11,
+        "micro_CER": 0.0,
+        "micro_WER": 0.24242424242424243,
+        "macro_CER": 0.0,
+        "macro_WER": 0.2424242424242424,
+        "median_CER": 0.0,
+        "empty_transcripts": 0,
+        "character_bands": {
+          "spacing_only": 8,
+          "normalized_exact": 3
+        }
+      },
+      "omniASR_CTC_1B_v2": {
+        "rows": 11,
+        "exact": 11,
+        "CER0": 11,
+        "micro_CER": 0.0,
+        "micro_WER": 0.0,
+        "macro_CER": 0.0,
+        "macro_WER": 0.0,
+        "median_CER": 0.0,
+        "empty_transcripts": 0,
+        "character_bands": {
+          "normalized_exact": 11
+        }
+      }
+    }
+  },
+  {
+    "arm": "split-cfg-probe-v1/baseline",
+    "language": "es",
+    "rows": 11,
+    "both_exact": 6,
+    "both_CER0": 6,
+    "flags": {
+      "non_HTTP_model_probe_failure_denominator_unknown": 11,
+      "probe_corpus_identity_mismatch": 11,
+      "probe_text_source_not_joined": 11,
+      "asr_disagreement": 5,
+      "word_mismatch_review": 5
+    },
+    "judges": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "rows": 11,
+        "exact": 10,
+        "CER0": 10,
+        "micro_CER": 0.013636363636363636,
+        "micro_WER": 0.01818181818181818,
+        "macro_CER": 0.013636363636363636,
+        "macro_WER": 0.018181818181818184,
+        "median_CER": 0.0,
+        "empty_transcripts": 0,
+        "character_bands": {
+          "normalized_exact": 10,
+          "CER_gt3_le15pct": 1
+        }
+      },
+      "omniASR_CTC_1B_v2": {
+        "rows": 11,
+        "exact": 7,
+        "CER0": 7,
+        "micro_CER": 0.01818181818181818,
+        "micro_WER": 0.07272727272727272,
+        "macro_CER": 0.018181818181818184,
+        "macro_WER": 0.07272727272727274,
+        "median_CER": 0.0,
+        "empty_transcripts": 0,
+        "character_bands": {
+          "normalized_exact": 7,
+          "CER_gt3_le15pct": 4
+        }
+      }
+    }
+  },
+  {
+    "arm": "split-cfg-probe-v1/split-cfg",
+    "language": "ar",
+    "rows": 11,
+    "both_exact": 6,
+    "both_CER0": 6,
+    "flags": {
+      "asr_disagreement": 3,
+      "non_HTTP_model_probe_failure_denominator_unknown": 11,
+      "probe_corpus_identity_mismatch": 11,
+      "probe_text_source_not_joined": 11,
+      "word_mismatch_review": 5,
+      "target_language_ASR_uncalibrated_or_control_review": 11
+    },
+    "judges": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "rows": 11,
+        "exact": 6,
+        "CER0": 6,
+        "micro_CER": 0.39572192513368987,
+        "micro_WER": 0.4318181818181818,
+        "macro_CER": 0.39572192513368987,
+        "macro_WER": 0.4318181818181818,
+        "median_CER": 0.0,
+        "empty_transcripts": 0,
+        "character_bands": {
+          "CER_gt50pct": 4,
+          "normalized_exact": 6,
+          "CER_gt15_le50pct": 1
+        }
+      },
+      "omniASR_CTC_1B_v2": {
+        "rows": 11,
+        "exact": 6,
+        "CER0": 6,
+        "micro_CER": 0.36363636363636365,
+        "micro_WER": 0.36363636363636365,
+        "macro_CER": 0.36363636363636365,
+        "macro_WER": 0.36363636363636365,
+        "median_CER": 0.0,
+        "empty_transcripts": 3,
+        "character_bands": {
+          "CER_gt50pct": 4,
+          "normalized_exact": 6,
+          "CER_gt15_le50pct": 1
+        }
+      }
+    }
+  },
+  {
+    "arm": "split-cfg-probe-v1/split-cfg",
+    "language": "en",
+    "rows": 11,
+    "both_exact": 3,
+    "both_CER0": 11,
+    "flags": {
+      "asr_disagreement": 8,
+      "non_HTTP_model_probe_failure_denominator_unknown": 11,
+      "probe_corpus_identity_mismatch": 11,
+      "probe_text_source_not_joined": 11,
+      "spacing_only_difference_present": 8,
+      "word_mismatch_review": 8
+    },
+    "judges": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "rows": 11,
+        "exact": 3,
+        "CER0": 11,
+        "micro_CER": 0.0,
+        "micro_WER": 0.24242424242424243,
+        "macro_CER": 0.0,
+        "macro_WER": 0.2424242424242424,
+        "median_CER": 0.0,
+        "empty_transcripts": 0,
+        "character_bands": {
+          "spacing_only": 8,
+          "normalized_exact": 3
+        }
+      },
+      "omniASR_CTC_1B_v2": {
+        "rows": 11,
+        "exact": 11,
+        "CER0": 11,
+        "micro_CER": 0.0,
+        "micro_WER": 0.0,
+        "macro_CER": 0.0,
+        "macro_WER": 0.0,
+        "median_CER": 0.0,
+        "empty_transcripts": 0,
+        "character_bands": {
+          "normalized_exact": 11
+        }
+      }
+    }
+  },
+  {
+    "arm": "split-cfg-probe-v1/split-cfg",
+    "language": "es",
+    "rows": 11,
+    "both_exact": 9,
+    "both_CER0": 9,
+    "flags": {
+      "non_HTTP_model_probe_failure_denominator_unknown": 11,
+      "probe_corpus_identity_mismatch": 11,
+      "probe_text_source_not_joined": 11,
+      "asr_disagreement": 2,
+      "word_mismatch_review": 2
+    },
+    "judges": {
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "rows": 11,
+        "exact": 11,
+        "CER0": 11,
+        "micro_CER": 0.0,
+        "micro_WER": 0.0,
+        "macro_CER": 0.0,
+        "macro_WER": 0.0,
+        "median_CER": 0.0,
+        "empty_transcripts": 0,
+        "character_bands": {
+          "normalized_exact": 11
+        }
+      },
+      "omniASR_CTC_1B_v2": {
+        "rows": 11,
+        "exact": 9,
+        "CER0": 9,
+        "micro_CER": 0.00909090909090909,
+        "micro_WER": 0.03636363636363636,
+        "macro_CER": 0.009090909090909092,
+        "macro_WER": 0.03636363636363637,
+        "median_CER": 0.0,
+        "empty_transcripts": 0,
+        "character_bands": {
+          "normalized_exact": 9,
+          "CER_gt3_le15pct": 2
+        }
+      }
+    }
+  }
+]
