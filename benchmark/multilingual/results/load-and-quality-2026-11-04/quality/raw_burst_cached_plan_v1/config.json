@@ -1,0 +1,37 @@
+{
+  "measurement_kind": "CPU-only optional cached/coalesced plan; no neural launch",
+  "source_ref": "ce48b253e66b951d87ea42919f945828c62e96a4",
+  "GPU_UUID": "GPU-5aada52f-9af2-4506-47f7-75e99aaf51ee",
+  "model_revision": "c5fdb5ccb189668d56333f77ba2629f4cd7535f4",
+  "target_case_id": "en-short",
+  "warmup_case_id": "en-load-flores-0307",
+  "phases": [
+    {
+      "id": "cold-identical1000",
+      "requests": 1000,
+      "required_neural_member_delta": 1
+    },
+    {
+      "id": "hot-identical5000",
+      "requests": 5000,
+      "required_neural_member_delta": 0
+    }
+  ],
+  "response_cache_max_bytes": 134217728,
+  "startup_seed": 20261103,
+  "batch_collect_ms": 0,
+  "max_batch_requests": 1,
+  "steps": 16,
+  "KV_cache": false,
+  "speed": 1,
+  "postprocess": "off",
+  "codec_batch": 1,
+  "graphs": 0,
+  "server_keepalive_s": 600,
+  "body_RAM_cap_bytes": 1073741824,
+  "RLIMIT_NOFILE": 16384,
+  "total_bound_s": 120,
+  "scope": "One EN target key: cold1000 generated/coalesced then hot5000cachehits; all fullWAV bytes identical, maximumone independent targetqualityobservation. Not novel-input inference capacity.",
+  "future_gate": "Only after coreASR/staggered completed+retained+idle and new exact root lease; do not distract raw5k retention",
+  "planned_GPU": "NVIDIA GeForce RTX4070Ti; historicalphysical12282MiB/visible12481134592B,driver610.57.04/CUDA12.8, fresh evidence required"
+}

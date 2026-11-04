@@ -1,0 +1,43 @@
+{
+  "cohort_wall_s": 1857.9409863899928,
+  "barrier_unix": 1793800211.4257357,
+  "timed_out": false,
+  "fatal_CUDA_stop": false,
+  "body_RAM_reserved_peak_bytes": 900536800,
+  "body_RAM_limit_bytes": 1073741824,
+  "client_maxRSS_at_network_end_bytes": 1049817088,
+  "retained_body_bytes": 900536800,
+  "offers": 5000,
+  "original_effective_inputs": 1000,
+  "cycles": 5,
+  "content_profile": "5000 fresh inference requests cycling1000 original inputs; not5000 novel inputs",
+  "HTTP_status_counts": {
+    "200": 5000
+  },
+  "error_category_counts": {},
+  "HTTP200_complete_bodies": 5000,
+  "HTTP200_complete_signal_valid": 5000,
+  "transport_or_protocol_failures": 0,
+  "POST_dispatch_spread_ms": 77.09855301072821,
+  "POST_dispatch_p95_ms": 78.38868734688731,
+  "complete_ms_p50": 932280.0987110095,
+  "complete_ms_p95": 1765743.7210626479,
+  "whole5000_full_body_ms": 1857898.8058050163,
+  "batcher_benchmark_counter_delta": {
+    "batches_started": 5000,
+    "members_started": 5000,
+    "members_succeeded": 5000,
+    "members_failed": 0
+  },
+  "neural_work_proof_pass": true,
+  "legacy_Inference_Executed_headers": {
+    "unreported": 5000
+  },
+  "cache_disabled_before": true,
+  "cache_disabled_after": true,
+  "quality": "Signal validity only. Word/voice fidelity pending blind ASR/native review. No quality certification.",
+  "independent_server_log_members_executing": 5000,
+  "independent_server_log_members_completed": 5000,
+  "all5000_server_log_neural_work_proof": true,
+  "all5000_inference_full_body_signal_gate": true
+}

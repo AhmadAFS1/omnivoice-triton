@@ -1,0 +1,31 @@
+test_all_24_four_shape_orders_preserve_all_returned_values (shared_pool_cpu_tests.Contracts.test_all_24_four_shape_orders_preserve_all_returned_values) ... ok
+test_attachment_does_not_overwrite_a_new_external_owner (shared_pool_cpu_tests.Contracts.test_attachment_does_not_overwrite_a_new_external_owner) ... ok
+test_attachment_is_default_off_and_restores_after_exception (shared_pool_cpu_tests.Contracts.test_attachment_is_default_off_and_restores_after_exception) ... ok
+test_cannot_lower_capture_floor_or_enable_open_shape_domain (shared_pool_cpu_tests.Contracts.test_cannot_lower_capture_floor_or_enable_open_shape_domain) ... ok
+test_capture_failure_and_replay_failure_never_retry (shared_pool_cpu_tests.Contracts.test_capture_failure_and_replay_failure_never_retry) ... ok
+test_clear_fences_and_new_epoch_preserves_external_return (shared_pool_cpu_tests.Contracts.test_clear_fences_and_new_epoch_preserves_external_return) ... ok
+test_default_off_is_exact_passthrough_and_no_backend (shared_pool_cpu_tests.Contracts.test_default_off_is_exact_passthrough_and_no_backend) ... ok
+test_exact_pinned_output_class_fields_and_reconstruction (shared_pool_cpu_tests.Contracts.test_exact_pinned_output_class_fields_and_reconstruction) ... ok
+test_executor_default_plan_validates_refs_without_cuda_or_model (shared_pool_cpu_tests.Contracts.test_executor_default_plan_validates_refs_without_cuda_or_model) ... ok
+test_executor_lease_requires_current_prototype_and_driver_sha (shared_pool_cpu_tests.Contracts.test_executor_lease_requires_current_prototype_and_driver_sha) ... ok
+test_executor_uses_one_persistent_outer_tap_across_parity_and_timing (shared_pool_cpu_tests.Contracts.test_executor_uses_one_persistent_outer_tap_across_parity_and_timing) ... ok
+test_max_one_evicts_last_epoch_and_old_return_survives (shared_pool_cpu_tests.Contracts.test_max_one_evicts_last_epoch_and_old_return_survives) ... ok
+test_model_state_change_poisoned_not_silently_recaptured (shared_pool_cpu_tests.Contracts.test_model_state_change_poisoned_not_silently_recaptured) ... ok
+test_no_headroom_rejected_before_pool_capture (shared_pool_cpu_tests.Contracts.test_no_headroom_rejected_before_pool_capture) ... ok
+test_owner_stream_change_rejected (shared_pool_cpu_tests.Contracts.test_owner_stream_change_rejected) ... ok
+test_owner_thread_rejected_before_backend_stream_access (shared_pool_cpu_tests.Contracts.test_owner_thread_rejected_before_backend_stream_access) ... ok
+test_poisoned_context_keeps_owner_and_does_not_cleanup_or_fallback (shared_pool_cpu_tests.Contracts.test_poisoned_context_keeps_owner_and_does_not_cleanup_or_fallback) ... ok
+test_qualification_failure_before_cuda_pool (shared_pool_cpu_tests.Contracts.test_qualification_failure_before_cuda_pool) ... ok
+test_real_fingerprint_rejects_autocast_before_model_or_cuda_access (shared_pool_cpu_tests.Contracts.test_real_fingerprint_rejects_autocast_before_model_or_cuda_access) ... ok
+test_real_runtime_guard_rejects_nonexact_torch_before_cuda (shared_pool_cpu_tests.Contracts.test_real_runtime_guard_rejects_nonexact_torch_before_cuda) ... ok
+test_reentrant_owner_and_clear_are_rejected (shared_pool_cpu_tests.Contracts.test_reentrant_owner_and_clear_are_rejected) ... ok
+test_retained_ABCBA_returns_new_capture_and_eviction (shared_pool_cpu_tests.Contracts.test_retained_ABCBA_returns_new_capture_and_eviction) ... ok
+test_same_shape_inputs_and_masks_are_copied_each_time (shared_pool_cpu_tests.Contracts.test_same_shape_inputs_and_masks_are_copied_each_time) ... ok
+test_stride_signature_change_rejected_without_replay (shared_pool_cpu_tests.Contracts.test_stride_signature_change_rejected_without_replay) ... ok
+test_unknown_shape_and_optional_state_rejected (shared_pool_cpu_tests.Contracts.test_unknown_shape_and_optional_state_rejected) ... ok
+test_wrong_owner_clear_keeps_pool_live (shared_pool_cpu_tests.Contracts.test_wrong_owner_clear_keeps_pool_live) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.015s
+
+OK

@@ -1,0 +1,16 @@
+{
+  "source_files": [
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/triton-eager-staggered-overload-calls-v1/requests.jsonl",
+      "sha256": "4cafa7270bda0bf62c4029e8f031735da2cc17d8a713d801d54c3223c433937c"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/final-staggered-word-analysis-v1/scored533.jsonl",
+      "sha256": "cc6312a3587844ae1176aa966d38d54947f59a23689d503f02b197f0917ac988"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/final_staggered_joint_slo.py",
+      "sha256": "864b695d15a8516e599b9f8c5ed51eb9d0ec2cdd6dc24e379f9efb646d19dff7"
+    }
+  ]
+}

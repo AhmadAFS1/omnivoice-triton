@@ -1,0 +1,626 @@
+{
+  "ar": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1528878.0762544512
+  },
+  "da": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1532172.4812258487
+  },
+  "de": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1535046.5616068132
+  },
+  "el": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1539667.4712539038
+  },
+  "en": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1543553.2857997299
+  },
+  "es": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1547386.8459439008
+  },
+  "fi": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1552280.6952583152
+  },
+  "fr": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1555318.428441156
+  },
+  "he": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1559816.0718613027
+  },
+  "hi": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1563262.4796247487
+  },
+  "it": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1567276.3527976116
+  },
+  "ja": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1570948.3045578455
+  },
+  "ko": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1576242.2602602993
+  },
+  "ms": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1580334.1461590636
+  },
+  "nl": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1584664.563843701
+  },
+  "no": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1587988.905750148
+  },
+  "pl": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1592389.9700910829
+  },
+  "pt": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1595546.8689026937
+  },
+  "ru": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1600280.8743831948
+  },
+  "sv": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1603903.6542794404
+  },
+  "sw": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1607602.5449755006
+  },
+  "tr": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1611516.2640655253
+  },
+  "ur": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1615159.379995351
+  },
+  "zh": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1619660.316560071
+  },
+  "bn": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1623811.4251594087
+  },
+  "pa": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1627972.9961080593
+  },
+  "yue": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1630979.3298674456
+  },
+  "mr": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1635529.6941687542
+  },
+  "jv": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1639695.068254396
+  },
+  "te": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1644353.7774746292
+  },
+  "ta": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1652000.2885575013
+  },
+  "vi": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1652417.3276293906
+  },
+  "th": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1655546.4212120555
+  },
+  "ig": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1660269.7812843006
+  },
+  "nan": {
+    "offers": 5,
+    "HTTP200_fullbody": 5,
+    "signal_valid": 5,
+    "fullbody_p95_ms": 1430193.3862760197
+  },
+  "gu": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1664895.0126484095
+  },
+  "ha": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1669040.2907465585
+  },
+  "bho": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1673607.1380093896
+  },
+  "yo": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1677279.8379632498
+  },
+  "kn": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1681228.1199114658
+  },
+  "id": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1687012.515076442
+  },
+  "ml": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1691352.1682601247
+  },
+  "ar-DZ": {
+    "offers": 5,
+    "HTTP200_fullbody": 5,
+    "signal_valid": 5,
+    "fullbody_p95_ms": 1430212.6815721917
+  },
+  "mai": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1694974.252393232
+  },
+  "my": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1699023.992154251
+  },
+  "ar-SD": {
+    "offers": 5,
+    "HTTP200_fullbody": 5,
+    "signal_valid": 5,
+    "fullbody_p95_ms": 1429106.1389515933
+  },
+  "sd": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1702879.5029050335
+  },
+  "am": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1707791.098370809
+  },
+  "pcm": {
+    "offers": 5,
+    "HTTP200_fullbody": 5,
+    "signal_valid": 5,
+    "fullbody_p95_ms": 1433496.750684583
+  },
+  "fil": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1712692.7252180278
+  },
+  "uk": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1716417.1450694324
+  },
+  "skr": {
+    "offers": 5,
+    "HTTP200_fullbody": 5,
+    "signal_valid": 5,
+    "fullbody_p95_ms": 1431447.8812279936
+  },
+  "ro": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1720027.7175031921
+  },
+  "so": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1724506.1568409465
+  },
+  "ceb": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1728697.7136896064
+  },
+  "lo": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1733437.3551273893
+  },
+  "ln": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1737478.5322231997
+  },
+  "ar-EG": {
+    "offers": 5,
+    "HTTP200_fullbody": 5,
+    "signal_valid": 5,
+    "fullbody_p95_ms": 1433022.041581606
+  },
+  "ar-IQ": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1741463.5375148559
+  },
+  "hu": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1744871.0212328574
+  },
+  "si": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1750765.5473737963
+  },
+  "km": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1754372.5659418632
+  },
+  "ne": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1758277.9051042423
+  },
+  "dyu": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1761836.9851233482
+  },
+  "ar-SY": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1766486.2889437382
+  },
+  "rw": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1769826.204151791
+  },
+  "as": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1774498.018329333
+  },
+  "nso": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1778602.4573425516
+  },
+  "dcc": {
+    "offers": 5,
+    "HTTP200_fullbody": 5,
+    "signal_valid": 5,
+    "fullbody_p95_ms": 1442826.4423001965
+  },
+  "kk": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1782659.480264438
+  },
+  "ht": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1786600.0714129738
+  },
+  "dag": {
+    "offers": 5,
+    "HTTP200_fullbody": 5,
+    "signal_valid": 5,
+    "fullbody_p95_ms": 1441325.3544791834
+  },
+  "zu": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1790410.485575396
+  },
+  "sr": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1795494.9420313598
+  },
+  "ny": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1801495.6135497603
+  },
+  "tk": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1800633.7308224
+  },
+  "ar-TN": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1806526.2295201188
+  },
+  "ar-AE": {
+    "offers": 5,
+    "HTTP200_fullbody": 5,
+    "signal_valid": 5,
+    "fullbody_p95_ms": 1445057.8901044035
+  },
+  "ar-SA": {
+    "offers": 5,
+    "HTTP200_fullbody": 5,
+    "signal_valid": 5,
+    "fullbody_p95_ms": 1444936.2503794138
+  },
+  "ayp": {
+    "offers": 5,
+    "HTTP200_fullbody": 5,
+    "signal_valid": 5,
+    "fullbody_p95_ms": 1443935.590965196
+  },
+  "bjj": {
+    "offers": 5,
+    "HTTP200_fullbody": 5,
+    "signal_valid": 5,
+    "fullbody_p95_ms": 1441421.7253468116
+  },
+  "xh": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1810871.5656579952
+  },
+  "cs": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1814019.7929333604
+  },
+  "ug": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1818710.5383194182
+  },
+  "ti": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1825050.5135598956
+  },
+  "sn": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1826693.742848499
+  },
+  "tg": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1830866.7258697357
+  },
+  "af": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1835282.7485220318
+  },
+  "be": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1840104.0692426395
+  },
+  "sk": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1844387.45199361
+  },
+  "bs": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1848009.1528381598
+  },
+  "hr": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1851174.332396609
+  },
+  "et": {
+    "offers": 60,
+    "HTTP200_fullbody": 60,
+    "signal_valid": 60,
+    "fullbody_p95_ms": 1854974.8921534526
+  },
+  "lt": {
+    "offers": 30,
+    "HTTP200_fullbody": 30,
+    "signal_valid": 30,
+    "fullbody_p95_ms": 1856602.3184782055
+  },
+  "sl": {
+    "offers": 5,
+    "HTTP200_fullbody": 5,
+    "signal_valid": 5,
+    "fullbody_p95_ms": 1446898.1069669942
+  },
+  "mk": {
+    "offers": 5,
+    "HTTP200_fullbody": 5,
+    "signal_valid": 5,
+    "fullbody_p95_ms": 1447847.0557516033
+  },
+  "sq": {
+    "offers": 5,
+    "HTTP200_fullbody": 5,
+    "signal_valid": 5,
+    "fullbody_p95_ms": 1450382.3550384026
+  },
+  "ka": {
+    "offers": 5,
+    "HTTP200_fullbody": 5,
+    "signal_valid": 5,
+    "fullbody_p95_ms": 1447657.6597970154
+  },
+  "hy": {
+    "offers": 5,
+    "HTTP200_fullbody": 5,
+    "signal_valid": 5,
+    "fullbody_p95_ms": 1448233.564391412
+  },
+  "mn": {
+    "offers": 5,
+    "HTTP200_fullbody": 5,
+    "signal_valid": 5,
+    "fullbody_p95_ms": 1450001.0969392082
+  },
+  "tn": {
+    "offers": 5,
+    "HTTP200_fullbody": 5,
+    "signal_valid": 5,
+    "fullbody_p95_ms": 1449680.124097399
+  },
+  "tw": {
+    "offers": 5,
+    "HTTP200_fullbody": 5,
+    "signal_valid": 5,
+    "fullbody_p95_ms": 1451340.524220001
+  },
+  "mi": {
+    "offers": 5,
+    "HTTP200_fullbody": 5,
+    "signal_valid": 5,
+    "fullbody_p95_ms": 1452531.549262593
+  },
+  "haw": {
+    "offers": 5,
+    "HTTP200_fullbody": 5,
+    "signal_valid": 5,
+    "fullbody_p95_ms": 1452710.6563360023
+  }
+}

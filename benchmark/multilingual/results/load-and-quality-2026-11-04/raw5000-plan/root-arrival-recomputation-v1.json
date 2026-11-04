@@ -1,0 +1,14 @@
+{
+  "at": "2026-11-04T14:28:32.165215+00:00",
+  "kind": "Independent CPU recomputation from all5000 retained request rows; no inference",
+  "offers": 5000,
+  "within500ms_actualdispatch": 0,
+  "within2s_actualdispatch": 0,
+  "within500ms_commonbarrier": 0,
+  "within2s_commonbarrier": 0,
+  "p50_ms": 932280.0987110095,
+  "p95_nearest_ms": 1765725.108929997,
+  "max_completion_from_barrier_ms": 1857898.8058050163,
+  "status200": 5000,
+  "requests_sha256": "dab79de88252f13987875cd3fe9ff823c2705ea2a48fd99f99b8adfc3dfa952c"
+}

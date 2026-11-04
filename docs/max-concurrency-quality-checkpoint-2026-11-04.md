@@ -3,6 +3,8 @@
 For later measurements and quality results, read the
 [current results report](max-concurrency-results-2026-11-04.md).
 The timestamped text below is preserved as the11:30UTC checkpoint.
+References to16steps describe the benchmark/Lingua request profile; the worker
+API's omitted-parameter fallback remains32steps.
 
 This checkpoint describes measured results at 11:30 UTC. The optimization task
 continues until 16:00 UTC (10am Chicago). The goal of 1,000 fresh complete-audio

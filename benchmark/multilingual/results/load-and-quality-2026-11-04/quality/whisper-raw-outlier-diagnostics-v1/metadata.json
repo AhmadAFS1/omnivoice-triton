@@ -1,0 +1,33 @@
+{
+  "at": "2026-11-04T15:15:14.410008+00:00",
+  "measurement_kind": "Offline Apple integrated Metal GPU ASR; no inference API or NVIDIA access",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "device_info": {
+    "device_name": "Apple M5 Pro",
+    "max_recommended_working_set_size": 19069665280,
+    "memory_size": 25769803776,
+    "architecture": "applegpu_g17s",
+    "max_buffer_length": 14302248960,
+    "resource_limit": 499000
+  },
+  "model_revision": "a4aaeec0636e6fef84abdcbe3544cb2bf7e9f6fb",
+  "weights_sha256": "951ed3fc1203e6a62467abb2144a96ce7eafca8fa77e3704fdb8635ff3e7f8a6",
+  "packages": {
+    "mlx": "0.32.4",
+    "mlx-metal": "0.32.4",
+    "mlx-whisper": "0.4.3",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "soundfile": "0.14.0"
+  },
+  "script_sha256": "800339c9f2307cc07e7b2feb01f875fc141a13e717c52fe89471eecfd06e7016",
+  "settings": {
+    "temperature": 0,
+    "condition_on_previous_text": false,
+    "initial_prompt": null,
+    "prefix": null,
+    "word_timestamps": true
+  },
+  "coload": "Other Mac CPU/Metal activity unmeasured; rented TTS/Meta ASR run on separate hosts",
+  "quality_certified": false
+}

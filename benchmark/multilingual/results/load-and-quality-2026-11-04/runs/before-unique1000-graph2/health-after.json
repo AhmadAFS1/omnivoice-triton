@@ -1,0 +1,114 @@
+{
+  "status": "ok",
+  "cuda_fault": null,
+  "model": "/workspace/omnivoice-max-concurency/model",
+  "runner": "hybrid",
+  "device": "cuda",
+  "dtype": "fp16",
+  "sample_rate": 24000,
+  "load_asr": false,
+  "allow_lazy_asr": false,
+  "asr_loaded": false,
+  "save_dir": null,
+  "sage_attention": false,
+  "full_triton_patch": false,
+  "decode_postprocess_workers": 4,
+  "audio_decode_batch_size": 1,
+  "max_cuda_graphs": 2,
+  "batch_collect_ms": 5.0,
+  "max_batch_requests": 8,
+  "batcher_queue": {
+    "pending_requests": 0,
+    "pending_gpu_tasks": 0,
+    "max_pending_requests": 1200,
+    "max_pending_gpu_tasks": 4,
+    "oldest_pending_ms": 0.0
+  },
+  "max_batch_target_tokens": 4096,
+  "max_batch_conditioning_tokens": 4096,
+  "max_batch_padding_ratio": 1.5,
+  "clone_prompt_cache_size": 128,
+  "registered_clone_prompt_store_size": 256,
+  "registered_clone_prompt_count": 9,
+  "token_estimate_cache_size": 4096,
+  "token_estimate_cache_entries": 1113,
+  "batch_bucket_sizes": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32
+  ],
+  "prewarm_clone_batch_sizes": [],
+  "prewarm_clone_sequence_lengths": [],
+  "cuda_graph_capture_count": 2,
+  "cuda_graph_max_graphs": 2,
+  "cuda_graph_shapes": [
+    [
+      4,
+      8,
+      480
+    ],
+    [
+      8,
+      8,
+      510
+    ]
+  ],
+  "cuda_graph_prewarm": {
+    "requested_batch_sizes": [],
+    "requested_sequence_lengths": [],
+    "requested_shapes": [],
+    "warmed_shapes": [],
+    "supported": true,
+    "duration_ms": 0.0
+  },
+  "last_generation_metrics": {
+    "prepare_inference_inputs_ms": 1.4725779765285552,
+    "iterative_generate_ms": 254.21645998721942,
+    "audio_decode_ms": 572.9957460134756,
+    "post_process_audio_ms": 0.3946610086131841,
+    "decode_postprocess_ms": 573.3904070220888,
+    "generate_total_ms": 829.7739909903612
+  },
+  "gpu_metrics": {
+    "available": true,
+    "device": "cuda",
+    "device_index": 0,
+    "device_name": "NVIDIA GeForce RTX 4070 Ti",
+    "sample_interval_ms": 25.0,
+    "memory_total_gb": 11.994140625,
+    "gpu_util_pct": 0.0,
+    "device_vram_used_gb": 5.638671875,
+    "device_vram_util_pct": 47.01188731476958
+  },
+  "last_batch_gpu_metrics": {
+    "sample_count": 29,
+    "gpu_util_avg_pct": 91.17241379310344,
+    "gpu_util_peak_pct": 100.0,
+    "device_vram_used_gb_avg": 5.776468211206897,
+    "device_vram_used_gb_peak": 7.125,
+    "device_vram_util_avg_pct": 48.16075108513163,
+    "device_vram_util_peak_pct": 59.40400586223742,
+    "process_peak_vram_gb": 2.6496596336364746
+  },
+  "worker": {
+    "worker_type": "tts",
+    "worker_id": null,
+    "instance_id": null,
+    "base_url": null,
+    "endpoint_url": null,
+    "public_ip": null,
+    "public_port": null,
+    "internal_port": null,
+    "callback_enabled": false,
+    "status": "healthy",
+    "active_requests": 0,
+    "queue_depth": 0,
+    "capacity": 1,
+    "assignable": true,
+    "draining": false,
+    "cuda_fault": null
+  }
+}

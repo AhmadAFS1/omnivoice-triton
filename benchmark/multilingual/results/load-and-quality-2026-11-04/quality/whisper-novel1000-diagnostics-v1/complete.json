@@ -1,0 +1,10 @@
+{
+  "completed": 184,
+  "required": 184,
+  "logical": 184,
+  "skipped_pairs": 17,
+  "elapsed_s": 76.83929170900956,
+  "peak_allocated_bytes": 2555957138,
+  "quality_certified": false,
+  "interpretation": "Third-family diagnostic; ASR agreement/disagreement is not native listening, MOS, speaker identity, or a population failure rate."
+}

@@ -1,0 +1,10 @@
+{
+  "at": "2026-11-04T15:15:58.232522+00:00",
+  "status": "not_executed",
+  "GPU_executed": false,
+  "reason": "The required staggered TTS+verified local retention could not complete before the root-authorized latest cache start of 2026-11-04T15:12:00Z. Final blind word checks take priority.",
+  "latest_start": "2026-11-04T15:12:00Z",
+  "staggered_started": "2026-11-04T15:11:32.666421Z",
+  "controller_sha256": "3c869190da6f27aaeec2688f1057d4bf70d05cd17306dbf36323467321dfaaca",
+  "config_sha256": "4a9d3d858701dfe16a1b0990046bea000f4b31a284a1a56d4ccc3dfcbe8d1600"
+}

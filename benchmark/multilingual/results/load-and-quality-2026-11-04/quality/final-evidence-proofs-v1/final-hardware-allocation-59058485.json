@@ -1,0 +1,8 @@
+{
+  "at": "2026-11-04T15:28:25.870839+00:00",
+  "OS_visible_RAM_bytes": 135013892096,
+  "cgroup_memory_max": "64806191104",
+  "cgroup_cpu_max": "1728000 100000",
+  "effective_cpuset": "0-71",
+  "instance": 59058485
+}

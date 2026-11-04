@@ -1,0 +1,124 @@
+{
+  "at": "2026-11-04T14:25:38.294125+00:00",
+  "measurement_kind": "CPU-only1000 paired published inputs with two unchanged judge configurations",
+  "baseline": "before-unique1000-graph2",
+  "quality_certified": false,
+  "causality_limits": [
+    "Same104-route1000case texts/API controls/semantic signatures; all9 full-referenceSHA mappings and startupseed match across retained manifests; actual batch RNG consumption still differs",
+    "Oldhybridgraph2+KV-on c79 versusnewtritoneagergraphs0+KVoff ce; not isolated one-change A/B",
+    "Same startupseed but request scheduling/batchgroups/RNG consumption differ; no claim per-request RNG equality",
+    "B1 then B8 sequential no randomized repeats; ASR false positives/negatives and source/script/proxy limits remain"
+  ],
+  "variants": {
+    "before-unique1000-graph2": {
+      "both_exact": 136,
+      "per_judge": {
+        "omniASR_CTC_1B_v2": {
+          "exact": 154,
+          "mean_CER": 0.3189827964485855,
+          "micro_CER": 0.27536275695284157
+        },
+        "omniASR_LLM_Unlimited_1B_v2": {
+          "exact": 275,
+          "mean_CER": 0.20539954584588302,
+          "micro_CER": 0.1520253929866989
+        }
+      }
+    },
+    "triton-eager-novel1000-B1-v1": {
+      "both_exact": 131,
+      "per_judge": {
+        "omniASR_CTC_1B_v2": {
+          "exact": 147,
+          "mean_CER": 0.322815424176864,
+          "micro_CER": 0.2797460701330109
+        },
+        "omniASR_LLM_Unlimited_1B_v2": {
+          "exact": 265,
+          "mean_CER": 0.19656907349489364,
+          "micro_CER": 0.14631197097944376
+        }
+      }
+    },
+    "triton-eager-novel1000-B8-v1": {
+      "both_exact": 120,
+      "per_judge": {
+        "omniASR_CTC_1B_v2": {
+          "exact": 133,
+          "mean_CER": 0.3278038700077702,
+          "micro_CER": 0.28579201934703746
+        },
+        "omniASR_LLM_Unlimited_1B_v2": {
+          "exact": 258,
+          "mean_CER": 0.15855697362733856,
+          "micro_CER": 0.1398428053204353
+        }
+      }
+    }
+  },
+  "comparisons": {
+    "triton-eager-novel1000-B1-v1": {
+      "matched_effective_text_reference_control_signatures": 1000,
+      "body_equal": 0,
+      "lost_both_exact": 57,
+      "gained_both_exact": 52,
+      "both_CER_worse": 225,
+      "both_CER_better": 195
+    },
+    "triton-eager-novel1000-B8-v1": {
+      "matched_effective_text_reference_control_signatures": 1000,
+      "body_equal": 5,
+      "lost_both_exact": 59,
+      "gained_both_exact": 43,
+      "both_CER_worse": 239,
+      "both_CER_better": 191
+    }
+  },
+  "reference_SHA_and_seed_proof": {
+    "before-unique1000-graph2": {
+      "reference_manifest_sha256": "a6f3af3610ef5f9b4d64dfcedfd66f454f7af8c6448d50e856e88c2456123dc6",
+      "references": {
+        "ar-aoede": "dfb87da4364e14ed0e2117944eeaf6a425975670cbd6df874c9c5aec25e5c933",
+        "da-aoede": "901703970b23d3e204d7a523eb90da6325ecd09a609f5ccd17a303765813cf83",
+        "de-aoede": "8c79b7fec00d0072ea12343d39aa13b3ca315dbb5e62155afcbd048ebc8640e8",
+        "el-aoede": "42f0dbdb2bce862c5d0b5bd0d131776b6ea53167d9961e8aea3db2b9fbde2838",
+        "en-aoede": "d0adc9563e1c71781c87d163b80e9fa27859529ba9b5c7bf28a88ee6ae641e66",
+        "es-aoede": "4206e6da660b66548d8a185ca36f86f58830edf2e1e143f0b718180b68d0ce36",
+        "fi-aoede": "bf34be8df7c7626599ea98086af75b960543d6c2361896aa0ca48acf26dacb6b",
+        "fr-aoede": "b8810d1e5a27a325308e1b35a986d89a6db5608d1a47bc12dc5d89321a8d76c1",
+        "ur-aoede": "98ad50f96dff772683449bb6a5028b612696146e247924c1a4dbb0a1b4d9005a"
+      },
+      "startup_seed": 20261103
+    },
+    "triton-eager-novel1000-B1-v1": {
+      "reference_manifest_sha256": "a6f3af3610ef5f9b4d64dfcedfd66f454f7af8c6448d50e856e88c2456123dc6",
+      "references": {
+        "ar-aoede": "dfb87da4364e14ed0e2117944eeaf6a425975670cbd6df874c9c5aec25e5c933",
+        "da-aoede": "901703970b23d3e204d7a523eb90da6325ecd09a609f5ccd17a303765813cf83",
+        "de-aoede": "8c79b7fec00d0072ea12343d39aa13b3ca315dbb5e62155afcbd048ebc8640e8",
+        "el-aoede": "42f0dbdb2bce862c5d0b5bd0d131776b6ea53167d9961e8aea3db2b9fbde2838",
+        "en-aoede": "d0adc9563e1c71781c87d163b80e9fa27859529ba9b5c7bf28a88ee6ae641e66",
+        "es-aoede": "4206e6da660b66548d8a185ca36f86f58830edf2e1e143f0b718180b68d0ce36",
+        "fi-aoede": "bf34be8df7c7626599ea98086af75b960543d6c2361896aa0ca48acf26dacb6b",
+        "fr-aoede": "b8810d1e5a27a325308e1b35a986d89a6db5608d1a47bc12dc5d89321a8d76c1",
+        "ur-aoede": "98ad50f96dff772683449bb6a5028b612696146e247924c1a4dbb0a1b4d9005a"
+      },
+      "startup_seed": 20261103
+    },
+    "triton-eager-novel1000-B8-v1": {
+      "reference_manifest_sha256": "a6f3af3610ef5f9b4d64dfcedfd66f454f7af8c6448d50e856e88c2456123dc6",
+      "references": {
+        "ar-aoede": "dfb87da4364e14ed0e2117944eeaf6a425975670cbd6df874c9c5aec25e5c933",
+        "da-aoede": "901703970b23d3e204d7a523eb90da6325ecd09a609f5ccd17a303765813cf83",
+        "de-aoede": "8c79b7fec00d0072ea12343d39aa13b3ca315dbb5e62155afcbd048ebc8640e8",
+        "el-aoede": "42f0dbdb2bce862c5d0b5bd0d131776b6ea53167d9961e8aea3db2b9fbde2838",
+        "en-aoede": "d0adc9563e1c71781c87d163b80e9fa27859529ba9b5c7bf28a88ee6ae641e66",
+        "es-aoede": "4206e6da660b66548d8a185ca36f86f58830edf2e1e143f0b718180b68d0ce36",
+        "fi-aoede": "bf34be8df7c7626599ea98086af75b960543d6c2361896aa0ca48acf26dacb6b",
+        "fr-aoede": "b8810d1e5a27a325308e1b35a986d89a6db5608d1a47bc12dc5d89321a8d76c1",
+        "ur-aoede": "98ad50f96dff772683449bb6a5028b612696146e247924c1a4dbb0a1b4d9005a"
+      },
+      "startup_seed": 20261103
+    }
+  }
+}

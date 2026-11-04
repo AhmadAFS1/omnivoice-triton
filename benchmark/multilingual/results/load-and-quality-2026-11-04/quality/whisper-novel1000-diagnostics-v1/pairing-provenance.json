@@ -1,0 +1,7 @@
+{
+  "inputs": {
+    "quality/whisper-novel1000-diagnostics-v1/scored-logical.json": "25ffce070b5b8d80db81b138ef15b6d820633e19fb7982e68e166bb62e012635",
+    "quality/whisper-novel1000-selection-v1/pairs109.json": "4c3e736a73ec07b93ea74b42c283e8e234052a3ac6dff5d2a909084984a31a67"
+  },
+  "join": "exactcase/variant/side plus expectedUnicode text; allASRsource WAVSHA validated beforetranscription"
+}

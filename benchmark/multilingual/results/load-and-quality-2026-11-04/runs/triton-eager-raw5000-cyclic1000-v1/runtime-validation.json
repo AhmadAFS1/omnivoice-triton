@@ -1,0 +1,30 @@
+{
+  "actual_health_checked": {
+    "runner": "triton",
+    "device": "cuda",
+    "dtype": "fp16",
+    "batch_collect_ms": 0.0,
+    "max_batch_requests": 1,
+    "max_batch_target_tokens": 4096,
+    "max_batch_conditioning_tokens": 4096,
+    "max_cuda_graphs": 0,
+    "audio_decode_batch_size": 1,
+    "max_cuda_graph_row_tokens": 0,
+    "disable_unused_kv_cache": true,
+    "llm_use_cache": false,
+    "split_cfg": false,
+    "sage_attention": false,
+    "full_triton_patch": false,
+    "response_cache.enabled": false,
+    "response_cache.max_bytes": 0,
+    "response_cache.ttl_s": 600.0
+  },
+  "startup_seed_evidence": {
+    "requested_seed": 20261103,
+    "torch_initial_seed": 20261103,
+    "cuda_initial_seed": 20261103,
+    "applied_before_module_import": true,
+    "torch_version": "2.8.0+cu128",
+    "note": "Startup seed only; does not enforce deterministic kernels or concurrent scheduling."
+  }
+}

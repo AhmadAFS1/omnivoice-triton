@@ -1,0 +1,47 @@
+{
+  "at": "2026-11-04T15:24:57.939119+00:00",
+  "canonical_inputs": 15058,
+  "manifest_SHA256": "21f4f1acdc63f67c53000ad0258128a0f4a832d0d96aa6481a6db618442828f1",
+  "judges": {
+    "omniASR_CTC_1B_v2": {
+      "protocol_id": "legacy-batch1",
+      "unique_verified_transcripts": 15058,
+      "exact_ID_and_SHA_set": true,
+      "missing_IDs": [],
+      "duplicate_publications_consistent": true,
+      "published_jsonls": [
+        "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/global4534-retained/primary/asr-results/primary-global4534-CTC-v1/published/000-omniASR_CTC_1B_v2/omniASR_CTC_1B_v2.jsonl",
+        "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/global4534-retained/primary/asr-results/primary-global4534-CTC-v1/published/import-07bb295431ce43ba66d8-omniASR_CTC_1B_v2/omniASR_CTC_1B_v2.jsonl",
+        "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/global4534-retained/primary/asr-results/primary-global4534-CTC-v1/published/import-0d5f76aaf489962a79a7-omniASR_CTC_1B_v2/omniASR_CTC_1B_v2.jsonl",
+        "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/global4534-retained/primary/asr-results/primary-global4534-CTC-v1/published/import-126e96fd68d139d78622-omniASR_CTC_1B_v2/omniASR_CTC_1B_v2.jsonl",
+        "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/global4534-retained/primary/asr-results/primary-global4534-CTC-v1/published/import-299d7d412aac8eb1d6c0-omniASR_CTC_1B_v2/omniASR_CTC_1B_v2.jsonl",
+        "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/global4534-retained/primary/asr-results/primary-global4534-CTC-v1/published/import-9fc76731bcfedd38269b-omniASR_CTC_1B_v2/omniASR_CTC_1B_v2.jsonl",
+        "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/new2871-retained/primary/asr-results/primary-new2871-CTC-v1/published/000-omniASR_CTC_1B_v2/omniASR_CTC_1B_v2.jsonl",
+        "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/new2127-retained/primary/asr-results/primary-new2127-CTC-v1/published/000-omniASR_CTC_1B_v2/omniASR_CTC_1B_v2.jsonl",
+        "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/new5014-retained/primary/asr-results/primary-new5014-CTC-v1/published/000-omniASR_CTC_1B_v2/omniASR_CTC_1B_v2.jsonl",
+        "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/final-retained/primary/asr-results/primary-final-new-CTC-v1/published/000-omniASR_CTC_1B_v2/omniASR_CTC_1B_v2.jsonl"
+      ]
+    },
+    "omniASR_LLM_Unlimited_1B_v2": {
+      "protocol_id": "modern59071593-batch1-v1-7f8784ef9d826da07f57",
+      "unique_verified_transcripts": 15058,
+      "exact_ID_and_SHA_set": true,
+      "missing_IDs": [],
+      "duplicate_publications_consistent": true,
+      "published_jsonls": [
+        "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/global4534-retained/modern/asr-results/modern-global4534-LLM-v1/published/000-omniASR_LLM_Unlimited_1B_v2/omniASR_LLM_Unlimited_1B_v2.jsonl",
+        "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/global4534-retained/modern/asr-results/modern-global4534-LLM-v1/published/import-0fc22ff44bafee7c54f4-omniASR_LLM_Unlimited_1B_v2/omniASR_LLM_Unlimited_1B_v2.jsonl",
+        "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/global4534-retained/modern/asr-results/modern-global4534-LLM-v1/published/import-4137ed9056667aa55d4a-omniASR_LLM_Unlimited_1B_v2/omniASR_LLM_Unlimited_1B_v2.jsonl",
+        "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/global4534-retained/modern/asr-results/modern-global4534-LLM-v1/published/import-52b6890097a3e0915747-omniASR_LLM_Unlimited_1B_v2/omniASR_LLM_Unlimited_1B_v2.jsonl",
+        "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/global4534-retained/modern/asr-results/modern-global4534-LLM-v1/published/import-621656422630f940095e-omniASR_LLM_Unlimited_1B_v2/omniASR_LLM_Unlimited_1B_v2.jsonl",
+        "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/global4534-retained/modern/asr-results/modern-global4534-LLM-v1/published/import-95c081abda28e0f854b0-omniASR_LLM_Unlimited_1B_v2/omniASR_LLM_Unlimited_1B_v2.jsonl",
+        "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/new2871-retained/modern/asr-results/modern-new2871-LLM-v1/published/000-omniASR_LLM_Unlimited_1B_v2/omniASR_LLM_Unlimited_1B_v2.jsonl",
+        "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/new2127-retained/modern/asr-results/modern-new2127-LLM-v1/published/000-omniASR_LLM_Unlimited_1B_v2/omniASR_LLM_Unlimited_1B_v2.jsonl",
+        "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/new5014-retained/modern/asr-results/modern-new5014-LLM-v1/published/000-omniASR_LLM_Unlimited_1B_v2/omniASR_LLM_Unlimited_1B_v2.jsonl",
+        "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/final-retained/modern/asr-results/modern-final-new-LLM-v1/published/000-omniASR_LLM_Unlimited_1B_v2/omniASR_LLM_Unlimited_1B_v2.jsonl"
+      ]
+    }
+  },
+  "two_judge_complete": true,
+  "quality_certified": false
+}

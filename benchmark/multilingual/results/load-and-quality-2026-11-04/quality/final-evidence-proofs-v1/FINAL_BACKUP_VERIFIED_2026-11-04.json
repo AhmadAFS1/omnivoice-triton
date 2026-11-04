@@ -1,0 +1,55 @@
+{
+  "at": "2026-11-04T15:27:03.203077+00:00",
+  "root_verified_backup_complete": true,
+  "all_inference_finished_and_GPU_idle": true,
+  "two_task_instances": [
+    59058485,
+    59071593
+  ],
+  "authorized_task_only_key_cleanup": true,
+  "authorized_two_task_rental_teardown": true,
+  "metadata_receipts": [
+    {
+      "instance": 59058485,
+      "receipt": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/final-metadata-backup/59058485-receipt.json",
+      "sha256": "f67eeb96550333ce0dd890765b8627c76adeffbb85e5e13e4ce223884783a234",
+      "files": 1645,
+      "bytes": 481690121
+    },
+    {
+      "instance": 59071593,
+      "receipt": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/final-metadata-backup/59071593-receipt.json",
+      "sha256": "35dbe4660e31b52b57ecc774faecc7ab032516bc0a8b376374bb44cc6b7071fe",
+      "files": 3464,
+      "bytes": 885722246
+    }
+  ],
+  "critical_audits_and_archives": [
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/asr/FINAL15058_TWO_JUDGE_COMPLETE.json",
+      "sha256": "9cda0d1eb3e35c0eebe3ad2bf52021e75f1d3259e1b7356061cd687d9a6c20bd"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/raw_burst_v1-plan/retained-audit-v1/summary.json",
+      "sha256": "860354a411ba584214d5ad0299d8c52be21e3fa2bc46c77655fdae44a9af3f9d"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/load/raw_burst_staggered_plan_v1/retained-audit-v1/summary.json",
+      "sha256": "d60af0793c39c9b49f06aad1ca652d6375344dcbe7d5184c6d3374efc7bde55c"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/prototypes/fused-rope-root-independent-approval-proof-v1.json",
+      "sha256": "aa3ea15de796b826d66d2693f42699d2be4a7b8cf9ec53917eaf70e157ace059"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/prototypes/shared-pool-final-partial-retained-v1.tar.gz",
+      "sha256": "859184afb1181d36a2e02081d9222177c9805dce1d24c10e970fb79824570182"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/prototypes/fused-rope-modern264-strict-ASR-reuse-v1.json",
+      "sha256": "eb6c27581b391ed1d093d9bd6b5ad02803529d046971a71a74127eb685365a7d"
+    }
+  ],
+  "generated_audio": "All full raw5000, priorcore, matchedRoPE/reference and finalstaggered WAVs independentlyretained locally; ownersSHA/SoundFileaudits complete. Private/taskkeys anddownloadablemodelweights excluded frombackups.",
+  "quality_scope": "ASR coveragecomplete; no universalnative/MOS/wordqualitycertification or1000freshrequests/2sclaim."
+}

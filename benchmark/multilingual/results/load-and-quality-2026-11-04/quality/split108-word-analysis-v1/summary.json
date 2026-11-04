@@ -1,0 +1,175 @@
+{
+  "at": "2026-11-04T15:08:59.371521+00:00",
+  "scope": "Retained model probe108outputs/28uniqueWAV+script; not HTTP availability/capacity",
+  "quality_certified": false,
+  "rows": 108,
+  "unique_SHA_script": 28,
+  "all": {
+    "observations": 108,
+    "both_exact": 96,
+    "both_zero_CER": 96,
+    "per_judge": {
+      "omniASR_CTC_1B_v2": {
+        "exact": 96,
+        "mean_CER": 0.004273504273504274,
+        "micro_CER": 0.004273504273504274
+      },
+      "omniASR_LLM_Unlimited_1B_v2": {
+        "exact": 96,
+        "mean_CER": 0.004273504273504274,
+        "micro_CER": 0.004273504273504274
+      }
+    }
+  },
+  "groups": {
+    "concat-false--B1": {
+      "observations": 3,
+      "both_exact": 3,
+      "both_zero_CER": 3,
+      "per_judge": {
+        "omniASR_CTC_1B_v2": {
+          "exact": 3,
+          "mean_CER": 0.0,
+          "micro_CER": 0.0
+        },
+        "omniASR_LLM_Unlimited_1B_v2": {
+          "exact": 3,
+          "mean_CER": 0.0,
+          "micro_CER": 0.0
+        }
+      }
+    },
+    "concat-false--B8": {
+      "observations": 24,
+      "both_exact": 21,
+      "both_zero_CER": 21,
+      "per_judge": {
+        "omniASR_CTC_1B_v2": {
+          "exact": 21,
+          "mean_CER": 0.004807692307692308,
+          "micro_CER": 0.004807692307692308
+        },
+        "omniASR_LLM_Unlimited_1B_v2": {
+          "exact": 21,
+          "mean_CER": 0.004807692307692308,
+          "micro_CER": 0.004807692307692308
+        }
+      }
+    },
+    "concat-true--B1": {
+      "observations": 3,
+      "both_exact": 3,
+      "both_zero_CER": 3,
+      "per_judge": {
+        "omniASR_CTC_1B_v2": {
+          "exact": 3,
+          "mean_CER": 0.0,
+          "micro_CER": 0.0
+        },
+        "omniASR_LLM_Unlimited_1B_v2": {
+          "exact": 3,
+          "mean_CER": 0.0,
+          "micro_CER": 0.0
+        }
+      }
+    },
+    "concat-true--B8": {
+      "observations": 24,
+      "both_exact": 21,
+      "both_zero_CER": 21,
+      "per_judge": {
+        "omniASR_CTC_1B_v2": {
+          "exact": 21,
+          "mean_CER": 0.004807692307692308,
+          "micro_CER": 0.004807692307692308
+        },
+        "omniASR_LLM_Unlimited_1B_v2": {
+          "exact": 21,
+          "mean_CER": 0.004807692307692308,
+          "micro_CER": 0.004807692307692308
+        }
+      }
+    },
+    "split-false--B1": {
+      "observations": 3,
+      "both_exact": 3,
+      "both_zero_CER": 3,
+      "per_judge": {
+        "omniASR_CTC_1B_v2": {
+          "exact": 3,
+          "mean_CER": 0.0,
+          "micro_CER": 0.0
+        },
+        "omniASR_LLM_Unlimited_1B_v2": {
+          "exact": 3,
+          "mean_CER": 0.0,
+          "micro_CER": 0.0
+        }
+      }
+    },
+    "split-false--B8": {
+      "observations": 24,
+      "both_exact": 21,
+      "both_zero_CER": 21,
+      "per_judge": {
+        "omniASR_CTC_1B_v2": {
+          "exact": 21,
+          "mean_CER": 0.004807692307692308,
+          "micro_CER": 0.004807692307692308
+        },
+        "omniASR_LLM_Unlimited_1B_v2": {
+          "exact": 21,
+          "mean_CER": 0.004807692307692308,
+          "micro_CER": 0.004807692307692308
+        }
+      }
+    },
+    "split-true--B1": {
+      "observations": 3,
+      "both_exact": 3,
+      "both_zero_CER": 3,
+      "per_judge": {
+        "omniASR_CTC_1B_v2": {
+          "exact": 3,
+          "mean_CER": 0.0,
+          "micro_CER": 0.0
+        },
+        "omniASR_LLM_Unlimited_1B_v2": {
+          "exact": 3,
+          "mean_CER": 0.0,
+          "micro_CER": 0.0
+        }
+      }
+    },
+    "split-true--B8": {
+      "observations": 24,
+      "both_exact": 21,
+      "both_zero_CER": 21,
+      "per_judge": {
+        "omniASR_CTC_1B_v2": {
+          "exact": 21,
+          "mean_CER": 0.004807692307692308,
+          "micro_CER": 0.004807692307692308
+        },
+        "omniASR_LLM_Unlimited_1B_v2": {
+          "exact": 21,
+          "mean_CER": 0.004807692307692308,
+          "micro_CER": 0.004807692307692308
+        }
+      }
+    }
+  },
+  "judge_protocols": {
+    "omniASR_CTC_1B_v2": [
+      "legacy-batch1"
+    ],
+    "omniASR_LLM_Unlimited_1B_v2": [
+      "modern59071593-batch1-v1-7f8784ef9d826da07f57"
+    ]
+  },
+  "caveats": [
+    "Original float/token/PCM parity failures are preserved regardless of ASR outcome",
+    "Only ENB1/B8 here; not a multilingual general-quality certification",
+    "Warmup/timed outputs share repeated fixed-seed fixtures; logical counts not independent audio sample counts"
+  ]
+}

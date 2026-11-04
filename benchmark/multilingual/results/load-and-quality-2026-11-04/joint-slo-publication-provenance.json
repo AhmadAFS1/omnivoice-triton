@@ -1,0 +1,37 @@
+{
+  "at": "2026-11-04T15:44:13.485342+00:00",
+  "kind": "Append-only CPU jointanalysis; original247publicationentries unchanged",
+  "original_publication_manifest_sha256": "3d9afdcb6fd20bbadbee042d7f7354b9cd1e3c80598509fa6e9a5a8ba3b5c0e9",
+  "files": [
+    {
+      "source": "quality/final-staggered-joint-slo-v1/README.md",
+      "published": "quality/final-staggered-joint-slo-v1/README.md",
+      "source_sha256": "e5d0fbf9f6590229af3c3a30d516bf329fdf725aaf35fa3adf1c69509909b308",
+      "saved_sha256": "e5d0fbf9f6590229af3c3a30d516bf329fdf725aaf35fa3adf1c69509909b308"
+    },
+    {
+      "source": "quality/final-staggered-joint-slo-v1/joined18340.jsonl",
+      "published": "quality/final-staggered-joint-slo-v1/joined18340.jsonl.gz",
+      "source_sha256": "9f390ac17eed830d1b6f0dd3a2436e2073b98cf8dce9fb5e1cd0a59c37984c0e",
+      "saved_sha256": "bd14b2871271b324698e653eba5522f44f4f8eed0bbd839237a3e9dea1a54f61"
+    },
+    {
+      "source": "quality/final-staggered-joint-slo-v1/provenance.json",
+      "published": "quality/final-staggered-joint-slo-v1/provenance.json",
+      "source_sha256": "a381a6d03f2e534f3c92c5c378491090d0f25b96f2a6cb6ed64a0f955b67591f",
+      "saved_sha256": "a381a6d03f2e534f3c92c5c378491090d0f25b96f2a6cb6ed64a0f955b67591f"
+    },
+    {
+      "source": "quality/final-staggered-joint-slo-v1/summary.json",
+      "published": "quality/final-staggered-joint-slo-v1/summary.json",
+      "source_sha256": "e8aaa6114d794aed7df7977c7929a0f78f75bcc7efe7c81a7f7c6dbb8f698e34",
+      "saved_sha256": "e8aaa6114d794aed7df7977c7929a0f78f75bcc7efe7c81a7f7c6dbb8f698e34"
+    },
+    {
+      "source": "quality/final_staggered_joint_slo.py",
+      "published": "source/final_staggered_joint_slo.py",
+      "source_sha256": "864b695d15a8516e599b9f8c5ed51eb9d0ec2cdd6dc24e379f9efb646d19dff7",
+      "saved_sha256": "864b695d15a8516e599b9f8c5ed51eb9d0ec2cdd6dc24e379f9efb646d19dff7"
+    }
+  ]
+}

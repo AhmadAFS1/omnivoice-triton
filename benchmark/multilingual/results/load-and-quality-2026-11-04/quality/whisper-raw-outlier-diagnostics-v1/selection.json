@@ -1,0 +1,237 @@
+{
+  "kind": "Purposive preselected diagnostic cases, not a random failure-rate sample",
+  "source_sha256": "88ed418b2e51c8682bd29c317e1b8b5425cbb60664851ed15c15a4cefb12f9ee",
+  "logical": [
+    {
+      "case": "triton-eager-raw5000-cyclic1000-v1::raw5000-cyclic-original1000-04358",
+      "variant": "raw-repeat-outlier",
+      "side": "before",
+      "input_id": "audio-8c4ed506a4bba98bedaf090d9284d19e768a94c46368ec4052022f69c2d0c4b0",
+      "language": "zh",
+      "voice": "Aoede",
+      "expected": "宣布的死因是肝内胆管癌。",
+      "sha256": "7a696241f8fa2b4b422c9408e80a3322a2ac312d6a51ebdf993c845574839602",
+      "Meta_evidence": {
+        "note": "PriorB1 baseline; completeMetaevidence remains9532report"
+      },
+      "note": null
+    },
+    {
+      "case": "triton-eager-raw5000-cyclic1000-v1::raw5000-cyclic-original1000-04358",
+      "variant": "raw-repeat-outlier",
+      "side": "after",
+      "input_id": "audio-9d6b6d626088002f3ea72102823a65d48960376168634ec6a53bec49525b7be8",
+      "language": "zh",
+      "voice": "Aoede",
+      "expected": "宣布的死因是肝内胆管癌。",
+      "sha256": "e1e23be8063e12e110b812ca982a21359c4a3d3536c0f1d31f71f39bd2ccd690",
+      "Meta_evidence": {
+        "CER": {
+          "omniASR_LLM_Unlimited_1B_v2": 27.0,
+          "omniASR_CTC_1B_v2": 2.6363636363636362
+        },
+        "transcripts": {
+          "omniASR_LLM_Unlimited_1B_v2": "小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小 小 б übürü n bör n bürü dang big big science würüübür n big science jo bije",
+          "omniASR_CTC_1B_v2": "sembude sysien ser gane dangwan ai"
+        },
+        "note": "ASR mismatch diagnostic; no claim whichjudge/TTSiswrong"
+      },
+      "note": null
+    },
+    {
+      "case": "triton-eager-raw5000-cyclic1000-v1::raw5000-cyclic-original1000-00358",
+      "variant": "raw-repeat-outlier",
+      "side": "before",
+      "input_id": "audio-8c4ed506a4bba98bedaf090d9284d19e768a94c46368ec4052022f69c2d0c4b0",
+      "language": "zh",
+      "voice": "Aoede",
+      "expected": "宣布的死因是肝内胆管癌。",
+      "sha256": "7a696241f8fa2b4b422c9408e80a3322a2ac312d6a51ebdf993c845574839602",
+      "Meta_evidence": {
+        "note": "PriorB1 baseline; completeMetaevidence remains9532report"
+      },
+      "note": null
+    },
+    {
+      "case": "triton-eager-raw5000-cyclic1000-v1::raw5000-cyclic-original1000-00358",
+      "variant": "raw-repeat-outlier",
+      "side": "after",
+      "input_id": "audio-60e4f35783b43c981c7769e9b4e06222bd6a2b355162294a922933964d61fa9a",
+      "language": "zh",
+      "voice": "Aoede",
+      "expected": "宣布的死因是肝内胆管癌。",
+      "sha256": "66cd1b8951bfabaf257d10761673dec0df4d58bd34fe70df51a2158f28143428",
+      "Meta_evidence": {
+        "CER": {
+          "omniASR_LLM_Unlimited_1B_v2": 25.181818181818183,
+          "omniASR_CTC_1B_v2": 0.18181818181818182
+        },
+        "transcripts": {
+          "omniASR_LLM_Unlimited_1B_v2": "14444444444444444444444444444478 1754 1773 xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo x",
+          "omniASR_CTC_1B_v2": "宣布的死音是干内胆管癌"
+        },
+        "note": "ASR mismatch diagnostic; no claim whichjudge/TTSiswrong"
+      },
+      "note": null
+    },
+    {
+      "case": "triton-eager-raw5000-cyclic1000-v1::raw5000-cyclic-original1000-00396",
+      "variant": "raw-repeat-outlier",
+      "side": "before",
+      "input_id": "audio-9582db1a5755fce44618441c660335d313c454e8171aaf1a7811d6fac57b24be",
+      "language": "yue",
+      "voice": "Aoede",
+      "expected": "魚經常死於水中高濃度的毒素。",
+      "sha256": "dcbcedbf377dae39638ba7b268de5360d1892bb25a57ed70ab93f9dee5f8b14a",
+      "Meta_evidence": {
+        "note": "PriorB1 baseline; completeMetaevidence remains9532report"
+      },
+      "note": null
+    },
+    {
+      "case": "triton-eager-raw5000-cyclic1000-v1::raw5000-cyclic-original1000-00396",
+      "variant": "raw-repeat-outlier",
+      "side": "after",
+      "input_id": "audio-e410b36beba0d12c95e065e85deff2c3ed07f3630cbdf1acfa202a7ed8dd357d",
+      "language": "yue",
+      "voice": "Aoede",
+      "expected": "魚經常死於水中高濃度的毒素。",
+      "sha256": "0d705296bd3cb766284304da9b152567f505c39eea1c05d630293f7d02ee3615",
+      "Meta_evidence": {
+        "CER": {
+          "omniASR_LLM_Unlimited_1B_v2": 18.076923076923077,
+          "omniASR_CTC_1B_v2": 2.5384615384615383
+        },
+        "transcripts": {
+          "omniASR_LLM_Unlimited_1B_v2": "ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ð",
+          "omniASR_CTC_1B_v2": "kengsrang cu søjong gonong dothe dokso"
+        },
+        "note": "ASR mismatch diagnostic; no claim whichjudge/TTSiswrong"
+      },
+      "note": null
+    },
+    {
+      "case": "triton-eager-raw5000-cyclic1000-v1::raw5000-cyclic-original1000-04396",
+      "variant": "raw-repeat-outlier",
+      "side": "before",
+      "input_id": "audio-9582db1a5755fce44618441c660335d313c454e8171aaf1a7811d6fac57b24be",
+      "language": "yue",
+      "voice": "Aoede",
+      "expected": "魚經常死於水中高濃度的毒素。",
+      "sha256": "dcbcedbf377dae39638ba7b268de5360d1892bb25a57ed70ab93f9dee5f8b14a",
+      "Meta_evidence": {
+        "note": "PriorB1 baseline; completeMetaevidence remains9532report"
+      },
+      "note": null
+    },
+    {
+      "case": "triton-eager-raw5000-cyclic1000-v1::raw5000-cyclic-original1000-04396",
+      "variant": "raw-repeat-outlier",
+      "side": "after",
+      "input_id": "audio-61857bcd104ca68c0bf3ced2e2c0013f05e493dc0fdb429f366e5922de3aa7ce",
+      "language": "yue",
+      "voice": "Aoede",
+      "expected": "魚經常死於水中高濃度的毒素。",
+      "sha256": "237502bc359bbb531179a7ae8fa5aa000bfb06a93779d7718ff765936fbed527",
+      "Meta_evidence": {
+        "CER": {
+          "omniASR_LLM_Unlimited_1B_v2": 4.615384615384615,
+          "omniASR_CTC_1B_v2": 2.4615384615384617
+        },
+        "transcripts": {
+          "omniASR_LLM_Unlimited_1B_v2": "ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù",
+          "omniASR_CTC_1B_v2": "kengsan seyu soijon gonondo dhe doksu"
+        },
+        "note": "ASR mismatch diagnostic; no claim whichjudge/TTSiswrong"
+      },
+      "note": null
+    },
+    {
+      "case": "triton-eager-raw5000-cyclic1000-v1::raw5000-cyclic-original1000-04398",
+      "variant": "raw-repeat-outlier",
+      "side": "before",
+      "input_id": "audio-692baa84b89c833786932c233c96087b49598546220bdf4d9f1f353a2fefbbe4",
+      "language": "yue",
+      "voice": "Aoede",
+      "expected": "並非所有人都支持納入女性排名。",
+      "sha256": "f5647bdea392a76187ec140f4d6ee9faee208fc68de9a713599db4409ba0eac4",
+      "Meta_evidence": {
+        "note": "PriorB1 baseline; completeMetaevidence remains9532report"
+      },
+      "note": null
+    },
+    {
+      "case": "triton-eager-raw5000-cyclic1000-v1::raw5000-cyclic-original1000-04398",
+      "variant": "raw-repeat-outlier",
+      "side": "after",
+      "input_id": "audio-de14813b0bdcdb79b94092ea2f1e9c201a096f5e3d1f2d5d741e3ff1c47014f5",
+      "language": "yue",
+      "voice": "Aoede",
+      "expected": "並非所有人都支持納入女性排名。",
+      "sha256": "5fd6b81e4809d2faf18f988d2e731a335b55fa75ff250bf02683906f0105bfdd",
+      "Meta_evidence": {
+        "CER": {
+          "omniASR_LLM_Unlimited_1B_v2": 3.4285714285714284,
+          "omniASR_CTC_1B_v2": 2.7857142857142856
+        },
+        "transcripts": {
+          "omniASR_LLM_Unlimited_1B_v2": "並 ብèè ping faceboy all want datsi tranat yaps nusing piming",
+          "omniASR_CTC_1B_v2": "bingfe soyo ren de secher nat yes nusing piming"
+        },
+        "note": "ASR mismatch diagnostic; no claim whichjudge/TTSiswrong"
+      },
+      "note": null
+    }
+  ],
+  "unique_inputs": [
+    {
+      "id": "audio-8c4ed506a4bba98bedaf090d9284d19e768a94c46368ec4052022f69c2d0c4b0",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/triton-eager-novel1000-B1-v1/audio/burst1000-unique-published-00358.wav",
+      "sha256": "7a696241f8fa2b4b422c9408e80a3322a2ac312d6a51ebdf993c845574839602",
+      "language_hint": "zh"
+    },
+    {
+      "id": "audio-9d6b6d626088002f3ea72102823a65d48960376168634ec6a53bec49525b7be8",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/audio/raw5000-cyclic-original1000-04358.wav",
+      "sha256": "e1e23be8063e12e110b812ca982a21359c4a3d3536c0f1d31f71f39bd2ccd690",
+      "language_hint": "zh"
+    },
+    {
+      "id": "audio-60e4f35783b43c981c7769e9b4e06222bd6a2b355162294a922933964d61fa9a",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/audio/raw5000-cyclic-original1000-00358.wav",
+      "sha256": "66cd1b8951bfabaf257d10761673dec0df4d58bd34fe70df51a2158f28143428",
+      "language_hint": "zh"
+    },
+    {
+      "id": "audio-9582db1a5755fce44618441c660335d313c454e8171aaf1a7811d6fac57b24be",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/triton-eager-novel1000-B1-v1/audio/burst1000-unique-published-00396.wav",
+      "sha256": "dcbcedbf377dae39638ba7b268de5360d1892bb25a57ed70ab93f9dee5f8b14a",
+      "language_hint": "yue"
+    },
+    {
+      "id": "audio-e410b36beba0d12c95e065e85deff2c3ed07f3630cbdf1acfa202a7ed8dd357d",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/audio/raw5000-cyclic-original1000-00396.wav",
+      "sha256": "0d705296bd3cb766284304da9b152567f505c39eea1c05d630293f7d02ee3615",
+      "language_hint": "yue"
+    },
+    {
+      "id": "audio-61857bcd104ca68c0bf3ced2e2c0013f05e493dc0fdb429f366e5922de3aa7ce",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/audio/raw5000-cyclic-original1000-04396.wav",
+      "sha256": "237502bc359bbb531179a7ae8fa5aa000bfb06a93779d7718ff765936fbed527",
+      "language_hint": "yue"
+    },
+    {
+      "id": "audio-692baa84b89c833786932c233c96087b49598546220bdf4d9f1f353a2fefbbe4",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/triton-eager-novel1000-B1-v1/audio/burst1000-unique-published-00398.wav",
+      "sha256": "f5647bdea392a76187ec140f4d6ee9faee208fc68de9a713599db4409ba0eac4",
+      "language_hint": "yue"
+    },
+    {
+      "id": "audio-de14813b0bdcdb79b94092ea2f1e9c201a096f5e3d1f2d5d741e3ff1c47014f5",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/audio/raw5000-cyclic-original1000-04398.wav",
+      "sha256": "5fd6b81e4809d2faf18f988d2e731a335b55fa75ff250bf02683906f0105bfdd",
+      "language_hint": "yue"
+    }
+  ],
+  "skipped": []
+}

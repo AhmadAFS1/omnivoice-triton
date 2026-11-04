@@ -1,0 +1,17 @@
+{
+  "at": "2026-11-04T15:19:10.280006+00:00",
+  "full_archive_sha256": "22f0801363a898bec9c1b18f0836b5d5fbfb20f7c5077ac1d07b79e8ed0ebe75",
+  "full_archive_bytes": 82565057,
+  "local_run": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/triton-eager-staggered-overload-calls-v1",
+  "files": {
+    "summary.json": "d60af0793c39c9b49f06aad1ca652d6375344dcbe7d5184c6d3374efc7bde55c",
+    "verified-audio.jsonl": "b927a15258167fb5b8715b1fa027011cded778bcc2efd5e729b8586463f09f6d",
+    "report.md": "791bdd148c404204670e171f714f7b5e171f9a38bc5984f09aa3635fa17c95e5"
+  },
+  "controller_sha256": "c7df85711d426178c8bab01e6276e0668dab75f7747462b3ebd88ef7b039ab06",
+  "audit_helper_sha256": "b35882feb2a915fea2b44ebd44718fd1e93747b436b0ef904d6ec793109ae77f",
+  "full_outcomes": 18340,
+  "WAVs": 533,
+  "all_original_paths_retained": true,
+  "GPU_inference": "Remote RTX4070Ti only; this report CPU-only independent retention audit"
+}

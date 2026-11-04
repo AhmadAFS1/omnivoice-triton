@@ -1,0 +1,8 @@
+{
+  "requested_seed": 20261103,
+  "torch_initial_seed": 20261103,
+  "cuda_initial_seed": 20261103,
+  "applied_before_module_import": true,
+  "torch_version": "2.8.0+cu128",
+  "note": "Startup seed only; does not enforce deterministic kernels or concurrent scheduling."
+}

@@ -1,0 +1,286 @@
+{
+  "started_at": "2026-11-04T13:49:58.131427+00:00",
+  "label": "triton-eager-raw5000-cyclic1000-v1",
+  "hardware": {
+    "collected_at": "2026-11-04T13:49:57.865308+00:00",
+    "python": "3.12.3",
+    "platform": "Linux-6.8.0-147-generic-x86_64-with-glibc2.39",
+    "cpu_logical": 16,
+    "cpu": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           48 bits physical, 48 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  16\nOn-line CPU(s) list:                     0-15\nVendor ID:                               AuthenticAMD\nModel name:                              AMD Ryzen 7 5700X 8-Core Processor\nCPU family:                              25\nModel:                                   33\nThread(s) per core:                      2\nCore(s) per socket:                      8\nSocket(s):                               1\nStepping:                                2\nFrequency boost:                         enabled\nCPU(s) scaling MHz:                      66%\nCPU max MHz:                             4663.0889\nCPU min MHz:                             2200.0000\nBogoMIPS:                                6787.39\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk clzero irperf xsaveerptr rdpru wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip pku ospke vaes vpclmulqdq rdpid overflow_recov succor smca fsrm debug_swap ibpb_exit_to_user\nVirtualization:                          AMD-V\nL1d cache:                               256 KiB (8 instances)\nL1i cache:                               256 KiB (8 instances)\nL2 cache:                                4 MiB (8 instances)\nL3 cache:                                32 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-15\nVulnerability Gather data sampling:      Not affected\nVulnerability Indirect target selection: Not affected\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Not affected\nVulnerability Spec rstack overflow:      Mitigation; Safe RET\nVulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; Retpolines; IBPB conditional; IBRS_FW; STIBP always-on; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Mitigation; Clear CPU buffers\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Mitigation; IBPB before exit to userspace",
+    "packages": {
+      "torch": "2.8.0+cu128",
+      "torchaudio": "2.8.0+cu128",
+      "triton": "3.4.0",
+      "transformers": "5.5.4",
+      "omnivoice": "0.1.4",
+      "fastapi": "0.136.0",
+      "starlette": "1.0.0",
+      "anyio": "4.12.1",
+      "uvicorn": "0.44.0",
+      "httpx": "0.28.1",
+      "numpy": "2.4.4",
+      "soundfile": "0.13.1"
+    },
+    "torch_cuda_runtime": "12.8",
+    "torch_cuda_devices": [
+      {
+        "index": 0,
+        "name": "NVIDIA GeForce RTX 4070 Ti",
+        "visible_vram_bytes": 12481134592,
+        "compute_capability": [
+          8,
+          9
+        ]
+      }
+    ],
+    "nvidia_smi_gpu": "name, uuid, memory.total [MiB], memory.used [MiB], driver_version, power.limit [W]\nNVIDIA GeForce RTX 4070 Ti, GPU-5aada52f-9af2-4506-47f7-75e99aaf51ee, 12282 MiB, 4 MiB, 610.57.04, 285.00 W",
+    "nvidia_smi_processes": "pid, process_name, used_gpu_memory [MiB]",
+    "physical_vram_evidence": "nvidia-smi memory.total; visible memory independently from torch device properties"
+  },
+  "source_ref": "ce48b253e66b951d87ea42919f945828c62e96a4",
+  "model_revision": "c5fdb5ccb189668d56333f77ba2629f4cd7535f4",
+  "config": {
+    "measurement_kind": "CPU-only future plan; no GPU launch",
+    "source_ref": "ce48b253e66b951d87ea42919f945828c62e96a4",
+    "source_tree_sha256": "e3e5aa9fb61edc8f24bd62b430651265a2816695eb6567da0ae7fcd20f6f98f7",
+    "model_revision": "c5fdb5ccb189668d56333f77ba2629f4cd7535f4",
+    "planned_GPU": "NVIDIA GeForce RTX 4070 Ti",
+    "GPU_UUID": "GPU-5aada52f-9af2-4506-47f7-75e99aaf51ee",
+    "requests": 5000,
+    "cohort_inputs": 1000,
+    "warmup_inputs": 10,
+    "corpus": "load/triton-eager-novel1000-v1/corpus.json",
+    "plan": "load/triton-eager-novel1000-v1/plan.json",
+    "references": "languages/references/manifest.json",
+    "source_files": [
+      {
+        "path": "src/omnivoice_triton/__init__.py",
+        "sha256": "3c0138bd3f9ec486070d75d46d6fc8d82e4284922dc34caa66ba3b8aa60df447"
+      },
+      {
+        "path": "src/omnivoice_triton/cli/__init__.py",
+        "sha256": "7b26600786dcf276ff6dcf9a5dd922465b04583ebc04b176c880527a81f78b82"
+      },
+      {
+        "path": "src/omnivoice_triton/cli/api_server.py",
+        "sha256": "99241865b25cfd81d59c3a14298dc841823a298359e1c9e4595e561e1a7adf35"
+      },
+      {
+        "path": "src/omnivoice_triton/kernels/__init__.py",
+        "sha256": "fb81a896cdde1e229dbe3dfe30743e991df3b4847eb98f459d140279b728afa6"
+      },
+      {
+        "path": "src/omnivoice_triton/kernels/fused_norm_residual.py",
+        "sha256": "c293215514a35871a8ecb8f702748826a61df5f12aa8cbf271e4bc1606765204"
+      },
+      {
+        "path": "src/omnivoice_triton/kernels/rms_norm.py",
+        "sha256": "e14b417ea05cfd454ba91aa40b36eb20f0b56ab11a63c8f6a35764eb125b23d7"
+      },
+      {
+        "path": "src/omnivoice_triton/kernels/swiglu.py",
+        "sha256": "46dc719304ca0d0691497dfdb0e67b8bdb89a7a5d4ac192235aafd80c5bdf9d4"
+      },
+      {
+        "path": "src/omnivoice_triton/kernels/utils.py",
+        "sha256": "8fc3f5aaab7c4bf9c4aba9ca9af273ba4fdf967746f2a594940ccde4159588dc"
+      },
+      {
+        "path": "src/omnivoice_triton/models/__init__.py",
+        "sha256": "00d9490528b8dbd54c6a4c2a7d01c64586870fbd3866f885e7e44fb4ec9ad5e1"
+      },
+      {
+        "path": "src/omnivoice_triton/models/base_runner.py",
+        "sha256": "74f6028196e284e60000f9ffd7b1d68919f0c241297ce1c6245f365783d4b238"
+      },
+      {
+        "path": "src/omnivoice_triton/models/faster_runner.py",
+        "sha256": "d19660c45ca7ce93170b33ced0cd5dabdef8abe48138e18017866ffff76ddd7a"
+      },
+      {
+        "path": "src/omnivoice_triton/models/graph_memory.py",
+        "sha256": "5ce9b5132916ac3b9854e2b778ec322f79bb4bb6f1c497c0395a5053ac87bb95"
+      },
+      {
+        "path": "src/omnivoice_triton/models/patching.py",
+        "sha256": "50b2d39035904c11994d40d67775754df46cdb1d952d6b01b14e3894a242d882"
+      },
+      {
+        "path": "src/omnivoice_triton/models/split_cfg.py",
+        "sha256": "ec197a59c59fc5ace2723524176a85cdb8a00d0b3bf50a21c2988f228f8346f1"
+      },
+      {
+        "path": "src/omnivoice_triton/models/triton_faster_runner.py",
+        "sha256": "555d6dd57813195583e6729682fb6dcc469e5eb1c0175bae25d553adcfc774b0"
+      },
+      {
+        "path": "src/omnivoice_triton/models/triton_runner.py",
+        "sha256": "97ad1ce951fae86e719c638b27438286343f957c439a1449b6bb3a94c8f9a3b2"
+      },
+      {
+        "path": "src/omnivoice_triton/serving/__init__.py",
+        "sha256": "f324f7744163c8aa17caa8b5cef712db011a879883307320cae9523318fd4a8e"
+      },
+      {
+        "path": "src/omnivoice_triton/serving/batching.py",
+        "sha256": "8e180ec3933ea99d676136deb2db4f096d416f0416c55ca6753fa6a26b3e051c"
+      },
+      {
+        "path": "src/omnivoice_triton/serving/gpu_metrics.py",
+        "sha256": "352a70e997ce6d180bf9bbd186ad67ad6442b9eb76483258e7691d41d68d8c12"
+      },
+      {
+        "path": "src/omnivoice_triton/serving/response_cache.py",
+        "sha256": "1be8585153780b6bc25e154ef127fcfce4afb11d99aaea2aa6e874837196130a"
+      },
+      {
+        "path": "src/omnivoice_triton/serving/sentence_pauses.py",
+        "sha256": "6126a88a103399fb38048a806d9617475433f585c23386c50641527a87d4bbbc"
+      },
+      {
+        "path": "src/omnivoice_triton/serving/worker_lifecycle.py",
+        "sha256": "c04f2760330a5ce9c93287afee8cb93902f60327c5104d8e57469e287902724a"
+      }
+    ],
+    "model_files": [
+      {
+        "path": ".gitattributes",
+        "bytes": 1570,
+        "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930"
+      },
+      {
+        "path": "README.md",
+        "bytes": 9424,
+        "sha256": "b5d645a1874baa96a460a0e3a7d5a262811d682d04ce235878a16d5fed287fd3"
+      },
+      {
+        "path": "audio_tokenizer/.gitattributes",
+        "bytes": 1519,
+        "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
+      },
+      {
+        "path": "audio_tokenizer/LICENSE",
+        "bytes": 9171,
+        "sha256": "ac933dc084d119bd20401956b90d11ae87c248b2da62622cd580d82cdf2fa049"
+      },
+      {
+        "path": "audio_tokenizer/README.md",
+        "bytes": 5174,
+        "sha256": "0336368f8274a5ed09f54cee8d56a851ecee96026d9f391a6735762c16608a60"
+      },
+      {
+        "path": "audio_tokenizer/config.json",
+        "bytes": 2531,
+        "sha256": "eefb20806f7104e77c9a5277c9df0f9bb8826b08eb1d4e8ab2b9829b6ef9fac1"
+      },
+      {
+        "path": "audio_tokenizer/model.safetensors",
+        "bytes": 805665628,
+        "sha256": "fe7c5e8785e0a05833e1bfc3e002ec7f55af21e306b2e7154a448c1f54ccfb0d"
+      },
+      {
+        "path": "audio_tokenizer/preprocessor_config.json",
+        "bytes": 206,
+        "sha256": "ae61eea88558608ee2fa86d2aec9fce8d99a5ff75d09cb7651ccce21ae1d9084"
+      },
+      {
+        "path": "chat_template.jinja",
+        "bytes": 4168,
+        "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+      },
+      {
+        "path": "config.json",
+        "bytes": 2238,
+        "sha256": "5e359117e13b420c5e0c925d4aba650d624767131f1d1746928f8b850d5dc372"
+      },
+      {
+        "path": "model.safetensors",
+        "bytes": 2450344112,
+        "sha256": "730839316de585f4c8298ec0e1712efc10fb19c6fa4e36eb741cb8d51ebcf6aa"
+      },
+      {
+        "path": "tokenizer.json",
+        "bytes": 11423986,
+        "sha256": "408f669b7e2b045fdf54201d815bd364e6667dbd845115da81239c40bc6dcfd1"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 533,
+        "sha256": "49f78845596a82bf15c83673794bdf9f76f812b11f60ab6a2239d9be65b00676"
+      }
+    ],
+    "frozen_files": {
+      "load/run.py": "df51c081d8108bf7dae5778adc2f21398e59d0ca8de394601f4251a55c521652",
+      "load/runtime.py": "52fc933b64f70f5e6010d17a91b4457b433938afe1d1607e78891bb071e0b1f2",
+      "load/seeded_server.py": "72b3860d1e8e70981ae4bcb2f9944d543489f19ab46e23a2083a03b8ac99dfe6",
+      "load/triton-eager-novel1000-v1/corpus.json": "896597afd0fe0396e0162d0ba3849e803cc5e48101aeb8293519de91f1edfd2f",
+      "load/triton-eager-novel1000-v1/plan.json": "e7eca25a18a473cfbc8648c0ed48436dd8abcbc840646d496e54df8769eca04a",
+      "languages/references/manifest.json": "594f04fc77f0fc0995e88531ed4fffb99db352026c2b11a4dff8a06c0b80a704"
+    },
+    "profile": {
+      "runner": "triton",
+      "dtype": "fp16",
+      "max_batch_requests": 1,
+      "batch_collect_ms": 0,
+      "max_pending_requests": 6000,
+      "max_pending_gpu_tasks": 4,
+      "steps": 16,
+      "KV_cache": false,
+      "speed": 1,
+      "postprocess_mode": "off",
+      "codec_batch": 1,
+      "response_cache_max_bytes": 0,
+      "graphs": 0,
+      "keepalive_s": 600,
+      "RLIMIT_NOFILE_required": 16384,
+      "connections": 5000,
+      "retained_body_RAM_cap_bytes": 1073741824
+    },
+    "operator_difference": "batch_collect_ms0 explicitly approved by root; historical measured B1 used5ms, frozen earlier job plan used10ms. Other algorithm/settings remain full16/fullreferences. Benchmark-only keepalive600 and successful batch-member counters are declared instrumentation.",
+    "content_profile": "5000 fresh requests cyclically repeat original1000 published inputs five times; not5000 novel inputs",
+    "bounds": {
+      "total_supervisor_s": 2400,
+      "cohort_s": 2200,
+      "preconnect_s": 120
+    },
+    "interpretation": "Signal-valid complete200 bodies are not word or voice certification; no paid API or ASR co-load."
+  },
+  "lease": {
+    "at": "2026-11-04T13:49:54.958394+00:00",
+    "root_authorized_raw_burst5000": true,
+    "modern_GPU_explicitly_released": true,
+    "CPU_IO_quiet": true,
+    "controller_sha256": "b204405036ae236be8ceefc4f760271fcd13fc18428a86fded9110471ea94665",
+    "server_wrapper_sha256": "7a9087c32a7bca6f69afcab96818e83eb9d939250b4a2b80248021f10475bac6",
+    "config_sha256": "0a5ea9e8d0f30a58193b195932b07e221b598a5b3953d5e280946ae37cdf1bf4",
+    "source_ref": "ce48b253e66b951d87ea42919f945828c62e96a4",
+    "GPU_UUID": "GPU-5aada52f-9af2-4506-47f7-75e99aaf51ee",
+    "requests": 5000,
+    "root_approval": "Explicit parent root approval of exact frozen controller/wrapper/config;5000cyclic1000,B1collect0,16/fullrefs/KVoff/postoff/codec1/cache0,2400smax; after independent idle and load CPU/I/O quiet release",
+    "independent_compute_processes": ""
+  },
+  "file_descriptor_limits": {
+    "resource": "RLIMIT_NOFILE",
+    "before_soft_hard": [
+      1024,
+      1048576
+    ],
+    "after_soft_hard": [
+      16384,
+      1048576
+    ],
+    "minimum_required": 11024,
+    "configured_http_connection_cap": 5000,
+    "scope": "Only this harness process and its newly spawned descendants",
+    "server_inherits_limit": true,
+    "raw_burst_required_limit": 16384,
+    "final_soft_hard": [
+      16384,
+      1048576
+    ]
+  },
+  "protocol_sha256": "b204405036ae236be8ceefc4f760271fcd13fc18428a86fded9110471ea94665",
+  "wrapper_sha256": "7a9087c32a7bca6f69afcab96818e83eb9d939250b4a2b80248021f10475bac6",
+  "profile": "triton-eager FP16 B1/KVoff/16steps/speed1/postoff/codec1/cache0; raw5000 sockets, cyclic1000text",
+  "ASR_co_load": false
+}

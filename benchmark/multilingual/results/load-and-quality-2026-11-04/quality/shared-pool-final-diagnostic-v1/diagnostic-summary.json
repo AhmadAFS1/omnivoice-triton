@@ -1,0 +1,22 @@
+{
+  "at": "2026-11-04T15:07:00.801211+00:00",
+  "status": "incomplete_private_reference_only",
+  "shared_arm_executed": false,
+  "shared_alias_gates_executed": false,
+  "GPU_qualification": false,
+  "private_complete_jobs": 5,
+  "saved_WAVs": 46,
+  "unique_WAV_hashes": 27,
+  "new_ASR_inputs": 0,
+  "source_ref": "ce48b253e66b951d87ea42919f945828c62e96a4",
+  "source_tree_sha256": "e3e5aa9fb61edc8f24bd62b430651265a2816695eb6567da0ae7fcd20f6f98f7",
+  "prototype_sha256": "19c498786620bc4dc828520af0feb61eae06c18b18f0b2b9a675aa860718ffc8",
+  "probe_sha256": "1af5a0687b2579503380afeb219ae6a860e6be405a0b14f6b6dcb2c0b84e63f7",
+  "supervisor_elapsed_s": 281.07947686105035,
+  "supervisor_end": "2026-11-04T15:00:03.427971+00:00",
+  "independent_gpu_idle_at": "2026-11-04T15:01:32+00:00",
+  "last_retention_finished_before_local_reuse_check": "2026-11-04T15:03:57.318055+00:00",
+  "product_code_changed": false,
+  "private_key_contents_opened_or_copied": false,
+  "flat_publication_files": 20
+}

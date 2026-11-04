@@ -1,0 +1,37 @@
+[
+  {
+    "path": "CPU-tests.txt",
+    "sha256": "eba79c87d68737d339fac0191608d6e59272907f17cda58e77929a7b5a7a978d",
+    "bytes": 4015
+  },
+  {
+    "path": "dry-plan.json",
+    "sha256": "4b84621396651f0e8c426f9fc5a40cd73ba386bc48eab27a1d3616140c072fc8",
+    "bytes": 8475
+  },
+  {
+    "path": "shared_pool.py",
+    "sha256": "19c498786620bc4dc828520af0feb61eae06c18b18f0b2b9a675aa860718ffc8",
+    "bytes": 23487
+  },
+  {
+    "path": "shared_pool_cpu_tests.py",
+    "sha256": "8e752beb5c924651a0428acdabd49fd97681e63e0b63cc3bff813de0819b8060",
+    "bytes": 19067
+  },
+  {
+    "path": "shared_pool_gpu_probe.py",
+    "sha256": "1af5a0687b2579503380afeb219ae6a860e6be405a0b14f6b6dcb2c0b84e63f7",
+    "bytes": 30477
+  },
+  {
+    "path": "shared_pool_output_contract.py",
+    "sha256": "88743e07c7c76af30d1ff08d292f649e2f1f2a3f50e454b2a26eb8c19d44f04e",
+    "bytes": 3290
+  },
+  {
+    "path": "validation.json",
+    "sha256": "9dc2706b5bf609c1921626e9cfd4a94e58dcbc274cdc0105b0ef142a0d7dc602",
+    "bytes": 1595
+  }
+]

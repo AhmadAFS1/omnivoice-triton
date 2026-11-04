@@ -1,0 +1,11 @@
+{
+  "at": "2026-11-04T14:43:59.836396+00:00",
+  "selected_pairs": 109,
+  "losses": 57,
+  "gains": 52,
+  "selection": "all oldc79\u2192B1 both-Meta exactness flips; purposive, not population failure rate",
+  "source_runner_sha256": "59169ff4bf1ed48c81c39e600b0a9bf274c535bd95ec1a5dcda88a20557ea1e2",
+  "runner_sha256": "646c1450280e2e4b6d6b01a6aabef527eb8fde66022e13510fcb7c07b50fac49",
+  "runner_changes": "exactly two input/output path literals; original model/settings/transcription calls unchanged",
+  "API_calls": 0
+}

@@ -1,0 +1,127 @@
+[
+  {
+    "arm": "private",
+    "job": "en-short-B1",
+    "full_model_warm_ms": 526.0025279130787,
+    "memory": {
+      "public_free_bytes": 9989193728,
+      "device_total_bytes": 12450070528,
+      "allocated_bytes": 2072389120,
+      "reserved_bytes": 2214592512,
+      "peak_allocated_bytes": 2132871680,
+      "peak_reserved_bytes": 2214592512
+    },
+    "graphs": {
+      "capture_count": 1,
+      "max_graphs": 8,
+      "shapes": [
+        [
+          2,
+          8,
+          457
+        ]
+      ]
+    },
+    "reference_kind": "private8configured;fenced/clearedperjob;resident1semanticreferenceonly"
+  },
+  {
+    "arm": "private",
+    "job": "es-short-B1",
+    "full_model_warm_ms": 450.00263419933617,
+    "memory": {
+      "public_free_bytes": 9955639296,
+      "device_total_bytes": 12450070528,
+      "allocated_bytes": 2079868416,
+      "reserved_bytes": 2248146944,
+      "peak_allocated_bytes": 2136356864,
+      "peak_reserved_bytes": 2248146944
+    },
+    "graphs": {
+      "capture_count": 1,
+      "max_graphs": 8,
+      "shapes": [
+        [
+          2,
+          8,
+          427
+        ]
+      ]
+    },
+    "reference_kind": "private8configured;fenced/clearedperjob;resident1semanticreferenceonly"
+  },
+  {
+    "arm": "private",
+    "job": "ar-short-B1",
+    "full_model_warm_ms": 535.3151538874954,
+    "memory": {
+      "public_free_bytes": 9919987712,
+      "device_total_bytes": 12450070528,
+      "allocated_bytes": 2091382272,
+      "reserved_bytes": 2283798528,
+      "peak_allocated_bytes": 2159333888,
+      "peak_reserved_bytes": 2283798528
+    },
+    "graphs": {
+      "capture_count": 1,
+      "max_graphs": 8,
+      "shapes": [
+        [
+          2,
+          8,
+          513
+        ]
+      ]
+    },
+    "reference_kind": "private8configured;fenced/clearedperjob;resident1semanticreferenceonly"
+  },
+  {
+    "arm": "private",
+    "job": "en-short-B8",
+    "full_model_warm_ms": 3717.3524079844356,
+    "memory": {
+      "public_free_bytes": 8886091776,
+      "device_total_bytes": 12450070528,
+      "allocated_bytes": 2206242304,
+      "reserved_bytes": 3317694464,
+      "peak_allocated_bytes": 2690969088,
+      "peak_reserved_bytes": 3317694464
+    },
+    "graphs": {
+      "capture_count": 1,
+      "max_graphs": 8,
+      "shapes": [
+        [
+          16,
+          8,
+          457
+        ]
+      ]
+    },
+    "reference_kind": "private8configured;fenced/clearedperjob;resident1semanticreferenceonly"
+  },
+  {
+    "arm": "private",
+    "job": "es-short-B8",
+    "full_model_warm_ms": 3452.8876130934805,
+    "memory": {
+      "public_free_bytes": 8999337984,
+      "device_total_bytes": 12450070528,
+      "allocated_bytes": 2207246848,
+      "reserved_bytes": 3204448256,
+      "peak_allocated_bytes": 2659669504,
+      "peak_reserved_bytes": 3204448256
+    },
+    "graphs": {
+      "capture_count": 1,
+      "max_graphs": 8,
+      "shapes": [
+        [
+          16,
+          8,
+          427
+        ]
+      ]
+    },
+    "reference_kind": "private8configured;fenced/clearedperjob;resident1semanticreferenceonly"
+  }
+]

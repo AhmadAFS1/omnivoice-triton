@@ -1,0 +1,10 @@
+{
+  "audit_sha256": "884774d4ce050b9ab67e4f19b065c4e5fbbfa1c7e1827807dd45f682aee5d71c",
+  "source_files": {
+    "summary.json": "0e657234782d9976330a3e210449f7ac030a16a57505a115d3ffaa5aad99295a",
+    "quality-manifest.json": "21a22c97d8a6429e9f23d66365224faa994be99841a0ad42266d92344b1fd1dd",
+    "metadata.json": "b448e0a1fce624a641f421d478431b1797e43c14def02f5d297fdad3e98b4792",
+    "outcome.json": "87f56a21d0d40536afa0fc5b07698932f79b90e0ec3c9a0e830270bdfec6a7c8",
+    "supervisor-outcome.json": "3a2214b2ae1ff33b82a4e302fdf3e111aebd61b129381c4f5f7ac90270b932fc"
+  }
+}

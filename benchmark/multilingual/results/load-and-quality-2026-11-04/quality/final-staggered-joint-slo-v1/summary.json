@@ -1,0 +1,58 @@
+{
+  "at": "2026-11-04T15:42:50.649831+00:00",
+  "kind": "Independent CPU-only strict SHA/expected Unicode/script join; no inference",
+  "offers": 18330,
+  "warmups_excluded": 10,
+  "phases": {
+    "calls10-poisson-0_5rps": {
+      "offers": 30,
+      "valid_WAVs": 30,
+      "rejected429": 0,
+      "both_exact": 10,
+      "both_zero_CER": 12,
+      "valid_and_both_exact_within_500ms": 9,
+      "valid_and_both_exact_within_2000ms": 10,
+      "valid_and_both_zeroCER_within_500ms": 11,
+      "valid_and_both_zeroCER_within_2000ms": 12
+    },
+    "calls100-poisson-5rps": {
+      "offers": 300,
+      "valid_WAVs": 183,
+      "rejected429": 117,
+      "both_exact": 39,
+      "both_zero_CER": 43,
+      "valid_and_both_exact_within_500ms": 2,
+      "valid_and_both_exact_within_2000ms": 39,
+      "valid_and_both_zeroCER_within_500ms": 2,
+      "valid_and_both_zeroCER_within_2000ms": 43
+    },
+    "calls1000-poisson-50rps": {
+      "offers": 3000,
+      "valid_WAVs": 164,
+      "rejected429": 2836,
+      "both_exact": 23,
+      "both_zero_CER": 27,
+      "valid_and_both_exact_within_500ms": 0,
+      "valid_and_both_exact_within_2000ms": 23,
+      "valid_and_both_zeroCER_within_500ms": 0,
+      "valid_and_both_zeroCER_within_2000ms": 27
+    },
+    "calls5000-poisson-250rps": {
+      "offers": 15000,
+      "valid_WAVs": 146,
+      "rejected429": 14854,
+      "both_exact": 15,
+      "both_zero_CER": 19,
+      "valid_and_both_exact_within_500ms": 0,
+      "valid_and_both_exact_within_2000ms": 2,
+      "valid_and_both_zeroCER_within_500ms": 0,
+      "valid_and_both_zeroCER_within_2000ms": 2
+    }
+  },
+  "protocols": {
+    "omniASR_LLM_Unlimited_1B_v2": "modern59071593-batch1-v1-7f8784ef9d826da07f57",
+    "omniASR_CTC_1B_v2": "legacy-batch1"
+  },
+  "quality_certified": false,
+  "interpretation": "Joint all-offer diagnostic: rejected, missing/invalid and slow audio cannot pass. ASR exactness/CER is not native/MOS/speaker certification. Actual scheduled arrival includes dispatch lateness."
+}

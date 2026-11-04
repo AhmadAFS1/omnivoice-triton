@@ -1,0 +1,194 @@
+{
+  "at": "2026-11-04T15:27:39.246451+00:00",
+  "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/report-final15058-v1/scored-logical-cases.jsonl",
+  "scope": "FixedPoissonoffers0.5/5/50/250RPS, labeled10/100/1000/5000activecallsassumingoneturnper20s; labelsareoffered-load assumptions, not measuredsimultaneousstreamcapacity",
+  "all_outcomes": 18340,
+  "cohort_offers_excluding10warmups": 18330,
+  "valid_HTTP200_including_warmup": 533,
+  "successful_cohort_HTTP200": 523,
+  "rejected_HTTP429": 17807,
+  "phase_results": {
+    "calls10-poisson-0_5rps": {
+      "offered_logical_requests": 30,
+      "HTTP_statuses": {
+        "200": 30
+      },
+      "valid_HTTP200_audio": 30,
+      "HTTP200_fraction": 1.0,
+      "offered_routes": 30,
+      "routes_with_HTTP200": 30,
+      "ASR_screen_among_HTTP200": {
+        "observations": 30,
+        "both_exact": 10,
+        "both_zero_CER": 12,
+        "per_judge": {
+          "omniASR_CTC_1B_v2": {
+            "exact": 10,
+            "mean_CER": 0.37648675627388334,
+            "micro_CER": 0.2660427807486631
+          },
+          "omniASR_LLM_Unlimited_1B_v2": {
+            "exact": 14,
+            "mean_CER": 0.184802139172698,
+            "micro_CER": 0.10427807486631016
+          }
+        }
+      },
+      "voice_profiles_successes": {
+        "local_target_language_reference": 9,
+        "cross_language_english_reference": 21
+      },
+      "proxy_mapping_successes": 0,
+      "quality_certified": false
+    },
+    "calls100-poisson-5rps": {
+      "offered_logical_requests": 300,
+      "HTTP_statuses": {
+        "200": 183,
+        "429": 117
+      },
+      "valid_HTTP200_audio": 183,
+      "HTTP200_fraction": 0.61,
+      "offered_routes": 104,
+      "routes_with_HTTP200": 72,
+      "ASR_screen_among_HTTP200": {
+        "observations": 183,
+        "both_exact": 39,
+        "both_zero_CER": 43,
+        "per_judge": {
+          "omniASR_CTC_1B_v2": {
+            "exact": 44,
+            "mean_CER": 0.27056203447335764,
+            "micro_CER": 0.22642533936651585
+          },
+          "omniASR_LLM_Unlimited_1B_v2": {
+            "exact": 66,
+            "mean_CER": 0.12625126571328357,
+            "micro_CER": 0.1093212669683258
+          }
+        }
+      },
+      "voice_profiles_successes": {
+        "local_target_language_reference": 52,
+        "cross_language_english_reference": 131
+      },
+      "proxy_mapping_successes": 1,
+      "quality_certified": false
+    },
+    "calls1000-poisson-50rps": {
+      "offered_logical_requests": 3000,
+      "HTTP_statuses": {
+        "429": 2836,
+        "200": 164
+      },
+      "valid_HTTP200_audio": 164,
+      "HTTP200_fraction": 0.05466666666666667,
+      "offered_routes": 104,
+      "routes_with_HTTP200": 79,
+      "ASR_screen_among_HTTP200": {
+        "observations": 164,
+        "both_exact": 23,
+        "both_zero_CER": 27,
+        "per_judge": {
+          "omniASR_CTC_1B_v2": {
+            "exact": 26,
+            "mean_CER": 0.2834725090933548,
+            "micro_CER": 0.25586080586080584
+          },
+          "omniASR_LLM_Unlimited_1B_v2": {
+            "exact": 56,
+            "mean_CER": 0.1466169869989011,
+            "micro_CER": 0.12765567765567765
+          }
+        }
+      },
+      "voice_profiles_successes": {
+        "local_target_language_reference": 23,
+        "cross_language_english_reference": 141
+      },
+      "proxy_mapping_successes": 0,
+      "quality_certified": false
+    },
+    "calls5000-poisson-250rps": {
+      "offered_logical_requests": 15000,
+      "HTTP_statuses": {
+        "429": 14854,
+        "200": 146
+      },
+      "valid_HTTP200_audio": 146,
+      "HTTP200_fraction": 0.009733333333333333,
+      "offered_routes": 104,
+      "routes_with_HTTP200": 76,
+      "ASR_screen_among_HTTP200": {
+        "observations": 146,
+        "both_exact": 15,
+        "both_zero_CER": 19,
+        "per_judge": {
+          "omniASR_CTC_1B_v2": {
+            "exact": 18,
+            "mean_CER": 0.29351209531017025,
+            "micro_CER": 0.24715549936788875
+          },
+          "omniASR_LLM_Unlimited_1B_v2": {
+            "exact": 39,
+            "mean_CER": 0.2405099181451269,
+            "micro_CER": 0.16434892541087232
+          }
+        }
+      },
+      "voice_profiles_successes": {
+        "local_target_language_reference": 17,
+        "cross_language_english_reference": 129
+      },
+      "proxy_mapping_successes": 0,
+      "quality_certified": false
+    },
+    "warmup-disjoint-inputs": {
+      "offered_logical_requests": 10,
+      "HTTP_statuses": {
+        "200": 10
+      },
+      "valid_HTTP200_audio": 10,
+      "HTTP200_fraction": 1.0,
+      "offered_routes": 2,
+      "routes_with_HTTP200": 2,
+      "ASR_screen_among_HTTP200": {
+        "observations": 10,
+        "both_exact": 4,
+        "both_zero_CER": 4,
+        "per_judge": {
+          "omniASR_CTC_1B_v2": {
+            "exact": 4,
+            "mean_CER": 0.10329296151876798,
+            "micro_CER": 0.09345794392523364
+          },
+          "omniASR_LLM_Unlimited_1B_v2": {
+            "exact": 7,
+            "mean_CER": 0.023738626964433417,
+            "micro_CER": 0.028037383177570093
+          }
+        }
+      },
+      "voice_profiles_successes": {
+        "cross_language_english_reference": 10
+      },
+      "proxy_mapping_successes": 0,
+      "quality_certified": false
+    }
+  },
+  "judges": {
+    "omniASR_CTC_1B_v2": [
+      "legacy-batch1"
+    ],
+    "omniASR_LLM_Unlimited_1B_v2": [
+      "modern59071593-batch1-v1-7f8784ef9d826da07f57"
+    ]
+  },
+  "quality_certified": false,
+  "notes": [
+    "Allrejectionsremainavailabilityfailuresandareexcludedfromconditionalwordmetrics",
+    "Bothjudge outputscompleteforthesavedvalidWAVs; normalizedexact/CERareASRscreens, not native-listenercertification",
+    "All104productrouteswerecoveredbyfullcanonicalqualitysuite, not necessarily successfulineveryoverloadphase",
+    "10warmupsareseparatefrom18330measuredcohortoffers"
+  ]
+}

@@ -1,0 +1,334 @@
+{
+  "at": "2026-11-04T15:03:57.318055+00:00",
+  "status": "Budget stop during private reference arm; shared arm and alias tests never executed; no qualification",
+  "saved_WAVs": 46,
+  "unique_WAV_hashes": 27,
+  "matches_to_prior14546": 46,
+  "new_ASR_inputs": [],
+  "canonical_manifest_sha256": "9d952faa3d8262e47e4533ac1f0c15307dbb875c29c3a1c3b3bf03b3c10c3af1",
+  "retained_archive_sha256": "859184afb1181d36a2e02081d9222177c9805dce1d24c10e970fb79824570182",
+  "rows": [
+    {
+      "id": "en-short-B1-private-parity-000",
+      "sha256": "2ae4feae3d60dd3b4c0b9b84bda95e5966db6db9a44e787d51800a78c5108810",
+      "ASR_language_script": "eng_Latn",
+      "exact_expected_text": "No one was inside the apartment.",
+      "prior_ASR_input_id": "audio-9fbe99521f677aa3f17ed77b1dda80746ddc1340e8c84a1a8cd76f01251e56ac"
+    },
+    {
+      "id": "en-short-B1-private-timed-000",
+      "sha256": "2ae4feae3d60dd3b4c0b9b84bda95e5966db6db9a44e787d51800a78c5108810",
+      "ASR_language_script": "eng_Latn",
+      "exact_expected_text": "No one was inside the apartment.",
+      "prior_ASR_input_id": "audio-9fbe99521f677aa3f17ed77b1dda80746ddc1340e8c84a1a8cd76f01251e56ac"
+    },
+    {
+      "id": "es-short-B1-private-parity-000",
+      "sha256": "ff44efecf012f68aa2d885956112ac7f5164b071401d2eb7977710fa7f7c6368",
+      "ASR_language_script": "spa_Latn",
+      "exact_expected_text": "Dentro del apartamento no había nadie.",
+      "prior_ASR_input_id": "audio-a8c840dad89caac8b7dc39213224cceb35fc7fee7853afd47299f7bd6b4d3440"
+    },
+    {
+      "id": "es-short-B1-private-timed-000",
+      "sha256": "ff44efecf012f68aa2d885956112ac7f5164b071401d2eb7977710fa7f7c6368",
+      "ASR_language_script": "spa_Latn",
+      "exact_expected_text": "Dentro del apartamento no había nadie.",
+      "prior_ASR_input_id": "audio-a8c840dad89caac8b7dc39213224cceb35fc7fee7853afd47299f7bd6b4d3440"
+    },
+    {
+      "id": "ar-short-B1-private-parity-000",
+      "sha256": "ca8a2123fcf0db9b3b75fe172110293ca659460df4b17e96945c06f4d640aad2",
+      "ASR_language_script": "arb_Arab",
+      "exact_expected_text": "لم يتواجد أحد داخل الشقة.",
+      "prior_ASR_input_id": "audio-f2fa5d73b0e98d6aa669f1fa612ad17afe38cfbf1c4c5e43d944f18b935c81a7"
+    },
+    {
+      "id": "ar-short-B1-private-timed-000",
+      "sha256": "ca8a2123fcf0db9b3b75fe172110293ca659460df4b17e96945c06f4d640aad2",
+      "ASR_language_script": "arb_Arab",
+      "exact_expected_text": "لم يتواجد أحد داخل الشقة.",
+      "prior_ASR_input_id": "audio-f2fa5d73b0e98d6aa669f1fa612ad17afe38cfbf1c4c5e43d944f18b935c81a7"
+    },
+    {
+      "id": "en-short-B8-private-parity-000",
+      "sha256": "a066b4a3f174ea9833de0d6f15cc1e394444d31a816c9160e4935ac5957360ca",
+      "ASR_language_script": "eng_Latn",
+      "exact_expected_text": "No one was inside the apartment.",
+      "prior_ASR_input_id": "audio-30ea361f31fde0dd76087c22fba975723a891c51b901e9013ef6816b158d07e7"
+    },
+    {
+      "id": "en-short-B8-private-parity-001",
+      "sha256": "12f9df8d1c8f90a08d97563cecd13e0a3bb391f0bbc6a6d838255f4a6387c3b4",
+      "ASR_language_script": "eng_Latn",
+      "exact_expected_text": "No one was inside the apartment.",
+      "prior_ASR_input_id": "audio-4d8009bec455e12f89036bcdbaeab5b35a9920d2b12bd75eaac7cf9cf5c39327"
+    },
+    {
+      "id": "en-short-B8-private-parity-002",
+      "sha256": "fb640ac5ccc47b3d9f9b8695506c25ff1a463941b81cdb7fac1dcf8c4e7863c8",
+      "ASR_language_script": "eng_Latn",
+      "exact_expected_text": "No one was inside the apartment.",
+      "prior_ASR_input_id": "audio-0075875f4017ffd8d493fd49cf00c9f2d7573a38a1e784ca16e2eb5e3dfa9500"
+    },
+    {
+      "id": "en-short-B8-private-parity-003",
+      "sha256": "b9168b7eb68df6075825acc7785fe4d4cacc298b1d8ba270697f406570a80e01",
+      "ASR_language_script": "eng_Latn",
+      "exact_expected_text": "No one was inside the apartment.",
+      "prior_ASR_input_id": "audio-166ec55798e766417c1f6be6194b37c19b10448f4868fe3f5ee36d8d1e35914d"
+    },
+    {
+      "id": "en-short-B8-private-parity-004",
+      "sha256": "f4fffbad6a45fdcfb442d930b9c3d45c2783eabbdd24d4db1f2abecc70d51726",
+      "ASR_language_script": "eng_Latn",
+      "exact_expected_text": "No one was inside the apartment.",
+      "prior_ASR_input_id": "audio-a4d79a10b7756a0f1d523a5eabccbae81fad6f7022ff4174853511ecd2e320d9"
+    },
+    {
+      "id": "en-short-B8-private-parity-005",
+      "sha256": "13b41b6349ef3effd181f0fb2044555e100556ac4aad7b957204132071f87721",
+      "ASR_language_script": "eng_Latn",
+      "exact_expected_text": "No one was inside the apartment.",
+      "prior_ASR_input_id": "audio-52724124e22bca35119ff7f924dd3f610cc7e9ca78b78db4b8dfc897191a3a0f"
+    },
+    {
+      "id": "en-short-B8-private-parity-006",
+      "sha256": "f8a236ed54f1dc8ef8ecd0b3b2be87744f67d43d10f5195430984ae693a6f841",
+      "ASR_language_script": "eng_Latn",
+      "exact_expected_text": "No one was inside the apartment.",
+      "prior_ASR_input_id": "audio-400e90c78c2fa4df99bc30ec4f7230d65ebac1cdd4d7c530a737bcc6ea271e06"
+    },
+    {
+      "id": "en-short-B8-private-parity-007",
+      "sha256": "04190524e17d06f36cceb7a95b9424bb0110e92b2cd8a44f92d0f7694e905707",
+      "ASR_language_script": "eng_Latn",
+      "exact_expected_text": "No one was inside the apartment.",
+      "prior_ASR_input_id": "audio-efd9a9a644d8b50a3d61fd01545eef0c158c4cbb144d580bd07e286065a58dcd"
+    },
+    {
+      "id": "en-short-B8-private-timed-000",
+      "sha256": "a066b4a3f174ea9833de0d6f15cc1e394444d31a816c9160e4935ac5957360ca",
+      "ASR_language_script": "eng_Latn",
+      "exact_expected_text": "No one was inside the apartment.",
+      "prior_ASR_input_id": "audio-30ea361f31fde0dd76087c22fba975723a891c51b901e9013ef6816b158d07e7"
+    },
+    {
+      "id": "en-short-B8-private-timed-001",
+      "sha256": "12f9df8d1c8f90a08d97563cecd13e0a3bb391f0bbc6a6d838255f4a6387c3b4",
+      "ASR_language_script": "eng_Latn",
+      "exact_expected_text": "No one was inside the apartment.",
+      "prior_ASR_input_id": "audio-4d8009bec455e12f89036bcdbaeab5b35a9920d2b12bd75eaac7cf9cf5c39327"
+    },
+    {
+      "id": "en-short-B8-private-timed-002",
+      "sha256": "fb640ac5ccc47b3d9f9b8695506c25ff1a463941b81cdb7fac1dcf8c4e7863c8",
+      "ASR_language_script": "eng_Latn",
+      "exact_expected_text": "No one was inside the apartment.",
+      "prior_ASR_input_id": "audio-0075875f4017ffd8d493fd49cf00c9f2d7573a38a1e784ca16e2eb5e3dfa9500"
+    },
+    {
+      "id": "en-short-B8-private-timed-003",
+      "sha256": "b9168b7eb68df6075825acc7785fe4d4cacc298b1d8ba270697f406570a80e01",
+      "ASR_language_script": "eng_Latn",
+      "exact_expected_text": "No one was inside the apartment.",
+      "prior_ASR_input_id": "audio-166ec55798e766417c1f6be6194b37c19b10448f4868fe3f5ee36d8d1e35914d"
+    },
+    {
+      "id": "en-short-B8-private-timed-004",
+      "sha256": "f4fffbad6a45fdcfb442d930b9c3d45c2783eabbdd24d4db1f2abecc70d51726",
+      "ASR_language_script": "eng_Latn",
+      "exact_expected_text": "No one was inside the apartment.",
+      "prior_ASR_input_id": "audio-a4d79a10b7756a0f1d523a5eabccbae81fad6f7022ff4174853511ecd2e320d9"
+    },
+    {
+      "id": "en-short-B8-private-timed-005",
+      "sha256": "13b41b6349ef3effd181f0fb2044555e100556ac4aad7b957204132071f87721",
+      "ASR_language_script": "eng_Latn",
+      "exact_expected_text": "No one was inside the apartment.",
+      "prior_ASR_input_id": "audio-52724124e22bca35119ff7f924dd3f610cc7e9ca78b78db4b8dfc897191a3a0f"
+    },
+    {
+      "id": "en-short-B8-private-timed-006",
+      "sha256": "f8a236ed54f1dc8ef8ecd0b3b2be87744f67d43d10f5195430984ae693a6f841",
+      "ASR_language_script": "eng_Latn",
+      "exact_expected_text": "No one was inside the apartment.",
+      "prior_ASR_input_id": "audio-400e90c78c2fa4df99bc30ec4f7230d65ebac1cdd4d7c530a737bcc6ea271e06"
+    },
+    {
+      "id": "en-short-B8-private-timed-007",
+      "sha256": "04190524e17d06f36cceb7a95b9424bb0110e92b2cd8a44f92d0f7694e905707",
+      "ASR_language_script": "eng_Latn",
+      "exact_expected_text": "No one was inside the apartment.",
+      "prior_ASR_input_id": "audio-efd9a9a644d8b50a3d61fd01545eef0c158c4cbb144d580bd07e286065a58dcd"
+    },
+    {
+      "id": "es-short-B8-private-parity-000",
+      "sha256": "03e056a1202b9614eed05052aeb91f217201db7e514ee126d79fc98f2eff90c7",
+      "ASR_language_script": "spa_Latn",
+      "exact_expected_text": "Dentro del apartamento no había nadie.",
+      "prior_ASR_input_id": "audio-904cced1d220dad4f439d2419018e3cd6c6036cb2f9d3e6481a15af90e88ceeb"
+    },
+    {
+      "id": "es-short-B8-private-parity-001",
+      "sha256": "36a998be65937327805c16de29a3ec941bd1163312b74f078a7c4a0a46381db5",
+      "ASR_language_script": "spa_Latn",
+      "exact_expected_text": "Dentro del apartamento no había nadie.",
+      "prior_ASR_input_id": "audio-43869eafd7660645c9dd25cf35ced34f75b5e01add45f702647609605f49eeaf"
+    },
+    {
+      "id": "es-short-B8-private-parity-002",
+      "sha256": "9cfa4a4648d541518d79e8283cbcd54f33ee99d2833eda6eb4580b69e052495b",
+      "ASR_language_script": "spa_Latn",
+      "exact_expected_text": "Dentro del apartamento no había nadie.",
+      "prior_ASR_input_id": "audio-94fbb34645534bcb3300fbead94d4d7151406a9cf284c150895aaeb6e43328bc"
+    },
+    {
+      "id": "es-short-B8-private-parity-003",
+      "sha256": "3a5658e180f0c4b996d6ad21dbcccfdd1912d9bef32f792dbca18e53c99a3a1b",
+      "ASR_language_script": "spa_Latn",
+      "exact_expected_text": "Dentro del apartamento no había nadie.",
+      "prior_ASR_input_id": "audio-dc7faab280f092f2321a4a89ade76d00e9ae2cb60b632ac45adfb8b4f6ec100c"
+    },
+    {
+      "id": "es-short-B8-private-parity-004",
+      "sha256": "196b0d7e5df140337af449b4778672b65a7217b88f5827e4c9ef5b009ef16cd2",
+      "ASR_language_script": "spa_Latn",
+      "exact_expected_text": "Dentro del apartamento no había nadie.",
+      "prior_ASR_input_id": "audio-5559b9044cd7e3a07fa2fc6752b7250a8f0100e8d28eda4d3b2f38a3eb7d2e60"
+    },
+    {
+      "id": "es-short-B8-private-parity-005",
+      "sha256": "53b7b59522b253b918a3a7081ac34390d17981738525a35f196146abd08a6f54",
+      "ASR_language_script": "spa_Latn",
+      "exact_expected_text": "Dentro del apartamento no había nadie.",
+      "prior_ASR_input_id": "audio-95cc87bcfd8e5845a936ba9384374e9a4eeb0de9d75da11d611f6341373460ed"
+    },
+    {
+      "id": "es-short-B8-private-parity-006",
+      "sha256": "c149d7e0a5b9bb6486537f76d3f3a65c32365c9d38da5742856b87bbb87ca031",
+      "ASR_language_script": "spa_Latn",
+      "exact_expected_text": "Dentro del apartamento no había nadie.",
+      "prior_ASR_input_id": "audio-91afaf1ca29ff3cce84d7eb5c8b276521577d4f9e0d382c68ac55525becaaef9"
+    },
+    {
+      "id": "es-short-B8-private-parity-007",
+      "sha256": "dab804637ce86a85b1de7832bc8f8bb1ad259b5fb91050467344f4884e865726",
+      "ASR_language_script": "spa_Latn",
+      "exact_expected_text": "Dentro del apartamento no había nadie.",
+      "prior_ASR_input_id": "audio-8a32f375b7d0aa09a41ac91c4060714b48b7ec6a57a31c0bb93076d307572a46"
+    },
+    {
+      "id": "es-short-B8-private-timed-000",
+      "sha256": "03e056a1202b9614eed05052aeb91f217201db7e514ee126d79fc98f2eff90c7",
+      "ASR_language_script": "spa_Latn",
+      "exact_expected_text": "Dentro del apartamento no había nadie.",
+      "prior_ASR_input_id": "audio-904cced1d220dad4f439d2419018e3cd6c6036cb2f9d3e6481a15af90e88ceeb"
+    },
+    {
+      "id": "es-short-B8-private-timed-001",
+      "sha256": "36a998be65937327805c16de29a3ec941bd1163312b74f078a7c4a0a46381db5",
+      "ASR_language_script": "spa_Latn",
+      "exact_expected_text": "Dentro del apartamento no había nadie.",
+      "prior_ASR_input_id": "audio-43869eafd7660645c9dd25cf35ced34f75b5e01add45f702647609605f49eeaf"
+    },
+    {
+      "id": "es-short-B8-private-timed-002",
+      "sha256": "9cfa4a4648d541518d79e8283cbcd54f33ee99d2833eda6eb4580b69e052495b",
+      "ASR_language_script": "spa_Latn",
+      "exact_expected_text": "Dentro del apartamento no había nadie.",
+      "prior_ASR_input_id": "audio-94fbb34645534bcb3300fbead94d4d7151406a9cf284c150895aaeb6e43328bc"
+    },
+    {
+      "id": "es-short-B8-private-timed-003",
+      "sha256": "3a5658e180f0c4b996d6ad21dbcccfdd1912d9bef32f792dbca18e53c99a3a1b",
+      "ASR_language_script": "spa_Latn",
+      "exact_expected_text": "Dentro del apartamento no había nadie.",
+      "prior_ASR_input_id": "audio-dc7faab280f092f2321a4a89ade76d00e9ae2cb60b632ac45adfb8b4f6ec100c"
+    },
+    {
+      "id": "es-short-B8-private-timed-004",
+      "sha256": "196b0d7e5df140337af449b4778672b65a7217b88f5827e4c9ef5b009ef16cd2",
+      "ASR_language_script": "spa_Latn",
+      "exact_expected_text": "Dentro del apartamento no había nadie.",
+      "prior_ASR_input_id": "audio-5559b9044cd7e3a07fa2fc6752b7250a8f0100e8d28eda4d3b2f38a3eb7d2e60"
+    },
+    {
+      "id": "es-short-B8-private-timed-005",
+      "sha256": "53b7b59522b253b918a3a7081ac34390d17981738525a35f196146abd08a6f54",
+      "ASR_language_script": "spa_Latn",
+      "exact_expected_text": "Dentro del apartamento no había nadie.",
+      "prior_ASR_input_id": "audio-95cc87bcfd8e5845a936ba9384374e9a4eeb0de9d75da11d611f6341373460ed"
+    },
+    {
+      "id": "es-short-B8-private-timed-006",
+      "sha256": "c149d7e0a5b9bb6486537f76d3f3a65c32365c9d38da5742856b87bbb87ca031",
+      "ASR_language_script": "spa_Latn",
+      "exact_expected_text": "Dentro del apartamento no había nadie.",
+      "prior_ASR_input_id": "audio-91afaf1ca29ff3cce84d7eb5c8b276521577d4f9e0d382c68ac55525becaaef9"
+    },
+    {
+      "id": "es-short-B8-private-timed-007",
+      "sha256": "dab804637ce86a85b1de7832bc8f8bb1ad259b5fb91050467344f4884e865726",
+      "ASR_language_script": "spa_Latn",
+      "exact_expected_text": "Dentro del apartamento no había nadie.",
+      "prior_ASR_input_id": "audio-8a32f375b7d0aa09a41ac91c4060714b48b7ec6a57a31c0bb93076d307572a46"
+    },
+    {
+      "id": "ar-short-B8-private-parity-000",
+      "sha256": "dbf731e47162a291c42a53764a42f4e4bdc2d66ff29af8cb7ed0064ada5fecf1",
+      "ASR_language_script": "arb_Arab",
+      "exact_expected_text": "لم يتواجد أحد داخل الشقة.",
+      "prior_ASR_input_id": "audio-5781867fd891c6d022afe5f60b454b8e5062d2f1e74a149fe8f479a14f36afdd"
+    },
+    {
+      "id": "ar-short-B8-private-parity-001",
+      "sha256": "3b3023c0fb1c7d371f857b2deb01279480cd8c1a67f0849719b7c0487b874f29",
+      "ASR_language_script": "arb_Arab",
+      "exact_expected_text": "لم يتواجد أحد داخل الشقة.",
+      "prior_ASR_input_id": "audio-fed18845321ffced6119243a44587731695544f2f725b3b0b7e2cfb601db6142"
+    },
+    {
+      "id": "ar-short-B8-private-parity-002",
+      "sha256": "e4675c467527c60403b8146dd99f6d27d5f8a6eb699f20f4e59570a9270bd4e6",
+      "ASR_language_script": "arb_Arab",
+      "exact_expected_text": "لم يتواجد أحد داخل الشقة.",
+      "prior_ASR_input_id": "audio-9813c2a04d7a982f11ba3ef6c10e455e3b444e6922a132c71fdd3b4b7f4ccba7"
+    },
+    {
+      "id": "ar-short-B8-private-parity-003",
+      "sha256": "c58b544bfd6f0c402053ca370edd9f67d614551d1bbb2dd1dbeac989f078b794",
+      "ASR_language_script": "arb_Arab",
+      "exact_expected_text": "لم يتواجد أحد داخل الشقة.",
+      "prior_ASR_input_id": "audio-019badbc3bcbf42378b032b312713e23326a0b33a57ffa743643aed4c6039065"
+    },
+    {
+      "id": "ar-short-B8-private-parity-004",
+      "sha256": "a79ec92afdf1bfaa7320695c1f351287f37eccc1a350c3a7e7437ca9ad9ea3ec",
+      "ASR_language_script": "arb_Arab",
+      "exact_expected_text": "لم يتواجد أحد داخل الشقة.",
+      "prior_ASR_input_id": "audio-95acd5bc1a26c0682a90ff1363d5ba86d6ac15d18e1a8f0ccb8122bdb43fa5b7"
+    },
+    {
+      "id": "ar-short-B8-private-parity-005",
+      "sha256": "65b1051e7aa9d860aa87d9a8e27b3f82a1eec59be0ae3e168d6ea0c3d54da0bb",
+      "ASR_language_script": "arb_Arab",
+      "exact_expected_text": "لم يتواجد أحد داخل الشقة.",
+      "prior_ASR_input_id": "audio-2ee4b1e3eaa2781ae6703e781ef92523281644f88a573a9fbc6e5a4a5e16111f"
+    },
+    {
+      "id": "ar-short-B8-private-parity-006",
+      "sha256": "d40074d39d0252f260fe278d9aab3bbf7af4eab4ee99b864c12d88782803c84e",
+      "ASR_language_script": "arb_Arab",
+      "exact_expected_text": "لم يتواجد أحد داخل الشقة.",
+      "prior_ASR_input_id": "audio-8214916319dfc4d7ad817515dfd64325d5d00a7325f8bbfaedd8d6ac8573d441"
+    },
+    {
+      "id": "ar-short-B8-private-parity-007",
+      "sha256": "4a59b05ac63d6c0194013635fcbf87ab3d51c476a89513a246c431bc6d9bcb23",
+      "ASR_language_script": "arb_Arab",
+      "exact_expected_text": "لم يتواجد أحد داخل الشقة.",
+      "prior_ASR_input_id": "audio-4ff9217674ef62088d258c649e5c7bac3033abde5a51998264a291934506944a"
+    }
+  ]
+}

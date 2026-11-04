@@ -1,0 +1,12 @@
+{
+  "at": "2026-11-04T14:13:54.944436+00:00",
+  "measurement_kind": "AppleM5Pro CPU-only scheduled-arrival/dispatch metric + lifecycle tests, no GPU/model run",
+  "GPU_executed": false,
+  "tests_passed": 5,
+  "ruff": "passed",
+  "compile": "passed",
+  "controller_sha256": "c7df85711d426178c8bab01e6276e0668dab75f7747462b3ebd88ef7b039ab06",
+  "config_sha256": "d048645b2187092642256b092e43161d89f479d2e3f2ccbaeb1d2092b67c4d02",
+  "plan_sha256": "4daa9acdcfcdac9e5cdcbde8d3d8229855bade36a61cc4295a30d0b86f031b4a",
+  "superseded_history": "history-before-scheduled-arrival-SLO"
+}

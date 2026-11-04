@@ -1,0 +1,33 @@
+{
+  "copies": [
+    {
+      "source": "load/asr/FINAL15058_TWO_JUDGE_COMPLETE.json",
+      "sha256": "9cda0d1eb3e35c0eebe3ad2bf52021e75f1d3259e1b7356061cd687d9a6c20bd"
+    },
+    {
+      "source": "FINAL_BACKUP_VERIFIED_2026-11-04.json",
+      "sha256": "07b2bf0fe85e50862e58f2c1e9e8ee6a3a48cff6a1303565bf9c4b2b147b8c69"
+    },
+    {
+      "source": "final-metadata-backup/59058485-receipt.json",
+      "sha256": "f67eeb96550333ce0dd890765b8627c76adeffbb85e5e13e4ce223884783a234"
+    },
+    {
+      "source": "final-metadata-backup/59071593-receipt.json",
+      "sha256": "35dbe4660e31b52b57ecc774faecc7ab032516bc0a8b376374bb44cc6b7071fe"
+    },
+    {
+      "source": "bootstrap-59071593/TASK_KEY_CLEANUP_BOTH_VERIFIED.json",
+      "sha256": "cbcf64205e30ed1285f8b0eebfe5c9906d0023c28924c606a82aee8a3c1fb48a"
+    },
+    {
+      "source": "final-hardware-allocation-59058485.json",
+      "sha256": "24724f5ac85031ecd9b3167497711e1d7fc1a4bf283980b1c8e1d9638074726d"
+    },
+    {
+      "source": "final-hardware-allocation-59071593.json",
+      "sha256": "85b090f3405236cd1d745658d4f8efd0305dbd41a8258ae91cd60401f8f4d2f1"
+    }
+  ],
+  "cleanup_summary": "Onlytasklifecyclefields copied; unrelated inventory retained privately in original localproof"
+}

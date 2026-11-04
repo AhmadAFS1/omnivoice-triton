@@ -1,0 +1,23 @@
+{
+  "at": "2026-11-04T15:28:53.260637+00:00",
+  "both_task_authorizations_removed": true,
+  "both_origin_task_private_files_absent": true,
+  "both_original_authorized_keys_restored_exactly": true,
+  "fresh_original_user_SSH_and_GPU_idle_verified": true,
+  "private_contents_read_or_copied_by_cleanup": false,
+  "backup_receipt_sha256": "07b2bf0fe85e50862e58f2c1e9e8ee6a3a48cff6a1303565bf9c4b2b147b8c69",
+  "instances": [
+    {
+      "instance_id": 59058485,
+      "proof": "bootstrap-59071593/TASK_KEY_CLEANUP_59058485_VERIFIED.json",
+      "sha256": "536e2d1d6d031b62e73639f945f7d6788ff6b9308e74dd8ba9394cf7431e8806",
+      "verified_at": "2026-11-04T15:28:28.036730+00:00"
+    },
+    {
+      "instance_id": 59071593,
+      "proof": "bootstrap-59071593/TASK_KEY_CLEANUP_59071593_VERIFIED.json",
+      "sha256": "ef500ea339b9d41ad35f708f2b0b4790c75deeaf2b040c341965b88d18dd4f53",
+      "verified_at": "2026-11-04T15:28:40.062595+00:00"
+    }
+  ]
+}

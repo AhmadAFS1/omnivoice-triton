@@ -1,0 +1,8 @@
+{
+  "at": "2026-11-04T15:04:10.829063+00:00",
+  "measurement_kind": "CPU-only synthetic hardlink/SHA/error-isolation tests, no GPU/model inference",
+  "tests_passed": 3,
+  "helper_sha256": "a3fe7c8727d87247b8dc4697196892d07f496a3de9d426d241de681a88010942",
+  "frozen_GPU_controller_unchanged": "3c869190da6f27aaeec2688f1057d4bf70d05cd17306dbf36323467321dfaaca",
+  "policy": "actualremoteperSHApayload only; invalid/partial/error bytes separately retained; SFdecodeunique+logicalSHApathsallrequiredatrealretention"
+}

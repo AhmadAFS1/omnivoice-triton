@@ -1,0 +1,10 @@
+{
+  "at": "2026-11-04T15:00:03.427971+00:00",
+  "status": "timed_out",
+  "exit_code": 1,
+  "elapsed_s": 281.07947686105035,
+  "compute_processes": "",
+  "GPU_idle": true,
+  "idle_error": null,
+  "quality_or_production_certified": false
+}

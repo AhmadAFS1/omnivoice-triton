@@ -1,0 +1,3235 @@
+{
+  "count": 646,
+  "languages": [
+    {
+      "id": "kbt",
+      "name": "abadi",
+      "display_name": "Abadi"
+    },
+    {
+      "id": "ab",
+      "name": "abkhazian",
+      "display_name": "Abkhazian"
+    },
+    {
+      "id": "abr",
+      "name": "abron",
+      "display_name": "Abron"
+    },
+    {
+      "id": "abn",
+      "name": "abua",
+      "display_name": "Abua"
+    },
+    {
+      "id": "fub",
+      "name": "adamawa fulfulde",
+      "display_name": "Adamawa Fulfulde"
+    },
+    {
+      "id": "ady",
+      "name": "adyghe",
+      "display_name": "Adyghe"
+    },
+    {
+      "id": "aal",
+      "name": "afade",
+      "display_name": "Afade"
+    },
+    {
+      "id": "af",
+      "name": "afrikaans",
+      "display_name": "Afrikaans"
+    },
+    {
+      "id": "yay",
+      "name": "agwagwune",
+      "display_name": "Agwagwune"
+    },
+    {
+      "id": "ajg",
+      "name": "aja (benin)",
+      "display_name": "Aja (Benin)"
+    },
+    {
+      "id": "keu",
+      "name": "akebu",
+      "display_name": "Akebu"
+    },
+    {
+      "id": "ala",
+      "name": "alago",
+      "display_name": "Alago"
+    },
+    {
+      "id": "sq",
+      "name": "albanian",
+      "display_name": "Albanian"
+    },
+    {
+      "id": "arq",
+      "name": "algerian arabic",
+      "display_name": "Algerian Arabic"
+    },
+    {
+      "id": "aao",
+      "name": "algerian saharan arabic",
+      "display_name": "Algerian Saharan Arabic"
+    },
+    {
+      "id": "qva",
+      "name": "ambo-pasco quechua",
+      "display_name": "Ambo-Pasco Quechua"
+    },
+    {
+      "id": "abs",
+      "name": "ambonese malay",
+      "display_name": "Ambonese Malay"
+    },
+    {
+      "id": "adx",
+      "name": "amdo tibetan",
+      "display_name": "Amdo Tibetan"
+    },
+    {
+      "id": "am",
+      "name": "amharic",
+      "display_name": "Amharic"
+    },
+    {
+      "id": "anw",
+      "name": "anaang",
+      "display_name": "Anaang"
+    },
+    {
+      "id": "anp",
+      "name": "angika",
+      "display_name": "Angika"
+    },
+    {
+      "id": "xmv",
+      "name": "antankarana malagasy",
+      "display_name": "Antankarana Malagasy"
+    },
+    {
+      "id": "an",
+      "name": "aragonese",
+      "display_name": "Aragonese"
+    },
+    {
+      "id": "aae",
+      "name": "arbëreshë albanian",
+      "display_name": "Arbëreshë Albanian"
+    },
+    {
+      "id": "qxu",
+      "name": "arequipa-la unión quechua",
+      "display_name": "Arequipa-La Unión Quechua"
+    },
+    {
+      "id": "hy",
+      "name": "armenian",
+      "display_name": "Armenian"
+    },
+    {
+      "id": "ahs",
+      "name": "ashe",
+      "display_name": "Ashe"
+    },
+    {
+      "id": "prq",
+      "name": "ashéninka perené",
+      "display_name": "Ashéninka Perené"
+    },
+    {
+      "id": "eiv",
+      "name": "askopan",
+      "display_name": "Askopan"
+    },
+    {
+      "id": "as",
+      "name": "assamese",
+      "display_name": "Assamese"
+    },
+    {
+      "id": "ast",
+      "name": "asturian",
+      "display_name": "Asturian"
+    },
+    {
+      "id": "tay",
+      "name": "atayal",
+      "display_name": "Atayal"
+    },
+    {
+      "id": "awo",
+      "name": "awak",
+      "display_name": "Awak"
+    },
+    {
+      "id": "quy",
+      "name": "ayacucho quechua",
+      "display_name": "Ayacucho Quechua"
+    },
+    {
+      "id": "az",
+      "name": "azerbaijani",
+      "display_name": "Azerbaijani"
+    },
+    {
+      "id": "bba",
+      "name": "baatonum",
+      "display_name": "Baatonum"
+    },
+    {
+      "id": "bcy",
+      "name": "bacama",
+      "display_name": "Bacama"
+    },
+    {
+      "id": "bde",
+      "name": "bade",
+      "display_name": "Bade"
+    },
+    {
+      "id": "ksf",
+      "name": "bafia",
+      "display_name": "Bafia"
+    },
+    {
+      "id": "bfd",
+      "name": "bafut",
+      "display_name": "Bafut"
+    },
+    {
+      "id": "fui",
+      "name": "bagirmi fulfulde",
+      "display_name": "Bagirmi Fulfulde"
+    },
+    {
+      "id": "bqg",
+      "name": "bago-kusuntu",
+      "display_name": "Bago-Kusuntu"
+    },
+    {
+      "id": "abv",
+      "name": "baharna arabic",
+      "display_name": "Baharna Arabic"
+    },
+    {
+      "id": "bkh",
+      "name": "bakoko",
+      "display_name": "Bakoko"
+    },
+    {
+      "id": "bjt",
+      "name": "balanta-ganja",
+      "display_name": "Balanta-Ganja"
+    },
+    {
+      "id": "bft",
+      "name": "balti",
+      "display_name": "Balti"
+    },
+    {
+      "id": "bce",
+      "name": "bamenyam",
+      "display_name": "Bamenyam"
+    },
+    {
+      "id": "bax",
+      "name": "bamun",
+      "display_name": "Bamun"
+    },
+    {
+      "id": "bsj",
+      "name": "bangwinji",
+      "display_name": "Bangwinji"
+    },
+    {
+      "id": "bjn",
+      "name": "banjar",
+      "display_name": "Banjar"
+    },
+    {
+      "id": "abb",
+      "name": "bankon",
+      "display_name": "Bankon"
+    },
+    {
+      "id": "bci",
+      "name": "baoulé",
+      "display_name": "Baoulé"
+    },
+    {
+      "id": "bhr",
+      "name": "bara malagasy",
+      "display_name": "Bara Malagasy"
+    },
+    {
+      "id": "bjk",
+      "name": "barok",
+      "display_name": "Barok"
+    },
+    {
+      "id": "bas",
+      "name": "basa (cameroon)",
+      "display_name": "Basa (Cameroon)"
+    },
+    {
+      "id": "bzw",
+      "name": "basa (nigeria)",
+      "display_name": "Basa (Nigeria)"
+    },
+    {
+      "id": "ba",
+      "name": "bashkir",
+      "display_name": "Bashkir"
+    },
+    {
+      "id": "eu",
+      "name": "basque",
+      "display_name": "Basque"
+    },
+    {
+      "id": "btm",
+      "name": "batak mandailing",
+      "display_name": "Batak Mandailing"
+    },
+    {
+      "id": "bnm",
+      "name": "batanga",
+      "display_name": "Batanga"
+    },
+    {
+      "id": "btv",
+      "name": "bateri",
+      "display_name": "Bateri"
+    },
+    {
+      "id": "bbl",
+      "name": "bats",
+      "display_name": "Bats"
+    },
+    {
+      "id": "bda",
+      "name": "bayot",
+      "display_name": "Bayot"
+    },
+    {
+      "id": "beb",
+      "name": "bebele",
+      "display_name": "Bebele"
+    },
+    {
+      "id": "be",
+      "name": "belarusian",
+      "display_name": "Belarusian"
+    },
+    {
+      "id": "bn",
+      "name": "bengali",
+      "display_name": "Bengali"
+    },
+    {
+      "id": "bew",
+      "name": "betawi",
+      "display_name": "Betawi"
+    },
+    {
+      "id": "bhb",
+      "name": "bhili",
+      "display_name": "Bhili"
+    },
+    {
+      "id": "bho",
+      "name": "bhojpuri",
+      "display_name": "Bhojpuri"
+    },
+    {
+      "id": "bxf",
+      "name": "bilur",
+      "display_name": "Bilur"
+    },
+    {
+      "id": "bhp",
+      "name": "bima",
+      "display_name": "Bima"
+    },
+    {
+      "id": "brx",
+      "name": "bodo",
+      "display_name": "Bodo"
+    },
+    {
+      "id": "bux",
+      "name": "boghom",
+      "display_name": "Boghom"
+    },
+    {
+      "id": "bky",
+      "name": "bokyi",
+      "display_name": "Bokyi"
+    },
+    {
+      "id": "bmq",
+      "name": "bomu",
+      "display_name": "Bomu"
+    },
+    {
+      "id": "bou",
+      "name": "bondei",
+      "display_name": "Bondei"
+    },
+    {
+      "id": "fue",
+      "name": "borgu fulfulde",
+      "display_name": "Borgu Fulfulde"
+    },
+    {
+      "id": "bs",
+      "name": "bosnian",
+      "display_name": "Bosnian"
+    },
+    {
+      "id": "brh",
+      "name": "brahui",
+      "display_name": "Brahui"
+    },
+    {
+      "id": "bra",
+      "name": "braj",
+      "display_name": "Braj"
+    },
+    {
+      "id": "br",
+      "name": "breton",
+      "display_name": "Breton"
+    },
+    {
+      "id": "bdm",
+      "name": "buduma",
+      "display_name": "Buduma"
+    },
+    {
+      "id": "bug",
+      "name": "buginese",
+      "display_name": "Buginese"
+    },
+    {
+      "id": "bhh",
+      "name": "bukharic",
+      "display_name": "Bukharic"
+    },
+    {
+      "id": "bg",
+      "name": "bulgarian",
+      "display_name": "Bulgarian"
+    },
+    {
+      "id": "bum",
+      "name": "bulu (cameroon)",
+      "display_name": "Bulu (Cameroon)"
+    },
+    {
+      "id": "bns",
+      "name": "bundeli",
+      "display_name": "Bundeli"
+    },
+    {
+      "id": "bnn",
+      "name": "bunun",
+      "display_name": "Bunun"
+    },
+    {
+      "id": "bwr",
+      "name": "bura-pabir",
+      "display_name": "Bura-Pabir"
+    },
+    {
+      "id": "bys",
+      "name": "burak",
+      "display_name": "Burak"
+    },
+    {
+      "id": "my",
+      "name": "burmese",
+      "display_name": "Burmese"
+    },
+    {
+      "id": "bsk",
+      "name": "burushaski",
+      "display_name": "Burushaski"
+    },
+    {
+      "id": "miu",
+      "name": "cacaloxtepec mixtec",
+      "display_name": "Cacaloxtepec Mixtec"
+    },
+    {
+      "id": "qvl",
+      "name": "cajatambo north lima quechua",
+      "display_name": "Cajatambo North Lima Quechua"
+    },
+    {
+      "id": "cky",
+      "name": "cakfem-mushere",
+      "display_name": "Cakfem-Mushere"
+    },
+    {
+      "id": "wes",
+      "name": "cameroon pidgin",
+      "display_name": "Cameroon Pidgin"
+    },
+    {
+      "id": "sro",
+      "name": "campidanese sardinian",
+      "display_name": "Campidanese Sardinian"
+    },
+    {
+      "id": "yue",
+      "name": "cantonese",
+      "display_name": "Cantonese"
+    },
+    {
+      "id": "ca",
+      "name": "catalan",
+      "display_name": "Catalan"
+    },
+    {
+      "id": "ceb",
+      "name": "cebuano",
+      "display_name": "Cebuano"
+    },
+    {
+      "id": "cen",
+      "name": "cen",
+      "display_name": "Cen"
+    },
+    {
+      "id": "ckb",
+      "name": "central kurdish",
+      "display_name": "Central Kurdish"
+    },
+    {
+      "id": "nhn",
+      "name": "central nahuatl",
+      "display_name": "Central Nahuatl"
+    },
+    {
+      "id": "pbs",
+      "name": "central pame",
+      "display_name": "Central Pame"
+    },
+    {
+      "id": "pst",
+      "name": "central pashto",
+      "display_name": "Central Pashto"
+    },
+    {
+      "id": "ncx",
+      "name": "central puebla nahuatl",
+      "display_name": "Central Puebla Nahuatl"
+    },
+    {
+      "id": "tar",
+      "name": "central tarahumara",
+      "display_name": "Central Tarahumara"
+    },
+    {
+      "id": "esu",
+      "name": "central yupik",
+      "display_name": "Central Yupik"
+    },
+    {
+      "id": "fuq",
+      "name": "central-eastern niger fulfulde",
+      "display_name": "Central-Eastern Niger Fulfulde"
+    },
+    {
+      "id": "shu",
+      "name": "chadian arabic",
+      "display_name": "Chadian Arabic"
+    },
+    {
+      "id": "ny",
+      "name": "chichewa",
+      "display_name": "Chichewa"
+    },
+    {
+      "id": "zpv",
+      "name": "chichicapan zapotec",
+      "display_name": "Chichicapan Zapotec"
+    },
+    {
+      "id": "cgg",
+      "name": "chiga",
+      "display_name": "Chiga"
+    },
+    {
+      "id": "zoh",
+      "name": "chimalapa zoque",
+      "display_name": "Chimalapa Zoque"
+    },
+    {
+      "id": "qug",
+      "name": "chimborazo highland quichua",
+      "display_name": "Chimborazo Highland Quichua"
+    },
+    {
+      "id": "zh",
+      "name": "chinese",
+      "display_name": "Chinese"
+    },
+    {
+      "id": "qxa",
+      "name": "chiquián ancash quechua",
+      "display_name": "Chiquián Ancash Quechua"
+    },
+    {
+      "id": "the",
+      "name": "chitwania tharu",
+      "display_name": "Chitwania Tharu"
+    },
+    {
+      "id": "cjk",
+      "name": "chokwe",
+      "display_name": "Chokwe"
+    },
+    {
+      "id": "cv",
+      "name": "chuvash",
+      "display_name": "Chuvash"
+    },
+    {
+      "id": "ckl",
+      "name": "cibak",
+      "display_name": "Cibak"
+    },
+    {
+      "id": "kjc",
+      "name": "coastal konjo",
+      "display_name": "Coastal Konjo"
+    },
+    {
+      "id": "zoc",
+      "name": "copainalá zoque",
+      "display_name": "Copainalá Zoque"
+    },
+    {
+      "id": "kw",
+      "name": "cornish",
+      "display_name": "Cornish"
+    },
+    {
+      "id": "qwa",
+      "name": "corongo ancash quechua",
+      "display_name": "Corongo Ancash Quechua"
+    },
+    {
+      "id": "hr",
+      "name": "croatian",
+      "display_name": "Croatian"
+    },
+    {
+      "id": "mfn",
+      "name": "cross river mbembe",
+      "display_name": "Cross River Mbembe"
+    },
+    {
+      "id": "xtu",
+      "name": "cuyamecalco mixtec",
+      "display_name": "Cuyamecalco Mixtec"
+    },
+    {
+      "id": "cs",
+      "name": "czech",
+      "display_name": "Czech"
+    },
+    {
+      "id": "dbd",
+      "name": "dadiya",
+      "display_name": "Dadiya"
+    },
+    {
+      "id": "dag",
+      "name": "dagbani",
+      "display_name": "Dagbani"
+    },
+    {
+      "id": "dml",
+      "name": "dameli",
+      "display_name": "Dameli"
+    },
+    {
+      "id": "da",
+      "name": "danish",
+      "display_name": "Danish"
+    },
+    {
+      "id": "dar",
+      "name": "dargwa",
+      "display_name": "Dargwa"
+    },
+    {
+      "id": "dzg",
+      "name": "dazaga",
+      "display_name": "Dazaga"
+    },
+    {
+      "id": "dcc",
+      "name": "deccan",
+      "display_name": "Deccan"
+    },
+    {
+      "id": "deg",
+      "name": "degema",
+      "display_name": "Degema"
+    },
+    {
+      "id": "kna",
+      "name": "dera (nigeria)",
+      "display_name": "Dera (Nigeria)"
+    },
+    {
+      "id": "dgh",
+      "name": "dghwede",
+      "display_name": "Dghwede"
+    },
+    {
+      "id": "mki",
+      "name": "dhatki",
+      "display_name": "Dhatki"
+    },
+    {
+      "id": "dv",
+      "name": "dhivehi",
+      "display_name": "Dhivehi"
+    },
+    {
+      "id": "adf",
+      "name": "dhofari arabic",
+      "display_name": "Dhofari Arabic"
+    },
+    {
+      "id": "cfa",
+      "name": "dijim-bwilim",
+      "display_name": "Dijim-Bwilim"
+    },
+    {
+      "id": "dgo",
+      "name": "dogri",
+      "display_name": "Dogri"
+    },
+    {
+      "id": "dmk",
+      "name": "domaaki",
+      "display_name": "Domaaki"
+    },
+    {
+      "id": "dty",
+      "name": "dotyali",
+      "display_name": "Dotyali"
+    },
+    {
+      "id": "dua",
+      "name": "duala",
+      "display_name": "Duala"
+    },
+    {
+      "id": "nl",
+      "name": "dutch",
+      "display_name": "Dutch"
+    },
+    {
+      "id": "ldb",
+      "name": "dũya",
+      "display_name": "DũYa"
+    },
+    {
+      "id": "dyu",
+      "name": "dyula",
+      "display_name": "Dyula"
+    },
+    {
+      "id": "bgp",
+      "name": "eastern balochi",
+      "display_name": "Eastern Balochi"
+    },
+    {
+      "id": "gui",
+      "name": "eastern bolivian guaraní",
+      "display_name": "Eastern Bolivian Guaraní"
+    },
+    {
+      "id": "avl",
+      "name": "eastern egyptian bedawi arabic",
+      "display_name": "Eastern Egyptian Bedawi Arabic"
+    },
+    {
+      "id": "kqo",
+      "name": "eastern krahn",
+      "display_name": "Eastern Krahn"
+    },
+    {
+      "id": "mhr",
+      "name": "eastern mari",
+      "display_name": "Eastern Mari"
+    },
+    {
+      "id": "ydd",
+      "name": "eastern yiddish",
+      "display_name": "Eastern Yiddish"
+    },
+    {
+      "id": "ebr",
+      "name": "ebrié",
+      "display_name": "Ebrié"
+    },
+    {
+      "id": "ego",
+      "name": "eggon",
+      "display_name": "Eggon"
+    },
+    {
+      "id": "arz",
+      "name": "egyptian arabic",
+      "display_name": "Egyptian Arabic"
+    },
+    {
+      "id": "etu",
+      "name": "ejagham",
+      "display_name": "Ejagham"
+    },
+    {
+      "id": "elm",
+      "name": "eleme",
+      "display_name": "Eleme"
+    },
+    {
+      "id": "afo",
+      "name": "eloyi",
+      "display_name": "Eloyi"
+    },
+    {
+      "id": "ebu",
+      "name": "embu",
+      "display_name": "Embu"
+    },
+    {
+      "id": "en",
+      "name": "english",
+      "display_name": "English"
+    },
+    {
+      "id": "myv",
+      "name": "erzya",
+      "display_name": "Erzya"
+    },
+    {
+      "id": "ish",
+      "name": "esan",
+      "display_name": "Esan"
+    },
+    {
+      "id": "eo",
+      "name": "esperanto",
+      "display_name": "Esperanto"
+    },
+    {
+      "id": "et",
+      "name": "estonian",
+      "display_name": "Estonian"
+    },
+    {
+      "id": "eto",
+      "name": "eton (cameroon)",
+      "display_name": "Eton (Cameroon)"
+    },
+    {
+      "id": "ewo",
+      "name": "ewondo",
+      "display_name": "Ewondo"
+    },
+    {
+      "id": "ext",
+      "name": "extremaduran",
+      "display_name": "Extremaduran"
+    },
+    {
+      "id": "fan",
+      "name": "fang (equatorial guinea)",
+      "display_name": "Fang (Equatorial Guinea)"
+    },
+    {
+      "id": "fat",
+      "name": "fanti",
+      "display_name": "Fanti"
+    },
+    {
+      "id": "gur",
+      "name": "farefare",
+      "display_name": "Farefare"
+    },
+    {
+      "id": "fmp",
+      "name": "fe'fe'",
+      "display_name": "Fe'fe'"
+    },
+    {
+      "id": "fil",
+      "name": "filipino",
+      "display_name": "Filipino"
+    },
+    {
+      "id": "tlp",
+      "name": "filomena mata-coahuitlán totonac",
+      "display_name": "Filomena Mata-Coahuitlán Totonac"
+    },
+    {
+      "id": "fi",
+      "name": "finnish",
+      "display_name": "Finnish"
+    },
+    {
+      "id": "fip",
+      "name": "fipa",
+      "display_name": "Fipa"
+    },
+    {
+      "id": "fr",
+      "name": "french",
+      "display_name": "French"
+    },
+    {
+      "id": "ff",
+      "name": "fulah",
+      "display_name": "Fulah"
+    },
+    {
+      "id": "gl",
+      "name": "galician",
+      "display_name": "Galician"
+    },
+    {
+      "id": "wof",
+      "name": "gambian wolof",
+      "display_name": "Gambian Wolof"
+    },
+    {
+      "id": "lg",
+      "name": "ganda",
+      "display_name": "Ganda"
+    },
+    {
+      "id": "gbm",
+      "name": "garhwali",
+      "display_name": "Garhwali"
+    },
+    {
+      "id": "gwt",
+      "name": "gawar-bati",
+      "display_name": "Gawar-Bati"
+    },
+    {
+      "id": "gwc",
+      "name": "gawri",
+      "display_name": "Gawri"
+    },
+    {
+      "id": "gbr",
+      "name": "gbagyi",
+      "display_name": "Gbagyi"
+    },
+    {
+      "id": "gby",
+      "name": "gbari",
+      "display_name": "Gbari"
+    },
+    {
+      "id": "gyz",
+      "name": "geji",
+      "display_name": "Geji"
+    },
+    {
+      "id": "gej",
+      "name": "gen",
+      "display_name": "Gen"
+    },
+    {
+      "id": "ka",
+      "name": "georgian",
+      "display_name": "Georgian"
+    },
+    {
+      "id": "de",
+      "name": "german",
+      "display_name": "German"
+    },
+    {
+      "id": "ges",
+      "name": "geser-gorom",
+      "display_name": "Geser-Gorom"
+    },
+    {
+      "id": "aln",
+      "name": "gheg albanian",
+      "display_name": "Gheg Albanian"
+    },
+    {
+      "id": "bbj",
+      "name": "ghomálá'",
+      "display_name": "Ghomálá'"
+    },
+    {
+      "id": "gid",
+      "name": "gidar",
+      "display_name": "Gidar"
+    },
+    {
+      "id": "glw",
+      "name": "glavda",
+      "display_name": "Glavda"
+    },
+    {
+      "id": "gom",
+      "name": "goan konkani",
+      "display_name": "Goan Konkani"
+    },
+    {
+      "id": "gig",
+      "name": "goaria",
+      "display_name": "Goaria"
+    },
+    {
+      "id": "ank",
+      "name": "goemai",
+      "display_name": "Goemai"
+    },
+    {
+      "id": "gol",
+      "name": "gola",
+      "display_name": "Gola"
+    },
+    {
+      "id": "el",
+      "name": "greek",
+      "display_name": "Greek"
+    },
+    {
+      "id": "gn",
+      "name": "guarani",
+      "display_name": "Guarani"
+    },
+    {
+      "id": "gdf",
+      "name": "guduf-gava",
+      "display_name": "Guduf-Gava"
+    },
+    {
+      "id": "amu",
+      "name": "guerrero amuzgo",
+      "display_name": "Guerrero Amuzgo"
+    },
+    {
+      "id": "gu",
+      "name": "gujarati",
+      "display_name": "Gujarati"
+    },
+    {
+      "id": "gju",
+      "name": "gujari",
+      "display_name": "Gujari"
+    },
+    {
+      "id": "afb",
+      "name": "gulf arabic",
+      "display_name": "Gulf Arabic"
+    },
+    {
+      "id": "ggg",
+      "name": "gurgula",
+      "display_name": "Gurgula"
+    },
+    {
+      "id": "guz",
+      "name": "gusii",
+      "display_name": "Gusii"
+    },
+    {
+      "id": "gsl",
+      "name": "gusilay",
+      "display_name": "Gusilay"
+    },
+    {
+      "id": "gwe",
+      "name": "gweno",
+      "display_name": "Gweno"
+    },
+    {
+      "id": "ztu",
+      "name": "güilá zapotec",
+      "display_name": "Güilá Zapotec"
+    },
+    {
+      "id": "hoj",
+      "name": "hadothi",
+      "display_name": "Hadothi"
+    },
+    {
+      "id": "hah",
+      "name": "hahon",
+      "display_name": "Hahon"
+    },
+    {
+      "id": "ht",
+      "name": "haitian",
+      "display_name": "Haitian"
+    },
+    {
+      "id": "cnh",
+      "name": "hakha chin",
+      "display_name": "Hakha Chin"
+    },
+    {
+      "id": "hao",
+      "name": "hakö",
+      "display_name": "Hakö"
+    },
+    {
+      "id": "hla",
+      "name": "halia",
+      "display_name": "Halia"
+    },
+    {
+      "id": "ha",
+      "name": "hausa",
+      "display_name": "Hausa"
+    },
+    {
+      "id": "haw",
+      "name": "hawaiian",
+      "display_name": "Hawaiian"
+    },
+    {
+      "id": "haz",
+      "name": "hazaragi",
+      "display_name": "Hazaragi"
+    },
+    {
+      "id": "he",
+      "name": "hebrew",
+      "display_name": "Hebrew"
+    },
+    {
+      "id": "hem",
+      "name": "hemba",
+      "display_name": "Hemba"
+    },
+    {
+      "id": "hz",
+      "name": "herero",
+      "display_name": "Herero"
+    },
+    {
+      "id": "kjk",
+      "name": "highland konjo",
+      "display_name": "Highland Konjo"
+    },
+    {
+      "id": "acw",
+      "name": "hijazi arabic",
+      "display_name": "Hijazi Arabic"
+    },
+    {
+      "id": "hi",
+      "name": "hindi",
+      "display_name": "Hindi"
+    },
+    {
+      "id": "var",
+      "name": "huarijio",
+      "display_name": "Huarijio"
+    },
+    {
+      "id": "mau",
+      "name": "huautla mazatec",
+      "display_name": "Huautla Mazatec"
+    },
+    {
+      "id": "nhq",
+      "name": "huaxcaleca nahuatl",
+      "display_name": "Huaxcaleca Nahuatl"
+    },
+    {
+      "id": "hbb",
+      "name": "huba",
+      "display_name": "Huba"
+    },
+    {
+      "id": "mxs",
+      "name": "huitepec mixtec",
+      "display_name": "Huitepec Mixtec"
+    },
+    {
+      "id": "hul",
+      "name": "hula",
+      "display_name": "Hula"
+    },
+    {
+      "id": "hu",
+      "name": "hungarian",
+      "display_name": "Hungarian"
+    },
+    {
+      "id": "hkk",
+      "name": "hunjara-kaina ke",
+      "display_name": "Hunjara-Kaina Ke"
+    },
+    {
+      "id": "hwo",
+      "name": "hwana",
+      "display_name": "Hwana"
+    },
+    {
+      "id": "ibb",
+      "name": "ibibio",
+      "display_name": "Ibibio"
+    },
+    {
+      "id": "is",
+      "name": "icelandic",
+      "display_name": "Icelandic"
+    },
+    {
+      "id": "ida",
+      "name": "idakho-isukha-tiriki",
+      "display_name": "Idakho-Isukha-Tiriki"
+    },
+    {
+      "id": "idu",
+      "name": "idoma",
+      "display_name": "Idoma"
+    },
+    {
+      "id": "ig",
+      "name": "igbo",
+      "display_name": "Igbo"
+    },
+    {
+      "id": "ahl",
+      "name": "igo",
+      "display_name": "Igo"
+    },
+    {
+      "id": "kpo",
+      "name": "ikposo",
+      "display_name": "Ikposo"
+    },
+    {
+      "id": "ikw",
+      "name": "ikwere",
+      "display_name": "Ikwere"
+    },
+    {
+      "id": "qvi",
+      "name": "imbabura highland quichua",
+      "display_name": "Imbabura Highland Quichua"
+    },
+    {
+      "id": "id",
+      "name": "indonesian",
+      "display_name": "Indonesian"
+    },
+    {
+      "id": "mvy",
+      "name": "indus kohistani",
+      "display_name": "Indus Kohistani"
+    },
+    {
+      "id": "ia",
+      "name": "interlingua (international auxiliary language association)",
+      "display_name": "Interlingua (International Auxiliary Language Association)"
+    },
+    {
+      "id": "ik",
+      "name": "inupiaq",
+      "display_name": "Inupiaq"
+    },
+    {
+      "id": "ga",
+      "name": "irish",
+      "display_name": "Irish"
+    },
+    {
+      "id": "os",
+      "name": "iron ossetic",
+      "display_name": "Iron Ossetic"
+    },
+    {
+      "id": "its",
+      "name": "isekiri",
+      "display_name": "Isekiri"
+    },
+    {
+      "id": "iso",
+      "name": "isoko",
+      "display_name": "Isoko"
+    },
+    {
+      "id": "it",
+      "name": "italian",
+      "display_name": "Italian"
+    },
+    {
+      "id": "itw",
+      "name": "ito",
+      "display_name": "Ito"
+    },
+    {
+      "id": "itz",
+      "name": "itzá",
+      "display_name": "Itzá"
+    },
+    {
+      "id": "vmj",
+      "name": "ixtayutla mixtec",
+      "display_name": "Ixtayutla Mixtec"
+    },
+    {
+      "id": "ijc",
+      "name": "izon",
+      "display_name": "Izon"
+    },
+    {
+      "id": "jax",
+      "name": "jambi malay",
+      "display_name": "Jambi Malay"
+    },
+    {
+      "id": "ja",
+      "name": "japanese",
+      "display_name": "Japanese"
+    },
+    {
+      "id": "jqr",
+      "name": "jaqaru",
+      "display_name": "Jaqaru"
+    },
+    {
+      "id": "qxw",
+      "name": "jauja wanca quechua",
+      "display_name": "Jauja Wanca Quechua"
+    },
+    {
+      "id": "jns",
+      "name": "jaunsari",
+      "display_name": "Jaunsari"
+    },
+    {
+      "id": "jv",
+      "name": "javanese",
+      "display_name": "Javanese"
+    },
+    {
+      "id": "juo",
+      "name": "jiba",
+      "display_name": "Jiba"
+    },
+    {
+      "id": "kaj",
+      "name": "jju",
+      "display_name": "Jju"
+    },
+    {
+      "id": "aju",
+      "name": "judeo-moroccan arabic",
+      "display_name": "Judeo-Moroccan Arabic"
+    },
+    {
+      "id": "vmc",
+      "name": "juxtlahuaca mixtec",
+      "display_name": "Juxtlahuaca Mixtec"
+    },
+    {
+      "id": "kbd",
+      "name": "kabardian",
+      "display_name": "Kabardian"
+    },
+    {
+      "id": "lkb",
+      "name": "kabras",
+      "display_name": "Kabras"
+    },
+    {
+      "id": "kea",
+      "name": "kabuverdianu",
+      "display_name": "Kabuverdianu"
+    },
+    {
+      "id": "kab",
+      "name": "kabyle",
+      "display_name": "Kabyle"
+    },
+    {
+      "id": "gjk",
+      "name": "kachi koli",
+      "display_name": "Kachi Koli"
+    },
+    {
+      "id": "ckr",
+      "name": "kairak",
+      "display_name": "Kairak"
+    },
+    {
+      "id": "ijn",
+      "name": "kalabari",
+      "display_name": "Kalabari"
+    },
+    {
+      "id": "kls",
+      "name": "kalasha",
+      "display_name": "Kalasha"
+    },
+    {
+      "id": "kln",
+      "name": "kalenjin",
+      "display_name": "Kalenjin"
+    },
+    {
+      "id": "xka",
+      "name": "kalkoti",
+      "display_name": "Kalkoti"
+    },
+    {
+      "id": "kam",
+      "name": "kamba",
+      "display_name": "Kamba"
+    },
+    {
+      "id": "kcq",
+      "name": "kamo",
+      "display_name": "Kamo"
+    },
+    {
+      "id": "bjj",
+      "name": "kanauji",
+      "display_name": "Kanauji"
+    },
+    {
+      "id": "kbl",
+      "name": "kanembu",
+      "display_name": "Kanembu"
+    },
+    {
+      "id": "kn",
+      "name": "kannada",
+      "display_name": "Kannada"
+    },
+    {
+      "id": "kai",
+      "name": "karekare",
+      "display_name": "Karekare"
+    },
+    {
+      "id": "ks",
+      "name": "kashmiri",
+      "display_name": "Kashmiri"
+    },
+    {
+      "id": "tkt",
+      "name": "kathoriya tharu",
+      "display_name": "Kathoriya Tharu"
+    },
+    {
+      "id": "bsh",
+      "name": "kati",
+      "display_name": "Kati"
+    },
+    {
+      "id": "kk",
+      "name": "kazakh",
+      "display_name": "Kazakh"
+    },
+    {
+      "id": "eyo",
+      "name": "keiyo",
+      "display_name": "Keiyo"
+    },
+    {
+      "id": "khg",
+      "name": "khams tibetan",
+      "display_name": "Khams Tibetan"
+    },
+    {
+      "id": "ogo",
+      "name": "khana",
+      "display_name": "Khana"
+    },
+    {
+      "id": "xhe",
+      "name": "khetrani",
+      "display_name": "Khetrani"
+    },
+    {
+      "id": "km",
+      "name": "khmer",
+      "display_name": "Khmer"
+    },
+    {
+      "id": "khw",
+      "name": "khowar",
+      "display_name": "Khowar"
+    },
+    {
+      "id": "zga",
+      "name": "kinga",
+      "display_name": "Kinga"
+    },
+    {
+      "id": "kfk",
+      "name": "kinnauri",
+      "display_name": "Kinnauri"
+    },
+    {
+      "id": "rw",
+      "name": "kinyarwanda",
+      "display_name": "Kinyarwanda"
+    },
+    {
+      "id": "ky",
+      "name": "kirghiz",
+      "display_name": "Kirghiz"
+    },
+    {
+      "id": "fkk",
+      "name": "kirya-konzəl",
+      "display_name": "Kirya-Konzəl"
+    },
+    {
+      "id": "thq",
+      "name": "kochila tharu",
+      "display_name": "Kochila Tharu"
+    },
+    {
+      "id": "plk",
+      "name": "kohistani shina",
+      "display_name": "Kohistani Shina"
+    },
+    {
+      "id": "bcs",
+      "name": "kohumono",
+      "display_name": "Kohumono"
+    },
+    {
+      "id": "trp",
+      "name": "kok borok",
+      "display_name": "Kok Borok"
+    },
+    {
+      "id": "kol",
+      "name": "kol (papua new guinea)",
+      "display_name": "Kol (Papua New Guinea)"
+    },
+    {
+      "id": "bkm",
+      "name": "kom (cameroon)",
+      "display_name": "Kom (Cameroon)"
+    },
+    {
+      "id": "kmy",
+      "name": "koma",
+      "display_name": "Koma"
+    },
+    {
+      "id": "knn",
+      "name": "konkani",
+      "display_name": "Konkani"
+    },
+    {
+      "id": "koo",
+      "name": "konzo",
+      "display_name": "Konzo"
+    },
+    {
+      "id": "ko",
+      "name": "korean",
+      "display_name": "Korean"
+    },
+    {
+      "id": "kfp",
+      "name": "korwa",
+      "display_name": "Korwa"
+    },
+    {
+      "id": "kfe",
+      "name": "kota (india)",
+      "display_name": "Kota (India)"
+    },
+    {
+      "id": "eko",
+      "name": "koti",
+      "display_name": "Koti"
+    },
+    {
+      "id": "ksd",
+      "name": "kuanua",
+      "display_name": "Kuanua"
+    },
+    {
+      "id": "kj",
+      "name": "kuanyama",
+      "display_name": "Kuanyama"
+    },
+    {
+      "id": "uki",
+      "name": "kui (india)",
+      "display_name": "Kui (India)"
+    },
+    {
+      "id": "bbu",
+      "name": "kulung (nigeria)",
+      "display_name": "Kulung (Nigeria)"
+    },
+    {
+      "id": "kto",
+      "name": "kuot",
+      "display_name": "Kuot"
+    },
+    {
+      "id": "kuh",
+      "name": "kushi",
+      "display_name": "Kushi"
+    },
+    {
+      "id": "kwm",
+      "name": "kwambi",
+      "display_name": "Kwambi"
+    },
+    {
+      "id": "nmg",
+      "name": "kwasio",
+      "display_name": "Kwasio"
+    },
+    {
+      "id": "lla",
+      "name": "lala-roba",
+      "display_name": "Lala-Roba"
+    },
+    {
+      "id": "hia",
+      "name": "lamang",
+      "display_name": "Lamang"
+    },
+    {
+      "id": "lo",
+      "name": "lao",
+      "display_name": "Lao"
+    },
+    {
+      "id": "alo",
+      "name": "larike-wakasihu",
+      "display_name": "Larike-Wakasihu"
+    },
+    {
+      "id": "lss",
+      "name": "lasi",
+      "display_name": "Lasi"
+    },
+    {
+      "id": "ltg",
+      "name": "latgalian",
+      "display_name": "Latgalian"
+    },
+    {
+      "id": "lv",
+      "name": "latvian",
+      "display_name": "Latvian"
+    },
+    {
+      "id": "apc",
+      "name": "levantine arabic",
+      "display_name": "Levantine Arabic"
+    },
+    {
+      "id": "ste",
+      "name": "liana-seti",
+      "display_name": "Liana-Seti"
+    },
+    {
+      "id": "xpe",
+      "name": "liberia kpelle",
+      "display_name": "Liberia Kpelle"
+    },
+    {
+      "id": "lir",
+      "name": "liberian english",
+      "display_name": "Liberian English"
+    },
+    {
+      "id": "ayl",
+      "name": "libyan arabic",
+      "display_name": "Libyan Arabic"
+    },
+    {
+      "id": "lij",
+      "name": "ligurian",
+      "display_name": "Ligurian"
+    },
+    {
+      "id": "mgi",
+      "name": "lijili",
+      "display_name": "Lijili"
+    },
+    {
+      "id": "ln",
+      "name": "lingala",
+      "display_name": "Lingala"
+    },
+    {
+      "id": "lt",
+      "name": "lithuanian",
+      "display_name": "Lithuanian"
+    },
+    {
+      "id": "lrk",
+      "name": "loarki",
+      "display_name": "Loarki"
+    },
+    {
+      "id": "rag",
+      "name": "logooli",
+      "display_name": "Logooli"
+    },
+    {
+      "id": "src",
+      "name": "logudorese sardinian",
+      "display_name": "Logudorese Sardinian"
+    },
+    {
+      "id": "qvj",
+      "name": "loja highland quichua",
+      "display_name": "Loja Highland Quichua"
+    },
+    {
+      "id": "loa",
+      "name": "loloda",
+      "display_name": "Loloda"
+    },
+    {
+      "id": "lnu",
+      "name": "longuda",
+      "display_name": "Longuda"
+    },
+    {
+      "id": "ztp",
+      "name": "loxicha zapotec",
+      "display_name": "Loxicha Zapotec"
+    },
+    {
+      "id": "lua",
+      "name": "luba-lulua",
+      "display_name": "Luba-Lulua"
+    },
+    {
+      "id": "luo",
+      "name": "luo",
+      "display_name": "Luo"
+    },
+    {
+      "id": "lus",
+      "name": "lushai",
+      "display_name": "Lushai"
+    },
+    {
+      "id": "lb",
+      "name": "luxembourgish",
+      "display_name": "Luxembourgish"
+    },
+    {
+      "id": "ffm",
+      "name": "maasina fulfulde",
+      "display_name": "Maasina Fulfulde"
+    },
+    {
+      "id": "mde",
+      "name": "maba (chad)",
+      "display_name": "Maba (Chad)"
+    },
+    {
+      "id": "rup",
+      "name": "macedo-romanian",
+      "display_name": "Macedo-Romanian"
+    },
+    {
+      "id": "mk",
+      "name": "macedonian",
+      "display_name": "Macedonian"
+    },
+    {
+      "id": "mxu",
+      "name": "mada (cameroon)",
+      "display_name": "Mada (Cameroon)"
+    },
+    {
+      "id": "maf",
+      "name": "mafa",
+      "display_name": "Mafa"
+    },
+    {
+      "id": "mai",
+      "name": "maithili",
+      "display_name": "Maithili"
+    },
+    {
+      "id": "ms",
+      "name": "malay",
+      "display_name": "Malay"
+    },
+    {
+      "id": "ml",
+      "name": "malayalam",
+      "display_name": "Malayalam"
+    },
+    {
+      "id": "gcc",
+      "name": "mali",
+      "display_name": "Mali"
+    },
+    {
+      "id": "tcf",
+      "name": "malinaltepec me'phaa",
+      "display_name": "Malinaltepec Me'phaa"
+    },
+    {
+      "id": "mt",
+      "name": "maltese",
+      "display_name": "Maltese"
+    },
+    {
+      "id": "tbf",
+      "name": "mandara",
+      "display_name": "Mandara"
+    },
+    {
+      "id": "mfv",
+      "name": "mandjak",
+      "display_name": "Mandjak"
+    },
+    {
+      "id": "mqy",
+      "name": "manggarai",
+      "display_name": "Manggarai"
+    },
+    {
+      "id": "mni",
+      "name": "manipuri",
+      "display_name": "Manipuri"
+    },
+    {
+      "id": "msw",
+      "name": "mansoanka",
+      "display_name": "Mansoanka"
+    },
+    {
+      "id": "gv",
+      "name": "manx",
+      "display_name": "Manx"
+    },
+    {
+      "id": "mi",
+      "name": "maori",
+      "display_name": "Maori"
+    },
+    {
+      "id": "mr",
+      "name": "marathi",
+      "display_name": "Marathi"
+    },
+    {
+      "id": "mrt",
+      "name": "marghi central",
+      "display_name": "Marghi Central"
+    },
+    {
+      "id": "mfm",
+      "name": "marghi south",
+      "display_name": "Marghi South"
+    },
+    {
+      "id": "mrr",
+      "name": "maria (india)",
+      "display_name": "Maria (India)"
+    },
+    {
+      "id": "mve",
+      "name": "marwari (pakistan)",
+      "display_name": "Marwari (Pakistan)"
+    },
+    {
+      "id": "mcn",
+      "name": "masana",
+      "display_name": "Masana"
+    },
+    {
+      "id": "msh",
+      "name": "masikoro malagasy",
+      "display_name": "Masikoro Malagasy"
+    },
+    {
+      "id": "mcf",
+      "name": "matsés",
+      "display_name": "Matsés"
+    },
+    {
+      "id": "zpy",
+      "name": "mazaltepec zapotec",
+      "display_name": "Mazaltepec Zapotec"
+    },
+    {
+      "id": "vmz",
+      "name": "mazatlán mazatec",
+      "display_name": "Mazatlán Mazatec"
+    },
+    {
+      "id": "mzl",
+      "name": "mazatlán mixe",
+      "display_name": "Mazatlán Mixe"
+    },
+    {
+      "id": "mfo",
+      "name": "mbe",
+      "display_name": "Mbe"
+    },
+    {
+      "id": "mbo",
+      "name": "mbo (cameroon)",
+      "display_name": "Mbo (Cameroon)"
+    },
+    {
+      "id": "mdd",
+      "name": "mbum",
+      "display_name": "Mbum"
+    },
+    {
+      "id": "byv",
+      "name": "medumba",
+      "display_name": "Medumba"
+    },
+    {
+      "id": "mek",
+      "name": "mekeo",
+      "display_name": "Mekeo"
+    },
+    {
+      "id": "mer",
+      "name": "meru",
+      "display_name": "Meru"
+    },
+    {
+      "id": "acm",
+      "name": "mesopotamian arabic",
+      "display_name": "Mesopotamian Arabic"
+    },
+    {
+      "id": "mtr",
+      "name": "mewari",
+      "display_name": "Mewari"
+    },
+    {
+      "id": "nan",
+      "name": "min nan chinese",
+      "display_name": "Min Nan Chinese"
+    },
+    {
+      "id": "xmf",
+      "name": "mingrelian",
+      "display_name": "Mingrelian"
+    },
+    {
+      "id": "vmm",
+      "name": "mitlatongo mixtec",
+      "display_name": "Mitlatongo Mixtec"
+    },
+    {
+      "id": "mkf",
+      "name": "miya",
+      "display_name": "Miya"
+    },
+    {
+      "id": "bri",
+      "name": "mokpwe",
+      "display_name": "Mokpwe"
+    },
+    {
+      "id": "mdf",
+      "name": "moksha",
+      "display_name": "Moksha"
+    },
+    {
+      "id": "ver",
+      "name": "mom jango",
+      "display_name": "Mom Jango"
+    },
+    {
+      "id": "mn",
+      "name": "mongolian",
+      "display_name": "Mongolian"
+    },
+    {
+      "id": "ary",
+      "name": "moroccan arabic",
+      "display_name": "Moroccan Arabic"
+    },
+    {
+      "id": "meu",
+      "name": "motu",
+      "display_name": "Motu"
+    },
+    {
+      "id": "mcx",
+      "name": "mpiemo",
+      "display_name": "Mpiemo"
+    },
+    {
+      "id": "mgg",
+      "name": "mpumpong",
+      "display_name": "Mpumpong"
+    },
+    {
+      "id": "mua",
+      "name": "mundang",
+      "display_name": "Mundang"
+    },
+    {
+      "id": "mhk",
+      "name": "mungaka",
+      "display_name": "Mungaka"
+    },
+    {
+      "id": "mse",
+      "name": "musey",
+      "display_name": "Musey"
+    },
+    {
+      "id": "mug",
+      "name": "musgu",
+      "display_name": "Musgu"
+    },
+    {
+      "id": "mui",
+      "name": "musi",
+      "display_name": "Musi"
+    },
+    {
+      "id": "mne",
+      "name": "naba",
+      "display_name": "Naba"
+    },
+    {
+      "id": "ars",
+      "name": "najdi arabic",
+      "display_name": "Najdi Arabic"
+    },
+    {
+      "id": "nal",
+      "name": "nalik",
+      "display_name": "Nalik"
+    },
+    {
+      "id": "nmz",
+      "name": "nawdm",
+      "display_name": "Nawdm"
+    },
+    {
+      "id": "ng",
+      "name": "ndonga",
+      "display_name": "Ndonga"
+    },
+    {
+      "id": "nap",
+      "name": "neapolitan",
+      "display_name": "Neapolitan"
+    },
+    {
+      "id": "npi",
+      "name": "nepali",
+      "display_name": "Nepali"
+    },
+    {
+      "id": "nbh",
+      "name": "ngamo",
+      "display_name": "Ngamo"
+    },
+    {
+      "id": "anc",
+      "name": "ngas",
+      "display_name": "Ngas"
+    },
+    {
+      "id": "nnh",
+      "name": "ngiemboon",
+      "display_name": "Ngiemboon"
+    },
+    {
+      "id": "ngi",
+      "name": "ngizim",
+      "display_name": "Ngizim"
+    },
+    {
+      "id": "jgo",
+      "name": "ngomba",
+      "display_name": "Ngomba"
+    },
+    {
+      "id": "nla",
+      "name": "ngombale",
+      "display_name": "Ngombale"
+    },
+    {
+      "id": "fuv",
+      "name": "nigerian fulfulde",
+      "display_name": "Nigerian Fulfulde"
+    },
+    {
+      "id": "pcm",
+      "name": "nigerian pidgin",
+      "display_name": "Nigerian Pidgin"
+    },
+    {
+      "id": "noe",
+      "name": "nimadi",
+      "display_name": "Nimadi"
+    },
+    {
+      "id": "fia",
+      "name": "nobiin",
+      "display_name": "Nobiin"
+    },
+    {
+      "id": "ayp",
+      "name": "north mesopotamian arabic",
+      "display_name": "North Mesopotamian Arabic"
+    },
+    {
+      "id": "max",
+      "name": "north moluccan malay",
+      "display_name": "North Moluccan Malay"
+    },
+    {
+      "id": "bmm",
+      "name": "northern betsimisaraka malagasy",
+      "display_name": "Northern Betsimisaraka Malagasy"
+    },
+    {
+      "id": "hno",
+      "name": "northern hindko",
+      "display_name": "Northern Hindko"
+    },
+    {
+      "id": "kmr",
+      "name": "northern kurdish",
+      "display_name": "Northern Kurdish"
+    },
+    {
+      "id": "pmq",
+      "name": "northern pame",
+      "display_name": "Northern Pame"
+    },
+    {
+      "id": "pbu",
+      "name": "northern pashto",
+      "display_name": "Northern Pashto"
+    },
+    {
+      "id": "uzn",
+      "name": "northern uzbek",
+      "display_name": "Northern Uzbek"
+    },
+    {
+      "id": "gya",
+      "name": "northwest gbaya",
+      "display_name": "Northwest Gbaya"
+    },
+    {
+      "id": "no",
+      "name": "norwegian",
+      "display_name": "Norwegian"
+    },
+    {
+      "id": "nb",
+      "name": "norwegian bokmål",
+      "display_name": "Norwegian Bokmål"
+    },
+    {
+      "id": "nn",
+      "name": "norwegian nynorsk",
+      "display_name": "Norwegian Nynorsk"
+    },
+    {
+      "id": "ncf",
+      "name": "notsi",
+      "display_name": "Notsi"
+    },
+    {
+      "id": "yes",
+      "name": "nyankpa",
+      "display_name": "Nyankpa"
+    },
+    {
+      "id": "nyu",
+      "name": "nyungwe",
+      "display_name": "Nyungwe"
+    },
+    {
+      "id": "nja",
+      "name": "nzanyi",
+      "display_name": "Nzanyi"
+    },
+    {
+      "id": "hux",
+      "name": "nüpode huitoto",
+      "display_name": "Nüpode Huitoto"
+    },
+    {
+      "id": "oc",
+      "name": "occitan",
+      "display_name": "Occitan"
+    },
+    {
+      "id": "odk",
+      "name": "od",
+      "display_name": "Od"
+    },
+    {
+      "id": "ory",
+      "name": "odia",
+      "display_name": "Odia"
+    },
+    {
+      "id": "odu",
+      "name": "odual",
+      "display_name": "Odual"
+    },
+    {
+      "id": "acx",
+      "name": "omani arabic",
+      "display_name": "Omani Arabic"
+    },
+    {
+      "id": "nlv",
+      "name": "orizaba nahuatl",
+      "display_name": "Orizaba Nahuatl"
+    },
+    {
+      "id": "orc",
+      "name": "orma",
+      "display_name": "Orma"
+    },
+    {
+      "id": "oru",
+      "name": "ormuri",
+      "display_name": "Ormuri"
+    },
+    {
+      "id": "om",
+      "name": "oromo",
+      "display_name": "Oromo"
+    },
+    {
+      "id": "phr",
+      "name": "pahari-potwari",
+      "display_name": "Pahari-Potwari"
+    },
+    {
+      "id": "pwn",
+      "name": "paiwan",
+      "display_name": "Paiwan"
+    },
+    {
+      "id": "pa",
+      "name": "panjabi",
+      "display_name": "Panjabi"
+    },
+    {
+      "id": "pmy",
+      "name": "papuan malay",
+      "display_name": "Papuan Malay"
+    },
+    {
+      "id": "kvx",
+      "name": "parkari koli",
+      "display_name": "Parkari Koli"
+    },
+    {
+      "id": "nso",
+      "name": "pedi",
+      "display_name": "Pedi"
+    },
+    {
+      "id": "pip",
+      "name": "pero",
+      "display_name": "Pero"
+    },
+    {
+      "id": "fa",
+      "name": "persian",
+      "display_name": "Persian"
+    },
+    {
+      "id": "pex",
+      "name": "petats",
+      "display_name": "Petats"
+    },
+    {
+      "id": "phl",
+      "name": "phalura",
+      "display_name": "Phalura"
+    },
+    {
+      "id": "pms",
+      "name": "piemontese",
+      "display_name": "Piemontese"
+    },
+    {
+      "id": "piy",
+      "name": "piya-kwonci",
+      "display_name": "Piya-Kwonci"
+    },
+    {
+      "id": "plt",
+      "name": "plateau malagasy",
+      "display_name": "Plateau Malagasy"
+    },
+    {
+      "id": "pl",
+      "name": "polish",
+      "display_name": "Polish"
+    },
+    {
+      "id": "poc",
+      "name": "poqomam",
+      "display_name": "Poqomam"
+    },
+    {
+      "id": "pt",
+      "name": "portuguese",
+      "display_name": "Portuguese"
+    },
+    {
+      "id": "fuc",
+      "name": "pulaar",
+      "display_name": "Pulaar"
+    },
+    {
+      "id": "fuf",
+      "name": "pular",
+      "display_name": "Pular"
+    },
+    {
+      "id": "qxp",
+      "name": "puno quechua",
+      "display_name": "Puno Quechua"
+    },
+    {
+      "id": "ps",
+      "name": "pushto",
+      "display_name": "Pushto"
+    },
+    {
+      "id": "pko",
+      "name": "pökoot",
+      "display_name": "Pökoot"
+    },
+    {
+      "id": "byx",
+      "name": "qaqet",
+      "display_name": "Qaqet"
+    },
+    {
+      "id": "chq",
+      "name": "quiotepec chinantec",
+      "display_name": "Quiotepec Chinantec"
+    },
+    {
+      "id": "thr",
+      "name": "rana tharu",
+      "display_name": "Rana Tharu"
+    },
+    {
+      "id": "lag",
+      "name": "rangi",
+      "display_name": "Rangi"
+    },
+    {
+      "id": "kyx",
+      "name": "rapoisi",
+      "display_name": "Rapoisi"
+    },
+    {
+      "id": "rth",
+      "name": "ratahan",
+      "display_name": "Ratahan"
+    },
+    {
+      "id": "zor",
+      "name": "rayón zoque",
+      "display_name": "Rayón Zoque"
+    },
+    {
+      "id": "ro",
+      "name": "romanian",
+      "display_name": "Romanian"
+    },
+    {
+      "id": "rm",
+      "name": "romansh",
+      "display_name": "Romansh"
+    },
+    {
+      "id": "rof",
+      "name": "rombo",
+      "display_name": "Rombo"
+    },
+    {
+      "id": "roo",
+      "name": "rotokas",
+      "display_name": "Rotokas"
+    },
+    {
+      "id": "dru",
+      "name": "rukai",
+      "display_name": "Rukai"
+    },
+    {
+      "id": "ru",
+      "name": "russian",
+      "display_name": "Russian"
+    },
+    {
+      "id": "quv",
+      "name": "sacapulteco",
+      "display_name": "Sacapulteco"
+    },
+    {
+      "id": "aec",
+      "name": "saidi arabic",
+      "display_name": "Saidi Arabic"
+    },
+    {
+      "id": "skg",
+      "name": "sakalava malagasy",
+      "display_name": "Sakalava Malagasy"
+    },
+    {
+      "id": "szy",
+      "name": "sakizaya",
+      "display_name": "Sakizaya"
+    },
+    {
+      "id": "sau",
+      "name": "saleman",
+      "display_name": "Saleman"
+    },
+    {
+      "id": "ccg",
+      "name": "samba daka",
+      "display_name": "Samba Daka"
+    },
+    {
+      "id": "ndi",
+      "name": "samba leko",
+      "display_name": "Samba Leko"
+    },
+    {
+      "id": "pow",
+      "name": "san felipe otlaltepec popoloca",
+      "display_name": "San Felipe Otlaltepec Popoloca"
+    },
+    {
+      "id": "hue",
+      "name": "san francisco del mar huave",
+      "display_name": "San Francisco Del Mar Huave"
+    },
+    {
+      "id": "poe",
+      "name": "san juan atzingo popoloca",
+      "display_name": "San Juan Atzingo Popoloca"
+    },
+    {
+      "id": "trq",
+      "name": "san martín itunyoso triqui",
+      "display_name": "San Martín Itunyoso Triqui"
+    },
+    {
+      "id": "mig",
+      "name": "san miguel el grande mixtec",
+      "display_name": "San Miguel El Grande Mixtec"
+    },
+    {
+      "id": "ssi",
+      "name": "sansi",
+      "display_name": "Sansi"
+    },
+    {
+      "id": "sa",
+      "name": "sanskrit",
+      "display_name": "Sanskrit"
+    },
+    {
+      "id": "qxt",
+      "name": "santa ana de tusi pasco quechua",
+      "display_name": "Santa Ana de Tusi Pasco Quechua"
+    },
+    {
+      "id": "ztn",
+      "name": "santa catarina albarradas zapotec",
+      "display_name": "Santa Catarina Albarradas Zapotec"
+    },
+    {
+      "id": "sat",
+      "name": "santali",
+      "display_name": "Santali"
+    },
+    {
+      "id": "qus",
+      "name": "santiago del estero quichua",
+      "display_name": "Santiago del Estero Quichua"
+    },
+    {
+      "id": "sps",
+      "name": "saposa",
+      "display_name": "Saposa"
+    },
+    {
+      "id": "skr",
+      "name": "saraiki",
+      "display_name": "Saraiki"
+    },
+    {
+      "id": "sc",
+      "name": "sardinian",
+      "display_name": "Sardinian"
+    },
+    {
+      "id": "say",
+      "name": "saya",
+      "display_name": "Saya"
+    },
+    {
+      "id": "trv",
+      "name": "sediq",
+      "display_name": "Sediq"
+    },
+    {
+      "id": "sr",
+      "name": "serbian",
+      "display_name": "Serbian"
+    },
+    {
+      "id": "sei",
+      "name": "seri",
+      "display_name": "Seri"
+    },
+    {
+      "id": "scl",
+      "name": "shina",
+      "display_name": "Shina"
+    },
+    {
+      "id": "sn",
+      "name": "shona",
+      "display_name": "Shona"
+    },
+    {
+      "id": "sjr",
+      "name": "siar-lak",
+      "display_name": "Siar-Lak"
+    },
+    {
+      "id": "nco",
+      "name": "sibe",
+      "display_name": "Sibe"
+    },
+    {
+      "id": "scn",
+      "name": "sicilian",
+      "display_name": "Sicilian"
+    },
+    {
+      "id": "qws",
+      "name": "sihuas ancash quechua",
+      "display_name": "Sihuas Ancash Quechua"
+    },
+    {
+      "id": "sip",
+      "name": "sikkimese",
+      "display_name": "Sikkimese"
+    },
+    {
+      "id": "snc",
+      "name": "sinaugoro",
+      "display_name": "Sinaugoro"
+    },
+    {
+      "id": "sd",
+      "name": "sindhi",
+      "display_name": "Sindhi"
+    },
+    {
+      "id": "sbn",
+      "name": "sindhi bhil",
+      "display_name": "Sindhi Bhil"
+    },
+    {
+      "id": "si",
+      "name": "sinhala",
+      "display_name": "Sinhala"
+    },
+    {
+      "id": "xti",
+      "name": "sinicahua mixtec",
+      "display_name": "Sinicahua Mixtec"
+    },
+    {
+      "id": "qum",
+      "name": "sipacapense",
+      "display_name": "Sipacapense"
+    },
+    {
+      "id": "siw",
+      "name": "siwai",
+      "display_name": "Siwai"
+    },
+    {
+      "id": "sk",
+      "name": "slovak",
+      "display_name": "Slovak"
+    },
+    {
+      "id": "sl",
+      "name": "slovenian",
+      "display_name": "Slovenian"
+    },
+    {
+      "id": "sol",
+      "name": "solos",
+      "display_name": "Solos"
+    },
+    {
+      "id": "so",
+      "name": "somali",
+      "display_name": "Somali"
+    },
+    {
+      "id": "snk",
+      "name": "soninke",
+      "display_name": "Soninke"
+    },
+    {
+      "id": "giz",
+      "name": "south giziga",
+      "display_name": "South Giziga"
+    },
+    {
+      "id": "cpy",
+      "name": "south ucayali ashéninka",
+      "display_name": "South Ucayali Ashéninka"
+    },
+    {
+      "id": "mxy",
+      "name": "southeastern nochixtlán mixtec",
+      "display_name": "Southeastern Nochixtlán Mixtec"
+    },
+    {
+      "id": "bzc",
+      "name": "southern betsimisaraka malagasy",
+      "display_name": "Southern Betsimisaraka Malagasy"
+    },
+    {
+      "id": "pbt",
+      "name": "southern pashto",
+      "display_name": "Southern Pashto"
+    },
+    {
+      "id": "qup",
+      "name": "southern pastaza quechua",
+      "display_name": "Southern Pastaza Quechua"
+    },
+    {
+      "id": "vmp",
+      "name": "soyaltepec mazatec",
+      "display_name": "Soyaltepec Mazatec"
+    },
+    {
+      "id": "es",
+      "name": "spanish",
+      "display_name": "Spanish"
+    },
+    {
+      "id": "arb",
+      "name": "standard arabic",
+      "display_name": "Standard Arabic"
+    },
+    {
+      "id": "zgh",
+      "name": "standard moroccan tamazight",
+      "display_name": "Standard Moroccan Tamazight"
+    },
+    {
+      "id": "apd",
+      "name": "sudanese arabic",
+      "display_name": "Sudanese Arabic"
+    },
+    {
+      "id": "sua",
+      "name": "sulka",
+      "display_name": "Sulka"
+    },
+    {
+      "id": "sva",
+      "name": "svan",
+      "display_name": "Svan"
+    },
+    {
+      "id": "sw",
+      "name": "swahili",
+      "display_name": "Swahili"
+    },
+    {
+      "id": "sv",
+      "name": "swedish",
+      "display_name": "Swedish"
+    },
+    {
+      "id": "rob",
+      "name": "tae'",
+      "display_name": "Tae'"
+    },
+    {
+      "id": "thv",
+      "name": "tahaggart tamahaq",
+      "display_name": "Tahaggart Tamahaq"
+    },
+    {
+      "id": "dav",
+      "name": "taita",
+      "display_name": "Taita"
+    },
+    {
+      "id": "tg",
+      "name": "tajik",
+      "display_name": "Tajik"
+    },
+    {
+      "id": "ta",
+      "name": "tamil",
+      "display_name": "Tamil"
+    },
+    {
+      "id": "tdx",
+      "name": "tandroy-mahafaly malagasy",
+      "display_name": "Tandroy-Mahafaly Malagasy"
+    },
+    {
+      "id": "tan",
+      "name": "tangale",
+      "display_name": "Tangale"
+    },
+    {
+      "id": "txy",
+      "name": "tanosy malagasy",
+      "display_name": "Tanosy Malagasy"
+    },
+    {
+      "id": "yer",
+      "name": "tarok",
+      "display_name": "Tarok"
+    },
+    {
+      "id": "tt",
+      "name": "tatar",
+      "display_name": "Tatar"
+    },
+    {
+      "id": "tuq",
+      "name": "tedaga",
+      "display_name": "Tedaga"
+    },
+    {
+      "id": "te",
+      "name": "telugu",
+      "display_name": "Telugu"
+    },
+    {
+      "id": "kdh",
+      "name": "tem",
+      "display_name": "Tem"
+    },
+    {
+      "id": "tio",
+      "name": "teop",
+      "display_name": "Teop"
+    },
+    {
+      "id": "cux",
+      "name": "tepeuxila cuicatec",
+      "display_name": "Tepeuxila Cuicatec"
+    },
+    {
+      "id": "cte",
+      "name": "tepinapa chinantec",
+      "display_name": "Tepinapa Chinantec"
+    },
+    {
+      "id": "ttr",
+      "name": "tera",
+      "display_name": "Tera"
+    },
+    {
+      "id": "buo",
+      "name": "terei",
+      "display_name": "Terei"
+    },
+    {
+      "id": "twu",
+      "name": "termanu",
+      "display_name": "Termanu"
+    },
+    {
+      "id": "tkg",
+      "name": "tesaka malagasy",
+      "display_name": "Tesaka Malagasy"
+    },
+    {
+      "id": "nhg",
+      "name": "tetelcingo nahuatl",
+      "display_name": "Tetelcingo Nahuatl"
+    },
+    {
+      "id": "cut",
+      "name": "teutila cuicatec",
+      "display_name": "Teutila Cuicatec"
+    },
+    {
+      "id": "th",
+      "name": "thai",
+      "display_name": "Thai"
+    },
+    {
+      "id": "bo",
+      "name": "tibetan",
+      "display_name": "Tibetan"
+    },
+    {
+      "id": "mtx",
+      "name": "tidaá mixtec",
+      "display_name": "Tidaá Mixtec"
+    },
+    {
+      "id": "tvo",
+      "name": "tidore",
+      "display_name": "Tidore"
+    },
+    {
+      "id": "tgc",
+      "name": "tigak",
+      "display_name": "Tigak"
+    },
+    {
+      "id": "tig",
+      "name": "tigre",
+      "display_name": "Tigre"
+    },
+    {
+      "id": "ti",
+      "name": "tigrinya",
+      "display_name": "Tigrinya"
+    },
+    {
+      "id": "zts",
+      "name": "tilquiapan zapotec",
+      "display_name": "Tilquiapan Zapotec"
+    },
+    {
+      "id": "tpz",
+      "name": "tinputz",
+      "display_name": "Tinputz"
+    },
+    {
+      "id": "tpl",
+      "name": "tlacoapa me'phaa",
+      "display_name": "Tlacoapa Me'phaa"
+    },
+    {
+      "id": "ctl",
+      "name": "tlacoatzintepec chinantec",
+      "display_name": "Tlacoatzintepec Chinantec"
+    },
+    {
+      "id": "tli",
+      "name": "tlingit",
+      "display_name": "Tlingit"
+    },
+    {
+      "id": "tok",
+      "name": "toki pona",
+      "display_name": "Toki Pona"
+    },
+    {
+      "id": "tqp",
+      "name": "tomoip",
+      "display_name": "Tomoip"
+    },
+    {
+      "id": "tdn",
+      "name": "tondano",
+      "display_name": "Tondano"
+    },
+    {
+      "id": "txs",
+      "name": "tonsea",
+      "display_name": "Tonsea"
+    },
+    {
+      "id": "ttj",
+      "name": "tooro",
+      "display_name": "Tooro"
+    },
+    {
+      "id": "ttu",
+      "name": "torau",
+      "display_name": "Torau"
+    },
+    {
+      "id": "trw",
+      "name": "torwali",
+      "display_name": "Torwali"
+    },
+    {
+      "id": "xmw",
+      "name": "tsimihety malagasy",
+      "display_name": "Tsimihety Malagasy"
+    },
+    {
+      "id": "lto",
+      "name": "tsotso",
+      "display_name": "Tsotso"
+    },
+    {
+      "id": "tn",
+      "name": "tswana",
+      "display_name": "Tswana"
+    },
+    {
+      "id": "tuy",
+      "name": "tugen",
+      "display_name": "Tugen"
+    },
+    {
+      "id": "bag",
+      "name": "tuki",
+      "display_name": "Tuki"
+    },
+    {
+      "id": "tul",
+      "name": "tula",
+      "display_name": "Tula"
+    },
+    {
+      "id": "tcy",
+      "name": "tulu",
+      "display_name": "Tulu"
+    },
+    {
+      "id": "tvu",
+      "name": "tunen",
+      "display_name": "Tunen"
+    },
+    {
+      "id": "lcm",
+      "name": "tungag",
+      "display_name": "Tungag"
+    },
+    {
+      "id": "aeb",
+      "name": "tunisian arabic",
+      "display_name": "Tunisian Arabic"
+    },
+    {
+      "id": "tui",
+      "name": "tupuri",
+      "display_name": "Tupuri"
+    },
+    {
+      "id": "tuv",
+      "name": "turkana",
+      "display_name": "Turkana"
+    },
+    {
+      "id": "tr",
+      "name": "turkish",
+      "display_name": "Turkish"
+    },
+    {
+      "id": "tk",
+      "name": "turkmen",
+      "display_name": "Turkmen"
+    },
+    {
+      "id": "mtu",
+      "name": "tututepec mixtec",
+      "display_name": "Tututepec Mixtec"
+    },
+    {
+      "id": "tw",
+      "name": "twi",
+      "display_name": "Twi"
+    },
+    {
+      "id": "byc",
+      "name": "ubaghara",
+      "display_name": "Ubaghara"
+    },
+    {
+      "id": "ug",
+      "name": "uighur",
+      "display_name": "Uighur"
+    },
+    {
+      "id": "uk",
+      "name": "ukrainian",
+      "display_name": "Ukrainian"
+    },
+    {
+      "id": "umb",
+      "name": "umbundu",
+      "display_name": "Umbundu"
+    },
+    {
+      "id": "hsb",
+      "name": "upper sorbian",
+      "display_name": "Upper Sorbian"
+    },
+    {
+      "id": "ur",
+      "name": "urdu",
+      "display_name": "Urdu"
+    },
+    {
+      "id": "ush",
+      "name": "ushojo",
+      "display_name": "Ushojo"
+    },
+    {
+      "id": "uz",
+      "name": "uzbek",
+      "display_name": "Uzbek"
+    },
+    {
+      "id": "vai",
+      "name": "vai",
+      "display_name": "Vai"
+    },
+    {
+      "id": "vi",
+      "name": "vietnamese",
+      "display_name": "Vietnamese"
+    },
+    {
+      "id": "vot",
+      "name": "votic",
+      "display_name": "Votic"
+    },
+    {
+      "id": "vro",
+      "name": "võro",
+      "display_name": "Võro"
+    },
+    {
+      "id": "wci",
+      "name": "waci gbe",
+      "display_name": "Waci Gbe"
+    },
+    {
+      "id": "kxp",
+      "name": "wadiyara koli",
+      "display_name": "Wadiyara Koli"
+    },
+    {
+      "id": "wja",
+      "name": "waja",
+      "display_name": "Waja"
+    },
+    {
+      "id": "wbl",
+      "name": "wakhi",
+      "display_name": "Wakhi"
+    },
+    {
+      "id": "lwg",
+      "name": "wanga",
+      "display_name": "Wanga"
+    },
+    {
+      "id": "juk",
+      "name": "wapan",
+      "display_name": "Wapan"
+    },
+    {
+      "id": "wji",
+      "name": "warji",
+      "display_name": "Warji"
+    },
+    {
+      "id": "cy",
+      "name": "welsh",
+      "display_name": "Welsh"
+    },
+    {
+      "id": "weo",
+      "name": "wemale",
+      "display_name": "Wemale"
+    },
+    {
+      "id": "fy",
+      "name": "western frisian",
+      "display_name": "Western Frisian"
+    },
+    {
+      "id": "pua",
+      "name": "western highland purepecha",
+      "display_name": "Western Highland Purepecha"
+    },
+    {
+      "id": "jmx",
+      "name": "western juxtlahuaca mixtec",
+      "display_name": "Western Juxtlahuaca Mixtec"
+    },
+    {
+      "id": "mlq",
+      "name": "western maninkakan",
+      "display_name": "Western Maninkakan"
+    },
+    {
+      "id": "mrj",
+      "name": "western mari",
+      "display_name": "Western Mari"
+    },
+    {
+      "id": "fuh",
+      "name": "western niger fulfulde",
+      "display_name": "Western Niger Fulfulde"
+    },
+    {
+      "id": "pnb",
+      "name": "western panjabi",
+      "display_name": "Western Panjabi"
+    },
+    {
+      "id": "wo",
+      "name": "wolof",
+      "display_name": "Wolof"
+    },
+    {
+      "id": "udl",
+      "name": "wuzlam",
+      "display_name": "Wuzlam"
+    },
+    {
+      "id": "ztg",
+      "name": "xanaguía zapotec",
+      "display_name": "Xanaguía Zapotec"
+    },
+    {
+      "id": "xh",
+      "name": "xhosa",
+      "display_name": "Xhosa"
+    },
+    {
+      "id": "ekr",
+      "name": "yace",
+      "display_name": "Yace"
+    },
+    {
+      "id": "sah",
+      "name": "yakut",
+      "display_name": "Yakut"
+    },
+    {
+      "id": "jal",
+      "name": "yalahatan",
+      "display_name": "Yalahatan"
+    },
+    {
+      "id": "qur",
+      "name": "yanahuanca pasco quechua",
+      "display_name": "Yanahuanca Pasco Quechua"
+    },
+    {
+      "id": "yav",
+      "name": "yangben",
+      "display_name": "Yangben"
+    },
+    {
+      "id": "yaq",
+      "name": "yaqui",
+      "display_name": "Yaqui"
+    },
+    {
+      "id": "qux",
+      "name": "yauyos quechua",
+      "display_name": "Yauyos Quechua"
+    },
+    {
+      "id": "ets",
+      "name": "yekhee",
+      "display_name": "Yekhee"
+    },
+    {
+      "id": "yi",
+      "name": "yiddish",
+      "display_name": "Yiddish"
+    },
+    {
+      "id": "ydg",
+      "name": "yidgha",
+      "display_name": "Yidgha"
+    },
+    {
+      "id": "yo",
+      "name": "yoruba",
+      "display_name": "Yoruba"
+    },
+    {
+      "id": "mab",
+      "name": "yutanduchi mixtec",
+      "display_name": "Yutanduchi Mixtec"
+    },
+    {
+      "id": "nhi",
+      "name": "zacatlán-ahuacatlán-tepetzintla nahuatl",
+      "display_name": "Zacatlán-Ahuacatlán-Tepetzintla Nahuatl"
+    },
+    {
+      "id": "dje",
+      "name": "zarma",
+      "display_name": "Zarma"
+    },
+    {
+      "id": "zza",
+      "name": "zaza",
+      "display_name": "Zaza"
+    },
+    {
+      "id": "zu",
+      "name": "zulu",
+      "display_name": "Zulu"
+    },
+    {
+      "id": "aom",
+      "name": "ömie",
+      "display_name": "Ömie"
+    }
+  ]
+}

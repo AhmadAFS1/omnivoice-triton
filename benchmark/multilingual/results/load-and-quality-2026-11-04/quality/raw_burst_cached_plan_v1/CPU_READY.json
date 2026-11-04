@@ -1,0 +1,15 @@
+{
+  "at": "2026-11-04T14:48:54.137473+00:00",
+  "measurement_kind": "AppleM5Pro CPU-only cached/coalesced proof+cleanup+drysource tests, no GPU/model execution",
+  "GPU_executed": false,
+  "tests_passed": 7,
+  "reused_raw_core_contracts": 10,
+  "ruff": "passed",
+  "compile": "passed",
+  "controller_sha256": "3c869190da6f27aaeec2688f1057d4bf70d05cd17306dbf36323467321dfaaca",
+  "config_sha256": "4a9d3d858701dfe16a1b0990046bea000f4b31a284a1a56d4ccc3dfcbe8d1600",
+  "frozen_raw_core_sha256": "b204405036ae236be8ceefc4f760271fcd13fc18428a86fded9110471ea94665",
+  "total_bound_s": 120,
+  "per_row_mapping": "generated iff true; cache/coalesced iff false; missing neverinvented",
+  "superseded_history": "history-before-per-row-mapping"
+}

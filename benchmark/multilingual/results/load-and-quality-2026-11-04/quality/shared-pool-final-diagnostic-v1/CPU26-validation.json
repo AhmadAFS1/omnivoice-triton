@@ -1,0 +1,30 @@
+{
+  "at": "2026-11-04T12:28:16.432125+00:00",
+  "measurement_kind": "CPU-only driver preparation/default dryrun+fakebackend contracts, no model/NVIDIA",
+  "GPU": "None; futuretargetprimaryRTX4070requiresfreshrootlease",
+  "CPU": "Apple M5 Pro",
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 17.0.0 (clang-1700.6.4.2)]",
+  "tests": 26,
+  "exit_code": 0,
+  "defaultdryrun": true,
+  "GPU_execution": false,
+  "sourcefiles": [
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/prototypes/shared_pool.py",
+      "sha256": "19c498786620bc4dc828520af0feb61eae06c18b18f0b2b9a675aa860718ffc8"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/prototypes/shared_pool_gpu_probe.py",
+      "sha256": "1af5a0687b2579503380afeb219ae6a860e6be405a0b14f6b6dcb2c0b84e63f7"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/prototypes/shared_pool_cpu_tests.py",
+      "sha256": "8e752beb5c924651a0428acdabd49fd97681e63e0b63cc3bff813de0819b8060"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/prototypes/shared_pool_output_contract.py",
+      "sha256": "88743e07c7c76af30d1ff08d292f649e2f1f2a3f50e454b2a26eb8c19d44f04e"
+    }
+  ],
+  "scope": "Actualneuralexecutorprepared; NOTGPUapproved/qualified. Defaultprivate8configuredper-jobcleared resident1 semanticreference, no private8capacityclaim. PersistentouterTap acrossparity/timing; fatalCPUrecord+os._exit noCUDAcleanup."
+}

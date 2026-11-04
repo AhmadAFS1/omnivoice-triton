@@ -1,0 +1,15 @@
+{
+  "at": "2026-11-04T13:46:06.791786+00:00",
+  "measurement_kind": "CPU-only synthetic socket/parser/counter/source/ref checks; no GPU/model execution",
+  "cpu": "Apple M5 Pro",
+  "tests_passed": 10,
+  "ruff": "passed",
+  "compile": "passed",
+  "source_reference_fixture_checks": "passed",
+  "GPU_executed": false,
+  "controller_sha256": "b204405036ae236be8ceefc4f760271fcd13fc18428a86fded9110471ea94665",
+  "server_wrapper_sha256": "7a9087c32a7bca6f69afcab96818e83eb9d939250b4a2b80248021f10475bac6",
+  "config_sha256": "0a5ea9e8d0f30a58193b195932b07e221b598a5b3953d5e280946ae37cdf1bf4",
+  "cleanup_review": "Root-requested early PID metadata cleanup guard plus real surviving-descendant and injected metadata-error tests; no algorithm changes",
+  "superseded_history": "history-before-cleanup-review"
+}

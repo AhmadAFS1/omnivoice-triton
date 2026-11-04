@@ -1,0 +1,65 @@
+{
+  "created_at": "2026-11-04T14:23:21.855415+00:00",
+  "measurement_kind": "CPU-only same-host same-config two-judge paired word screen",
+  "pairs": 1000,
+  "warmups_excluded": 10,
+  "quality_certified": false,
+  "caveats": [
+    "ASR errors are possible; proxy/script/native-reference limitations retained",
+    "Different batch composition and RNG consumption can change outputs; paired source text/ref, not bitwise equivalence",
+    "One ordered B1 then B8 run per configuration; no randomized-repeat inference"
+  ],
+  "variants": {
+    "B1": {
+      "both_exact": 131,
+      "routes": 104,
+      "per_judge": {
+        "omniASR_CTC_1B_v2": {
+          "exact": 147,
+          "mean_CER": 0.322815424176864,
+          "micro_CER": 0.2797460701330109,
+          "protocol_ids": [
+            "legacy-batch1"
+          ]
+        },
+        "omniASR_LLM_Unlimited_1B_v2": {
+          "exact": 265,
+          "mean_CER": 0.19656907349489364,
+          "micro_CER": 0.14631197097944376,
+          "protocol_ids": [
+            "modern59071593-batch1-v1-7f8784ef9d826da07f57"
+          ]
+        }
+      }
+    },
+    "B8": {
+      "both_exact": 120,
+      "routes": 104,
+      "per_judge": {
+        "omniASR_CTC_1B_v2": {
+          "exact": 133,
+          "mean_CER": 0.3278038700077702,
+          "micro_CER": 0.28579201934703746,
+          "protocol_ids": [
+            "legacy-batch1"
+          ]
+        },
+        "omniASR_LLM_Unlimited_1B_v2": {
+          "exact": 258,
+          "mean_CER": 0.15855697362733856,
+          "micro_CER": 0.1398428053204353,
+          "protocol_ids": [
+            "modern59071593-batch1-v1-7f8784ef9d826da07f57"
+          ]
+        }
+      }
+    }
+  },
+  "B8_vs_B1": {
+    "lost_both_exact": 54,
+    "gained_both_exact": 43,
+    "both_CER_worse": 224,
+    "both_CER_better": 184,
+    "byte_equal": 0
+  }
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "file": "CPU-dry-plan.json",
+    "bytes": 6056,
+    "sha256": "a44f4bf66efed5dbd48cbe7427f15d757237602fd9c0087b7bb9130697499e9d"
+  },
+  {
+    "file": "CPU-tests.txt",
+    "bytes": 105,
+    "sha256": "cd9498bed19edee2283716208cf09ecc52eacb8aa3f9c51790d1fd7e9e2c1e08"
+  },
+  {
+    "file": "CPU_READY.json",
+    "bytes": 736,
+    "sha256": "58cd959f51ea8f88d23eb7c43f083fb14b7e258c14213bff5c6a7ab9fc9b8d52"
+  },
+  {
+    "file": "README.md",
+    "bytes": 5043,
+    "sha256": "39cb2b23c864d09c446874f026e6b49b281917fb426e9afc4d962607a7c46b1e"
+  },
+  {
+    "file": "config.json",
+    "bytes": 1400,
+    "sha256": "4a9d3d858701dfe16a1b0990046bea000f4b31a284a1a56d4ccc3dfcbe8d1600"
+  },
+  {
+    "file": "history-before-per-row-mapping/CPU-dry-plan.json",
+    "bytes": 6056,
+    "sha256": "087f53163b6f7110c0f95a2bcdad90832556ea030d531be1b762e230e0a54993"
+  },
+  {
+    "file": "history-before-per-row-mapping/CPU-tests.txt",
+    "bytes": 104,
+    "sha256": "63fae94ebda308ca88c373b47f361d0a74f201cfad14766ccc34293adfa70cf4"
+  },
+  {
+    "file": "history-before-per-row-mapping/CPU_READY.json",
+    "bytes": 585,
+    "sha256": "3baf5d2dbb9f3e88d85c1d6a37648d4b584b443e88a52dda6b7353b1a688d38e"
+  },
+  {
+    "file": "history-before-per-row-mapping/README.md",
+    "bytes": 5043,
+    "sha256": "39cb2b23c864d09c446874f026e6b49b281917fb426e9afc4d962607a7c46b1e"
+  },
+  {
+    "file": "history-before-per-row-mapping/config.json",
+    "bytes": 1400,
+    "sha256": "4a9d3d858701dfe16a1b0990046bea000f4b31a284a1a56d4ccc3dfcbe8d1600"
+  },
+  {
+    "file": "history-before-per-row-mapping/run.py",
+    "bytes": 20485,
+    "sha256": "fe7ebd2dcde27340de52b4a9cc387ff1f34d0dec5ed684983b7a1ed203538388"
+  },
+  {
+    "file": "history-before-per-row-mapping/test_cpu.py",
+    "bytes": 5654,
+    "sha256": "9b8dc5faafecd4ea55c6ecf807e7ddde7364ce4c37ee461d76d22621f7dc35b7"
+  },
+  {
+    "file": "run.py",
+    "bytes": 20929,
+    "sha256": "3c869190da6f27aaeec2688f1057d4bf70d05cd17306dbf36323467321dfaaca"
+  },
+  {
+    "file": "test_cpu.py",
+    "bytes": 6383,
+    "sha256": "dce9ab041a17465a5831a86ac3944678df7b2394fd2a1b32c1bdd379fe4b8fca"
+  }
+]

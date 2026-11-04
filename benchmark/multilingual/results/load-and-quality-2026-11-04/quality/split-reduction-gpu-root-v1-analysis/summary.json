@@ -1,0 +1,277 @@
+{
+  "at": "2026-11-04T14:25:07.747041+00:00",
+  "kind": "Independent CPU SHA/SoundFile/raw-array-byte comparison; no model inference",
+  "verified_WAVs": 108,
+  "unique_WAVs": 28,
+  "signal_valid": 108,
+  "native_or_word_quality_certified": false,
+  "default_promotion": false,
+  "results": [
+    {
+      "case": "en-short",
+      "batch": 1,
+      "seed": 20261105,
+      "comparisons": [
+        {
+          "left": "concat-true",
+          "right": "concat-false",
+          "tokens_exact": false,
+          "float_WAV_exact": false,
+          "PCM_WAV_exact": false,
+          "target_trace": {
+            "same_predictor_calls": true,
+            "same_target_shapes": true,
+            "conditional_equal_calls": 0,
+            "unconditional_equal_calls": 0,
+            "guided_scores_equal_calls": 0,
+            "guided_log_probs_equal_calls": 0,
+            "confidence_equal_calls": 0,
+            "argmax_differences": 4761,
+            "argmax_elements": 7808,
+            "first_guided_difference_call": 0
+          }
+        },
+        {
+          "left": "concat-true",
+          "right": "split-false",
+          "tokens_exact": false,
+          "float_WAV_exact": false,
+          "PCM_WAV_exact": false,
+          "target_trace": {
+            "same_predictor_calls": true,
+            "same_target_shapes": true,
+            "conditional_equal_calls": 0,
+            "unconditional_equal_calls": 0,
+            "guided_scores_equal_calls": 0,
+            "guided_log_probs_equal_calls": 0,
+            "confidence_equal_calls": 0,
+            "argmax_differences": 1876,
+            "argmax_elements": 7808,
+            "first_guided_difference_call": 0
+          }
+        },
+        {
+          "left": "concat-true",
+          "right": "split-true",
+          "tokens_exact": false,
+          "float_WAV_exact": false,
+          "PCM_WAV_exact": false,
+          "target_trace": {
+            "same_predictor_calls": true,
+            "same_target_shapes": true,
+            "conditional_equal_calls": 0,
+            "unconditional_equal_calls": 0,
+            "guided_scores_equal_calls": 0,
+            "guided_log_probs_equal_calls": 0,
+            "confidence_equal_calls": 0,
+            "argmax_differences": 4773,
+            "argmax_elements": 7808,
+            "first_guided_difference_call": 0
+          }
+        },
+        {
+          "left": "concat-false",
+          "right": "split-false",
+          "tokens_exact": false,
+          "float_WAV_exact": false,
+          "PCM_WAV_exact": false,
+          "target_trace": {
+            "same_predictor_calls": true,
+            "same_target_shapes": true,
+            "conditional_equal_calls": 0,
+            "unconditional_equal_calls": 0,
+            "guided_scores_equal_calls": 0,
+            "guided_log_probs_equal_calls": 0,
+            "confidence_equal_calls": 0,
+            "argmax_differences": 4803,
+            "argmax_elements": 7808,
+            "first_guided_difference_call": 0
+          }
+        },
+        {
+          "left": "concat-false",
+          "right": "split-true",
+          "tokens_exact": false,
+          "float_WAV_exact": false,
+          "PCM_WAV_exact": false,
+          "target_trace": {
+            "same_predictor_calls": true,
+            "same_target_shapes": true,
+            "conditional_equal_calls": 0,
+            "unconditional_equal_calls": 0,
+            "guided_scores_equal_calls": 0,
+            "guided_log_probs_equal_calls": 0,
+            "confidence_equal_calls": 0,
+            "argmax_differences": 449,
+            "argmax_elements": 7808,
+            "first_guided_difference_call": 0
+          }
+        },
+        {
+          "left": "split-false",
+          "right": "split-true",
+          "tokens_exact": false,
+          "float_WAV_exact": false,
+          "PCM_WAV_exact": false,
+          "target_trace": {
+            "same_predictor_calls": true,
+            "same_target_shapes": true,
+            "conditional_equal_calls": 0,
+            "unconditional_equal_calls": 0,
+            "guided_scores_equal_calls": 0,
+            "guided_log_probs_equal_calls": 0,
+            "confidence_equal_calls": 0,
+            "argmax_differences": 4810,
+            "argmax_elements": 7808,
+            "first_guided_difference_call": 0
+          }
+        }
+      ],
+      "parity_vs_timing_exact": {
+        "concat-true": true,
+        "concat-false": true,
+        "split-false": true,
+        "split-true": true
+      },
+      "one_warm_generation_ms": {
+        "concat-true": 456.8818488623947,
+        "concat-false": 457.2509340941906,
+        "split-false": 356.1325999908149,
+        "split-true": 370.8407022058964
+      }
+    },
+    {
+      "case": "en-short",
+      "batch": 8,
+      "seed": 20261112,
+      "comparisons": [
+        {
+          "left": "concat-true",
+          "right": "concat-false",
+          "tokens_exact": true,
+          "float_WAV_exact": true,
+          "PCM_WAV_exact": true,
+          "target_trace": {
+            "same_predictor_calls": true,
+            "same_target_shapes": true,
+            "conditional_equal_calls": 128,
+            "unconditional_equal_calls": 128,
+            "guided_scores_equal_calls": 128,
+            "guided_log_probs_equal_calls": 128,
+            "confidence_equal_calls": 128,
+            "argmax_differences": 0,
+            "argmax_elements": 62464,
+            "first_guided_difference_call": null
+          }
+        },
+        {
+          "left": "concat-true",
+          "right": "split-false",
+          "tokens_exact": false,
+          "float_WAV_exact": false,
+          "PCM_WAV_exact": false,
+          "target_trace": {
+            "same_predictor_calls": true,
+            "same_target_shapes": true,
+            "conditional_equal_calls": 102,
+            "unconditional_equal_calls": 0,
+            "guided_scores_equal_calls": 0,
+            "guided_log_probs_equal_calls": 0,
+            "confidence_equal_calls": 0,
+            "argmax_differences": 5315,
+            "argmax_elements": 62464,
+            "first_guided_difference_call": 0
+          }
+        },
+        {
+          "left": "concat-true",
+          "right": "split-true",
+          "tokens_exact": false,
+          "float_WAV_exact": false,
+          "PCM_WAV_exact": false,
+          "target_trace": {
+            "same_predictor_calls": true,
+            "same_target_shapes": true,
+            "conditional_equal_calls": 0,
+            "unconditional_equal_calls": 0,
+            "guided_scores_equal_calls": 0,
+            "guided_log_probs_equal_calls": 0,
+            "confidence_equal_calls": 0,
+            "argmax_differences": 15212,
+            "argmax_elements": 62464,
+            "first_guided_difference_call": 0
+          }
+        },
+        {
+          "left": "concat-false",
+          "right": "split-false",
+          "tokens_exact": false,
+          "float_WAV_exact": false,
+          "PCM_WAV_exact": false,
+          "target_trace": {
+            "same_predictor_calls": true,
+            "same_target_shapes": true,
+            "conditional_equal_calls": 102,
+            "unconditional_equal_calls": 0,
+            "guided_scores_equal_calls": 0,
+            "guided_log_probs_equal_calls": 0,
+            "confidence_equal_calls": 0,
+            "argmax_differences": 5315,
+            "argmax_elements": 62464,
+            "first_guided_difference_call": 0
+          }
+        },
+        {
+          "left": "concat-false",
+          "right": "split-true",
+          "tokens_exact": false,
+          "float_WAV_exact": false,
+          "PCM_WAV_exact": false,
+          "target_trace": {
+            "same_predictor_calls": true,
+            "same_target_shapes": true,
+            "conditional_equal_calls": 0,
+            "unconditional_equal_calls": 0,
+            "guided_scores_equal_calls": 0,
+            "guided_log_probs_equal_calls": 0,
+            "confidence_equal_calls": 0,
+            "argmax_differences": 15212,
+            "argmax_elements": 62464,
+            "first_guided_difference_call": 0
+          }
+        },
+        {
+          "left": "split-false",
+          "right": "split-true",
+          "tokens_exact": false,
+          "float_WAV_exact": false,
+          "PCM_WAV_exact": false,
+          "target_trace": {
+            "same_predictor_calls": true,
+            "same_target_shapes": true,
+            "conditional_equal_calls": 0,
+            "unconditional_equal_calls": 0,
+            "guided_scores_equal_calls": 0,
+            "guided_log_probs_equal_calls": 0,
+            "confidence_equal_calls": 0,
+            "argmax_differences": 14938,
+            "argmax_elements": 62464,
+            "first_guided_difference_call": 0
+          }
+        }
+      ],
+      "parity_vs_timing_exact": {
+        "concat-true": true,
+        "concat-false": true,
+        "split-false": true,
+        "split-true": true
+      },
+      "one_warm_generation_ms": {
+        "concat-true": 3619.2255679052323,
+        "concat-false": 3515.9628530964255,
+        "split-false": 2023.6783139407635,
+        "split-true": 2014.0377399511635
+      }
+    }
+  ]
+}

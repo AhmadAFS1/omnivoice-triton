@@ -1,0 +1,51 @@
+{
+  "measurement_kind": "CPU-only exactV4 helper input/ref/expansion validation",
+  "frozen_V4_sha256": "df51c081d8108bf7dae5778adc2f21398e59d0ca8de394601f4251a55c521652",
+  "references_verified": 9,
+  "warmups_disjoint": true,
+  "offers_total": 18340,
+  "cohort_offers": 18330,
+  "schedule": [
+    {
+      "phase": "calls10-poisson-0_5rps",
+      "calls": 10,
+      "rate_rps": 0.5,
+      "offers": 30,
+      "last_planned_offset_s": 64.52564653359333,
+      "declared_phase_deadline_s": 75,
+      "routes_offered": 30,
+      "unique_effective_inputs": 30
+    },
+    {
+      "phase": "calls100-poisson-5rps",
+      "calls": 100,
+      "rate_rps": 5,
+      "offers": 300,
+      "last_planned_offset_s": 63.91487912834429,
+      "declared_phase_deadline_s": 75,
+      "routes_offered": 104,
+      "unique_effective_inputs": 300
+    },
+    {
+      "phase": "calls1000-poisson-50rps",
+      "calls": 1000,
+      "rate_rps": 50,
+      "offers": 3000,
+      "last_planned_offset_s": 59.43556897854454,
+      "declared_phase_deadline_s": 75,
+      "routes_offered": 104,
+      "unique_effective_inputs": 1000
+    },
+    {
+      "phase": "calls5000-poisson-250rps",
+      "calls": 5000,
+      "rate_rps": 250,
+      "offers": 15000,
+      "last_planned_offset_s": 60.5386223562241,
+      "declared_phase_deadline_s": 75,
+      "routes_offered": 104,
+      "unique_effective_inputs": 1000
+    }
+  ],
+  "GPU_executed": false
+}

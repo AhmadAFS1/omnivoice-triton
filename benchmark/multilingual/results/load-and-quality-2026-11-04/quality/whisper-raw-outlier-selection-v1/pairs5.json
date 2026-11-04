@@ -1,0 +1,172 @@
+[
+  {
+    "comparison_original_case_id": "triton-eager-raw5000-cyclic1000-v1::raw5000-cyclic-original1000-04358",
+    "actual_case_id": "zh-load-flores-0306",
+    "variant": "raw-repeat-outlier",
+    "language": "zh",
+    "voice": "Aoede",
+    "before": {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/triton-eager-novel1000-B1-v1/audio/burst1000-unique-published-00358.wav",
+      "sha256": "7a696241f8fa2b4b422c9408e80a3322a2ac312d6a51ebdf993c845574839602",
+      "expected": "宣布的死因是肝内胆管癌。"
+    },
+    "after": {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/audio/raw5000-cyclic-original1000-04358.wav",
+      "sha256": "e1e23be8063e12e110b812ca982a21359c4a3d3536c0f1d31f71f39bd2ccd690",
+      "expected": "宣布的死因是肝内胆管癌。"
+    },
+    "ASR_evidence": {
+      "before": {
+        "note": "PriorB1 baseline; completeMetaevidence remains9532report"
+      },
+      "after": {
+        "CER": {
+          "omniASR_LLM_Unlimited_1B_v2": 27.0,
+          "omniASR_CTC_1B_v2": 2.6363636363636362
+        },
+        "transcripts": {
+          "omniASR_LLM_Unlimited_1B_v2": "小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小小 小 б übürü n bör n bürü dang big big science würüübür n big science jo bije",
+          "omniASR_CTC_1B_v2": "sembude sysien ser gane dangwan ai"
+        },
+        "note": "ASR mismatch diagnostic; no claim whichjudge/TTSiswrong"
+      }
+    },
+    "selection_reason": "allfivepublishedlargestLLMCERvariance diagnostic cases; notrandomorpopulationqualitysample"
+  },
+  {
+    "comparison_original_case_id": "triton-eager-raw5000-cyclic1000-v1::raw5000-cyclic-original1000-00358",
+    "actual_case_id": "zh-load-flores-0306",
+    "variant": "raw-repeat-outlier",
+    "language": "zh",
+    "voice": "Aoede",
+    "before": {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/triton-eager-novel1000-B1-v1/audio/burst1000-unique-published-00358.wav",
+      "sha256": "7a696241f8fa2b4b422c9408e80a3322a2ac312d6a51ebdf993c845574839602",
+      "expected": "宣布的死因是肝内胆管癌。"
+    },
+    "after": {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/audio/raw5000-cyclic-original1000-00358.wav",
+      "sha256": "66cd1b8951bfabaf257d10761673dec0df4d58bd34fe70df51a2158f28143428",
+      "expected": "宣布的死因是肝内胆管癌。"
+    },
+    "ASR_evidence": {
+      "before": {
+        "note": "PriorB1 baseline; completeMetaevidence remains9532report"
+      },
+      "after": {
+        "CER": {
+          "omniASR_LLM_Unlimited_1B_v2": 25.181818181818183,
+          "omniASR_CTC_1B_v2": 0.18181818181818182
+        },
+        "transcripts": {
+          "omniASR_LLM_Unlimited_1B_v2": "14444444444444444444444444444478 1754 1773 xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo xixo x",
+          "omniASR_CTC_1B_v2": "宣布的死音是干内胆管癌"
+        },
+        "note": "ASR mismatch diagnostic; no claim whichjudge/TTSiswrong"
+      }
+    },
+    "selection_reason": "allfivepublishedlargestLLMCERvariance diagnostic cases; notrandomorpopulationqualitysample"
+  },
+  {
+    "comparison_original_case_id": "triton-eager-raw5000-cyclic1000-v1::raw5000-cyclic-original1000-00396",
+    "actual_case_id": "yue-load-flores-0137",
+    "variant": "raw-repeat-outlier",
+    "language": "yue",
+    "voice": "Aoede",
+    "before": {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/triton-eager-novel1000-B1-v1/audio/burst1000-unique-published-00396.wav",
+      "sha256": "dcbcedbf377dae39638ba7b268de5360d1892bb25a57ed70ab93f9dee5f8b14a",
+      "expected": "魚經常死於水中高濃度的毒素。"
+    },
+    "after": {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/audio/raw5000-cyclic-original1000-00396.wav",
+      "sha256": "0d705296bd3cb766284304da9b152567f505c39eea1c05d630293f7d02ee3615",
+      "expected": "魚經常死於水中高濃度的毒素。"
+    },
+    "ASR_evidence": {
+      "before": {
+        "note": "PriorB1 baseline; completeMetaevidence remains9532report"
+      },
+      "after": {
+        "CER": {
+          "omniASR_LLM_Unlimited_1B_v2": 18.076923076923077,
+          "omniASR_CTC_1B_v2": 2.5384615384615383
+        },
+        "transcripts": {
+          "omniASR_LLM_Unlimited_1B_v2": "ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ð",
+          "omniASR_CTC_1B_v2": "kengsrang cu søjong gonong dothe dokso"
+        },
+        "note": "ASR mismatch diagnostic; no claim whichjudge/TTSiswrong"
+      }
+    },
+    "selection_reason": "allfivepublishedlargestLLMCERvariance diagnostic cases; notrandomorpopulationqualitysample"
+  },
+  {
+    "comparison_original_case_id": "triton-eager-raw5000-cyclic1000-v1::raw5000-cyclic-original1000-04396",
+    "actual_case_id": "yue-load-flores-0137",
+    "variant": "raw-repeat-outlier",
+    "language": "yue",
+    "voice": "Aoede",
+    "before": {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/triton-eager-novel1000-B1-v1/audio/burst1000-unique-published-00396.wav",
+      "sha256": "dcbcedbf377dae39638ba7b268de5360d1892bb25a57ed70ab93f9dee5f8b14a",
+      "expected": "魚經常死於水中高濃度的毒素。"
+    },
+    "after": {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/audio/raw5000-cyclic-original1000-04396.wav",
+      "sha256": "237502bc359bbb531179a7ae8fa5aa000bfb06a93779d7718ff765936fbed527",
+      "expected": "魚經常死於水中高濃度的毒素。"
+    },
+    "ASR_evidence": {
+      "before": {
+        "note": "PriorB1 baseline; completeMetaevidence remains9532report"
+      },
+      "after": {
+        "CER": {
+          "omniASR_LLM_Unlimited_1B_v2": 4.615384615384615,
+          "omniASR_CTC_1B_v2": 2.4615384615384617
+        },
+        "transcripts": {
+          "omniASR_LLM_Unlimited_1B_v2": "ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù ðùù",
+          "omniASR_CTC_1B_v2": "kengsan seyu soijon gonondo dhe doksu"
+        },
+        "note": "ASR mismatch diagnostic; no claim whichjudge/TTSiswrong"
+      }
+    },
+    "selection_reason": "allfivepublishedlargestLLMCERvariance diagnostic cases; notrandomorpopulationqualitysample"
+  },
+  {
+    "comparison_original_case_id": "triton-eager-raw5000-cyclic1000-v1::raw5000-cyclic-original1000-04398",
+    "actual_case_id": "yue-load-flores-0218",
+    "variant": "raw-repeat-outlier",
+    "language": "yue",
+    "voice": "Aoede",
+    "before": {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/triton-eager-novel1000-B1-v1/audio/burst1000-unique-published-00398.wav",
+      "sha256": "f5647bdea392a76187ec140f4d6ee9faee208fc68de9a713599db4409ba0eac4",
+      "expected": "並非所有人都支持納入女性排名。"
+    },
+    "after": {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/audio/raw5000-cyclic-original1000-04398.wav",
+      "sha256": "5fd6b81e4809d2faf18f988d2e731a335b55fa75ff250bf02683906f0105bfdd",
+      "expected": "並非所有人都支持納入女性排名。"
+    },
+    "ASR_evidence": {
+      "before": {
+        "note": "PriorB1 baseline; completeMetaevidence remains9532report"
+      },
+      "after": {
+        "CER": {
+          "omniASR_LLM_Unlimited_1B_v2": 3.4285714285714284,
+          "omniASR_CTC_1B_v2": 2.7857142857142856
+        },
+        "transcripts": {
+          "omniASR_LLM_Unlimited_1B_v2": "並 ብèè ping faceboy all want datsi tranat yaps nusing piming",
+          "omniASR_CTC_1B_v2": "bingfe soyo ren de secher nat yes nusing piming"
+        },
+        "note": "ASR mismatch diagnostic; no claim whichjudge/TTSiswrong"
+      }
+    },
+    "selection_reason": "allfivepublishedlargestLLMCERvariance diagnostic cases; notrandomorpopulationqualitysample"
+  }
+]

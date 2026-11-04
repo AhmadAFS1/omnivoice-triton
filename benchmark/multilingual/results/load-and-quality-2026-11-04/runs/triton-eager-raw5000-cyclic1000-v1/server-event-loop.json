@@ -1,0 +1,3 @@
+{
+  "actual_event_loop_class": "asyncio.unix_events._UnixSelectorEventLoop"
+}

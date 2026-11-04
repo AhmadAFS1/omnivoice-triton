@@ -1,0 +1,12 @@
+{
+  "at": "2026-11-04T14:55:22.160597+00:00",
+  "gpu_released": true,
+  "shared_pool_model_gate": true,
+  "prototype_sha256": "19c498786620bc4dc828520af0feb61eae06c18b18f0b2b9a675aa860718ffc8",
+  "probe_sha256": "1af5a0687b2579503380afeb219ae6a860e6be405a0b14f6b6dcb2c0b84e63f7",
+  "source_ref": "ce48b253e66b951d87ea42919f945828c62e96a4",
+  "GPU_UUID": "GPU-6eb0a2a5-d251-a91e-8e98-82bc0e371e33",
+  "compute_processes": "",
+  "CPU_IO_quiet": "Load explicit release14:50:57; root finite300s last prototype before15:01",
+  "scope": "EN ES AR B1/B8, rawbit/input/token/float/PCM and old-return alias gates, sourcece,noRoPE, noSplit,no promotion, no fallback"
+}

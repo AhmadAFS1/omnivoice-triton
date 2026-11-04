@@ -1,0 +1,7 @@
+{
+  "at": "2026-11-04T15:01:33.382158+00:00",
+  "GPU_idle": true,
+  "CPU_IO_quiet_after_retention": false,
+  "compute_processes": "",
+  "scope": "Sharedpoolprobe finite incomplete/failure preserved; no moreNN from architecture"
+}

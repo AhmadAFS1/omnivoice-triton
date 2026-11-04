@@ -1,0 +1,2139 @@
+{
+  "measurement_kind": "CPU-only preserved528-request analysis; no new inference or original changes",
+  "percentiles": "p50 median; p95 nearest rank. Source raw values retained; do not mix with interpolated p95 without labeling.",
+  "quality": "All four arms132/132valid; N16/N64/eager match N0 every WAV SHA; primary N0 differs from modern132 bodies, so newASR132 remains pending.",
+  "causality_limit": "Single ordered run per profile on same olderCPU host; graph/eager counters and telemetry are evidence, not a randomized attribution of host drift.",
+  "arms": [
+    {
+      "arm": "hybrid-N0",
+      "requests": 132,
+      "status_counts": {
+        "200": 132
+      },
+      "full_body_ms": {
+        "available_samples": 132,
+        "min": 429.2683848179877,
+        "p50": 1377.4487461196259,
+        "p95_nearest_rank": 1663.7128309812397,
+        "max": 5451.194698922336,
+        "mean": 1361.7840302018026
+      },
+      "server_stage_ms": {
+        "iterative": {
+          "available_samples": 132,
+          "min": 272.54,
+          "p50": 1200.93,
+          "p95_nearest_rank": 1385.89,
+          "max": 5091.73,
+          "mean": 1162.332803030303
+        },
+        "codec": {
+          "available_samples": 132,
+          "min": 91.24,
+          "p50": 122.36500000000001,
+          "p95_nearest_rank": 331.77,
+          "max": 373.95,
+          "mean": 164.02818181818182
+        },
+        "queue": {
+          "available_samples": 132,
+          "min": 5.41,
+          "p50": 5.57,
+          "p95_nearest_rank": 5.87,
+          "max": 6.13,
+          "mean": 5.582878787878788
+        },
+        "total_generate": {
+          "available_samples": 132,
+          "min": 406.21,
+          "p50": 1353.06,
+          "p95_nearest_rank": 1637.5,
+          "max": 5410.01,
+          "mean": 1336.9130303030304
+        }
+      },
+      "graph_memory_actual": {
+        "enabled": true,
+        "max_cuda_graph_row_tokens": 16384,
+        "capture_after_calls": 0,
+        "deferred_calls": 0,
+        "observed_shape_keys": 0,
+        "max_shape_observations": 4096,
+        "estimate_kind": "Heuristic architecture/dtype row tokens and headroom; NOT a rigorous total VRAM bound",
+        "qualification_scope": "actual_model_architecture_and_runtime",
+        "profile": {
+          "qualified": true,
+          "reason": "",
+          "revision": null,
+          "dtype_bytes": 2,
+          "use_cache": false,
+          "layers": 28,
+          "hidden": 1024,
+          "intermediate": 3072,
+          "heads": 16,
+          "kv_heads": 8,
+          "head_dim": 128,
+          "codebooks": 8,
+          "audio_vocab": 1025
+        },
+        "retained_row_tokens": 7372,
+        "unqualified_graph_keys": 0,
+        "resident_graphs": 8,
+        "max_graphs": 8,
+        "calls": 2112,
+        "hits": 1994,
+        "captures": 118,
+        "evictions": 110,
+        "evicted_row_tokens": 105650,
+        "eager_fallbacks": {},
+        "pressure_cleanups": 0,
+        "admission_rejections": 0,
+        "capture_failures": 0,
+        "clears": 0,
+        "last_owner_memory_snapshot": {
+          "free_bytes": 8965783552,
+          "total_bytes": 12450070528,
+          "required_estimated_bytes": 565669312,
+          "device": "cuda:0"
+        },
+        "last_decision": "replay",
+        "resident_shapes": [
+          {
+            "shape": [
+              2,
+              8,
+              463
+            ],
+            "normalized_row_tokens": 926
+          },
+          {
+            "shape": [
+              2,
+              8,
+              452
+            ],
+            "normalized_row_tokens": 904
+          },
+          {
+            "shape": [
+              2,
+              8,
+              475
+            ],
+            "normalized_row_tokens": 950
+          },
+          {
+            "shape": [
+              2,
+              8,
+              468
+            ],
+            "normalized_row_tokens": 936
+          },
+          {
+            "shape": [
+              2,
+              8,
+              456
+            ],
+            "normalized_row_tokens": 912
+          },
+          {
+            "shape": [
+              2,
+              8,
+              449
+            ],
+            "normalized_row_tokens": 898
+          },
+          {
+            "shape": [
+              2,
+              8,
+              484
+            ],
+            "normalized_row_tokens": 968
+          },
+          {
+            "shape": [
+              2,
+              8,
+              439
+            ],
+            "normalized_row_tokens": 878
+          }
+        ]
+      },
+      "health_resident_shapes": [
+        [
+          2,
+          8,
+          439
+        ],
+        [
+          2,
+          8,
+          449
+        ],
+        [
+          2,
+          8,
+          452
+        ],
+        [
+          2,
+          8,
+          456
+        ],
+        [
+          2,
+          8,
+          463
+        ],
+        [
+          2,
+          8,
+          468
+        ],
+        [
+          2,
+          8,
+          475
+        ],
+        [
+          2,
+          8,
+          484
+        ]
+      ],
+      "capture_shape_events": [
+        [
+          2,
+          8,
+          569
+        ],
+        [
+          2,
+          8,
+          513
+        ],
+        [
+          2,
+          8,
+          496
+        ],
+        [
+          2,
+          8,
+          560
+        ],
+        [
+          2,
+          8,
+          506
+        ],
+        [
+          2,
+          8,
+          552
+        ],
+        [
+          2,
+          8,
+          526
+        ],
+        [
+          2,
+          8,
+          523
+        ],
+        [
+          2,
+          8,
+          357
+        ],
+        [
+          2,
+          8,
+          431
+        ],
+        [
+          2,
+          8,
+          524
+        ],
+        [
+          2,
+          8,
+          457
+        ],
+        [
+          2,
+          8,
+          505
+        ],
+        [
+          2,
+          8,
+          463
+        ],
+        [
+          2,
+          8,
+          467
+        ],
+        [
+          2,
+          8,
+          482
+        ],
+        [
+          2,
+          8,
+          464
+        ],
+        [
+          2,
+          8,
+          478
+        ],
+        [
+          2,
+          8,
+          484
+        ],
+        [
+          2,
+          8,
+          427
+        ],
+        [
+          2,
+          8,
+          492
+        ],
+        [
+          2,
+          8,
+          470
+        ],
+        [
+          2,
+          8,
+          465
+        ],
+        [
+          2,
+          8,
+          449
+        ],
+        [
+          2,
+          8,
+          523
+        ],
+        [
+          2,
+          8,
+          409
+        ],
+        [
+          2,
+          8,
+          456
+        ],
+        [
+          2,
+          8,
+          554
+        ],
+        [
+          2,
+          8,
+          486
+        ],
+        [
+          2,
+          8,
+          534
+        ],
+        [
+          2,
+          8,
+          492
+        ],
+        [
+          2,
+          8,
+          495
+        ],
+        [
+          2,
+          8,
+          511
+        ],
+        [
+          2,
+          8,
+          493
+        ],
+        [
+          2,
+          8,
+          507
+        ],
+        [
+          2,
+          8,
+          447
+        ],
+        [
+          2,
+          8,
+          473
+        ],
+        [
+          2,
+          8,
+          462
+        ],
+        [
+          2,
+          8,
+          498
+        ],
+        [
+          2,
+          8,
+          464
+        ],
+        [
+          2,
+          8,
+          452
+        ],
+        [
+          2,
+          8,
+          454
+        ],
+        [
+          2,
+          8,
+          472
+        ],
+        [
+          2,
+          8,
+          444
+        ],
+        [
+          2,
+          8,
+          470
+        ],
+        [
+          2,
+          8,
+          420
+        ],
+        [
+          2,
+          8,
+          439
+        ],
+        [
+          2,
+          8,
+          495
+        ],
+        [
+          2,
+          8,
+          506
+        ],
+        [
+          2,
+          8,
+          445
+        ],
+        [
+          2,
+          8,
+          475
+        ],
+        [
+          2,
+          8,
+          469
+        ],
+        [
+          2,
+          8,
+          497
+        ],
+        [
+          2,
+          8,
+          483
+        ],
+        [
+          2,
+          8,
+          450
+        ],
+        [
+          2,
+          8,
+          488
+        ],
+        [
+          2,
+          8,
+          461
+        ],
+        [
+          2,
+          8,
+          526
+        ],
+        [
+          2,
+          8,
+          501
+        ],
+        [
+          2,
+          8,
+          478
+        ],
+        [
+          2,
+          8,
+          452
+        ],
+        [
+          2,
+          8,
+          523
+        ],
+        [
+          2,
+          8,
+          466
+        ],
+        [
+          2,
+          8,
+          549
+        ],
+        [
+          2,
+          8,
+          462
+        ],
+        [
+          2,
+          8,
+          485
+        ],
+        [
+          2,
+          8,
+          517
+        ],
+        [
+          2,
+          8,
+          442
+        ],
+        [
+          2,
+          8,
+          494
+        ],
+        [
+          2,
+          8,
+          548
+        ],
+        [
+          2,
+          8,
+          471
+        ],
+        [
+          2,
+          8,
+          506
+        ],
+        [
+          2,
+          8,
+          472
+        ],
+        [
+          2,
+          8,
+          505
+        ],
+        [
+          2,
+          8,
+          461
+        ],
+        [
+          2,
+          8,
+          454
+        ],
+        [
+          2,
+          8,
+          463
+        ],
+        [
+          2,
+          8,
+          521
+        ],
+        [
+          2,
+          8,
+          481
+        ],
+        [
+          2,
+          8,
+          480
+        ],
+        [
+          2,
+          8,
+          469
+        ],
+        [
+          2,
+          8,
+          447
+        ],
+        [
+          2,
+          8,
+          535
+        ],
+        [
+          2,
+          8,
+          468
+        ],
+        [
+          2,
+          8,
+          451
+        ],
+        [
+          2,
+          8,
+          467
+        ],
+        [
+          2,
+          8,
+          489
+        ],
+        [
+          2,
+          8,
+          523
+        ],
+        [
+          2,
+          8,
+          471
+        ],
+        [
+          2,
+          8,
+          443
+        ],
+        [
+          2,
+          8,
+          477
+        ],
+        [
+          2,
+          8,
+          458
+        ],
+        [
+          2,
+          8,
+          518
+        ],
+        [
+          2,
+          8,
+          483
+        ],
+        [
+          2,
+          8,
+          472
+        ],
+        [
+          2,
+          8,
+          460
+        ],
+        [
+          2,
+          8,
+          445
+        ],
+        [
+          2,
+          8,
+          444
+        ],
+        [
+          2,
+          8,
+          466
+        ],
+        [
+          2,
+          8,
+          448
+        ],
+        [
+          2,
+          8,
+          482
+        ],
+        [
+          2,
+          8,
+          453
+        ],
+        [
+          2,
+          8,
+          476
+        ],
+        [
+          2,
+          8,
+          600
+        ],
+        [
+          2,
+          8,
+          463
+        ],
+        [
+          2,
+          8,
+          468
+        ],
+        [
+          2,
+          8,
+          469
+        ],
+        [
+          2,
+          8,
+          450
+        ],
+        [
+          2,
+          8,
+          454
+        ],
+        [
+          2,
+          8,
+          447
+        ],
+        [
+          2,
+          8,
+          451
+        ],
+        [
+          2,
+          8,
+          456
+        ],
+        [
+          2,
+          8,
+          452
+        ],
+        [
+          2,
+          8,
+          475
+        ],
+        [
+          2,
+          8,
+          468
+        ],
+        [
+          2,
+          8,
+          449
+        ],
+        [
+          2,
+          8,
+          484
+        ],
+        [
+          2,
+          8,
+          439
+        ]
+      ],
+      "capture_event_count": 118,
+      "unique_logged_captured_shapes": 76,
+      "actual_batch_sizes": {
+        "1": 132
+      },
+      "original_health_SHA256": "35fc3d7be9cb76e8ebc0d6ad2f21d5c59b0f2074af411a2fe6fe623b5bcc7fbd",
+      "telemetry": {
+        "window": "First request started_at to last completed_at; setup/registration/cleanup excluded",
+        "CPU": {
+          "host_load1": {
+            "available_samples": 180,
+            "min": 38.1796875,
+            "p50": 39.5986328125,
+            "p95_nearest_rank": 44.88427734375,
+            "max": 46.12841796875,
+            "mean": 40.51128472222222
+          },
+          "host_CPU_busy_pct": {
+            "available_samples": 180,
+            "min": 52.19856194690266,
+            "p50": 53.661391002460746,
+            "p95_nearest_rank": 56.21508379888268,
+            "max": 58.43048052317316,
+            "mean": 53.89793805739149
+          },
+          "active_thread_CPU_MHz": {
+            "available_samples": 180,
+            "min": 2599.878,
+            "p50": 2699.8925,
+            "p95_nearest_rank": 2699.919,
+            "max": 2699.983,
+            "mean": 2697.9241722222223
+          },
+          "all_CPU_mean_MHz": {
+            "available_samples": 180,
+            "min": 1431.7605833333334,
+            "p50": 2148.754784722222,
+            "p95_nearest_rank": 2387.3304166666667,
+            "max": 2620.735125,
+            "mean": 2093.6908474537036
+          },
+          "cgroup_CPU_some_pressure_avg10_pct": {
+            "available_samples": 180,
+            "min": 0.0,
+            "p50": 0.0,
+            "p95_nearest_rank": 0.14,
+            "max": 0.31,
+            "mean": 0.017888888888888888
+          },
+          "cgroup_CPU_full_pressure_avg10_pct": {
+            "available_samples": 180,
+            "min": 0.0,
+            "p50": 0.0,
+            "p95_nearest_rank": 0.05,
+            "max": 0.11,
+            "mean": 0.0057777777777777775
+          },
+          "process_CPU_pct_one_core": {
+            "available_samples": 180,
+            "min": 84.00220304544807,
+            "p50": 101.00580874836498,
+            "p95_nearest_rank": 103.02099226411474,
+            "max": 104.97498626226663,
+            "mean": 101.16101773240929
+          },
+          "sample_wall_ms": {
+            "available_samples": 180,
+            "min": 85.72506485506892,
+            "p50": 115.27446995023638,
+            "p95_nearest_rank": 264.896749984473,
+            "max": 322.1465600654483,
+            "mean": 149.10685206220174
+          }
+        },
+        "GPU": {
+          "utilization.gpu": {
+            "available_samples": 175,
+            "min": 0.0,
+            "p50": 3.0,
+            "p95_nearest_rank": 100.0,
+            "max": 100.0,
+            "mean": 31.942857142857143
+          },
+          "utilization.memory": {
+            "available_samples": 175,
+            "min": 0.0,
+            "p50": 0.0,
+            "p95_nearest_rank": 32.0,
+            "max": 35.0,
+            "mean": 9.714285714285714
+          },
+          "memory.used": {
+            "available_samples": 175,
+            "min": 2333.0,
+            "p50": 3333.0,
+            "p95_nearest_rank": 3391.0,
+            "max": 3509.0,
+            "mean": 3238.2457142857143
+          },
+          "power.draw": {
+            "available_samples": 175,
+            "min": 26.39,
+            "p50": 93.93,
+            "p95_nearest_rank": 118.26,
+            "max": 161.23,
+            "mean": 88.63434285714285
+          },
+          "temperature.gpu": {
+            "available_samples": 175,
+            "min": 45.0,
+            "p50": 48.0,
+            "p95_nearest_rank": 64.0,
+            "max": 64.0,
+            "mean": 52.13142857142857
+          },
+          "clocks.current.sm": {
+            "available_samples": 175,
+            "min": 2475.0,
+            "p50": 2835.0,
+            "p95_nearest_rank": 2835.0,
+            "max": 2835.0,
+            "mean": 2819.8285714285716
+          },
+          "clocks.current.graphics": {
+            "available_samples": 175,
+            "min": 2475.0,
+            "p50": 2835.0,
+            "p95_nearest_rank": 2835.0,
+            "max": 2835.0,
+            "mean": 2819.8285714285716
+          },
+          "clocks.current.memory": {
+            "available_samples": 175,
+            "min": 10251.0,
+            "p50": 10251.0,
+            "p95_nearest_rank": 10251.0,
+            "max": 10251.0,
+            "mean": 10251.0
+          }
+        },
+        "cgroup_throttled_usec_delta": 0,
+        "cgroup_throttled_periods_delta": 0,
+        "active_thread_observed_CPUs": [
+          55,
+          57,
+          58
+        ],
+        "process_affinity_CPU_lists": [
+          "0-71"
+        ],
+        "allowed_NUMA_nodes": [
+          "0-1"
+        ],
+        "GPU_pstates": {
+          "P2": 175
+        },
+        "raw_clock_event_masks": {
+          "0x0000000000000000": 175
+        },
+        "sampler_whole_job_overhead": {
+          "finished_utc": "2026-11-04T12:34:12.307983+00:00",
+          "wall_s": 229.73301972495392,
+          "samples": 229,
+          "sampling_overruns": 0,
+          "interrupted": null,
+          "wrapped_exit_code": 0,
+          "sampler_self_cpu_s": 34.081661000000004,
+          "gpu_sampler_observed_cpu_s": 6.33,
+          "sampler_setup_child_cpu_s": 0.039576,
+          "observed_total_sampler_cpu_pct_one_core_100": 17.607933351692296,
+          "sampler_max_rss_raw": 22568,
+          "sampler_io_counter_delta": {
+            "rchar": 647452406,
+            "wchar": 28760420,
+            "syscr": 456491,
+            "syscw": 6440,
+            "read_bytes": 0,
+            "write_bytes": 29745152,
+            "cancelled_write_bytes": 565248
+          },
+          "sampler_max_rss_unit": "KiB",
+          "overhead_note": "SelfCPU includes sampling/serialization/setup/waits. Nvidia childCPU uses lifetimeCPU; targetCPU stays separate."
+        }
+      }
+    },
+    {
+      "arm": "hybrid-N16",
+      "requests": 132,
+      "status_counts": {
+        "200": 132
+      },
+      "full_body_ms": {
+        "available_samples": 132,
+        "min": 430.15990289859474,
+        "p50": 1384.6303679747507,
+        "p95_nearest_rank": 1504.0586048271507,
+        "max": 5083.437835099176,
+        "mean": 1397.1765960168066
+      },
+      "server_stage_ms": {
+        "iterative": {
+          "available_samples": 132,
+          "min": 303.36,
+          "p50": 1300.095,
+          "p95_nearest_rank": 1332.7,
+          "max": 4884.18,
+          "mean": 1267.7282575757577
+        },
+        "codec": {
+          "available_samples": 132,
+          "min": 18.1,
+          "p50": 119.425,
+          "p95_nearest_rank": 201.16,
+          "max": 330.43,
+          "mean": 94.21537878787879
+        },
+        "queue": {
+          "available_samples": 132,
+          "min": 5.43,
+          "p50": 5.57,
+          "p95_nearest_rank": 5.71,
+          "max": 6.23,
+          "mean": 5.588257575757575
+        },
+        "total_generate": {
+          "available_samples": 132,
+          "min": 406.58,
+          "p50": 1359.385,
+          "p95_nearest_rank": 1478.84,
+          "max": 5042.97,
+          "mean": 1372.4269696969698
+        }
+      },
+      "graph_memory_actual": {
+        "enabled": true,
+        "max_cuda_graph_row_tokens": 16384,
+        "capture_after_calls": 16,
+        "deferred_calls": 1376,
+        "observed_shape_keys": 54,
+        "max_shape_observations": 4096,
+        "estimate_kind": "Heuristic architecture/dtype row tokens and headroom; NOT a rigorous total VRAM bound",
+        "qualification_scope": "actual_model_architecture_and_runtime",
+        "profile": {
+          "qualified": true,
+          "reason": "",
+          "revision": null,
+          "dtype_bytes": 2,
+          "use_cache": false,
+          "layers": 28,
+          "hidden": 1024,
+          "intermediate": 3072,
+          "heads": 16,
+          "kv_heads": 8,
+          "head_dim": 128,
+          "codebooks": 8,
+          "audio_vocab": 1025
+        },
+        "retained_row_tokens": 7268,
+        "unqualified_graph_keys": 0,
+        "resident_graphs": 8,
+        "max_graphs": 8,
+        "calls": 2112,
+        "hits": 696,
+        "captures": 40,
+        "evictions": 32,
+        "evicted_row_tokens": 30464,
+        "eager_fallbacks": {
+          "shape_not_hot": 1376
+        },
+        "pressure_cleanups": 0,
+        "admission_rejections": 0,
+        "capture_failures": 0,
+        "clears": 0,
+        "last_owner_memory_snapshot": {
+          "free_bytes": 8965783552,
+          "total_bytes": 12450070528,
+          "required_estimated_bytes": 565669312,
+          "device": "cuda:0"
+        },
+        "last_decision": "replay",
+        "resident_shapes": [
+          {
+            "shape": [
+              2,
+              8,
+              454
+            ],
+            "normalized_row_tokens": 908
+          },
+          {
+            "shape": [
+              2,
+              8,
+              447
+            ],
+            "normalized_row_tokens": 894
+          },
+          {
+            "shape": [
+              2,
+              8,
+              451
+            ],
+            "normalized_row_tokens": 902
+          },
+          {
+            "shape": [
+              2,
+              8,
+              463
+            ],
+            "normalized_row_tokens": 926
+          },
+          {
+            "shape": [
+              2,
+              8,
+              475
+            ],
+            "normalized_row_tokens": 950
+          },
+          {
+            "shape": [
+              2,
+              8,
+              456
+            ],
+            "normalized_row_tokens": 912
+          },
+          {
+            "shape": [
+              2,
+              8,
+              449
+            ],
+            "normalized_row_tokens": 898
+          },
+          {
+            "shape": [
+              2,
+              8,
+              439
+            ],
+            "normalized_row_tokens": 878
+          }
+        ]
+      },
+      "health_resident_shapes": [
+        [
+          2,
+          8,
+          439
+        ],
+        [
+          2,
+          8,
+          447
+        ],
+        [
+          2,
+          8,
+          449
+        ],
+        [
+          2,
+          8,
+          451
+        ],
+        [
+          2,
+          8,
+          454
+        ],
+        [
+          2,
+          8,
+          456
+        ],
+        [
+          2,
+          8,
+          463
+        ],
+        [
+          2,
+          8,
+          475
+        ]
+      ],
+      "capture_shape_events": [
+        [
+          2,
+          8,
+          526
+        ],
+        [
+          2,
+          8,
+          470
+        ],
+        [
+          2,
+          8,
+          484
+        ],
+        [
+          2,
+          8,
+          523
+        ],
+        [
+          2,
+          8,
+          492
+        ],
+        [
+          2,
+          8,
+          464
+        ],
+        [
+          2,
+          8,
+          447
+        ],
+        [
+          2,
+          8,
+          454
+        ],
+        [
+          2,
+          8,
+          495
+        ],
+        [
+          2,
+          8,
+          506
+        ],
+        [
+          2,
+          8,
+          469
+        ],
+        [
+          2,
+          8,
+          478
+        ],
+        [
+          2,
+          8,
+          452
+        ],
+        [
+          2,
+          8,
+          462
+        ],
+        [
+          2,
+          8,
+          472
+        ],
+        [
+          2,
+          8,
+          505
+        ],
+        [
+          2,
+          8,
+          461
+        ],
+        [
+          2,
+          8,
+          463
+        ],
+        [
+          2,
+          8,
+          521
+        ],
+        [
+          2,
+          8,
+          467
+        ],
+        [
+          2,
+          8,
+          523
+        ],
+        [
+          2,
+          8,
+          471
+        ],
+        [
+          2,
+          8,
+          483
+        ],
+        [
+          2,
+          8,
+          445
+        ],
+        [
+          2,
+          8,
+          477
+        ],
+        [
+          2,
+          8,
+          443
+        ],
+        [
+          2,
+          8,
+          444
+        ],
+        [
+          2,
+          8,
+          466
+        ],
+        [
+          2,
+          8,
+          482
+        ],
+        [
+          2,
+          8,
+          468
+        ],
+        [
+          2,
+          8,
+          469
+        ],
+        [
+          2,
+          8,
+          450
+        ],
+        [
+          2,
+          8,
+          454
+        ],
+        [
+          2,
+          8,
+          447
+        ],
+        [
+          2,
+          8,
+          451
+        ],
+        [
+          2,
+          8,
+          456
+        ],
+        [
+          2,
+          8,
+          463
+        ],
+        [
+          2,
+          8,
+          475
+        ],
+        [
+          2,
+          8,
+          449
+        ],
+        [
+          2,
+          8,
+          439
+        ]
+      ],
+      "capture_event_count": 40,
+      "unique_logged_captured_shapes": 35,
+      "actual_batch_sizes": {
+        "1": 132
+      },
+      "original_health_SHA256": "5931c3034ced8ff24613fa16f95e5ce28c6968523316bfdc9613ac4a58850d72",
+      "telemetry": {
+        "window": "First request started_at to last completed_at; setup/registration/cleanup excluded",
+        "CPU": {
+          "host_load1": {
+            "available_samples": 184,
+            "min": 37.85595703125,
+            "p50": 38.681640625,
+            "p95_nearest_rank": 38.8525390625,
+            "max": 38.9921875,
+            "mean": 38.53287937330163
+          },
+          "host_CPU_busy_pct": {
+            "available_samples": 184,
+            "min": 52.2607934655776,
+            "p50": 53.223527645814784,
+            "p95_nearest_rank": 55.03377821716922,
+            "max": 56.97874026145517,
+            "mean": 53.41568603000425
+          },
+          "active_thread_CPU_MHz": {
+            "available_samples": 184,
+            "min": 2670.059,
+            "p50": 2699.895,
+            "p95_nearest_rank": 2699.929,
+            "max": 2701.321,
+            "mean": 2699.7423913043476
+          },
+          "all_CPU_mean_MHz": {
+            "available_samples": 184,
+            "min": 1469.687138888889,
+            "p50": 2149.2306805555554,
+            "p95_nearest_rank": 2393.4379444444444,
+            "max": 2643.097888888889,
+            "mean": 2097.0659052687197
+          },
+          "cgroup_CPU_some_pressure_avg10_pct": {
+            "available_samples": 184,
+            "min": 0.0,
+            "p50": 0.0,
+            "p95_nearest_rank": 0.16,
+            "max": 0.36,
+            "mean": 0.02010869565217391
+          },
+          "cgroup_CPU_full_pressure_avg10_pct": {
+            "available_samples": 184,
+            "min": 0.0,
+            "p50": 0.0,
+            "p95_nearest_rank": 0.06,
+            "max": 0.15,
+            "mean": 0.007934782608695653
+          },
+          "process_CPU_pct_one_core": {
+            "available_samples": 184,
+            "min": 95.9893343304157,
+            "p50": 101.00030416726119,
+            "p95_nearest_rank": 103.00285100632524,
+            "max": 104.99118724886647,
+            "mean": 100.97814129127208
+          },
+          "sample_wall_ms": {
+            "available_samples": 184,
+            "min": 87.04993012361228,
+            "p50": 116.18910601828247,
+            "p95_nearest_rank": 251.74316694028676,
+            "max": 279.03345692902803,
+            "mean": 146.08449908226484
+          }
+        },
+        "GPU": {
+          "utilization.gpu": {
+            "available_samples": 174,
+            "min": 0.0,
+            "p50": 34.0,
+            "p95_nearest_rank": 100.0,
+            "max": 100.0,
+            "mean": 32.64367816091954
+          },
+          "utilization.memory": {
+            "available_samples": 174,
+            "min": 0.0,
+            "p50": 10.0,
+            "p95_nearest_rank": 29.0,
+            "max": 35.0,
+            "mean": 9.60919540229885
+          },
+          "memory.used": {
+            "available_samples": 174,
+            "min": 2295.0,
+            "p50": 2967.0,
+            "p95_nearest_rank": 3377.0,
+            "max": 3493.0,
+            "mean": 2946.287356321839
+          },
+          "power.draw": {
+            "available_samples": 174,
+            "min": 26.28,
+            "p50": 70.50999999999999,
+            "p95_nearest_rank": 109.53,
+            "max": 162.15,
+            "mean": 75.11925287356321
+          },
+          "temperature.gpu": {
+            "available_samples": 174,
+            "min": 40.0,
+            "p50": 46.0,
+            "p95_nearest_rank": 58.0,
+            "max": 61.0,
+            "mean": 46.98275862068966
+          },
+          "clocks.current.sm": {
+            "available_samples": 174,
+            "min": 2475.0,
+            "p50": 2707.5,
+            "p95_nearest_rank": 2850.0,
+            "max": 2850.0,
+            "mean": 2662.6724137931033
+          },
+          "clocks.current.graphics": {
+            "available_samples": 174,
+            "min": 2475.0,
+            "p50": 2707.5,
+            "p95_nearest_rank": 2850.0,
+            "max": 2850.0,
+            "mean": 2662.6724137931033
+          },
+          "clocks.current.memory": {
+            "available_samples": 174,
+            "min": 10251.0,
+            "p50": 10251.0,
+            "p95_nearest_rank": 10251.0,
+            "max": 10251.0,
+            "mean": 10251.0
+          }
+        },
+        "cgroup_throttled_usec_delta": 0,
+        "cgroup_throttled_periods_delta": 0,
+        "active_thread_observed_CPUs": [
+          58,
+          62
+        ],
+        "process_affinity_CPU_lists": [
+          "0-71"
+        ],
+        "allowed_NUMA_nodes": [
+          "0-1"
+        ],
+        "GPU_pstates": {
+          "P2": 174
+        },
+        "raw_clock_event_masks": {
+          "0x0000000000000000": 174
+        },
+        "sampler_whole_job_overhead": {
+          "finished_utc": "2026-11-04T12:38:10.501511+00:00",
+          "wall_s": 235.58014712808654,
+          "samples": 236,
+          "sampling_overruns": 0,
+          "interrupted": null,
+          "wrapped_exit_code": 0,
+          "sampler_self_cpu_s": 34.944052,
+          "gpu_sampler_observed_cpu_s": 13.35,
+          "sampler_setup_child_cpu_s": 0.053745,
+          "observed_total_sampler_cpu_pct_one_core_100": 20.522865610451024,
+          "sampler_max_rss_raw": 45024,
+          "sampler_io_counter_delta": {
+            "rchar": 648189130,
+            "wchar": 28872457,
+            "syscr": 459476,
+            "syscw": 6398,
+            "read_bytes": 0,
+            "write_bytes": 29794304,
+            "cancelled_write_bytes": 565248
+          },
+          "sampler_max_rss_unit": "KiB",
+          "overhead_note": "SelfCPU includes sampling/serialization/setup/waits. Nvidia childCPU uses lifetimeCPU; targetCPU stays separate."
+        }
+      }
+    },
+    {
+      "arm": "hybrid-N64",
+      "requests": 132,
+      "status_counts": {
+        "200": 132
+      },
+      "full_body_ms": {
+        "available_samples": 132,
+        "min": 454.442409100011,
+        "p50": 2917.6174310268834,
+        "p95_nearest_rank": 3200.9083880111575,
+        "max": 8665.580385131761,
+        "mean": 2940.4599009572075
+      },
+      "server_stage_ms": {
+        "iterative": {
+          "available_samples": 132,
+          "min": 307.22,
+          "p50": 2758.085,
+          "p95_nearest_rank": 2970.54,
+          "max": 8380.55,
+          "mean": 2771.9809848484847
+        },
+        "codec": {
+          "available_samples": 132,
+          "min": 23.1,
+          "p50": 36.16,
+          "p95_nearest_rank": 336.74,
+          "max": 371.49,
+          "mean": 113.9919696969697
+        },
+        "queue": {
+          "available_samples": 132,
+          "min": 5.48,
+          "p50": 5.7,
+          "p95_nearest_rank": 6.64,
+          "max": 9.4,
+          "mean": 5.816818181818181
+        },
+        "total_generate": {
+          "available_samples": 132,
+          "min": 427.79,
+          "p50": 2884.425,
+          "p95_nearest_rank": 3153.45,
+          "max": 8610.3,
+          "mean": 2905.045909090909
+        }
+      },
+      "graph_memory_actual": {
+        "enabled": true,
+        "max_cuda_graph_row_tokens": 16384,
+        "capture_after_calls": 64,
+        "deferred_calls": 2080,
+        "observed_shape_keys": 76,
+        "max_shape_observations": 4096,
+        "estimate_kind": "Heuristic architecture/dtype row tokens and headroom; NOT a rigorous total VRAM bound",
+        "qualification_scope": "actual_model_architecture_and_runtime",
+        "profile": {
+          "qualified": true,
+          "reason": "",
+          "revision": null,
+          "dtype_bytes": 2,
+          "use_cache": false,
+          "layers": 28,
+          "hidden": 1024,
+          "intermediate": 3072,
+          "heads": 16,
+          "kv_heads": 8,
+          "head_dim": 128,
+          "codebooks": 8,
+          "audio_vocab": 1025
+        },
+        "retained_row_tokens": 894,
+        "unqualified_graph_keys": 0,
+        "resident_graphs": 1,
+        "max_graphs": 8,
+        "calls": 2112,
+        "hits": 31,
+        "captures": 1,
+        "evictions": 0,
+        "evicted_row_tokens": 0,
+        "eager_fallbacks": {
+          "shape_not_hot": 2080
+        },
+        "pressure_cleanups": 0,
+        "admission_rejections": 0,
+        "capture_failures": 0,
+        "clears": 0,
+        "last_owner_memory_snapshot": {
+          "free_bytes": 9861267456,
+          "total_bytes": 12450070528,
+          "required_estimated_bytes": 641964000,
+          "device": "cuda:0"
+        },
+        "last_decision": "eager:shape_not_hot",
+        "resident_shapes": [
+          {
+            "shape": [
+              2,
+              8,
+              447
+            ],
+            "normalized_row_tokens": 894
+          }
+        ]
+      },
+      "health_resident_shapes": [
+        [
+          2,
+          8,
+          447
+        ]
+      ],
+      "capture_shape_events": [
+        [
+          2,
+          8,
+          447
+        ]
+      ],
+      "capture_event_count": 1,
+      "unique_logged_captured_shapes": 1,
+      "actual_batch_sizes": {
+        "1": 132
+      },
+      "original_health_SHA256": "fd521ab91eece28eeba0b95aa3ebe02d20b0e216d59ae17ce108421733bea8a2",
+      "telemetry": {
+        "window": "First request started_at to last completed_at; setup/registration/cleanup excluded",
+        "CPU": {
+          "host_load1": {
+            "available_samples": 388,
+            "min": 37.5830078125,
+            "p50": 38.87255859375,
+            "p95_nearest_rank": 39.46875,
+            "max": 39.68115234375,
+            "mean": 38.613254822406574
+          },
+          "host_CPU_busy_pct": {
+            "available_samples": 388,
+            "min": 52.14963707426019,
+            "p50": 53.19138045911876,
+            "p95_nearest_rank": 55.20702634880803,
+            "max": 58.38034348752664,
+            "mean": 53.49337013147384
+          },
+          "active_thread_CPU_MHz": {
+            "available_samples": 388,
+            "min": 223.639,
+            "p50": 2599.897,
+            "p95_nearest_rank": 2699.912,
+            "max": 2699.941,
+            "mean": 2305.444631443299
+          },
+          "all_CPU_mean_MHz": {
+            "available_samples": 388,
+            "min": 1356.6053472222222,
+            "p50": 2130.6879166666668,
+            "p95_nearest_rank": 2388.4310694444443,
+            "max": 2566.546277777778,
+            "mean": 2095.243136812715
+          },
+          "cgroup_CPU_some_pressure_avg10_pct": {
+            "available_samples": 388,
+            "min": 0.0,
+            "p50": 0.0,
+            "p95_nearest_rank": 0.01,
+            "max": 0.12,
+            "mean": 0.002731958762886598
+          },
+          "cgroup_CPU_full_pressure_avg10_pct": {
+            "available_samples": 388,
+            "min": 0.0,
+            "p50": 0.0,
+            "p95_nearest_rank": 0.0,
+            "max": 0.06,
+            "mean": 0.001134020618556701
+          },
+          "process_CPU_pct_one_core": {
+            "available_samples": 388,
+            "min": 94.00130992205817,
+            "p50": 103.00090671478085,
+            "p95_nearest_rank": 105.98106638150418,
+            "max": 107.98218964154631,
+            "mean": 103.03072109969935
+          },
+          "sample_wall_ms": {
+            "available_samples": 388,
+            "min": 86.49366186000407,
+            "p50": 123.26832243707031,
+            "p95_nearest_rank": 283.98210904560983,
+            "max": 326.45260100252926,
+            "mean": 159.6406740496492
+          }
+        },
+        "GPU": {
+          "utilization.gpu": {
+            "available_samples": 359,
+            "min": 0.0,
+            "p50": 21.0,
+            "p95_nearest_rank": 29.0,
+            "max": 87.0,
+            "mean": 17.79108635097493
+          },
+          "utilization.memory": {
+            "available_samples": 359,
+            "min": 0.0,
+            "p50": 6.0,
+            "p95_nearest_rank": 8.0,
+            "max": 25.0,
+            "mean": 4.908077994428969
+          },
+          "memory.used": {
+            "available_samples": 359,
+            "min": 2345.0,
+            "p50": 2699.0,
+            "p95_nearest_rank": 2699.0,
+            "max": 2763.0,
+            "mean": 2674.74930362117
+          },
+          "power.draw": {
+            "available_samples": 359,
+            "min": 25.99,
+            "p50": 44.37,
+            "p95_nearest_rank": 48.35,
+            "max": 107.55,
+            "mean": 44.43267409470752
+          },
+          "temperature.gpu": {
+            "available_samples": 359,
+            "min": 40.0,
+            "p50": 49.0,
+            "p95_nearest_rank": 54.0,
+            "max": 64.0,
+            "mean": 48.949860724233986
+          },
+          "clocks.current.sm": {
+            "available_samples": 359,
+            "min": 2475.0,
+            "p50": 2475.0,
+            "p95_nearest_rank": 2475.0,
+            "max": 2835.0,
+            "mean": 2476.963788300836
+          },
+          "clocks.current.graphics": {
+            "available_samples": 359,
+            "min": 2475.0,
+            "p50": 2475.0,
+            "p95_nearest_rank": 2475.0,
+            "max": 2835.0,
+            "mean": 2476.963788300836
+          },
+          "clocks.current.memory": {
+            "available_samples": 359,
+            "min": 10251.0,
+            "p50": 10251.0,
+            "p95_nearest_rank": 10251.0,
+            "max": 10251.0,
+            "mean": 10251.0
+          }
+        },
+        "cgroup_throttled_usec_delta": 0,
+        "cgroup_throttled_periods_delta": 0,
+        "active_thread_observed_CPUs": [
+          37,
+          38,
+          39,
+          40,
+          42,
+          46,
+          47,
+          48,
+          49,
+          51
+        ],
+        "process_affinity_CPU_lists": [
+          "0-71"
+        ],
+        "allowed_NUMA_nodes": [
+          "0-1"
+        ],
+        "GPU_pstates": {
+          "P2": 359
+        },
+        "raw_clock_event_masks": {
+          "0x0000000000000000": 359
+        },
+        "sampler_whole_job_overhead": {
+          "finished_utc": "2026-11-04T12:45:43.848481+00:00",
+          "wall_s": 451.1542727840133,
+          "samples": 451,
+          "sampling_overruns": 0,
+          "interrupted": null,
+          "wrapped_exit_code": 0,
+          "sampler_self_cpu_s": 72.254772,
+          "gpu_sampler_observed_cpu_s": 33.7,
+          "sampler_setup_child_cpu_s": 0.044495,
+          "observed_total_sampler_cpu_pct_one_core_100": 23.4951264776664,
+          "sampler_max_rss_raw": 49316,
+          "sampler_io_counter_delta": {
+            "rchar": 671863597,
+            "wchar": 34377403,
+            "syscr": 851120,
+            "syscw": 11062,
+            "read_bytes": 0,
+            "write_bytes": 35962880,
+            "cancelled_write_bytes": 565248
+          },
+          "sampler_max_rss_unit": "KiB",
+          "overhead_note": "SelfCPU includes sampling/serialization/setup/waits. Nvidia childCPU uses lifetimeCPU; targetCPU stays separate."
+        }
+      }
+    },
+    {
+      "arm": "triton-eager",
+      "requests": 132,
+      "status_counts": {
+        "200": 132
+      },
+      "full_body_ms": {
+        "available_samples": 132,
+        "min": 2260.0675891153514,
+        "p50": 2694.384214002639,
+        "p95_nearest_rank": 3150.214135181159,
+        "max": 8836.101480061188,
+        "mean": 2769.8342986563644
+      },
+      "server_stage_ms": {
+        "iterative": {
+          "available_samples": 132,
+          "min": 2192.42,
+          "p50": 2560.8199999999997,
+          "p95_nearest_rank": 2875.8,
+          "max": 8335.01,
+          "mean": 2614.6071212121215
+        },
+        "codec": {
+          "available_samples": 132,
+          "min": 21.19,
+          "p50": 34.285,
+          "p95_nearest_rank": 316.91,
+          "max": 374.37,
+          "mean": 101.51068181818182
+        },
+        "queue": {
+          "available_samples": 132,
+          "min": 5.55,
+          "p50": 5.71,
+          "p95_nearest_rank": 6.28,
+          "max": 9.15,
+          "mean": 5.860833333333333
+        },
+        "total_generate": {
+          "available_samples": 132,
+          "min": 2232.04,
+          "p50": 2661.2749999999996,
+          "p95_nearest_rank": 3060.97,
+          "max": 8772.93,
+          "mean": 2734.4159090909093
+        }
+      },
+      "graph_memory_actual": {},
+      "health_resident_shapes": [],
+      "capture_shape_events": [],
+      "capture_event_count": 0,
+      "unique_logged_captured_shapes": 0,
+      "actual_batch_sizes": {
+        "1": 132
+      },
+      "original_health_SHA256": "a6241b03909acad7f71c0dbf58879fd6db690a859f1e003cd88ecbcca8bac36b",
+      "telemetry": {
+        "window": "First request started_at to last completed_at; setup/registration/cleanup excluded",
+        "CPU": {
+          "host_load1": {
+            "available_samples": 365,
+            "min": 37.818359375,
+            "p50": 38.0859375,
+            "p95_nearest_rank": 38.5703125,
+            "max": 38.60498046875,
+            "mean": 38.15081870719178
+          },
+          "host_CPU_busy_pct": {
+            "available_samples": 365,
+            "min": 52.046783625730995,
+            "p50": 53.19029589117936,
+            "p95_nearest_rank": 55.53078852047924,
+            "max": 57.10088148873653,
+            "mean": 53.477956254401484
+          },
+          "active_thread_CPU_MHz": {
+            "available_samples": 365,
+            "min": 222.793,
+            "p50": 1999.901,
+            "p95_nearest_rank": 2699.911,
+            "max": 3000.0,
+            "mean": 1719.9187260273973
+          },
+          "all_CPU_mean_MHz": {
+            "available_samples": 365,
+            "min": 1242.859763888889,
+            "p50": 1981.6429166666667,
+            "p95_nearest_rank": 2345.2957916666664,
+            "max": 2614.4133472222225,
+            "mean": 1893.2612020928464
+          },
+          "cgroup_CPU_some_pressure_avg10_pct": {
+            "available_samples": 365,
+            "min": 0.0,
+            "p50": 0.0,
+            "p95_nearest_rank": 0.02,
+            "max": 0.15,
+            "mean": 0.003945205479452055
+          },
+          "cgroup_CPU_full_pressure_avg10_pct": {
+            "available_samples": 365,
+            "min": 0.0,
+            "p50": 0.0,
+            "p95_nearest_rank": 0.0,
+            "max": 0.04,
+            "mean": 0.0008767123287671233
+          },
+          "process_CPU_pct_one_core": {
+            "available_samples": 365,
+            "min": 97.00143581286082,
+            "p50": 102.99970325307733,
+            "p95_nearest_rank": 104.99867986684832,
+            "max": 107.00034604100664,
+            "mean": 102.89313871156097
+          },
+          "sample_wall_ms": {
+            "available_samples": 365,
+            "min": 76.53580396436155,
+            "p50": 79.96132504194975,
+            "p95_nearest_rank": 84.98255000449717,
+            "max": 114.15300192311406,
+            "mean": 80.52209964953363
+          }
+        },
+        "GPU": {
+          "utilization.gpu": {
+            "available_samples": 342,
+            "min": 0.0,
+            "p50": 21.0,
+            "p95_nearest_rank": 30.0,
+            "max": 34.0,
+            "mean": 18.137426900584796
+          },
+          "utilization.memory": {
+            "available_samples": 342,
+            "min": 0.0,
+            "p50": 6.0,
+            "p95_nearest_rank": 9.0,
+            "max": 10.0,
+            "mean": 4.950292397660819
+          },
+          "memory.used": {
+            "available_samples": 342,
+            "min": 2691.0,
+            "p50": 2699.0,
+            "p95_nearest_rank": 2699.0,
+            "max": 2699.0,
+            "mean": 2698.8654970760235
+          },
+          "power.draw": {
+            "available_samples": 342,
+            "min": 25.67,
+            "p50": 45.135000000000005,
+            "p95_nearest_rank": 49.31,
+            "max": 52.15,
+            "mean": 44.86622807017544
+          },
+          "temperature.gpu": {
+            "available_samples": 342,
+            "min": 40.0,
+            "p50": 49.0,
+            "p95_nearest_rank": 54.0,
+            "max": 55.0,
+            "mean": 48.771929824561404
+          },
+          "clocks.current.sm": {
+            "available_samples": 342,
+            "min": 2475.0,
+            "p50": 2475.0,
+            "p95_nearest_rank": 2475.0,
+            "max": 2475.0,
+            "mean": 2475.0
+          },
+          "clocks.current.graphics": {
+            "available_samples": 342,
+            "min": 2475.0,
+            "p50": 2475.0,
+            "p95_nearest_rank": 2475.0,
+            "max": 2475.0,
+            "mean": 2475.0
+          },
+          "clocks.current.memory": {
+            "available_samples": 342,
+            "min": 10251.0,
+            "p50": 10251.0,
+            "p95_nearest_rank": 10251.0,
+            "max": 10251.0,
+            "mean": 10251.0
+          }
+        },
+        "cgroup_throttled_usec_delta": 0,
+        "cgroup_throttled_periods_delta": 0,
+        "active_thread_observed_CPUs": [
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          52,
+          53
+        ],
+        "process_affinity_CPU_lists": [
+          "0-71"
+        ],
+        "allowed_NUMA_nodes": [
+          "0-1"
+        ],
+        "GPU_pstates": {
+          "P2": 342
+        },
+        "raw_clock_event_masks": {
+          "0x0000000000000000": 342
+        },
+        "sampler_whole_job_overhead": {
+          "finished_utc": "2026-11-04T12:52:59.047409+00:00",
+          "wall_s": 433.366600133013,
+          "samples": 433,
+          "sampling_overruns": 0,
+          "interrupted": null,
+          "wrapped_exit_code": 0,
+          "sampler_self_cpu_s": 37.812587,
+          "gpu_sampler_observed_cpu_s": 26.82,
+          "sampler_setup_child_cpu_s": 0.04868,
+          "observed_total_sampler_cpu_pct_one_core_100": 14.925300422355441,
+          "sampler_max_rss_raw": 51044,
+          "sampler_io_counter_delta": {
+            "rchar": 669797750,
+            "wchar": 33007539,
+            "syscr": 824820,
+            "syscw": 10762,
+            "read_bytes": 0,
+            "write_bytes": 34508800,
+            "cancelled_write_bytes": 565248
+          },
+          "sampler_max_rss_unit": "KiB",
+          "overhead_note": "SelfCPU includes sampling/serialization/setup/waits. Nvidia childCPU uses lifetimeCPU; targetCPU stays separate."
+        }
+      }
+    }
+  ]
+}

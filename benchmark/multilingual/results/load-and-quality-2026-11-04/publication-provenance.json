@@ -1,0 +1,2231 @@
+{
+  "at": "2026-11-04T15:33:18.347118+00:00",
+  "kind": "CPU-only copy/hash/lossless compression of retained evidence; no inference",
+  "publisher_sha256": "4eee69d7e1af16642fb1c3460d4e814560d20bde5f9426deefaeb6804827b7ad",
+  "files": [
+    {
+      "source": "retained-59071593/results/before-unique1000-graph2/connection-warmups.jsonl",
+      "target": "results/load-and-quality-2026-11-04/runs/before-unique1000-graph2/connection-warmups.jsonl",
+      "source_sha256": "193736ebe4106e74db71d6951c9dbd301e0617f043315b8ca80418bf9418dadf",
+      "saved_sha256": "193736ebe4106e74db71d6951c9dbd301e0617f043315b8ca80418bf9418dadf",
+      "source_bytes": 172,
+      "saved_bytes": 172,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/before-unique1000-graph2/corpus.json",
+      "target": "results/load-and-quality-2026-11-04/runs/before-unique1000-graph2/corpus.json.gz",
+      "source_sha256": "896597afd0fe0396e0162d0ba3849e803cc5e48101aeb8293519de91f1edfd2f",
+      "saved_sha256": "c99ff1cd40a628d54291b3b82066f0f141a42df339c001e51003955660f5e5bd",
+      "source_bytes": 2536227,
+      "saved_bytes": 125102,
+      "adaptation": "lossless gzip; decompressed SHA verified"
+    },
+    {
+      "source": "retained-59071593/results/before-unique1000-graph2/health-after.json",
+      "target": "results/load-and-quality-2026-11-04/runs/before-unique1000-graph2/health-after.json",
+      "source_sha256": "f0ae10085562407b073cbb19ae613060f134fde9e5d716862236b6e254c11426",
+      "saved_sha256": "f0ae10085562407b073cbb19ae613060f134fde9e5d716862236b6e254c11426",
+      "source_bytes": 2906,
+      "saved_bytes": 2906,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/before-unique1000-graph2/health-before.json",
+      "target": "results/load-and-quality-2026-11-04/runs/before-unique1000-graph2/health-before.json",
+      "source_sha256": "54b214c972707b646197aea6fd82327b702853df69ccc43de127e30a2bce997e",
+      "saved_sha256": "54b214c972707b646197aea6fd82327b702853df69ccc43de127e30a2bce997e",
+      "source_bytes": 2188,
+      "saved_bytes": 2188,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/before-unique1000-graph2/health-probes.jsonl",
+      "target": "results/load-and-quality-2026-11-04/runs/before-unique1000-graph2/health-probes.jsonl.gz",
+      "source_sha256": "78ba1cfb368069a34a6ec06eaf3e036c74d12ea58ed75a0e4443cda3b7b0f385",
+      "saved_sha256": "a7831b72f994bfafe8d8f007018f38ed154c36c260bc67e895fad80caa59f391",
+      "source_bytes": 2662814,
+      "saved_bytes": 71784,
+      "adaptation": "lossless gzip; decompressed SHA verified"
+    },
+    {
+      "source": "retained-59071593/results/before-unique1000-graph2/independent-protocol-verification-stderr.txt",
+      "target": "results/load-and-quality-2026-11-04/runs/before-unique1000-graph2/independent-protocol-verification-stderr.txt",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "saved_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bytes": 0,
+      "saved_bytes": 0,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/before-unique1000-graph2/independent-protocol-verification.json",
+      "target": "results/load-and-quality-2026-11-04/runs/before-unique1000-graph2/independent-protocol-verification.json",
+      "source_sha256": "79bb81e7fab679063f9c55995aa9901e3ab16b599511d65851a92871593abee3",
+      "saved_sha256": "79bb81e7fab679063f9c55995aa9901e3ab16b599511d65851a92871593abee3",
+      "source_bytes": 4914,
+      "saved_bytes": 4914,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/before-unique1000-graph2/language-support.json",
+      "target": "results/load-and-quality-2026-11-04/runs/before-unique1000-graph2/language-support.json",
+      "source_sha256": "a52dad8ee33492a5b018ccd227d98d5a90bc5d5722b543dec921017c0b8833cf",
+      "saved_sha256": "a52dad8ee33492a5b018ccd227d98d5a90bc5d5722b543dec921017c0b8833cf",
+      "source_bytes": 68578,
+      "saved_bytes": 68578,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/before-unique1000-graph2/metadata.json",
+      "target": "results/load-and-quality-2026-11-04/runs/before-unique1000-graph2/metadata.json",
+      "source_sha256": "11ab9acc839963dcac1918b6f3429973dc6d8bb335c372854e7baf70802303f8",
+      "saved_sha256": "11ab9acc839963dcac1918b6f3429973dc6d8bb335c372854e7baf70802303f8",
+      "source_bytes": 12396,
+      "saved_bytes": 12396,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/before-unique1000-graph2/outcome.json",
+      "target": "results/load-and-quality-2026-11-04/runs/before-unique1000-graph2/outcome.json",
+      "source_sha256": "0875a6b3947f4b437d0e75a00e7eec9fd2cb8b08550da0b7df27637c6c375bab",
+      "saved_sha256": "0875a6b3947f4b437d0e75a00e7eec9fd2cb8b08550da0b7df27637c6c375bab",
+      "source_bytes": 125,
+      "saved_bytes": 125,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/before-unique1000-graph2/plan.json",
+      "target": "results/load-and-quality-2026-11-04/runs/before-unique1000-graph2/plan.json",
+      "source_sha256": "3244f2327bc0b2ad4c02cda1ea943d1e7a6c7d19a754d3c31ae2b9d0da17c14f",
+      "saved_sha256": "3244f2327bc0b2ad4c02cda1ea943d1e7a6c7d19a754d3c31ae2b9d0da17c14f",
+      "source_bytes": 28924,
+      "saved_bytes": 28924,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/before-unique1000-graph2/quality-asr-ready.json",
+      "target": "results/load-and-quality-2026-11-04/runs/before-unique1000-graph2/quality-asr-ready.json.gz",
+      "source_sha256": "8d4336f3764f1d534d13458fc1bef20b322f3c4a20158aa175d5595f9b68f6bb",
+      "saved_sha256": "f802a9b7b68c861bb83e05c79bd75058b8f7b0ca834996630d806c9bc99a9372",
+      "source_bytes": 4704951,
+      "saved_bytes": 255889,
+      "adaptation": "lossless gzip; decompressed SHA verified"
+    },
+    {
+      "source": "retained-59071593/results/before-unique1000-graph2/quality-invalid-audio.json",
+      "target": "results/load-and-quality-2026-11-04/runs/before-unique1000-graph2/quality-invalid-audio.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "saved_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "source_bytes": 3,
+      "saved_bytes": 3,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/before-unique1000-graph2/quality-manifest.json",
+      "target": "results/load-and-quality-2026-11-04/runs/before-unique1000-graph2/quality-manifest.json.gz",
+      "source_sha256": "8d4336f3764f1d534d13458fc1bef20b322f3c4a20158aa175d5595f9b68f6bb",
+      "saved_sha256": "f802a9b7b68c861bb83e05c79bd75058b8f7b0ca834996630d806c9bc99a9372",
+      "source_bytes": 4704951,
+      "saved_bytes": 255889,
+      "adaptation": "lossless gzip; decompressed SHA verified"
+    },
+    {
+      "source": "retained-59071593/results/before-unique1000-graph2/quality-unmapped.json",
+      "target": "results/load-and-quality-2026-11-04/runs/before-unique1000-graph2/quality-unmapped.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "saved_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "source_bytes": 3,
+      "saved_bytes": 3,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/before-unique1000-graph2/reference-manifest.json",
+      "target": "results/load-and-quality-2026-11-04/runs/before-unique1000-graph2/reference-manifest.json",
+      "source_sha256": "a6f3af3610ef5f9b4d64dfcedfd66f454f7af8c6448d50e856e88c2456123dc6",
+      "saved_sha256": "a6f3af3610ef5f9b4d64dfcedfd66f454f7af8c6448d50e856e88c2456123dc6",
+      "source_bytes": 12206,
+      "saved_bytes": 12206,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/before-unique1000-graph2/registrations.jsonl",
+      "target": "results/load-and-quality-2026-11-04/runs/before-unique1000-graph2/registrations.jsonl",
+      "source_sha256": "fc3630a7ecb29e160782f106889809fc7a45ddf612ddb3dfcf55641558559a38",
+      "saved_sha256": "fc3630a7ecb29e160782f106889809fc7a45ddf612ddb3dfcf55641558559a38",
+      "source_bytes": 16116,
+      "saved_bytes": 16116,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/before-unique1000-graph2/requests.jsonl",
+      "target": "results/load-and-quality-2026-11-04/runs/before-unique1000-graph2/requests.jsonl.gz",
+      "source_sha256": "e4ceb4e24fa8388cc50055331953aef11e466454829a164acc142abdb7696c11",
+      "saved_sha256": "498813ad381106b202fad93028c31b0c8950f595c27488c54de7e2a1b63e7708",
+      "source_bytes": 5830962,
+      "saved_bytes": 664166,
+      "adaptation": "lossless gzip; decompressed SHA verified"
+    },
+    {
+      "source": "retained-59071593/results/before-unique1000-graph2/server-process-limits.txt",
+      "target": "results/load-and-quality-2026-11-04/runs/before-unique1000-graph2/server-process-limits.txt",
+      "source_sha256": "0c419ffa96ef3d4aa10282d553136c7c28517a8f9522705eb055ff85fe225326",
+      "saved_sha256": "0c419ffa96ef3d4aa10282d553136c7c28517a8f9522705eb055ff85fe225326",
+      "source_bytes": 1323,
+      "saved_bytes": 1323,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/before-unique1000-graph2/server-seed.json",
+      "target": "results/load-and-quality-2026-11-04/runs/before-unique1000-graph2/server-seed.json",
+      "source_sha256": "977791a6b10bf9483aa22b75e5475ed3d04404747b83c77fc0a63b03a1e32c1e",
+      "saved_sha256": "977791a6b10bf9483aa22b75e5475ed3d04404747b83c77fc0a63b03a1e32c1e",
+      "source_bytes": 271,
+      "saved_bytes": 271,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/before-unique1000-graph2/server.log",
+      "target": "results/load-and-quality-2026-11-04/runs/before-unique1000-graph2/server.log",
+      "source_sha256": "bc0f5f0fe5458a0d913fdfe5d4b975c54501776039469bc1ee5abf8a869627a4",
+      "saved_sha256": "bc0f5f0fe5458a0d913fdfe5d4b975c54501776039469bc1ee5abf8a869627a4",
+      "source_bytes": 1120131,
+      "saved_bytes": 1120131,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/before-unique1000-graph2/summary.json",
+      "target": "results/load-and-quality-2026-11-04/runs/before-unique1000-graph2/summary.json",
+      "source_sha256": "1e1410b2c5d00644b64015b8633f2d3bf2b3e82e15a23567ece6b64c01dacc62",
+      "saved_sha256": "1e1410b2c5d00644b64015b8633f2d3bf2b3e82e15a23567ece6b64c01dacc62",
+      "source_bytes": 33573,
+      "saved_bytes": 33573,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B1-v1/connection-warmups.jsonl",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B1-v1/connection-warmups.jsonl",
+      "source_sha256": "3a4a03dc28501abc4f86c45ed79f3be191ac15e6b00e7ddf266aee6a2da3cc2c",
+      "saved_sha256": "3a4a03dc28501abc4f86c45ed79f3be191ac15e6b00e7ddf266aee6a2da3cc2c",
+      "source_bytes": 172,
+      "saved_bytes": 172,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B1-v1/corpus.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B1-v1/corpus.json.gz",
+      "source_sha256": "896597afd0fe0396e0162d0ba3849e803cc5e48101aeb8293519de91f1edfd2f",
+      "saved_sha256": "c99ff1cd40a628d54291b3b82066f0f141a42df339c001e51003955660f5e5bd",
+      "source_bytes": 2536227,
+      "saved_bytes": 125102,
+      "adaptation": "lossless gzip; decompressed SHA verified"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B1-v1/health-after.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B1-v1/health-after.json",
+      "source_sha256": "3c0abb37ae424c048fffc9bc94222c86fc998d0db68665670487845ca2f6fec3",
+      "saved_sha256": "3c0abb37ae424c048fffc9bc94222c86fc998d0db68665670487845ca2f6fec3",
+      "source_bytes": 3515,
+      "saved_bytes": 3515,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B1-v1/health-before.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B1-v1/health-before.json",
+      "source_sha256": "b167c01771f13251037aa8d35129092b06dece3f6f0848f42c77585c02789dcc",
+      "saved_sha256": "b167c01771f13251037aa8d35129092b06dece3f6f0848f42c77585c02789dcc",
+      "source_bytes": 2891,
+      "saved_bytes": 2891,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B1-v1/health-probes.jsonl",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B1-v1/health-probes.jsonl.gz",
+      "source_sha256": "1c1ab851ee408877e4141ea506e77d24ac8277560ba7c1df935b23f390aeb3cf",
+      "saved_sha256": "4efbda61da0b88c762f011100f6065e53a60178664674e5eedf67d2171ac9208",
+      "source_bytes": 2464537,
+      "saved_bytes": 107786,
+      "adaptation": "lossless gzip; decompressed SHA verified"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B1-v1/independent-protocol-verification-stderr.txt",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B1-v1/independent-protocol-verification-stderr.txt",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "saved_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bytes": 0,
+      "saved_bytes": 0,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B1-v1/independent-protocol-verification.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B1-v1/independent-protocol-verification.json",
+      "source_sha256": "8ed9f7cd9adfc098dea971a95b14517a93a7bf5af55e244310b927472a00e875",
+      "saved_sha256": "8ed9f7cd9adfc098dea971a95b14517a93a7bf5af55e244310b927472a00e875",
+      "source_bytes": 4914,
+      "saved_bytes": 4914,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B1-v1/independent-waveform-audit.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B1-v1/independent-waveform-audit.json",
+      "source_sha256": "c3db0d7b8fc2d6a8ab45a25447349635d1c25b291ee5110bae8f4614ffbbf98b",
+      "saved_sha256": "c3db0d7b8fc2d6a8ab45a25447349635d1c25b291ee5110bae8f4614ffbbf98b",
+      "source_bytes": 344588,
+      "saved_bytes": 344588,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B1-v1/language-support.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B1-v1/language-support.json",
+      "source_sha256": "a52dad8ee33492a5b018ccd227d98d5a90bc5d5722b543dec921017c0b8833cf",
+      "saved_sha256": "a52dad8ee33492a5b018ccd227d98d5a90bc5d5722b543dec921017c0b8833cf",
+      "source_bytes": 68578,
+      "saved_bytes": 68578,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B1-v1/metadata.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B1-v1/metadata.json",
+      "source_sha256": "df700125d78da8b51c41a5320f6228494b988cdaae29994d92be3c83442a2d4b",
+      "saved_sha256": "df700125d78da8b51c41a5320f6228494b988cdaae29994d92be3c83442a2d4b",
+      "source_bytes": 13580,
+      "saved_bytes": 13580,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B1-v1/outcome.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B1-v1/outcome.json",
+      "source_sha256": "aedaee7bb433c3ba194db441a54d422ef47e3b8dde8195125b9cff3a492353d9",
+      "saved_sha256": "aedaee7bb433c3ba194db441a54d422ef47e3b8dde8195125b9cff3a492353d9",
+      "source_bytes": 127,
+      "saved_bytes": 127,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B1-v1/plan.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B1-v1/plan.json",
+      "source_sha256": "3244f2327bc0b2ad4c02cda1ea943d1e7a6c7d19a754d3c31ae2b9d0da17c14f",
+      "saved_sha256": "3244f2327bc0b2ad4c02cda1ea943d1e7a6c7d19a754d3c31ae2b9d0da17c14f",
+      "source_bytes": 28924,
+      "saved_bytes": 28924,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B1-v1/quality-asr-ready.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B1-v1/quality-asr-ready.json.gz",
+      "source_sha256": "35072ea18ed43899bfc5488fb6f79305707a5207d15f119ce193748b4d5dbe04",
+      "saved_sha256": "9c3129b1d38114ad57b555742133e9fca50cffc558014f7c2dfb0a5743e2ff3d",
+      "source_bytes": 4709028,
+      "saved_bytes": 255992,
+      "adaptation": "lossless gzip; decompressed SHA verified"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B1-v1/quality-invalid-audio.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B1-v1/quality-invalid-audio.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "saved_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "source_bytes": 3,
+      "saved_bytes": 3,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B1-v1/quality-manifest.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B1-v1/quality-manifest.json.gz",
+      "source_sha256": "35072ea18ed43899bfc5488fb6f79305707a5207d15f119ce193748b4d5dbe04",
+      "saved_sha256": "9c3129b1d38114ad57b555742133e9fca50cffc558014f7c2dfb0a5743e2ff3d",
+      "source_bytes": 4709028,
+      "saved_bytes": 255992,
+      "adaptation": "lossless gzip; decompressed SHA verified"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B1-v1/quality-unmapped.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B1-v1/quality-unmapped.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "saved_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "source_bytes": 3,
+      "saved_bytes": 3,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B1-v1/reference-manifest.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B1-v1/reference-manifest.json",
+      "source_sha256": "a6f3af3610ef5f9b4d64dfcedfd66f454f7af8c6448d50e856e88c2456123dc6",
+      "saved_sha256": "a6f3af3610ef5f9b4d64dfcedfd66f454f7af8c6448d50e856e88c2456123dc6",
+      "source_bytes": 12206,
+      "saved_bytes": 12206,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B1-v1/registrations.jsonl",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B1-v1/registrations.jsonl",
+      "source_sha256": "9fa2feb82c04dbdfa51dedb80d72323174c63223ef226ae49ba9b8a89b9bbbd2",
+      "saved_sha256": "9fa2feb82c04dbdfa51dedb80d72323174c63223ef226ae49ba9b8a89b9bbbd2",
+      "source_bytes": 16413,
+      "saved_bytes": 16413,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B1-v1/requests.jsonl",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B1-v1/requests.jsonl.gz",
+      "source_sha256": "a8fd1a897d8ec0f77e4d04eb796685511efbd2d4b8829fcea1de644878d82a0c",
+      "saved_sha256": "02c377d5ea7e8f8201c820c0045e515b2751c8ee25bf83488fc62a4ffb2e61ef",
+      "source_bytes": 5823756,
+      "saved_bytes": 711800,
+      "adaptation": "lossless gzip; decompressed SHA verified"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B1-v1/server-process-limits.txt",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B1-v1/server-process-limits.txt",
+      "source_sha256": "0c419ffa96ef3d4aa10282d553136c7c28517a8f9522705eb055ff85fe225326",
+      "saved_sha256": "0c419ffa96ef3d4aa10282d553136c7c28517a8f9522705eb055ff85fe225326",
+      "source_bytes": 1323,
+      "saved_bytes": 1323,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B1-v1/server-seed.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B1-v1/server-seed.json",
+      "source_sha256": "977791a6b10bf9483aa22b75e5475ed3d04404747b83c77fc0a63b03a1e32c1e",
+      "saved_sha256": "977791a6b10bf9483aa22b75e5475ed3d04404747b83c77fc0a63b03a1e32c1e",
+      "source_bytes": 271,
+      "saved_bytes": 271,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B1-v1/server.log",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B1-v1/server.log",
+      "source_sha256": "b89ecd41d5742bff8f44f10ed75ea749881bedd31c4d4d096a41f002ddd23922",
+      "saved_sha256": "b89ecd41d5742bff8f44f10ed75ea749881bedd31c4d4d096a41f002ddd23922",
+      "source_bytes": 1582644,
+      "saved_bytes": 1582644,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B1-v1/summary.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B1-v1/summary.json",
+      "source_sha256": "ea1fd57c90f38cdf41517490fae3c26f3f87684f49aaa92b3a636ffb87c5ee1b",
+      "saved_sha256": "ea1fd57c90f38cdf41517490fae3c26f3f87684f49aaa92b3a636ffb87c5ee1b",
+      "source_bytes": 33572,
+      "saved_bytes": 33572,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B8-v1/connection-warmups.jsonl",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B8-v1/connection-warmups.jsonl",
+      "source_sha256": "8e44c8f186f8d6decf637e273319705c64c22c03085e252fca5ce02aaf8d927c",
+      "saved_sha256": "8e44c8f186f8d6decf637e273319705c64c22c03085e252fca5ce02aaf8d927c",
+      "source_bytes": 171,
+      "saved_bytes": 171,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B8-v1/corpus.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B8-v1/corpus.json.gz",
+      "source_sha256": "896597afd0fe0396e0162d0ba3849e803cc5e48101aeb8293519de91f1edfd2f",
+      "saved_sha256": "c99ff1cd40a628d54291b3b82066f0f141a42df339c001e51003955660f5e5bd",
+      "source_bytes": 2536227,
+      "saved_bytes": 125102,
+      "adaptation": "lossless gzip; decompressed SHA verified"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B8-v1/health-after.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B8-v1/health-after.json",
+      "source_sha256": "ae71eb8b88fc78e29c9c79e61ddb9e405be47672ddbd68ca02bda7bff652f1ce",
+      "saved_sha256": "ae71eb8b88fc78e29c9c79e61ddb9e405be47672ddbd68ca02bda7bff652f1ce",
+      "source_bytes": 3506,
+      "saved_bytes": 3506,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B8-v1/health-before.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B8-v1/health-before.json",
+      "source_sha256": "14be66958cb4081c9a40af75226bdb109d49aea17e65ee15796502834b287055",
+      "saved_sha256": "14be66958cb4081c9a40af75226bdb109d49aea17e65ee15796502834b287055",
+      "source_bytes": 2891,
+      "saved_bytes": 2891,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B8-v1/health-probes.jsonl",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B8-v1/health-probes.jsonl.gz",
+      "source_sha256": "2c4252bcd20b6c6bfcd86019d26d42123cc19c686d179f4667cf9fd26585325f",
+      "saved_sha256": "b7c05c286dbb7b81522c49d3431f0b1e5425d5dd2f91b41fc67333364c6adf87",
+      "source_bytes": 2817433,
+      "saved_bytes": 58223,
+      "adaptation": "lossless gzip; decompressed SHA verified"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B8-v1/independent-protocol-verification-stderr.txt",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B8-v1/independent-protocol-verification-stderr.txt",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "saved_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bytes": 0,
+      "saved_bytes": 0,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B8-v1/independent-protocol-verification.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B8-v1/independent-protocol-verification.json",
+      "source_sha256": "aa559b1a4a4065a0e070a0e190cdbf163efce80bdcd59d6cd76183af4876ac9c",
+      "saved_sha256": "aa559b1a4a4065a0e070a0e190cdbf163efce80bdcd59d6cd76183af4876ac9c",
+      "source_bytes": 4914,
+      "saved_bytes": 4914,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B8-v1/independent-waveform-audit.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B8-v1/independent-waveform-audit.json",
+      "source_sha256": "87d58540818ddf03ac2f0071e8da8f10cb719b66da8a96fc2367cdfb9c8eaca6",
+      "saved_sha256": "87d58540818ddf03ac2f0071e8da8f10cb719b66da8a96fc2367cdfb9c8eaca6",
+      "source_bytes": 344513,
+      "saved_bytes": 344513,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B8-v1/language-support.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B8-v1/language-support.json",
+      "source_sha256": "a52dad8ee33492a5b018ccd227d98d5a90bc5d5722b543dec921017c0b8833cf",
+      "saved_sha256": "a52dad8ee33492a5b018ccd227d98d5a90bc5d5722b543dec921017c0b8833cf",
+      "source_bytes": 68578,
+      "saved_bytes": 68578,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B8-v1/metadata.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B8-v1/metadata.json",
+      "source_sha256": "21430d33d0db5bb0eba697d40ca9de152c0f64d96c5310927428cb7ba529b2fc",
+      "saved_sha256": "21430d33d0db5bb0eba697d40ca9de152c0f64d96c5310927428cb7ba529b2fc",
+      "source_bytes": 13580,
+      "saved_bytes": 13580,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B8-v1/outcome.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B8-v1/outcome.json",
+      "source_sha256": "71532cfa6b0c329cc4440b4543ec4fcd60808d8e85f8b245a9255df6942bd378",
+      "saved_sha256": "71532cfa6b0c329cc4440b4543ec4fcd60808d8e85f8b245a9255df6942bd378",
+      "source_bytes": 127,
+      "saved_bytes": 127,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B8-v1/plan.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B8-v1/plan.json",
+      "source_sha256": "3244f2327bc0b2ad4c02cda1ea943d1e7a6c7d19a754d3c31ae2b9d0da17c14f",
+      "saved_sha256": "3244f2327bc0b2ad4c02cda1ea943d1e7a6c7d19a754d3c31ae2b9d0da17c14f",
+      "source_bytes": 28924,
+      "saved_bytes": 28924,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B8-v1/quality-asr-ready.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B8-v1/quality-asr-ready.json.gz",
+      "source_sha256": "584ec0fcf61f20df1f53026af0f96a8653a9c1944c0842d88c1354c19562c760",
+      "saved_sha256": "ba1038ecbcd0e25017e0b20b0873d37f7cd9a76da0b15f97eecf737631cf895f",
+      "source_bytes": 4708950,
+      "saved_bytes": 255775,
+      "adaptation": "lossless gzip; decompressed SHA verified"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B8-v1/quality-invalid-audio.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B8-v1/quality-invalid-audio.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "saved_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "source_bytes": 3,
+      "saved_bytes": 3,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B8-v1/quality-manifest.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B8-v1/quality-manifest.json.gz",
+      "source_sha256": "584ec0fcf61f20df1f53026af0f96a8653a9c1944c0842d88c1354c19562c760",
+      "saved_sha256": "ba1038ecbcd0e25017e0b20b0873d37f7cd9a76da0b15f97eecf737631cf895f",
+      "source_bytes": 4708950,
+      "saved_bytes": 255775,
+      "adaptation": "lossless gzip; decompressed SHA verified"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B8-v1/quality-unmapped.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B8-v1/quality-unmapped.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "saved_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "source_bytes": 3,
+      "saved_bytes": 3,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B8-v1/reference-manifest.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B8-v1/reference-manifest.json",
+      "source_sha256": "a6f3af3610ef5f9b4d64dfcedfd66f454f7af8c6448d50e856e88c2456123dc6",
+      "saved_sha256": "a6f3af3610ef5f9b4d64dfcedfd66f454f7af8c6448d50e856e88c2456123dc6",
+      "source_bytes": 12206,
+      "saved_bytes": 12206,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B8-v1/registrations.jsonl",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B8-v1/registrations.jsonl",
+      "source_sha256": "dad3fa1c65b7fbd0ae65707d9bc05cd0164c264b1f3cdfe1164c40c80e821fc1",
+      "saved_sha256": "dad3fa1c65b7fbd0ae65707d9bc05cd0164c264b1f3cdfe1164c40c80e821fc1",
+      "source_bytes": 16413,
+      "saved_bytes": 16413,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B8-v1/requests.jsonl",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B8-v1/requests.jsonl.gz",
+      "source_sha256": "b2f02377a48134011df89d6dac43eb8de2409d073b1e3ecb63b7e3e69fbc20ff",
+      "saved_sha256": "46623a7a0ebd5893d33d0472bc6c9c31caad7fc165f1d377fefca734838284fb",
+      "source_bytes": 5834376,
+      "saved_bytes": 664402,
+      "adaptation": "lossless gzip; decompressed SHA verified"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B8-v1/server-process-limits.txt",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B8-v1/server-process-limits.txt",
+      "source_sha256": "0c419ffa96ef3d4aa10282d553136c7c28517a8f9522705eb055ff85fe225326",
+      "saved_sha256": "0c419ffa96ef3d4aa10282d553136c7c28517a8f9522705eb055ff85fe225326",
+      "source_bytes": 1323,
+      "saved_bytes": 1323,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B8-v1/server-seed.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B8-v1/server-seed.json",
+      "source_sha256": "977791a6b10bf9483aa22b75e5475ed3d04404747b83c77fc0a63b03a1e32c1e",
+      "saved_sha256": "977791a6b10bf9483aa22b75e5475ed3d04404747b83c77fc0a63b03a1e32c1e",
+      "source_bytes": 271,
+      "saved_bytes": 271,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B8-v1/server.log",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B8-v1/server.log",
+      "source_sha256": "2b7c3c8cf85bfb13201d9d3995a1c5703a4a0b6ccd3f0da38e156805bc86186d",
+      "saved_sha256": "2b7c3c8cf85bfb13201d9d3995a1c5703a4a0b6ccd3f0da38e156805bc86186d",
+      "source_bytes": 1066096,
+      "saved_bytes": 1066096,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-novel1000-B8-v1/summary.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-novel1000-B8-v1/summary.json",
+      "source_sha256": "ec2079d3d8895dfe781f5f813b9c2871e946c5a8025341ff3b9934f1942ed95d",
+      "saved_sha256": "ec2079d3d8895dfe781f5f813b9c2871e946c5a8025341ff3b9934f1942ed95d",
+      "source_bytes": 33573,
+      "saved_bytes": 33573,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/RAW_BURST5000_COMPLETE_IDLE.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-raw5000-cyclic1000-v1/RAW_BURST5000_COMPLETE_IDLE.json",
+      "source_sha256": "e28ea81047e626b0c668d9f2368f4a92ce50f4e43b02facd5c53c24bc77d0072",
+      "saved_sha256": "e28ea81047e626b0c668d9f2368f4a92ce50f4e43b02facd5c53c24bc77d0072",
+      "source_bytes": 204,
+      "saved_bytes": 204,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/child-outcome.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-raw5000-cyclic1000-v1/child-outcome.json",
+      "source_sha256": "bc6694533ce31d5a6e2c9b4a8e2ffb698f0e08b10312a01cfb464bd0455ef7a3",
+      "saved_sha256": "bc6694533ce31d5a6e2c9b4a8e2ffb698f0e08b10312a01cfb464bd0455ef7a3",
+      "source_bytes": 63,
+      "saved_bytes": 63,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/cohort-server-log-offset.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-raw5000-cyclic1000-v1/cohort-server-log-offset.json",
+      "source_sha256": "7c492591ee579d6abf86ad692f3a06cd1f94a9cbbebd57709990058843267a3c",
+      "saved_sha256": "7c492591ee579d6abf86ad692f3a06cd1f94a9cbbebd57709990058843267a3c",
+      "source_bytes": 22,
+      "saved_bytes": 22,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/controller-pid.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-raw5000-cyclic1000-v1/controller-pid.json",
+      "source_sha256": "840b7519540fee8410f1f066357c39325d978102634c4da96cb9baf97912f2d2",
+      "saved_sha256": "840b7519540fee8410f1f066357c39325d978102634c4da96cb9baf97912f2d2",
+      "source_bytes": 20,
+      "saved_bytes": 20,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/controller.log",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-raw5000-cyclic1000-v1/controller.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "saved_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bytes": 0,
+      "saved_bytes": 0,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/health-after.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-raw5000-cyclic1000-v1/health-after.json",
+      "source_sha256": "a6846cd24989b90241a0a52d3ea0b0a0c36db6956625ed95d442f9d86f13469b",
+      "saved_sha256": "a6846cd24989b90241a0a52d3ea0b0a0c36db6956625ed95d442f9d86f13469b",
+      "source_bytes": 3683,
+      "saved_bytes": 3683,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/health-before.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-raw5000-cyclic1000-v1/health-before.json",
+      "source_sha256": "2a9a0b37eebf2aa24515a6563f0c673b9f89f20e190599799847622afb2b2b5f",
+      "saved_sha256": "2a9a0b37eebf2aa24515a6563f0c673b9f89f20e190599799847622afb2b2b5f",
+      "source_bytes": 3666,
+      "saved_bytes": 3666,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/health-probes.jsonl",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-raw5000-cyclic1000-v1/health-probes.jsonl",
+      "source_sha256": "ab6f41fa060b8c157672b474c1ee4f5ebdba9edeb53a71ded0f666531548d413",
+      "saved_sha256": "ab6f41fa060b8c157672b474c1ee4f5ebdba9edeb53a71ded0f666531548d413",
+      "source_bytes": 1224089,
+      "saved_bytes": 1224089,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/health-startup.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-raw5000-cyclic1000-v1/health-startup.json",
+      "source_sha256": "bc44d005c46da6cfae63dbcd3163ea5415e1939fd84041b0eff93b93fa25b896",
+      "saved_sha256": "bc44d005c46da6cfae63dbcd3163ea5415e1939fd84041b0eff93b93fa25b896",
+      "source_bytes": 3041,
+      "saved_bytes": 3041,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/language-support.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-raw5000-cyclic1000-v1/language-support.json",
+      "source_sha256": "b948673864fa7280479bcb58cfb9a71609397d33612a6bbcc519afce4631e760",
+      "saved_sha256": "b948673864fa7280479bcb58cfb9a71609397d33612a6bbcc519afce4631e760",
+      "source_bytes": 60875,
+      "saved_bytes": 60875,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/metadata.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-raw5000-cyclic1000-v1/metadata.json",
+      "source_sha256": "64b669ac69b035810ef479ad1d58e6148c858171c019b6a3cb61980dd46108ce",
+      "saved_sha256": "64b669ac69b035810ef479ad1d58e6148c858171c019b6a3cb61980dd46108ce",
+      "source_bytes": 15034,
+      "saved_bytes": 15034,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/preconnected-sockets.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-raw5000-cyclic1000-v1/preconnected-sockets.json",
+      "source_sha256": "8057e8f29b0d867b8a135d638e1f23e2cddf3fcf9db281c4edb17ca597480481",
+      "saved_sha256": "8057e8f29b0d867b8a135d638e1f23e2cddf3fcf9db281c4edb17ca597480481",
+      "source_bytes": 1010351,
+      "saved_bytes": 1010351,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/quality-asr-ready.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-raw5000-cyclic1000-v1/quality-asr-ready.json.gz",
+      "source_sha256": "2b84a352fe3ff552c9c9f0d863491e9f52efe2eff2280ed306117ed60071fb36",
+      "saved_sha256": "416fab95023dc12faab5f7e102b725827ebd34d8dd74a67e69c7773a37e03c7b",
+      "source_bytes": 23413334,
+      "saved_bytes": 1265844,
+      "adaptation": "lossless gzip; decompressed SHA verified"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/quality-invalid-audio.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-raw5000-cyclic1000-v1/quality-invalid-audio.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "saved_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "source_bytes": 3,
+      "saved_bytes": 3,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/quality-manifest.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-raw5000-cyclic1000-v1/quality-manifest.json.gz",
+      "source_sha256": "2b84a352fe3ff552c9c9f0d863491e9f52efe2eff2280ed306117ed60071fb36",
+      "saved_sha256": "416fab95023dc12faab5f7e102b725827ebd34d8dd74a67e69c7773a37e03c7b",
+      "source_bytes": 23413334,
+      "saved_bytes": 1265844,
+      "adaptation": "lossless gzip; decompressed SHA verified"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/quality-unmapped.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-raw5000-cyclic1000-v1/quality-unmapped.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "saved_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "source_bytes": 3,
+      "saved_bytes": 3,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/registered-prompt-ids.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-raw5000-cyclic1000-v1/registered-prompt-ids.json",
+      "source_sha256": "10c0f6907febc403665cca1e62f297f91c0a5a9ec00d560e9de19c2ebb672a96",
+      "saved_sha256": "10c0f6907febc403665cca1e62f297f91c0a5a9ec00d560e9de19c2ebb672a96",
+      "source_bytes": 273,
+      "saved_bytes": 273,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/registrations.jsonl",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-raw5000-cyclic1000-v1/registrations.jsonl",
+      "source_sha256": "6a7bd1cd1d31a40c5c1e1869b124d73f283cb5a31c631fb752331d387a16199a",
+      "saved_sha256": "6a7bd1cd1d31a40c5c1e1869b124d73f283cb5a31c631fb752331d387a16199a",
+      "source_bytes": 16107,
+      "saved_bytes": 16107,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/requests.jsonl",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-raw5000-cyclic1000-v1/requests.jsonl.gz",
+      "source_sha256": "dab79de88252f13987875cd3fe9ff823c2705ea2a48fd99f99b8adfc3dfa952c",
+      "saved_sha256": "a6c5c753d22db61a662b723c43d869b4ec800e6c586e9890b97fd5f5e36b5f69",
+      "source_bytes": 26914804,
+      "saved_bytes": 2334437,
+      "adaptation": "lossless gzip; decompressed SHA verified"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/runtime-validation.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-raw5000-cyclic1000-v1/runtime-validation.json",
+      "source_sha256": "aec60e227f7c47eaad7a290cd3f4d1ed83c1d440262eac4b4ee7afb6e99e5be3",
+      "saved_sha256": "aec60e227f7c47eaad7a290cd3f4d1ed83c1d440262eac4b4ee7afb6e99e5be3",
+      "source_bytes": 907,
+      "saved_bytes": 907,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/server-benchmark-wrapper.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-raw5000-cyclic1000-v1/server-benchmark-wrapper.json",
+      "source_sha256": "f58b96f850685c730f81259568415ec4cc83bfbbc405e421f3402a13fc0ef65d",
+      "saved_sha256": "f58b96f850685c730f81259568415ec4cc83bfbbc405e421f3402a13fc0ef65d",
+      "source_bytes": 406,
+      "saved_bytes": 406,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/server-command.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-raw5000-cyclic1000-v1/server-command.json",
+      "source_sha256": "1ee12ac8fc4aa4318e9622dac7d6c25381d0ffe474720a9a6afbbd441d15ca0a",
+      "saved_sha256": "1ee12ac8fc4aa4318e9622dac7d6c25381d0ffe474720a9a6afbbd441d15ca0a",
+      "source_bytes": 925,
+      "saved_bytes": 925,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/server-event-loop.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-raw5000-cyclic1000-v1/server-event-loop.json",
+      "source_sha256": "aa02c86d28bf058fe578f29fe0bc7439cba17db76bacc57cee7827655bbc2a88",
+      "saved_sha256": "aa02c86d28bf058fe578f29fe0bc7439cba17db76bacc57cee7827655bbc2a88",
+      "source_bytes": 78,
+      "saved_bytes": 78,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/server-pid.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-raw5000-cyclic1000-v1/server-pid.json",
+      "source_sha256": "ad35de06f6afd5b01e13933a44801ff60ce6257abb799f473f9b35f0f8a071ac",
+      "saved_sha256": "ad35de06f6afd5b01e13933a44801ff60ce6257abb799f473f9b35f0f8a071ac",
+      "source_bytes": 60,
+      "saved_bytes": 60,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/server-process-limits.txt",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-raw5000-cyclic1000-v1/server-process-limits.txt",
+      "source_sha256": "0c419ffa96ef3d4aa10282d553136c7c28517a8f9522705eb055ff85fe225326",
+      "saved_sha256": "0c419ffa96ef3d4aa10282d553136c7c28517a8f9522705eb055ff85fe225326",
+      "source_bytes": 1323,
+      "saved_bytes": 1323,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/server-seed.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-raw5000-cyclic1000-v1/server-seed.json",
+      "source_sha256": "977791a6b10bf9483aa22b75e5475ed3d04404747b83c77fc0a63b03a1e32c1e",
+      "saved_sha256": "977791a6b10bf9483aa22b75e5475ed3d04404747b83c77fc0a63b03a1e32c1e",
+      "source_bytes": 271,
+      "saved_bytes": 271,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/server-transport-runtime.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-raw5000-cyclic1000-v1/server-transport-runtime.json",
+      "source_sha256": "fd5e4c6eca8b6cf86bd949198883e631a0d49090beba2a72cd3b6a7659859de1",
+      "saved_sha256": "fd5e4c6eca8b6cf86bd949198883e631a0d49090beba2a72cd3b6a7659859de1",
+      "source_bytes": 144,
+      "saved_bytes": 144,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/server.log",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-raw5000-cyclic1000-v1/server.log.gz",
+      "source_sha256": "3b7fd7cf860920a1e9a52cb4332a05b33fd787ee7a99754d44c58aeadb263b6e",
+      "saved_sha256": "55ab1bf87c287712ba8221f03b955868780784eb9464fa422c22955c84ed0f73",
+      "source_bytes": 7689311,
+      "saved_bytes": 649262,
+      "adaptation": "lossless gzip; decompressed SHA verified"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/summary.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-raw5000-cyclic1000-v1/summary.json",
+      "source_sha256": "646b36ed78b97a2b20089eedc10d751726244c65b7b3c68c867783e5d2558bd2",
+      "saved_sha256": "646b36ed78b97a2b20089eedc10d751726244c65b7b3c68c867783e5d2558bd2",
+      "source_bytes": 1535,
+      "saved_bytes": 1535,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/warmup-quality-manifest.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-raw5000-cyclic1000-v1/warmup-quality-manifest.json",
+      "source_sha256": "b86d1851fa7ede694c3c96bdb02a911e9bdcad4b76827ec287fce14ff238c5f1",
+      "saved_sha256": "b86d1851fa7ede694c3c96bdb02a911e9bdcad4b76827ec287fce14ff238c5f1",
+      "source_bytes": 45422,
+      "saved_bytes": 45422,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-raw5000-cyclic1000-v1/warmup-requests.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-raw5000-cyclic1000-v1/warmup-requests.json",
+      "source_sha256": "47cbefce205dd95e855defe9da94596a9c594cf9cd0f8c9ec568529689a7a896",
+      "saved_sha256": "47cbefce205dd95e855defe9da94596a9c594cf9cd0f8c9ec568529689a7a896",
+      "source_bytes": 54672,
+      "saved_bytes": 54672,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-staggered-overload-calls-v1/corpus.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-staggered-overload-calls-v1/corpus.json.gz",
+      "source_sha256": "896597afd0fe0396e0162d0ba3849e803cc5e48101aeb8293519de91f1edfd2f",
+      "saved_sha256": "c99ff1cd40a628d54291b3b82066f0f141a42df339c001e51003955660f5e5bd",
+      "source_bytes": 2536227,
+      "saved_bytes": 125102,
+      "adaptation": "lossless gzip; decompressed SHA verified"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-staggered-overload-calls-v1/health-after.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-staggered-overload-calls-v1/health-after.json",
+      "source_sha256": "802eca10076eb2d25ff86567d27d5b0550953988675ddd936c68f4daca701473",
+      "saved_sha256": "802eca10076eb2d25ff86567d27d5b0550953988675ddd936c68f4daca701473",
+      "source_bytes": 3510,
+      "saved_bytes": 3510,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-staggered-overload-calls-v1/health-before.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-staggered-overload-calls-v1/health-before.json",
+      "source_sha256": "83d2e14eb1617c5a208d1e1f392faa246c9ba7de71866e90b1366c7fe8b28c88",
+      "saved_sha256": "83d2e14eb1617c5a208d1e1f392faa246c9ba7de71866e90b1366c7fe8b28c88",
+      "source_bytes": 2887,
+      "saved_bytes": 2887,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-staggered-overload-calls-v1/health-probes.jsonl",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-staggered-overload-calls-v1/health-probes.jsonl",
+      "source_sha256": "6111b16bad8b7c9e22f5d9881d7eee21e44e09671f4d4acd8a9f9723c81092bb",
+      "saved_sha256": "6111b16bad8b7c9e22f5d9881d7eee21e44e09671f4d4acd8a9f9723c81092bb",
+      "source_bytes": 1666686,
+      "saved_bytes": 1666686,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-staggered-overload-calls-v1/language-support.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-staggered-overload-calls-v1/language-support.json",
+      "source_sha256": "a52dad8ee33492a5b018ccd227d98d5a90bc5d5722b543dec921017c0b8833cf",
+      "saved_sha256": "a52dad8ee33492a5b018ccd227d98d5a90bc5d5722b543dec921017c0b8833cf",
+      "source_bytes": 68578,
+      "saved_bytes": 68578,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-staggered-overload-calls-v1/metadata.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-staggered-overload-calls-v1/metadata.json",
+      "source_sha256": "bb4df43a1247aa7a74589205e3eac8073b7fbd62eca83522578b2507d5c205fa",
+      "saved_sha256": "bb4df43a1247aa7a74589205e3eac8073b7fbd62eca83522578b2507d5c205fa",
+      "source_bytes": 13621,
+      "saved_bytes": 13621,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-staggered-overload-calls-v1/outcome.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-staggered-overload-calls-v1/outcome.json",
+      "source_sha256": "764f4770f3754b6fe8624a237ec8264b3d2f5eef29ea1d0225e057c469780249",
+      "saved_sha256": "764f4770f3754b6fe8624a237ec8264b3d2f5eef29ea1d0225e057c469780249",
+      "source_bytes": 127,
+      "saved_bytes": 127,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-staggered-overload-calls-v1/plan.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-staggered-overload-calls-v1/plan.json",
+      "source_sha256": "5ec2808d4216fb715e20ed810172ccd7f0a4971eaf831fa2121228bcf234bbe1",
+      "saved_sha256": "5ec2808d4216fb715e20ed810172ccd7f0a4971eaf831fa2121228bcf234bbe1",
+      "source_bytes": 114416,
+      "saved_bytes": 114416,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-staggered-overload-calls-v1/quality-asr-ready.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-staggered-overload-calls-v1/quality-asr-ready.json.gz",
+      "source_sha256": "b6962ca4f43a70d8ab0a4ca3a489b021994be8f5844fda045f03d03b2deea257",
+      "saved_sha256": "c90cfe24428068b2b31d5f21f028a3c67d93f68f4b9b224f2ed5028bae0a773f",
+      "source_bytes": 2467064,
+      "saved_bytes": 167110,
+      "adaptation": "lossless gzip; decompressed SHA verified"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-staggered-overload-calls-v1/quality-invalid-audio.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-staggered-overload-calls-v1/quality-invalid-audio.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "saved_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "source_bytes": 3,
+      "saved_bytes": 3,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-staggered-overload-calls-v1/quality-manifest.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-staggered-overload-calls-v1/quality-manifest.json.gz",
+      "source_sha256": "b6962ca4f43a70d8ab0a4ca3a489b021994be8f5844fda045f03d03b2deea257",
+      "saved_sha256": "c90cfe24428068b2b31d5f21f028a3c67d93f68f4b9b224f2ed5028bae0a773f",
+      "source_bytes": 2467064,
+      "saved_bytes": 167110,
+      "adaptation": "lossless gzip; decompressed SHA verified"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-staggered-overload-calls-v1/quality-unmapped.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-staggered-overload-calls-v1/quality-unmapped.json",
+      "source_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "saved_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "source_bytes": 3,
+      "saved_bytes": 3,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-staggered-overload-calls-v1/reference-manifest.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-staggered-overload-calls-v1/reference-manifest.json",
+      "source_sha256": "a6f3af3610ef5f9b4d64dfcedfd66f454f7af8c6448d50e856e88c2456123dc6",
+      "saved_sha256": "a6f3af3610ef5f9b4d64dfcedfd66f454f7af8c6448d50e856e88c2456123dc6",
+      "source_bytes": 12206,
+      "saved_bytes": 12206,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-staggered-overload-calls-v1/registrations.jsonl",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-staggered-overload-calls-v1/registrations.jsonl",
+      "source_sha256": "4dc28b893b237130074b747b2a0fd34839afb02b217e76a62ef6456cdbd7c126",
+      "saved_sha256": "4dc28b893b237130074b747b2a0fd34839afb02b217e76a62ef6456cdbd7c126",
+      "source_bytes": 16413,
+      "saved_bytes": 16413,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-staggered-overload-calls-v1/requests.jsonl",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-staggered-overload-calls-v1/requests.jsonl.gz",
+      "source_sha256": "4cafa7270bda0bf62c4029e8f031735da2cc17d8a713d801d54c3223c433937c",
+      "saved_sha256": "9a5ca399796a9e5fd808d15e8af142a8290f031b43df1b2d0faad33f43d25792",
+      "source_bytes": 69553501,
+      "saved_bytes": 7594545,
+      "adaptation": "lossless gzip; decompressed SHA verified"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-staggered-overload-calls-v1/server-process-limits.txt",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-staggered-overload-calls-v1/server-process-limits.txt",
+      "source_sha256": "0c419ffa96ef3d4aa10282d553136c7c28517a8f9522705eb055ff85fe225326",
+      "saved_sha256": "0c419ffa96ef3d4aa10282d553136c7c28517a8f9522705eb055ff85fe225326",
+      "source_bytes": 1323,
+      "saved_bytes": 1323,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-staggered-overload-calls-v1/server-seed.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-staggered-overload-calls-v1/server-seed.json",
+      "source_sha256": "977791a6b10bf9483aa22b75e5475ed3d04404747b83c77fc0a63b03a1e32c1e",
+      "saved_sha256": "977791a6b10bf9483aa22b75e5475ed3d04404747b83c77fc0a63b03a1e32c1e",
+      "source_bytes": 271,
+      "saved_bytes": 271,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-staggered-overload-calls-v1/server.log",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-staggered-overload-calls-v1/server.log.gz",
+      "source_sha256": "9638ac8a79ee19d2d3a98a4050ce225bdcac862773f2d40e934f401e3b849f39",
+      "saved_sha256": "94c646d87051610ab08c1b2871c5bdb513eab083f6a3b7c5f40ea08eb6a08af7",
+      "source_bytes": 4709344,
+      "saved_bytes": 302661,
+      "adaptation": "lossless gzip; decompressed SHA verified"
+    },
+    {
+      "source": "retained-59071593/results/triton-eager-staggered-overload-calls-v1/summary.json",
+      "target": "results/load-and-quality-2026-11-04/runs/triton-eager-staggered-overload-calls-v1/summary.json",
+      "source_sha256": "f94ab3bd0b16d419bb084d8deb6cba09ab3f4dee6cba7b0adfe761bbfcba0e26",
+      "saved_sha256": "f94ab3bd0b16d419bb084d8deb6cba09ab3f4dee6cba7b0adfe761bbfcba0e26",
+      "source_bytes": 129074,
+      "saved_bytes": 129074,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/novel1000-B1-B8-word-analysis-v1/paired1000.jsonl",
+      "target": "results/load-and-quality-2026-11-04/quality/novel1000-B1-B8-word-analysis-v1/paired1000.jsonl",
+      "source_sha256": "5461d5c65cb9c9e7678c4b8fa277268f4f7392bec54182153f351492b3fac0dd",
+      "saved_sha256": "5461d5c65cb9c9e7678c4b8fa277268f4f7392bec54182153f351492b3fac0dd",
+      "source_bytes": 709860,
+      "saved_bytes": 709860,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/novel1000-B1-B8-word-analysis-v1/summary.json",
+      "target": "results/load-and-quality-2026-11-04/quality/novel1000-B1-B8-word-analysis-v1/summary.json",
+      "source_sha256": "d15665c380b1b981e07fb45a3dce5a43c4be6e619f0e49e5925351a4ade27f29",
+      "saved_sha256": "d15665c380b1b981e07fb45a3dce5a43c4be6e619f0e49e5925351a4ade27f29",
+      "source_bytes": 1843,
+      "saved_bytes": 1843,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/novel1000-c79-vs-eager-word-analysis-v1/paired2000.jsonl",
+      "target": "results/load-and-quality-2026-11-04/quality/novel1000-c79-vs-eager-word-analysis-v1/paired2000.jsonl",
+      "source_sha256": "acaa502dc2cd64522faf6fadba57c7cc09ffef816394a285c1117402dfa264c8",
+      "saved_sha256": "acaa502dc2cd64522faf6fadba57c7cc09ffef816394a285c1117402dfa264c8",
+      "source_bytes": 1481806,
+      "saved_bytes": 1481806,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/novel1000-c79-vs-eager-word-analysis-v1/summary.json",
+      "target": "results/load-and-quality-2026-11-04/quality/novel1000-c79-vs-eager-word-analysis-v1/summary.json",
+      "source_sha256": "d7c23a9c858a4217a8f44a01c6ae1bdb667b57f884393cfe1cdbb52c3b3935c9",
+      "saved_sha256": "d7c23a9c858a4217a8f44a01c6ae1bdb667b57f884393cfe1cdbb52c3b3935c9",
+      "source_bytes": 5591,
+      "saved_bytes": 5591,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/split-reduction-gpu-root-v1-analysis/provenance.json",
+      "target": "results/load-and-quality-2026-11-04/quality/split-reduction-gpu-root-v1-analysis/provenance.json",
+      "source_sha256": "a0696e45bb524bf18c1e3e73512bc174ed18e42af8a6abda44bb14c635b471ae",
+      "saved_sha256": "a0696e45bb524bf18c1e3e73512bc174ed18e42af8a6abda44bb14c635b471ae",
+      "source_bytes": 574,
+      "saved_bytes": 574,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/split-reduction-gpu-root-v1-analysis/report.md",
+      "target": "results/load-and-quality-2026-11-04/quality/split-reduction-gpu-root-v1-analysis/report.md",
+      "source_sha256": "ecb0ee923d7fead94b914c80c4e3f747fbd624dc096a2dbf3c987fcdab200824",
+      "saved_sha256": "ecb0ee923d7fead94b914c80c4e3f747fbd624dc096a2dbf3c987fcdab200824",
+      "source_bytes": 2694,
+      "saved_bytes": 2694,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/split-reduction-gpu-root-v1-analysis/summary.json",
+      "target": "results/load-and-quality-2026-11-04/quality/split-reduction-gpu-root-v1-analysis/summary.json",
+      "source_sha256": "d58b7800235d1456761362eb62d8588b0c5d2244c03b54094d6bf173c916fa7b",
+      "saved_sha256": "d58b7800235d1456761362eb62d8588b0c5d2244c03b54094d6bf173c916fa7b",
+      "source_bytes": 9127,
+      "saved_bytes": 9127,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/split-reduction-gpu-root-v1-analysis/verified-WAVs.json",
+      "target": "results/load-and-quality-2026-11-04/quality/split-reduction-gpu-root-v1-analysis/verified-WAVs.json",
+      "source_sha256": "f1ecc3f3651e0d8991b73f31e221020cfe800cfb3e601917d5a0bb605ba31612",
+      "saved_sha256": "f1ecc3f3651e0d8991b73f31e221020cfe800cfb3e601917d5a0bb605ba31612",
+      "source_bytes": 19947,
+      "saved_bytes": 19947,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/primary-deferral132-analysis-v1/summary.json",
+      "target": "results/load-and-quality-2026-11-04/primary-deferral132-analysis-v1/summary.json",
+      "source_sha256": "64d098fc945149cd01a3978ad9fa5a65a96c7fe90a7dba6e115e1fe03b350e84",
+      "saved_sha256": "64d098fc945149cd01a3978ad9fa5a65a96c7fe90a7dba6e115e1fe03b350e84",
+      "source_bytes": 48126,
+      "saved_bytes": 48126,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_v1-plan/retained-audit-v1/artifacts-sha256.json",
+      "target": "results/load-and-quality-2026-11-04/raw5000-independent-audit/artifacts-sha256.json",
+      "source_sha256": "5fe08ef3a36d754cf38c14b0007ab2882e2b57f83a8edacd6a597e581d00618a",
+      "saved_sha256": "5fe08ef3a36d754cf38c14b0007ab2882e2b57f83a8edacd6a597e581d00618a",
+      "source_bytes": 361,
+      "saved_bytes": 361,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_v1-plan/retained-audit-v1/per-route104.json",
+      "target": "results/load-and-quality-2026-11-04/raw5000-independent-audit/per-route104.json",
+      "source_sha256": "0fe1fc13a489c56baa6b3462b1dab0dca878e748051b1db77ceaf07519412a6b",
+      "saved_sha256": "0fe1fc13a489c56baa6b3462b1dab0dca878e748051b1db77ceaf07519412a6b",
+      "source_bytes": 13156,
+      "saved_bytes": 13156,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_v1-plan/retained-audit-v1/report.md",
+      "target": "results/load-and-quality-2026-11-04/raw5000-independent-audit/report.md",
+      "source_sha256": "e498501eca836c3d76be1035b32b0b893cd0ef965dc2ea516fc66dea4ea12e1e",
+      "saved_sha256": "e498501eca836c3d76be1035b32b0b893cd0ef965dc2ea516fc66dea4ea12e1e",
+      "source_bytes": 3793,
+      "saved_bytes": 3793,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_v1-plan/retained-audit-v1/summary.json",
+      "target": "results/load-and-quality-2026-11-04/raw5000-independent-audit/summary.json",
+      "source_sha256": "860354a411ba584214d5ad0299d8c52be21e3fa2bc46c77655fdae44a9af3f9d",
+      "saved_sha256": "860354a411ba584214d5ad0299d8c52be21e3fa2bc46c77655fdae44a9af3f9d",
+      "source_bytes": 5690,
+      "saved_bytes": 5690,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_v1-plan/retained-audit-v1/verified-audio5010.jsonl",
+      "target": "results/load-and-quality-2026-11-04/raw5000-independent-audit/verified-audio5010.jsonl.gz",
+      "source_sha256": "e55a23fe00a7e4f2b212ec0e2e73dcef71cd55daeb7deb320e4f72086b64a0bd",
+      "saved_sha256": "abc2c454290c82994e76f4cc2b68fe0a3388071329cd5815e6f8f3b3775baa8d",
+      "source_bytes": 2064248,
+      "saved_bytes": 353809,
+      "adaptation": "lossless gzip; decompressed SHA verified"
+    },
+    {
+      "source": "load/raw_burst_v1.py",
+      "target": "results/load-and-quality-2026-11-04/frozen-harness-source/raw_burst_v1.py",
+      "source_sha256": "b204405036ae236be8ceefc4f760271fcd13fc18428a86fded9110471ea94665",
+      "saved_sha256": "b204405036ae236be8ceefc4f760271fcd13fc18428a86fded9110471ea94665",
+      "source_bytes": 41951,
+      "saved_bytes": 41951,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_server_v1.py",
+      "target": "results/load-and-quality-2026-11-04/frozen-harness-source/raw_burst_server_v1.py",
+      "source_sha256": "7a9087c32a7bca6f69afcab96818e83eb9d939250b4a2b80248021f10475bac6",
+      "saved_sha256": "7a9087c32a7bca6f69afcab96818e83eb9d939250b4a2b80248021f10475bac6",
+      "source_bytes": 4116,
+      "saved_bytes": 4116,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_tests_v1.py",
+      "target": "results/load-and-quality-2026-11-04/frozen-harness-source/raw_burst_tests_v1.py",
+      "source_sha256": "4bbdc205cecacbe295d1d0680b58ef90f5d8ff679ecbd46c00b19a079be6ee70",
+      "saved_sha256": "4bbdc205cecacbe295d1d0680b58ef90f5d8ff679ecbd46c00b19a079be6ee70",
+      "source_bytes": 14729,
+      "saved_bytes": 14729,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/run.py",
+      "target": "results/load-and-quality-2026-11-04/frozen-harness-source/run.py",
+      "source_sha256": "df51c081d8108bf7dae5778adc2f21398e59d0ca8de394601f4251a55c521652",
+      "saved_sha256": "df51c081d8108bf7dae5778adc2f21398e59d0ca8de394601f4251a55c521652",
+      "source_bytes": 38498,
+      "saved_bytes": 38498,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/verify.py",
+      "target": "results/load-and-quality-2026-11-04/frozen-harness-source/verify.py",
+      "source_sha256": "35f2c4963a29147159cc2b95cf925465680afbe218ff9dc2a03c4849057cfcdf",
+      "saved_sha256": "35f2c4963a29147159cc2b95cf925465680afbe218ff9dc2a03c4849057cfcdf",
+      "source_bytes": 6134,
+      "saved_bytes": 6134,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/run_v5.py",
+      "target": "results/load-and-quality-2026-11-04/frozen-harness-source/run_v5.py",
+      "source_sha256": "1a077901bd91b8b7c16bd2424b52519f092935db2de4f74d068e288b1eb89302",
+      "saved_sha256": "1a077901bd91b8b7c16bd2424b52519f092935db2de4f74d068e288b1eb89302",
+      "source_bytes": 46280,
+      "saved_bytes": 46280,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/verify_v5.py",
+      "target": "results/load-and-quality-2026-11-04/frozen-harness-source/verify_v5.py",
+      "source_sha256": "c5c501fd0e5d1ca4fd336c8ced156d4d10549e1a93ab446ed4338fecdb528103",
+      "saved_sha256": "c5c501fd0e5d1ca4fd336c8ced156d4d10549e1a93ab446ed4338fecdb528103",
+      "source_bytes": 8602,
+      "saved_bytes": 8602,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/runtime.py",
+      "target": "results/load-and-quality-2026-11-04/frozen-harness-source/runtime.py",
+      "source_sha256": "52fc933b64f70f5e6010d17a91b4457b433938afe1d1607e78891bb071e0b1f2",
+      "saved_sha256": "52fc933b64f70f5e6010d17a91b4457b433938afe1d1607e78891bb071e0b1f2",
+      "source_bytes": 4883,
+      "saved_bytes": 4883,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/seeded_server.py",
+      "target": "results/load-and-quality-2026-11-04/frozen-harness-source/seeded_server.py",
+      "source_sha256": "72b3860d1e8e70981ae4bcb2f9944d543489f19ab46e23a2083a03b8ac99dfe6",
+      "saved_sha256": "72b3860d1e8e70981ae4bcb2f9944d543489f19ab46e23a2083a03b8ac99dfe6",
+      "source_bytes": 1203,
+      "saved_bytes": 1203,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/telemetry.py",
+      "target": "results/load-and-quality-2026-11-04/frozen-harness-source/telemetry.py",
+      "source_sha256": "4255dcc5dedbe0bc5bcc022757b38d33f071def47287ba963d795c89799c1e37",
+      "saved_sha256": "4255dcc5dedbe0bc5bcc022757b38d33f071def47287ba963d795c89799c1e37",
+      "source_bytes": 23347,
+      "saved_bytes": 23347,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_v1-plan/config.json",
+      "target": "results/load-and-quality-2026-11-04/raw5000-plan/config.json",
+      "source_sha256": "0a5ea9e8d0f30a58193b195932b07e221b598a5b3953d5e280946ae37cdf1bf4",
+      "saved_sha256": "0a5ea9e8d0f30a58193b195932b07e221b598a5b3953d5e280946ae37cdf1bf4",
+      "source_bytes": 7899,
+      "saved_bytes": 7899,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_v1-plan/README.md",
+      "target": "results/load-and-quality-2026-11-04/raw5000-plan/README.md",
+      "source_sha256": "f8749d1a0fb04859ee18419eaa526f80cf7e367a4f308bbcd8c6bbafab4c6b6b",
+      "saved_sha256": "f8749d1a0fb04859ee18419eaa526f80cf7e367a4f308bbcd8c6bbafab4c6b6b",
+      "source_bytes": 6685,
+      "saved_bytes": 6685,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_v1-plan/CPU_READY.json",
+      "target": "results/load-and-quality-2026-11-04/raw5000-plan/CPU_READY.json",
+      "source_sha256": "8a364cc1ba6b9e2094cac16c2222999c6fbe3cdd1ecc5d8c526dc73df1475b84",
+      "saved_sha256": "8a364cc1ba6b9e2094cac16c2222999c6fbe3cdd1ecc5d8c526dc73df1475b84",
+      "source_bytes": 805,
+      "saved_bytes": 805,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_v1-plan/root-arrival-recomputation-v1.json",
+      "target": "results/load-and-quality-2026-11-04/raw5000-plan/root-arrival-recomputation-v1.json",
+      "source_sha256": "8507881abf9b9b569e44fbaf540da7cfb754ecbd3140a30a5fa93063e9579558",
+      "saved_sha256": "8507881abf9b9b569e44fbaf540da7cfb754ecbd3140a30a5fa93063e9579558",
+      "source_bytes": 525,
+      "saved_bytes": 525,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/audit_split_reduction.py",
+      "target": "results/load-and-quality-2026-11-04/source/audit_split_reduction.py",
+      "source_sha256": "884774d4ce050b9ab67e4f19b065c4e5fbbfa1c7e1827807dd45f682aee5d71c",
+      "saved_sha256": "884774d4ce050b9ab67e4f19b065c4e5fbbfa1c7e1827807dd45f682aee5d71c",
+      "source_bytes": 4082,
+      "saved_bytes": 4082,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/crosscheck_novel1000_whisper.py",
+      "target": "results/load-and-quality-2026-11-04/source/crosscheck_novel1000_whisper.py",
+      "source_sha256": "646c1450280e2e4b6d6b01a6aabef527eb8fde66022e13510fcb7c07b50fac49",
+      "saved_sha256": "646c1450280e2e4b6d6b01a6aabef527eb8fde66022e13510fcb7c07b50fac49",
+      "source_bytes": 7685,
+      "saved_bytes": 7685,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/crosscheck_raw_outliers_whisper.py",
+      "target": "results/load-and-quality-2026-11-04/source/crosscheck_raw_outliers_whisper.py",
+      "source_sha256": "800339c9f2307cc07e7b2feb01f875fc141a13e717c52fe89471eecfd06e7016",
+      "saved_sha256": "800339c9f2307cc07e7b2feb01f875fc141a13e717c52fe89471eecfd06e7016",
+      "source_bytes": 7687,
+      "saved_bytes": 7687,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/publish_final_evidence.py",
+      "target": "results/load-and-quality-2026-11-04/source/publish_final_evidence.py",
+      "source_sha256": "4eee69d7e1af16642fb1c3460d4e814560d20bde5f9426deefaeb6804827b7ad",
+      "saved_sha256": "4eee69d7e1af16642fb1c3460d4e814560d20bde5f9426deefaeb6804827b7ad",
+      "source_bytes": 7188,
+      "saved_bytes": 7188,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/raw5000-repeat-word-analysis-v1/paired5000.jsonl",
+      "target": "results/load-and-quality-2026-11-04/quality/raw5000-repeat-word-analysis-v1/paired5000.jsonl.gz",
+      "source_sha256": "78f3f94b9c21c8f1c1fdae2a22feb4cbc0868f0157ae265ca7622f347826a315",
+      "saved_sha256": "19e99f43ed6869d1ad8b9296b25748675701e5c921ad02b72eda109e11e3265c",
+      "source_bytes": 3932990,
+      "saved_bytes": 602982,
+      "adaptation": "lossless gzip; decompressed SHA verified"
+    },
+    {
+      "source": "quality/raw5000-repeat-word-analysis-v1/per-input1000.jsonl",
+      "target": "results/load-and-quality-2026-11-04/quality/raw5000-repeat-word-analysis-v1/per-input1000.jsonl",
+      "source_sha256": "e931ab17beaa581b8d9a317808e141990f358cd7e8ddc5ac73bff74a30dad2c9",
+      "saved_sha256": "e931ab17beaa581b8d9a317808e141990f358cd7e8ddc5ac73bff74a30dad2c9",
+      "source_bytes": 1450729,
+      "saved_bytes": 1450729,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/raw5000-repeat-word-analysis-v1/per-route104.json",
+      "target": "results/load-and-quality-2026-11-04/quality/raw5000-repeat-word-analysis-v1/per-route104.json",
+      "source_sha256": "e6d35763efce20460c06bcfce3af39c31feb193b3a6b054005314a3e2d5d050c",
+      "saved_sha256": "e6d35763efce20460c06bcfce3af39c31feb193b3a6b054005314a3e2d5d050c",
+      "source_bytes": 289737,
+      "saved_bytes": 289737,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/raw5000-repeat-word-analysis-v1/summary.json",
+      "target": "results/load-and-quality-2026-11-04/quality/raw5000-repeat-word-analysis-v1/summary.json",
+      "source_sha256": "a92b08718b0b6fe0133427ee7d2ce130cc4fbfaf57998f83b1746f6b38479118",
+      "saved_sha256": "a92b08718b0b6fe0133427ee7d2ce130cc4fbfaf57998f83b1746f6b38479118",
+      "source_bytes": 5616,
+      "saved_bytes": 5616,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/raw5000-repeat-word-analysis-v1/top5-LLM-CER-diagnostics.json",
+      "target": "results/load-and-quality-2026-11-04/quality/raw5000-repeat-word-analysis-v1/top5-LLM-CER-diagnostics.json",
+      "source_sha256": "0bf617dbeb9c593d872f359c0f7b152b804617a31d52db1e8a5b4f398b68d17c",
+      "saved_sha256": "0bf617dbeb9c593d872f359c0f7b152b804617a31d52db1e8a5b4f398b68d17c",
+      "source_bytes": 6012,
+      "saved_bytes": 6012,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/split108-word-analysis-v1/scored108.jsonl",
+      "target": "results/load-and-quality-2026-11-04/quality/split108-word-analysis-v1/scored108.jsonl",
+      "source_sha256": "b05e5b79cef050660ccef9f1f909981f5e7596c4fbb8ea67e93b0cb317a952b9",
+      "saved_sha256": "b05e5b79cef050660ccef9f1f909981f5e7596c4fbb8ea67e93b0cb317a952b9",
+      "source_bytes": 1304883,
+      "saved_bytes": 1304883,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/split108-word-analysis-v1/summary.json",
+      "target": "results/load-and-quality-2026-11-04/quality/split108-word-analysis-v1/summary.json",
+      "source_sha256": "42a5b66e5dcca630cd4568ec78aba096465ee896eecad68f0d6ccc5ce9db5115",
+      "saved_sha256": "42a5b66e5dcca630cd4568ec78aba096465ee896eecad68f0d6ccc5ce9db5115",
+      "source_bytes": 4451,
+      "saved_bytes": 4451,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/final-staggered-word-analysis-v1/scored533.jsonl",
+      "target": "results/load-and-quality-2026-11-04/quality/final-staggered-word-analysis-v1/scored533.jsonl.gz",
+      "source_sha256": "cc6312a3587844ae1176aa966d38d54947f59a23689d503f02b197f0917ac988",
+      "saved_sha256": "2bedac58123f0343983161923306d02fd964ef417cca42868226da0fa244388a",
+      "source_bytes": 5413584,
+      "saved_bytes": 377730,
+      "adaptation": "lossless gzip; decompressed SHA verified"
+    },
+    {
+      "source": "quality/final-staggered-word-analysis-v1/summary.json",
+      "target": "results/load-and-quality-2026-11-04/quality/final-staggered-word-analysis-v1/summary.json",
+      "source_sha256": "b3ece97217051f19c2351b78a104666bf8a6ce633f4102dfbf344b6ba8ed75fc",
+      "saved_sha256": "b3ece97217051f19c2351b78a104666bf8a6ce633f4102dfbf344b6ba8ed75fc",
+      "source_bytes": 6007,
+      "saved_bytes": 6007,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/shared-pool-final-diagnostic-v1/CPU26-CPU-tests.txt",
+      "target": "results/load-and-quality-2026-11-04/quality/shared-pool-final-diagnostic-v1/CPU26-CPU-tests.txt",
+      "source_sha256": "eba79c87d68737d339fac0191608d6e59272907f17cda58e77929a7b5a7a978d",
+      "saved_sha256": "eba79c87d68737d339fac0191608d6e59272907f17cda58e77929a7b5a7a978d",
+      "source_bytes": 4015,
+      "saved_bytes": 4015,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/shared-pool-final-diagnostic-v1/CPU26-artifacts-sha256.json",
+      "target": "results/load-and-quality-2026-11-04/quality/shared-pool-final-diagnostic-v1/CPU26-artifacts-sha256.json",
+      "source_sha256": "922753b086d019c8188a2e69e2e66d084c9c603467f370328a23418c97427aea",
+      "saved_sha256": "922753b086d019c8188a2e69e2e66d084c9c603467f370328a23418c97427aea",
+      "source_bytes": 1014,
+      "saved_bytes": 1014,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/shared-pool-final-diagnostic-v1/CPU26-validation.json",
+      "target": "results/load-and-quality-2026-11-04/quality/shared-pool-final-diagnostic-v1/CPU26-validation.json",
+      "source_sha256": "9dc2706b5bf609c1921626e9cfd4a94e58dcbc274cdc0105b0ef142a0d7dc602",
+      "saved_sha256": "9dc2706b5bf609c1921626e9cfd4a94e58dcbc274cdc0105b0ef142a0d7dc602",
+      "source_bytes": 1595,
+      "saved_bytes": 1595,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/shared-pool-final-diagnostic-v1/README.md",
+      "target": "results/load-and-quality-2026-11-04/quality/shared-pool-final-diagnostic-v1/README.md",
+      "source_sha256": "3a659760cac022d8c0a77aa39d97a528e8529cee42349181a55eaad190c8ae8c",
+      "saved_sha256": "3a659760cac022d8c0a77aa39d97a528e8529cee42349181a55eaad190c8ae8c",
+      "source_bytes": 3363,
+      "saved_bytes": 3363,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/shared-pool-final-diagnostic-v1/child-pid.json",
+      "target": "results/load-and-quality-2026-11-04/quality/shared-pool-final-diagnostic-v1/child-pid.json",
+      "source_sha256": "ccd963ebd285051b0167bd321f6286d04bef9dfa44ea381d346b0e942c725a3e",
+      "saved_sha256": "ccd963ebd285051b0167bd321f6286d04bef9dfa44ea381d346b0e942c725a3e",
+      "source_bytes": 64,
+      "saved_bytes": 64,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/shared-pool-final-diagnostic-v1/child.log",
+      "target": "results/load-and-quality-2026-11-04/quality/shared-pool-final-diagnostic-v1/child.log",
+      "source_sha256": "20589835d45a75281ce4733e074af998a16dd50176f133f9e2d8e6d4da038f26",
+      "saved_sha256": "20589835d45a75281ce4733e074af998a16dd50176f133f9e2d8e6d4da038f26",
+      "source_bytes": 775,
+      "saved_bytes": 775,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/shared-pool-final-diagnostic-v1/diagnostic-summary.json",
+      "target": "results/load-and-quality-2026-11-04/quality/shared-pool-final-diagnostic-v1/diagnostic-summary.json",
+      "source_sha256": "53f912afa3115784cd24fc31445e1221ca1f667156482ef4cf7365688d5a89d0",
+      "saved_sha256": "53f912afa3115784cd24fc31445e1221ca1f667156482ef4cf7365688d5a89d0",
+      "source_bytes": 991,
+      "saved_bytes": 991,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/shared-pool-final-diagnostic-v1/failure.json",
+      "target": "results/load-and-quality-2026-11-04/quality/shared-pool-final-diagnostic-v1/failure.json",
+      "source_sha256": "3fb6a905107d135ec06ea6e8ea0dd88d80bc454b476008dfd0e8204dc4967362",
+      "saved_sha256": "3fb6a905107d135ec06ea6e8ea0dd88d80bc454b476008dfd0e8204dc4967362",
+      "source_bytes": 2520,
+      "saved_bytes": 2520,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/shared-pool-final-diagnostic-v1/independent-idle-before-retention.json",
+      "target": "results/load-and-quality-2026-11-04/quality/shared-pool-final-diagnostic-v1/independent-idle-before-retention.json",
+      "source_sha256": "91a9833992d33d102b7372e01b128db80af60d14b19798d7132771869bb2c462",
+      "saved_sha256": "91a9833992d33d102b7372e01b128db80af60d14b19798d7132771869bb2c462",
+      "source_bytes": 230,
+      "saved_bytes": 230,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/shared-pool-final-diagnostic-v1/measurements.json",
+      "target": "results/load-and-quality-2026-11-04/quality/shared-pool-final-diagnostic-v1/measurements.json",
+      "source_sha256": "c29a5cd78e86d4817ecacae4da124ed514c4c689a905ecc2c2303021958a8524",
+      "saved_sha256": "c29a5cd78e86d4817ecacae4da124ed514c4c689a905ecc2c2303021958a8524",
+      "source_bytes": 3073,
+      "saved_bytes": 3073,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/shared-pool-final-diagnostic-v1/metadata.json",
+      "target": "results/load-and-quality-2026-11-04/quality/shared-pool-final-diagnostic-v1/metadata.json",
+      "source_sha256": "6e92bed3532c34243c5348c6ebc6ec822619b60eb142c492c460766bb523f3cb",
+      "saved_sha256": "6e92bed3532c34243c5348c6ebc6ec822619b60eb142c492c460766bb523f3cb",
+      "source_bytes": 10640,
+      "saved_bytes": 10640,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/shared-pool-final-diagnostic-v1/outcome.json",
+      "target": "results/load-and-quality-2026-11-04/quality/shared-pool-final-diagnostic-v1/outcome.json",
+      "source_sha256": "27756060b4c88dff4f0189d2665e4eec2ea99731f69866f7dbea9522f498977b",
+      "saved_sha256": "27756060b4c88dff4f0189d2665e4eec2ea99731f69866f7dbea9522f498977b",
+      "source_bytes": 133,
+      "saved_bytes": 133,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/shared-pool-final-diagnostic-v1/quality-manifest.json",
+      "target": "results/load-and-quality-2026-11-04/quality/shared-pool-final-diagnostic-v1/quality-manifest.json",
+      "source_sha256": "d2278d1c0a86c30cb0d8e139ffee6f915129a368ae6ab8b54f9606480dd4d98a",
+      "saved_sha256": "d2278d1c0a86c30cb0d8e139ffee6f915129a368ae6ab8b54f9606480dd4d98a",
+      "source_bytes": 18924,
+      "saved_bytes": 18924,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/shared-pool-final-diagnostic-v1/retained-file-hash-manifest.json",
+      "target": "results/load-and-quality-2026-11-04/quality/shared-pool-final-diagnostic-v1/retained-file-hash-manifest.json",
+      "source_sha256": "13c7ba88acee4619f415fe7b1d7101845d122e30acd690060c19d8feb80f501e",
+      "saved_sha256": "13c7ba88acee4619f415fe7b1d7101845d122e30acd690060c19d8feb80f501e",
+      "source_bytes": 21558,
+      "saved_bytes": 21558,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/shared-pool-final-diagnostic-v1/root-lease.json",
+      "target": "results/load-and-quality-2026-11-04/quality/shared-pool-final-diagnostic-v1/root-lease.json",
+      "source_sha256": "da5fd08ed744a602b1b4446521db44d06c180bf4e2d2f991227586db2f9a5d1d",
+      "saved_sha256": "da5fd08ed744a602b1b4446521db44d06c180bf4e2d2f991227586db2f9a5d1d",
+      "source_bytes": 659,
+      "saved_bytes": 659,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/shared-pool-final-diagnostic-v1/shared_pool.py",
+      "target": "results/load-and-quality-2026-11-04/quality/shared-pool-final-diagnostic-v1/shared_pool.py",
+      "source_sha256": "19c498786620bc4dc828520af0feb61eae06c18b18f0b2b9a675aa860718ffc8",
+      "saved_sha256": "19c498786620bc4dc828520af0feb61eae06c18b18f0b2b9a675aa860718ffc8",
+      "source_bytes": 23487,
+      "saved_bytes": 23487,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/shared-pool-final-diagnostic-v1/shared_pool_gpu_probe.py",
+      "target": "results/load-and-quality-2026-11-04/quality/shared-pool-final-diagnostic-v1/shared_pool_gpu_probe.py",
+      "source_sha256": "1af5a0687b2579503380afeb219ae6a860e6be405a0b14f6b6dcb2c0b84e63f7",
+      "saved_sha256": "1af5a0687b2579503380afeb219ae6a860e6be405a0b14f6b6dcb2c0b84e63f7",
+      "source_bytes": 30477,
+      "saved_bytes": 30477,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/shared-pool-final-diagnostic-v1/strict-ASR-reuse.json",
+      "target": "results/load-and-quality-2026-11-04/quality/shared-pool-final-diagnostic-v1/strict-ASR-reuse.json",
+      "source_sha256": "6876e21f063ed7d3a101c2cd2376bda6a8add65c25ea3b372ba6b4454243c376",
+      "saved_sha256": "6876e21f063ed7d3a101c2cd2376bda6a8add65c25ea3b372ba6b4454243c376",
+      "source_bytes": 16815,
+      "saved_bytes": 16815,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/shared-pool-final-diagnostic-v1/supervisor-outcome.json",
+      "target": "results/load-and-quality-2026-11-04/quality/shared-pool-final-diagnostic-v1/supervisor-outcome.json",
+      "source_sha256": "e940444d60abf9fae8faeed664f1951a016e4eb4bb9f6bd810c4300a216ca156",
+      "saved_sha256": "e940444d60abf9fae8faeed664f1951a016e4eb4bb9f6bd810c4300a216ca156",
+      "source_bytes": 238,
+      "saved_bytes": 238,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/shared-pool-final-diagnostic-v1/supervisor.json",
+      "target": "results/load-and-quality-2026-11-04/quality/shared-pool-final-diagnostic-v1/supervisor.json",
+      "source_sha256": "d85bd0d095fbf05665cfb9ff8c51ebef1cd625f9c58602df1b6d50ecfbd8324a",
+      "saved_sha256": "d85bd0d095fbf05665cfb9ff8c51ebef1cd625f9c58602df1b6d50ecfbd8324a",
+      "source_bytes": 9725,
+      "saved_bytes": 9725,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/whisper-novel1000-diagnostics-v1/README.md",
+      "target": "results/load-and-quality-2026-11-04/quality/whisper-novel1000-diagnostics-v1/README.md",
+      "source_sha256": "9512359ef7f4a0e8ad1803bc7556176c6ff7d49194fb18d0a01687462808f3e6",
+      "saved_sha256": "9512359ef7f4a0e8ad1803bc7556176c6ff7d49194fb18d0a01687462808f3e6",
+      "source_bytes": 2589,
+      "saved_bytes": 2589,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/whisper-novel1000-diagnostics-v1/complete.json",
+      "target": "results/load-and-quality-2026-11-04/quality/whisper-novel1000-diagnostics-v1/complete.json",
+      "source_sha256": "4bc45931499b0e0da69f18b8e76d4a11056f7376b3bd26c4b571800791bc706f",
+      "saved_sha256": "4bc45931499b0e0da69f18b8e76d4a11056f7376b3bd26c4b571800791bc706f",
+      "source_bytes": 338,
+      "saved_bytes": 338,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/whisper-novel1000-diagnostics-v1/metadata.json",
+      "target": "results/load-and-quality-2026-11-04/quality/whisper-novel1000-diagnostics-v1/metadata.json",
+      "source_sha256": "ccf5beb3959b5db18e1e49def3cc5808c7f7f6df7a3983fe92af597565c4f113",
+      "saved_sha256": "ccf5beb3959b5db18e1e49def3cc5808c7f7f6df7a3983fe92af597565c4f113",
+      "source_bytes": 1135,
+      "saved_bytes": 1135,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/whisper-novel1000-diagnostics-v1/paired-summary.json",
+      "target": "results/load-and-quality-2026-11-04/quality/whisper-novel1000-diagnostics-v1/paired-summary.json",
+      "source_sha256": "683333901d522b6ea6a4df9c52a71a875e411ddbe37f138e00ac6fcf737fbcef",
+      "saved_sha256": "683333901d522b6ea6a4df9c52a71a875e411ddbe37f138e00ac6fcf737fbcef",
+      "source_bytes": 82490,
+      "saved_bytes": 82490,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/whisper-novel1000-diagnostics-v1/pairing-provenance.json",
+      "target": "results/load-and-quality-2026-11-04/quality/whisper-novel1000-diagnostics-v1/pairing-provenance.json",
+      "source_sha256": "0c44e4dfde4b28c757ea844a80aca39d709f9dc0d00b8459e8eac5cd906eedf3",
+      "saved_sha256": "0c44e4dfde4b28c757ea844a80aca39d709f9dc0d00b8459e8eac5cd906eedf3",
+      "source_bytes": 398,
+      "saved_bytes": 398,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/whisper-novel1000-diagnostics-v1/progress.json",
+      "target": "results/load-and-quality-2026-11-04/quality/whisper-novel1000-diagnostics-v1/progress.json",
+      "source_sha256": "f9acfd39ef82dbb356f30692c40499491963eac9f387f3484912cc72989abd22",
+      "saved_sha256": "f9acfd39ef82dbb356f30692c40499491963eac9f387f3484912cc72989abd22",
+      "source_bytes": 76,
+      "saved_bytes": 76,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/whisper-novel1000-diagnostics-v1/scored-logical.json",
+      "target": "results/load-and-quality-2026-11-04/quality/whisper-novel1000-diagnostics-v1/scored-logical.json",
+      "source_sha256": "25ffce070b5b8d80db81b138ef15b6d820633e19fb7982e68e166bb62e012635",
+      "saved_sha256": "25ffce070b5b8d80db81b138ef15b6d820633e19fb7982e68e166bb62e012635",
+      "source_bytes": 1375133,
+      "saved_bytes": 1375133,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/whisper-novel1000-diagnostics-v1/selection.json",
+      "target": "results/load-and-quality-2026-11-04/quality/whisper-novel1000-diagnostics-v1/selection.json",
+      "source_sha256": "f56728292b333f4e21b59895d1be296f824c0ce35ee80ede5bfa9e6cb2ef0d22",
+      "saved_sha256": "f56728292b333f4e21b59895d1be296f824c0ce35ee80ede5bfa9e6cb2ef0d22",
+      "source_bytes": 1373062,
+      "saved_bytes": 1373062,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/whisper-novel1000-diagnostics-v1/transcripts.jsonl",
+      "target": "results/load-and-quality-2026-11-04/quality/whisper-novel1000-diagnostics-v1/transcripts.jsonl",
+      "source_sha256": "736b1b5a8213ab61edce36593e07695ac5d0d92bdb3493217b8fc7ad232012d5",
+      "saved_sha256": "736b1b5a8213ab61edce36593e07695ac5d0d92bdb3493217b8fc7ad232012d5",
+      "source_bytes": 306382,
+      "saved_bytes": 306382,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/whisper-novel1000-selection-v1/pairs109.json",
+      "target": "results/load-and-quality-2026-11-04/quality/whisper-novel1000-selection-v1/pairs109.json",
+      "source_sha256": "4c3e736a73ec07b93ea74b42c283e8e234052a3ac6dff5d2a909084984a31a67",
+      "saved_sha256": "4c3e736a73ec07b93ea74b42c283e8e234052a3ac6dff5d2a909084984a31a67",
+      "source_bytes": 1548727,
+      "saved_bytes": 1548727,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/whisper-novel1000-selection-v1/provenance.json",
+      "target": "results/load-and-quality-2026-11-04/quality/whisper-novel1000-selection-v1/provenance.json",
+      "source_sha256": "5d6cc402b3b2c200b9959ab0500a28f1635146afa647a5772c0b07b90a31695a",
+      "saved_sha256": "5d6cc402b3b2c200b9959ab0500a28f1635146afa647a5772c0b07b90a31695a",
+      "source_bytes": 522,
+      "saved_bytes": 522,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/whisper-raw-outlier-diagnostics-v1/README.md",
+      "target": "results/load-and-quality-2026-11-04/quality/whisper-raw-outlier-diagnostics-v1/README.md",
+      "source_sha256": "f715de41f775ad3f6cba41ad784cd0e14bebe95f9738f4db739adb270b0bd4ec",
+      "saved_sha256": "f715de41f775ad3f6cba41ad784cd0e14bebe95f9738f4db739adb270b0bd4ec",
+      "source_bytes": 1864,
+      "saved_bytes": 1864,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/whisper-raw-outlier-diagnostics-v1/complete.json",
+      "target": "results/load-and-quality-2026-11-04/quality/whisper-raw-outlier-diagnostics-v1/complete.json",
+      "source_sha256": "f04ebd3801cfaa79a0c7881e5b9bc419d440ffbb2bceec6241747fa8a2e48e29",
+      "saved_sha256": "f04ebd3801cfaa79a0c7881e5b9bc419d440ffbb2bceec6241747fa8a2e48e29",
+      "source_bytes": 333,
+      "saved_bytes": 333,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/whisper-raw-outlier-diagnostics-v1/metadata.json",
+      "target": "results/load-and-quality-2026-11-04/quality/whisper-raw-outlier-diagnostics-v1/metadata.json",
+      "source_sha256": "9af58a052ed600781e5c0461b859d0b97926c28e32bb37b6b49d7572013e6ad6",
+      "saved_sha256": "9af58a052ed600781e5c0461b859d0b97926c28e32bb37b6b49d7572013e6ad6",
+      "source_bytes": 1135,
+      "saved_bytes": 1135,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/whisper-raw-outlier-diagnostics-v1/progress.json",
+      "target": "results/load-and-quality-2026-11-04/quality/whisper-raw-outlier-diagnostics-v1/progress.json",
+      "source_sha256": "91fc6830928088a34f5305c8daeed4cec2da77009004c7fde21e083f77107d7f",
+      "saved_sha256": "91fc6830928088a34f5305c8daeed4cec2da77009004c7fde21e083f77107d7f",
+      "source_bytes": 72,
+      "saved_bytes": 72,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/whisper-raw-outlier-diagnostics-v1/scored-logical.json",
+      "target": "results/load-and-quality-2026-11-04/quality/whisper-raw-outlier-diagnostics-v1/scored-logical.json",
+      "source_sha256": "ab9251723aedc2b7a4a519e627601bb7104f8426799076276b6440efc91e47df",
+      "saved_sha256": "ab9251723aedc2b7a4a519e627601bb7104f8426799076276b6440efc91e47df",
+      "source_bytes": 15476,
+      "saved_bytes": 15476,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/whisper-raw-outlier-diagnostics-v1/selection.json",
+      "target": "results/load-and-quality-2026-11-04/quality/whisper-raw-outlier-diagnostics-v1/selection.json",
+      "source_sha256": "5cbe742b0f3264ee19b31b6246037cad29fcfa46e21f96edf2a559223e7178df",
+      "saved_sha256": "5cbe742b0f3264ee19b31b6246037cad29fcfa46e21f96edf2a559223e7178df",
+      "source_bytes": 12635,
+      "saved_bytes": 12635,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/whisper-raw-outlier-diagnostics-v1/transcripts.jsonl",
+      "target": "results/load-and-quality-2026-11-04/quality/whisper-raw-outlier-diagnostics-v1/transcripts.jsonl",
+      "source_sha256": "a1bf4cbfcfdff6c717aa7429e191ceecb24eb56643f9ee8619692b713d8e8867",
+      "saved_sha256": "a1bf4cbfcfdff6c717aa7429e191ceecb24eb56643f9ee8619692b713d8e8867",
+      "source_bytes": 16815,
+      "saved_bytes": 16815,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/whisper-raw-outlier-selection-v1/pairs5.json",
+      "target": "results/load-and-quality-2026-11-04/quality/whisper-raw-outlier-selection-v1/pairs5.json",
+      "source_sha256": "88ed418b2e51c8682bd29c317e1b8b5425cbb60664851ed15c15a4cefb12f9ee",
+      "saved_sha256": "88ed418b2e51c8682bd29c317e1b8b5425cbb60664851ed15c15a4cefb12f9ee",
+      "source_bytes": 9963,
+      "saved_bytes": 9963,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/whisper-raw-outlier-selection-v1/provenance.json",
+      "target": "results/load-and-quality-2026-11-04/quality/whisper-raw-outlier-selection-v1/provenance.json",
+      "source_sha256": "bb2d7add9cd5b421ae8f0174e8a65e6e2ff807ff4746baf22ec5c856f7e1f55d",
+      "saved_sha256": "bb2d7add9cd5b421ae8f0174e8a65e6e2ff807ff4746baf22ec5c856f7e1f55d",
+      "source_bytes": 302,
+      "saved_bytes": 302,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/final-evidence-proofs-v1/59058485-receipt.json",
+      "target": "results/load-and-quality-2026-11-04/quality/final-evidence-proofs-v1/59058485-receipt.json",
+      "source_sha256": "f67eeb96550333ce0dd890765b8627c76adeffbb85e5e13e4ce223884783a234",
+      "saved_sha256": "f67eeb96550333ce0dd890765b8627c76adeffbb85e5e13e4ce223884783a234",
+      "source_bytes": 316731,
+      "saved_bytes": 316731,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/final-evidence-proofs-v1/59071593-receipt.json",
+      "target": "results/load-and-quality-2026-11-04/quality/final-evidence-proofs-v1/59071593-receipt.json",
+      "source_sha256": "35dbe4660e31b52b57ecc774faecc7ab032516bc0a8b376374bb44cc6b7071fe",
+      "saved_sha256": "35dbe4660e31b52b57ecc774faecc7ab032516bc0a8b376374bb44cc6b7071fe",
+      "source_bytes": 713390,
+      "saved_bytes": 713390,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/final-evidence-proofs-v1/FINAL15058_TWO_JUDGE_COMPLETE.json",
+      "target": "results/load-and-quality-2026-11-04/quality/final-evidence-proofs-v1/FINAL15058_TWO_JUDGE_COMPLETE.json",
+      "source_sha256": "9cda0d1eb3e35c0eebe3ad2bf52021e75f1d3259e1b7356061cd687d9a6c20bd",
+      "saved_sha256": "9cda0d1eb3e35c0eebe3ad2bf52021e75f1d3259e1b7356061cd687d9a6c20bd",
+      "source_bytes": 5619,
+      "saved_bytes": 5619,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/final-evidence-proofs-v1/FINAL_BACKUP_VERIFIED_2026-11-04.json",
+      "target": "results/load-and-quality-2026-11-04/quality/final-evidence-proofs-v1/FINAL_BACKUP_VERIFIED_2026-11-04.json",
+      "source_sha256": "07b2bf0fe85e50862e58f2c1e9e8ee6a3a48cff6a1303565bf9c4b2b147b8c69",
+      "saved_sha256": "07b2bf0fe85e50862e58f2c1e9e8ee6a3a48cff6a1303565bf9c4b2b147b8c69",
+      "source_bytes": 2832,
+      "saved_bytes": 2832,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/final-evidence-proofs-v1/TASK_KEY_CLEANUP_BOTH_VERIFIED.json",
+      "target": "results/load-and-quality-2026-11-04/quality/final-evidence-proofs-v1/TASK_KEY_CLEANUP_BOTH_VERIFIED.json",
+      "source_sha256": "cbcf64205e30ed1285f8b0eebfe5c9906d0023c28924c606a82aee8a3c1fb48a",
+      "saved_sha256": "cbcf64205e30ed1285f8b0eebfe5c9906d0023c28924c606a82aee8a3c1fb48a",
+      "source_bytes": 948,
+      "saved_bytes": 948,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/final-evidence-proofs-v1/final-hardware-allocation-59058485.json",
+      "target": "results/load-and-quality-2026-11-04/quality/final-evidence-proofs-v1/final-hardware-allocation-59058485.json",
+      "source_sha256": "24724f5ac85031ecd9b3167497711e1d7fc1a4bf283980b1c8e1d9638074726d",
+      "saved_sha256": "24724f5ac85031ecd9b3167497711e1d7fc1a4bf283980b1c8e1d9638074726d",
+      "source_bytes": 217,
+      "saved_bytes": 217,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/final-evidence-proofs-v1/final-hardware-allocation-59071593.json",
+      "target": "results/load-and-quality-2026-11-04/quality/final-evidence-proofs-v1/final-hardware-allocation-59071593.json",
+      "source_sha256": "85b090f3405236cd1d745658d4f8efd0305dbd41a8258ae91cd60401f8f4d2f1",
+      "saved_sha256": "85b090f3405236cd1d745658d4f8efd0305dbd41a8258ae91cd60401f8f4d2f1",
+      "source_bytes": 216,
+      "saved_bytes": 216,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/final-evidence-proofs-v1/provenance.json",
+      "target": "results/load-and-quality-2026-11-04/quality/final-evidence-proofs-v1/provenance.json",
+      "source_sha256": "e3cf8861007e951129736746a835897c208f68e4696e560fcc87678bf5851225",
+      "saved_sha256": "e3cf8861007e951129736746a835897c208f68e4696e560fcc87678bf5851225",
+      "source_bytes": 1249,
+      "saved_bytes": 1249,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/final-evidence-proofs-v1/task-resource-cleanup-summary.json",
+      "target": "results/load-and-quality-2026-11-04/quality/final-evidence-proofs-v1/task-resource-cleanup-summary.json",
+      "source_sha256": "6aaea030a13487a03ffd6d98a3684402f831ce416cddefa7c1aa508b13f4dee8",
+      "saved_sha256": "6aaea030a13487a03ffd6d98a3684402f831ce416cddefa7c1aa508b13f4dee8",
+      "source_bytes": 917,
+      "saved_bytes": 917,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_staggered_plan_v1/CPU-dry-plan.json",
+      "target": "results/load-and-quality-2026-11-04/quality/raw_burst_staggered_plan_v1/CPU-dry-plan.json",
+      "source_sha256": "04e6d24262c28921fe51fd4df7d511864d3a452931ec497d8c4268d961a73e25",
+      "saved_sha256": "04e6d24262c28921fe51fd4df7d511864d3a452931ec497d8c4268d961a73e25",
+      "source_bytes": 11757,
+      "saved_bytes": 11757,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_staggered_plan_v1/CPU-tests.txt",
+      "target": "results/load-and-quality-2026-11-04/quality/raw_burst_staggered_plan_v1/CPU-tests.txt",
+      "source_sha256": "1331eb27b2fa236183659a52b4a93ed9e2f99bebe81e963b5aad7d89ffb0cc01",
+      "saved_sha256": "1331eb27b2fa236183659a52b4a93ed9e2f99bebe81e963b5aad7d89ffb0cc01",
+      "source_bytes": 103,
+      "saved_bytes": 103,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_staggered_plan_v1/CPU-validation.json",
+      "target": "results/load-and-quality-2026-11-04/quality/raw_burst_staggered_plan_v1/CPU-validation.json",
+      "source_sha256": "36aa96be5bc7a26a66983320dd1dd1853306a34387c9b467a6777f1fa4c7e60a",
+      "saved_sha256": "36aa96be5bc7a26a66983320dd1dd1853306a34387c9b467a6777f1fa4c7e60a",
+      "source_bytes": 1418,
+      "saved_bytes": 1418,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_staggered_plan_v1/CPU_READY.json",
+      "target": "results/load-and-quality-2026-11-04/quality/raw_burst_staggered_plan_v1/CPU_READY.json",
+      "source_sha256": "bd94c9caec53b007fb3f67efdc23809f00ce09091505e77159d1996aacf92cbe",
+      "saved_sha256": "bd94c9caec53b007fb3f67efdc23809f00ce09091505e77159d1996aacf92cbe",
+      "source_bytes": 578,
+      "saved_bytes": 578,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_staggered_plan_v1/README.md",
+      "target": "results/load-and-quality-2026-11-04/quality/raw_burst_staggered_plan_v1/README.md",
+      "source_sha256": "cb330f00f1625166a63179058d9a80195f2a2f4dc25c1f5a55399002c23a879d",
+      "saved_sha256": "cb330f00f1625166a63179058d9a80195f2a2f4dc25c1f5a55399002c23a879d",
+      "source_bytes": 5082,
+      "saved_bytes": 5082,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_staggered_plan_v1/artifacts-sha256.json",
+      "target": "results/load-and-quality-2026-11-04/quality/raw_burst_staggered_plan_v1/artifacts-sha256.json",
+      "source_sha256": "d285826d3ad63d1cd52539c2ddbe50df301201fd6286ae1bfc291e4a80ea8995",
+      "saved_sha256": "d285826d3ad63d1cd52539c2ddbe50df301201fd6286ae1bfc291e4a80ea8995",
+      "source_bytes": 3457,
+      "saved_bytes": 3457,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_staggered_plan_v1/audit_retained.py",
+      "target": "results/load-and-quality-2026-11-04/quality/raw_burst_staggered_plan_v1/audit_retained.py",
+      "source_sha256": "b35882feb2a915fea2b44ebd44718fd1e93747b436b0ef904d6ec793109ae77f",
+      "saved_sha256": "b35882feb2a915fea2b44ebd44718fd1e93747b436b0ef904d6ec793109ae77f",
+      "source_bytes": 4182,
+      "saved_bytes": 4182,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_staggered_plan_v1/build.py",
+      "target": "results/load-and-quality-2026-11-04/quality/raw_burst_staggered_plan_v1/build.py",
+      "source_sha256": "5b6d86e5c09b9c987bd327914f80b25e07c59e9b087adfdb2faeea8a44869ac9",
+      "saved_sha256": "5b6d86e5c09b9c987bd327914f80b25e07c59e9b087adfdb2faeea8a44869ac9",
+      "source_bytes": 8347,
+      "saved_bytes": 8347,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_staggered_plan_v1/config.json",
+      "target": "results/load-and-quality-2026-11-04/quality/raw_burst_staggered_plan_v1/config.json",
+      "source_sha256": "d048645b2187092642256b092e43161d89f479d2e3f2ccbaeb1d2092b67c4d02",
+      "saved_sha256": "d048645b2187092642256b092e43161d89f479d2e3f2ccbaeb1d2092b67c4d02",
+      "source_bytes": 11081,
+      "saved_bytes": 11081,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_staggered_plan_v1/owned-stop-source-snapshot.py",
+      "target": "results/load-and-quality-2026-11-04/quality/raw_burst_staggered_plan_v1/owned-stop-source-snapshot.py",
+      "source_sha256": "8d9350f5cbbd13da22d12f6e1a7a97789a053e885fa57a3c0cd8602fb4e7f7bd",
+      "saved_sha256": "8d9350f5cbbd13da22d12f6e1a7a97789a053e885fa57a3c0cd8602fb4e7f7bd",
+      "source_bytes": 7852,
+      "saved_bytes": 7852,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_staggered_plan_v1/plan.json",
+      "target": "results/load-and-quality-2026-11-04/quality/raw_burst_staggered_plan_v1/plan.json",
+      "source_sha256": "4daa9acdcfcdac9e5cdcbde8d3d8229855bade36a61cc4295a30d0b86f031b4a",
+      "saved_sha256": "4daa9acdcfcdac9e5cdcbde8d3d8229855bade36a61cc4295a30d0b86f031b4a",
+      "source_bytes": 122592,
+      "saved_bytes": 122592,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_staggered_plan_v1/run.py",
+      "target": "results/load-and-quality-2026-11-04/quality/raw_burst_staggered_plan_v1/run.py",
+      "source_sha256": "c7df85711d426178c8bab01e6276e0668dab75f7747462b3ebd88ef7b039ab06",
+      "saved_sha256": "c7df85711d426178c8bab01e6276e0668dab75f7747462b3ebd88ef7b039ab06",
+      "source_bytes": 10752,
+      "saved_bytes": 10752,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_staggered_plan_v1/test_cpu.py",
+      "target": "results/load-and-quality-2026-11-04/quality/raw_burst_staggered_plan_v1/test_cpu.py",
+      "source_sha256": "33bc1ae552dd9cafac8dc79566175b9b7099c9a8eb6c73e2bdd462ad9f63f9f1",
+      "saved_sha256": "33bc1ae552dd9cafac8dc79566175b9b7099c9a8eb6c73e2bdd462ad9f63f9f1",
+      "source_bytes": 5265,
+      "saved_bytes": 5265,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_staggered_plan_v1/retained-audit-v1/artifacts-sha256.json",
+      "target": "results/load-and-quality-2026-11-04/quality/retained-audit-v1/artifacts-sha256.json",
+      "source_sha256": "2f52c6a7f9d9abc069702e1d6dffeb7e0c0d74bfe8356b3d6dd6994b3881a90c",
+      "saved_sha256": "2f52c6a7f9d9abc069702e1d6dffeb7e0c0d74bfe8356b3d6dd6994b3881a90c",
+      "source_bytes": 983,
+      "saved_bytes": 983,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_staggered_plan_v1/retained-audit-v1/report.md",
+      "target": "results/load-and-quality-2026-11-04/quality/retained-audit-v1/report.md",
+      "source_sha256": "791bdd148c404204670e171f714f7b5e171f9a38bc5984f09aa3635fa17c95e5",
+      "saved_sha256": "791bdd148c404204670e171f714f7b5e171f9a38bc5984f09aa3635fa17c95e5",
+      "source_bytes": 3526,
+      "saved_bytes": 3526,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_staggered_plan_v1/retained-audit-v1/summary.json",
+      "target": "results/load-and-quality-2026-11-04/quality/retained-audit-v1/summary.json",
+      "source_sha256": "d60af0793c39c9b49f06aad1ca652d6375344dcbe7d5184c6d3374efc7bde55c",
+      "saved_sha256": "d60af0793c39c9b49f06aad1ca652d6375344dcbe7d5184c6d3374efc7bde55c",
+      "source_bytes": 13387,
+      "saved_bytes": 13387,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_staggered_plan_v1/retained-audit-v1/verified-audio.jsonl",
+      "target": "results/load-and-quality-2026-11-04/quality/retained-audit-v1/verified-audio.jsonl",
+      "source_sha256": "b927a15258167fb5b8715b1fa027011cded778bcc2efd5e729b8586463f09f6d",
+      "saved_sha256": "b927a15258167fb5b8715b1fa027011cded778bcc2efd5e729b8586463f09f6d",
+      "source_bytes": 205160,
+      "saved_bytes": 205160,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_cached_plan_v1/CPU-dry-plan.json",
+      "target": "results/load-and-quality-2026-11-04/quality/raw_burst_cached_plan_v1/CPU-dry-plan.json",
+      "source_sha256": "a44f4bf66efed5dbd48cbe7427f15d757237602fd9c0087b7bb9130697499e9d",
+      "saved_sha256": "a44f4bf66efed5dbd48cbe7427f15d757237602fd9c0087b7bb9130697499e9d",
+      "source_bytes": 6056,
+      "saved_bytes": 6056,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_cached_plan_v1/CPU-tests.txt",
+      "target": "results/load-and-quality-2026-11-04/quality/raw_burst_cached_plan_v1/CPU-tests.txt",
+      "source_sha256": "cd9498bed19edee2283716208cf09ecc52eacb8aa3f9c51790d1fd7e9e2c1e08",
+      "saved_sha256": "cd9498bed19edee2283716208cf09ecc52eacb8aa3f9c51790d1fd7e9e2c1e08",
+      "source_bytes": 105,
+      "saved_bytes": 105,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_cached_plan_v1/CPU_READY.json",
+      "target": "results/load-and-quality-2026-11-04/quality/raw_burst_cached_plan_v1/CPU_READY.json",
+      "source_sha256": "58cd959f51ea8f88d23eb7c43f083fb14b7e258c14213bff5c6a7ab9fc9b8d52",
+      "saved_sha256": "58cd959f51ea8f88d23eb7c43f083fb14b7e258c14213bff5c6a7ab9fc9b8d52",
+      "source_bytes": 736,
+      "saved_bytes": 736,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_cached_plan_v1/README.md",
+      "target": "results/load-and-quality-2026-11-04/quality/raw_burst_cached_plan_v1/README.md",
+      "source_sha256": "39cb2b23c864d09c446874f026e6b49b281917fb426e9afc4d962607a7c46b1e",
+      "saved_sha256": "39cb2b23c864d09c446874f026e6b49b281917fb426e9afc4d962607a7c46b1e",
+      "source_bytes": 5043,
+      "saved_bytes": 5043,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_cached_plan_v1/RETENTION_CPU-tests.txt",
+      "target": "results/load-and-quality-2026-11-04/quality/raw_burst_cached_plan_v1/RETENTION_CPU-tests.txt",
+      "source_sha256": "2c37d50a88147ca2ebd5197d74ee37d462dab650d793512e849814c28d5a38f0",
+      "saved_sha256": "2c37d50a88147ca2ebd5197d74ee37d462dab650d793512e849814c28d5a38f0",
+      "source_bytes": 101,
+      "saved_bytes": 101,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_cached_plan_v1/RETENTION_CPU_READY.json",
+      "target": "results/load-and-quality-2026-11-04/quality/raw_burst_cached_plan_v1/RETENTION_CPU_READY.json",
+      "source_sha256": "059f4f8f2d265c7e73e58ddf64207024722e5038ad5bcda8c1e7ae6e0f192b92",
+      "saved_sha256": "059f4f8f2d265c7e73e58ddf64207024722e5038ad5bcda8c1e7ae6e0f192b92",
+      "source_bytes": 516,
+      "saved_bytes": 516,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_cached_plan_v1/SKIPPED_NO_TIME.json",
+      "target": "results/load-and-quality-2026-11-04/quality/raw_burst_cached_plan_v1/SKIPPED_NO_TIME.json",
+      "source_sha256": "fd9538695f81cb6c708a0eaa8a023880bbfaa00ff4c9dec2f42a588d13e9ccb0",
+      "saved_sha256": "fd9538695f81cb6c708a0eaa8a023880bbfaa00ff4c9dec2f42a588d13e9ccb0",
+      "source_bytes": 570,
+      "saved_bytes": 570,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_cached_plan_v1/artifacts-sha256.json",
+      "target": "results/load-and-quality-2026-11-04/quality/raw_burst_cached_plan_v1/artifacts-sha256.json",
+      "source_sha256": "11ee3dfe22e312f365b7c5b2d3f32fc8813bd670d359739ea9b4e09f6d7c00d7",
+      "saved_sha256": "11ee3dfe22e312f365b7c5b2d3f32fc8813bd670d359739ea9b4e09f6d7c00d7",
+      "source_bytes": 2130,
+      "saved_bytes": 2130,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_cached_plan_v1/config.json",
+      "target": "results/load-and-quality-2026-11-04/quality/raw_burst_cached_plan_v1/config.json",
+      "source_sha256": "4a9d3d858701dfe16a1b0990046bea000f4b31a284a1a56d4ccc3dfcbe8d1600",
+      "saved_sha256": "4a9d3d858701dfe16a1b0990046bea000f4b31a284a1a56d4ccc3dfcbe8d1600",
+      "source_bytes": 1400,
+      "saved_bytes": 1400,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_cached_plan_v1/retain_deduplicated.py",
+      "target": "results/load-and-quality-2026-11-04/quality/raw_burst_cached_plan_v1/retain_deduplicated.py",
+      "source_sha256": "a3fe7c8727d87247b8dc4697196892d07f496a3de9d426d241de681a88010942",
+      "saved_sha256": "a3fe7c8727d87247b8dc4697196892d07f496a3de9d426d241de681a88010942",
+      "source_bytes": 7143,
+      "saved_bytes": 7143,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_cached_plan_v1/run.py",
+      "target": "results/load-and-quality-2026-11-04/quality/raw_burst_cached_plan_v1/run.py",
+      "source_sha256": "3c869190da6f27aaeec2688f1057d4bf70d05cd17306dbf36323467321dfaaca",
+      "saved_sha256": "3c869190da6f27aaeec2688f1057d4bf70d05cd17306dbf36323467321dfaaca",
+      "source_bytes": 20929,
+      "saved_bytes": 20929,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_cached_plan_v1/test_cpu.py",
+      "target": "results/load-and-quality-2026-11-04/quality/raw_burst_cached_plan_v1/test_cpu.py",
+      "source_sha256": "dce9ab041a17465a5831a86ac3944678df7b2394fd2a1b32c1bdd379fe4b8fca",
+      "saved_sha256": "dce9ab041a17465a5831a86ac3944678df7b2394fd2a1b32c1bdd379fe4b8fca",
+      "source_bytes": 6383,
+      "saved_bytes": 6383,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "load/raw_burst_cached_plan_v1/test_retention_cpu.py",
+      "target": "results/load-and-quality-2026-11-04/quality/raw_burst_cached_plan_v1/test_retention_cpu.py",
+      "source_sha256": "42850452665d0187ff2d1fa7b7dc0cce6f089e4e6ee259a5d6ecc53d472419eb",
+      "saved_sha256": "42850452665d0187ff2d1fa7b7dc0cce6f089e4e6ee259a5d6ecc53d472419eb",
+      "source_bytes": 3816,
+      "saved_bytes": 3816,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/report-final15058-v1/origin-propagation.json",
+      "target": "results/load-and-quality-2026-11-04/full-two-judge-report/origin-propagation.json",
+      "source_sha256": "e22f7cec2c2447f466fafc4556ee5fdb0b303997f882bbaf282c7fbdb1e0a48c",
+      "saved_sha256": "e22f7cec2c2447f466fafc4556ee5fdb0b303997f882bbaf282c7fbdb1e0a48c",
+      "source_bytes": 749758,
+      "saved_bytes": 749758,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/report-final15058-v1/paired-before-after.jsonl",
+      "target": "results/load-and-quality-2026-11-04/full-two-judge-report/paired-before-after.jsonl",
+      "source_sha256": "1a941b2b6291057ffa4521d8eb94a218d4cea3ac56a3f30fe51ff2803600e86e",
+      "saved_sha256": "1a941b2b6291057ffa4521d8eb94a218d4cea3ac56a3f30fe51ff2803600e86e",
+      "source_bytes": 1364194,
+      "saved_bytes": 1364194,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/report-final15058-v1/per-configuration.json",
+      "target": "results/load-and-quality-2026-11-04/full-two-judge-report/per-configuration.json.gz",
+      "source_sha256": "68077fd74e44d23429c403e80f0fab26ec02828297cd30fac31c6d346f6f8fd0",
+      "saved_sha256": "0d85c2a244db6d58f0c58416a5ef58c3c0eeb9ee2bc4a2bdd216624189f29c91",
+      "source_bytes": 11549546,
+      "saved_bytes": 321040,
+      "adaptation": "lossless gzip; decompressed SHA verified"
+    },
+    {
+      "source": "quality/report-final15058-v1/per-route.csv",
+      "target": "results/load-and-quality-2026-11-04/full-two-judge-report/per-route.csv.gz",
+      "source_sha256": "2595cd88b1251d65582f9035cf1ca91faa36b0ae780d81977adccd9d73caaa6e",
+      "saved_sha256": "e6db8aa23d63d7284451991c468de6cc8ea8776062816caf02b70513fdd24841",
+      "source_bytes": 3358389,
+      "saved_bytes": 114299,
+      "adaptation": "lossless gzip; decompressed SHA verified"
+    },
+    {
+      "source": "quality/report-final15058-v1/per-route.json",
+      "target": "results/load-and-quality-2026-11-04/full-two-judge-report/per-route.json.gz",
+      "source_sha256": "62c115776d452cee0089a2d5e9545ce3c9a8bba7ebfe37ed5f2c4e573b51a982",
+      "saved_sha256": "131cb3f614bd988ec8712e33b87580400de79b4c399675cfb0f28b8d4149917b",
+      "source_bytes": 3929380,
+      "saved_bytes": 253309,
+      "adaptation": "lossless gzip; decompressed SHA verified"
+    },
+    {
+      "source": "quality/report-final15058-v1/report.md",
+      "target": "results/load-and-quality-2026-11-04/full-two-judge-report/report.md",
+      "source_sha256": "1be8e7e6f3a69564e9973b1dca0c0b3923f6fc5635bc10785ef18d19ed0c0772",
+      "saved_sha256": "1be8e7e6f3a69564e9973b1dca0c0b3923f6fc5635bc10785ef18d19ed0c0772",
+      "source_bytes": 50798,
+      "saved_bytes": 50798,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/report-final15058-v1/scored-logical-cases.jsonl",
+      "target": "results/load-and-quality-2026-11-04/full-two-judge-report/scored-logical-cases.jsonl.gz",
+      "source_sha256": "a2b56a249d0d8cf653badfcc7dadf1c4c7b956c3067b338d35c4510cf21c3aca",
+      "saved_sha256": "11522ab45304049fbdd5876f41a02e71a14ba99bbf433e50df7282a34f6af672",
+      "source_bytes": 363862078,
+      "saved_bytes": 18980741,
+      "adaptation": "lossless gzip; decompressed SHA verified"
+    },
+    {
+      "source": "quality/report-final15058-v1/summary.json",
+      "target": "results/load-and-quality-2026-11-04/full-two-judge-report/summary.json",
+      "source_sha256": "0f3d0828e43d6aae87893de2234a8d1f7a8238a96d2b24d2fa194d44605fdf0c",
+      "saved_sha256": "0f3d0828e43d6aae87893de2234a8d1f7a8238a96d2b24d2fa194d44605fdf0c",
+      "source_bytes": 1999421,
+      "saved_bytes": 1999421,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    },
+    {
+      "source": "quality/report-final15058-v1/validation-checks.jsonl",
+      "target": "results/load-and-quality-2026-11-04/full-two-judge-report/validation-checks.jsonl",
+      "source_sha256": "16ca9b6da49df6153b278ac94ddd72fdf201fccf18b07cf343888d6d692ec30b",
+      "saved_sha256": "16ca9b6da49df6153b278ac94ddd72fdf201fccf18b07cf343888d6d692ec30b",
+      "source_bytes": 156243,
+      "saved_bytes": 156243,
+      "adaptation": "none; historical absolute paths retained as provenance"
+    }
+  ],
+  "WAV_policy": "All measured WAVs retained locally with exact hashes; generated before/after samples are published separately. No model weights, conditioning WAVs or transfer keys bundled."
+}
