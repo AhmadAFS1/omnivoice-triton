@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import asyncio
+import inspect
 import threading
 import time
 from concurrent.futures import ThreadPoolExecutor
@@ -17,9 +18,17 @@ import soundfile as sf
 import torch
 from fastapi.testclient import TestClient
 
-from omnivoice_triton.cli.api_server import build_parser, create_app
+from omnivoice_triton.cli.api_server import build_parser, create_app, main
 from omnivoice_triton.models.graph_memory import GraphMemoryAdmissionError
 from omnivoice_triton.serving import QueueFullError, WorkerLifecycleReporter
+
+
+def test_new_inference_options_preserve_legacy_positional_save_dir():
+    marker = object()
+    bound = inspect.signature(create_app).bind_partial(*([None] * 18), marker)
+    assert bound.arguments["save_dir"] is marker
+    assert "cuda_graph_capture_after_calls" not in bound.arguments
+    assert "fused_rope" not in bound.arguments
 
 
 @pytest.fixture(autouse=True)
@@ -258,6 +267,7 @@ def test_health_and_languages(tmp_path: Path) -> None:
         assert payload["asr_loaded"] is True
         assert payload["sage_attention"] is True
         assert payload["full_triton_patch"] is True
+        assert payload["fused_rope"] is False
         assert payload["decode_postprocess_workers"] == 3
         assert payload["audio_decode_batch_size"] == 8
         assert payload["max_cuda_graphs"] == 8
@@ -312,7 +322,120 @@ def test_health_and_languages(tmp_path: Path) -> None:
     assert created[0].kwargs["audio_decode_batch_size"] == 8
     assert created[0].kwargs["max_cuda_graphs"] == 8
     assert "max_cuda_graph_row_tokens" not in created[0].kwargs
+    assert "fused_rope" not in created[0].kwargs
     assert created[0].prewarmed_shapes == [[4, 8, 163], [8, 8, 163]]
+
+
+@pytest.mark.parametrize("runner_name", ["triton", "hybrid"])
+def test_fused_rope_is_opt_in_and_reports_actual_runner_state(
+    tmp_path: Path, monkeypatch, runner_name: str
+) -> None:
+    parser = build_parser()
+    assert parser.parse_args([]).fused_rope is False
+    assert parser.parse_args(["--fused-rope"]).fused_rope is True
+    actual = {
+        "fused_rope_requested": True,
+        "fused_rope_enabled": False,
+        "fused_rope_ready": False,
+        "fused_rope_experimental": True,
+        "fused_rope_metrics": {"reason": "fake runner has no CUDA kernel"},
+    }
+    monkeypatch.setattr(
+        _FakeRunner,
+        "get_inference_optimization_metrics",
+        lambda self: dict(actual),
+        raising=False,
+    )
+    created: list[_FakeRunner] = []
+
+    def factory(name: str, **kwargs: Any) -> _FakeRunner:
+        runner = _FakeRunner(name, **kwargs)
+        created.append(runner)
+        return runner
+
+    app = create_app(
+        model_checkpoint="fake/omnivoice",
+        runner_name=runner_name,
+        device="cuda:0",
+        dtype="fp16",
+        disable_unused_kv_cache=True,
+        fused_rope=True,
+        runner_factory=factory,
+        save_dir=str(tmp_path),
+        load_asr=False,
+        start_worker_callback=False,
+    )
+    with TestClient(app) as client:
+        payload = client.get("/health").json()
+        assert payload["fused_rope"] is True  # Requested configuration.
+        assert payload["inference_optimizations"] == actual
+    assert created[0].kwargs["fused_rope"] is True
+    assert created[0].kwargs["disable_unused_kv_cache"] is True
+    assert created[0].prewarmed_shapes == []
+
+
+@pytest.mark.parametrize(
+    ("override", "error"),
+    [
+        ({"runner_name": "base"}, "triton or hybrid"),
+        ({"runner_name": "faster"}, "triton or hybrid"),
+        ({"device": "cpu"}, "CUDA and dtype fp16"),
+        ({"device": "mps"}, "CUDA and dtype fp16"),
+        ({"dtype": "bf16"}, "CUDA and dtype fp16"),
+        ({"dtype": "fp32"}, "CUDA and dtype fp16"),
+        ({"disable_unused_kv_cache": False}, "disable-unused-kv-cache"),
+        ({"full_triton_patch": True}, "full-triton-patch"),
+        ({"enable_sage_attention": True}, "sage-attention"),
+        ({"prewarm_clone_batch_sizes": (1,)}, "clone graph prewarm"),
+        ({"prewarm_clone_sequence_lengths": (128,)}, "clone graph prewarm"),
+        (
+            {
+                "prewarm_clone_batch_sizes": (1,),
+                "prewarm_clone_sequence_lengths": (128,),
+            },
+            "clone graph prewarm",
+        ),
+    ],
+)
+def test_fused_rope_rejects_unsupported_profiles_before_cuda(
+    monkeypatch, override: dict[str, Any], error: str
+) -> None:
+    monkeypatch.setattr(
+        "omnivoice_triton.cli.api_server.require_cuda_available",
+        lambda: pytest.fail("Invalid fused RoPE profile reached CUDA preflight"),
+    )
+    options: dict[str, Any] = {
+        "runner_name": "hybrid",
+        "device": "cuda",
+        "dtype": "fp16",
+        "disable_unused_kv_cache": True,
+        "fused_rope": True,
+    }
+    options.update(override)
+    with pytest.raises(ValueError, match=error):
+        create_app(**options)
+
+
+def test_fused_rope_cli_forwards_explicit_request(monkeypatch) -> None:
+    created: list[dict[str, Any]] = []
+    served: list[Any] = []
+    app = object()
+
+    def fake_create_app(**kwargs: Any) -> Any:
+        created.append(kwargs)
+        return app
+
+    monkeypatch.setattr("omnivoice_triton.cli.api_server.create_app", fake_create_app)
+    monkeypatch.setattr(
+        "omnivoice_triton.cli.api_server.uvicorn.run",
+        lambda value, **kwargs: served.append(value),
+    )
+    main(["--fused-rope", "--disable-unused-kv-cache", "--device", "cuda"])
+    assert created[0]["fused_rope"] is True
+    assert created[0]["disable_unused_kv_cache"] is True
+    assert created[0]["prewarm_clone_batch_sizes"] == ()
+    assert created[0]["prewarm_clone_sequence_lengths"] == ()
+    assert served == [app]
 
 
 def test_audio_decode_batch_size_defaults_to_serial_and_validates() -> None:

@@ -30,6 +30,8 @@ class TritonRunner(BaseRunner):
         dtype: Model dtype string (``"bf16"``, ``"fp16"``, ``"fp32"``).
     """
 
+    _supports_fused_rope = True
+
     def __init__(
         self,
         patch_range: tuple[int, int] | None = (0, 24),
@@ -42,6 +44,7 @@ class TritonRunner(BaseRunner):
         disable_unused_kv_cache: bool = False,
         split_cfg: bool = False,
         max_cuda_graph_row_tokens: int = 0,
+        fused_rope: bool = False,
     ) -> None:
         super().__init__(
             device=device,
@@ -52,12 +55,21 @@ class TritonRunner(BaseRunner):
             disable_unused_kv_cache=disable_unused_kv_cache,
             split_cfg=split_cfg,
             max_cuda_graph_row_tokens=max_cuda_graph_row_tokens,
+            fused_rope=fused_rope,
         )
+        if fused_rope and (patch_range != (0, 24) or enable_sage_attention):
+            raise ValueError(
+                "Fused RoPE requires default (0,24) Triton patches and SDPA."
+            )
         self.patch_range = patch_range
         self.enable_sage_attention = enable_sage_attention
 
     def load_model(self) -> None:
         """Load model then apply Triton kernel patches."""
+        with self._fused_rope_startup():
+            self._load_triton_model()
+
+    def _load_triton_model(self) -> None:
         super().load_model()
         patchable = find_patchable_model(self._model)
         apply_triton_kernels(
@@ -66,4 +78,5 @@ class TritonRunner(BaseRunner):
         )
         if self.enable_sage_attention:
             apply_sage_attention(patchable, patch_range=self.patch_range)
+        self._install_fused_rope()
         logger.info("TritonRunner ready (Triton kernels applied).")

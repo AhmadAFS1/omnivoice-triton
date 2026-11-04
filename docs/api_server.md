@@ -206,6 +206,11 @@ Main runtime flags:
   total VRAM or guarantee that a later allocation succeeds. Unsupported model
   architectures use eager inference. Raw shape prewarming is rejected while
   this policy is enabled; normal generation warmup remains available.
+- `--fused-rope`: experimental, default-off rotary fusion for pinned FP16
+  `triton`/`hybrid` with disabled KV cache and default24-layer SDPA patches.
+  Startup warms deterministic tensors and preserves RNG state. Raw clone-graph
+  prewarm, SageAttention and full-layer patches cannot be combined with it.
+  See [configuration and lifecycle](fused-rope.md).
 
 Graph-memory admission can return HTTP 503 before allocating a new graph when
 estimated workspace is unavailable. That request fails, while `/health` remains

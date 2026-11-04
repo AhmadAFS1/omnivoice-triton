@@ -312,6 +312,15 @@ def build_parser() -> argparse.ArgumentParser:
         help="Experimental split guidance for faster/hybrid; changes FP16 numerics.",
     )
     parser.add_argument(
+        "--fused-rope",
+        action="store_true",
+        help=(
+            "Experimental fused rotary embedding for Triton/Hybrid FP16 CUDA "
+            "with --disable-unused-kv-cache; requires default layer patching, "
+            "SDPA, and no clone graph prewarm."
+        ),
+    )
+    parser.add_argument(
         "--device",
         default=None,
         help="Device to use. Auto-detected if not specified.",
@@ -1017,6 +1026,31 @@ def _save_output(
     return output_path
 
 
+def _validate_fused_rope_options(
+    *,
+    runner_name: str,
+    device: str,
+    dtype: str,
+    disable_unused_kv_cache: bool,
+    full_triton_patch: bool,
+    enable_sage_attention: bool,
+    prewarm_clone_batch_sizes: tuple[int, ...] = (),
+    prewarm_clone_sequence_lengths: tuple[int, ...] = (),
+) -> None:
+    if runner_name not in {"triton", "hybrid"}:
+        raise ValueError("--fused-rope requires a triton or hybrid runner.")
+    if not device.startswith("cuda") or dtype != "fp16":
+        raise ValueError("--fused-rope requires CUDA and dtype fp16.")
+    if not disable_unused_kv_cache:
+        raise ValueError("--fused-rope requires --disable-unused-kv-cache.")
+    if full_triton_patch:
+        raise ValueError("--fused-rope does not support --full-triton-patch.")
+    if enable_sage_attention:
+        raise ValueError("--fused-rope does not support --sage-attention.")
+    if prewarm_clone_batch_sizes or prewarm_clone_sequence_lengths:
+        raise ValueError("--fused-rope does not support clone graph prewarm.")
+
+
 def _build_runner(
     runner_name: str,
     *,
@@ -1033,6 +1067,7 @@ def _build_runner(
     split_cfg: bool = False,
     max_cuda_graph_row_tokens: int = 0,
     cuda_graph_capture_after_calls: int = 0,
+    fused_rope: bool = False,
 ) -> Any:
     kwargs: dict[str, Any] = {
         "device": device,
@@ -1059,6 +1094,16 @@ def _build_runner(
         kwargs["cuda_graph_capture_after_calls"] = cuda_graph_capture_after_calls
     if disable_unused_kv_cache:
         kwargs["disable_unused_kv_cache"] = True
+    if fused_rope:
+        _validate_fused_rope_options(
+            runner_name=runner_name,
+            device=device,
+            dtype=dtype,
+            disable_unused_kv_cache=disable_unused_kv_cache,
+            full_triton_patch=full_triton_patch,
+            enable_sage_attention=enable_sage_attention,
+        )
+        kwargs["fused_rope"] = True
     if split_cfg:
         if runner_name not in {"faster", "hybrid"}:
             raise ValueError("--split-cfg is only supported for faster/hybrid runners.")
@@ -1119,7 +1164,6 @@ def create_app(
     response_cache_max_waiters: int = 4096,
     max_cuda_graphs: int = DEFAULT_MAX_CUDA_GRAPHS,
     max_cuda_graph_row_tokens: int = 0,
-    cuda_graph_capture_after_calls: int = 0,
     save_dir: str | None = None,
     batch_collect_ms: float = DEFAULT_BATCH_COLLECT_MS,
     max_batch_requests: int = DEFAULT_MAX_BATCH_REQUESTS,
@@ -1141,6 +1185,8 @@ def create_app(
     server_port: int = DEFAULT_PORT,
     start_worker_callback: bool = True,
     runner_factory: Callable[..., Any] | None = None,
+    cuda_graph_capture_after_calls: int = 0,
+    fused_rope: bool = False,
 ) -> FastAPI:
     """Create the FastAPI app."""
     if audio_decode_batch_size < 1:
@@ -1172,6 +1218,17 @@ def create_app(
     if response_cache_max_inflight_keys < 1 or response_cache_max_waiters < 1:
         raise ValueError("Complete-response admission limits must be positive.")
     resolved_device = device or get_best_device()
+    if fused_rope:
+        _validate_fused_rope_options(
+            runner_name=runner_name,
+            device=resolved_device,
+            dtype=dtype,
+            disable_unused_kv_cache=disable_unused_kv_cache,
+            full_triton_patch=full_triton_patch,
+            enable_sage_attention=enable_sage_attention,
+            prewarm_clone_batch_sizes=prewarm_clone_batch_sizes,
+            prewarm_clone_sequence_lengths=prewarm_clone_sequence_lengths,
+        )
     if resolved_device.startswith("cuda"):
         require_cuda_available()
     elif runner_name != "base":
@@ -1203,6 +1260,9 @@ def create_app(
         app.state.prompt_prepare_limiter = anyio.CapacityLimiter(
             DEFAULT_REQUEST_CPU_WORKERS
         )
+        optional_runner_options: dict[str, Any] = {}
+        if fused_rope:
+            optional_runner_options["fused_rope"] = True
         runner = _build_runner(
             runner_name,
             model_checkpoint=model_checkpoint,
@@ -1218,6 +1278,7 @@ def create_app(
             max_cuda_graph_row_tokens=max_cuda_graph_row_tokens,
             cuda_graph_capture_after_calls=cuda_graph_capture_after_calls,
             runner_factory=factory,
+            **optional_runner_options,
         )
         runner.load_model()
         model = runner.model
@@ -1376,6 +1437,7 @@ def create_app(
     app.state.audio_decode_batch_size = audio_decode_batch_size
     app.state.disable_unused_kv_cache = disable_unused_kv_cache
     app.state.split_cfg = split_cfg
+    app.state.fused_rope = fused_rope
     app.state.response_cache = None
     app.state.max_cuda_graphs = max(0, int(max_cuda_graphs))
     app.state.max_cuda_graph_row_tokens = max_cuda_graph_row_tokens
@@ -1467,6 +1529,7 @@ def create_app(
                 getattr(getattr(model, "llm", None), "config", None), "use_cache", None
             ),
             "split_cfg": bool(app.state.split_cfg),
+            "fused_rope": bool(app.state.fused_rope),
             "inference_optimizations": inference_optimizations,
             "response_cache": app.state.response_cache.snapshot(),
             "max_cuda_graphs": int(app.state.max_cuda_graphs),
@@ -2696,6 +2759,7 @@ def main(argv: list[str] | None = None) -> None:
         full_triton_patch=args.full_triton_patch,
         disable_unused_kv_cache=args.disable_unused_kv_cache,
         split_cfg=args.split_cfg,
+        fused_rope=args.fused_rope,
         decode_postprocess_workers=args.decode_postprocess_workers,
         audio_decode_batch_size=args.audio_decode_batch_size,
         response_cache_max_bytes=args.response_cache_max_bytes,

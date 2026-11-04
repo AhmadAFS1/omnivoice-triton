@@ -33,6 +33,8 @@ class TritonFasterRunner(FasterRunner):
         dtype: Model dtype string.
     """
 
+    _supports_fused_rope = True
+
     def __init__(
         self,
         patch_range: tuple[int, int] | None = (0, 24),
@@ -47,6 +49,7 @@ class TritonFasterRunner(FasterRunner):
         split_cfg: bool = False,
         max_cuda_graph_row_tokens: int = 0,
         cuda_graph_capture_after_calls: int = 0,
+        fused_rope: bool = False,
     ) -> None:
         super().__init__(
             device=device,
@@ -59,12 +62,21 @@ class TritonFasterRunner(FasterRunner):
             split_cfg=split_cfg,
             max_cuda_graph_row_tokens=max_cuda_graph_row_tokens,
             cuda_graph_capture_after_calls=cuda_graph_capture_after_calls,
+            fused_rope=fused_rope,
         )
+        if fused_rope and (patch_range != (0, 24) or enable_sage_attention):
+            raise ValueError(
+                "Fused RoPE requires default (0,24) Triton patches and SDPA."
+            )
         self.patch_range = patch_range
         self.enable_sage_attention = enable_sage_attention
 
     def load_model(self) -> None:
         """Load model, apply Triton patches, then install CUDA Graph wrapper."""
+        with self._fused_rope_startup():
+            self._load_hybrid_model()
+
+    def _load_hybrid_model(self) -> None:
         # Load base model (without CUDA Graph wrapper yet)
         from omnivoice_triton.models.base_runner import BaseRunner
 
@@ -88,6 +100,7 @@ class TritonFasterRunner(FasterRunner):
         self._model.forward = self._graph_forward
         self._install_graph_memory_policy()
         self._install_split_cfg()
+        self._install_fused_rope()
 
         logger.info(
             "HybridRunner ready (Triton kernels + CUDA Graph wrapper installed, "

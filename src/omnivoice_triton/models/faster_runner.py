@@ -281,6 +281,7 @@ class FasterRunner(BaseRunner):
         split_cfg: bool = False,
         max_cuda_graph_row_tokens: int = 0,
         cuda_graph_capture_after_calls: int = 0,
+        fused_rope: bool = False,
     ) -> None:
         if (
             not isinstance(cuda_graph_capture_after_calls, int)
@@ -299,6 +300,7 @@ class FasterRunner(BaseRunner):
             disable_unused_kv_cache=disable_unused_kv_cache,
             split_cfg=split_cfg,
             max_cuda_graph_row_tokens=max_cuda_graph_row_tokens,
+            fused_rope=fused_rope,
         )
         self._graph_forward: _CUDAGraphForward | None = None
         self._graph_memory: Any | None = None
@@ -351,6 +353,8 @@ class FasterRunner(BaseRunner):
 
     def unload_model(self) -> None:
         """Release graphs and unload model."""
+        self._prepare_fused_rope_unload()
+        self._detach_fused_rope_outer()
         if self._graph_memory is not None:
             # Split.disable restores its saved outer forward, so disable it before
             # restoring the original forward and releasing the memory wrapper.
@@ -361,6 +365,11 @@ class FasterRunner(BaseRunner):
                 self._model.forward = self._graph_forward._original_forward
             self._graph_memory = None
         if self._graph_forward is not None:
+            if self._fused_rope_patch is not None and self._model is not None:
+                if self._split_cfg_patch is not None:
+                    self._split_cfg_patch.disable()
+                    self._split_cfg_patch = None
+                self._model.forward = self._graph_forward._original_forward
             self._graph_forward.clear()
             self._graph_forward = None
         super().unload_model()
@@ -376,6 +385,10 @@ class FasterRunner(BaseRunner):
         shapes: list[tuple[int, int, int]] | tuple[tuple[int, int, int], ...],
     ) -> dict[str, Any]:
         """Pre-capture CUDA Graphs for known hot-path shapes."""
+        if self.fused_rope and shapes:
+            raise ValueError(
+                "Fused RoPE must warm through real generation, not raw graph prewarm."
+            )
         if self._graph_forward is None:
             return {"capture_count": 0, "shapes": [], "warmed_shapes": []}
         if self.max_cuda_graph_row_tokens and shapes:

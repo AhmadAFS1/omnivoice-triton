@@ -1,5 +1,6 @@
 """Base OmniVoice runner using HuggingFace transformers."""
 
+import contextlib
 import logging
 import threading
 import time
@@ -227,6 +228,7 @@ class BaseRunner:
 
     _supports_split_cfg = False
     _supports_graph_memory = False
+    _supports_fused_rope = False
 
     def __init__(
         self,
@@ -238,6 +240,7 @@ class BaseRunner:
         disable_unused_kv_cache: bool = False,
         split_cfg: bool = False,
         max_cuda_graph_row_tokens: int = 0,
+        fused_rope: bool = False,
     ) -> None:
         self.device = device
         self.model_id = model_id
@@ -246,6 +249,21 @@ class BaseRunner:
         self.audio_decode_batch_size = max(1, int(audio_decode_batch_size))
         self.disable_unused_kv_cache = bool(disable_unused_kv_cache)
         self.split_cfg = bool(split_cfg)
+        if not isinstance(fused_rope, bool):
+            raise ValueError("fused_rope must be boolean.")
+        if fused_rope and (
+            not self._supports_fused_rope
+            or self.dtype != torch.float16
+            or not str(device).startswith("cuda")
+            or not disable_unused_kv_cache
+        ):
+            raise ValueError(
+                "Experimental fused RoPE requires triton/hybrid, CUDA, FP16 "
+                "and disable_unused_kv_cache=True."
+            )
+        self.fused_rope = fused_rope
+        self._fused_rope_patch: Any | None = None
+        self._fused_rope_reservation_token = object()
         if self.split_cfg and not self._supports_split_cfg:
             raise ValueError("Experimental split CFG requires faster or hybrid runner.")
         if (
@@ -314,10 +332,45 @@ class BaseRunner:
         self._split_cfg_patch = SplitGuidancePatch(self._model)
         self._split_cfg_patch.enable()
 
+    @contextlib.contextmanager
+    def _fused_rope_startup(self):
+        if not self.fused_rope:
+            yield
+            return
+        from omnivoice_triton.models.rotary import reserve_fused_rope_startup
+
+        with reserve_fused_rope_startup(self._fused_rope_reservation_token):
+            try:
+                yield
+            except BaseException:
+                # The unload fence refuses to drop resources after an unsafe
+                # owner/CUDA failure; the supervisor must then retire this process.
+                self.unload_model()
+                raise
+
+    def _install_fused_rope(self):
+        if not self.fused_rope:
+            return
+        from omnivoice_triton.models.rotary import FusedRoPEPatch
+
+        self._fused_rope_patch = FusedRoPEPatch(
+            self._model, reservation_token=self._fused_rope_reservation_token
+        )
+        self._fused_rope_patch.enable()
+
+    def _prepare_fused_rope_unload(self):
+        if self._fused_rope_patch is not None:
+            self._fused_rope_patch.prepare_disable()
+
+    def _detach_fused_rope_outer(self):
+        if self._fused_rope_patch is not None:
+            self._fused_rope_patch.detach_outer()
+
     def get_inference_optimization_metrics(self) -> dict[str, Any]:
         """Report effective settings without touching CUDA from a health thread."""
         llm_config = getattr(getattr(self._model, "llm", None), "config", None)
         patch = self._split_cfg_patch
+        rotary = self._fused_rope_patch
         return {
             "disable_unused_kv_cache": self.disable_unused_kv_cache,
             "llm_use_cache": getattr(llm_config, "use_cache", None),
@@ -325,6 +378,11 @@ class BaseRunner:
             "split_cfg_enabled": bool(patch is not None and patch.active),
             "split_cfg_experimental": True,
             "split_cfg_metrics": patch.metrics() if patch is not None else None,
+            "fused_rope_requested": self.fused_rope,
+            "fused_rope_enabled": bool(rotary is not None and rotary.active),
+            "fused_rope_ready": bool(rotary is not None and rotary.ready),
+            "fused_rope_experimental": True,
+            "fused_rope_metrics": rotary.metrics() if rotary is not None else None,
         }
 
     @property
@@ -500,9 +558,14 @@ class BaseRunner:
 
     def unload_model(self) -> None:
         """Free model from GPU memory."""
+        self._prepare_fused_rope_unload()
+        self._detach_fused_rope_outer()
         if self._split_cfg_patch is not None:
             self._split_cfg_patch.disable()
             self._split_cfg_patch = None
+        if self._fused_rope_patch is not None:
+            self._fused_rope_patch.disable()
+            self._fused_rope_patch = None
         if self._decode_postprocess_executor is not None:
             self._decode_postprocess_executor.shutdown(wait=True)
             self._decode_postprocess_executor = None
