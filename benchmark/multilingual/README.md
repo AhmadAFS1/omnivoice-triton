@@ -44,9 +44,17 @@ GeForce RTX 4070 Ti**, also **12,282 MiB physical**, with **12,481,134,592 bytes
 Torch-visible**, driver **610.57.04**, CUDA **12.8** and an AMD Ryzen 7 5700X host.
 Their frozen candidate is `377de39`, graph limit 2, unused KV cache off, split CFG
 off, codec batch 1 and response cache disabled for novel generation. Those
-results must keep their own hardware and source labels. Their all-voice audit is
-diagnostic: the initial 404-case gate found two zero-frame default-preset outputs,
-and broader coverage continues without treating HTTP 200 as word-quality approval.
+results must keep their own hardware and source labels. The completed
+[modern voice/control audit](results/modern-v6/report.md) verified all 2,704
+unique grid cases: 2,704 HTTP 200 responses and 2,700 valid signals. Four
+default-preset outputs were empty: Somali/Aoede, Turkmen/Aoede, Turkmen/Charon and
+Finnish/Iapetus. The initial failed 404-case gate remains recorded; expansion was
+an authorized diagnostic failure audit. The matrix had one additional empty
+Russian 64-step/CFG-0 case, and three nonempty weak/short clips remain flagged in
+[weak-audio.json](results/modern-v6/weak-audio.json). All 3,154 generated WAVs
+across grid, matrix, targeted repeats and step-count arms were independently
+rehashed and decoded on CPU; the 28 expected HTTP 400 checks are separate.
+These counts do not establish word or voice quality; ASR/native review remains open.
 Sequential latency measurements and cached/coalesced response delivery are
 separate from novel simultaneous-inference capacity.
 
@@ -93,6 +101,9 @@ python load/test_telemetry.py
 ```
 
 GPU ASR setup/evaluation and the bounded controller live in [load/asr](load/asr/README.md).
+The [selected-model controller](load/asr/selected-models-README.md) is a CPU-tested
+tool for assigning judges to separate hosts while preserving protocol identities
+and incomplete-judge coverage. Its inclusion makes no new GPU-ASR or quality claim.
 Use one declared judge protocol per comparison; unlabeled frozen output is the
 legacy BF16/batch-1 protocol. Model weights, reference WAVs, raw full-run audio,
 large archives and temporary logs remain outside this portable review package.

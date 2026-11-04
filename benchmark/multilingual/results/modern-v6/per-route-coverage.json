@@ -1,0 +1,841 @@
+[
+  {
+    "language": "af",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "am",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "ar",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 1
+  },
+  {
+    "language": "ar-AE",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "ar-DZ",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "ar-EG",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "ar-IQ",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "ar-SA",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "ar-SD",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 2
+  },
+  {
+    "language": "ar-SY",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "ar-TN",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "as",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "ayp",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "be",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "bho",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "bjj",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "bn",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "bs",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "ceb",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "cs",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "da",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "dag",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "dcc",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "de",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "dyu",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "el",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "en",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "es",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "et",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "fi",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 25,
+    "invalid_cases": [
+      "fi-short--Iapetus--lingua-default"
+    ],
+    "low_level_review": 1
+  },
+  {
+    "language": "fil",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "fr",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "gu",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "ha",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "haw",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "he",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "hi",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "hr",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "ht",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "hu",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "hy",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "id",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "ig",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "it",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "ja",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "jv",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "ka",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "kk",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "km",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "kn",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "ko",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "ln",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "lo",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "lt",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "mai",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "mi",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "mk",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "ml",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "mn",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "mr",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "ms",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "my",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "nan",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "ne",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "nl",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "no",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "nso",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "ny",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "pa",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "pcm",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "pl",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "pt",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "ro",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "ru",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "rw",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "sd",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "si",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "sk",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "skr",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "sl",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "sn",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "so",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 25,
+    "invalid_cases": [
+      "so-short--Aoede--lingua-default"
+    ],
+    "low_level_review": 1
+  },
+  {
+    "language": "sq",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "sr",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "sv",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "sw",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "ta",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "te",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "tg",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "th",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "ti",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "tk",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 24,
+    "invalid_cases": [
+      "tk-short--Aoede--lingua-default",
+      "tk-short--Charon--lingua-default"
+    ],
+    "low_level_review": 2
+  },
+  {
+    "language": "tn",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "tr",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "tw",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "ug",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "uk",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "ur",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "vi",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "xh",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "yo",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "yue",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "zh",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  },
+  {
+    "language": "zu",
+    "expected_cells": 26,
+    "observed_cells": 26,
+    "signal_valid": 26,
+    "invalid_cases": [],
+    "low_level_review": 0
+  }
+]

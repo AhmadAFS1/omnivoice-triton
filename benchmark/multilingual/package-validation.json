@@ -25,5 +25,12 @@
   "full_GPU_quality_certification": false,
   "load_arrival_CPU_tests": 2,
   "load_telemetry_CPU_tests": 3,
-  "static_check_note": "Packaged quality source retains41pre-existing E501 long-string warnings under the fork Ruffconfig; non-format checks use --ignoreE501 to preserve source fidelity."
+  "static_check_note": "Packaged quality source retains41pre-existing E501 long-string warnings under the fork Ruffconfig; non-format checks use --ignoreE501 to preserve source fidelity.",
+  "selected_controller_CPU_tests": 7,
+  "provenance_selection_CPU_tests": 2,
+  "selected_controller_GPU_inference_claim": false,
+  "modern_independent_WAVs_verified": 3154,
+  "modern_grid_cases": 2704,
+  "modern_grid_valid_signal": 2700,
+  "modern_results_bytes": 4538211
 }

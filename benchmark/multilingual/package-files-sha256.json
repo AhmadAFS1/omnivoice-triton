@@ -3,8 +3,8 @@
   "files": [
     {
       "file": "README.md",
-      "sha256": "a7206bd208d822e415fd468395f8b4ff2abf2affbfd23eaa5118cc964f1c629a",
-      "bytes": 6346
+      "sha256": "4b614e3b9e3313116ecaffac8eabbb34a63aa3cf80d7a434eb5869582c9d37fe",
+      "bytes": 7208
     },
     {
       "file": "fixtures/FLORES-README.txt",
@@ -142,6 +142,11 @@
       "bytes": 5792
     },
     {
+      "file": "load/asr/SELECTED_MODELS_READY.json",
+      "sha256": "39227317a71ac8db5aa6d6bbb188ff6fe7048504ca778d18f4f83c795ddf6db8",
+      "bytes": 1982
+    },
+    {
       "file": "load/asr/batch-probe-v1-report.md",
       "sha256": "24175a8d0cffd93fa3fce6e6abbff1c897a864d2564321566cc44a345065824c",
       "bytes": 3877
@@ -150,6 +155,11 @@
       "file": "load/asr/batch_prototype.py",
       "sha256": "e285faa8d63f669a1bc18d907a5fdae0f0817a48920f5abfc1948e45cdeba326",
       "bytes": 19745
+    },
+    {
+      "file": "load/asr/build_reference_union.py",
+      "sha256": "ff0070a609b9fbf737c14135a23fd855e281281633c11d2be0239c1c2371dddb",
+      "bytes": 2396
     },
     {
       "file": "load/asr/capture_assets.py",
@@ -202,9 +212,29 @@
       "bytes": 21000
     },
     {
+      "file": "load/asr/run_selected_models.py",
+      "sha256": "6f2f258dfd8e4452fa1e6736cb56bc00b451a84bdc786a185f2e9026bd28e888",
+      "bytes": 26113
+    },
+    {
       "file": "load/asr/score_runs.py",
       "sha256": "ce3a1da67c262c177fae90cd6cf7a4be9dbacf2254239da75385f93606d7c9fc",
       "bytes": 8530
+    },
+    {
+      "file": "load/asr/select_future_priority.py",
+      "sha256": "2a85ba0e0af85bd4928738dd09ae460288e9334f05e9b21f6cce3d30ece0298d",
+      "bytes": 6136
+    },
+    {
+      "file": "load/asr/selected-models-README.md",
+      "sha256": "16f8f75b207220c355d819919afa317d72b4586a5881ca68fc726773d27c04ab",
+      "bytes": 4539
+    },
+    {
+      "file": "load/asr/selected-models-plan-v1.json",
+      "sha256": "cbe935dc6cb8c42d90e208036c7c9c181c4305aa22862bd306b9a6c7799dbd2a",
+      "bytes": 3694
     },
     {
       "file": "load/asr/test_batch_prototype.py",
@@ -212,9 +242,19 @@
       "bytes": 3611
     },
     {
+      "file": "load/asr/test_future_selection.py",
+      "sha256": "958e150ecf8649b30aeaa01d28a7014200dba3e1f5b8d237e4b3edff47fe2d17",
+      "bytes": 2393
+    },
+    {
       "file": "load/asr/test_run_bounded.py",
       "sha256": "a1b57e8edd04da1d640445eb1064fda19d0db97a22e527eb39b656e79d4ade8d",
       "bytes": 9326
+    },
+    {
+      "file": "load/asr/test_selected_models.py",
+      "sha256": "4ed95720e2f6b1bbd9b79d76b0c2db9e4ee0d41275af3db7e7c54f4502b23e46",
+      "bytes": 12829
     },
     {
       "file": "load/asr/verify_assets.py",
@@ -378,13 +418,13 @@
     },
     {
       "file": "package-source-provenance.json",
-      "sha256": "312afebe83691cf9cd684f682e0218a49319c3eaad5edecd197f9a83e3f59148",
-      "bytes": 26431
+      "sha256": "6a6022dcec904d1482e0536ac90e9a1077558104f86d68bd0cd3b2ea134e047d",
+      "bytes": 32910
     },
     {
       "file": "package-validation.json",
-      "sha256": "762694a5877647d881e7f478cc6ab182ba238e27067c1c1a02cc63a878ad445d",
-      "bytes": 1620
+      "sha256": "bd7c5e4fa9159a6ad162b87cf8a75f9c51e9a48b19e64518f764e254921c0b20",
+      "bytes": 1893
     },
     {
       "file": "quality/README.md",
@@ -430,6 +470,56 @@
       "file": "quality/validation.json",
       "sha256": "5f4fb82685c999adff4e33a46f77e1143be3b2274dae8bf83af82f2a9df83220",
       "bytes": 1000
+    },
+    {
+      "file": "results/modern-v6/invalid-audio.json",
+      "sha256": "301886677f79c62916d572360f65eead687ef04d71eba555b0c23616c8d622ac",
+      "bytes": 8850
+    },
+    {
+      "file": "results/modern-v6/per-configuration.json",
+      "sha256": "650a88e163b864d8a53dc6a95a57930b2c4a496ce6e7aef462407a22ee6a8b39",
+      "bytes": 2142
+    },
+    {
+      "file": "results/modern-v6/per-route-coverage.json",
+      "sha256": "9567deeafb4b3ac59862d91a71564fe19cf72f642bf00dd3777cf8d261c6baf6",
+      "bytes": 16653
+    },
+    {
+      "file": "results/modern-v6/per-run.json",
+      "sha256": "478378b6a9fb8a636b0d7bc708b422b11fc723b569a5be247bf2e927f4d9bcb3",
+      "bytes": 335544
+    },
+    {
+      "file": "results/modern-v6/report.md",
+      "sha256": "838969c5bc2b7028e4d4c64c9a72921a20ba7ba4280aaf3de964b7f9b9eb4b35",
+      "bytes": 2546
+    },
+    {
+      "file": "results/modern-v6/source/README.md",
+      "sha256": "ebd8ef4249cc28f0bbd7e2f3eec7c8fd445626b0d82afc5c212d10146f8d04e4",
+      "bytes": 409
+    },
+    {
+      "file": "results/modern-v6/source/audit.py",
+      "sha256": "91a869289f978f829e81c699a33c5695babe7f94a72d2c738521154883fdd965",
+      "bytes": 16081
+    },
+    {
+      "file": "results/modern-v6/summary.json",
+      "sha256": "90b2ebc089f567ee2ec45c979044c1f7502b0dad698ceb2befe6926b589d1daa",
+      "bytes": 57615
+    },
+    {
+      "file": "results/modern-v6/verified-audio.jsonl",
+      "sha256": "8fa5c516a3be52779a8452eae1e8d0a0ff0a888b5a8a1e0ab321272ef2be84f9",
+      "bytes": 4093796
+    },
+    {
+      "file": "results/modern-v6/weak-audio.json",
+      "sha256": "6e10e1ec30509215f75f9dd93979da3a701fa7e750c6f24c53958338a310f430",
+      "bytes": 4575
     },
     {
       "file": "results/stage1/analysis-summary.json",
@@ -1557,7 +1647,6 @@
       "bytes": 34206
     }
   ],
-  "total_bytes": 47066812,
-  "reference_audio_bundled": false,
-  "root_independent_validation_at": "2026-11-04T09:36:53.525629+00:00"
+  "total_bytes": 51672719,
+  "reference_audio_bundled": false
 }

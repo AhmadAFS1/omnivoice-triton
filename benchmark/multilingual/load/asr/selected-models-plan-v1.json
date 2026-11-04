@@ -1,0 +1,67 @@
+{
+  "measurement_kind": "CPU-only execution plan; no models launched",
+  "hardware": {
+    "modern": "NVIDIA GeForce RTX 4070 Ti,12,282MiB physical,12,481,134,592bytes visible; previous actual runtime evidence, recheck on invocation",
+    "primary": "NVIDIA GeForce RTX 4070,12,282MiB physical,12,450,070,528bytes visible; previous actual runtime evidence, recheck on invocation"
+  },
+  "controller": "load/asr/run_selected_models.py",
+  "old_controllers_immutable": true,
+  "commands_without_GPU_release_flag": {
+    "modern_LLM": [
+      "/workspace/omnivoice-max-concurency/asr-venv/bin/python",
+      "/workspace/omnivoice-max-concurency/asr/run_selected_models.py",
+      "--prepared",
+      "/workspace/omnivoice-max-concurency/quality-selections/frontier-diagnostics",
+      "--output",
+      "/workspace/omnivoice-max-concurency/asr-results/modern-LLM-priority-v1",
+      "--models",
+      "omniASR_LLM_Unlimited_1B_v2",
+      "--protocol-namespace",
+      "modern59071593-batch1-v1",
+      "--budget-seconds",
+      "3600",
+      "--reserve-seconds",
+      "60",
+      "--quality-helper",
+      "/workspace/omnivoice-max-concurency/quality/report-future-v4.py"
+    ],
+    "primary_CTC": [
+      "/workspace/omnivoice-max-concurency/asr-venv/bin/python",
+      "/workspace/omnivoice-max-concurency/asr/run_selected_models.py",
+      "--prepared",
+      "/workspace/omnivoice-max-concurency/quality-selections/frontier-diagnostics",
+      "--output",
+      "/workspace/omnivoice-max-concurency/asr-results/primary-CTC-priority-v1",
+      "--models",
+      "omniASR_CTC_1B_v2",
+      "--protocol-namespace",
+      "legacy-batch1",
+      "--budget-seconds",
+      "3600",
+      "--reserve-seconds",
+      "60",
+      "--quality-helper",
+      "/workspace/omnivoice-max-concurency/quality/report-future-v4.py"
+    ]
+  },
+  "GPU_launch": "Root must explicitly release each GPU and append --allow-gpu-inference; commands shown do not start inference",
+  "source_inputs": "Canonical quality preparation plus provenance-only select_future_priority.py outputs. Root stages verified SHA-WAV files and source metadata; no source rows are selected by judge score.",
+  "priority": [
+    "All312 frontier16/8/4 cases",
+    "TK four matched speed/postprocess arms",
+    "SO original failure plus four repeat arms",
+    "Original zero-frame SO/TK and matrix130 Russian row retain unavailable-audio outcomes; never ASR inputs",
+    "All64 voice reference controls plus16 exact-PCM short EN prefixes after a union reference manifest is prepared",
+    "Fixed41 calibration rerun on modern before trusting its new LLM configuration"
+  ],
+  "full_later": [
+    "Modern baseline before-unique1000-graph2",
+    "V6 cached multilingual fills, logical origins and transport evidence",
+    "All2704 actual voice/control cases and finite130 matrix/28 validation outcomes",
+    "Primary396 bucket WAVs across6 profiles and3720 codec WAVs (146 unique hashes) via explicit probe manifests",
+    "New short-reference TTS arms when complete"
+  ],
+  "same_config_rule": "Modern must process both before and after under the same explicit namespace; old primary LLM transcripts are not silently imported. CTC legacy reuse is allowed only when evaluator/dtype/WAV+script/metadata verify.",
+  "merging": "Pass individual published child directories from each controller to canonical quality/report.py score, retaining default both required model cards. Do not replace missing judge with a pass.",
+  "timing": "Do not export/hash/install on a host during timed TTS; use quiescent immutable snapshots. The controller owns a finite per-invocation budget; multi-attempt orchestration also needs one absolute lease deadline."
+}

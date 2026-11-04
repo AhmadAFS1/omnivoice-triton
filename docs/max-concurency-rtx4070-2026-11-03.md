@@ -351,3 +351,72 @@ Full 299-case evidence remains retained separately. The memory-admission feature
 is committed as `47bd743`, disabled by default; its final real-dependency
 CPU/fake-model suite passed 152 tests. Subsequent invalid-audio output validation
 is a separate change and was not included in those 152 tests.
+
+
+### November 4, 10:09 UTC: complete grid and primary memory-profile stress run
+
+The eight-voice audit is complete: **2,704 distinct expected cells, all HTTP 200,
+2,700 signal-valid and four empty WAVs**. The four failures are Somali/Aoede,
+Turkmen/Aoede, Turkmen/Charon and Finnish/Iapetus, all in the default
+speed-1.3/full-postprocessing preset. The separate matrix had one empty Russian
+output at CFG 0, 64 steps, speed 0.5 and full postprocessing. Three additional
+nonempty weak/short grid clips remain prioritized for ASR. All 3,154 generated
+WAVs in the grid, matrix, frontier and diagnostic repeats were independently
+rehash-checked and decoded; recorded signal/duration metrics were reproduced.
+The completed audit is diagnostic, with word-quality screening still pending.
+
+On the **RTX 4070/Xeon** host (physical 12,282 MiB, visible 12,450,070,528 bytes,
+driver 580.95.05, Torch CUDA 12.8), source `47bd743` completed the following fresh
+profile: 16 steps, speed 1, postprocessing off, KV cache disabled, Split CFG off,
+serial codec, eight maximum graphs, row budget 16,384, response caching off.
+
+| RTX 4070, memory profile 47bd743 | Complete HTTP 200 + signal-valid WAVs | Last full body from barrier | p95 request latency |
+| --- | ---: | ---: | ---: |
+| Single after mixed-language warmup | 1/1 | 2.030 s | 2.029 s |
+| Ten distinct requests | 10/10 | 8.317 s | 8.309 s |
+| Hundred distinct requests | 100/100 | 80.850 s | 76.635 s |
+| Thousand distinct requests | 1,000/1,000 | 760.877 s | 722.015 s |
+| Five hundred distinct, staggered over 1 s | 500/500 | 386.759 s | 371.255 s |
+
+All 1,000 inputs and WAV hashes in the large burst are distinct. There were zero
+memory-admission rejections, eager fallbacks or capture failures in that run;
+the policy recorded 136 captures, 2,072 replays and 133 evictions. Almost every
+executing batch therefore still captured a new shape. Stability does not imply
+low latency. These primary-host numbers must not be presented as a controlled
+speed comparison against the RTX 4070 Ti/Ryzen profile above.
+
+A separate new 299-case sequential run on this primary profile returned all
+299 valid WAVs **byte-identical to the original primary baseline**. Short,
+medium and critical p95 full-body times were 1,644.00, 1,704.20 and 1,916.67 ms.
+Original baseline co-load and different run order prevent attributing every
+latency difference to the memory policy. Byte preservation does establish the
+same generated audio and corresponding ASR results for this corpus.
+
+The realistic 500-call scenario assumes one assistant turn per 20 seconds,
+offering 1,500 turns at 25 requests/second with a pending queue limit of 16.
+It returned 73 HTTP 200 WAVs and 1,426 HTTP 429 rejections; one additional request
+had an HTTPX read error. The harness correctly marked that workload failed and
+retained every outcome. `/health` reported no CUDA fault, and the server shut
+down normally afterward. This profile cannot serve that offered load within the
+requested SLO. The read-error cause remains under investigation.
+
+Independent clients corrected the earlier cached-delivery interpretation on the
+**RTX 4070 Ti/Ryzen**, unchanged frozen source `377de39`: 1,000 dedicated HTTPX
+connections delivered the same complete cached WAVs in 1.023 seconds; a raw
+asyncio client did so in 0.554 seconds, p95 516 ms. Both verified zero new TCP
+connections and exact response hashes. The server used stdlib asyncio and h11;
+no environment or product changes were made. A shared-pool diagnostic suffered
+reconnections, and a separate extended-keepalive shared-pool attempt stalled and
+was retained as incomplete. Original V4 timings remain valid for that client
+configuration, rather than a hardware/server capacity ceiling. None of these
+cached results establish fresh TTS throughput.
+
+Shorter-reference candidates are now prepared without modifying original assets:
+16 exact PCM prefixes from eight English voices, with matching transcript
+prefixes, approximately four or seven seconds instead of 14–16 seconds. All
+matched a separate blind offline Mac/Metal Whisper check; two Meta judge checks
+are starting. Short-reference TTS comparison and voice/perceptual quality remain
+pending. A new optional reference profile must not be promoted on alignment
+alone. Header-based accounting estimates reference conditioning at 82.3% of the
+original thousand-request batch rows, making it a concrete optimization target;
+this is an estimate, not a measured speedup prediction.

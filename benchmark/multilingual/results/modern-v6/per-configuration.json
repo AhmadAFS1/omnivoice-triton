@@ -1,0 +1,77 @@
+[
+  {
+    "config_type": "lingua-default",
+    "cases": 832,
+    "signal_valid": 828,
+    "low_level_review": 5,
+    "latency": {
+      "HTTP200": 832,
+      "p50_ms": 491.63277698971797,
+      "p95_ms": 581.8624974403065,
+      "p99_ms": 626.0289572871986,
+      "max_ms": 995.0225480133668,
+      "within500ms": 475,
+      "kind": "sequential per-request complete HTTP body; not a simultaneous cohort metric"
+    }
+  },
+  {
+    "config_type": "lingua-tutor",
+    "cases": 832,
+    "signal_valid": 832,
+    "low_level_review": 1,
+    "latency": {
+      "HTTP200": 832,
+      "p50_ms": 536.5204014960909,
+      "p95_ms": 587.0157449593535,
+      "p99_ms": 671.1489362287084,
+      "max_ms": 1042.4281969899312,
+      "within500ms": 339,
+      "kind": "sequential per-request complete HTTP body; not a simultaneous cohort metric"
+    }
+  },
+  {
+    "config_type": "lingua-video",
+    "cases": 832,
+    "signal_valid": 832,
+    "low_level_review": 1,
+    "latency": {
+      "HTTP200": 832,
+      "p50_ms": 535.9889265091624,
+      "p95_ms": 587.0138569996925,
+      "p99_ms": 859.9843414910567,
+      "max_ms": 1065.0935670128092,
+      "within500ms": 336,
+      "kind": "sequential per-request complete HTTP body; not a simultaneous cohort metric"
+    }
+  },
+  {
+    "config_type": "worker-auto-not-current-Lingua-UI",
+    "cases": 104,
+    "signal_valid": 104,
+    "low_level_review": 0,
+    "latency": {
+      "HTTP200": 104,
+      "p50_ms": 257.4399575096322,
+      "p95_ms": 301.09538655960927,
+      "p99_ms": 324.09644574072445,
+      "max_ms": 1105.1810490025673,
+      "within500ms": 103,
+      "kind": "sequential per-request complete HTTP body; not a simultaneous cohort metric"
+    }
+  },
+  {
+    "config_type": "worker-design-not-current-Lingua-UI",
+    "cases": 104,
+    "signal_valid": 104,
+    "low_level_review": 0,
+    "latency": {
+      "HTTP200": 104,
+      "p50_ms": 259.83568049559835,
+      "p95_ms": 303.4070538531523,
+      "p99_ms": 324.06655100610806,
+      "max_ms": 1093.961353006307,
+      "within500ms": 103,
+      "kind": "sequential per-request complete HTTP body; not a simultaneous cohort metric"
+    }
+  }
+]

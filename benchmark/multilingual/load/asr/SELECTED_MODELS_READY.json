@@ -1,0 +1,26 @@
+{
+  "measurement_kind": "CPU-only implementation/validation; no deployment or model inference",
+  "files": {
+    "load/asr/run_selected_models.py": "6f2f258dfd8e4452fa1e6736cb56bc00b451a84bdc786a185f2e9026bd28e888",
+    "load/asr/test_selected_models.py": "4ed95720e2f6b1bbd9b79d76b0c2db9e4ee0d41275af3db7e7c54f4502b23e46",
+    "load/asr/select_future_priority.py": "2a85ba0e0af85bd4928738dd09ae460288e9334f05e9b21f6cce3d30ece0298d",
+    "load/asr/test_future_selection.py": "958e150ecf8649b30aeaa01d28a7014200dba3e1f5b8d237e4b3edff47fe2d17",
+    "load/asr/selected-models-plan-v1.json": "cbe935dc6cb8c42d90e208036c7c9c181c4305aa22862bd306b9a6c7799dbd2a",
+    "load/asr/build_reference_union.py": "ff0070a609b9fbf737c14135a23fd855e281281633c11d2be0239c1c2371dddb",
+    "quality/reference-union80-v1/manifest.json": "5b62824f5e6362c178333fc748a87545f75caccd76d3b3224a18bba85e25634a",
+    "quality/reference-union80-v1/summary.json": "06b8b34bb16ee3fc94b19942603443cdd8b51a7b09a6436717de916354a875fb",
+    "load/asr/selected-models-README.md": "16f8f75b207220c355d819919afa317d72b4586a5881ca68fc726773d27c04ab"
+  },
+  "tests": "7 selected-controller CPU tests including real fake-evaluator subprocess;2 provenance-selection CPU tests; Ruff/compile passed; original evaluator/controller files unchanged",
+  "immutable_originals": {
+    "load/asr/run_bounded.py": "95fecc53ae09801e379f53a5aab48e73e866413ae3a2b646672ad7e36af66079",
+    "load/asr/evaluate.py": "db2e933104fd0cdd939f6cdf6661331e9e72cc3403e59f049a771b0a83567cdd"
+  },
+  "required_quality_models": [
+    "omniASR_CTC_1B_v2",
+    "omniASR_LLM_Unlimited_1B_v2"
+  ],
+  "modern_namespace": "modern59071593-batch1-v1",
+  "assets_required": "Existing unchanged evaluate.py plus verified local ASR environment/assets. This package contains no model weights or private keys.",
+  "priority_selection_update": "Includes all5 known zero-frame outcomes and3 explicitly signal-selected weak/short diagnostics; no ASR-score selection"
+}
