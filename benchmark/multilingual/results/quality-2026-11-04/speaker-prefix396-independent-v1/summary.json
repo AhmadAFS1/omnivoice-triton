@@ -1,0 +1,211 @@
+{
+  "audit_kind": "Independent local CPU-only scalar cosine/hash recomputation; no model inference",
+  "speaker_GPU": "None; original extraction CPU Apple M5 Pro, Metal/CUDA disabled",
+  "speaker_metadata": {
+    "at": "2026-11-04T10:35:42.893450+00:00",
+    "measurement_kind": "CPU-only SpeechBrain ECAPA-TDNN embedding extraction and paired cosine comparisons",
+    "GPU": "None; CUDA disabled and device explicitly CPU; Metal not used",
+    "CPU": "Apple M5 Pro",
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "physical_shared_RAM_bytes": 25769803776,
+    "runtime": {
+      "speechbrain": "1.1.2",
+      "torch": "2.8.0",
+      "torchaudio": "2.8.0",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "soundfile": "0.14.0",
+      "huggingface_hub": "2.4.0"
+    },
+    "model_assets": {
+      "at": "2026-11-04T10:27:00.313899+00:00",
+      "measurement_kind": "CPU network/file asset verification; no model inference/GPU",
+      "repository": "speechbrain/spkrec-ecapa-voxceleb",
+      "revision": "0f99f2d0ebe89ac095bcc5903c4dd8f72b367286",
+      "license": "Apache-2.0 model card",
+      "source": "https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb",
+      "purpose": "Relative synthetic-voice speaker similarity, not MOS/native-quality certification",
+      "inference_API_calls": 0,
+      "files": [
+        {
+          "name": "README.md",
+          "bytes": 5377,
+          "sha256": "00f58c3cbd7a7510de9374080da0e82a4c4e8f4df567f7338fe6efe108be705a",
+          "url": "https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb/resolve/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/README.md?download=true"
+        },
+        {
+          "name": "classifier.ckpt",
+          "bytes": 5534328,
+          "sha256": "fd9e3634fe68bd0a427c95e354c0c677374f62b3f434e45b78599950d860d535",
+          "url": "https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb/resolve/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/classifier.ckpt?download=true"
+        },
+        {
+          "name": "config.json",
+          "bytes": 51,
+          "sha256": "15ff7afad09adec0936c31493a7397c13f855914f4579a8393fe82649778a664",
+          "url": "https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb/resolve/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/config.json?download=true"
+        },
+        {
+          "name": "embedding_model.ckpt",
+          "bytes": 83316686,
+          "sha256": "0575cb64845e6b9a10db9bcb74d5ac32b326b8dc90352671d345e2ee3d0126a2",
+          "url": "https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb/resolve/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/embedding_model.ckpt?download=true"
+        },
+        {
+          "name": "hyperparams.yaml",
+          "bytes": 1919,
+          "sha256": "6f78854fa04ba59e761437b76a2575d3aba5e5016de3e9b69f0c9a5077fb1a41",
+          "url": "https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb/resolve/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/hyperparams.yaml?download=true"
+        },
+        {
+          "name": "label_encoder.txt",
+          "bytes": 128619,
+          "sha256": "e13c3a167bb4112685670ee896d20e2b565af16b3a4ceeaa8689fa4d22adb8b9",
+          "url": "https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb/resolve/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/label_encoder.txt?download=true"
+        },
+        {
+          "name": "mean_var_norm_emb.ckpt",
+          "bytes": 1921,
+          "sha256": "cd70225b05b37be64fc5a95e24395d804231d43f74b2e1e5a513db7b69b34c33",
+          "url": "https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb/resolve/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/mean_var_norm_emb.ckpt?download=true"
+        }
+      ]
+    },
+    "runner_sha256": "3c13a53c20bffe085df9ceecdcc9fba401167452f6af62a3fedb7d298d650aee",
+    "threads": 4,
+    "embedding_normalize_argument": false,
+    "sample_rate": 16000,
+    "amplitude_normalization": "None",
+    "inference_API_calls": 0,
+    "co_load": "Other local CPU activity unmeasured; NVIDIA TTS/ASR runs on separate rented hosts",
+    "interpretation": "Model trained on VoxCeleb; synthetic/multilingual domain is not certified. Compare the same route/text/voice against full-reference baseline and seven other stock voices. No universal threshold, MOS, accent or age/gender certification is inferred."
+  },
+  "TTS_GPU": "NVIDIA GeForce RTX 4070 Ti",
+  "TTS_physical_VRAM_MiB": 12282,
+  "TTS_visible_VRAM_bytes": 12481134592,
+  "TTS_driver": "610.57.04",
+  "TTS_CUDA": "12.8",
+  "TTS_date": "2026-11-04",
+  "TTS_profile": "ce48b253;16steps/speed1/postoff/KVoff/graph8/M16384/splitoff/codec1/cache0;132sequential/arm",
+  "TTS_co_load": "Dedicated GPU lease, telemetry+health probes; no ASR/setup/transfers during timing",
+  "embedding_rows": 376,
+  "embedding_dimensions": 192,
+  "norm_range": [
+    0.9999999999999998,
+    1.0000000000000002
+  ],
+  "generated_scores_recomputed": 396,
+  "cosines_recomputed_generated_plus_refs": 3296,
+  "max_abs_difference_from_root_cosines": 2.220446049250313e-16,
+  "unchanged_comparisons": 44,
+  "unchanged_exact_zero_own_and_margin_deltas": 44,
+  "reference_controls": {
+    "10": {
+      "n": 8,
+      "own_top1": 8,
+      "same_source_crop_full_cosine": {
+        "n": 8,
+        "min": 0.7821136986258747,
+        "median": 0.8718827167904608,
+        "max": 0.8919852645820617,
+        "mean": 0.859013808445928
+      },
+      "own_margin": {
+        "n": 8,
+        "min": 0.24283311257496487,
+        "median": 0.4602273950793952,
+        "max": 0.604925116284203,
+        "mean": 0.45075184357922804
+      }
+    },
+    "17": {
+      "n": 8,
+      "own_top1": 8,
+      "same_source_crop_full_cosine": {
+        "n": 8,
+        "min": 0.8845173585787439,
+        "median": 0.9341167005593689,
+        "max": 0.9468296933071052,
+        "mean": 0.9290503952826545
+      },
+      "own_margin": {
+        "n": 8,
+        "min": 0.35365257035201514,
+        "median": 0.46178634479419567,
+        "max": 0.6751653476477315,
+        "mean": 0.4822762178165106
+      }
+    }
+  },
+  "variants": {
+    "prefix10": {
+      "changed_cases": 110,
+      "paired_own_cosine_delta": {
+        "n": 110,
+        "min": -0.33885483841354747,
+        "median": -0.05122813021189071,
+        "max": 0.14922104478643966,
+        "mean": -0.0642179480904357
+      },
+      "paired_margin_delta": {
+        "n": 110,
+        "min": -0.27242701857523405,
+        "median": 0.014719816753362022,
+        "max": 0.23719277826572688,
+        "mean": 0.00036619813805682116
+      },
+      "before_own_top1": 108,
+      "after_own_top1": 108,
+      "lost_top1": 2,
+      "gained_top1": 2,
+      "own_cosine_lower": 80,
+      "full_to_candidate_generated_cosine": {
+        "n": 110,
+        "min": 0.23418309632936446,
+        "median": 0.6325266828033118,
+        "max": 0.8123694079971298,
+        "mean": 0.6247493024756525
+      }
+    },
+    "prefix17": {
+      "changed_cases": 110,
+      "paired_own_cosine_delta": {
+        "n": 110,
+        "min": -0.2820576788233226,
+        "median": -0.016873650833064247,
+        "max": 0.15254793690159796,
+        "mean": -0.027996812642163058
+      },
+      "paired_margin_delta": {
+        "n": 110,
+        "min": -0.23852453617832547,
+        "median": -0.01484951864282405,
+        "max": 0.2508567315710324,
+        "mean": -0.009198927064987273
+      },
+      "before_own_top1": 108,
+      "after_own_top1": 109,
+      "lost_top1": 1,
+      "gained_top1": 2,
+      "own_cosine_lower": 66,
+      "full_to_candidate_generated_cosine": {
+        "n": 110,
+        "min": 0.42549047273420343,
+        "median": 0.7286823039128416,
+        "max": 0.8554127725944035,
+        "mean": 0.7133109196694034
+      }
+    }
+  },
+  "ASR_protocol_ids": {},
+  "ASR_matching_request_rows": 0,
+  "quality_certified": false,
+  "caveats": [
+    "All scores use the same eight full English synthetic reference anchors, including non-English generated clips.",
+    "This VoxCeleb speaker-embedding model is not calibrated for these synthetic voices, scripts, accents or short clips.",
+    "Top1 means closest among these eight anchors, not a speaker-verification pass/fail probability.",
+    "Crop/full embedding cosine changes even for exactly the same source speaker due to clip length/content.",
+    "Relative scores and selected outliers request A/B listening, not MOS, native-quality, accent, gender or identity certification.",
+    "Generated clips differ in duration/content; ASR and human listening are necessary complementary checks."
+  ]
+}

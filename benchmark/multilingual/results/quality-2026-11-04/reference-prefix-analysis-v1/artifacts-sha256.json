@@ -1,0 +1,32 @@
+[
+  {
+    "path": "analyze-source.py",
+    "sha256": "63afaa98651647aa4f8f9e8e434152ea39dbdfeebe6334af80918eb08034b870",
+    "bytes": 23478
+  },
+  {
+    "path": "paired132.jsonl",
+    "sha256": "4c5745470846e63216939a75fcc812f1997c2b701c57f7821900739b844bb489",
+    "bytes": 1338950
+  },
+  {
+    "path": "reference-audit80.json",
+    "sha256": "112dc6fa505c26b4d226e8ef2ee36eda92b1aef247f1c5627f739e2ea53139d3",
+    "bytes": 27508
+  },
+  {
+    "path": "report.md",
+    "sha256": "e0e0f79f9d085464637ecc1f47f6c8cf34462a340c4f21c9eb51a2bac9cfb02d",
+    "bytes": 4472
+  },
+  {
+    "path": "summary.json",
+    "sha256": "ab67b37553e8613b30609b53315667d237ca84a0035d14d780829aa5490b13aa",
+    "bytes": 52398
+  },
+  {
+    "path": "verified-audio396.jsonl",
+    "sha256": "95267192ffa68ef9c4d2c059908301fc83648fd7ef29138370681d77e4d054d9",
+    "bytes": 1196324
+  }
+]

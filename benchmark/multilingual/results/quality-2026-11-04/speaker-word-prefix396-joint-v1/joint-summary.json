@@ -1,0 +1,60 @@
+{
+  "measurement_kind": "Local CPU-only join of existing speaker/ASR/TTS results; no model inference",
+  "TTS_GPU": "NVIDIA GeForce RTX 4070 Ti;12282MiBphysical/12481134592bytesvisible;driver610.57.04/CUDA12.8",
+  "CTC_GPU": "NVIDIA GeForce RTX 4070;12282MiBphysical/12450070528bytesvisible;driver580.95.05/CUDA12.8",
+  "LLM_GPU": "NVIDIA GeForce RTX 4070 Ti;12282MiBphysical/12481134592bytesvisible;driver610.57.04/CUDA12.8",
+  "speaker_CPU": "Apple M5 Pro CPU; SpeechBrain1.1.2/Torch2.8; noNVIDIA/Metal",
+  "runtime_evidence": "TTS per-arm metadata and load/asr/prefix432-retained/{modern,primary}/asr-results/*/published/000-*/*-metadata.json",
+  "date": "2026-11-04",
+  "TTS_profile": "ce48b253/16steps/speed1/postoff/KVoff/graph8/M16384/splitoff/codec1/cache0;sequential",
+  "ASR_profiles": {
+    "omniASR_LLM_Unlimited_1B_v2": [
+      "modern59071593-batch1-v1-7f8784ef9d826da07f57"
+    ],
+    "omniASR_CTC_1B_v2": [
+      "legacy-batch1"
+    ]
+  },
+  "co_load": "TTS and ASR separate GPU leases; speaker extraction localCPU; this joinCPUonly",
+  "matched_request_rows": 396,
+  "independently_recomputed_judge_metrics": 792,
+  "paired_rows": 264,
+  "word_selected_pairs": 22,
+  "joint_score_selected_pairs": 40,
+  "quality_certified": false,
+  "variants": {
+    "prefix10": {
+      "new_both_exact_loss": 3,
+      "new_both_exact_gain": 25,
+      "both_CER_worse": 9,
+      "both_CER_better": 37,
+      "both_exact_full": 21,
+      "both_exact_candidate": 43,
+      "word_selected": 10,
+      "exact_losses_by_classification": {
+        "both_judges_character_change_from_clean_baseline; listening review": 2,
+        "single_judge_character_change_from_clean_baseline; recognition/orthography/listening review": 1
+      },
+      "speaker_top1_losses_among_word_flags": 0,
+      "speaker_own_drop_among_word_flags": 8,
+      "speaker_margin_drop_among_word_flags": 3
+    },
+    "prefix17": {
+      "new_both_exact_loss": 7,
+      "new_both_exact_gain": 11,
+      "both_CER_worse": 6,
+      "both_CER_better": 26,
+      "both_exact_full": 21,
+      "both_exact_candidate": 25,
+      "word_selected": 12,
+      "exact_losses_by_classification": {
+        "spacing_only_exact_loss; no character error in either judge": 3,
+        "single_judge_character_change_from_clean_baseline; recognition/orthography/listening review": 3,
+        "both_judges_character_change_from_clean_baseline; listening review": 1
+      },
+      "speaker_top1_losses_among_word_flags": 0,
+      "speaker_own_drop_among_word_flags": 8,
+      "speaker_margin_drop_among_word_flags": 7
+    }
+  }
+}

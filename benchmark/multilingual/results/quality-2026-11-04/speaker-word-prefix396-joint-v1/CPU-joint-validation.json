@@ -1,0 +1,10 @@
+{
+  "at": "2026-11-04T11:23:55.470283+00:00",
+  "measurement_kind": "CPU-only source/data audit; no inference",
+  "GPU": "None for this audit; reusedTTS/ASRhardwarein joint-summary.json",
+  "unchanged_native_pairs_both_judges_identical": 44,
+  "controller_path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/reference-fixed-duration-v1/run.py",
+  "controller_sha256": "fc298d5c32b8d015ab8109090dceacdb44b93a9ac68d7d4b6578e71a3ac01a39",
+  "controller_review": "No blockingissue: source/UUIDidle/leasechecks, full132SHA gate before crops, strictstatus/signal/protocol/header/decodedframe/fault checks, finiteownedcleanup stoponfailure. ActualGenerationTaskTassertionwouldstrengthenheaderevidence.",
+  "product_or_GPU_changes": false
+}

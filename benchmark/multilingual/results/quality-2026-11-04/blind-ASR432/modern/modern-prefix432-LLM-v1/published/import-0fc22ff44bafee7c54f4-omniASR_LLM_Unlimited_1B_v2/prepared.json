@@ -1,0 +1,2562 @@
+[
+  {
+    "id": "audio-0bc8c53171a848611ed74af2d5749d6205ae6ce7dfcd33bb100bc522e7f93a86",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/5b24ad11e606e4874ba2b3aa3264e23501a1347d3a42a0d18a13dae59ca80d1c.wav",
+    "sha256": "5b24ad11e606e4874ba2b3aa3264e23501a1347d3a42a0d18a13dae59ca80d1c",
+    "text": "",
+    "language": "ar",
+    "lang_id": "arb_Arab",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000000-000.wav",
+        "start_s": 0.0,
+        "end_s": 15.530958333333333,
+        "sha256": "536150aa49a389a2097e2f6aed77a6c294d4647dbfa4edca1cbce4124cf19b58"
+      }
+    ],
+    "duration_s": 15.530958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.623992919921875,
+      "rms": 0.09803865104913712,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-0bc8c53171a848611ed74af2d5749d6205ae6ce7dfcd33bb100bc522e7f93a86",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/5b24ad11e606e4874ba2b3aa3264e23501a1347d3a42a0d18a13dae59ca80d1c.wav",
+      "sha256": "5b24ad11e606e4874ba2b3aa3264e23501a1347d3a42a0d18a13dae59ca80d1c",
+      "lang_id": "arb_Arab",
+      "omnilingual_language": "arb_Arab",
+      "language": "ar",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::ar-umbriel"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-11415cbc263be76c6b66848868c744ab4a4c2777e60ac453f61e899ca63e8f9c",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/f1a2435eb726d151fbb399bcd8b34647c4bf8099a14184570207f8ebbfa5cd52.wav",
+    "sha256": "f1a2435eb726d151fbb399bcd8b34647c4bf8099a14184570207f8ebbfa5cd52",
+    "text": "",
+    "language": "ar",
+    "lang_id": "arb_Arab",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000001-000.wav",
+        "start_s": 0.0,
+        "end_s": 17.49095833333333,
+        "sha256": "bd9c7f87940fcdc12842a850df660e7fbf1eef44f9153c9d508b4f77778a4709"
+      }
+    ],
+    "duration_s": 17.49095833333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.804656982421875,
+      "rms": 0.09820650517940521,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-11415cbc263be76c6b66848868c744ab4a4c2777e60ac453f61e899ca63e8f9c",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/f1a2435eb726d151fbb399bcd8b34647c4bf8099a14184570207f8ebbfa5cd52.wav",
+      "sha256": "f1a2435eb726d151fbb399bcd8b34647c4bf8099a14184570207f8ebbfa5cd52",
+      "lang_id": "arb_Arab",
+      "omnilingual_language": "arb_Arab",
+      "language": "ar",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::ar-despina"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-42aa56c8274eb1c3b99a8e4d5693ea92ea2a4c41af383ad3d8e0bea296fe9ce6",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/0b10e76249fb6cb90dd063ff56874f9a5e18eb5b4d8daa0474a8fc0fc7da3caf.wav",
+    "sha256": "0b10e76249fb6cb90dd063ff56874f9a5e18eb5b4d8daa0474a8fc0fc7da3caf",
+    "text": "",
+    "language": "ar",
+    "lang_id": "arb_Arab",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000002-000.wav",
+        "start_s": 0.0,
+        "end_s": 16.770958333333333,
+        "sha256": "f9d8c1bb3ce0deddf1ad7e8e2aa1c20159521b7eddbed6228732ecba8f84faf5"
+      }
+    ],
+    "duration_s": 16.770958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.560516357421875,
+      "rms": 0.09031848609447479,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-42aa56c8274eb1c3b99a8e4d5693ea92ea2a4c41af383ad3d8e0bea296fe9ce6",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/0b10e76249fb6cb90dd063ff56874f9a5e18eb5b4d8daa0474a8fc0fc7da3caf.wav",
+      "sha256": "0b10e76249fb6cb90dd063ff56874f9a5e18eb5b4d8daa0474a8fc0fc7da3caf",
+      "lang_id": "arb_Arab",
+      "omnilingual_language": "arb_Arab",
+      "language": "ar",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::ar-kore"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-58d51606acd2a6b1e8f408c1e24a435c14639617d4614da5bf78752767615fae",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/41222406ec050fd7ac216d10a909653f49cbf275f4a2f06c830dcf8c9aa3e591.wav",
+    "sha256": "41222406ec050fd7ac216d10a909653f49cbf275f4a2f06c830dcf8c9aa3e591",
+    "text": "",
+    "language": "ar",
+    "lang_id": "arb_Arab",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000003-000.wav",
+        "start_s": 0.0,
+        "end_s": 15.650958333333334,
+        "sha256": "7c0cfd1a2484010b6363585c3a6349dc9ff579ede7c2dd950b1ce2b0efb9dea8"
+      }
+    ],
+    "duration_s": 15.650958333333334,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.608367919921875,
+      "rms": 0.09379652142524719,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-58d51606acd2a6b1e8f408c1e24a435c14639617d4614da5bf78752767615fae",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/41222406ec050fd7ac216d10a909653f49cbf275f4a2f06c830dcf8c9aa3e591.wav",
+      "sha256": "41222406ec050fd7ac216d10a909653f49cbf275f4a2f06c830dcf8c9aa3e591",
+      "lang_id": "arb_Arab",
+      "omnilingual_language": "arb_Arab",
+      "language": "ar",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::ar-fenrir"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-7bc12ae2c36e02276d5525b79e949ce8b97c734db2a79fc99f3afc3a48bc27be",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/13645fd95e724ed9b7fd41daa3a4ef71df025a4141c335f8567fbdf47e048e14.wav",
+    "sha256": "13645fd95e724ed9b7fd41daa3a4ef71df025a4141c335f8567fbdf47e048e14",
+    "text": "",
+    "language": "ar",
+    "lang_id": "arb_Arab",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000004-000.wav",
+        "start_s": 0.0,
+        "end_s": 14.850958333333333,
+        "sha256": "2d389dbd9eed6ac67eeecb1d16b63534be520cb2e4038e69cfd9384c84e2bd55"
+      }
+    ],
+    "duration_s": 14.850958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.765594482421875,
+      "rms": 0.11589298397302628,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-7bc12ae2c36e02276d5525b79e949ce8b97c734db2a79fc99f3afc3a48bc27be",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/13645fd95e724ed9b7fd41daa3a4ef71df025a4141c335f8567fbdf47e048e14.wav",
+      "sha256": "13645fd95e724ed9b7fd41daa3a4ef71df025a4141c335f8567fbdf47e048e14",
+      "lang_id": "arb_Arab",
+      "omnilingual_language": "arb_Arab",
+      "language": "ar",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::ar-zephyr"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-8d8b6a088eee9768d84bc70eedd1011b89e29eb0a1c8bf5bf6e8935f67cb780f",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/dfb87da4364e14ed0e2117944eeaf6a425975670cbd6df874c9c5aec25e5c933.wav",
+    "sha256": "dfb87da4364e14ed0e2117944eeaf6a425975670cbd6df874c9c5aec25e5c933",
+    "text": "",
+    "language": "ar",
+    "lang_id": "arb_Arab",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000005-000.wav",
+        "start_s": 0.0,
+        "end_s": 15.170958333333333,
+        "sha256": "efebc99f9667fca76283ece57f1d423b4625911386479655ec2d89e57dd4121d"
+      }
+    ],
+    "duration_s": 15.170958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.924774169921875,
+      "rms": 0.1171765848994255,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-8d8b6a088eee9768d84bc70eedd1011b89e29eb0a1c8bf5bf6e8935f67cb780f",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/dfb87da4364e14ed0e2117944eeaf6a425975670cbd6df874c9c5aec25e5c933.wav",
+      "sha256": "dfb87da4364e14ed0e2117944eeaf6a425975670cbd6df874c9c5aec25e5c933",
+      "lang_id": "arb_Arab",
+      "omnilingual_language": "arb_Arab",
+      "language": "ar",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::ar-aoede"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-b56c8de76f2594ba2bf4f526aacb8a0910d24a29280cf8932104bb2fa9283c9a",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/7f6ebd16d219ab3677e2dd21f578d49442e41c84b6ad9aaae1964bf8100a95e9.wav",
+    "sha256": "7f6ebd16d219ab3677e2dd21f578d49442e41c84b6ad9aaae1964bf8100a95e9",
+    "text": "",
+    "language": "ar",
+    "lang_id": "arb_Arab",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000006-000.wav",
+        "start_s": 0.0,
+        "end_s": 16.570958333333333,
+        "sha256": "6030a903a353856225ff33f09ad9077b70a8eadbc6d3b7ebe2347aca169b7d9f"
+      }
+    ],
+    "duration_s": 16.570958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.697235107421875,
+      "rms": 0.08548013120889664,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-b56c8de76f2594ba2bf4f526aacb8a0910d24a29280cf8932104bb2fa9283c9a",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/7f6ebd16d219ab3677e2dd21f578d49442e41c84b6ad9aaae1964bf8100a95e9.wav",
+      "sha256": "7f6ebd16d219ab3677e2dd21f578d49442e41c84b6ad9aaae1964bf8100a95e9",
+      "lang_id": "arb_Arab",
+      "omnilingual_language": "arb_Arab",
+      "language": "ar",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::ar-iapetus"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-efea4ab553d50b902445712f0b893d2eb4a9862ea4893534f9b0ed6e4c812c15",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/9d238a0ff5d668951261b0544fbbc591ab9c485e433bb2878d9e42d423399f69.wav",
+    "sha256": "9d238a0ff5d668951261b0544fbbc591ab9c485e433bb2878d9e42d423399f69",
+    "text": "",
+    "language": "ar",
+    "lang_id": "arb_Arab",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000007-000.wav",
+        "start_s": 0.0,
+        "end_s": 15.050958333333334,
+        "sha256": "9b7fb89b4d0f2efc6fb4d5a4f3833e26c33d767902cebc62addbdd9fbed4f67d"
+      }
+    ],
+    "duration_s": 15.050958333333334,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.751922607421875,
+      "rms": 0.10183874517679214,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-efea4ab553d50b902445712f0b893d2eb4a9862ea4893534f9b0ed6e4c812c15",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/9d238a0ff5d668951261b0544fbbc591ab9c485e433bb2878d9e42d423399f69.wav",
+      "sha256": "9d238a0ff5d668951261b0544fbbc591ab9c485e433bb2878d9e42d423399f69",
+      "lang_id": "arb_Arab",
+      "omnilingual_language": "arb_Arab",
+      "language": "ar",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::ar-charon"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-0f06371143a783fd56e47858bb8324d61e9fbe5e0ad86c6726edc61dfce88142",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/b4839a534ba13db2b3f0ba5c9d747643882fe10af377ec267784fb0789b91d00.wav",
+    "sha256": "b4839a534ba13db2b3f0ba5c9d747643882fe10af377ec267784fb0789b91d00",
+    "text": "",
+    "language": "da",
+    "lang_id": "dan_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000008-000.wav",
+        "start_s": 0.0,
+        "end_s": 10.330958333333333,
+        "sha256": "42661c3da7da90410a25f575757daa6424714615a8e770979351c40f43cc1b68"
+      }
+    ],
+    "duration_s": 10.330958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.525360107421875,
+      "rms": 0.07874633371829987,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-0f06371143a783fd56e47858bb8324d61e9fbe5e0ad86c6726edc61dfce88142",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/b4839a534ba13db2b3f0ba5c9d747643882fe10af377ec267784fb0789b91d00.wav",
+      "sha256": "b4839a534ba13db2b3f0ba5c9d747643882fe10af377ec267784fb0789b91d00",
+      "lang_id": "dan_Latn",
+      "omnilingual_language": "dan_Latn",
+      "language": "da",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::da-despina"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-256cfc23cf4c24d00de596aa304edac2b49abb1b052800940c502d7cd868937e",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/cafb455766d805cf155296006fa16190ce7ce8bd72557c94bebb46d41b564a9c.wav",
+    "sha256": "cafb455766d805cf155296006fa16190ce7ce8bd72557c94bebb46d41b564a9c",
+    "text": "",
+    "language": "da",
+    "lang_id": "dan_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000009-000.wav",
+        "start_s": 0.0,
+        "end_s": 11.850958333333333,
+        "sha256": "1eb10800e49eec937bf38b1175f2591b0fc730872b75d1f19073a6c47572981e"
+      }
+    ],
+    "duration_s": 11.850958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.667938232421875,
+      "rms": 0.09328312426805496,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-256cfc23cf4c24d00de596aa304edac2b49abb1b052800940c502d7cd868937e",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/cafb455766d805cf155296006fa16190ce7ce8bd72557c94bebb46d41b564a9c.wav",
+      "sha256": "cafb455766d805cf155296006fa16190ce7ce8bd72557c94bebb46d41b564a9c",
+      "lang_id": "dan_Latn",
+      "omnilingual_language": "dan_Latn",
+      "language": "da",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::da-zephyr"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-405935a4dcde15c6a3e244667d374ea7226e4ad60860cae3efbaa14f618f3874",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/901703970b23d3e204d7a523eb90da6325ecd09a609f5ccd17a303765813cf83.wav",
+    "sha256": "901703970b23d3e204d7a523eb90da6325ecd09a609f5ccd17a303765813cf83",
+    "text": "",
+    "language": "da",
+    "lang_id": "dan_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000010-000.wav",
+        "start_s": 0.0,
+        "end_s": 9.530958333333333,
+        "sha256": "a60b91b88d79f9e07b1a93afab4d38b8270c80866c265db327b3c2a0de55d38c"
+      }
+    ],
+    "duration_s": 9.530958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.856414794921875,
+      "rms": 0.09906897693872452,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-405935a4dcde15c6a3e244667d374ea7226e4ad60860cae3efbaa14f618f3874",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/901703970b23d3e204d7a523eb90da6325ecd09a609f5ccd17a303765813cf83.wav",
+      "sha256": "901703970b23d3e204d7a523eb90da6325ecd09a609f5ccd17a303765813cf83",
+      "lang_id": "dan_Latn",
+      "omnilingual_language": "dan_Latn",
+      "language": "da",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::da-aoede"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-52c2fdf22299328aaa0077ad6509b0dd0d636c902df13462ea6be96ef8f8e640",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/ca80d715c7e0340c88f31c75e702c5dcb3f0338c8a9d32fa95773f3eb97d1360.wav",
+    "sha256": "ca80d715c7e0340c88f31c75e702c5dcb3f0338c8a9d32fa95773f3eb97d1360",
+    "text": "",
+    "language": "da",
+    "lang_id": "dan_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000011-000.wav",
+        "start_s": 0.0,
+        "end_s": 10.010958333333333,
+        "sha256": "cf29c80d6259be9941efab37af4a8bfa359bfb3a38c0ff1f1cd473e85affed05"
+      }
+    ],
+    "duration_s": 10.010958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.992156982421875,
+      "rms": 0.09981095045804977,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-52c2fdf22299328aaa0077ad6509b0dd0d636c902df13462ea6be96ef8f8e640",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/ca80d715c7e0340c88f31c75e702c5dcb3f0338c8a9d32fa95773f3eb97d1360.wav",
+      "sha256": "ca80d715c7e0340c88f31c75e702c5dcb3f0338c8a9d32fa95773f3eb97d1360",
+      "lang_id": "dan_Latn",
+      "omnilingual_language": "dan_Latn",
+      "language": "da",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::da-charon"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-7b9d14f0d5a4cd020575ceeb367ef5711bb24f567a98969b77c51f5340f71809",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/2db9a2781cde1956a655353bc93b68d8c690f7e988307698661205d9071b477d.wav",
+    "sha256": "2db9a2781cde1956a655353bc93b68d8c690f7e988307698661205d9071b477d",
+    "text": "",
+    "language": "da",
+    "lang_id": "dan_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000012-000.wav",
+        "start_s": 0.0,
+        "end_s": 13.690958333333333,
+        "sha256": "fe9d6831f3ec3a37f4814faa75b4e2ad24ed57f0c7a9173b91beb9f0c6372fc0"
+      }
+    ],
+    "duration_s": 13.690958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.606414794921875,
+      "rms": 0.050621241331100464,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-7b9d14f0d5a4cd020575ceeb367ef5711bb24f567a98969b77c51f5340f71809",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/2db9a2781cde1956a655353bc93b68d8c690f7e988307698661205d9071b477d.wav",
+      "sha256": "2db9a2781cde1956a655353bc93b68d8c690f7e988307698661205d9071b477d",
+      "lang_id": "dan_Latn",
+      "omnilingual_language": "dan_Latn",
+      "language": "da",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::da-umbriel"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-7f3ff2c1ea742406376bf0ba61ceb37d517987baa33e449509bbadbaa3490c4d",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/a21351b5671e1a721006ef68754d472e2e762d898dd3cc0dd146855fa40f0d88.wav",
+    "sha256": "a21351b5671e1a721006ef68754d472e2e762d898dd3cc0dd146855fa40f0d88",
+    "text": "",
+    "language": "da",
+    "lang_id": "dan_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000013-000.wav",
+        "start_s": 0.0,
+        "end_s": 12.250958333333333,
+        "sha256": "aa8f787f3e914d10639445d5a8a7ea905dcc12a1afac0b41fc5df762e163a322"
+      }
+    ],
+    "duration_s": 12.250958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.714813232421875,
+      "rms": 0.0964471623301506,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-7f3ff2c1ea742406376bf0ba61ceb37d517987baa33e449509bbadbaa3490c4d",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/a21351b5671e1a721006ef68754d472e2e762d898dd3cc0dd146855fa40f0d88.wav",
+      "sha256": "a21351b5671e1a721006ef68754d472e2e762d898dd3cc0dd146855fa40f0d88",
+      "lang_id": "dan_Latn",
+      "omnilingual_language": "dan_Latn",
+      "language": "da",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::da-kore"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-c5e105b5356fbe43b27b22b30332c760bdf3d5a241316c742c6a7e50086a0703",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/fcb9367eea531624253ec7ca6cc17bcaabf8a449fcf2046e5dbd9ef82e49f7fc.wav",
+    "sha256": "fcb9367eea531624253ec7ca6cc17bcaabf8a449fcf2046e5dbd9ef82e49f7fc",
+    "text": "",
+    "language": "da",
+    "lang_id": "dan_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000014-000.wav",
+        "start_s": 0.0,
+        "end_s": 10.810958333333334,
+        "sha256": "9a91f9f59b34ffd1067ed1ab4926c42bc609a7657435911dd61240e1c9d0c18d"
+      }
+    ],
+    "duration_s": 10.810958333333334,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.763641357421875,
+      "rms": 0.10368373245000839,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-c5e105b5356fbe43b27b22b30332c760bdf3d5a241316c742c6a7e50086a0703",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/fcb9367eea531624253ec7ca6cc17bcaabf8a449fcf2046e5dbd9ef82e49f7fc.wav",
+      "sha256": "fcb9367eea531624253ec7ca6cc17bcaabf8a449fcf2046e5dbd9ef82e49f7fc",
+      "lang_id": "dan_Latn",
+      "omnilingual_language": "dan_Latn",
+      "language": "da",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::da-iapetus"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-fc3eb91c978000fda84281e89add37600815f3c2808ddd509b3151757d074d18",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/7ecd0667cfe42d57cc5315a5ebf3b10e2e39bb0df423ec91d9b01b2d1889caa0.wav",
+    "sha256": "7ecd0667cfe42d57cc5315a5ebf3b10e2e39bb0df423ec91d9b01b2d1889caa0",
+    "text": "",
+    "language": "da",
+    "lang_id": "dan_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000015-000.wav",
+        "start_s": 0.0,
+        "end_s": 12.170958333333333,
+        "sha256": "b86cab97f0f52063751b1e4a8a6eef9e5de2e5786eef3e55c92e4dc270f64114"
+      }
+    ],
+    "duration_s": 12.170958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.999969482421875,
+      "rms": 0.12594468891620636,
+      "clipped_sample_fraction": 7.873934879135099e-05
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-fc3eb91c978000fda84281e89add37600815f3c2808ddd509b3151757d074d18",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/7ecd0667cfe42d57cc5315a5ebf3b10e2e39bb0df423ec91d9b01b2d1889caa0.wav",
+      "sha256": "7ecd0667cfe42d57cc5315a5ebf3b10e2e39bb0df423ec91d9b01b2d1889caa0",
+      "lang_id": "dan_Latn",
+      "omnilingual_language": "dan_Latn",
+      "language": "da",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::da-fenrir"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-0f3fa54dfefdd461d839e247fcb6a809fe0f52cb599e85d8a368eadd7b91af71",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/516df535e3f9690c256061475c8745716dddb18c7c36b0e235208011b4d66178.wav",
+    "sha256": "516df535e3f9690c256061475c8745716dddb18c7c36b0e235208011b4d66178",
+    "text": "",
+    "language": "de",
+    "lang_id": "deu_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000016-000.wav",
+        "start_s": 0.0,
+        "end_s": 12.010958333333333,
+        "sha256": "8b2583af5c1a87e0e6a7766f3503b369c177e5fe6794e9c378f85f57171c3842"
+      }
+    ],
+    "duration_s": 12.010958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.474578857421875,
+      "rms": 0.07881486415863037,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-0f3fa54dfefdd461d839e247fcb6a809fe0f52cb599e85d8a368eadd7b91af71",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/516df535e3f9690c256061475c8745716dddb18c7c36b0e235208011b4d66178.wav",
+      "sha256": "516df535e3f9690c256061475c8745716dddb18c7c36b0e235208011b4d66178",
+      "lang_id": "deu_Latn",
+      "omnilingual_language": "deu_Latn",
+      "language": "de",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::de-iapetus"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-6c59c211034de0cffe5a98aedc4bfeb878ebf43357db72c49b09b28b0a0135af",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/54eca78af64bb6325c06b5aced8bed577f8482e35b76e5a022d9f737daf1f6ab.wav",
+    "sha256": "54eca78af64bb6325c06b5aced8bed577f8482e35b76e5a022d9f737daf1f6ab",
+    "text": "",
+    "language": "de",
+    "lang_id": "deu_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000017-000.wav",
+        "start_s": 0.0,
+        "end_s": 12.410958333333333,
+        "sha256": "78951d3a32c12dd604d66b4b637d4b6da4aeb74bddb4b851335868eab0dc54bc"
+      }
+    ],
+    "duration_s": 12.410958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.861297607421875,
+      "rms": 0.09192483127117157,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-6c59c211034de0cffe5a98aedc4bfeb878ebf43357db72c49b09b28b0a0135af",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/54eca78af64bb6325c06b5aced8bed577f8482e35b76e5a022d9f737daf1f6ab.wav",
+      "sha256": "54eca78af64bb6325c06b5aced8bed577f8482e35b76e5a022d9f737daf1f6ab",
+      "lang_id": "deu_Latn",
+      "omnilingual_language": "deu_Latn",
+      "language": "de",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::de-charon"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-7b3611690d70f6d0ee3ae992817be6056c30c92e22b2e668d14d436cc81ce5cf",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/7e0450e040551f640352b193eeca5675708ea506a978882ea3f5416952e122d0.wav",
+    "sha256": "7e0450e040551f640352b193eeca5675708ea506a978882ea3f5416952e122d0",
+    "text": "",
+    "language": "de",
+    "lang_id": "deu_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000018-000.wav",
+        "start_s": 0.0,
+        "end_s": 10.970958333333334,
+        "sha256": "989e180c2b6b5c1757353be4739014d1c257fb8220c9141b0c0d2aa0546676af"
+      }
+    ],
+    "duration_s": 10.970958333333334,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.420867919921875,
+      "rms": 0.0695980116724968,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-7b3611690d70f6d0ee3ae992817be6056c30c92e22b2e668d14d436cc81ce5cf",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/7e0450e040551f640352b193eeca5675708ea506a978882ea3f5416952e122d0.wav",
+      "sha256": "7e0450e040551f640352b193eeca5675708ea506a978882ea3f5416952e122d0",
+      "lang_id": "deu_Latn",
+      "omnilingual_language": "deu_Latn",
+      "language": "de",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::de-umbriel"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-b11f9dc4e44578ef587c7bcf8e5d2b3f063d764b1ee23738404bef2363963589",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/58ff55e0dfd300b08eb57e7a8fdbb9a62381f51cbcf688eeefd17829f7b6abf1.wav",
+    "sha256": "58ff55e0dfd300b08eb57e7a8fdbb9a62381f51cbcf688eeefd17829f7b6abf1",
+    "text": "",
+    "language": "de",
+    "lang_id": "deu_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000019-000.wav",
+        "start_s": 0.0,
+        "end_s": 12.970958333333334,
+        "sha256": "0991cb4682f6784f8a1ffd73e30fcaae402e77c165196639f06f624f7b2396fa"
+      }
+    ],
+    "duration_s": 12.970958333333334,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.656219482421875,
+      "rms": 0.0892908051609993,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-b11f9dc4e44578ef587c7bcf8e5d2b3f063d764b1ee23738404bef2363963589",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/58ff55e0dfd300b08eb57e7a8fdbb9a62381f51cbcf688eeefd17829f7b6abf1.wav",
+      "sha256": "58ff55e0dfd300b08eb57e7a8fdbb9a62381f51cbcf688eeefd17829f7b6abf1",
+      "lang_id": "deu_Latn",
+      "omnilingual_language": "deu_Latn",
+      "language": "de",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::de-kore"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-c233dcd81396868cd01a0ecdf5bdeb21ba18e4d72892663a264329f5bd168aea",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/8c79b7fec00d0072ea12343d39aa13b3ca315dbb5e62155afcbd048ebc8640e8.wav",
+    "sha256": "8c79b7fec00d0072ea12343d39aa13b3ca315dbb5e62155afcbd048ebc8640e8",
+    "text": "",
+    "language": "de",
+    "lang_id": "deu_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000020-000.wav",
+        "start_s": 0.0,
+        "end_s": 12.130958333333334,
+        "sha256": "4123c7f3947756a288ff2744484e7e05752c3d34eff75c2baa470dc9ce85b4d5"
+      }
+    ],
+    "duration_s": 12.130958333333334,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.593719482421875,
+      "rms": 0.06575068831443787,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-c233dcd81396868cd01a0ecdf5bdeb21ba18e4d72892663a264329f5bd168aea",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/8c79b7fec00d0072ea12343d39aa13b3ca315dbb5e62155afcbd048ebc8640e8.wav",
+      "sha256": "8c79b7fec00d0072ea12343d39aa13b3ca315dbb5e62155afcbd048ebc8640e8",
+      "lang_id": "deu_Latn",
+      "omnilingual_language": "deu_Latn",
+      "language": "de",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::de-aoede"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-d4703b9ff82c2569e7989546bbad8bdcb15e601c13ca53dfdb09840ec7773c62",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/8e8ef1c347ba110f04f9ad6c2d75474cee19c32985dd8748fd644d9dd6322665.wav",
+    "sha256": "8e8ef1c347ba110f04f9ad6c2d75474cee19c32985dd8748fd644d9dd6322665",
+    "text": "",
+    "language": "de",
+    "lang_id": "deu_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000021-000.wav",
+        "start_s": 0.0,
+        "end_s": 12.010958333333333,
+        "sha256": "87f3e077f089c040bf49320fa0a2e529d54b2bcb15f2e75b7a6eea0dd545af1f"
+      }
+    ],
+    "duration_s": 12.010958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.503875732421875,
+      "rms": 0.06811214238405228,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-d4703b9ff82c2569e7989546bbad8bdcb15e601c13ca53dfdb09840ec7773c62",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/8e8ef1c347ba110f04f9ad6c2d75474cee19c32985dd8748fd644d9dd6322665.wav",
+      "sha256": "8e8ef1c347ba110f04f9ad6c2d75474cee19c32985dd8748fd644d9dd6322665",
+      "lang_id": "deu_Latn",
+      "omnilingual_language": "deu_Latn",
+      "language": "de",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::de-despina"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-dec5d100d5d334035791bcac4213a30c381667bcccd3ea0b054c8b3999242678",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/d628f70df0e52429f6995922f7b721e58853238b0b87b0091fd8c80b5a6ebe45.wav",
+    "sha256": "d628f70df0e52429f6995922f7b721e58853238b0b87b0091fd8c80b5a6ebe45",
+    "text": "",
+    "language": "de",
+    "lang_id": "deu_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000022-000.wav",
+        "start_s": 0.0,
+        "end_s": 11.450958333333332,
+        "sha256": "ef293f6e88c41a4434afbda2ac1010fa4d342285eef76fa8294d7b7617468134"
+      }
+    ],
+    "duration_s": 11.450958333333332,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.663055419921875,
+      "rms": 0.09572989493608475,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-dec5d100d5d334035791bcac4213a30c381667bcccd3ea0b054c8b3999242678",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/d628f70df0e52429f6995922f7b721e58853238b0b87b0091fd8c80b5a6ebe45.wav",
+      "sha256": "d628f70df0e52429f6995922f7b721e58853238b0b87b0091fd8c80b5a6ebe45",
+      "lang_id": "deu_Latn",
+      "omnilingual_language": "deu_Latn",
+      "language": "de",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::de-fenrir"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-ffc2680ffffa2893796d9acc4a19efa49a542b23cfb0a371345040c43cb607da",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/157b32266e25ed6ecbf4dc5009ea3fbf933135c60d1e21f0f75318b91e307ce0.wav",
+    "sha256": "157b32266e25ed6ecbf4dc5009ea3fbf933135c60d1e21f0f75318b91e307ce0",
+    "text": "",
+    "language": "de",
+    "lang_id": "deu_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000023-000.wav",
+        "start_s": 0.0,
+        "end_s": 11.490958333333333,
+        "sha256": "b0406a64bed49dcaf76e9022728bc5317faf323f5528d2680f70cbf5c8893928"
+      }
+    ],
+    "duration_s": 11.490958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.716766357421875,
+      "rms": 0.08949200063943863,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-ffc2680ffffa2893796d9acc4a19efa49a542b23cfb0a371345040c43cb607da",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/157b32266e25ed6ecbf4dc5009ea3fbf933135c60d1e21f0f75318b91e307ce0.wav",
+      "sha256": "157b32266e25ed6ecbf4dc5009ea3fbf933135c60d1e21f0f75318b91e307ce0",
+      "lang_id": "deu_Latn",
+      "omnilingual_language": "deu_Latn",
+      "language": "de",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::de-zephyr"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-1f55b6fdd78b18c00df3d9e9e804ecf169a72f622ccf8c0b7484901083a3f6b4",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/4f73dea477b5767fd24e871181540dc3bea2cca5619c68cbf018e62f75341f4a.wav",
+    "sha256": "4f73dea477b5767fd24e871181540dc3bea2cca5619c68cbf018e62f75341f4a",
+    "text": "",
+    "language": "el",
+    "lang_id": "ell_Grek",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000024-000.wav",
+        "start_s": 0.0,
+        "end_s": 10.850958333333333,
+        "sha256": "558335e97be215325c0e971cd336ade175f8e57a5652a449415bab49ee0f6331"
+      }
+    ],
+    "duration_s": 10.850958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.611297607421875,
+      "rms": 0.09824912995100021,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-1f55b6fdd78b18c00df3d9e9e804ecf169a72f622ccf8c0b7484901083a3f6b4",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/4f73dea477b5767fd24e871181540dc3bea2cca5619c68cbf018e62f75341f4a.wav",
+      "sha256": "4f73dea477b5767fd24e871181540dc3bea2cca5619c68cbf018e62f75341f4a",
+      "lang_id": "ell_Grek",
+      "omnilingual_language": "ell_Grek",
+      "language": "el",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::el-zephyr"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-269b53af0d9462fcb20b6edf5fceccd21ee5160e7144d86c0e39b5b3cc1ddf84",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/2b36d8ae50a231b32ef524960e6cf96d9b138a00f7044953a162f8a403054376.wav",
+    "sha256": "2b36d8ae50a231b32ef524960e6cf96d9b138a00f7044953a162f8a403054376",
+    "text": "",
+    "language": "el",
+    "lang_id": "ell_Grek",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000025-000.wav",
+        "start_s": 0.0,
+        "end_s": 10.490958333333333,
+        "sha256": "f26d16d7cc28db52a6ae7b9c25f69f85f1bea46addad00f81b10afc62acf3124"
+      }
+    ],
+    "duration_s": 10.490958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.923797607421875,
+      "rms": 0.11314934492111206,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-269b53af0d9462fcb20b6edf5fceccd21ee5160e7144d86c0e39b5b3cc1ddf84",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/2b36d8ae50a231b32ef524960e6cf96d9b138a00f7044953a162f8a403054376.wav",
+      "sha256": "2b36d8ae50a231b32ef524960e6cf96d9b138a00f7044953a162f8a403054376",
+      "lang_id": "ell_Grek",
+      "omnilingual_language": "ell_Grek",
+      "language": "el",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::el-charon"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-3d261230b918a07c23f91ef344ebe405e71745ed24bcf4fd949a9a8b80403027",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/8e3b818d92f1acaa8fc28f95f17d076f8471082c19213898044cfb384a2f3767.wav",
+    "sha256": "8e3b818d92f1acaa8fc28f95f17d076f8471082c19213898044cfb384a2f3767",
+    "text": "",
+    "language": "el",
+    "lang_id": "ell_Grek",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000026-000.wav",
+        "start_s": 0.0,
+        "end_s": 10.850958333333333,
+        "sha256": "7b41eb629972c8580ede1ab4a0ec1d5b1ee55d4ccd6fb0615fc47d8a006850b2"
+      }
+    ],
+    "duration_s": 10.850958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.480438232421875,
+      "rms": 0.0788663849234581,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-3d261230b918a07c23f91ef344ebe405e71745ed24bcf4fd949a9a8b80403027",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/8e3b818d92f1acaa8fc28f95f17d076f8471082c19213898044cfb384a2f3767.wav",
+      "sha256": "8e3b818d92f1acaa8fc28f95f17d076f8471082c19213898044cfb384a2f3767",
+      "lang_id": "ell_Grek",
+      "omnilingual_language": "ell_Grek",
+      "language": "el",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::el-fenrir"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-6f9b27ba40fb20155c4de2cc569a79290c4097c2ab760764e4b010c5968a73ca",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/439e3978d6601119c8511f71697304d06c6644bfec16ab59940ff05670b08955.wav",
+    "sha256": "439e3978d6601119c8511f71697304d06c6644bfec16ab59940ff05670b08955",
+    "text": "",
+    "language": "el",
+    "lang_id": "ell_Grek",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000027-000.wav",
+        "start_s": 0.0,
+        "end_s": 11.690958333333333,
+        "sha256": "7f32d75068aadfecf6ae36055c58946acbff6a3c3630451174f682f131754a94"
+      }
+    ],
+    "duration_s": 11.690958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.607391357421875,
+      "rms": 0.10503128170967102,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-6f9b27ba40fb20155c4de2cc569a79290c4097c2ab760764e4b010c5968a73ca",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/439e3978d6601119c8511f71697304d06c6644bfec16ab59940ff05670b08955.wav",
+      "sha256": "439e3978d6601119c8511f71697304d06c6644bfec16ab59940ff05670b08955",
+      "lang_id": "ell_Grek",
+      "omnilingual_language": "ell_Grek",
+      "language": "el",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::el-despina"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-75bc1d7f43b8d5d00792840e93e177a5d6451762fab0ccda993ef737bd661e5c",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/42f0dbdb2bce862c5d0b5bd0d131776b6ea53167d9961e8aea3db2b9fbde2838.wav",
+    "sha256": "42f0dbdb2bce862c5d0b5bd0d131776b6ea53167d9961e8aea3db2b9fbde2838",
+    "text": "",
+    "language": "el",
+    "lang_id": "ell_Grek",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000028-000.wav",
+        "start_s": 0.0,
+        "end_s": 11.130958333333334,
+        "sha256": "7c55c95d0f0de8dfa5cb9c4afcbc46641cff08000bf7bea1a8b14edd050112fb"
+      }
+    ],
+    "duration_s": 11.130958333333334,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.569305419921875,
+      "rms": 0.09488877654075623,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-75bc1d7f43b8d5d00792840e93e177a5d6451762fab0ccda993ef737bd661e5c",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/42f0dbdb2bce862c5d0b5bd0d131776b6ea53167d9961e8aea3db2b9fbde2838.wav",
+      "sha256": "42f0dbdb2bce862c5d0b5bd0d131776b6ea53167d9961e8aea3db2b9fbde2838",
+      "lang_id": "ell_Grek",
+      "omnilingual_language": "ell_Grek",
+      "language": "el",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::el-aoede"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-8ec09919777c04300580b13ee1f2a012bef0dbfbb43fee1531e0597b132babf1",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/f9e9a239a64d82eef2b072fb8782927e8b972655070dc2ab2ee2d95e477a2d04.wav",
+    "sha256": "f9e9a239a64d82eef2b072fb8782927e8b972655070dc2ab2ee2d95e477a2d04",
+    "text": "",
+    "language": "el",
+    "lang_id": "ell_Grek",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000029-000.wav",
+        "start_s": 0.0,
+        "end_s": 12.010958333333333,
+        "sha256": "e10f2c82b1b878db73b38e2ea34a533b851f907b0ba6809eefa536590d706b13"
+      }
+    ],
+    "duration_s": 12.010958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.820281982421875,
+      "rms": 0.10135761648416519,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-8ec09919777c04300580b13ee1f2a012bef0dbfbb43fee1531e0597b132babf1",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/f9e9a239a64d82eef2b072fb8782927e8b972655070dc2ab2ee2d95e477a2d04.wav",
+      "sha256": "f9e9a239a64d82eef2b072fb8782927e8b972655070dc2ab2ee2d95e477a2d04",
+      "lang_id": "ell_Grek",
+      "omnilingual_language": "ell_Grek",
+      "language": "el",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::el-kore"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-90dbc38b2799c165eedb7e133dd61f52ebac268f1433bd215119cee0d45822b3",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/ba700f96517f50611179e0420e6d4a064a7b17ea035cbd376d31c2c8271fd718.wav",
+    "sha256": "ba700f96517f50611179e0420e6d4a064a7b17ea035cbd376d31c2c8271fd718",
+    "text": "",
+    "language": "el",
+    "lang_id": "ell_Grek",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000030-000.wav",
+        "start_s": 0.0,
+        "end_s": 12.410958333333333,
+        "sha256": "6dae2f0f454d5a752c54d6cd8991af012637cc9b04a9e61bf0d020c483716035"
+      }
+    ],
+    "duration_s": 12.410958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.754852294921875,
+      "rms": 0.09490471333265305,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-90dbc38b2799c165eedb7e133dd61f52ebac268f1433bd215119cee0d45822b3",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/ba700f96517f50611179e0420e6d4a064a7b17ea035cbd376d31c2c8271fd718.wav",
+      "sha256": "ba700f96517f50611179e0420e6d4a064a7b17ea035cbd376d31c2c8271fd718",
+      "lang_id": "ell_Grek",
+      "omnilingual_language": "ell_Grek",
+      "language": "el",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::el-iapetus"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-efa9ee74d8a072204cfbff26ea4f3630ff67deb4be93814534e072db92d335d9",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/6a944e9ef01d4888e1cc2f74ae52220a7be84e1b12a28bcd5ecef03398ca5ada.wav",
+    "sha256": "6a944e9ef01d4888e1cc2f74ae52220a7be84e1b12a28bcd5ecef03398ca5ada",
+    "text": "",
+    "language": "el",
+    "lang_id": "ell_Grek",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000031-000.wav",
+        "start_s": 0.0,
+        "end_s": 11.450958333333332,
+        "sha256": "ab8c745d01b665cf6f24a406acccf4b9d75d4a818d24c38c5ee297567d2b3ea6"
+      }
+    ],
+    "duration_s": 11.450958333333332,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.597625732421875,
+      "rms": 0.08296770602464676,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-efa9ee74d8a072204cfbff26ea4f3630ff67deb4be93814534e072db92d335d9",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/6a944e9ef01d4888e1cc2f74ae52220a7be84e1b12a28bcd5ecef03398ca5ada.wav",
+      "sha256": "6a944e9ef01d4888e1cc2f74ae52220a7be84e1b12a28bcd5ecef03398ca5ada",
+      "lang_id": "ell_Grek",
+      "omnilingual_language": "ell_Grek",
+      "language": "el",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::el-umbriel"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-0e65452a5a47d9bf0ecb0ccd58b9bf6492142c9370da7d057ab0446025ba7a58",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/d7fb4097b88d0d2eba6d85bffb8515195404f3636a88a0a0feeb4689af3c5703.wav",
+    "sha256": "d7fb4097b88d0d2eba6d85bffb8515195404f3636a88a0a0feeb4689af3c5703",
+    "text": "",
+    "language": "en",
+    "lang_id": "eng_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000033-000.wav",
+        "start_s": 0.0,
+        "end_s": 15.490958333333333,
+        "sha256": "786f085a959db4bf0ab119e6b41f523bc01b54e6255bcabf74cdc7964fcb32e2"
+      }
+    ],
+    "duration_s": 15.490958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.697235107421875,
+      "rms": 0.08351607620716095,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-0e65452a5a47d9bf0ecb0ccd58b9bf6492142c9370da7d057ab0446025ba7a58",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/d7fb4097b88d0d2eba6d85bffb8515195404f3636a88a0a0feeb4689af3c5703.wav",
+      "sha256": "d7fb4097b88d0d2eba6d85bffb8515195404f3636a88a0a0feeb4689af3c5703",
+      "lang_id": "eng_Latn",
+      "omnilingual_language": "eng_Latn",
+      "language": "en",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::en-zephyr"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-189b15d2b25fddedbd999ece1b9282b674b56373d3259797b89d5ec6a8bf0848",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/6141d9a3c5cbc635b8950700111347105f0e7afb7416088fdc14ad896c9ef34c.wav",
+    "sha256": "6141d9a3c5cbc635b8950700111347105f0e7afb7416088fdc14ad896c9ef34c",
+    "text": "",
+    "language": "en",
+    "lang_id": "eng_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000035-000.wav",
+        "start_s": 0.0,
+        "end_s": 14.210958333333334,
+        "sha256": "786900263229254d2cdc44411afbfca84e9fb567825578f25166247a422980be"
+      }
+    ],
+    "duration_s": 14.210958333333334,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.978485107421875,
+      "rms": 0.0855870246887207,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-189b15d2b25fddedbd999ece1b9282b674b56373d3259797b89d5ec6a8bf0848",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/6141d9a3c5cbc635b8950700111347105f0e7afb7416088fdc14ad896c9ef34c.wav",
+      "sha256": "6141d9a3c5cbc635b8950700111347105f0e7afb7416088fdc14ad896c9ef34c",
+      "lang_id": "eng_Latn",
+      "omnilingual_language": "eng_Latn",
+      "language": "en",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::en-kore"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-2f835042e4d05a470e4f1cb170de7feb53b31f0176931fbfc46a13afa8dcbc53",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/49137e70bd5019dc56362b238b4a9ae8a1923f1767a971e2684b160cea09b908.wav",
+    "sha256": "49137e70bd5019dc56362b238b4a9ae8a1923f1767a971e2684b160cea09b908",
+    "text": "",
+    "language": "en",
+    "lang_id": "eng_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000036-000.wav",
+        "start_s": 0.0,
+        "end_s": 14.690958333333333,
+        "sha256": "a093186602ef366a69252ad9ac27da3b491726b4495b1f1829ae12c17b64e372"
+      }
+    ],
+    "duration_s": 14.690958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.566375732421875,
+      "rms": 0.08756332099437714,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-2f835042e4d05a470e4f1cb170de7feb53b31f0176931fbfc46a13afa8dcbc53",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/49137e70bd5019dc56362b238b4a9ae8a1923f1767a971e2684b160cea09b908.wav",
+      "sha256": "49137e70bd5019dc56362b238b4a9ae8a1923f1767a971e2684b160cea09b908",
+      "lang_id": "eng_Latn",
+      "omnilingual_language": "eng_Latn",
+      "language": "en",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::en-umbriel"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-3471113117d778c3a09d5325b6d0b3d59a41b90fee3436cbeb1a254f23052d60",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/f216bedf1e369c87fae145ee87334659dfd389ad182026ac5ebd39432bfc5a47.wav",
+    "sha256": "f216bedf1e369c87fae145ee87334659dfd389ad182026ac5ebd39432bfc5a47",
+    "text": "",
+    "language": "en",
+    "lang_id": "eng_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000037-000.wav",
+        "start_s": 0.0,
+        "end_s": 16.210958333333334,
+        "sha256": "49c918f7b7a4b434b23ffedf33c972bb17d785c828ce1958f30295ab9636d6cd"
+      }
+    ],
+    "duration_s": 16.210958333333334,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.914031982421875,
+      "rms": 0.09315407276153564,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-3471113117d778c3a09d5325b6d0b3d59a41b90fee3436cbeb1a254f23052d60",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/f216bedf1e369c87fae145ee87334659dfd389ad182026ac5ebd39432bfc5a47.wav",
+      "sha256": "f216bedf1e369c87fae145ee87334659dfd389ad182026ac5ebd39432bfc5a47",
+      "lang_id": "eng_Latn",
+      "omnilingual_language": "eng_Latn",
+      "language": "en",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::en-despina"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-413a4d0db22c682df37e60a850a45b2eeb98e1f3f564b835c8111e5d8542c910",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/bb2556892a0c1e58971d08f3330e5c3e32ee532e5cd480cd52544bdff9889f85.wav",
+    "sha256": "bb2556892a0c1e58971d08f3330e5c3e32ee532e5cd480cd52544bdff9889f85",
+    "text": "",
+    "language": "en",
+    "lang_id": "eng_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000039-000.wav",
+        "start_s": 0.0,
+        "end_s": 14.290958333333334,
+        "sha256": "5a6d69b9b3332b961abecb3f286f2924b94e512daab8e175b2df9618eec246d1"
+      }
+    ],
+    "duration_s": 14.290958333333334,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.935516357421875,
+      "rms": 0.11924876272678375,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-413a4d0db22c682df37e60a850a45b2eeb98e1f3f564b835c8111e5d8542c910",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/bb2556892a0c1e58971d08f3330e5c3e32ee532e5cd480cd52544bdff9889f85.wav",
+      "sha256": "bb2556892a0c1e58971d08f3330e5c3e32ee532e5cd480cd52544bdff9889f85",
+      "lang_id": "eng_Latn",
+      "omnilingual_language": "eng_Latn",
+      "language": "en",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::en-charon"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-446e849963cc3db240f0a6e826fa6779fc5c861d39c5508cfd58d297d62c407e",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/d23dcc8a00af5c2c99da48cb0b7b2bd26a182f055660e3f0948b6483a5917299.wav",
+    "sha256": "d23dcc8a00af5c2c99da48cb0b7b2bd26a182f055660e3f0948b6483a5917299",
+    "text": "",
+    "language": "en",
+    "lang_id": "eng_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000040-000.wav",
+        "start_s": 0.0,
+        "end_s": 14.810958333333334,
+        "sha256": "9e430c3a1539aebfe8f7823843759efe133a1adebf8aa7e7ab7172e85311050c"
+      }
+    ],
+    "duration_s": 14.810958333333334,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.544891357421875,
+      "rms": 0.09721820056438446,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-446e849963cc3db240f0a6e826fa6779fc5c861d39c5508cfd58d297d62c407e",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/d23dcc8a00af5c2c99da48cb0b7b2bd26a182f055660e3f0948b6483a5917299.wav",
+      "sha256": "d23dcc8a00af5c2c99da48cb0b7b2bd26a182f055660e3f0948b6483a5917299",
+      "lang_id": "eng_Latn",
+      "omnilingual_language": "eng_Latn",
+      "language": "en",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::en-iapetus"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-471fd42513a534636187b2e3adcd5af7ecf09505d367859b98e26929901fef78",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/4a37e171c755322dfa22db6a4ef351655239b8ecdfaaad642735faf4bfd484e4.wav",
+    "sha256": "4a37e171c755322dfa22db6a4ef351655239b8ecdfaaad642735faf4bfd484e4",
+    "text": "",
+    "language": "en",
+    "lang_id": "eng_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000041-000.wav",
+        "start_s": 0.0,
+        "end_s": 14.090958333333333,
+        "sha256": "8ba7f2a707e18a6a30ba76b2c80bdf1f936615879762bf7ce5e9e2de0408a1c0"
+      }
+    ],
+    "duration_s": 14.090958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.828094482421875,
+      "rms": 0.11751505732536316,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-471fd42513a534636187b2e3adcd5af7ecf09505d367859b98e26929901fef78",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/4a37e171c755322dfa22db6a4ef351655239b8ecdfaaad642735faf4bfd484e4.wav",
+      "sha256": "4a37e171c755322dfa22db6a4ef351655239b8ecdfaaad642735faf4bfd484e4",
+      "lang_id": "eng_Latn",
+      "omnilingual_language": "eng_Latn",
+      "language": "en",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::en-fenrir"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-d9f970f8cbcc7c7f3db7869500a5bb4632f961d449d44535bc75abbf20af58e6",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/d0adc9563e1c71781c87d163b80e9fa27859529ba9b5c7bf28a88ee6ae641e66.wav",
+    "sha256": "d0adc9563e1c71781c87d163b80e9fa27859529ba9b5c7bf28a88ee6ae641e66",
+    "text": "",
+    "language": "en",
+    "lang_id": "eng_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000050-000.wav",
+        "start_s": 0.0,
+        "end_s": 13.930958333333333,
+        "sha256": "d5ae72409fc8ebf9b69d7dd07dfc9d30b87f4a7d4982662338ad0f3cb0d2adb8"
+      }
+    ],
+    "duration_s": 13.930958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.718719482421875,
+      "rms": 0.09489870071411133,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-d9f970f8cbcc7c7f3db7869500a5bb4632f961d449d44535bc75abbf20af58e6",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/d0adc9563e1c71781c87d163b80e9fa27859529ba9b5c7bf28a88ee6ae641e66.wav",
+      "sha256": "d0adc9563e1c71781c87d163b80e9fa27859529ba9b5c7bf28a88ee6ae641e66",
+      "lang_id": "eng_Latn",
+      "omnilingual_language": "eng_Latn",
+      "language": "en",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::en-aoede"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-248c45d2b9c7bcf548ae97fcce32d9e4e8ca1c43c372c5fe3dfdd79b5d69e4ae",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/4206e6da660b66548d8a185ca36f86f58830edf2e1e143f0b718180b68d0ce36.wav",
+    "sha256": "4206e6da660b66548d8a185ca36f86f58830edf2e1e143f0b718180b68d0ce36",
+    "text": "",
+    "language": "es",
+    "lang_id": "spa_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000056-000.wav",
+        "start_s": 0.0,
+        "end_s": 12.290958333333334,
+        "sha256": "cd6ca830b4eb0ff316d673c376d9827e261619f2036bff57e5cdaa6105560f06"
+      }
+    ],
+    "duration_s": 12.290958333333334,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.486297607421875,
+      "rms": 0.07341720908880234,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-248c45d2b9c7bcf548ae97fcce32d9e4e8ca1c43c372c5fe3dfdd79b5d69e4ae",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/4206e6da660b66548d8a185ca36f86f58830edf2e1e143f0b718180b68d0ce36.wav",
+      "sha256": "4206e6da660b66548d8a185ca36f86f58830edf2e1e143f0b718180b68d0ce36",
+      "lang_id": "spa_Latn",
+      "omnilingual_language": "spa_Latn",
+      "language": "es",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::es-aoede"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-3f78f44c27006a91d8bba829d6aa6087f4704d6a8fa71ed0023a0215921551f7",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/4e1b8a651c24921305e007603a63e3456547cbc72537a17da6e450655bfe536c.wav",
+    "sha256": "4e1b8a651c24921305e007603a63e3456547cbc72537a17da6e450655bfe536c",
+    "text": "",
+    "language": "es",
+    "lang_id": "spa_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000057-000.wav",
+        "start_s": 0.0,
+        "end_s": 13.690958333333333,
+        "sha256": "bf1ebc35591e01777b71256115cb181fad30a50abea02736d8460087fd2b22ae"
+      }
+    ],
+    "duration_s": 13.690958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.640594482421875,
+      "rms": 0.09314140677452087,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-3f78f44c27006a91d8bba829d6aa6087f4704d6a8fa71ed0023a0215921551f7",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/4e1b8a651c24921305e007603a63e3456547cbc72537a17da6e450655bfe536c.wav",
+      "sha256": "4e1b8a651c24921305e007603a63e3456547cbc72537a17da6e450655bfe536c",
+      "lang_id": "spa_Latn",
+      "omnilingual_language": "spa_Latn",
+      "language": "es",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::es-iapetus"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-66c27a9ade767644d5324ac7fa8c37bb0155f97b7eb5c2a1e00e9221e2f633ce",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/b589296ab2df931a7ded938578f165f19d81d34e0c7ac6582a9385cf330c076d.wav",
+    "sha256": "b589296ab2df931a7ded938578f165f19d81d34e0c7ac6582a9385cf330c076d",
+    "text": "",
+    "language": "es",
+    "lang_id": "spa_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000058-000.wav",
+        "start_s": 0.0,
+        "end_s": 13.650958333333334,
+        "sha256": "28a815462dc35061c2d9b68b45e85b1a2b8d2e306ee3b58bcd78399b9d5d077a"
+      }
+    ],
+    "duration_s": 13.650958333333334,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.939422607421875,
+      "rms": 0.1318274885416031,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-66c27a9ade767644d5324ac7fa8c37bb0155f97b7eb5c2a1e00e9221e2f633ce",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/b589296ab2df931a7ded938578f165f19d81d34e0c7ac6582a9385cf330c076d.wav",
+      "sha256": "b589296ab2df931a7ded938578f165f19d81d34e0c7ac6582a9385cf330c076d",
+      "lang_id": "spa_Latn",
+      "omnilingual_language": "spa_Latn",
+      "language": "es",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::es-charon"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-7afb1bb0bc9ad59b906b84080cc3ce5d8f59e51ca4a11d4f45f4dfd6abc96577",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/09b9c2c4fca3aec1bb8494b5ca9ddaa48257de59e740b2aae969bbaccb409578.wav",
+    "sha256": "09b9c2c4fca3aec1bb8494b5ca9ddaa48257de59e740b2aae969bbaccb409578",
+    "text": "",
+    "language": "es",
+    "lang_id": "spa_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000059-000.wav",
+        "start_s": 0.0,
+        "end_s": 13.650958333333334,
+        "sha256": "e3a920f666ac4e6feba8c450715268699f3c2a827e2a048b4fa5c159c37366ca"
+      }
+    ],
+    "duration_s": 13.650958333333334,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.695281982421875,
+      "rms": 0.09282582253217697,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-7afb1bb0bc9ad59b906b84080cc3ce5d8f59e51ca4a11d4f45f4dfd6abc96577",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/09b9c2c4fca3aec1bb8494b5ca9ddaa48257de59e740b2aae969bbaccb409578.wav",
+      "sha256": "09b9c2c4fca3aec1bb8494b5ca9ddaa48257de59e740b2aae969bbaccb409578",
+      "lang_id": "spa_Latn",
+      "omnilingual_language": "spa_Latn",
+      "language": "es",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::es-kore"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-7c33fb7c0870d3882f491df6715253f21d3388418c898f982e205bd2e9d6b85a",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/117bd50fc03c6b39d16c71f3bfdec13fd68f1f32c30f9e0b0c7d608e0a58d3b7.wav",
+    "sha256": "117bd50fc03c6b39d16c71f3bfdec13fd68f1f32c30f9e0b0c7d608e0a58d3b7",
+    "text": "",
+    "language": "es",
+    "lang_id": "spa_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000060-000.wav",
+        "start_s": 0.0,
+        "end_s": 12.970958333333334,
+        "sha256": "b5ec9502c22d9cd33248fbe57feacd059e513c2f51858ee680104f0000a06540"
+      }
+    ],
+    "duration_s": 12.970958333333334,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.665985107421875,
+      "rms": 0.10499037802219391,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-7c33fb7c0870d3882f491df6715253f21d3388418c898f982e205bd2e9d6b85a",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/117bd50fc03c6b39d16c71f3bfdec13fd68f1f32c30f9e0b0c7d608e0a58d3b7.wav",
+      "sha256": "117bd50fc03c6b39d16c71f3bfdec13fd68f1f32c30f9e0b0c7d608e0a58d3b7",
+      "lang_id": "spa_Latn",
+      "omnilingual_language": "spa_Latn",
+      "language": "es",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::es-umbriel"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-94d1ca92109531404bcd860bb5bfecfaeccc19113eef7fff897a215611f8165f",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/898c91402ef11cb27b82fafb995189708dc5833dc28c22b870b0d0dd53291727.wav",
+    "sha256": "898c91402ef11cb27b82fafb995189708dc5833dc28c22b870b0d0dd53291727",
+    "text": "",
+    "language": "es",
+    "lang_id": "spa_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000061-000.wav",
+        "start_s": 0.0,
+        "end_s": 14.170958333333333,
+        "sha256": "9d75b52489dbce8daaf1f6c00362eae4a5e36265a57d4b8ee3f963ecf0584d05"
+      }
+    ],
+    "duration_s": 14.170958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.599578857421875,
+      "rms": 0.08198364824056625,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-94d1ca92109531404bcd860bb5bfecfaeccc19113eef7fff897a215611f8165f",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/898c91402ef11cb27b82fafb995189708dc5833dc28c22b870b0d0dd53291727.wav",
+      "sha256": "898c91402ef11cb27b82fafb995189708dc5833dc28c22b870b0d0dd53291727",
+      "lang_id": "spa_Latn",
+      "omnilingual_language": "spa_Latn",
+      "language": "es",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::es-despina"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-b023478a7f7e544a836f6665fdc9f2c4974f81f507cb4f795d9a4d5f31ed786a",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/324b1ecbb15453aa2654136b3b0852936d31cd5d4f53a6fd4d7d6d794b3f663d.wav",
+    "sha256": "324b1ecbb15453aa2654136b3b0852936d31cd5d4f53a6fd4d7d6d794b3f663d",
+    "text": "",
+    "language": "es",
+    "lang_id": "spa_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000062-000.wav",
+        "start_s": 0.0,
+        "end_s": 14.450958333333332,
+        "sha256": "0e5861849fae09f4c1b6a95064c3d9e3a98673b6214c3977fcbec511e5b9e20e"
+      }
+    ],
+    "duration_s": 14.450958333333332,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.999969482421875,
+      "rms": 0.10757403075695038,
+      "clipped_sample_fraction": 8.649945361178469e-06
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-b023478a7f7e544a836f6665fdc9f2c4974f81f507cb4f795d9a4d5f31ed786a",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/324b1ecbb15453aa2654136b3b0852936d31cd5d4f53a6fd4d7d6d794b3f663d.wav",
+      "sha256": "324b1ecbb15453aa2654136b3b0852936d31cd5d4f53a6fd4d7d6d794b3f663d",
+      "lang_id": "spa_Latn",
+      "omnilingual_language": "spa_Latn",
+      "language": "es",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::es-zephyr"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-d2846384ecbc2b558ec6fa9e0a6866546a34653a0c80ed8ff6373857e30a886f",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/fc526e3445f59cfd318b75f85c56128ed0737aa8c16e1da9cb996ee4365f259d.wav",
+    "sha256": "fc526e3445f59cfd318b75f85c56128ed0737aa8c16e1da9cb996ee4365f259d",
+    "text": "",
+    "language": "es",
+    "lang_id": "spa_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000063-000.wav",
+        "start_s": 0.0,
+        "end_s": 14.330958333333333,
+        "sha256": "72314d82611f37f8c7e98b8b5b6e9e8092061d62dc8ca17ee992ca2c10e14301"
+      }
+    ],
+    "duration_s": 14.330958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.999969482421875,
+      "rms": 0.11199892312288284,
+      "clipped_sample_fraction": 2.907458503298512e-06
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-d2846384ecbc2b558ec6fa9e0a6866546a34653a0c80ed8ff6373857e30a886f",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/fc526e3445f59cfd318b75f85c56128ed0737aa8c16e1da9cb996ee4365f259d.wav",
+      "sha256": "fc526e3445f59cfd318b75f85c56128ed0737aa8c16e1da9cb996ee4365f259d",
+      "lang_id": "spa_Latn",
+      "omnilingual_language": "spa_Latn",
+      "language": "es",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::es-fenrir"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-0aeac18db6a8bfae8d4da189d44357a0c5b3db75afff76a76616365352842251",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/7447cf2b52ead6e8c5269a1aa556fa403b15048cc1b4cd7c86e93a50468a5013.wav",
+    "sha256": "7447cf2b52ead6e8c5269a1aa556fa403b15048cc1b4cd7c86e93a50468a5013",
+    "text": "",
+    "language": "fi",
+    "lang_id": "fin_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000064-000.wav",
+        "start_s": 0.0,
+        "end_s": 13.850958333333333,
+        "sha256": "0bcdd90294cab835f32bbbf453dd3be36067b01201479eb212f782109c4da05a"
+      }
+    ],
+    "duration_s": 13.850958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.738250732421875,
+      "rms": 0.09894824028015137,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-0aeac18db6a8bfae8d4da189d44357a0c5b3db75afff76a76616365352842251",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/7447cf2b52ead6e8c5269a1aa556fa403b15048cc1b4cd7c86e93a50468a5013.wav",
+      "sha256": "7447cf2b52ead6e8c5269a1aa556fa403b15048cc1b4cd7c86e93a50468a5013",
+      "lang_id": "fin_Latn",
+      "omnilingual_language": "fin_Latn",
+      "language": "fi",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::fi-charon"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-267618d1b1812876fb452130f1270c523caa6bbcbf570ce57863f3319fe96507",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/7d9a6df43fc3d26bd8878314e40688e1f048b32ac80bf4178879e559fcb9f1a4.wav",
+    "sha256": "7d9a6df43fc3d26bd8878314e40688e1f048b32ac80bf4178879e559fcb9f1a4",
+    "text": "",
+    "language": "fi",
+    "lang_id": "fin_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000065-000.wav",
+        "start_s": 0.0,
+        "end_s": 14.890958333333334,
+        "sha256": "3a625e13049e819ab1bc7f9a96167338d23cc4d17a50e674cda80613db20afb9"
+      }
+    ],
+    "duration_s": 14.890958333333334,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.945281982421875,
+      "rms": 0.11156062036752701,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-267618d1b1812876fb452130f1270c523caa6bbcbf570ce57863f3319fe96507",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/7d9a6df43fc3d26bd8878314e40688e1f048b32ac80bf4178879e559fcb9f1a4.wav",
+      "sha256": "7d9a6df43fc3d26bd8878314e40688e1f048b32ac80bf4178879e559fcb9f1a4",
+      "lang_id": "fin_Latn",
+      "omnilingual_language": "fin_Latn",
+      "language": "fi",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::fi-fenrir"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-2c20443fc2413d7d9bed396b8d40973f88327e43476ebaa9768e238ea79865ad",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/888161b439279e21a2ea2197a47f37a6d6c49bc2a0c09f6ab7754bb2f162d3a6.wav",
+    "sha256": "888161b439279e21a2ea2197a47f37a6d6c49bc2a0c09f6ab7754bb2f162d3a6",
+    "text": "",
+    "language": "fi",
+    "lang_id": "fin_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000066-000.wav",
+        "start_s": 0.0,
+        "end_s": 15.530958333333333,
+        "sha256": "0156c9e3a451c7e856d000addba4a0ed7746cb2b652bc6c1019ce045ebfd6d04"
+      }
+    ],
+    "duration_s": 15.530958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.748992919921875,
+      "rms": 0.09845808148384094,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-2c20443fc2413d7d9bed396b8d40973f88327e43476ebaa9768e238ea79865ad",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/888161b439279e21a2ea2197a47f37a6d6c49bc2a0c09f6ab7754bb2f162d3a6.wav",
+      "sha256": "888161b439279e21a2ea2197a47f37a6d6c49bc2a0c09f6ab7754bb2f162d3a6",
+      "lang_id": "fin_Latn",
+      "omnilingual_language": "fin_Latn",
+      "language": "fi",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::fi-despina"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-3afb7ea13b670ec0555f71f0899b3cb24cc09b9f063f5301ad8f666f11ecf248",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/b353ea23604b2217b295d7ddd77ba5daf47e7e4633d2c404fae59adc3463d951.wav",
+    "sha256": "b353ea23604b2217b295d7ddd77ba5daf47e7e4633d2c404fae59adc3463d951",
+    "text": "",
+    "language": "fi",
+    "lang_id": "fin_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000067-000.wav",
+        "start_s": 0.0,
+        "end_s": 15.450958333333332,
+        "sha256": "93ccf9bbf4a28efd26f4cee04f6ab5343763488865e2cde54e1d8621195a621c"
+      }
+    ],
+    "duration_s": 15.450958333333332,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.697235107421875,
+      "rms": 0.10753735154867172,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-3afb7ea13b670ec0555f71f0899b3cb24cc09b9f063f5301ad8f666f11ecf248",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/b353ea23604b2217b295d7ddd77ba5daf47e7e4633d2c404fae59adc3463d951.wav",
+      "sha256": "b353ea23604b2217b295d7ddd77ba5daf47e7e4633d2c404fae59adc3463d951",
+      "lang_id": "fin_Latn",
+      "omnilingual_language": "fin_Latn",
+      "language": "fi",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::fi-iapetus"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-3ba708ac40aee840f2348f116e7ce0a4d9bdbbc60bfa9491c0c57037db52e451",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/bf34be8df7c7626599ea98086af75b960543d6c2361896aa0ca48acf26dacb6b.wav",
+    "sha256": "bf34be8df7c7626599ea98086af75b960543d6c2361896aa0ca48acf26dacb6b",
+    "text": "",
+    "language": "fi",
+    "lang_id": "fin_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000068-000.wav",
+        "start_s": 0.0,
+        "end_s": 14.650958333333334,
+        "sha256": "8430db183dbec59f40034ab7fab0b5836ce45e6a91caa2698e068464dfe8b507"
+      }
+    ],
+    "duration_s": 14.650958333333334,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.802703857421875,
+      "rms": 0.10667646676301956,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-3ba708ac40aee840f2348f116e7ce0a4d9bdbbc60bfa9491c0c57037db52e451",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/bf34be8df7c7626599ea98086af75b960543d6c2361896aa0ca48acf26dacb6b.wav",
+      "sha256": "bf34be8df7c7626599ea98086af75b960543d6c2361896aa0ca48acf26dacb6b",
+      "lang_id": "fin_Latn",
+      "omnilingual_language": "fin_Latn",
+      "language": "fi",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::fi-aoede"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-c51979f4bfd388c11148ad8d9607c020f8ea01598245631ce099eb686d65a251",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/46afbbdf4baadc64453a23555c7a446ea399cd0397339c72361f7f0eaab84b50.wav",
+    "sha256": "46afbbdf4baadc64453a23555c7a446ea399cd0397339c72361f7f0eaab84b50",
+    "text": "",
+    "language": "fi",
+    "lang_id": "fin_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000069-000.wav",
+        "start_s": 0.0,
+        "end_s": 15.330958333333333,
+        "sha256": "84d2e4955c135cb6a9ff6ff96cd2bc7162c405158ac9768f99b529546d03fe70"
+      }
+    ],
+    "duration_s": 15.330958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.585906982421875,
+      "rms": 0.08676457405090332,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-c51979f4bfd388c11148ad8d9607c020f8ea01598245631ce099eb686d65a251",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/46afbbdf4baadc64453a23555c7a446ea399cd0397339c72361f7f0eaab84b50.wav",
+      "sha256": "46afbbdf4baadc64453a23555c7a446ea399cd0397339c72361f7f0eaab84b50",
+      "lang_id": "fin_Latn",
+      "omnilingual_language": "fin_Latn",
+      "language": "fi",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::fi-umbriel"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-d4d7d3a6b9cba45cd09b210e6fce9c97dae103f32a0354ecbc0e9d61b4e09ce1",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/33fbd839fd90b76d3e7d6c766747ffdd8659ee54da8dbe0fec43ca4d5a09aa8e.wav",
+    "sha256": "33fbd839fd90b76d3e7d6c766747ffdd8659ee54da8dbe0fec43ca4d5a09aa8e",
+    "text": "",
+    "language": "fi",
+    "lang_id": "fin_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000070-000.wav",
+        "start_s": 0.0,
+        "end_s": 15.450958333333332,
+        "sha256": "74fa17610d957e08456d4856f5b0018208c970552db377c26b1423f5eed6e134"
+      }
+    ],
+    "duration_s": 15.450958333333332,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.567352294921875,
+      "rms": 0.08512389659881592,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-d4d7d3a6b9cba45cd09b210e6fce9c97dae103f32a0354ecbc0e9d61b4e09ce1",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/33fbd839fd90b76d3e7d6c766747ffdd8659ee54da8dbe0fec43ca4d5a09aa8e.wav",
+      "sha256": "33fbd839fd90b76d3e7d6c766747ffdd8659ee54da8dbe0fec43ca4d5a09aa8e",
+      "lang_id": "fin_Latn",
+      "omnilingual_language": "fin_Latn",
+      "language": "fi",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::fi-zephyr"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-f94389732c00b7bff777770030ce5c1b3213a6eee9217db8c5684c2047139dbf",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/9f96487586d55171164a42c37837cc5d9d87afb364e1c9fe92936abcb39098b5.wav",
+    "sha256": "9f96487586d55171164a42c37837cc5d9d87afb364e1c9fe92936abcb39098b5",
+    "text": "",
+    "language": "fi",
+    "lang_id": "fin_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000071-000.wav",
+        "start_s": 0.0,
+        "end_s": 14.610958333333333,
+        "sha256": "42a136e1731f7cb1af77f0432b9cb080bde6b5d5634e525cf2c0d0fe6957b3f9"
+      }
+    ],
+    "duration_s": 14.610958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.545867919921875,
+      "rms": 0.0852046087384224,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-f94389732c00b7bff777770030ce5c1b3213a6eee9217db8c5684c2047139dbf",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/9f96487586d55171164a42c37837cc5d9d87afb364e1c9fe92936abcb39098b5.wav",
+      "sha256": "9f96487586d55171164a42c37837cc5d9d87afb364e1c9fe92936abcb39098b5",
+      "lang_id": "fin_Latn",
+      "omnilingual_language": "fin_Latn",
+      "language": "fi",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::fi-kore"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-0199a4ac529ed03bfbd3f00c0929c64adf0827d1814d8f57700428131781f16f",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/ff4caf0e0d2972eddf2ac6381026c251083851a18ff7620aa7857f558b2ce5c6.wav",
+    "sha256": "ff4caf0e0d2972eddf2ac6381026c251083851a18ff7620aa7857f558b2ce5c6",
+    "text": "",
+    "language": "fr",
+    "lang_id": "fra_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000072-000.wav",
+        "start_s": 0.0,
+        "end_s": 10.890958333333334,
+        "sha256": "356c48915bdb416ad5cb50fac4eb786bafe80f1b78e605e63f52426c9f2c1456"
+      }
+    ],
+    "duration_s": 10.890958333333334,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.725555419921875,
+      "rms": 0.11239338666200638,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-0199a4ac529ed03bfbd3f00c0929c64adf0827d1814d8f57700428131781f16f",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/ff4caf0e0d2972eddf2ac6381026c251083851a18ff7620aa7857f558b2ce5c6.wav",
+      "sha256": "ff4caf0e0d2972eddf2ac6381026c251083851a18ff7620aa7857f558b2ce5c6",
+      "lang_id": "fra_Latn",
+      "omnilingual_language": "fra_Latn",
+      "language": "fr",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::fr-charon"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-9415fe6cc702a20438f73f67023140cfd58b36afcbb2917e2004a9a0a2563e73",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/f8cfccd98f27f34dfe94196202c283297bb4d02ed9fdf25a06ff73cd5a319b2f.wav",
+    "sha256": "f8cfccd98f27f34dfe94196202c283297bb4d02ed9fdf25a06ff73cd5a319b2f",
+    "text": "",
+    "language": "fr",
+    "lang_id": "fra_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000073-000.wav",
+        "start_s": 0.0,
+        "end_s": 11.730958333333334,
+        "sha256": "ab8d385dc18bcff8cb6b183e1de7ffbb819ccd3a84b4f9688d56b63613ae13c6"
+      }
+    ],
+    "duration_s": 11.730958333333334,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.647430419921875,
+      "rms": 0.09342649579048157,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-9415fe6cc702a20438f73f67023140cfd58b36afcbb2917e2004a9a0a2563e73",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/f8cfccd98f27f34dfe94196202c283297bb4d02ed9fdf25a06ff73cd5a319b2f.wav",
+      "sha256": "f8cfccd98f27f34dfe94196202c283297bb4d02ed9fdf25a06ff73cd5a319b2f",
+      "lang_id": "fra_Latn",
+      "omnilingual_language": "fra_Latn",
+      "language": "fr",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::fr-despina"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-a3983c72b9dab53eab25e080be59d154e6431b34b955fef09012298a88cb6844",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/9eacf09fba32aea5da6fe696591f172bea38a2caa32e49a5e9329f42fe08b33c.wav",
+    "sha256": "9eacf09fba32aea5da6fe696591f172bea38a2caa32e49a5e9329f42fe08b33c",
+    "text": "",
+    "language": "fr",
+    "lang_id": "fra_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000074-000.wav",
+        "start_s": 0.0,
+        "end_s": 12.370958333333334,
+        "sha256": "83396a440097c6dc3dd28f6c2a235d4e7f88536a0137fd0e90e543cd8aa124e9"
+      }
+    ],
+    "duration_s": 12.370958333333334,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.598602294921875,
+      "rms": 0.06704308092594147,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-a3983c72b9dab53eab25e080be59d154e6431b34b955fef09012298a88cb6844",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/9eacf09fba32aea5da6fe696591f172bea38a2caa32e49a5e9329f42fe08b33c.wav",
+      "sha256": "9eacf09fba32aea5da6fe696591f172bea38a2caa32e49a5e9329f42fe08b33c",
+      "lang_id": "fra_Latn",
+      "omnilingual_language": "fra_Latn",
+      "language": "fr",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::fr-zephyr"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-b722c97817f7847c5554a734d1c7b6db916e7356a6ac413cb3aa8fac4922ff1b",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/b8810d1e5a27a325308e1b35a986d89a6db5608d1a47bc12dc5d89321a8d76c1.wav",
+    "sha256": "b8810d1e5a27a325308e1b35a986d89a6db5608d1a47bc12dc5d89321a8d76c1",
+    "text": "",
+    "language": "fr",
+    "lang_id": "fra_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000075-000.wav",
+        "start_s": 0.0,
+        "end_s": 10.970958333333334,
+        "sha256": "d32ec39ada60cdf1b41f162040192cfc978256464862119b6ec301206052d100"
+      }
+    ],
+    "duration_s": 10.970958333333334,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.616180419921875,
+      "rms": 0.08861590176820755,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-b722c97817f7847c5554a734d1c7b6db916e7356a6ac413cb3aa8fac4922ff1b",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/b8810d1e5a27a325308e1b35a986d89a6db5608d1a47bc12dc5d89321a8d76c1.wav",
+      "sha256": "b8810d1e5a27a325308e1b35a986d89a6db5608d1a47bc12dc5d89321a8d76c1",
+      "lang_id": "fra_Latn",
+      "omnilingual_language": "fra_Latn",
+      "language": "fr",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::fr-aoede"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-be5c778a024de7199bf22721cdb80888fb77429cee76b2f69100e2001911b8e5",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/d097864218f516636003b3e32ea45b6e0750651153e4645ade3bc9da49a21bad.wav",
+    "sha256": "d097864218f516636003b3e32ea45b6e0750651153e4645ade3bc9da49a21bad",
+    "text": "",
+    "language": "fr",
+    "lang_id": "fra_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000076-000.wav",
+        "start_s": 0.0,
+        "end_s": 12.730958333333334,
+        "sha256": "a5baecedfc48c95daed606f5ecd512fafb509b0b72439eca42334c45b85b4322"
+      }
+    ],
+    "duration_s": 12.730958333333334,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.559539794921875,
+      "rms": 0.09767182916402817,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-be5c778a024de7199bf22721cdb80888fb77429cee76b2f69100e2001911b8e5",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/d097864218f516636003b3e32ea45b6e0750651153e4645ade3bc9da49a21bad.wav",
+      "sha256": "d097864218f516636003b3e32ea45b6e0750651153e4645ade3bc9da49a21bad",
+      "lang_id": "fra_Latn",
+      "omnilingual_language": "fra_Latn",
+      "language": "fr",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::fr-iapetus"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-e85ef581f2fde654cf058216bbb29c0522cd6de898375b746f5c67fa319f1636",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/1963d902ee1bbecbafcc6bd6229f202886597c892ad5414b6e67eb4ef313f9d7.wav",
+    "sha256": "1963d902ee1bbecbafcc6bd6229f202886597c892ad5414b6e67eb4ef313f9d7",
+    "text": "",
+    "language": "fr",
+    "lang_id": "fra_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000077-000.wav",
+        "start_s": 0.0,
+        "end_s": 12.370958333333334,
+        "sha256": "4e4fc56b725eab7be432cf5d47e79f038f50e3243b471c44a87e70ad74c6e618"
+      }
+    ],
+    "duration_s": 12.370958333333334,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.843719482421875,
+      "rms": 0.10483328998088837,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-e85ef581f2fde654cf058216bbb29c0522cd6de898375b746f5c67fa319f1636",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/1963d902ee1bbecbafcc6bd6229f202886597c892ad5414b6e67eb4ef313f9d7.wav",
+      "sha256": "1963d902ee1bbecbafcc6bd6229f202886597c892ad5414b6e67eb4ef313f9d7",
+      "lang_id": "fra_Latn",
+      "omnilingual_language": "fra_Latn",
+      "language": "fr",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::fr-kore"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-98dc8160398a217b8256e258ec80a0b2ec258a397a7a8df62f16d846fe31c9e1",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/98ad50f96dff772683449bb6a5028b612696146e247924c1a4dbb0a1b4d9005a.wav",
+    "sha256": "98ad50f96dff772683449bb6a5028b612696146e247924c1a4dbb0a1b4d9005a",
+    "text": "",
+    "language": "ur",
+    "lang_id": "urd_Arab",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000078-000.wav",
+        "start_s": 0.0,
+        "end_s": 9.370958333333334,
+        "sha256": "01e0e6842c8d166c274e2625d53bca213b8a8d474acae9869aaafb4ebac05382"
+      }
+    ],
+    "duration_s": 9.370958333333334,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.648406982421875,
+      "rms": 0.10008708387613297,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-98dc8160398a217b8256e258ec80a0b2ec258a397a7a8df62f16d846fe31c9e1",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/98ad50f96dff772683449bb6a5028b612696146e247924c1a4dbb0a1b4d9005a.wav",
+      "sha256": "98ad50f96dff772683449bb6a5028b612696146e247924c1a4dbb0a1b4d9005a",
+      "lang_id": "urd_Arab",
+      "omnilingual_language": "urd_Arab",
+      "language": "ur",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::ur-aoede"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-ce73371d1517faaabe05d01ca932c8f6f638334209f9cc31307cb452c429489c",
+    "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/be05583854f826c1b1f554232d0b0759ef0c924c2c8f6a1cf8a39db4b7f12f03.wav",
+    "sha256": "be05583854f826c1b1f554232d0b0759ef0c924c2c8f6a1cf8a39db4b7f12f03",
+    "text": "",
+    "language": "ur",
+    "lang_id": "urd_Arab",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/input/asr-input/000079-000.wav",
+        "start_s": 0.0,
+        "end_s": 9.530958333333333,
+        "sha256": "8d011fd8bd1a0123b0cce9eae152fa68b1a8004408b85f82d6fb3a11b9b1f857"
+      }
+    ],
+    "duration_s": 9.530958333333333,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.632781982421875,
+      "rms": 0.08705449849367142,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-ce73371d1517faaabe05d01ca932c8f6f638334209f9cc31307cb452c429489c",
+      "path": "/workspace/omnivoice-max-concurency/quality/prefix432-modern-export-v1/audio/be05583854f826c1b1f554232d0b0759ef0c924c2c8f6a1cf8a39db4b7f12f03.wav",
+      "sha256": "be05583854f826c1b1f554232d0b0759ef0c924c2c8f6a1cf8a39db4b7f12f03",
+      "lang_id": "urd_Arab",
+      "omnilingual_language": "urd_Arab",
+      "language": "ur",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::ur-charon"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  }
+]

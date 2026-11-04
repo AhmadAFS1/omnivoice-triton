@@ -1,0 +1,1363 @@
+{
+  "measurement_kind": "CPU-only read-only input/ordering/codec audit; no fixed-duration GPU run",
+  "verified_baseline_WAVs": 132,
+  "verified_new_cases": 396,
+  "case_order_and_all_original_non_duration_options_match": true,
+  "quarter_frame_HTTP_string_and_JSON_floor": "132/132 exact original T",
+  "codec_frame_rate": 25,
+  "codec_hop_samples": 960,
+  "sample_rate": 24000,
+  "appended_silence_total_samples": 4800,
+  "baseline_audio": [
+    {
+      "id": "reference-full-all104-plus8voices-00000",
+      "case": "ar-short--Despina--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00000.wav",
+      "sha256": "418885dfc12d463d9d04017706d3a38994aec70eca1ac9e21983318fcd5f65ee",
+      "decoded_samples": 68160,
+      "sample_rate": 24000,
+      "target_tokens": 66,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00001",
+      "case": "ar-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00001.wav",
+      "sha256": "28e1c09a40bb433fdbca91059483fadda1b0efba8e4359ff7c7c571ee308646c",
+      "decoded_samples": 61440,
+      "sample_rate": 24000,
+      "target_tokens": 59,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00002",
+      "case": "ar-short--Zephyr--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00002.wav",
+      "sha256": "dfa13961e7974a48390aa9a9304a790a7cba1af8e9955e52d8fb3ca40c08694b",
+      "decoded_samples": 58560,
+      "sample_rate": 24000,
+      "target_tokens": 56,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00003",
+      "case": "ar-short--Kore--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00003.wav",
+      "sha256": "c1ee348790e6adb7288d8924c8abc8981a7f8695374f8c4c28fb96f737b7e018",
+      "decoded_samples": 67200,
+      "sample_rate": 24000,
+      "target_tokens": 65,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00004",
+      "case": "ar-short--Charon--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00004.wav",
+      "sha256": "256673b72d2a35c8692897946815e2585bc6fd2d16b6178fd1e7eb38411e4aad",
+      "decoded_samples": 60480,
+      "sample_rate": 24000,
+      "target_tokens": 58,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00005",
+      "case": "ar-short--Iapetus--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00005.wav",
+      "sha256": "db8a7e8c237ed0318bd912bce08fa3e8f2f93a21d52bfb9e61abc852dea4086d",
+      "decoded_samples": 66240,
+      "sample_rate": 24000,
+      "target_tokens": 64,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00006",
+      "case": "ar-short--Fenrir--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00006.wav",
+      "sha256": "7f476d823f5e59eacbc7dc6a4cb5d3e2639f58cdd16659ac92b7c75bff9454ed",
+      "decoded_samples": 62400,
+      "sample_rate": 24000,
+      "target_tokens": 60,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00007",
+      "case": "ar-short--Umbriel--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00007.wav",
+      "sha256": "5869214add2fb123634a6668c7ff115a4b158c4362982e88dc9f9b8cbb482215",
+      "decoded_samples": 62400,
+      "sample_rate": 24000,
+      "target_tokens": 60,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00008",
+      "case": "da-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00008.wav",
+      "sha256": "8beb55d92008ef444611d45c068c64e7a746fa760c37bc65dc87fccd49caeecf",
+      "decoded_samples": 55680,
+      "sample_rate": 24000,
+      "target_tokens": 53,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00009",
+      "case": "de-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00009.wav",
+      "sha256": "4d683ff8e8e812c51b6095505e430289c65fb82a37f6044a280ac7a1c1992844",
+      "decoded_samples": 63360,
+      "sample_rate": 24000,
+      "target_tokens": 61,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00010",
+      "case": "el-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00010.wav",
+      "sha256": "e22ddb57baff42435bb8e3947b7a9c67eb120e9baefd17cd167f55490cbfe39d",
+      "decoded_samples": 74880,
+      "sample_rate": 24000,
+      "target_tokens": 73,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00011",
+      "case": "en-short--Despina--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00011.wav",
+      "sha256": "3ba537bc3e50a1ffa7f1ce734972446c3393b658b78850313b8d33e8b0626173",
+      "decoded_samples": 72960,
+      "sample_rate": 24000,
+      "target_tokens": 71,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00012",
+      "case": "en-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00012.wav",
+      "sha256": "2419c1610166455e362f14759d08810588e3fc864cbf9fda6700f16e62d1549b",
+      "decoded_samples": 63360,
+      "sample_rate": 24000,
+      "target_tokens": 61,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00013",
+      "case": "en-short--Zephyr--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00013.wav",
+      "sha256": "ee2a40aa5110a13b19f085e8f9925bd1dfa1bd888bd864978df13917f7ce8638",
+      "decoded_samples": 70080,
+      "sample_rate": 24000,
+      "target_tokens": 68,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00014",
+      "case": "en-short--Kore--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00014.wav",
+      "sha256": "7a2f34299ff3753de46df1585fa8a90ea8c7d3946daf59363c34e6159d365b21",
+      "decoded_samples": 64320,
+      "sample_rate": 24000,
+      "target_tokens": 62,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00015",
+      "case": "en-short--Charon--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00015.wav",
+      "sha256": "5abf23cadff97156fe2bb6fef79270d3f1cc292d65c12b0812d1e607783a1691",
+      "decoded_samples": 65280,
+      "sample_rate": 24000,
+      "target_tokens": 63,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00016",
+      "case": "en-short--Iapetus--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00016.wav",
+      "sha256": "e2df26cb5783b36844e3a4ef0c50baee3993cd1a36b80641625e0098ffaf2d0f",
+      "decoded_samples": 67200,
+      "sample_rate": 24000,
+      "target_tokens": 65,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00017",
+      "case": "en-short--Fenrir--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00017.wav",
+      "sha256": "7125a7b14ff79b5281105202b4ac93fc4be418ee2de1a9940e20512d60d4e287",
+      "decoded_samples": 64320,
+      "sample_rate": 24000,
+      "target_tokens": 62,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00018",
+      "case": "en-short--Umbriel--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00018.wav",
+      "sha256": "a92a1718deace3ef71686e6d494fae811f4ab82cdfe2c367fff49ea0afefc8bb",
+      "decoded_samples": 66240,
+      "sample_rate": 24000,
+      "target_tokens": 64,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00019",
+      "case": "es-short--Despina--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00019.wav",
+      "sha256": "0c646faed690c2e1567e4f0e48c926d14a50a4fe531dad1a768b22d6d3209996",
+      "decoded_samples": 76800,
+      "sample_rate": 24000,
+      "target_tokens": 75,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00020",
+      "case": "es-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00020.wav",
+      "sha256": "9c03cef830e67fb814635f06d6e2d78ed6b734a2b102ea6c4c85f9a69c8ea7f7",
+      "decoded_samples": 67200,
+      "sample_rate": 24000,
+      "target_tokens": 65,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00021",
+      "case": "es-short--Zephyr--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00021.wav",
+      "sha256": "f3dcf41906e5c7b54acf96a838617f8cfb45bb2794ff325b7c282356c763ff30",
+      "decoded_samples": 78720,
+      "sample_rate": 24000,
+      "target_tokens": 77,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00022",
+      "case": "es-short--Kore--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00022.wav",
+      "sha256": "e270dab78f8daec1a97bd90f46fb890df64d9b253db7867774d93b60307b084f",
+      "decoded_samples": 74880,
+      "sample_rate": 24000,
+      "target_tokens": 73,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00023",
+      "case": "es-short--Charon--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00023.wav",
+      "sha256": "e27f12c3308f1a14878502629f473a13fb9833d53263b4fe731a299c415508dc",
+      "decoded_samples": 74880,
+      "sample_rate": 24000,
+      "target_tokens": 73,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00024",
+      "case": "es-short--Iapetus--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00024.wav",
+      "sha256": "9969b1cd42b6961731a2b771edd00755fae5ef3e25243dcc3c4772b7b422ec6b",
+      "decoded_samples": 73920,
+      "sample_rate": 24000,
+      "target_tokens": 72,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00025",
+      "case": "es-short--Fenrir--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00025.wav",
+      "sha256": "e7711622b7d807a413011c4f5c0162506760fcfde4ceb0c9f3aacad07f15a43f",
+      "decoded_samples": 76800,
+      "sample_rate": 24000,
+      "target_tokens": 75,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00026",
+      "case": "es-short--Umbriel--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00026.wav",
+      "sha256": "13c9087d5f73c8f60f20364c1e3037361689b45f5a8f4f66cb955e8653e32076",
+      "decoded_samples": 71040,
+      "sample_rate": 24000,
+      "target_tokens": 69,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00027",
+      "case": "fi-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00027.wav",
+      "sha256": "13184bb9048896706e6464fa930c63ad98748da1ebc6e0562c22b3967f7ac190",
+      "decoded_samples": 64320,
+      "sample_rate": 24000,
+      "target_tokens": 62,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00028",
+      "case": "fr-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00028.wav",
+      "sha256": "cf766fbe09cfa4ae172988b3a88dbdabce50d2712739f4598d79d76d90b0a0b0",
+      "decoded_samples": 73920,
+      "sample_rate": 24000,
+      "target_tokens": 72,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00029",
+      "case": "he-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00029.wav",
+      "sha256": "d0770ee85acb50571539169dbc30eca035c371da26d213225ab21e7860557aa6",
+      "decoded_samples": 62400,
+      "sample_rate": 24000,
+      "target_tokens": 60,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00030",
+      "case": "hi-short--Despina--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00030.wav",
+      "sha256": "584060483b2609c195038e0a6805c298721e4ad9e60058111383c177468c6b64",
+      "decoded_samples": 77760,
+      "sample_rate": 24000,
+      "target_tokens": 76,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00031",
+      "case": "hi-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00031.wav",
+      "sha256": "8ec60698012bdd6dec7e9d3504a9593a58add14d1c86010216213321fbc88fc3",
+      "decoded_samples": 67200,
+      "sample_rate": 24000,
+      "target_tokens": 65,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00032",
+      "case": "hi-short--Zephyr--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00032.wav",
+      "sha256": "41f81d1a682d1daf74dc16357dd18e7e9bd29ed1dcec60c266a1da9bf6363628",
+      "decoded_samples": 73920,
+      "sample_rate": 24000,
+      "target_tokens": 72,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00033",
+      "case": "hi-short--Kore--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00033.wav",
+      "sha256": "ba552cff7a5a6179fc6fe17db1dba5200e450fc92e89399aac8c704c1bf91944",
+      "decoded_samples": 68160,
+      "sample_rate": 24000,
+      "target_tokens": 66,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00034",
+      "case": "hi-short--Charon--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00034.wav",
+      "sha256": "610c5d0e7c51e4a4461451d0cbd55ec750e19ede60e800d73fd695108341286b",
+      "decoded_samples": 68160,
+      "sample_rate": 24000,
+      "target_tokens": 66,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00035",
+      "case": "hi-short--Iapetus--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00035.wav",
+      "sha256": "ccbb8637dd5eafa0f83d3074fe6e186e233d5e63bc3d2c30656f4d98fb46d6ee",
+      "decoded_samples": 71040,
+      "sample_rate": 24000,
+      "target_tokens": 69,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00036",
+      "case": "hi-short--Fenrir--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00036.wav",
+      "sha256": "e1ab038e74bc938f1058649b662ec19f8dbceb29a115a8e78063f13d56d28c60",
+      "decoded_samples": 68160,
+      "sample_rate": 24000,
+      "target_tokens": 66,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00037",
+      "case": "hi-short--Umbriel--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00037.wav",
+      "sha256": "f6674d027a5e44404cb8a2e41582112cebbad1869bb0f50d89972c5d7c58ae27",
+      "decoded_samples": 70080,
+      "sample_rate": 24000,
+      "target_tokens": 68,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00038",
+      "case": "it-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00038.wav",
+      "sha256": "8550cd5dfc8ceefa5361b247ae6937fe1338648babca77956fdfa45865d90b99",
+      "decoded_samples": 52800,
+      "sample_rate": 24000,
+      "target_tokens": 50,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00039",
+      "case": "ja-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00039.wav",
+      "sha256": "85cee3dfb5b9e9620b8c55d26581324285e74f5f05a6f9ddc63add44f1f8093d",
+      "decoded_samples": 77760,
+      "sample_rate": 24000,
+      "target_tokens": 76,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00040",
+      "case": "ko-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00040.wav",
+      "sha256": "07ff2641358b48902ae84ca763bdc3625dc513fc0cc93b5d6e946486d3fbd856",
+      "decoded_samples": 66240,
+      "sample_rate": 24000,
+      "target_tokens": 64,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00041",
+      "case": "ms-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00041.wav",
+      "sha256": "85857a0de96f6610da3bc419e7e462301a11cd545273953b78a1a1dd65be1b82",
+      "decoded_samples": 96000,
+      "sample_rate": 24000,
+      "target_tokens": 95,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00042",
+      "case": "nl-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00042.wav",
+      "sha256": "8aef1b34e3131f1393b9de4a35deeba6f06814b53fd7d4201a112125d8adc249",
+      "decoded_samples": 68160,
+      "sample_rate": 24000,
+      "target_tokens": 66,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00043",
+      "case": "no-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00043.wav",
+      "sha256": "39596c176140bfdf8e24bc8dc12dfc7c5c5e019bd760973245811007b7bae260",
+      "decoded_samples": 56640,
+      "sample_rate": 24000,
+      "target_tokens": 54,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00044",
+      "case": "pl-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00044.wav",
+      "sha256": "18677bd55756145304330ef6bb9eb703fd54207e09ee9fa3912083833ead7515",
+      "decoded_samples": 58560,
+      "sample_rate": 24000,
+      "target_tokens": 56,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00045",
+      "case": "pt-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00045.wav",
+      "sha256": "b711f1a05b8487f854216b301384d2e28472a21e41131f72e75846893416dc84",
+      "decoded_samples": 75840,
+      "sample_rate": 24000,
+      "target_tokens": 74,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00046",
+      "case": "ru-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00046.wav",
+      "sha256": "ab595dcb3dec46a30eedad3b83d7906489f025bc9ad2de63e2eab9861ece1ad6",
+      "decoded_samples": 51840,
+      "sample_rate": 24000,
+      "target_tokens": 49,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00047",
+      "case": "sv-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00047.wav",
+      "sha256": "d72d05fe3983cb5bfd2297ebb98c256cef9c992e557d9b624e0177c78a797287",
+      "decoded_samples": 50880,
+      "sample_rate": 24000,
+      "target_tokens": 48,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00048",
+      "case": "sw-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00048.wav",
+      "sha256": "9f239ed3a127baa731cf895d329f45849bd8ce5b11d657a34959cfcbac9615fd",
+      "decoded_samples": 70080,
+      "sample_rate": 24000,
+      "target_tokens": 68,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00049",
+      "case": "tr-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00049.wav",
+      "sha256": "15aa193dc5c654f058f15549123bb05674d0fb4377dcdd8374221f2320790f40",
+      "decoded_samples": 58560,
+      "sample_rate": 24000,
+      "target_tokens": 56,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00050",
+      "case": "ur-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00050.wav",
+      "sha256": "c6b67aaa052168c0fb67610668aa58ce00dda65329b55520947a9b00463c388b",
+      "decoded_samples": 70080,
+      "sample_rate": 24000,
+      "target_tokens": 68,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00051",
+      "case": "zh-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00051.wav",
+      "sha256": "af53bfe93957e272e0286f175be66ec5ae21d056e336f5e98ea135d3d92943c6",
+      "decoded_samples": 48960,
+      "sample_rate": 24000,
+      "target_tokens": 46,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00052",
+      "case": "bn-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00052.wav",
+      "sha256": "bf26d1eb73d6d6ffe174d42115d2dc93b227e195895b00ff8b6ae008c2d82c1c",
+      "decoded_samples": 72960,
+      "sample_rate": 24000,
+      "target_tokens": 71,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00053",
+      "case": "pa-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00053.wav",
+      "sha256": "0f8468d31b970d193a1fe319afb165293c1d836f0a2d5b9f78286b0c0fb23cd7",
+      "decoded_samples": 70080,
+      "sample_rate": 24000,
+      "target_tokens": 68,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00054",
+      "case": "yue-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00054.wav",
+      "sha256": "b76d7b53ed839ba9532c221ef316c1f985686a964a6385fc482285fe958f93b8",
+      "decoded_samples": 51840,
+      "sample_rate": 24000,
+      "target_tokens": 49,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00055",
+      "case": "mr-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00055.wav",
+      "sha256": "78ccbce72b2b9234a52fd87ab10b4204269dafd9ce4cca7c2607c532198b9944",
+      "decoded_samples": 60480,
+      "sample_rate": 24000,
+      "target_tokens": 58,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00056",
+      "case": "jv-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00056.wav",
+      "sha256": "0146aed118619b8dfa41b9401328bfbc1d6e46aaf5f27786c7675301e7d65222",
+      "decoded_samples": 70080,
+      "sample_rate": 24000,
+      "target_tokens": 68,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00057",
+      "case": "te-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00057.wav",
+      "sha256": "1591b683f7c0379142109380cf5e2ab7cdd63ee621de544e614e657778f352f2",
+      "decoded_samples": 65280,
+      "sample_rate": 24000,
+      "target_tokens": 63,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00058",
+      "case": "ta-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00058.wav",
+      "sha256": "347fd06a97f1db74222b06215cb7ac7c9ebc0b54beb4d0694d987c00cde6e2da",
+      "decoded_samples": 64320,
+      "sample_rate": 24000,
+      "target_tokens": 62,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00059",
+      "case": "vi-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00059.wav",
+      "sha256": "5085243ab2b1b12b78a9744982d9510f653e2fe1c43dc865b5dae33379f37195",
+      "decoded_samples": 55680,
+      "sample_rate": 24000,
+      "target_tokens": 53,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00060",
+      "case": "th-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00060.wav",
+      "sha256": "68832012fd56b1d64c0436177a88e372bb90673e0b4ed6ac196e6bc80e797f63",
+      "decoded_samples": 81600,
+      "sample_rate": 24000,
+      "target_tokens": 80,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00061",
+      "case": "ig-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00061.wav",
+      "sha256": "0857cc0c21f628d54667c5f579ad4f558cbbf969e0216ff8c6ecc5d1e640d02d",
+      "decoded_samples": 58560,
+      "sample_rate": 24000,
+      "target_tokens": 56,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00062",
+      "case": "nan-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00062.wav",
+      "sha256": "48fec5238b3fa57a9eec5fe51c9b8274fe1ac9e8876721099b2bac000a1b611e",
+      "decoded_samples": 103680,
+      "sample_rate": 24000,
+      "target_tokens": 103,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00063",
+      "case": "gu-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00063.wav",
+      "sha256": "820cb018e7d98af628a6028e9520f26aa6fc48bc2204fb4a85369d0e58d1d45e",
+      "decoded_samples": 69120,
+      "sample_rate": 24000,
+      "target_tokens": 67,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00064",
+      "case": "ha-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00064.wav",
+      "sha256": "4484d5ce758e59caca2f11b34c9238449bca90f0b9c4bfb2374c2070778c667f",
+      "decoded_samples": 68160,
+      "sample_rate": 24000,
+      "target_tokens": 66,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00065",
+      "case": "bho-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00065.wav",
+      "sha256": "c83d4d2d305ac9a29db173ad56459f35fc77e150dbebd57c1ed7e1cbd7125dea",
+      "decoded_samples": 61440,
+      "sample_rate": 24000,
+      "target_tokens": 59,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00066",
+      "case": "yo-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00066.wav",
+      "sha256": "1b8871810761e38481a0bd64e14540a7960e028e1d700b64ab4f91bea5ce445d",
+      "decoded_samples": 51840,
+      "sample_rate": 24000,
+      "target_tokens": 49,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00067",
+      "case": "kn-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00067.wav",
+      "sha256": "046c31e7da72921fec1d464b2ee70c3b2db99ce824d1f725afa9de10c2748683",
+      "decoded_samples": 86400,
+      "sample_rate": 24000,
+      "target_tokens": 85,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00068",
+      "case": "id-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00068.wav",
+      "sha256": "7cdc09402c1d1831ade87489bcf1e049fd675c1af02d57d93d35cbb4793818b1",
+      "decoded_samples": 70080,
+      "sample_rate": 24000,
+      "target_tokens": 68,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00069",
+      "case": "ml-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00069.wav",
+      "sha256": "1f585db8fcdb9efedd45d85f85d86a051a1879da671be615ca086eda007075a0",
+      "decoded_samples": 98880,
+      "sample_rate": 24000,
+      "target_tokens": 98,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00070",
+      "case": "ar-DZ-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00070.wav",
+      "sha256": "58d5befd4bce195137e42251162488b288a754ebdf3a601fb4d025e0da543f81",
+      "decoded_samples": 62400,
+      "sample_rate": 24000,
+      "target_tokens": 60,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00071",
+      "case": "mai-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00071.wav",
+      "sha256": "2cb2a615eef1c72fc1aefe9f31f9dfffc99dfb790fb2106c409cab71cedebac9",
+      "decoded_samples": 69120,
+      "sample_rate": 24000,
+      "target_tokens": 67,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00072",
+      "case": "my-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00072.wav",
+      "sha256": "29e26b541e7f2286eacac208018395d7614cd04be801253cb16c22bacf1f3d15",
+      "decoded_samples": 68160,
+      "sample_rate": 24000,
+      "target_tokens": 66,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00073",
+      "case": "ar-SD-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00073.wav",
+      "sha256": "5bd4ee26207a0963d7a8b932f1b3efb86b8b436b3d8ae806bd6c9f1d0fdc02b4",
+      "decoded_samples": 49920,
+      "sample_rate": 24000,
+      "target_tokens": 47,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00074",
+      "case": "sd-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00074.wav",
+      "sha256": "32ae1766e9e3fdbc54d948da4564f5c49841fd8f9749f4ed341c22a5361fb89a",
+      "decoded_samples": 85440,
+      "sample_rate": 24000,
+      "target_tokens": 84,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00075",
+      "case": "am-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00075.wav",
+      "sha256": "93a5f164fdc67fbe1a49bf97ae9b9ffeca959a282a43f560aac8b21349d96f13",
+      "decoded_samples": 129600,
+      "sample_rate": 24000,
+      "target_tokens": 130,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00076",
+      "case": "pcm-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00076.wav",
+      "sha256": "bd48f7889a6020fff0ed0fd5e955e6e98fc176a673164c456baba584b0c3c340",
+      "decoded_samples": 74880,
+      "sample_rate": 24000,
+      "target_tokens": 73,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00077",
+      "case": "fil-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00077.wav",
+      "sha256": "3758f072c6ea517a29744df9d3fcc2a8573e93240ad5c79ccba30ddd482f0683",
+      "decoded_samples": 100800,
+      "sample_rate": 24000,
+      "target_tokens": 100,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00078",
+      "case": "uk-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00078.wav",
+      "sha256": "b9deb82c0ac4644f7bef43b52bfe1008d53b9f7d259b0c608da0cd637f68154c",
+      "decoded_samples": 69120,
+      "sample_rate": 24000,
+      "target_tokens": 67,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00079",
+      "case": "skr-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00079.wav",
+      "sha256": "0335d14a90d8d7aa2cd1c7b0b2964fb93377880d3bf09715d83139614e5e1463",
+      "decoded_samples": 92160,
+      "sample_rate": 24000,
+      "target_tokens": 91,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00080",
+      "case": "ro-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00080.wav",
+      "sha256": "e78130fa6ec36486da13891d6c3f618ccb9048a45a855bcf69dfcae85ec1c063",
+      "decoded_samples": 63360,
+      "sample_rate": 24000,
+      "target_tokens": 61,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00081",
+      "case": "so-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00081.wav",
+      "sha256": "118276fca1f6e14a7d129884902996d1ffa7dca42075893b5f1a673791181bc3",
+      "decoded_samples": 55680,
+      "sample_rate": 24000,
+      "target_tokens": 53,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00082",
+      "case": "ceb-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00082.wav",
+      "sha256": "377ef3e88cc69f84355b9a077c1055e7e3f9bcb1cdeaa1bf3fca9dae18fb68b1",
+      "decoded_samples": 65280,
+      "sample_rate": 24000,
+      "target_tokens": 63,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00083",
+      "case": "lo-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00083.wav",
+      "sha256": "6765aabb908a19316f5bc3af078573ed0589a0cd51d442a82775c95d4ff727bb",
+      "decoded_samples": 82560,
+      "sample_rate": 24000,
+      "target_tokens": 81,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00084",
+      "case": "ln-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00084.wav",
+      "sha256": "404dcca850cdac2468be3dd5840a64e7a35ca61bc20ca5a0e3436e7596598bde",
+      "decoded_samples": 79680,
+      "sample_rate": 24000,
+      "target_tokens": 78,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00085",
+      "case": "ar-EG-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00085.wav",
+      "sha256": "928fa35b61a5ccbe8aa2312b05a3369ee1415681f2b56ae6b5ae41f53f4fac4b",
+      "decoded_samples": 80640,
+      "sample_rate": 24000,
+      "target_tokens": 79,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00086",
+      "case": "ar-IQ-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00086.wav",
+      "sha256": "b136853fef21ae1d94ebd8040a6be874a415a7de531c16d7e8b80b64ad1699a0",
+      "decoded_samples": 72000,
+      "sample_rate": 24000,
+      "target_tokens": 70,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00087",
+      "case": "hu-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00087.wav",
+      "sha256": "75f470356c7a7061e18dd2957365398c268ea2422aebbf8be34a101e98c4bf00",
+      "decoded_samples": 51840,
+      "sample_rate": 24000,
+      "target_tokens": 49,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00088",
+      "case": "si-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00088.wav",
+      "sha256": "1f6c86667c6211609e472cada66b7b56a7d48a2b20f9b07673556b5334169ed1",
+      "decoded_samples": 77760,
+      "sample_rate": 24000,
+      "target_tokens": 76,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00089",
+      "case": "km-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00089.wav",
+      "sha256": "f02c1808193d4acc0e7c921ef1f6ab2eb663973511c8883ee79ee754fecbadf7",
+      "decoded_samples": 97920,
+      "sample_rate": 24000,
+      "target_tokens": 97,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00090",
+      "case": "ne-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00090.wav",
+      "sha256": "771db14d030ac9600b91bea79d7ac11b34949be70588fdb37fd38ca47db28388",
+      "decoded_samples": 56640,
+      "sample_rate": 24000,
+      "target_tokens": 54,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00091",
+      "case": "dyu-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00091.wav",
+      "sha256": "07d5f21174fe60fb828c7d64402e838b47ef59d39456ec88e505a0a9106e1be6",
+      "decoded_samples": 51840,
+      "sample_rate": 24000,
+      "target_tokens": 49,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00092",
+      "case": "ar-SY-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00092.wav",
+      "sha256": "11ae1abc73efa633310e93420d3820cb1cf7e6294f314d5131816e3bb2eb0ca6",
+      "decoded_samples": 69120,
+      "sample_rate": 24000,
+      "target_tokens": 67,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00093",
+      "case": "rw-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00093.wav",
+      "sha256": "d9f3de843f6966998dc58020d84464eaa17723f8dd38aa68d9a762485a7f2ed2",
+      "decoded_samples": 82560,
+      "sample_rate": 24000,
+      "target_tokens": 81,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00094",
+      "case": "as-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00094.wav",
+      "sha256": "e596d62f974f54ec994603fe5b50aefe0ebd0edc10167dde79ee0d2f2bc8167b",
+      "decoded_samples": 91200,
+      "sample_rate": 24000,
+      "target_tokens": 90,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00095",
+      "case": "nso-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00095.wav",
+      "sha256": "12ecc7b4754d7c85e7fd6490e19d1a14a997753c3ced0a71bd9f4b66562546ad",
+      "decoded_samples": 69120,
+      "sample_rate": 24000,
+      "target_tokens": 67,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00096",
+      "case": "dcc-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00096.wav",
+      "sha256": "be28897857e9534eb1965093e0e1dcb7cff7fb09d05c463144c8f192c0a31427",
+      "decoded_samples": 47040,
+      "sample_rate": 24000,
+      "target_tokens": 44,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00097",
+      "case": "kk-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00097.wav",
+      "sha256": "51397a7e3a56f1e545aaca574dc07870aa791b63afc7361818517b6b4ad228a0",
+      "decoded_samples": 67200,
+      "sample_rate": 24000,
+      "target_tokens": 65,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00098",
+      "case": "ht-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00098.wav",
+      "sha256": "ff0abe4fd146c705e1a9152c763d778fec58a0d2f78bdf37f95403ff21895070",
+      "decoded_samples": 59520,
+      "sample_rate": 24000,
+      "target_tokens": 57,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00099",
+      "case": "dag-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00099.wav",
+      "sha256": "448c7df335b49b657aad8087db9ca209e4ea24fb22c09807acc1785289057731",
+      "decoded_samples": 106560,
+      "sample_rate": 24000,
+      "target_tokens": 106,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00100",
+      "case": "zu-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00100.wav",
+      "sha256": "79fabe44240eaf86dfb21dcf96f59e77b40f81c0c17a78791392400f6b9a33eb",
+      "decoded_samples": 79680,
+      "sample_rate": 24000,
+      "target_tokens": 78,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00101",
+      "case": "sr-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00101.wav",
+      "sha256": "343367c6face72d651c55aa107f6e2480dd32f5146bc9de58a1fc72fee2d1640",
+      "decoded_samples": 65280,
+      "sample_rate": 24000,
+      "target_tokens": 63,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00102",
+      "case": "ny-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00102.wav",
+      "sha256": "0754420248113704f4ae5b77142165e659c665b7f5b8432ee8f68a41c43e2849",
+      "decoded_samples": 61440,
+      "sample_rate": 24000,
+      "target_tokens": 59,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00103",
+      "case": "tk-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00103.wav",
+      "sha256": "e2a6886eec4f9f00f9593f7586e9bd7bc27356f64eaa9cdef2366bf1e2f99eec",
+      "decoded_samples": 48960,
+      "sample_rate": 24000,
+      "target_tokens": 46,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00104",
+      "case": "ar-TN-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00104.wav",
+      "sha256": "4168340ce6a2c99cef52e39c84a477122382db4a290125289097275c526fe774",
+      "decoded_samples": 74880,
+      "sample_rate": 24000,
+      "target_tokens": 73,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00105",
+      "case": "ar-AE-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00105.wav",
+      "sha256": "34c83217cdd5e8065f9829b39b0ffa9e261a9fa3e6706ac01fee4243a9bc1785",
+      "decoded_samples": 48960,
+      "sample_rate": 24000,
+      "target_tokens": 46,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00106",
+      "case": "ar-SA-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00106.wav",
+      "sha256": "10eff33d76ece376938692424dfd62481eac2316450cf5e255b9001a77c3a8cc",
+      "decoded_samples": 48960,
+      "sample_rate": 24000,
+      "target_tokens": 46,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00107",
+      "case": "ayp-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00107.wav",
+      "sha256": "0a83d6ce63bdb7cc7cb1d63a75a9832b4a23183851140c0ec5823921a321aaee",
+      "decoded_samples": 63360,
+      "sample_rate": 24000,
+      "target_tokens": 61,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00108",
+      "case": "bjj-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00108.wav",
+      "sha256": "0e72eb8fce6e3adcbfd2f6d9cb75247367b8514da8ce206d7badd4a6d808213d",
+      "decoded_samples": 45120,
+      "sample_rate": 24000,
+      "target_tokens": 42,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00109",
+      "case": "xh-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00109.wav",
+      "sha256": "9fbb9d4bc5c6c65057ef660673b680e35c67314578fb9282fc6b6e277da49c27",
+      "decoded_samples": 77760,
+      "sample_rate": 24000,
+      "target_tokens": 76,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00110",
+      "case": "cs-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00110.wav",
+      "sha256": "49bb086a39063f7d845bbd45443c181e4a55ec7d4ec4f876b4b36a58192773e2",
+      "decoded_samples": 54720,
+      "sample_rate": 24000,
+      "target_tokens": 52,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00111",
+      "case": "ug-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00111.wav",
+      "sha256": "42bbdf9d4bb9dba2927e7b000b6880d11adb7c42a8aa9c10c9ab5e83177f0865",
+      "decoded_samples": 68160,
+      "sample_rate": 24000,
+      "target_tokens": 66,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00112",
+      "case": "ti-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00112.wav",
+      "sha256": "c48ba22c96a5551cab81755d47e31346c1a62fb9b1a6e1713260b6759896e6fb",
+      "decoded_samples": 164160,
+      "sample_rate": 24000,
+      "target_tokens": 166,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00113",
+      "case": "sn-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00113.wav",
+      "sha256": "f10f0478cfa338df60f194b6813237a90b67f45f77c11b2c8c35d04240961b10",
+      "decoded_samples": 63360,
+      "sample_rate": 24000,
+      "target_tokens": 61,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00114",
+      "case": "tg-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00114.wav",
+      "sha256": "7071badf1e0351ed7f961dfc884fe1bd221a1e1ff99108cdc3acc94b21ec44e2",
+      "decoded_samples": 63360,
+      "sample_rate": 24000,
+      "target_tokens": 61,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00115",
+      "case": "af-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00115.wav",
+      "sha256": "f403fb6c0869c8c745b5b51b66f0664149d9b427a063bcd99af7d51dfde30583",
+      "decoded_samples": 70080,
+      "sample_rate": 24000,
+      "target_tokens": 68,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00116",
+      "case": "be-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00116.wav",
+      "sha256": "eda59fe4f7a7616a66c3b6c43631c7ebfaeb40a47aaa9dbcbce6efc655051c06",
+      "decoded_samples": 51840,
+      "sample_rate": 24000,
+      "target_tokens": 49,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00117",
+      "case": "sk-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00117.wav",
+      "sha256": "ef78191538b476f965a49435abb446b06209b8e518c5de2f1fd17b7ede39e660",
+      "decoded_samples": 56640,
+      "sample_rate": 24000,
+      "target_tokens": 54,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00118",
+      "case": "bs-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00118.wav",
+      "sha256": "cff9499a586f9082b8e47f47ce619d6ac892d56267ef4411daf2d97330847c4e",
+      "decoded_samples": 51840,
+      "sample_rate": 24000,
+      "target_tokens": 49,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00119",
+      "case": "hr-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00119.wav",
+      "sha256": "debb58cb8f6da858cff69254e7188527864268023daaa2f94ea8f893d5017521",
+      "decoded_samples": 51840,
+      "sample_rate": 24000,
+      "target_tokens": 49,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00120",
+      "case": "et-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00120.wav",
+      "sha256": "09d7315e488e25ec8797403ddb63a35fbf1794e161ae1b85942b27b5b11b12b3",
+      "decoded_samples": 50880,
+      "sample_rate": 24000,
+      "target_tokens": 48,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00121",
+      "case": "lt-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00121.wav",
+      "sha256": "9675362cb00c4833df7c457b43004e37ac3e0f9e465ffb7805f4fdb2c8f9a641",
+      "decoded_samples": 51840,
+      "sample_rate": 24000,
+      "target_tokens": 49,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00122",
+      "case": "sl-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00122.wav",
+      "sha256": "aea7419b5695d32f30092664368133cea7caf7a7c91091544ef1b6d1ecb35a97",
+      "decoded_samples": 58560,
+      "sample_rate": 24000,
+      "target_tokens": 56,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00123",
+      "case": "mk-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00123.wav",
+      "sha256": "d7ebc89260c1d202df9aaaaf80c3158ec58f9b45ec534e40d9216f0aceffb452",
+      "decoded_samples": 55680,
+      "sample_rate": 24000,
+      "target_tokens": 53,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00124",
+      "case": "sq-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00124.wav",
+      "sha256": "3a33b723c866d048b64d95bb660afd65ac2996bf7733bef8f677c753e234c6a3",
+      "decoded_samples": 63360,
+      "sample_rate": 24000,
+      "target_tokens": 61,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00125",
+      "case": "ka-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00125.wav",
+      "sha256": "14dcfbbd538d0bf967880180f3aaba6a10d305e9aaf2a0c9c5b51ec16fd9694f",
+      "decoded_samples": 47040,
+      "sample_rate": 24000,
+      "target_tokens": 44,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00126",
+      "case": "hy-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00126.wav",
+      "sha256": "9893bb1393756eb1b4ae4442077e30ec72f4b0e026b192867227c0da5ca84df2",
+      "decoded_samples": 58560,
+      "sample_rate": 24000,
+      "target_tokens": 56,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00127",
+      "case": "mn-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00127.wav",
+      "sha256": "492442043dd7dcc4d3980f85e71434c285344a11ecd36b80288dd173282e2e92",
+      "decoded_samples": 63360,
+      "sample_rate": 24000,
+      "target_tokens": 61,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00128",
+      "case": "tn-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00128.wav",
+      "sha256": "5e51d99cd8e306f62b5e99f30dd798b93b55ee0c99440d7183e8a751d9fbc37a",
+      "decoded_samples": 57600,
+      "sample_rate": 24000,
+      "target_tokens": 55,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00129",
+      "case": "tw-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00129.wav",
+      "sha256": "9d9648fbf77905fc6355fd9e82dc38faa69d419cf778c1230691907a4a50cbcf",
+      "decoded_samples": 50880,
+      "sample_rate": 24000,
+      "target_tokens": 48,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00130",
+      "case": "mi-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00130.wav",
+      "sha256": "cde38821ba3803bfa7d3216ae46ae92e0e84ff64a4b32d0c835b342251133510",
+      "decoded_samples": 77760,
+      "sample_rate": 24000,
+      "target_tokens": 76,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    },
+    {
+      "id": "reference-full-all104-plus8voices-00131",
+      "case": "haw-short--Aoede--lingua-video",
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/audio/reference-full-all104-plus8voices-00131.wav",
+      "sha256": "7bb172f3d213de4abc248473d4f8c5dd9c68c2638212dc768a6faf8933e9b5c1",
+      "decoded_samples": 42240,
+      "sample_rate": 24000,
+      "target_tokens": 39,
+      "token_evidence": "Header matches pinned codec-hop/padding reconstruction; actual GenerationTask instrumentation would strengthen evidence but is not currently measured or a gate"
+    }
+  ],
+  "config_sha256": "f328973ff9017da25878e982873fd4c616e7f2ba98194e5953e4d5d8f7dfa593",
+  "corpus_sha256": "9e4fc0fa6a0d603d48484172b5322ecfbbbcb989a6e74b57d5e6d04949de5759",
+  "builder_sha256": "ac2e2fb9b1e66222d4b3febac1a6d6bf64ed45ffb63d0b8128b300f2bdce35fb",
+  "schema": {
+    "required_case_join": [
+      "comparison_original_case_id",
+      "voice_id",
+      "language",
+      "api_language",
+      "omnilingual_language",
+      "reference_id",
+      "conditioning_reference_sha256"
+    ],
+    "worker_options": "Original settings, plus duration=(original_full_T+0.25)/25; full/prefix10/prefix17 otherwise unchanged",
+    "fixed_target_provenance": "Baseline request ID/body SHA, integer T, codec frame rate, duration argument, decoded sample count",
+    "future_runtime_assertions": [
+      "Every target-token header equals T",
+      "Every postoff WAV has (T+5)*960 samples",
+      "Full-fixed sanity arm all132 body hashes equal prior full arm before any crop arm launches"
+    ],
+    "optional_additional_instrumentation": "Record actual model GenerationTask.target_lens; not currently measured or an enforced gate"
+  },
+  "pitfalls": [
+    "The required_gates strings in config are declarations; the controller must actually enforce full-arm hash equality and stop before cropped arms on any mismatch.",
+    "Optional actual integer GenerationTask instrumentation would strengthen evidence; it has not been measured and is not a current gate.",
+    "The 0.2-second padding rule is valid only with this pinned helper and postoff/no inserted pauses; do not apply it to trimming, chunking or other codecs.",
+    "Duration overrides speed upstream and creates a derived speed_list for chunking. These targets stay short and must be asserted to take the short iterative path.",
+    "Quarter-frame interior values are intentional, not literal output duration. Do not use padded WAV duration as the duration argument or remove the quarter-frame guard.",
+    "Do not change request order, sampler seed, reference registration, source, codec or hidden worker state when checking the full-fixed sanity arm."
+  ]
+}

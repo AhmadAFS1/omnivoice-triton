@@ -107,6 +107,12 @@ and incomplete-judge coverage. Its inclusion makes no new GPU-ASR or quality cla
 Use one declared judge protocol per comparison; unlabeled frozen output is the
 legacy BF16/batch-1 protocol. Model weights, reference WAVs, raw full-run audio,
 large archives and temporary logs remain outside this portable review package.
-The 208 sample WAVs and compact audited stage-1 results retain their original
+The original 208 sample WAVs and compact audited stage-1 results retain their original
 hashes; [verification.json](samples/rtx4070-2026-11-03/verification.json) and
 [package-validation.json](package-validation.json) describe the local checks.
+
+The [November4 checkpoint](../../docs/max-concurrency-quality-checkpoint-2026-11-04.md)
+adds [396 complete reference-prefix WAVs](samples/rtx4070ti-reference-prefix-2026-11-04/README.md),
+the two blind ASR results, and separate word/speaker diagnostics. Those experimental
+prefixes are not globally quality-cleared or promoted. The package now retains604
+generated sample WAVs; no conditioning reference WAVs or model weights are bundled.

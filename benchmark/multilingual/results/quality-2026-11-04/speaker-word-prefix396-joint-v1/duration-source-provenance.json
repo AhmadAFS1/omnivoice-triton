@@ -1,0 +1,11 @@
+{
+  "url": "https://huggingface.co/k2-fsa/OmniVoice/resolve/c5fdb5ccb189668d56333f77ba2629f4cd7535f4/audio_tokenizer/config.json",
+  "sha256": "eefb20806f7104e77c9a5277c9df0f9bb8826b08eb1d4e8ab2b9829b6ef9fac1",
+  "matched_deployed_model_integrity": true,
+  "model_revision": "c5fdb5ccb189668d56333f77ba2629f4cd7535f4",
+  "audio_helper_source": {
+    "wheel_path": "omnivoice/utils/audio.py",
+    "sha256": "3a29ad8a2e294c61a8f60aa127aff0bb738c4432eae3cc4adbc6dc42d115d3a0",
+    "wheel_SHA256": "b325a5ca39a42ccfec6a1f396010c07f62f69db20cceee517a48ad3c56e93861"
+  }
+}

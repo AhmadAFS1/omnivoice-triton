@@ -1,0 +1,8 @@
+{
+  "raw_attempt": "/workspace/omnivoice-max-concurency/asr-results/modern-prefix432-LLM-v1/cache-imports/import-52b6890097a3e0915747-omniASR_LLM_Unlimited_1B_v2",
+  "raw_output_sha256": "170307d987b79797560cb9d5cffd02269f5e6d5e37b74d024635ddc30781480e",
+  "validated_complete_transcript_rows": 16,
+  "asr_protocol_config_id": "modern59071593-batch1-v1-7f8784ef9d826da07f57",
+  "issues": [],
+  "note": "Only complete records are published; raw evidence is unchanged."
+}

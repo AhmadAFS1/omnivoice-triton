@@ -1,0 +1,65 @@
+{
+  "measurement_kind": "CPU-only retained response integrity audit; no GPU/model inference",
+  "runs": [
+    {
+      "run": "candidate47-all299",
+      "offers": 299,
+      "status_counts": {
+        "200": 299
+      },
+      "WAVs_rehashed_decoded": 299,
+      "requests_sha256": "fe42e1fda8561e9b5c468af15f7e59731ba2c3d32d6b8dab18019c879b3ccc89"
+    },
+    {
+      "run": "candidate47-short-curve",
+      "offers": 121,
+      "status_counts": {
+        "200": 121
+      },
+      "WAVs_rehashed_decoded": 121,
+      "requests_sha256": "e2a15a2b88781680baf5a8aff2b82d6d1567600ceda1e489ceda3590eb490b42"
+    },
+    {
+      "run": "candidate47-unique1000",
+      "offers": 1010,
+      "status_counts": {
+        "200": 1010
+      },
+      "WAVs_rehashed_decoded": 1010,
+      "requests_sha256": "2559fcacf6928425492a0709c8242a8b91b4e04a4c1e6a55b997a52eff33e969"
+    },
+    {
+      "run": "candidate47-stagger500-unique-1s",
+      "offers": 510,
+      "status_counts": {
+        "200": 510
+      },
+      "WAVs_rehashed_decoded": 510,
+      "requests_sha256": "210e7878202ec9ae2f48119d80b27b86ed30d2fdcc25b6528495d0a565a3631a"
+    },
+    {
+      "run": "candidate47-stagger500-unique-2s",
+      "offers": 510,
+      "status_counts": {
+        "200": 510
+      },
+      "WAVs_rehashed_decoded": 510,
+      "requests_sha256": "33b8fc06dcea9d07fa761dfa4ac2dcb26069a818d84cbc5253b7554198f1c454"
+    },
+    {
+      "run": "candidate47-realistic-calls500",
+      "offers": 1510,
+      "status_counts": {
+        "200": 83,
+        "429": 1426,
+        "None": 1
+      },
+      "WAVs_rehashed_decoded": 83,
+      "requests_sha256": "0d0d51126f3d711a12505d88129b383554603bbe852bf37a33a8939840b2b6a2"
+    }
+  ],
+  "total_WAVs": 2533,
+  "unique_WAV_sha256": 2499,
+  "source_sha256": "ba6f9cb0d722352c3bb4e9dc48f231d2d2abdedb96f5871f284c4dd9d5a3e224",
+  "interpretation": "Every HTTP rejection and transport failure remains a failed offer. Signal validity and exact retention hashes do not establish spoken-word or native-language quality."
+}

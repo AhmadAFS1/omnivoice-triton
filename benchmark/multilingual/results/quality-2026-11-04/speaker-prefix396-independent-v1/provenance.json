@@ -1,0 +1,36 @@
+{
+  "audit_source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/audit_speaker_prefix.py",
+  "audit_source_sha256": "4d974938053a64d7a3a5920c5121bf631082215d71366809a412e1f091415139",
+  "inputs": [
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/speaker-prefix396-v1/metadata.json",
+      "sha256": "acea2bc36a22a0c112d1bd1959100930e5f58a36834b6dfcb34a58bc4b4ef296"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/speaker-prefix396-v1/embeddings.jsonl",
+      "sha256": "9e3a045e061f50f52050fe94cda485a2147cc4021734aa120096813358f9063f"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/speaker-prefix396-v1/generated-scores.json",
+      "sha256": "1cc2452f7b566ce94c87d9595097659d6386b7d7ad7acc99209bb8a9958f18bc"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/speaker-prefix396-v1/reference-controls.json",
+      "sha256": "db5244e19bc5a80ab482260058f5d49063ce68b2c71f563b93167ca3dee94a00"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/speaker-prefix396-v1/paired-deltas.json",
+      "sha256": "f3be3ac33971d4bbd8785117e0c20e4539baf7c447c98aaa31e91f77cde98e5f"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/speaker-prefix396-v1/summary.json",
+      "sha256": "b927b20d30b1dfd4e664dac92ce277e6809531bd937131d4aca76cfe8c454575"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/reference-prefix-analysis-v1/paired132.jsonl",
+      "sha256": "4c5745470846e63216939a75fcc812f1997c2b701c57f7821900739b844bb489"
+    }
+  ],
+  "root_outputs_unchanged": true,
+  "NVIDIA_or_model_inference": false
+}

@@ -1,10 +1,11 @@
 {
   "measurement_kind": "CPU-only package hash inventory; no inference",
+  "at": "2026-11-04T11:30:09.143260+00:00",
   "files": [
     {
       "file": "README.md",
-      "sha256": "4b614e3b9e3313116ecaffac8eabbb34a63aa3cf80d7a434eb5869582c9d37fe",
-      "bytes": 7208
+      "sha256": "346ba2fbe19165bac251cb8eaee3aa6a145179c9a30bba11b7488aecb5914163",
+      "bytes": 7657
     },
     {
       "file": "fixtures/FLORES-README.txt",
@@ -418,13 +419,13 @@
     },
     {
       "file": "package-source-provenance.json",
-      "sha256": "6a6022dcec904d1482e0536ac90e9a1077558104f86d68bd0cd3b2ea134e047d",
-      "bytes": 32910
+      "sha256": "d120454756f982200379a64cb0ae3ddf62dbf0e703a058f2b408626dc467c2a8",
+      "bytes": 32995
     },
     {
       "file": "package-validation.json",
-      "sha256": "bd7c5e4fa9159a6ad162b87cf8a75f9c51e9a48b19e64518f764e254921c0b20",
-      "bytes": 1893
+      "sha256": "2d73f18753afb4c3fc904f38b4542541a3394cd58d20571eaf4a6eaba0665c3b",
+      "bytes": 2279
     },
     {
       "file": "quality/README.md",
@@ -520,6 +521,436 @@
       "file": "results/modern-v6/weak-audio.json",
       "sha256": "6e10e1ec30509215f75f9dd93979da3a701fa7e750c6f24c53958338a310f430",
       "bytes": 4575
+    },
+    {
+      "file": "results/quality-2026-11-04/blind-ASR432/modern/modern-prefix432-LLM-v1/published/000-omniASR_LLM_Unlimited_1B_v2/omniASR_LLM_Unlimited_1B_v2-metadata.json",
+      "sha256": "2afb8f4ffb6c6a94ad45cea24186490c0f3e20ca9300804dd7469964704aabec",
+      "bytes": 1288
+    },
+    {
+      "file": "results/quality-2026-11-04/blind-ASR432/modern/modern-prefix432-LLM-v1/published/000-omniASR_LLM_Unlimited_1B_v2/omniASR_LLM_Unlimited_1B_v2.jsonl",
+      "sha256": "c181d2bcee5253b7c898e6753f8a82a4498a99c32193ec8a438f8dd35c6e404d",
+      "bytes": 179987
+    },
+    {
+      "file": "results/quality-2026-11-04/blind-ASR432/modern/modern-prefix432-LLM-v1/published/000-omniASR_LLM_Unlimited_1B_v2/prepared.json",
+      "sha256": "a9fb854c429a319628b243ef21b2d1818445a71751de784c455c51f7bb43a15f",
+      "bytes": 590320
+    },
+    {
+      "file": "results/quality-2026-11-04/blind-ASR432/modern/modern-prefix432-LLM-v1/published/000-omniASR_LLM_Unlimited_1B_v2/publication.json",
+      "sha256": "87f5f6221775b9a7c81a2cf523c28c4251566f80ad7f7c06e4f40e714b6903d3",
+      "bytes": 437
+    },
+    {
+      "file": "results/quality-2026-11-04/blind-ASR432/modern/modern-prefix432-LLM-v1/published/import-0fc22ff44bafee7c54f4-omniASR_LLM_Unlimited_1B_v2/omniASR_LLM_Unlimited_1B_v2-metadata.json",
+      "sha256": "ba421101cc7a5eacb3ec72c472432724a368d247a03aef0deee40c2fc90b33b9",
+      "bytes": 1289
+    },
+    {
+      "file": "results/quality-2026-11-04/blind-ASR432/modern/modern-prefix432-LLM-v1/published/import-0fc22ff44bafee7c54f4-omniASR_LLM_Unlimited_1B_v2/omniASR_LLM_Unlimited_1B_v2.jsonl",
+      "sha256": "ea7fe78203914684183ff553e017e09a4329010826f5fea39e56d4ec03fdcadd",
+      "bytes": 78982
+    },
+    {
+      "file": "results/quality-2026-11-04/blind-ASR432/modern/modern-prefix432-LLM-v1/published/import-0fc22ff44bafee7c54f4-omniASR_LLM_Unlimited_1B_v2/prepared.json",
+      "sha256": "49f2db1f8ce581121e107fb8a82f589021469e20adb9566dacbd493c15005cf4",
+      "bytes": 102504
+    },
+    {
+      "file": "results/quality-2026-11-04/blind-ASR432/modern/modern-prefix432-LLM-v1/published/import-0fc22ff44bafee7c54f4-omniASR_LLM_Unlimited_1B_v2/publication.json",
+      "sha256": "e106bd8b0a7d0bab4dec405f81f905f82338f7a685b2f43a20c4720b272df0dc",
+      "bytes": 470
+    },
+    {
+      "file": "results/quality-2026-11-04/blind-ASR432/modern/modern-prefix432-LLM-v1/published/import-52b6890097a3e0915747-omniASR_LLM_Unlimited_1B_v2/omniASR_LLM_Unlimited_1B_v2-metadata.json",
+      "sha256": "89cfade3b09d8421a3c1231bbc291fe7dc2a6c5247ebff3aa3b39e93ab6b7a4c",
+      "bytes": 1288
+    },
+    {
+      "file": "results/quality-2026-11-04/blind-ASR432/modern/modern-prefix432-LLM-v1/published/import-52b6890097a3e0915747-omniASR_LLM_Unlimited_1B_v2/omniASR_LLM_Unlimited_1B_v2.jsonl",
+      "sha256": "170307d987b79797560cb9d5cffd02269f5e6d5e37b74d024635ddc30781480e",
+      "bytes": 15730
+    },
+    {
+      "file": "results/quality-2026-11-04/blind-ASR432/modern/modern-prefix432-LLM-v1/published/import-52b6890097a3e0915747-omniASR_LLM_Unlimited_1B_v2/prepared.json",
+      "sha256": "a25b8f0bb08374cf8e56c02b06b813ebdc89372321f576fe741f3c63075d25f1",
+      "bytes": 25312
+    },
+    {
+      "file": "results/quality-2026-11-04/blind-ASR432/modern/modern-prefix432-LLM-v1/published/import-52b6890097a3e0915747-omniASR_LLM_Unlimited_1B_v2/publication.json",
+      "sha256": "0c1a25c3695530583c92f87df040ac9bdb027e3651a8c3ecb25f06a8be457ea8",
+      "bytes": 470
+    },
+    {
+      "file": "results/quality-2026-11-04/blind-ASR432/primary/primary-prefix432-CTC-v1/published/000-omniASR_CTC_1B_v2/omniASR_CTC_1B_v2-metadata.json",
+      "sha256": "a5cff34a2ea23de817e34f34579008af336ce9c570f2ec26296abb9d56d3a625",
+      "bytes": 1241
+    },
+    {
+      "file": "results/quality-2026-11-04/blind-ASR432/primary/primary-prefix432-CTC-v1/published/000-omniASR_CTC_1B_v2/omniASR_CTC_1B_v2.jsonl",
+      "sha256": "f31d31ee087a725318fffe5c6404f38121107bc7389f539ce4a7b6298766652b",
+      "bytes": 160925
+    },
+    {
+      "file": "results/quality-2026-11-04/blind-ASR432/primary/primary-prefix432-CTC-v1/published/000-omniASR_CTC_1B_v2/prepared.json",
+      "sha256": "49b31dbaf32b450cab92f8c654f5002fae7d0924c722dad77f361b1a30b027cf",
+      "bytes": 585040
+    },
+    {
+      "file": "results/quality-2026-11-04/blind-ASR432/primary/primary-prefix432-CTC-v1/published/000-omniASR_CTC_1B_v2/publication.json",
+      "sha256": "edf1a8e3eea2fa9284067615ddf1b3a7bcf8d93275aa85339dce4d24c7632855",
+      "bytes": 396
+    },
+    {
+      "file": "results/quality-2026-11-04/blind-ASR432/primary/primary-prefix432-CTC-v1/published/import-07bb295431ce43ba66d8-omniASR_CTC_1B_v2/omniASR_CTC_1B_v2-metadata.json",
+      "sha256": "77344ade1e85e3e665d8923f28c90599d72fd05a7708379a5d57cdd36a9ef54b",
+      "bytes": 1241
+    },
+    {
+      "file": "results/quality-2026-11-04/blind-ASR432/primary/primary-prefix432-CTC-v1/published/import-07bb295431ce43ba66d8-omniASR_CTC_1B_v2/omniASR_CTC_1B_v2.jsonl",
+      "sha256": "8f77c77acb1c6b7fd0056af4294a985f16716b4625d427764571299924cc1927",
+      "bytes": 75570
+    },
+    {
+      "file": "results/quality-2026-11-04/blind-ASR432/primary/primary-prefix432-CTC-v1/published/import-07bb295431ce43ba66d8-omniASR_CTC_1B_v2/prepared.json",
+      "sha256": "600ae5a174c475087825cdbe8057eb24ea898b4ca66a6ac157550fc1dc329686",
+      "bytes": 101544
+    },
+    {
+      "file": "results/quality-2026-11-04/blind-ASR432/primary/primary-prefix432-CTC-v1/published/import-07bb295431ce43ba66d8-omniASR_CTC_1B_v2/publication.json",
+      "sha256": "ed8aebfcd0ecb2d9008d3c8b00bc61a503cb6d38bea1f6423ddda14507df6dcb",
+      "bytes": 429
+    },
+    {
+      "file": "results/quality-2026-11-04/blind-ASR432/primary/primary-prefix432-CTC-v1/published/import-9fc76731bcfedd38269b-omniASR_CTC_1B_v2/omniASR_CTC_1B_v2-metadata.json",
+      "sha256": "c4a28f78a7360aa54075c621f8afd2d347d5a96ee12e6872e4a0868b2ec7f1b3",
+      "bytes": 1241
+    },
+    {
+      "file": "results/quality-2026-11-04/blind-ASR432/primary/primary-prefix432-CTC-v1/published/import-9fc76731bcfedd38269b-omniASR_CTC_1B_v2/omniASR_CTC_1B_v2.jsonl",
+      "sha256": "f207eb0745dd56060d7705cb1ac2b1ca1ec4144a01aa248a34c0c2b6800aaea6",
+      "bytes": 14763
+    },
+    {
+      "file": "results/quality-2026-11-04/blind-ASR432/primary/primary-prefix432-CTC-v1/published/import-9fc76731bcfedd38269b-omniASR_CTC_1B_v2/prepared.json",
+      "sha256": "56908bc14eedb5020d538156ea873aa5d691ebad3268b20e97bae2fe28c98638",
+      "bytes": 25072
+    },
+    {
+      "file": "results/quality-2026-11-04/blind-ASR432/primary/primary-prefix432-CTC-v1/published/import-9fc76731bcfedd38269b-omniASR_CTC_1B_v2/publication.json",
+      "sha256": "643dbc2ba9053ac14882ebf0501b1d48182e6ebcb0d074204cd8315fe496bfa6",
+      "bytes": 429
+    },
+    {
+      "file": "results/quality-2026-11-04/candidate47-core-retention-audit-v1/summary.json",
+      "sha256": "89513a10a8c36c752eed6379ae799f7b9bc95a07f3f7b3b924659219fdbf5669",
+      "bytes": 2030
+    },
+    {
+      "file": "results/quality-2026-11-04/candidate47-core-retention-audit-v1/verified-audio.jsonl",
+      "sha256": "65fcf42b7013d31c9e1eff446c9eb28f23aed8c69b600401c2ad8ed46427cc8b",
+      "bytes": 1063260
+    },
+    {
+      "file": "results/quality-2026-11-04/publication-provenance.json",
+      "sha256": "342ef3ef65321c38b0b60edf536c5dc14dc5f82b93617dfe4a8f3de02a8eb408",
+      "bytes": 32152
+    },
+    {
+      "file": "results/quality-2026-11-04/reference-prefix-analysis-v1/analyze-source.py",
+      "sha256": "63afaa98651647aa4f8f9e8e434152ea39dbdfeebe6334af80918eb08034b870",
+      "bytes": 23478
+    },
+    {
+      "file": "results/quality-2026-11-04/reference-prefix-analysis-v1/artifacts-sha256.json",
+      "sha256": "edf69a3473b0235ab98c1d2eb68cc45e6d64578f1daf009d8000c0cb7c2e75d1",
+      "bytes": 860
+    },
+    {
+      "file": "results/quality-2026-11-04/reference-prefix-analysis-v1/paired132.jsonl",
+      "sha256": "4c5745470846e63216939a75fcc812f1997c2b701c57f7821900739b844bb489",
+      "bytes": 1338950
+    },
+    {
+      "file": "results/quality-2026-11-04/reference-prefix-analysis-v1/reference-audit80.json",
+      "sha256": "112dc6fa505c26b4d226e8ef2ee36eda92b1aef247f1c5627f739e2ea53139d3",
+      "bytes": 27508
+    },
+    {
+      "file": "results/quality-2026-11-04/reference-prefix-analysis-v1/report.md",
+      "sha256": "e0e0f79f9d085464637ecc1f47f6c8cf34462a340c4f21c9eb51a2bac9cfb02d",
+      "bytes": 4472
+    },
+    {
+      "file": "results/quality-2026-11-04/reference-prefix-analysis-v1/summary.json",
+      "sha256": "ab67b37553e8613b30609b53315667d237ca84a0035d14d780829aa5490b13aa",
+      "bytes": 52398
+    },
+    {
+      "file": "results/quality-2026-11-04/reference-prefix-analysis-v1/verified-audio396.jsonl",
+      "sha256": "95267192ffa68ef9c4d2c059908301fc83648fd7ef29138370681d77e4d054d9",
+      "bytes": 1196324
+    },
+    {
+      "file": "results/quality-2026-11-04/reference-prefix-word-analysis-v1/paired132.jsonl",
+      "sha256": "1b99d47ceadfba96d143e44c4e9e7ce0bfe037f569186465ed69440416d52124",
+      "bytes": 1585543
+    },
+    {
+      "file": "results/quality-2026-11-04/reference-prefix-word-analysis-v1/summary.json",
+      "sha256": "180be800c2d1a34892f064cf9edd4c5f1550547e2f380dae2453c9bf8e2e1e41",
+      "bytes": 12601
+    },
+    {
+      "file": "results/quality-2026-11-04/report-prefix396-v1/origin-propagation.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "file": "results/quality-2026-11-04/report-prefix396-v1/paired-before-after.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "file": "results/quality-2026-11-04/report-prefix396-v1/per-configuration.json",
+      "sha256": "17765faba4910d45155c7d3605122a50fb7567fa8d89390c0cd2cf6665ec384c",
+      "bytes": 1136053
+    },
+    {
+      "file": "results/quality-2026-11-04/report-prefix396-v1/per-route.csv",
+      "sha256": "245b10c9208c5c8269dc2a46c9936e8326959184309de9326a9804fc6dece531",
+      "bytes": 178216
+    },
+    {
+      "file": "results/quality-2026-11-04/report-prefix396-v1/per-route.json",
+      "sha256": "28e0a5173acf808c0459c14277f49e388ec0555601efe718dc79e37c67d7f347",
+      "bytes": 648395
+    },
+    {
+      "file": "results/quality-2026-11-04/report-prefix396-v1/report.md",
+      "sha256": "f8f03b5e540dd94a741f47d1ae982445c28ba9c74cae4df93b9ab8ddefc56198",
+      "bytes": 6387
+    },
+    {
+      "file": "results/quality-2026-11-04/report-prefix396-v1/scored-logical-cases.jsonl",
+      "sha256": "626d13b8666152b367994d5a5dd107603861fd2a453b0db0cfc984e1becfc74f",
+      "bytes": 4980216
+    },
+    {
+      "file": "results/quality-2026-11-04/report-prefix396-v1/summary.json",
+      "sha256": "ab371816972a889151b236f1e4388c429c66b631c6caa992b6ee397b9e368a87",
+      "bytes": 140722
+    },
+    {
+      "file": "results/quality-2026-11-04/report-prefix396-v1/validation-checks.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "file": "results/quality-2026-11-04/report-priority402-v1/origin-propagation.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "file": "results/quality-2026-11-04/report-priority402-v1/paired-before-after.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "file": "results/quality-2026-11-04/report-priority402-v1/per-configuration.json",
+      "sha256": "6f59514a08a74b94078da0524ab58c0d88931eae1ff5aa0a491c4c7e10b8cb57",
+      "bytes": 939948
+    },
+    {
+      "file": "results/quality-2026-11-04/report-priority402-v1/per-route.csv",
+      "sha256": "994ab56f7285a1a29fba6373e3d075e8148dabd95f43c777a9d068c4156a2ca6",
+      "bytes": 186534
+    },
+    {
+      "file": "results/quality-2026-11-04/report-priority402-v1/per-route.json",
+      "sha256": "fa7d4009b9a7f42a6f0ae8db1698ec6970d94080b179cb137a85390b8f2631e3",
+      "bytes": 658111
+    },
+    {
+      "file": "results/quality-2026-11-04/report-priority402-v1/report.md",
+      "sha256": "c50f89a6192f149b8813cc086a7d9df871cead9fb886b6cdbb8be07f74ba1c55",
+      "bytes": 13203
+    },
+    {
+      "file": "results/quality-2026-11-04/report-priority402-v1/scored-logical-cases.jsonl",
+      "sha256": "674183bbbd5428b3a144b62216e8840608b7d9d68ca9ce7b41964fd6478f20ab",
+      "bytes": 4086572
+    },
+    {
+      "file": "results/quality-2026-11-04/report-priority402-v1/summary.json",
+      "sha256": "c76054ebd7071e2779fbf5c9c6ebdd8fff5ec514e5001358ba801730dcaaece8",
+      "bytes": 527493
+    },
+    {
+      "file": "results/quality-2026-11-04/report-priority402-v1/validation-checks.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-prefix396-independent-v1/AB-review-manifest.json",
+      "sha256": "d00607df760e85c4ae07d3d89aa8d8c9421755347d3bd32dcc53543730bac31f",
+      "bytes": 186813
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-prefix396-independent-v1/artifacts-sha256.json",
+      "sha256": "fcf647407efbd6a2b42944d24cc2d549bf9ef8130dae12c5be0ff8da3d3a5bc3",
+      "bytes": 878
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-prefix396-independent-v1/paired-recomputed264.jsonl",
+      "sha256": "6b716eb1766dadb517b3a3ce0525b042c92760fb55e75268d1e28327179704b5",
+      "bytes": 1947253
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-prefix396-independent-v1/provenance.json",
+      "sha256": "550babe053fe31b50502e5e28e115edaf3e2d33aebc97d607995702a45a9c2af",
+      "bytes": 2006
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-prefix396-independent-v1/reference-controls-recomputed.json",
+      "sha256": "ed8ab85e6bebb5289090d2f09f2eedff8a9139ac510fd9239fb1d7e72dff289c",
+      "bytes": 10866
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-prefix396-independent-v1/report.md",
+      "sha256": "c9315ff224f2d972e108f12f370bd1f56579219e7c1191928977d7023bcdaa22",
+      "bytes": 4023
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-prefix396-independent-v1/summary.json",
+      "sha256": "4f581e219b3043c68ae00e6edc47a06659307cc91ab876985454ef0049656706",
+      "bytes": 8453
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-prefix396-v1/embeddings.jsonl",
+      "sha256": "9e3a045e061f50f52050fe94cda485a2147cc4021734aa120096813358f9063f",
+      "bytes": 1678322
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-prefix396-v1/generated-scores.json",
+      "sha256": "1cc2452f7b566ce94c87d9595097659d6386b7d7ad7acc99209bb8a9958f18bc",
+      "bytes": 312774
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-prefix396-v1/metadata.json",
+      "sha256": "acea2bc36a22a0c112d1bd1959100930e5f58a36834b6dfcb34a58bc4b4ef296",
+      "bytes": 3898
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-prefix396-v1/paired-deltas.json",
+      "sha256": "f3be3ac33971d4bbd8785117e0c20e4539baf7c447c98aaa31e91f77cde98e5f",
+      "bytes": 120375
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-prefix396-v1/reference-controls.json",
+      "sha256": "db5244e19bc5a80ab482260058f5d49063ce68b2c71f563b93167ca3dee94a00",
+      "bytes": 9551
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-prefix396-v1/summary.json",
+      "sha256": "b927b20d30b1dfd4e664dac92ce277e6809531bd937131d4aca76cfe8c454575",
+      "bytes": 4928
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/AB-review-manifest.json",
+      "sha256": "2996ff50513388f412f0db17eb4aad7136465526a77b1d749926a6afec176b38",
+      "bytes": 470558
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/CPU-joint-validation.json",
+      "sha256": "b3a22066ef40dce917ad57d84d77573c0778af097b9ab5e4563d91f8b8f352f1",
+      "bytes": 777
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/artifacts-sha256.json",
+      "sha256": "f00a97ec5db261830de1069bbc96e538da6859b40dbc2d115efa63c2cf6ac739",
+      "bytes": 878
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/audio-tokenizer-config.json",
+      "sha256": "eefb20806f7104e77c9a5277c9df0f9bb8826b08eb1d4e8ab2b9829b6ef9fac1",
+      "bytes": 2531
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/configuration_higgs_audio_v2_tokenizer.py",
+      "sha256": "2fbb4894d3ea6237a429f62c9893d343bb95be3accb78db63b8fbef25711ad8d",
+      "bytes": 7534
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/duration-source-provenance.json",
+      "sha256": "3877f6c796b9d222a2dcd172051647175536b381594805cdd8459942b55b7237",
+      "bytes": 567
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/fixed-duration-readonly-audit.json",
+      "sha256": "18850b7f3039d4cf9b5f07fd0c762469907847c6cda10584aaa8c04003ebfc03",
+      "bytes": 91085
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/joint-artifacts-sha256.json",
+      "sha256": "d2a51ebb9ac9f67c6f286c7ead4a683247d45d3b5c253511fab6b7d7793bfffd",
+      "bytes": 3692
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/joint-report.md",
+      "sha256": "67cd8cc2003a39eb83cde63be6e35c06c15b7598305716aea926b7a70e8df604",
+      "bytes": 7255
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/joint-review-manifest.json",
+      "sha256": "801514b3ebe77d41aafd7fbb12a5be39c61a5d3fd229edde95365113b239a833",
+      "bytes": 901996
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/joint-source-provenance.json",
+      "sha256": "53bb163d17043dbe47341e7e6fc0ca1d9d8c7cabe7f91454d73f2e67acc22a2b",
+      "bytes": 1362
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/joint-summary.json",
+      "sha256": "55f742763586e846b77cdfcdb874e92c23fe7bc27f2731ade75bb63cf0ccc7d0",
+      "bytes": 2575
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/omnivoice-0.1.4-audio-source.py",
+      "sha256": "3a29ad8a2e294c61a8f60aa127aff0bb738c4432eae3cc4adbc6dc42d115d3a0",
+      "bytes": 10189
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/paired-recomputed264.jsonl",
+      "sha256": "cbd4184eb7d9ef235b92aac995034bea672c3897b13f77621e080d4d2f53ef9e",
+      "bytes": 4483497
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/provenance.json",
+      "sha256": "80a81a8f35a0de113863b815d5e7693ea4ba57cf78d03db45bd99c2aafc89241",
+      "bytes": 2254
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/reference-controls-recomputed.json",
+      "sha256": "ed8ab85e6bebb5289090d2f09f2eedff8a9139ac510fd9239fb1d7e72dff289c",
+      "bytes": 10866
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/report.md",
+      "sha256": "f4f881b628e7100023dfcee9eaa0264b2296e617d2a6342e157ad5d62f1531b0",
+      "bytes": 4025
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/summary.json",
+      "sha256": "3876fb145ce46df29a18032ed7288e56eb75935fa0acadbfde8f07046ba2b3d4",
+      "bytes": 8611
+    },
+    {
+      "file": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/word-review22.json",
+      "sha256": "0e23e54fe427393e6281fa083b40bb572cea90317aacd965b32d044c8e077503",
+      "bytes": 493421
     },
     {
       "file": "results/stage1/analysis-summary.json",
@@ -1645,8 +2076,2001 @@
       "file": "samples/rtx4070-2026-11-03/verification.json",
       "sha256": "1e840b2f97dd14a2eb5b17cc1afb7a150085b87ce45616ad002c6563ecd4b116",
       "bytes": 34206
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/README.md",
+      "sha256": "f0685c7df9f8e118046e67aeffc2ef64816da2e84b49a2a175595a8c89ba2433",
+      "bytes": 1649
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00000.wav",
+      "sha256": "418885dfc12d463d9d04017706d3a38994aec70eca1ac9e21983318fcd5f65ee",
+      "bytes": 136364
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00001.wav",
+      "sha256": "28e1c09a40bb433fdbca91059483fadda1b0efba8e4359ff7c7c571ee308646c",
+      "bytes": 122924
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00002.wav",
+      "sha256": "dfa13961e7974a48390aa9a9304a790a7cba1af8e9955e52d8fb3ca40c08694b",
+      "bytes": 117164
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00003.wav",
+      "sha256": "c1ee348790e6adb7288d8924c8abc8981a7f8695374f8c4c28fb96f737b7e018",
+      "bytes": 134444
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00004.wav",
+      "sha256": "256673b72d2a35c8692897946815e2585bc6fd2d16b6178fd1e7eb38411e4aad",
+      "bytes": 121004
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00005.wav",
+      "sha256": "db8a7e8c237ed0318bd912bce08fa3e8f2f93a21d52bfb9e61abc852dea4086d",
+      "bytes": 132524
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00006.wav",
+      "sha256": "7f476d823f5e59eacbc7dc6a4cb5d3e2639f58cdd16659ac92b7c75bff9454ed",
+      "bytes": 124844
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00007.wav",
+      "sha256": "5869214add2fb123634a6668c7ff115a4b158c4362982e88dc9f9b8cbb482215",
+      "bytes": 124844
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00008.wav",
+      "sha256": "8beb55d92008ef444611d45c068c64e7a746fa760c37bc65dc87fccd49caeecf",
+      "bytes": 111404
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00009.wav",
+      "sha256": "4d683ff8e8e812c51b6095505e430289c65fb82a37f6044a280ac7a1c1992844",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00010.wav",
+      "sha256": "e22ddb57baff42435bb8e3947b7a9c67eb120e9baefd17cd167f55490cbfe39d",
+      "bytes": 149804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00011.wav",
+      "sha256": "3ba537bc3e50a1ffa7f1ce734972446c3393b658b78850313b8d33e8b0626173",
+      "bytes": 145964
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00012.wav",
+      "sha256": "2419c1610166455e362f14759d08810588e3fc864cbf9fda6700f16e62d1549b",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00013.wav",
+      "sha256": "ee2a40aa5110a13b19f085e8f9925bd1dfa1bd888bd864978df13917f7ce8638",
+      "bytes": 140204
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00014.wav",
+      "sha256": "7a2f34299ff3753de46df1585fa8a90ea8c7d3946daf59363c34e6159d365b21",
+      "bytes": 128684
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00015.wav",
+      "sha256": "5abf23cadff97156fe2bb6fef79270d3f1cc292d65c12b0812d1e607783a1691",
+      "bytes": 130604
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00016.wav",
+      "sha256": "e2df26cb5783b36844e3a4ef0c50baee3993cd1a36b80641625e0098ffaf2d0f",
+      "bytes": 134444
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00017.wav",
+      "sha256": "7125a7b14ff79b5281105202b4ac93fc4be418ee2de1a9940e20512d60d4e287",
+      "bytes": 128684
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00018.wav",
+      "sha256": "a92a1718deace3ef71686e6d494fae811f4ab82cdfe2c367fff49ea0afefc8bb",
+      "bytes": 132524
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00019.wav",
+      "sha256": "0c646faed690c2e1567e4f0e48c926d14a50a4fe531dad1a768b22d6d3209996",
+      "bytes": 153644
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00020.wav",
+      "sha256": "9c03cef830e67fb814635f06d6e2d78ed6b734a2b102ea6c4c85f9a69c8ea7f7",
+      "bytes": 134444
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00021.wav",
+      "sha256": "f3dcf41906e5c7b54acf96a838617f8cfb45bb2794ff325b7c282356c763ff30",
+      "bytes": 157484
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00022.wav",
+      "sha256": "e270dab78f8daec1a97bd90f46fb890df64d9b253db7867774d93b60307b084f",
+      "bytes": 149804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00023.wav",
+      "sha256": "e27f12c3308f1a14878502629f473a13fb9833d53263b4fe731a299c415508dc",
+      "bytes": 149804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00024.wav",
+      "sha256": "9969b1cd42b6961731a2b771edd00755fae5ef3e25243dcc3c4772b7b422ec6b",
+      "bytes": 147884
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00025.wav",
+      "sha256": "e7711622b7d807a413011c4f5c0162506760fcfde4ceb0c9f3aacad07f15a43f",
+      "bytes": 153644
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00026.wav",
+      "sha256": "13c9087d5f73c8f60f20364c1e3037361689b45f5a8f4f66cb955e8653e32076",
+      "bytes": 142124
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00027.wav",
+      "sha256": "13184bb9048896706e6464fa930c63ad98748da1ebc6e0562c22b3967f7ac190",
+      "bytes": 128684
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00028.wav",
+      "sha256": "cf766fbe09cfa4ae172988b3a88dbdabce50d2712739f4598d79d76d90b0a0b0",
+      "bytes": 147884
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00029.wav",
+      "sha256": "d0770ee85acb50571539169dbc30eca035c371da26d213225ab21e7860557aa6",
+      "bytes": 124844
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00030.wav",
+      "sha256": "584060483b2609c195038e0a6805c298721e4ad9e60058111383c177468c6b64",
+      "bytes": 155564
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00031.wav",
+      "sha256": "8ec60698012bdd6dec7e9d3504a9593a58add14d1c86010216213321fbc88fc3",
+      "bytes": 134444
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00032.wav",
+      "sha256": "41f81d1a682d1daf74dc16357dd18e7e9bd29ed1dcec60c266a1da9bf6363628",
+      "bytes": 147884
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00033.wav",
+      "sha256": "ba552cff7a5a6179fc6fe17db1dba5200e450fc92e89399aac8c704c1bf91944",
+      "bytes": 136364
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00034.wav",
+      "sha256": "610c5d0e7c51e4a4461451d0cbd55ec750e19ede60e800d73fd695108341286b",
+      "bytes": 136364
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00035.wav",
+      "sha256": "ccbb8637dd5eafa0f83d3074fe6e186e233d5e63bc3d2c30656f4d98fb46d6ee",
+      "bytes": 142124
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00036.wav",
+      "sha256": "e1ab038e74bc938f1058649b662ec19f8dbceb29a115a8e78063f13d56d28c60",
+      "bytes": 136364
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00037.wav",
+      "sha256": "f6674d027a5e44404cb8a2e41582112cebbad1869bb0f50d89972c5d7c58ae27",
+      "bytes": 140204
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00038.wav",
+      "sha256": "8550cd5dfc8ceefa5361b247ae6937fe1338648babca77956fdfa45865d90b99",
+      "bytes": 105644
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00039.wav",
+      "sha256": "85cee3dfb5b9e9620b8c55d26581324285e74f5f05a6f9ddc63add44f1f8093d",
+      "bytes": 155564
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00040.wav",
+      "sha256": "07ff2641358b48902ae84ca763bdc3625dc513fc0cc93b5d6e946486d3fbd856",
+      "bytes": 132524
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00041.wav",
+      "sha256": "85857a0de96f6610da3bc419e7e462301a11cd545273953b78a1a1dd65be1b82",
+      "bytes": 192044
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00042.wav",
+      "sha256": "8aef1b34e3131f1393b9de4a35deeba6f06814b53fd7d4201a112125d8adc249",
+      "bytes": 136364
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00043.wav",
+      "sha256": "39596c176140bfdf8e24bc8dc12dfc7c5c5e019bd760973245811007b7bae260",
+      "bytes": 113324
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00044.wav",
+      "sha256": "18677bd55756145304330ef6bb9eb703fd54207e09ee9fa3912083833ead7515",
+      "bytes": 117164
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00045.wav",
+      "sha256": "b711f1a05b8487f854216b301384d2e28472a21e41131f72e75846893416dc84",
+      "bytes": 151724
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00046.wav",
+      "sha256": "ab595dcb3dec46a30eedad3b83d7906489f025bc9ad2de63e2eab9861ece1ad6",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00047.wav",
+      "sha256": "d72d05fe3983cb5bfd2297ebb98c256cef9c992e557d9b624e0177c78a797287",
+      "bytes": 101804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00048.wav",
+      "sha256": "9f239ed3a127baa731cf895d329f45849bd8ce5b11d657a34959cfcbac9615fd",
+      "bytes": 140204
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00049.wav",
+      "sha256": "15aa193dc5c654f058f15549123bb05674d0fb4377dcdd8374221f2320790f40",
+      "bytes": 117164
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00050.wav",
+      "sha256": "c6b67aaa052168c0fb67610668aa58ce00dda65329b55520947a9b00463c388b",
+      "bytes": 140204
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00051.wav",
+      "sha256": "af53bfe93957e272e0286f175be66ec5ae21d056e336f5e98ea135d3d92943c6",
+      "bytes": 97964
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00052.wav",
+      "sha256": "bf26d1eb73d6d6ffe174d42115d2dc93b227e195895b00ff8b6ae008c2d82c1c",
+      "bytes": 145964
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00053.wav",
+      "sha256": "0f8468d31b970d193a1fe319afb165293c1d836f0a2d5b9f78286b0c0fb23cd7",
+      "bytes": 140204
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00054.wav",
+      "sha256": "b76d7b53ed839ba9532c221ef316c1f985686a964a6385fc482285fe958f93b8",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00055.wav",
+      "sha256": "78ccbce72b2b9234a52fd87ab10b4204269dafd9ce4cca7c2607c532198b9944",
+      "bytes": 121004
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00056.wav",
+      "sha256": "0146aed118619b8dfa41b9401328bfbc1d6e46aaf5f27786c7675301e7d65222",
+      "bytes": 140204
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00057.wav",
+      "sha256": "1591b683f7c0379142109380cf5e2ab7cdd63ee621de544e614e657778f352f2",
+      "bytes": 130604
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00058.wav",
+      "sha256": "347fd06a97f1db74222b06215cb7ac7c9ebc0b54beb4d0694d987c00cde6e2da",
+      "bytes": 128684
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00059.wav",
+      "sha256": "5085243ab2b1b12b78a9744982d9510f653e2fe1c43dc865b5dae33379f37195",
+      "bytes": 111404
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00060.wav",
+      "sha256": "68832012fd56b1d64c0436177a88e372bb90673e0b4ed6ac196e6bc80e797f63",
+      "bytes": 163244
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00061.wav",
+      "sha256": "0857cc0c21f628d54667c5f579ad4f558cbbf969e0216ff8c6ecc5d1e640d02d",
+      "bytes": 117164
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00062.wav",
+      "sha256": "48fec5238b3fa57a9eec5fe51c9b8274fe1ac9e8876721099b2bac000a1b611e",
+      "bytes": 207404
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00063.wav",
+      "sha256": "820cb018e7d98af628a6028e9520f26aa6fc48bc2204fb4a85369d0e58d1d45e",
+      "bytes": 138284
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00064.wav",
+      "sha256": "4484d5ce758e59caca2f11b34c9238449bca90f0b9c4bfb2374c2070778c667f",
+      "bytes": 136364
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00065.wav",
+      "sha256": "c83d4d2d305ac9a29db173ad56459f35fc77e150dbebd57c1ed7e1cbd7125dea",
+      "bytes": 122924
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00066.wav",
+      "sha256": "1b8871810761e38481a0bd64e14540a7960e028e1d700b64ab4f91bea5ce445d",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00067.wav",
+      "sha256": "046c31e7da72921fec1d464b2ee70c3b2db99ce824d1f725afa9de10c2748683",
+      "bytes": 172844
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00068.wav",
+      "sha256": "7cdc09402c1d1831ade87489bcf1e049fd675c1af02d57d93d35cbb4793818b1",
+      "bytes": 140204
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00069.wav",
+      "sha256": "1f585db8fcdb9efedd45d85f85d86a051a1879da671be615ca086eda007075a0",
+      "bytes": 197804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00070.wav",
+      "sha256": "58d5befd4bce195137e42251162488b288a754ebdf3a601fb4d025e0da543f81",
+      "bytes": 124844
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00071.wav",
+      "sha256": "2cb2a615eef1c72fc1aefe9f31f9dfffc99dfb790fb2106c409cab71cedebac9",
+      "bytes": 138284
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00072.wav",
+      "sha256": "29e26b541e7f2286eacac208018395d7614cd04be801253cb16c22bacf1f3d15",
+      "bytes": 136364
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00073.wav",
+      "sha256": "5bd4ee26207a0963d7a8b932f1b3efb86b8b436b3d8ae806bd6c9f1d0fdc02b4",
+      "bytes": 99884
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00074.wav",
+      "sha256": "32ae1766e9e3fdbc54d948da4564f5c49841fd8f9749f4ed341c22a5361fb89a",
+      "bytes": 170924
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00075.wav",
+      "sha256": "93a5f164fdc67fbe1a49bf97ae9b9ffeca959a282a43f560aac8b21349d96f13",
+      "bytes": 259244
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00076.wav",
+      "sha256": "bd48f7889a6020fff0ed0fd5e955e6e98fc176a673164c456baba584b0c3c340",
+      "bytes": 149804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00077.wav",
+      "sha256": "3758f072c6ea517a29744df9d3fcc2a8573e93240ad5c79ccba30ddd482f0683",
+      "bytes": 201644
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00078.wav",
+      "sha256": "b9deb82c0ac4644f7bef43b52bfe1008d53b9f7d259b0c608da0cd637f68154c",
+      "bytes": 138284
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00079.wav",
+      "sha256": "0335d14a90d8d7aa2cd1c7b0b2964fb93377880d3bf09715d83139614e5e1463",
+      "bytes": 184364
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00080.wav",
+      "sha256": "e78130fa6ec36486da13891d6c3f618ccb9048a45a855bcf69dfcae85ec1c063",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00081.wav",
+      "sha256": "118276fca1f6e14a7d129884902996d1ffa7dca42075893b5f1a673791181bc3",
+      "bytes": 111404
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00082.wav",
+      "sha256": "377ef3e88cc69f84355b9a077c1055e7e3f9bcb1cdeaa1bf3fca9dae18fb68b1",
+      "bytes": 130604
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00083.wav",
+      "sha256": "6765aabb908a19316f5bc3af078573ed0589a0cd51d442a82775c95d4ff727bb",
+      "bytes": 165164
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00084.wav",
+      "sha256": "404dcca850cdac2468be3dd5840a64e7a35ca61bc20ca5a0e3436e7596598bde",
+      "bytes": 159404
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00085.wav",
+      "sha256": "928fa35b61a5ccbe8aa2312b05a3369ee1415681f2b56ae6b5ae41f53f4fac4b",
+      "bytes": 161324
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00086.wav",
+      "sha256": "b136853fef21ae1d94ebd8040a6be874a415a7de531c16d7e8b80b64ad1699a0",
+      "bytes": 144044
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00087.wav",
+      "sha256": "75f470356c7a7061e18dd2957365398c268ea2422aebbf8be34a101e98c4bf00",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00088.wav",
+      "sha256": "1f6c86667c6211609e472cada66b7b56a7d48a2b20f9b07673556b5334169ed1",
+      "bytes": 155564
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00089.wav",
+      "sha256": "f02c1808193d4acc0e7c921ef1f6ab2eb663973511c8883ee79ee754fecbadf7",
+      "bytes": 195884
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00090.wav",
+      "sha256": "771db14d030ac9600b91bea79d7ac11b34949be70588fdb37fd38ca47db28388",
+      "bytes": 113324
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00091.wav",
+      "sha256": "07d5f21174fe60fb828c7d64402e838b47ef59d39456ec88e505a0a9106e1be6",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00092.wav",
+      "sha256": "11ae1abc73efa633310e93420d3820cb1cf7e6294f314d5131816e3bb2eb0ca6",
+      "bytes": 138284
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00093.wav",
+      "sha256": "d9f3de843f6966998dc58020d84464eaa17723f8dd38aa68d9a762485a7f2ed2",
+      "bytes": 165164
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00094.wav",
+      "sha256": "e596d62f974f54ec994603fe5b50aefe0ebd0edc10167dde79ee0d2f2bc8167b",
+      "bytes": 182444
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00095.wav",
+      "sha256": "12ecc7b4754d7c85e7fd6490e19d1a14a997753c3ced0a71bd9f4b66562546ad",
+      "bytes": 138284
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00096.wav",
+      "sha256": "be28897857e9534eb1965093e0e1dcb7cff7fb09d05c463144c8f192c0a31427",
+      "bytes": 94124
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00097.wav",
+      "sha256": "51397a7e3a56f1e545aaca574dc07870aa791b63afc7361818517b6b4ad228a0",
+      "bytes": 134444
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00098.wav",
+      "sha256": "ff0abe4fd146c705e1a9152c763d778fec58a0d2f78bdf37f95403ff21895070",
+      "bytes": 119084
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00099.wav",
+      "sha256": "448c7df335b49b657aad8087db9ca209e4ea24fb22c09807acc1785289057731",
+      "bytes": 213164
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00100.wav",
+      "sha256": "79fabe44240eaf86dfb21dcf96f59e77b40f81c0c17a78791392400f6b9a33eb",
+      "bytes": 159404
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00101.wav",
+      "sha256": "343367c6face72d651c55aa107f6e2480dd32f5146bc9de58a1fc72fee2d1640",
+      "bytes": 130604
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00102.wav",
+      "sha256": "0754420248113704f4ae5b77142165e659c665b7f5b8432ee8f68a41c43e2849",
+      "bytes": 122924
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00103.wav",
+      "sha256": "e2a6886eec4f9f00f9593f7586e9bd7bc27356f64eaa9cdef2366bf1e2f99eec",
+      "bytes": 97964
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00104.wav",
+      "sha256": "4168340ce6a2c99cef52e39c84a477122382db4a290125289097275c526fe774",
+      "bytes": 149804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00105.wav",
+      "sha256": "34c83217cdd5e8065f9829b39b0ffa9e261a9fa3e6706ac01fee4243a9bc1785",
+      "bytes": 97964
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00106.wav",
+      "sha256": "10eff33d76ece376938692424dfd62481eac2316450cf5e255b9001a77c3a8cc",
+      "bytes": 97964
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00107.wav",
+      "sha256": "0a83d6ce63bdb7cc7cb1d63a75a9832b4a23183851140c0ec5823921a321aaee",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00108.wav",
+      "sha256": "0e72eb8fce6e3adcbfd2f6d9cb75247367b8514da8ce206d7badd4a6d808213d",
+      "bytes": 90284
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00109.wav",
+      "sha256": "9fbb9d4bc5c6c65057ef660673b680e35c67314578fb9282fc6b6e277da49c27",
+      "bytes": 155564
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00110.wav",
+      "sha256": "49bb086a39063f7d845bbd45443c181e4a55ec7d4ec4f876b4b36a58192773e2",
+      "bytes": 109484
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00111.wav",
+      "sha256": "42bbdf9d4bb9dba2927e7b000b6880d11adb7c42a8aa9c10c9ab5e83177f0865",
+      "bytes": 136364
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00112.wav",
+      "sha256": "c48ba22c96a5551cab81755d47e31346c1a62fb9b1a6e1713260b6759896e6fb",
+      "bytes": 328364
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00113.wav",
+      "sha256": "f10f0478cfa338df60f194b6813237a90b67f45f77c11b2c8c35d04240961b10",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00114.wav",
+      "sha256": "7071badf1e0351ed7f961dfc884fe1bd221a1e1ff99108cdc3acc94b21ec44e2",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00115.wav",
+      "sha256": "f403fb6c0869c8c745b5b51b66f0664149d9b427a063bcd99af7d51dfde30583",
+      "bytes": 140204
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00116.wav",
+      "sha256": "eda59fe4f7a7616a66c3b6c43631c7ebfaeb40a47aaa9dbcbce6efc655051c06",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00117.wav",
+      "sha256": "ef78191538b476f965a49435abb446b06209b8e518c5de2f1fd17b7ede39e660",
+      "bytes": 113324
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00118.wav",
+      "sha256": "cff9499a586f9082b8e47f47ce619d6ac892d56267ef4411daf2d97330847c4e",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00119.wav",
+      "sha256": "debb58cb8f6da858cff69254e7188527864268023daaa2f94ea8f893d5017521",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00120.wav",
+      "sha256": "09d7315e488e25ec8797403ddb63a35fbf1794e161ae1b85942b27b5b11b12b3",
+      "bytes": 101804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00121.wav",
+      "sha256": "9675362cb00c4833df7c457b43004e37ac3e0f9e465ffb7805f4fdb2c8f9a641",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00122.wav",
+      "sha256": "aea7419b5695d32f30092664368133cea7caf7a7c91091544ef1b6d1ecb35a97",
+      "bytes": 117164
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00123.wav",
+      "sha256": "d7ebc89260c1d202df9aaaaf80c3158ec58f9b45ec534e40d9216f0aceffb452",
+      "bytes": 111404
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00124.wav",
+      "sha256": "3a33b723c866d048b64d95bb660afd65ac2996bf7733bef8f677c753e234c6a3",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00125.wav",
+      "sha256": "14dcfbbd538d0bf967880180f3aaba6a10d305e9aaf2a0c9c5b51ec16fd9694f",
+      "bytes": 94124
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00126.wav",
+      "sha256": "9893bb1393756eb1b4ae4442077e30ec72f4b0e026b192867227c0da5ca84df2",
+      "bytes": 117164
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00127.wav",
+      "sha256": "492442043dd7dcc4d3980f85e71434c285344a11ecd36b80288dd173282e2e92",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00128.wav",
+      "sha256": "5e51d99cd8e306f62b5e99f30dd798b93b55ee0c99440d7183e8a751d9fbc37a",
+      "bytes": 115244
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00129.wav",
+      "sha256": "9d9648fbf77905fc6355fd9e82dc38faa69d419cf778c1230691907a4a50cbcf",
+      "bytes": 101804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00130.wav",
+      "sha256": "cde38821ba3803bfa7d3216ae46ae92e0e84ff64a4b32d0c835b342251133510",
+      "bytes": 155564
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/full/reference-full-all104-plus8voices-00131.wav",
+      "sha256": "7bb172f3d213de4abc248473d4f8c5dd9c68c2638212dc768a6faf8933e9b5c1",
+      "bytes": 84524
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/manifest.json",
+      "sha256": "dd358597e2be73d491515a9c7dcc742f14efe9e329c38159ced724b0f372c1fa",
+      "bytes": 944976
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00000.wav",
+      "sha256": "418885dfc12d463d9d04017706d3a38994aec70eca1ac9e21983318fcd5f65ee",
+      "bytes": 136364
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00001.wav",
+      "sha256": "28e1c09a40bb433fdbca91059483fadda1b0efba8e4359ff7c7c571ee308646c",
+      "bytes": 122924
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00002.wav",
+      "sha256": "dfa13961e7974a48390aa9a9304a790a7cba1af8e9955e52d8fb3ca40c08694b",
+      "bytes": 117164
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00003.wav",
+      "sha256": "c1ee348790e6adb7288d8924c8abc8981a7f8695374f8c4c28fb96f737b7e018",
+      "bytes": 134444
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00004.wav",
+      "sha256": "256673b72d2a35c8692897946815e2585bc6fd2d16b6178fd1e7eb38411e4aad",
+      "bytes": 121004
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00005.wav",
+      "sha256": "db8a7e8c237ed0318bd912bce08fa3e8f2f93a21d52bfb9e61abc852dea4086d",
+      "bytes": 132524
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00006.wav",
+      "sha256": "7f476d823f5e59eacbc7dc6a4cb5d3e2639f58cdd16659ac92b7c75bff9454ed",
+      "bytes": 124844
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00007.wav",
+      "sha256": "5869214add2fb123634a6668c7ff115a4b158c4362982e88dc9f9b8cbb482215",
+      "bytes": 124844
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00008.wav",
+      "sha256": "8beb55d92008ef444611d45c068c64e7a746fa760c37bc65dc87fccd49caeecf",
+      "bytes": 111404
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00009.wav",
+      "sha256": "4d683ff8e8e812c51b6095505e430289c65fb82a37f6044a280ac7a1c1992844",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00010.wav",
+      "sha256": "e22ddb57baff42435bb8e3947b7a9c67eb120e9baefd17cd167f55490cbfe39d",
+      "bytes": 149804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00011.wav",
+      "sha256": "4df429d3817713ce322ce8bb695e0ef6400b40c6b252173e80290e46ca6e98e6",
+      "bytes": 138284
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00012.wav",
+      "sha256": "0bc386374c1ca9f2b71384c9ef3e0aaac56ad1ecf521c3080a984182962247af",
+      "bytes": 121004
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00013.wav",
+      "sha256": "6179e46c5418daceb3f3ff0c9a49e09f50b1b4cbeb5e2e8c6d871a2589381f58",
+      "bytes": 136364
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00014.wav",
+      "sha256": "a99cb97680fc0198e1216817a376ff144970bc683736afa7e8eb6404142e55de",
+      "bytes": 122924
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00015.wav",
+      "sha256": "fcde7f4a8ea947e53489e980678be23ac2d899d7e60c6be55cd93794764c2ce2",
+      "bytes": 121004
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00016.wav",
+      "sha256": "d32c710aa16c29e31b184379b55e310b37509f44fb247ce8c6f29844123b81eb",
+      "bytes": 128684
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00017.wav",
+      "sha256": "77bb99e0d57af2d8dd069b0a880ce89bde833e538f7d4e81c2e9183bd4c15341",
+      "bytes": 130604
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00018.wav",
+      "sha256": "8836f28d4a5b21afc96e272fc72104e4526c6a2743fd828f3936e5a7c6c18dcb",
+      "bytes": 128684
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00019.wav",
+      "sha256": "0c646faed690c2e1567e4f0e48c926d14a50a4fe531dad1a768b22d6d3209996",
+      "bytes": 153644
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00020.wav",
+      "sha256": "9c03cef830e67fb814635f06d6e2d78ed6b734a2b102ea6c4c85f9a69c8ea7f7",
+      "bytes": 134444
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00021.wav",
+      "sha256": "f3dcf41906e5c7b54acf96a838617f8cfb45bb2794ff325b7c282356c763ff30",
+      "bytes": 157484
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00022.wav",
+      "sha256": "e270dab78f8daec1a97bd90f46fb890df64d9b253db7867774d93b60307b084f",
+      "bytes": 149804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00023.wav",
+      "sha256": "e27f12c3308f1a14878502629f473a13fb9833d53263b4fe731a299c415508dc",
+      "bytes": 149804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00024.wav",
+      "sha256": "9969b1cd42b6961731a2b771edd00755fae5ef3e25243dcc3c4772b7b422ec6b",
+      "bytes": 147884
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00025.wav",
+      "sha256": "e7711622b7d807a413011c4f5c0162506760fcfde4ceb0c9f3aacad07f15a43f",
+      "bytes": 153644
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00026.wav",
+      "sha256": "13c9087d5f73c8f60f20364c1e3037361689b45f5a8f4f66cb955e8653e32076",
+      "bytes": 142124
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00027.wav",
+      "sha256": "13184bb9048896706e6464fa930c63ad98748da1ebc6e0562c22b3967f7ac190",
+      "bytes": 128684
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00028.wav",
+      "sha256": "cf766fbe09cfa4ae172988b3a88dbdabce50d2712739f4598d79d76d90b0a0b0",
+      "bytes": 147884
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00029.wav",
+      "sha256": "838f2452810c8e48b06b2571265c5ac43b6727fd069651d806c308ddc124420e",
+      "bytes": 117164
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00030.wav",
+      "sha256": "234ee16b1a66f23a02f8268b59e56620c92376e6ce7c3540dd32975fdb1ac1f8",
+      "bytes": 145964
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00031.wav",
+      "sha256": "ad769004eae4e0a302a481860864c1a311c55d22daa7edf94d09550733449e80",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00032.wav",
+      "sha256": "bd3e9f49859e658fb62b0332c1b2962586bba622807e51bfd3f7ae20aa3aef45",
+      "bytes": 144044
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00033.wav",
+      "sha256": "239a0750d36830d3d5e1d9082f7fb09c78e803eadff13339e045b75e49c11431",
+      "bytes": 130604
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00034.wav",
+      "sha256": "189308c94399a0b340797379818bea7a2ee7642cde10d81555960ce97153b992",
+      "bytes": 128684
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00035.wav",
+      "sha256": "83477c82ec17478cc5df027e465f61f637f47686246fc6b450b9f779af1d6211",
+      "bytes": 134444
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00036.wav",
+      "sha256": "41f29bd316b7f24d5f94f70a48df26e271de119359b3eba59bd35ed71d395724",
+      "bytes": 138284
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00037.wav",
+      "sha256": "f87669a35fe8ce417df03a96d5fd258f556751b2f497701301c6a9a1a156286c",
+      "bytes": 134444
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00038.wav",
+      "sha256": "7b075820f8cf6c5e82f0eac52b3ea472e3a1ccfce50ebbd634bb21cb19c946fd",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00039.wav",
+      "sha256": "2a98590f577e491c87bda0c1b89de9da4ba2661427ddb75e38a5900fc66c13ee",
+      "bytes": 147884
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00040.wav",
+      "sha256": "46368493e0c285412876ab006afc0c5508f93496cff55838ea9f13545c806054",
+      "bytes": 124844
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00041.wav",
+      "sha256": "a50221306f40c0590dbad82f387726c0bc43daf066ff9d4f17c9d2b71fb27181",
+      "bytes": 182444
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00042.wav",
+      "sha256": "cd53bd4462235dbe6b6c6673f6ce6dd8ea3c3aca443a5aa358cfd0a2f2828c75",
+      "bytes": 128684
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00043.wav",
+      "sha256": "1b554e2c9999f5c95dce1057dc92643595e0f4543865055f913ea9ee6fce782d",
+      "bytes": 107564
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00044.wav",
+      "sha256": "3739c1b2c40b91232cc38ff1f3710739bdf59b6214788eac14d75486e4fc0e21",
+      "bytes": 111404
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00045.wav",
+      "sha256": "3753e3f114f5ef63e2226e6d138aab63a9b2f1359fc946e1ecc1e6652229ef1f",
+      "bytes": 144044
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00046.wav",
+      "sha256": "d016722f4399a23fff72fad8449e181264ba71ddd94400e5eb68853fe71eb5f3",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00047.wav",
+      "sha256": "f48eb346dbca3d489bebb917462253e1291e58fd0f7bdea4209995ae63455f44",
+      "bytes": 99884
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00048.wav",
+      "sha256": "5dc7c83aa1adf58f58602f9054e8a344c2044573c3317d90619bed25cc3f250d",
+      "bytes": 132524
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00049.wav",
+      "sha256": "33ac7351baa6ea1699a1059807fcc5e3b3b86cfd92b0d1ff38707b923d70237d",
+      "bytes": 111404
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00050.wav",
+      "sha256": "c6b67aaa052168c0fb67610668aa58ce00dda65329b55520947a9b00463c388b",
+      "bytes": 140204
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00051.wav",
+      "sha256": "ce697bd067fd19a7df5c04abe32262bc4066facbcb20abcbe4706a3dbb2bb784",
+      "bytes": 97964
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00052.wav",
+      "sha256": "0b1e39275fa8ab5d4360886bcd095291488686c0dc3a0aa949954fad9f27d019",
+      "bytes": 138284
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00053.wav",
+      "sha256": "adf7e95d1cd4f3ad48c8f059bcba88fecc5498b157c60734f33945c00af86133",
+      "bytes": 132524
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00054.wav",
+      "sha256": "befce1809098cfb2df0e18d8269e1c696e002d8de15e3480764777d8b5f3a755",
+      "bytes": 101804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00055.wav",
+      "sha256": "6e50d714ba12533e8d6b235b6e1b044712ae69d04618ecf557c469ba5cbef3a7",
+      "bytes": 115244
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00056.wav",
+      "sha256": "d78f2c1692f2c60d7520f06903e0868d8162caa6992fb9462bbd452b7a8cbc4a",
+      "bytes": 134444
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00057.wav",
+      "sha256": "388f3240b4e3dcdfe032c3c10533cb7dc9a63321fcf236770c225a82d46c40d7",
+      "bytes": 124844
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00058.wav",
+      "sha256": "6f133f4a6fe22075609b8eb07583d56c5381d54307fc67ba0bbff4c326624d2b",
+      "bytes": 122924
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00059.wav",
+      "sha256": "3fad1889335c8dcd1916ff9a0b28d77db65add96c3e795a13756135b376b34d6",
+      "bytes": 105644
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00060.wav",
+      "sha256": "580a18475fe079fe6df22b950d4c91fb0c902851959f222d8c3fe853045c5dff",
+      "bytes": 155564
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00061.wav",
+      "sha256": "be8d69a24ffd15d86fdd59d4b79c3eb0e4f6e8acbd9202ee249e9adadcd161ae",
+      "bytes": 111404
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00062.wav",
+      "sha256": "25c6c197874712f80dbca9cd5a02c7d60e273a86640feb842b1227e87566579e",
+      "bytes": 197804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00063.wav",
+      "sha256": "4a37dd00f329b1180e069c08212f4e44ecce808ad34d05d6ac09d9344d7ef6c0",
+      "bytes": 130604
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00064.wav",
+      "sha256": "ed010ba9c62a484a158907ebc8a0a80bc677981a9c7454d3bdf44d3910e36920",
+      "bytes": 128684
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00065.wav",
+      "sha256": "ff18e4139ce1718b78bf97fcc98326b494269c2ffb5a5c24e63e5910dfe5b893",
+      "bytes": 117164
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00066.wav",
+      "sha256": "96d3ecd564e03493bb81761ba5788e624cb4016f09bc9b7803523ed59fe2fe75",
+      "bytes": 101804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00067.wav",
+      "sha256": "f359cb268629aeedf6c88c9c37f828b304cc6f713e06ce52938ec6f9a4549f91",
+      "bytes": 163244
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00068.wav",
+      "sha256": "bbfde0d72650c2451e0e32593dda623864fa9dd34799b1fc2dd5abe3e7a9e12a",
+      "bytes": 132524
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00069.wav",
+      "sha256": "3bd78d47ce283e35f1a93850036be9e9620b6dbbf580aaefefea2fc5a3c3643b",
+      "bytes": 188204
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00070.wav",
+      "sha256": "5b4837e26891efbf549df08f1b0af052a202bdc8490214ec947a3e571c3913a3",
+      "bytes": 117164
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00071.wav",
+      "sha256": "185e411c9417197802f04ea1ccf724ec0c4825fc8ec829948b8e3cd975570260",
+      "bytes": 130604
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00072.wav",
+      "sha256": "0134609050b7cee0b6a1333248421c4d2ebb5d3155e6be80f11c00386148028e",
+      "bytes": 130604
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00073.wav",
+      "sha256": "e15888152ba95a2c083ed66669f010d164b6a8909dea813dcf8b3708fdc9d0b5",
+      "bytes": 97964
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00074.wav",
+      "sha256": "0eaac03f4d72a7f303f74f600dbc69450875ee9fbc4b419cd294257047c2e6eb",
+      "bytes": 161324
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00075.wav",
+      "sha256": "bf9502ba91f01e03055700de7b96dc187779581d229f290337cd6c8dff63887d",
+      "bytes": 245804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00076.wav",
+      "sha256": "2f12774234086a1df0315b7d045b13136e12e4c7d00e40b511906bc52d4ede3a",
+      "bytes": 142124
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00077.wav",
+      "sha256": "adf9a8e64e352c6560a7e1b591d526d1f9591839416dba207d800eba355e2d59",
+      "bytes": 192044
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00078.wav",
+      "sha256": "fd340ec27f1e9b15085b6ec70e4885cdc4ca40a27dd7a6d46df060e0f38fe3f8",
+      "bytes": 132524
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00079.wav",
+      "sha256": "72dc3f097338e6533d8cda93613139e7ad54fa672cd36c9e8b62d6dda969741d",
+      "bytes": 174764
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00080.wav",
+      "sha256": "7b19bb93fba7f5f79ff55c93694540a65b5755fa185a48c9ce8a8d3bba234fcf",
+      "bytes": 121004
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00081.wav",
+      "sha256": "bcd9c76a558329ecdd0cc2ba79f8c8d34c878dce0046c1b50fb2ef0752c2f0b4",
+      "bytes": 107564
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00082.wav",
+      "sha256": "a7969ecb2de469dbbda951cb562c102e279c03a4608508cb7c07cc680fbdb889",
+      "bytes": 124844
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00083.wav",
+      "sha256": "354c64b9e6e6a45a3d7a0553c9aa93a4ee8f7d0e54fb2037d7a5ab0e05682956",
+      "bytes": 157484
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00084.wav",
+      "sha256": "66f5e6a5897ae9af6d4f8d2e6d34bbd7208537756ddb99ef401a4742304ffa9a",
+      "bytes": 151724
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00085.wav",
+      "sha256": "66c19aa73e2004512be8894b2bff2bd37d6991dcf4f23a192d5e2892055ef74b",
+      "bytes": 151724
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00086.wav",
+      "sha256": "cf903b75486d5064535df02adad784266f0dee63530914a529f0dc7476a8a01a",
+      "bytes": 136364
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00087.wav",
+      "sha256": "597d4ba5c0e458b1f051cdb964ff92564e2eccedc56565f17da83b2f42ba0766",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00088.wav",
+      "sha256": "571cd9dcf41ac1b5cc5164d696dbbbf3d1dd47ffe663c5b480f01107f01b0bb7",
+      "bytes": 147884
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00089.wav",
+      "sha256": "a0293f2f8a37b476185f4667eaeac9a5e5eaadbdced55e5748a5ae67d7688e81",
+      "bytes": 186284
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00090.wav",
+      "sha256": "86c8893694a15a4908fb3507465003c3f9c82684b045ea1aff5ea1c1fd1103be",
+      "bytes": 107564
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00091.wav",
+      "sha256": "b892e49188acb49697d2722df9bb144e4d4e64f71bdb77ab7088b08e010f2a54",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00092.wav",
+      "sha256": "3967c857fe51d842ed5abc27ad83927650876b6442bf1efa7d9324b6f9db2278",
+      "bytes": 130604
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00093.wav",
+      "sha256": "a3c6f6cb85c688780372aba6abc36fab47fe632e9698ade7a2f2bdff9b73186d",
+      "bytes": 157484
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00094.wav",
+      "sha256": "adfea91c41f0ab8e2b60fbb46900b27052c578e065cbf39077431254526b465b",
+      "bytes": 172844
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00095.wav",
+      "sha256": "7a06256550f2b67cef66b4c8d6d051ac5dce90500d0f47d3968c4c86c6b79297",
+      "bytes": 132524
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00096.wav",
+      "sha256": "2e1b0f20a5f8c268e4c256881ed2d7a2843938d05c385a59cfb3bde3059cb1c4",
+      "bytes": 92204
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00097.wav",
+      "sha256": "608a65c37df13ab35cd158855d4ad26fc39aaed4db4fa99ae99844f2cf320c92",
+      "bytes": 128684
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00098.wav",
+      "sha256": "26e6cbf11c1c4c71a69389b27c0b79327ae7ff2be8750533eb01c4143d3fd2b8",
+      "bytes": 113324
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00099.wav",
+      "sha256": "c439d3a09000c28afcb00880a7a9767c3e8e905d14cf096afb9dc9064b2ae9d5",
+      "bytes": 201644
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00100.wav",
+      "sha256": "57a9bbb01dc4b7d6470f146a46ed389e5c9fce36bdc2a2428c51479f75e20ed8",
+      "bytes": 151724
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00101.wav",
+      "sha256": "5c5defcc474450392244f87918c7c99ba5ecc10593dcf5d55a0a9175fd1ffee0",
+      "bytes": 124844
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00102.wav",
+      "sha256": "a7b89988bf98720302ca2821534d2f13e4bbf8bb0987d91724c111f4ff17efc2",
+      "bytes": 117164
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00103.wav",
+      "sha256": "188837a562f9a88957fc344abc5442c51703e2eff9e33c88b0f0391f767ba8cd",
+      "bytes": 96044
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00104.wav",
+      "sha256": "e5bced0ca187953b089ca52f24e965a8949d2c6c25a7cb540877af8cfce7d421",
+      "bytes": 142124
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00105.wav",
+      "sha256": "fe5745d2403a8a2fa7378aaa8efa889134dca9b67cc5e2b7c6935a143dc3b708",
+      "bytes": 97964
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00106.wav",
+      "sha256": "8327c54ceaeba3a7bef33ccb0ccc68d96276f355ddf5aa586908af796a3e72a5",
+      "bytes": 97964
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00107.wav",
+      "sha256": "df754a332072c6d344a8081c3ae6e20e5e7ca612f45320d077473c8bc84fd1e1",
+      "bytes": 121004
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00108.wav",
+      "sha256": "c43c557d6e88873e374a6c89ba79ab3cdf94f2c81b99c394214bf6df8cba2980",
+      "bytes": 88364
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00109.wav",
+      "sha256": "5749aa8a497eb9faeacf0e73a0ab43ed7e059d8719bdc2519cfbd3fd57b94496",
+      "bytes": 147884
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00110.wav",
+      "sha256": "3269290b4b381778fd6089150ae44dbf2a6e355906fc1db74306634dfbd7dea8",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00111.wav",
+      "sha256": "b1d1d8b7c0be233c108cd3e908d60f1f43ea1f6e1caf9ec772ef68355608c420",
+      "bytes": 128684
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00112.wav",
+      "sha256": "f1e0e11e3886cd8896a3ba01bfd6c2d287caf2d75b1e0a9046deed1a01c7da54",
+      "bytes": 311084
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00113.wav",
+      "sha256": "d7fba3e2d3c65f6db9cfd0853de04cf41236f2d8b926f5db8275efc910a7dbf0",
+      "bytes": 119084
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00114.wav",
+      "sha256": "e49eed568b71b54768bec1a701a372acfd4e7d24608e34d15ef0e1144f8cf36f",
+      "bytes": 121004
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00115.wav",
+      "sha256": "c3aa13c9aaebe6273f91386a50605219eb56ca7456fe4309c1976878442befea",
+      "bytes": 132524
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00116.wav",
+      "sha256": "e4979463a604a29e3ae96e5b1c9934930ebb32ac7cf0336c77512f4e5235ed1b",
+      "bytes": 101804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00117.wav",
+      "sha256": "4cbab1b302a35ca916bd64931e9e41a991cfe9088b26039c38b2d54fb6f8a9cc",
+      "bytes": 107564
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00118.wav",
+      "sha256": "adb58491323f05cc3eeb65943fe8683c5ad7c4e61946e8fa254bcd7fcf0e1bac",
+      "bytes": 101804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00119.wav",
+      "sha256": "03e065b3f0597d4c4cc6eca1a6d8bb0a31f956e146097c9c9fe4ab152a1a8664",
+      "bytes": 101804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00120.wav",
+      "sha256": "0d0563902124e32c5b692adf445bcf23a882e9717ea9c5e56df05d148347826e",
+      "bytes": 101804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00121.wav",
+      "sha256": "8f3ce098977769fa24f0f6f9586be69a12d60dd3495c3bb859e4e82cd760b497",
+      "bytes": 101804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00122.wav",
+      "sha256": "e275219d2e2dc2e3defaaa2daa675df694f2bdf65e988ed0112a42e352d43e6a",
+      "bytes": 111404
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00123.wav",
+      "sha256": "d8b86aede33a03edbd09d5296d9c055fd6a207ef7695b925a55dc2252c8ecd71",
+      "bytes": 107564
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00124.wav",
+      "sha256": "232f04bcf20963f4590cc6c124ebf9960559b39807674e330e7562d8d1130f89",
+      "bytes": 119084
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00125.wav",
+      "sha256": "73f417f53fddea33e56886b77c507df920231d7d3d0a30c3bfa4d8f660d3cd53",
+      "bytes": 92204
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00126.wav",
+      "sha256": "128689e82883574ff5921097fb7e1d68b7c0fd254b1f016fc541b77a859ea226",
+      "bytes": 111404
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00127.wav",
+      "sha256": "46d91a824bf07fdb1aff266e34067389e2081fffecd3f6ed182b713939f629b8",
+      "bytes": 121004
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00128.wav",
+      "sha256": "5a2c15acff31b35899d8005b30f6049e4239ce8f6b4ee7ab169edea5f3a883f1",
+      "bytes": 109484
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00129.wav",
+      "sha256": "b701e31d372a11e538b888b667c0e5de1b7f556e948664ac3b2f2ca3c35d8fa9",
+      "bytes": 99884
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00130.wav",
+      "sha256": "27172216f535ed9c356036d3f20c01ced3e014c2ea4f2e171e116446251c2640",
+      "bytes": 147884
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix10/reference-prefix10-all104-plus8voices-00131.wav",
+      "sha256": "daff17425edc4b471ceff74356ef21501bbbef8a036642fce6f865acb6247a4e",
+      "bytes": 82604
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00000.wav",
+      "sha256": "418885dfc12d463d9d04017706d3a38994aec70eca1ac9e21983318fcd5f65ee",
+      "bytes": 136364
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00001.wav",
+      "sha256": "28e1c09a40bb433fdbca91059483fadda1b0efba8e4359ff7c7c571ee308646c",
+      "bytes": 122924
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00002.wav",
+      "sha256": "dfa13961e7974a48390aa9a9304a790a7cba1af8e9955e52d8fb3ca40c08694b",
+      "bytes": 117164
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00003.wav",
+      "sha256": "c1ee348790e6adb7288d8924c8abc8981a7f8695374f8c4c28fb96f737b7e018",
+      "bytes": 134444
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00004.wav",
+      "sha256": "256673b72d2a35c8692897946815e2585bc6fd2d16b6178fd1e7eb38411e4aad",
+      "bytes": 121004
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00005.wav",
+      "sha256": "db8a7e8c237ed0318bd912bce08fa3e8f2f93a21d52bfb9e61abc852dea4086d",
+      "bytes": 132524
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00006.wav",
+      "sha256": "7f476d823f5e59eacbc7dc6a4cb5d3e2639f58cdd16659ac92b7c75bff9454ed",
+      "bytes": 124844
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00007.wav",
+      "sha256": "5869214add2fb123634a6668c7ff115a4b158c4362982e88dc9f9b8cbb482215",
+      "bytes": 124844
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00008.wav",
+      "sha256": "8beb55d92008ef444611d45c068c64e7a746fa760c37bc65dc87fccd49caeecf",
+      "bytes": 111404
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00009.wav",
+      "sha256": "4d683ff8e8e812c51b6095505e430289c65fb82a37f6044a280ac7a1c1992844",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00010.wav",
+      "sha256": "e22ddb57baff42435bb8e3947b7a9c67eb120e9baefd17cd167f55490cbfe39d",
+      "bytes": 149804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00011.wav",
+      "sha256": "4da6fb414d7f0c9bb85b624a7cb7596fce055357ae45f05ff3e9b8a7c916b2c3",
+      "bytes": 138284
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00012.wav",
+      "sha256": "10f241a11d31ae2205959e3434cea7f8aa03a330181616b1b316c5a3d6b9675e",
+      "bytes": 119084
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00013.wav",
+      "sha256": "b72b411ff2d5d00eda13dea1a7f5a48a747defb8fb528ed551001a9a90352d85",
+      "bytes": 136364
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00014.wav",
+      "sha256": "33da0c4f0478f7852e21074a50b8f6c5153e8c7fc6c4d7bcd060ed66cc4b6544",
+      "bytes": 121004
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00015.wav",
+      "sha256": "c5fa66968473f4ab10191683feb1872f23e816d63e58125e83be8bb04633abad",
+      "bytes": 121004
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00016.wav",
+      "sha256": "879a67dbd6f498e137e18c74ddf9e454af6f00baf64b3231144bcd902d48a470",
+      "bytes": 130604
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00017.wav",
+      "sha256": "ce0bfbb83bcf862d0580334d81d50540657ed6e9ccc7243413e27122efdcf4f7",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00018.wav",
+      "sha256": "b85e13e480801b51cf309d269460f884984c8f780f4705bfa5bf11eafa6bc803",
+      "bytes": 128684
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00019.wav",
+      "sha256": "0c646faed690c2e1567e4f0e48c926d14a50a4fe531dad1a768b22d6d3209996",
+      "bytes": 153644
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00020.wav",
+      "sha256": "9c03cef830e67fb814635f06d6e2d78ed6b734a2b102ea6c4c85f9a69c8ea7f7",
+      "bytes": 134444
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00021.wav",
+      "sha256": "f3dcf41906e5c7b54acf96a838617f8cfb45bb2794ff325b7c282356c763ff30",
+      "bytes": 157484
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00022.wav",
+      "sha256": "e270dab78f8daec1a97bd90f46fb890df64d9b253db7867774d93b60307b084f",
+      "bytes": 149804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00023.wav",
+      "sha256": "e27f12c3308f1a14878502629f473a13fb9833d53263b4fe731a299c415508dc",
+      "bytes": 149804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00024.wav",
+      "sha256": "9969b1cd42b6961731a2b771edd00755fae5ef3e25243dcc3c4772b7b422ec6b",
+      "bytes": 147884
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00025.wav",
+      "sha256": "e7711622b7d807a413011c4f5c0162506760fcfde4ceb0c9f3aacad07f15a43f",
+      "bytes": 153644
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00026.wav",
+      "sha256": "13c9087d5f73c8f60f20364c1e3037361689b45f5a8f4f66cb955e8653e32076",
+      "bytes": 142124
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00027.wav",
+      "sha256": "13184bb9048896706e6464fa930c63ad98748da1ebc6e0562c22b3967f7ac190",
+      "bytes": 128684
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00028.wav",
+      "sha256": "cf766fbe09cfa4ae172988b3a88dbdabce50d2712739f4598d79d76d90b0a0b0",
+      "bytes": 147884
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00029.wav",
+      "sha256": "7b9e5fcbe6182d78edc732d67a4c5e1188627b4e296dc1b723ef9b9d8ca5dbec",
+      "bytes": 115244
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00030.wav",
+      "sha256": "56931e393d996769d60fa20f471bbb18b769e8a35f40cc13631e5c2abaeb1dda",
+      "bytes": 145964
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00031.wav",
+      "sha256": "ab4dd4f5a7aa2ba2a630180eafa924a3271a9a97208fe49e7f9cdd6431bce087",
+      "bytes": 124844
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00032.wav",
+      "sha256": "4d3414242d1ea5a88bc42a01fbd9bceb87c19145b169f47123b8f87114b6e49a",
+      "bytes": 144044
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00033.wav",
+      "sha256": "8503105c75d0299dc3506296993d7601d76b9760acb38317885034283e3a09a0",
+      "bytes": 128684
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00034.wav",
+      "sha256": "e7cd2926334098a2108c8f4cf94e14304717041c0239fdeda5484c6d07eedd47",
+      "bytes": 128684
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00035.wav",
+      "sha256": "fdc349133908180873f8be0aba13d28ad0e518a0ea3fe606d533db6b3d116531",
+      "bytes": 138284
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00036.wav",
+      "sha256": "2d2c9b4cb6aa7bd1e4e59028dda4391de61313142e985b2d889ff62b33e6714a",
+      "bytes": 134444
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00037.wav",
+      "sha256": "676f2652c1e2d81f5d2c5fbfdb834ad8fdbf6798e0b9f0a3251027777959986f",
+      "bytes": 136364
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00038.wav",
+      "sha256": "0eb85862b230f35962a24e97b7309e843c37143433a5bfa5fe0bac4a5b133301",
+      "bytes": 101804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00039.wav",
+      "sha256": "827375a14fc1af5b43b62817840f41986107f3fbaebf1187636a258a174c3d33",
+      "bytes": 145964
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00040.wav",
+      "sha256": "c7d3ed566c369ccf5b3d7f43d2fc977d8a9eda5223cd313867bdaa5ed587905d",
+      "bytes": 122924
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00041.wav",
+      "sha256": "cf32b476a75904d2609e6fbd2617a3f9fa7bb861b2c0380be5937e64a52f2684",
+      "bytes": 178604
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00042.wav",
+      "sha256": "7c863ef742d8a6701b609455bf1dfc701b1a78a5a7a3e73b26766d8dd34b8ec8",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00043.wav",
+      "sha256": "ce098d2d25a42e32b8fd7ea93b8b202a4829e07a7691685ac2626d774ac3b943",
+      "bytes": 105644
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00044.wav",
+      "sha256": "f947f3859ea0fea2b2914e6280ec271287a1cec61b937b2ae3078b5e5aa5652b",
+      "bytes": 109484
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00045.wav",
+      "sha256": "2556c719b0cfc22d69baa673f01e05e137edf1beb8d064570979722cd69d25b3",
+      "bytes": 142124
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00046.wav",
+      "sha256": "48e63fea1771d2e35370c75439db16c7c1f2ee91bf8d4ae152b8d927e52836c9",
+      "bytes": 101804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00047.wav",
+      "sha256": "86cddcc136e9fbaeeab8b99dbeed3daa95d7559e8e289cd16a32ac7ed9d5b072",
+      "bytes": 99884
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00048.wav",
+      "sha256": "4dd9204a5373d911dc2eb9c2ed664818a0322909e61ed5ce929b99e32b4f56b5",
+      "bytes": 130604
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00049.wav",
+      "sha256": "a383264482abb66d14bb431f7243aef4eb3710aef3ef34a02d7deada0f375fef",
+      "bytes": 109484
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00050.wav",
+      "sha256": "c6b67aaa052168c0fb67610668aa58ce00dda65329b55520947a9b00463c388b",
+      "bytes": 140204
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00051.wav",
+      "sha256": "42648a38ed09cec1ce12a73d6621bffb1b25bf88d5fd5bbd058511f0326d25ea",
+      "bytes": 96044
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00052.wav",
+      "sha256": "36006b58fbdc1ac4ff7a5860e9ef1a0a03581dddba213e828e39224f670a769e",
+      "bytes": 136364
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00053.wav",
+      "sha256": "06a21cafb1b2ce6f16d11370ebe92324e603372225b083e434865d8cb2cd2856",
+      "bytes": 130604
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00054.wav",
+      "sha256": "0c32360ea9b99df58bcdc1412d9ec6310ddd117169823f9b3070cf94c7b3e320",
+      "bytes": 101804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00055.wav",
+      "sha256": "d3b127674630b70d84963504a7cde886238e27296da68672e575441422714348",
+      "bytes": 113324
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00056.wav",
+      "sha256": "f1ac9368ab941e6e1d2824f5677a610fb46413506c5cb8995d98cd4e8e82d51b",
+      "bytes": 130604
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00057.wav",
+      "sha256": "a0fe53c52f00f5f06d4d57b86cb3e5ae67c3bdd01768d539185d95fc5cdd188a",
+      "bytes": 122924
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00058.wav",
+      "sha256": "ab0313ae91b71bf58420e781693eb271e6425113605c1dbac5263185eaebb2d1",
+      "bytes": 119084
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00059.wav",
+      "sha256": "f203767ce23cb422341ff72a2e5b7439e79a1a05fc62da46af11bdcbca099884",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00060.wav",
+      "sha256": "fac8378692c4e2b0bcc31e19c21d0018e798717c58e64747687e9bdcd4da306c",
+      "bytes": 151724
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00061.wav",
+      "sha256": "3c4a0a7c718a4177a708ff033934fa7dca8a1811732292324f4ed96d26c5ad0e",
+      "bytes": 109484
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00062.wav",
+      "sha256": "ef0b5dff2bc4225e3a90471e666be9045fa67600d26167caf50f60611d7bacaf",
+      "bytes": 193964
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00063.wav",
+      "sha256": "996a58f24e9160fa94a5b8a490578c1726f7ef561864475a47310ca6ce57bc13",
+      "bytes": 128684
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00064.wav",
+      "sha256": "591c55a60dd01fccd7b0dda356bb161273e37c17f92640a5a67ef74adb3fd8df",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00065.wav",
+      "sha256": "98868770dcefe34afadbb94f12c8c632986696be1ef56a5a3c50cdd1005257e0",
+      "bytes": 115244
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00066.wav",
+      "sha256": "8d37321a4bba586a4fd32213d7cc4d1dbdcf847df099dede53f4dc41b9af81de",
+      "bytes": 101804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00067.wav",
+      "sha256": "2d228a01fba2bc14b4a7e66787c5f9e77370438a2ec2a2835367ec387eb1bf59",
+      "bytes": 159404
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00068.wav",
+      "sha256": "f8a13469611a52a4615edb52bb245fb6353b8d3dd6139a925385d3112e7b296b",
+      "bytes": 130604
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00069.wav",
+      "sha256": "0a6e84aecadbb22879ce28c4c26ec2120cd28658666895830a06fb0ba1aaa367",
+      "bytes": 184364
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00070.wav",
+      "sha256": "07106a4a78ecf7d6553c1babcd33a199b56bc5f7d3239aba5494af42313ed9cb",
+      "bytes": 115244
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00071.wav",
+      "sha256": "96b97c8d2c3b0e9f033165001a17683a656ad76a7da25e4af3f58b6d56da1984",
+      "bytes": 128684
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00072.wav",
+      "sha256": "625a96692c20d7ed3a1c3ab86556f544bf2ca8ed973988fb5832d59f79725e0f",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00073.wav",
+      "sha256": "77211bdad4f6b360e8156aa6ba429d2da248869e768f23f7461584af27d2a947",
+      "bytes": 96044
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00074.wav",
+      "sha256": "6146a41646fc5020054b1e8f414dedaf7d371c35b7734ca1ce4d86d72409dcd1",
+      "bytes": 159404
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00075.wav",
+      "sha256": "a781f8d878c8b5647c76fb59230dece1c2128559b70682d4e7171362b84b1d03",
+      "bytes": 240044
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00076.wav",
+      "sha256": "87021e21c2627ee349ed59ea22e5233c4c68a3cc57f9841b055d10ff8ee140e7",
+      "bytes": 138284
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00077.wav",
+      "sha256": "f51d9c99cffc756f7a8c20a9c7ead6966a8aa4ee6b6d316b7ac7f5cb5a07512b",
+      "bytes": 188204
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00078.wav",
+      "sha256": "dec81adc2cd9d5a3d7ffe58ecb0e8e67a38dcb0a0692ac3e512252c5967ac5d1",
+      "bytes": 128684
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00079.wav",
+      "sha256": "c9e5c630bbb92a9b7f227362bcc041e1d42752ff478dcbcda2395e81d257a3bb",
+      "bytes": 170924
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00080.wav",
+      "sha256": "a07e0062fa594c4ea45833539054c8b7724660b3a3a5dec13f23fcbd9dbaaf6e",
+      "bytes": 119084
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00081.wav",
+      "sha256": "6b88875abb1a64bb42185afe1a9897fdee9b5dad43a3efa51951a72fa7afc64e",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00082.wav",
+      "sha256": "231eff37a5df84481a1a247f773a6d5d61d59265a55a6b98c28ed9523870b98b",
+      "bytes": 122924
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00083.wav",
+      "sha256": "330fae627c42a26e11e494dfc88eba29866bcfa6f8d438faf9fe9a67187e0207",
+      "bytes": 153644
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00084.wav",
+      "sha256": "5675cd4135887594656ff6bda8c0f5f45fdeb3da5961249be10b7d286b0be58a",
+      "bytes": 147884
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00085.wav",
+      "sha256": "40cf0605d90e0be056dd2e93cc17b9ffc9534f924892aa06c56cdb7b983f8cb5",
+      "bytes": 149804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00086.wav",
+      "sha256": "e8fdef549a82135ef27d03527d4c7780293b0a3f51a5a07ba6c4c2c556f57b4c",
+      "bytes": 134444
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00087.wav",
+      "sha256": "a0c00181d8ed5cc591b1923c18e4bf658b2e7f2810ab483d2f79ce0add0c060b",
+      "bytes": 101804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00088.wav",
+      "sha256": "1e73c6be90cd61bfd4545631fbd90a5684bac59eaa12ba2ea648c34079eb5284",
+      "bytes": 144044
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00089.wav",
+      "sha256": "de3bd72892777f834f27f853d4c657c75db5c29f47e3609ab95f515f7950ba0c",
+      "bytes": 182444
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00090.wav",
+      "sha256": "35f75866223ee59e979cb2c91b083c87d9ee1c1f430281839bf25a521286756f",
+      "bytes": 105644
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00091.wav",
+      "sha256": "5876e8dcda9159e5ceea02dc028a075c6e606a019e63e4c8d799e4a80358920b",
+      "bytes": 101804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00092.wav",
+      "sha256": "70669d98e5a7957e29ec8a64634fda1078abba514e8861d9bdd5a64223579db6",
+      "bytes": 128684
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00093.wav",
+      "sha256": "862dc5c9bce05fc66fe19c454df9a1909ecb921615ee29fc0963df316ec7c3cd",
+      "bytes": 153644
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00094.wav",
+      "sha256": "dea24960add0e9ec88e77b33feb6efd7be19be576f653ee61508b1b832f0186d",
+      "bytes": 169004
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00095.wav",
+      "sha256": "1a5073ea4b987a521f88873c6b11feccc89ab3da0b3dc758a90124f494f3a663",
+      "bytes": 128684
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00096.wav",
+      "sha256": "112a9477291c063c9385d7eed7c6f4dd9307147ab451ebda8eb765ac1eeee40b",
+      "bytes": 92204
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00097.wav",
+      "sha256": "4c76b2954deb95cf7f7267c4b104bf08cc6591ee85d5f4bd5aa655f91b44261a",
+      "bytes": 124844
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00098.wav",
+      "sha256": "5bac9dabafbe22fc2894856fd16eb09bbaf8cb5cca70ce9f4b5cf59c98932b9b",
+      "bytes": 109484
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00099.wav",
+      "sha256": "044fa1dce9d64a07337e45dbf86ea7a5a9684ddc7f3c72982533e3410c2bc446",
+      "bytes": 197804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00100.wav",
+      "sha256": "db6802c660e632e4561612f01ea47d34aa23039920405cd879b9591270fa019b",
+      "bytes": 147884
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00101.wav",
+      "sha256": "26056595b9b3411f6f1475887cf9fc16e3d86ec551c1d938908fce7fd333d94a",
+      "bytes": 122924
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00102.wav",
+      "sha256": "56ea349edea3e043b21879e8afb697ac7cf409b8861c4b92feaac2d05aa5fb40",
+      "bytes": 113324
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00103.wav",
+      "sha256": "013443acd6ca5627102caee25812d406dc07101f2098566db7e73b78460b7ecd",
+      "bytes": 96044
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00104.wav",
+      "sha256": "cf7bf384a07ff5623af6ee73cae39c82b8f9981d1655613709b7185c1339110c",
+      "bytes": 138284
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00105.wav",
+      "sha256": "d509df65563b332d5dd6def36f4728bb3878d62e04a6332c2894da6ec43014ea",
+      "bytes": 96044
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00106.wav",
+      "sha256": "3f16b92b9ace82c8cf4e517ec78d57555f4371fe5420703e9b742ebd7c59e32b",
+      "bytes": 96044
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00107.wav",
+      "sha256": "c2e50fb4a733c1a3faed255dc2088037f2e50dfed8c89f29554970cfc12999d1",
+      "bytes": 117164
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00108.wav",
+      "sha256": "34bc722d918e27efc4eed6394b98b16e8cba4003f4f543476d4e6eac56652ebb",
+      "bytes": 88364
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00109.wav",
+      "sha256": "3d7b454fac5ade33b37085c15e382b380c99bee893fc89a986708fc1acabf4be",
+      "bytes": 144044
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00110.wav",
+      "sha256": "72ff2787e24cbba2b7b836568c1da1c5b47e05b1baa1644e411e5d67ea38b788",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00111.wav",
+      "sha256": "c2ff804b67af73eb4b4328667224e9b801b8c5f36865421a9e349a0b2c8c3fb5",
+      "bytes": 126764
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00112.wav",
+      "sha256": "cdb9b3fb80d8defa80edcd25dae6e0dab16482e4b5fe5ed19f6e06925f23581a",
+      "bytes": 303404
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00113.wav",
+      "sha256": "4ef31bb004525014522010f42154672b0e52f45567edb45a1dc4033a4c4d130e",
+      "bytes": 117164
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00114.wav",
+      "sha256": "1fc835f9ea26676fd406db714958a2f2661732f789ff5712c3cc23d4816cf353",
+      "bytes": 119084
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00115.wav",
+      "sha256": "2b80a053bcb840fdfc93349a046940abd8697ad09b569168abe02f36a9ae3863",
+      "bytes": 130604
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00116.wav",
+      "sha256": "54394c2d4457211b393ea7b5bbef5e73c1c3febbe6b995c2cfbbcc1c2657cdbb",
+      "bytes": 99884
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00117.wav",
+      "sha256": "ca5aba57282cea613217bf859214a848a5e6d65a560242fd9b7e6fdf47a10a1b",
+      "bytes": 105644
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00118.wav",
+      "sha256": "0658b725becfd47250a62c674390e0bc48d0927c963fb8faec8532f8db16c58f",
+      "bytes": 99884
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00119.wav",
+      "sha256": "18e0fec11aae31759d560f7ffd6a7a6a94d474f4bc199873ac2852c634f28f4a",
+      "bytes": 99884
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00120.wav",
+      "sha256": "11c186f7e1483ee554dee1e65ea32e2eb4dca1395e8479fea2d66973d221eae6",
+      "bytes": 99884
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00121.wav",
+      "sha256": "b25daa2a410451faa386e6bcb091f51756ad80226dfc365f0c95267f43e44c65",
+      "bytes": 101804
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00122.wav",
+      "sha256": "a6ef2bc72cb543593638aaedc4db18bbed9dc82a2fb9d9e6e5214062d491f9a6",
+      "bytes": 109484
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00123.wav",
+      "sha256": "490ef43d4ce7f5f64633c953cfe249b03b76fe30507176b7cdf4a42fd8e319fa",
+      "bytes": 103724
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00124.wav",
+      "sha256": "5f472ce38817c65daca8ef1342037f46126d9eaefc53bda4f237f2e4eed32161",
+      "bytes": 117164
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00125.wav",
+      "sha256": "5e12931845c2720a4cbd4c79ff557a18c1afe7cdb1be933152b2605fb1b4e78c",
+      "bytes": 92204
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00126.wav",
+      "sha256": "3ea21a3b8876deaf33228602ffa81e86cb0a0d57e6e0675621f4b3d09c2e7a14",
+      "bytes": 109484
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00127.wav",
+      "sha256": "20baaec131b33b2debb53dc984ad907a77008a7dd42898f626459e5f72716330",
+      "bytes": 119084
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00128.wav",
+      "sha256": "0f9cb4ac05eb68bd971fc836e2cee6be52123bb2aa0c9457c3fece5e8b39da62",
+      "bytes": 107564
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00129.wav",
+      "sha256": "e68d1cf18e66664d55faa6959c197facbb704452e3b6d7839d41d34b207d576c",
+      "bytes": 99884
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00130.wav",
+      "sha256": "d973f75050880d50bdbeaddc06aea827f250b5102330e0c4946e59a06324ec6d",
+      "bytes": 145964
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/prefix17/reference-prefix17-all104-plus8voices-00131.wav",
+      "sha256": "0fb9f0966b57f1177f1eb3836a5d39b9c117364ee7c582760804ae47c142bd80",
+      "bytes": 82604
+    },
+    {
+      "file": "samples/rtx4070ti-reference-prefix-2026-11-04/verification.json",
+      "sha256": "350aac8bc5fbc8d16122350131a3a86816dc4df1b0776000a7bc1c3098543096",
+      "bytes": 500
     }
-  ],
-  "total_bytes": 51672719,
-  "reference_audio_bundled": false
+  ]
 }

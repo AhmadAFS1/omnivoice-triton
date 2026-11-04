@@ -1,0 +1,23 @@
+{
+  "source": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/joint_prefix_review.py",
+  "sha256": "729a20a34d4000db2e1e33df9aa8f3456bdf404c1975f5acdb2ab17336dc2519",
+  "inputs": [
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/report-prefix396-v1/scored-logical-cases.jsonl",
+      "sha256": "626d13b8666152b367994d5a5dd107603861fd2a453b0db0cfc984e1becfc74f"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/reference-prefix-word-analysis-v1/paired132.jsonl",
+      "sha256": "1b99d47ceadfba96d143e44c4e9e7ce0bfe037f569186465ed69440416d52124"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/speaker-word-prefix396-joint-v1/paired-recomputed264.jsonl",
+      "sha256": "cbd4184eb7d9ef235b92aac995034bea672c3897b13f77621e080d4d2f53ef9e"
+    },
+    {
+      "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/report.py",
+      "sha256": "848e8fc5475ef3ac5345f727dd978c12ed1f4406d41b345af8b525e872782b4a"
+    }
+  ],
+  "wording_clarification": "ActualGenerationTask inspection is optionaladditionalinstrumentation, notmeasured/currentgate. Original source/report archivedwithSHA."
+}

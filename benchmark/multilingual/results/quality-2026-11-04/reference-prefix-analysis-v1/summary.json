@@ -1,0 +1,1424 @@
+{
+  "provenance": {
+    "analysis_kind": "Local CPU-only hash/decode/paired statistical audit",
+    "GPU": "NVIDIA GeForce RTX 4070 Ti",
+    "visible_vram_bytes": 12481134592,
+    "physical_vram_MiB": 12282,
+    "physical_vram_evidence": "Fresh nvidia-smi memory.total in each metadata.json",
+    "visible_vram_evidence": "Fresh torch.cuda device properties in each metadata.json",
+    "driver": "610.57.04",
+    "CUDA_runtime": "12.8",
+    "packages": {
+      "torch": "2.8.0+cu128",
+      "torchaudio": "2.8.0+cu128",
+      "triton": "3.4.0",
+      "transformers": "5.5.4",
+      "omnivoice": "0.1.4",
+      "fastapi": "0.136.0",
+      "starlette": "1.0.0",
+      "anyio": "4.12.1",
+      "uvicorn": "0.44.0",
+      "httpx": "0.28.1",
+      "numpy": "2.4.4",
+      "soundfile": "0.13.1"
+    },
+    "date": "2026-11-04",
+    "source_ref": "ce48b253e66b951d87ea42919f945828c62e96a4",
+    "source_tree_sha256": "e3e5aa9fb61edc8f24bd62b430651265a2816695eb6567da0ae7fcd20f6f98f7",
+    "profile": {
+      "generation_defaults": {
+        "num_step": 16,
+        "guidance_scale": 2.0,
+        "t_shift": 0.1,
+        "layer_penalty_factor": 5.0,
+        "position_temperature": 5.0,
+        "class_temperature": 0.0,
+        "speed": 1.0,
+        "duration": null,
+        "denoise": true,
+        "preprocess_prompt": true,
+        "postprocess_mode": "off",
+        "insert_pauses": false
+      },
+      "per_case_options": "Every worker_options value is posted and logged",
+      "identity_schema": "V5 worker fields + text/mode/language/instruct + reference WAV SHA/transcript/preprocess; random UUIDs excluded",
+      "return": "complete WAV"
+    },
+    "startup_seed": 20261103,
+    "graph_limit": 8,
+    "graph_row_token_budget": 16384,
+    "unused_KV_disabled": true,
+    "split_cfg": false,
+    "codec_batch_size": 1,
+    "response_cache_bytes": 0,
+    "concurrent_requests": 1,
+    "co_resident_load": "Dedicated TTS lease; no ASR/setup/transfers during timing; telemetry and health probes active",
+    "limitations": [
+      "One ordered sequential pass per arm, startup seed reset per process; not repeated randomized trials.",
+      "Target/conditioning/max-sequence headers are admission estimates, not a trace of all actual model tensors.",
+      "Actual reference audio token counts come from registration responses.",
+      "Output duration is measured from decoded WAVs; it is not an ASR or voice-quality score.",
+      "Startup/registration are outside per-request completion_ms. Graph captures during requests are included.",
+      "Reference lexical gates passed; generated speech word and speaker/perceptual checks remain pending.",
+      "This does not measure concurrent inference capacity or certify a default change."
+    ],
+    "full": {
+      "metadata_path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-full/metadata.json",
+      "metadata_sha256": "e8feacf236a8190a7812a8ced619faf1f9558bdfc309c9c452e49b836e2dbc02",
+      "requests_sha256": "1c6d19a80efd641999775fa7576c9f56d868d89a5bdc16d66f9986f30808ca5a",
+      "quality_manifest_sha256": "6ba831edbb460e6ed522f062934b30e4b4cc5f9a2da37ef2de82190ca0bf4188",
+      "health_after_sha256": "6599361ad19c86496934378dc07c2721231d8e4af7e722cd9fe40ce5883532af",
+      "reference_manifest_sha256": "883282175dd47d66f5677ccac8e6c3771d7259a9ca53b6d647ac421143c752e1",
+      "plan_sha256": "c31073d09b9e87e99610fed74099c61fa2ca75ced1a7259e17d2d30e83699429",
+      "protocol_sha256": "1a077901bd91b8b7c16bd2424b52519f092935db2de4f74d068e288b1eb89302",
+      "hardware": {
+        "collected_at": "2026-11-04T10:24:40.988083+00:00",
+        "python": "3.12.3",
+        "platform": "Linux-6.8.0-147-generic-x86_64-with-glibc2.39",
+        "cpu_logical": 16,
+        "cpu": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           48 bits physical, 48 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  16\nOn-line CPU(s) list:                     0-15\nVendor ID:                               AuthenticAMD\nModel name:                              AMD Ryzen 7 5700X 8-Core Processor\nCPU family:                              25\nModel:                                   33\nThread(s) per core:                      2\nCore(s) per socket:                      8\nSocket(s):                               1\nStepping:                                2\nFrequency boost:                         enabled\nCPU(s) scaling MHz:                      58%\nCPU max MHz:                             4663.0889\nCPU min MHz:                             2200.0000\nBogoMIPS:                                6787.39\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk clzero irperf xsaveerptr rdpru wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip pku ospke vaes vpclmulqdq rdpid overflow_recov succor smca fsrm debug_swap ibpb_exit_to_user\nVirtualization:                          AMD-V\nL1d cache:                               256 KiB (8 instances)\nL1i cache:                               256 KiB (8 instances)\nL2 cache:                                4 MiB (8 instances)\nL3 cache:                                32 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-15\nVulnerability Gather data sampling:      Not affected\nVulnerability Indirect target selection: Not affected\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Not affected\nVulnerability Spec rstack overflow:      Mitigation; Safe RET\nVulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; Retpolines; IBPB conditional; IBRS_FW; STIBP always-on; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Mitigation; Clear CPU buffers\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Mitigation; IBPB before exit to userspace",
+        "packages": {
+          "torch": "2.8.0+cu128",
+          "torchaudio": "2.8.0+cu128",
+          "triton": "3.4.0",
+          "transformers": "5.5.4",
+          "omnivoice": "0.1.4",
+          "fastapi": "0.136.0",
+          "starlette": "1.0.0",
+          "anyio": "4.12.1",
+          "uvicorn": "0.44.0",
+          "httpx": "0.28.1",
+          "numpy": "2.4.4",
+          "soundfile": "0.13.1"
+        },
+        "torch_cuda_runtime": "12.8",
+        "torch_cuda_devices": [
+          {
+            "index": 0,
+            "name": "NVIDIA GeForce RTX 4070 Ti",
+            "visible_vram_bytes": 12481134592,
+            "compute_capability": [
+              8,
+              9
+            ]
+          }
+        ],
+        "nvidia_smi_gpu": "name, uuid, memory.total [MiB], memory.used [MiB], driver_version, power.limit [W]\nNVIDIA GeForce RTX 4070 Ti, GPU-5aada52f-9af2-4506-47f7-75e99aaf51ee, 12282 MiB, 4 MiB, 610.57.04, 285.00 W",
+        "nvidia_smi_processes": "pid, process_name, used_gpu_memory [MiB]",
+        "physical_vram_evidence": "nvidia-smi memory.total; visible memory independently from torch device properties"
+      }
+    },
+    "prefix10": {
+      "metadata_path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-prefix10/metadata.json",
+      "metadata_sha256": "b745661787a83d6744f101ac41a16d370f47def96c01fe22bf5925a03996e799",
+      "requests_sha256": "20b64869a96134aa9885008a626fabdf3e36e225d090ed0c8d1e0b17ffefbf3d",
+      "quality_manifest_sha256": "7feda7042fd1a7e12dfaac9d1b2d2ebd7279dc5b492dcdbc6064e032adcbb9c6",
+      "health_after_sha256": "0f53d28f23e3515244491274fdedf7cfba387b31a22d12272a55b5bfdbcb6f32",
+      "reference_manifest_sha256": "883282175dd47d66f5677ccac8e6c3771d7259a9ca53b6d647ac421143c752e1",
+      "plan_sha256": "4467bded694360a6688edcb715812147914c6dd0fb277203ae8659387b25b834",
+      "protocol_sha256": "1a077901bd91b8b7c16bd2424b52519f092935db2de4f74d068e288b1eb89302",
+      "hardware": {
+        "collected_at": "2026-11-04T10:25:56.495751+00:00",
+        "python": "3.12.3",
+        "platform": "Linux-6.8.0-147-generic-x86_64-with-glibc2.39",
+        "cpu_logical": 16,
+        "cpu": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           48 bits physical, 48 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  16\nOn-line CPU(s) list:                     0-15\nVendor ID:                               AuthenticAMD\nModel name:                              AMD Ryzen 7 5700X 8-Core Processor\nCPU family:                              25\nModel:                                   33\nThread(s) per core:                      2\nCore(s) per socket:                      8\nSocket(s):                               1\nStepping:                                2\nFrequency boost:                         enabled\nCPU(s) scaling MHz:                      57%\nCPU max MHz:                             4663.0889\nCPU min MHz:                             2200.0000\nBogoMIPS:                                6787.39\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk clzero irperf xsaveerptr rdpru wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip pku ospke vaes vpclmulqdq rdpid overflow_recov succor smca fsrm debug_swap ibpb_exit_to_user\nVirtualization:                          AMD-V\nL1d cache:                               256 KiB (8 instances)\nL1i cache:                               256 KiB (8 instances)\nL2 cache:                                4 MiB (8 instances)\nL3 cache:                                32 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-15\nVulnerability Gather data sampling:      Not affected\nVulnerability Indirect target selection: Not affected\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Not affected\nVulnerability Spec rstack overflow:      Mitigation; Safe RET\nVulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; Retpolines; IBPB conditional; IBRS_FW; STIBP always-on; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Mitigation; Clear CPU buffers\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Mitigation; IBPB before exit to userspace",
+        "packages": {
+          "torch": "2.8.0+cu128",
+          "torchaudio": "2.8.0+cu128",
+          "triton": "3.4.0",
+          "transformers": "5.5.4",
+          "omnivoice": "0.1.4",
+          "fastapi": "0.136.0",
+          "starlette": "1.0.0",
+          "anyio": "4.12.1",
+          "uvicorn": "0.44.0",
+          "httpx": "0.28.1",
+          "numpy": "2.4.4",
+          "soundfile": "0.13.1"
+        },
+        "torch_cuda_runtime": "12.8",
+        "torch_cuda_devices": [
+          {
+            "index": 0,
+            "name": "NVIDIA GeForce RTX 4070 Ti",
+            "visible_vram_bytes": 12481134592,
+            "compute_capability": [
+              8,
+              9
+            ]
+          }
+        ],
+        "nvidia_smi_gpu": "name, uuid, memory.total [MiB], memory.used [MiB], driver_version, power.limit [W]\nNVIDIA GeForce RTX 4070 Ti, GPU-5aada52f-9af2-4506-47f7-75e99aaf51ee, 12282 MiB, 4 MiB, 610.57.04, 285.00 W",
+        "nvidia_smi_processes": "pid, process_name, used_gpu_memory [MiB]",
+        "physical_vram_evidence": "nvidia-smi memory.total; visible memory independently from torch device properties"
+      }
+    },
+    "prefix17": {
+      "metadata_path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/retained-59071593/results/reference-prefix-v1-prefix17/metadata.json",
+      "metadata_sha256": "24c500935008ef1657bf46e5b53e7c3e1ab1d2915c150656d83d8f542bd1db69",
+      "requests_sha256": "1138b5e2c6b2eebd6785b226eb3b71db53e441a695c6ddf63e689369199596eb",
+      "quality_manifest_sha256": "6d4da5b28d50e0685df5e925d38f1cb386949f022934f8302ad9ada4dc61e3d2",
+      "health_after_sha256": "c59a2fbab41d220ecb06b6437618447db672467f5019cd11ca14f6bbd69baf1d",
+      "reference_manifest_sha256": "883282175dd47d66f5677ccac8e6c3771d7259a9ca53b6d647ac421143c752e1",
+      "plan_sha256": "a5510281e5c34151b8280095264651ccaa5184d741ff88982d6b6cc9033d77ae",
+      "protocol_sha256": "1a077901bd91b8b7c16bd2424b52519f092935db2de4f74d068e288b1eb89302",
+      "hardware": {
+        "collected_at": "2026-11-04T10:26:52.933143+00:00",
+        "python": "3.12.3",
+        "platform": "Linux-6.8.0-147-generic-x86_64-with-glibc2.39",
+        "cpu_logical": 16,
+        "cpu": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           48 bits physical, 48 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  16\nOn-line CPU(s) list:                     0-15\nVendor ID:                               AuthenticAMD\nModel name:                              AMD Ryzen 7 5700X 8-Core Processor\nCPU family:                              25\nModel:                                   33\nThread(s) per core:                      2\nCore(s) per socket:                      8\nSocket(s):                               1\nStepping:                                2\nFrequency boost:                         enabled\nCPU(s) scaling MHz:                      60%\nCPU max MHz:                             4663.0889\nCPU min MHz:                             2200.0000\nBogoMIPS:                                6787.39\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid aperfmperf rapl pni pclmulqdq monitor ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand lahf_lm cmp_legacy svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw ibs skinit wdt tce topoext perfctr_core perfctr_nb bpext perfctr_llc mwaitx cpb cat_l3 cdp_l3 hw_pstate ssbd mba ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid cqm rdt_a rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local user_shstk clzero irperf xsaveerptr rdpru wbnoinvd arat npt lbrv svm_lock nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold avic v_vmsave_vmload vgif v_spec_ctrl umip pku ospke vaes vpclmulqdq rdpid overflow_recov succor smca fsrm debug_swap ibpb_exit_to_user\nVirtualization:                          AMD-V\nL1d cache:                               256 KiB (8 instances)\nL1i cache:                               256 KiB (8 instances)\nL2 cache:                                4 MiB (8 instances)\nL3 cache:                                32 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-15\nVulnerability Gather data sampling:      Not affected\nVulnerability Indirect target selection: Not affected\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Not affected\nVulnerability Spec rstack overflow:      Mitigation; Safe RET\nVulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; Retpolines; IBPB conditional; IBRS_FW; STIBP always-on; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Mitigation; Clear CPU buffers\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Mitigation; IBPB before exit to userspace",
+        "packages": {
+          "torch": "2.8.0+cu128",
+          "torchaudio": "2.8.0+cu128",
+          "triton": "3.4.0",
+          "transformers": "5.5.4",
+          "omnivoice": "0.1.4",
+          "fastapi": "0.136.0",
+          "starlette": "1.0.0",
+          "anyio": "4.12.1",
+          "uvicorn": "0.44.0",
+          "httpx": "0.28.1",
+          "numpy": "2.4.4",
+          "soundfile": "0.13.1"
+        },
+        "torch_cuda_runtime": "12.8",
+        "torch_cuda_devices": [
+          {
+            "index": 0,
+            "name": "NVIDIA GeForce RTX 4070 Ti",
+            "visible_vram_bytes": 12481134592,
+            "compute_capability": [
+              8,
+              9
+            ]
+          }
+        ],
+        "nvidia_smi_gpu": "name, uuid, memory.total [MiB], memory.used [MiB], driver_version, power.limit [W]\nNVIDIA GeForce RTX 4070 Ti, GPU-5aada52f-9af2-4506-47f7-75e99aaf51ee, 12282 MiB, 4 MiB, 610.57.04, 285.00 W",
+        "nvidia_smi_processes": "pid, process_name, used_gpu_memory [MiB]",
+        "physical_vram_evidence": "nvidia-smi memory.total; visible memory independently from torch device properties"
+      }
+    }
+  },
+  "verified_generated_WAVs": 396,
+  "verified_reference_WAVs": 80,
+  "groups": {
+    "full": {
+      "all132": {
+        "n": 132,
+        "latency_ms": {
+          "n": 132,
+          "min": 296.2511680088937,
+          "p50": 481.6991319821682,
+          "p95": 578.2093574380269,
+          "max": 1090.0217769958545,
+          "mean": 493.4603890770549
+        },
+        "server_latency_ms": {
+          "n": 132,
+          "min": 293.69,
+          "p50": 478.705,
+          "p95": 575.773,
+          "max": 1082.55,
+          "mean": 490.6485606060606
+        },
+        "iterative_ms": {
+          "n": 132,
+          "min": 6.27,
+          "p50": 368.645,
+          "p95": 469.9515,
+          "max": 925.29,
+          "mean": 361.00825757575757
+        },
+        "decode_ms": {
+          "n": 132,
+          "min": 56.71,
+          "p50": 98.11,
+          "p95": 290.3445,
+          "max": 293.06,
+          "mean": 119.73484848484848
+        },
+        "output_duration_s": {
+          "n": 132,
+          "min": 1.76,
+          "p50": 2.78,
+          "p95": 4.035999999999999,
+          "max": 6.84,
+          "mean": 2.832727272727273
+        },
+        "reference_duration_s": {
+          "n": 132,
+          "min": 9.370958333333334,
+          "p50": 13.930958333333333,
+          "p95": 15.508958333333332,
+          "max": 17.49095833333333,
+          "mean": 14.007928030303033
+        },
+        "reference_audio_tokens_actual": {
+          "n": 132,
+          "min": 228.0,
+          "p50": 343.0,
+          "p95": 384.0,
+          "max": 422.0,
+          "mean": 344.52272727272725
+        },
+        "target_tokens_header_estimate": {
+          "n": 132,
+          "min": 39.0,
+          "p50": 64.5,
+          "p95": 95.89999999999998,
+          "max": 166.0,
+          "mean": 65.81818181818181
+        },
+        "conditioning_tokens_header_estimate": {
+          "n": 132,
+          "min": 304.0,
+          "p50": 404.0,
+          "p95": 461.45,
+          "max": 503.0,
+          "mean": 412.02272727272725
+        },
+        "full_WAV_within_500ms": 84,
+        "RMS_below_0_005_diagnostic_only": 0
+      },
+      "changed_English110": {
+        "n": 110,
+        "latency_ms": {
+          "n": 110,
+          "min": 296.2511680088937,
+          "p50": 481.0355274967151,
+          "p95": 573.7542479982949,
+          "max": 614.5126089977566,
+          "mean": 487.22992058319505
+        },
+        "server_latency_ms": {
+          "n": 110,
+          "min": 293.69,
+          "p50": 478.13,
+          "p95": 570.4865,
+          "max": 610.66,
+          "mean": 484.43727272727267
+        },
+        "iterative_ms": {
+          "n": 110,
+          "min": 6.27,
+          "p50": 368.515,
+          "p95": 468.954,
+          "max": 516.64,
+          "mean": 356.00318181818193
+        },
+        "decode_ms": {
+          "n": 110,
+          "min": 56.74,
+          "p50": 98.17,
+          "p95": 290.6085,
+          "max": 293.06,
+          "mean": 118.49772727272727
+        },
+        "output_duration_s": {
+          "n": 110,
+          "min": 1.76,
+          "p50": 2.74,
+          "p95": 4.102,
+          "max": 6.84,
+          "mean": 2.829818181818182
+        },
+        "reference_duration_s": {
+          "n": 110,
+          "min": 13.930958333333333,
+          "p50": 13.930958333333333,
+          "p95": 14.756958333333333,
+          "max": 16.210958333333334,
+          "mean": 14.045140151515154
+        },
+        "reference_audio_tokens_actual": {
+          "n": 110,
+          "min": 343.0,
+          "p50": 343.0,
+          "p95": 362.65,
+          "max": 400.0,
+          "mean": 345.8363636363636
+        },
+        "target_tokens_header_estimate": {
+          "n": 110,
+          "min": 39.0,
+          "p50": 63.5,
+          "p95": 97.55,
+          "max": 166.0,
+          "mean": 65.74545454545455
+        },
+        "conditioning_tokens_header_estimate": {
+          "n": 110,
+          "min": 395.0,
+          "p50": 403.0,
+          "p95": 443.65,
+          "max": 478.0,
+          "mean": 410.8272727272727
+        },
+        "full_WAV_within_500ms": 73,
+        "RMS_below_0_005_diagnostic_only": 0
+      },
+      "unchanged_native22": {
+        "n": 22,
+        "latency_ms": {
+          "n": 22,
+          "min": 318.1675870146137,
+          "p50": 518.4828740020748,
+          "p95": 596.0785071700229,
+          "max": 1090.0217769958545,
+          "mean": 524.6127315463541
+        },
+        "server_latency_ms": {
+          "n": 22,
+          "min": 315.87,
+          "p50": 515.9200000000001,
+          "p95": 593.174,
+          "max": 1082.55,
+          "mean": 521.705
+        },
+        "iterative_ms": {
+          "n": 22,
+          "min": 165.46,
+          "p50": 414.97,
+          "p95": 488.7485,
+          "max": 925.29,
+          "mean": 386.03363636363633
+        },
+        "decode_ms": {
+          "n": 22,
+          "min": 56.71,
+          "p50": 94.8,
+          "p95": 274.52599999999995,
+          "max": 288.61,
+          "mean": 125.92045454545455
+        },
+        "output_duration_s": {
+          "n": 22,
+          "min": 2.32,
+          "p50": 2.82,
+          "p95": 3.2,
+          "max": 3.28,
+          "mean": 2.847272727272727
+        },
+        "reference_duration_s": {
+          "n": 22,
+          "min": 9.370958333333334,
+          "p50": 14.250958333333333,
+          "p95": 16.76095833333333,
+          "max": 17.49095833333333,
+          "mean": 13.82186742424242
+        },
+        "reference_audio_tokens_actual": {
+          "n": 22,
+          "min": 228.0,
+          "p50": 347.0,
+          "p95": 413.65,
+          "max": 422.0,
+          "mean": 337.95454545454544
+        },
+        "target_tokens_header_estimate": {
+          "n": 22,
+          "min": 53.0,
+          "p50": 65.5,
+          "p95": 75.0,
+          "max": 77.0,
+          "mean": 66.18181818181819
+        },
+        "conditioning_tokens_header_estimate": {
+          "n": 22,
+          "min": 304.0,
+          "p50": 412.0,
+          "p95": 494.65,
+          "max": 503.0,
+          "mean": 418.0
+        },
+        "full_WAV_within_500ms": 11,
+        "RMS_below_0_005_diagnostic_only": 0
+      },
+      "Aoede_all104": {
+        "n": 104,
+        "latency_ms": {
+          "n": 104,
+          "min": 296.2511680088937,
+          "p50": 479.3552750052186,
+          "p95": 571.9122840062482,
+          "max": 614.5126089977566,
+          "mean": 480.19277729914535
+        },
+        "server_latency_ms": {
+          "n": 104,
+          "min": 293.69,
+          "p50": 476.38,
+          "p95": 568.8050000000001,
+          "max": 610.66,
+          "mean": 477.4016346153846
+        },
+        "iterative_ms": {
+          "n": 104,
+          "min": 6.27,
+          "p50": 366.925,
+          "p95": 467.09950000000003,
+          "max": 472.85,
+          "mean": 338.2483653846154
+        },
+        "decode_ms": {
+          "n": 104,
+          "min": 56.81,
+          "p50": 98.315,
+          "p95": 290.6895,
+          "max": 293.06,
+          "mean": 129.18028846153845
+        },
+        "output_duration_s": {
+          "n": 104,
+          "min": 1.76,
+          "p50": 2.68,
+          "p95": 4.114,
+          "max": 6.84,
+          "mean": 2.818076923076923
+        },
+        "reference_duration_s": {
+          "n": 104,
+          "min": 9.370958333333334,
+          "p50": 13.930958333333333,
+          "p95": 13.930958333333333,
+          "max": 15.170958333333333,
+          "mean": 13.775189102564106
+        },
+        "reference_audio_tokens_actual": {
+          "n": 104,
+          "min": 228.0,
+          "p50": 343.0,
+          "p95": 343.0,
+          "max": 373.0,
+          "mean": 339.0480769230769
+        },
+        "target_tokens_header_estimate": {
+          "n": 104,
+          "min": 39.0,
+          "p50": 62.0,
+          "p95": 97.85,
+          "max": 166.0,
+          "mean": 65.45192307692308
+        },
+        "conditioning_tokens_header_estimate": {
+          "n": 104,
+          "min": 304.0,
+          "p50": 402.0,
+          "p95": 444.25,
+          "max": 461.0,
+          "mean": 406.27884615384613
+        },
+        "full_WAV_within_500ms": 75,
+        "RMS_below_0_005_diagnostic_only": 0
+      }
+    },
+    "prefix10": {
+      "all132": {
+        "n": 132,
+        "latency_ms": {
+          "n": 132,
+          "min": 150.85105400066823,
+          "p50": 327.3621285043191,
+          "p95": 558.5222055466147,
+          "max": 1066.3118550146464,
+          "mean": 348.77060981274224
+        },
+        "server_latency_ms": {
+          "n": 132,
+          "min": 148.02,
+          "p50": 324.265,
+          "p95": 555.737,
+          "max": 1059.2,
+          "mean": 345.72515151515154
+        },
+        "iterative_ms": {
+          "n": 132,
+          "min": 6.21,
+          "p50": 166.565,
+          "p95": 467.8965,
+          "max": 901.37,
+          "mean": 216.44090909090906
+        },
+        "decode_ms": {
+          "n": 132,
+          "min": 42.32,
+          "p50": 133.805,
+          "p95": 165.5495,
+          "max": 289.97,
+          "mean": 119.65924242424242
+        },
+        "output_duration_s": {
+          "n": 132,
+          "min": 1.72,
+          "p50": 2.68,
+          "p95": 3.835999999999999,
+          "max": 6.48,
+          "mean": 2.730909090909091
+        },
+        "reference_duration_s": {
+          "n": 132,
+          "min": 3.92,
+          "p50": 3.92,
+          "p95": 14.940958333333331,
+          "max": 17.49095833333333,
+          "mean": 5.598493055555556
+        },
+        "reference_audio_tokens_actual": {
+          "n": 132,
+          "min": 94.0,
+          "p50": 94.0,
+          "p95": 366.45,
+          "max": 422.0,
+          "mean": 135.4318181818182
+        },
+        "target_tokens_header_estimate": {
+          "n": 132,
+          "min": 38.0,
+          "p50": 62.0,
+          "p95": 90.89999999999998,
+          "max": 157.0,
+          "mean": 63.27272727272727
+        },
+        "conditioning_tokens_header_estimate": {
+          "n": 132,
+          "min": 120.0,
+          "p50": 131.0,
+          "p95": 453.45,
+          "max": 503.0,
+          "mean": 181.2651515151515
+        },
+        "full_WAV_within_500ms": 121,
+        "RMS_below_0_005_diagnostic_only": 0
+      },
+      "changed_English110": {
+        "n": 110,
+        "latency_ms": {
+          "n": 110,
+          "min": 150.85105400066823,
+          "p50": 322.25255099183414,
+          "p95": 382.5225850145216,
+          "max": 399.90773500176147,
+          "mean": 313.4715991388393
+        },
+        "server_latency_ms": {
+          "n": 110,
+          "min": 148.02,
+          "p50": 319.36,
+          "p95": 379.615,
+          "max": 396.35,
+          "mean": 310.43045454545455
+        },
+        "iterative_ms": {
+          "n": 110,
+          "min": 6.21,
+          "p50": 165.92000000000002,
+          "p95": 310.74850000000004,
+          "max": 316.78,
+          "mean": 182.46890909090914
+        },
+        "decode_ms": {
+          "n": 110,
+          "min": 42.32,
+          "p50": 135.22,
+          "p95": 159.01999999999998,
+          "max": 167.16,
+          "mean": 118.3339090909091
+        },
+        "output_duration_s": {
+          "n": 110,
+          "min": 1.72,
+          "p50": 2.62,
+          "p95": 3.9019999999999997,
+          "max": 6.48,
+          "mean": 2.7076363636363636
+        },
+        "reference_duration_s": {
+          "n": 110,
+          "min": 3.92,
+          "p50": 3.92,
+          "p95": 4.14,
+          "max": 4.54,
+          "mean": 3.9538181818181837
+        },
+        "reference_audio_tokens_actual": {
+          "n": 110,
+          "min": 94.0,
+          "p50": 94.0,
+          "p95": 101.1,
+          "max": 109.0,
+          "mean": 94.92727272727272
+        },
+        "target_tokens_header_estimate": {
+          "n": 110,
+          "min": 38.0,
+          "p50": 60.5,
+          "p95": 92.55,
+          "max": 157.0,
+          "mean": 62.69090909090909
+        },
+        "conditioning_tokens_header_estimate": {
+          "n": 110,
+          "min": 120.0,
+          "p50": 128.0,
+          "p95": 163.0,
+          "max": 176.0,
+          "mean": 133.9181818181818
+        },
+        "full_WAV_within_500ms": 110,
+        "RMS_below_0_005_diagnostic_only": 0
+      },
+      "unchanged_native22": {
+        "n": 22,
+        "latency_ms": {
+          "n": 22,
+          "min": 317.85443698754534,
+          "p50": 515.3537664882606,
+          "p95": 590.0288713950431,
+          "max": 1066.3118550146464,
+          "mean": 525.2656631822571
+        },
+        "server_latency_ms": {
+          "n": 22,
+          "min": 315.21,
+          "p50": 512.525,
+          "p95": 587.1875,
+          "max": 1059.2,
+          "mean": 522.1986363636363
+        },
+        "iterative_ms": {
+          "n": 22,
+          "min": 165.4,
+          "p50": 413.93,
+          "p95": 509.3175,
+          "max": 901.37,
+          "mean": 386.30090909090904
+        },
+        "decode_ms": {
+          "n": 22,
+          "min": 56.87,
+          "p50": 94.92,
+          "p95": 286.9575,
+          "max": 289.97,
+          "mean": 126.28590909090912
+        },
+        "output_duration_s": {
+          "n": 22,
+          "min": 2.32,
+          "p50": 2.82,
+          "p95": 3.2,
+          "max": 3.28,
+          "mean": 2.847272727272727
+        },
+        "reference_duration_s": {
+          "n": 22,
+          "min": 9.370958333333334,
+          "p50": 14.250958333333333,
+          "p95": 16.76095833333333,
+          "max": 17.49095833333333,
+          "mean": 13.82186742424242
+        },
+        "reference_audio_tokens_actual": {
+          "n": 22,
+          "min": 228.0,
+          "p50": 347.0,
+          "p95": 413.65,
+          "max": 422.0,
+          "mean": 337.95454545454544
+        },
+        "target_tokens_header_estimate": {
+          "n": 22,
+          "min": 53.0,
+          "p50": 65.5,
+          "p95": 75.0,
+          "max": 77.0,
+          "mean": 66.18181818181819
+        },
+        "conditioning_tokens_header_estimate": {
+          "n": 22,
+          "min": 304.0,
+          "p50": 412.0,
+          "p95": 494.65,
+          "max": 503.0,
+          "mean": 418.0
+        },
+        "full_WAV_within_500ms": 11,
+        "RMS_below_0_005_diagnostic_only": 0
+      },
+      "Aoede_all104": {
+        "n": 104,
+        "latency_ms": {
+          "n": 104,
+          "min": 150.85105400066823,
+          "p50": 323.0190465110354,
+          "p95": 450.685570888163,
+          "max": 577.5635160098318,
+          "mean": 326.57414568501946
+        },
+        "server_latency_ms": {
+          "n": 104,
+          "min": 148.02,
+          "p50": 320.12,
+          "p95": 447.8584999999999,
+          "max": 574.6,
+          "mean": 323.5289423076923
+        },
+        "iterative_ms": {
+          "n": 104,
+          "min": 6.21,
+          "p50": 166.285,
+          "p95": 311.92,
+          "max": 470.73,
+          "mean": 192.3379807692308
+        },
+        "decode_ms": {
+          "n": 104,
+          "min": 42.32,
+          "p50": 134.20999999999998,
+          "p95": 166.646,
+          "max": 289.97,
+          "mean": 121.50932692307691
+        },
+        "output_duration_s": {
+          "n": 104,
+          "min": 1.72,
+          "p50": 2.6,
+          "p95": 3.9139999999999997,
+          "max": 6.48,
+          "mean": 2.7034615384615384
+        },
+        "reference_duration_s": {
+          "n": 104,
+          "min": 3.92,
+          "p50": 3.92,
+          "p95": 10.754958333333326,
+          "max": 15.170958333333333,
+          "mean": 4.534304487179488
+        },
+        "reference_audio_tokens_actual": {
+          "n": 104,
+          "min": 94.0,
+          "p50": 94.0,
+          "p95": 262.2999999999998,
+          "max": 373.0,
+          "mean": 109.20192307692308
+        },
+        "target_tokens_header_estimate": {
+          "n": 104,
+          "min": 38.0,
+          "p50": 60.0,
+          "p95": 92.85,
+          "max": 157.0,
+          "mean": 62.58653846153846
+        },
+        "conditioning_tokens_header_estimate": {
+          "n": 104,
+          "min": 120.0,
+          "p50": 128.0,
+          "p95": 349.7499999999999,
+          "max": 461.0,
+          "mean": 152.43269230769232
+        },
+        "full_WAV_within_500ms": 102,
+        "RMS_below_0_005_diagnostic_only": 0
+      }
+    },
+    "prefix17": {
+      "all132": {
+        "n": 132,
+        "latency_ms": {
+          "n": 132,
+          "min": 207.79633900383487,
+          "p50": 379.9098729941761,
+          "p95": 557.0515747967873,
+          "max": 1067.8113919857424,
+          "mean": 387.4366445895496
+        },
+        "server_latency_ms": {
+          "n": 132,
+          "min": 204.87,
+          "p50": 376.85,
+          "p95": 554.1175,
+          "max": 1060.7,
+          "mean": 384.44409090909085
+        },
+        "iterative_ms": {
+          "n": 132,
+          "min": 114.76,
+          "p50": 300.78999999999996,
+          "p95": 468.034,
+          "max": 902.37,
+          "mean": 299.00416666666666
+        },
+        "decode_ms": {
+          "n": 132,
+          "min": 42.46,
+          "p50": 66.91499999999999,
+          "p95": 126.94599999999998,
+          "max": 289.45,
+          "mean": 75.81954545454546
+        },
+        "output_duration_s": {
+          "n": 132,
+          "min": 1.72,
+          "p50": 2.64,
+          "p95": 3.7559999999999993,
+          "max": 6.32,
+          "mean": 2.6942424242424243
+        },
+        "reference_duration_s": {
+          "n": 132,
+          "min": 6.54,
+          "p50": 6.54,
+          "p95": 14.940958333333331,
+          "max": 17.49095833333333,
+          "mean": 7.817583964646465
+        },
+        "reference_audio_tokens_actual": {
+          "n": 132,
+          "min": 159.0,
+          "p50": 159.0,
+          "p95": 366.45,
+          "max": 422.0,
+          "mean": 190.52272727272728
+        },
+        "target_tokens_header_estimate": {
+          "n": 132,
+          "min": 38.0,
+          "p50": 61.0,
+          "p95": 88.89999999999998,
+          "max": 153.0,
+          "mean": 62.35606060606061
+        },
+        "conditioning_tokens_header_estimate": {
+          "n": 132,
+          "min": 192.0,
+          "p50": 204.0,
+          "p95": 453.45,
+          "max": 503.0,
+          "mean": 242.18939393939394
+        },
+        "full_WAV_within_500ms": 120,
+        "RMS_below_0_005_diagnostic_only": 0
+      },
+      "changed_English110": {
+        "n": 110,
+        "latency_ms": {
+          "n": 110,
+          "min": 207.79633900383487,
+          "p50": 378.2883789972402,
+          "p95": 404.8797710958752,
+          "max": 450.47759800218046,
+          "mean": 359.8276750449176
+        },
+        "server_latency_ms": {
+          "n": 110,
+          "min": 204.87,
+          "p50": 375.25,
+          "p95": 401.83,
+          "max": 447.39,
+          "mean": 356.8436363636364
+        },
+        "iterative_ms": {
+          "n": 110,
+          "min": 114.76,
+          "p50": 300.28,
+          "p95": 317.1375,
+          "max": 362.96,
+          "mean": 281.62345454545454
+        },
+        "decode_ms": {
+          "n": 110,
+          "min": 42.46,
+          "p50": 66.725,
+          "p95": 108.1885,
+          "max": 132.04,
+          "mean": 65.60109090909091
+        },
+        "output_duration_s": {
+          "n": 110,
+          "min": 1.72,
+          "p50": 2.58,
+          "p95": 3.8219999999999996,
+          "max": 6.32,
+          "mean": 2.663636363636364
+        },
+        "reference_duration_s": {
+          "n": 110,
+          "min": 6.54,
+          "p50": 6.54,
+          "p95": 7.175,
+          "max": 7.7,
+          "mean": 6.616727272727272
+        },
+        "reference_audio_tokens_actual": {
+          "n": 110,
+          "min": 159.0,
+          "p50": 159.0,
+          "p95": 175.64999999999998,
+          "max": 188.0,
+          "mean": 161.03636363636363
+        },
+        "target_tokens_header_estimate": {
+          "n": 110,
+          "min": 38.0,
+          "p50": 59.5,
+          "p95": 90.55,
+          "max": 153.0,
+          "mean": 61.59090909090909
+        },
+        "conditioning_tokens_header_estimate": {
+          "n": 110,
+          "min": 192.0,
+          "p50": 200.0,
+          "p95": 236.55,
+          "max": 248.0,
+          "mean": 207.02727272727273
+        },
+        "full_WAV_within_500ms": 110,
+        "RMS_below_0_005_diagnostic_only": 0
+      },
+      "unchanged_native22": {
+        "n": 22,
+        "latency_ms": {
+          "n": 22,
+          "min": 317.91101398994215,
+          "p50": 523.1217330001527,
+          "p95": 583.4321858768817,
+          "max": 1067.8113919857424,
+          "mean": 525.4814923127097
+        },
+        "server_latency_ms": {
+          "n": 22,
+          "min": 315.62,
+          "p50": 520.33,
+          "p95": 580.5085,
+          "max": 1060.7,
+          "mean": 522.4463636363637
+        },
+        "iterative_ms": {
+          "n": 22,
+          "min": 165.89,
+          "p50": 419.65,
+          "p95": 475.7545,
+          "max": 902.37,
+          "mean": 385.90772727272724
+        },
+        "decode_ms": {
+          "n": 22,
+          "min": 57.47,
+          "p50": 95.2,
+          "p95": 287.58549999999997,
+          "max": 289.45,
+          "mean": 126.91181818181818
+        },
+        "output_duration_s": {
+          "n": 22,
+          "min": 2.32,
+          "p50": 2.82,
+          "p95": 3.2,
+          "max": 3.28,
+          "mean": 2.847272727272727
+        },
+        "reference_duration_s": {
+          "n": 22,
+          "min": 9.370958333333334,
+          "p50": 14.250958333333333,
+          "p95": 16.76095833333333,
+          "max": 17.49095833333333,
+          "mean": 13.82186742424242
+        },
+        "reference_audio_tokens_actual": {
+          "n": 22,
+          "min": 228.0,
+          "p50": 347.0,
+          "p95": 413.65,
+          "max": 422.0,
+          "mean": 337.95454545454544
+        },
+        "target_tokens_header_estimate": {
+          "n": 22,
+          "min": 53.0,
+          "p50": 65.5,
+          "p95": 75.0,
+          "max": 77.0,
+          "mean": 66.18181818181819
+        },
+        "conditioning_tokens_header_estimate": {
+          "n": 22,
+          "min": 304.0,
+          "p50": 412.0,
+          "p95": 494.65,
+          "max": 503.0,
+          "mean": 418.0
+        },
+        "full_WAV_within_500ms": 10,
+        "RMS_below_0_005_diagnostic_only": 0
+      },
+      "Aoede_all104": {
+        "n": 104,
+        "latency_ms": {
+          "n": 104,
+          "min": 207.79633900383487,
+          "p50": 378.7729004980065,
+          "p95": 453.40375785017386,
+          "max": 577.2615559981205,
+          "mean": 368.9179403926783
+        },
+        "server_latency_ms": {
+          "n": 104,
+          "min": 204.87,
+          "p50": 375.90999999999997,
+          "p95": 450.501,
+          "max": 574.3,
+          "mean": 365.92971153846156
+        },
+        "iterative_ms": {
+          "n": 104,
+          "min": 116.22,
+          "p50": 300.655,
+          "p95": 318.194,
+          "max": 470.44,
+          "mean": 282.78346153846155
+        },
+        "decode_ms": {
+          "n": 104,
+          "min": 42.46,
+          "p50": 66.72,
+          "p95": 127.538,
+          "max": 289.45,
+          "mean": 73.46307692307693
+        },
+        "output_duration_s": {
+          "n": 104,
+          "min": 1.72,
+          "p50": 2.56,
+          "p95": 3.8339999999999996,
+          "max": 6.32,
+          "mean": 2.657692307692308
+        },
+        "reference_duration_s": {
+          "n": 104,
+          "min": 6.54,
+          "p50": 6.54,
+          "p95": 10.754958333333326,
+          "max": 15.170958333333333,
+          "mean": 6.952766025641027
+        },
+        "reference_audio_tokens_actual": {
+          "n": 104,
+          "min": 159.0,
+          "p50": 159.0,
+          "p95": 262.2999999999998,
+          "max": 373.0,
+          "mean": 169.20192307692307
+        },
+        "target_tokens_header_estimate": {
+          "n": 104,
+          "min": 38.0,
+          "p50": 59.0,
+          "p95": 90.85,
+          "max": 153.0,
+          "mean": 61.44230769230769
+        },
+        "conditioning_tokens_header_estimate": {
+          "n": 104,
+          "min": 192.0,
+          "p50": 200.0,
+          "p95": 349.7499999999999,
+          "max": 461.0,
+          "mean": 218.89423076923077
+        },
+        "full_WAV_within_500ms": 102,
+        "RMS_below_0_005_diagnostic_only": 0
+      }
+    }
+  },
+  "paired": {
+    "prefix10": {
+      "changed_English110": {
+        "n": 110,
+        "latency_ratio_after_over_full": {
+          "n": 110,
+          "min": 0.3168857015928811,
+          "p50": 0.6561355548267559,
+          "p95": 0.9800474503793946,
+          "max": 1.043751510121812,
+          "mean": 0.6505338640819162
+        },
+        "latency_delta_ms": {
+          "n": 110,
+          "min": -367.09606801741756,
+          "p50": -168.02658399683423,
+          "p95": -6.283797661308205,
+          "max": 12.961435975739732,
+          "mean": -173.7583214443558
+        },
+        "output_duration_ratio": {
+          "n": 110,
+          "min": 0.926470588235294,
+          "p50": 0.9520940906483075,
+          "p95": 1.0,
+          "max": 1.0149253731343284,
+          "mean": 0.9588893268458027
+        },
+        "output_duration_delta_s": {
+          "n": 110,
+          "min": -0.35999999999999943,
+          "p50": -0.1200000000000001,
+          "p95": 0.0,
+          "max": 0.040000000000000036,
+          "mean": -0.12218181818181816
+        },
+        "reference_audio_tokens_delta_actual": {
+          "n": 110,
+          "min": -291.0,
+          "p50": -249.0,
+          "p95": -249.0,
+          "max": -247.0,
+          "mean": -250.9090909090909
+        },
+        "target_tokens_delta_header_estimate": {
+          "n": 110,
+          "min": -9.0,
+          "p50": -3.0,
+          "p95": 0.0,
+          "max": 1.0,
+          "mean": -3.0545454545454547
+        },
+        "conditioning_tokens_delta_header_estimate": {
+          "n": 110,
+          "min": -317.0,
+          "p50": -275.0,
+          "p95": -275.0,
+          "max": -273.0,
+          "mean": -276.90909090909093
+        },
+        "reference_duration_delta_s": {
+          "n": 110,
+          "min": -11.670958333333335,
+          "p50": -10.010958333333333,
+          "p95": -10.010958333333333,
+          "max": -9.950958333333332,
+          "mean": -10.091321969696967
+        },
+        "body_sha_equal": 0,
+        "latency_faster": 107,
+        "output_duration_equal": 7
+      },
+      "unchanged_native22": {
+        "n": 22,
+        "latency_ratio_after_over_full": {
+          "n": 22,
+          "min": 0.9716052636685298,
+          "p50": 0.9987457245077309,
+          "p95": 1.0309653296002568,
+          "max": 1.0862696369908593,
+          "mean": 1.0025900875554503
+        },
+        "latency_delta_ms": {
+          "n": 22,
+          "min": -23.709921981208026,
+          "p50": -0.5422300164354965,
+          "p95": 14.00429562345379,
+          "max": 46.89251899253577,
+          "mean": 0.6529316359030252
+        },
+        "output_duration_ratio": {
+          "n": 22,
+          "min": 1.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "max": 1.0,
+          "mean": 1.0
+        },
+        "output_duration_delta_s": {
+          "n": 22,
+          "min": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        "reference_audio_tokens_delta_actual": {
+          "n": 22,
+          "min": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        "target_tokens_delta_header_estimate": {
+          "n": 22,
+          "min": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        "conditioning_tokens_delta_header_estimate": {
+          "n": 22,
+          "min": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        "reference_duration_delta_s": {
+          "n": 22,
+          "min": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        "body_sha_equal": 22,
+        "latency_faster": 13,
+        "output_duration_equal": 22
+      }
+    },
+    "prefix17": {
+      "changed_English110": {
+        "n": 110,
+        "latency_ratio_after_over_full": {
+          "n": 110,
+          "min": 0.4080006264586397,
+          "p50": 0.7613018012331997,
+          "p95": 0.8209783151068759,
+          "max": 1.2537005366662461,
+          "mean": 0.7454062428221643
+        },
+        "latency_delta_ms": {
+          "n": 110,
+          "min": -316.68196100508794,
+          "p50": -108.51496951363515,
+          "p95": -83.54112469096435,
+          "max": 75.21665003150702,
+          "mean": -127.40224553827747
+        },
+        "output_duration_ratio": {
+          "n": 110,
+          "min": 0.9193548387096774,
+          "p50": 0.9337719298245615,
+          "p95": 0.9814814814814815,
+          "max": 0.9859154929577465,
+          "mean": 0.9438686384676126
+        },
+        "output_duration_delta_s": {
+          "n": 110,
+          "min": -0.5199999999999996,
+          "p50": -0.16000000000000014,
+          "p95": -0.040000000000000036,
+          "max": -0.039999999999999813,
+          "mean": -0.16618181818181813
+        },
+        "reference_audio_tokens_delta_actual": {
+          "n": 110,
+          "min": -212.0,
+          "p50": -184.0,
+          "p95": -184.0,
+          "max": -177.0,
+          "mean": -184.8
+        },
+        "target_tokens_delta_header_estimate": {
+          "n": 110,
+          "min": -13.0,
+          "p50": -4.0,
+          "p95": -1.0,
+          "max": -1.0,
+          "mean": -4.154545454545454
+        },
+        "conditioning_tokens_delta_header_estimate": {
+          "n": 110,
+          "min": -231.0,
+          "p50": -203.0,
+          "p95": -203.0,
+          "max": -196.0,
+          "mean": -203.8
+        },
+        "reference_duration_delta_s": {
+          "n": 110,
+          "min": -8.510958333333335,
+          "p50": -7.390958333333333,
+          "p95": -7.390958333333333,
+          "max": -7.150958333333333,
+          "mean": -7.428412878787874
+        },
+        "body_sha_equal": 0,
+        "latency_faster": 106,
+        "output_duration_equal": 0
+      },
+      "unchanged_native22": {
+        "n": 22,
+        "latency_ratio_after_over_full": {
+          "n": 22,
+          "min": 0.9777888322251048,
+          "p50": 1.0033591020029204,
+          "p95": 1.0139035292923049,
+          "max": 1.0309494011167968,
+          "mean": 1.0031873135707607
+        },
+        "latency_delta_ms": {
+          "n": 22,
+          "min": -22.210385010112077,
+          "p50": 1.8292239838046953,
+          "p95": 6.886042836413252,
+          "max": 13.997501984704286,
+          "mean": 0.8687607663556595
+        },
+        "output_duration_ratio": {
+          "n": 22,
+          "min": 1.0,
+          "p50": 1.0,
+          "p95": 1.0,
+          "max": 1.0,
+          "mean": 1.0
+        },
+        "output_duration_delta_s": {
+          "n": 22,
+          "min": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        "reference_audio_tokens_delta_actual": {
+          "n": 22,
+          "min": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        "target_tokens_delta_header_estimate": {
+          "n": 22,
+          "min": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        "conditioning_tokens_delta_header_estimate": {
+          "n": 22,
+          "min": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        "reference_duration_delta_s": {
+          "n": 22,
+          "min": 0.0,
+          "p50": 0.0,
+          "p95": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        "body_sha_equal": 22,
+        "latency_faster": 5,
+        "output_duration_equal": 22
+      }
+    }
+  }
+}

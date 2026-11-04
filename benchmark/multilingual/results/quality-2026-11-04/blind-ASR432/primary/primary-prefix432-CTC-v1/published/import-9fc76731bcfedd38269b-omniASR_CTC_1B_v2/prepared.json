@@ -1,0 +1,642 @@
+[
+  {
+    "id": "audio-01191f1b71c13fadb501d419456334384acce85ee9370cd731e3f8a048cb1003",
+    "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/8f4292b9cb5a124a8ef1f3cb932c01c78edfeaba566fd14a38be81095922db09.wav",
+    "sha256": "8f4292b9cb5a124a8ef1f3cb932c01c78edfeaba566fd14a38be81095922db09",
+    "text": "",
+    "language": "en",
+    "lang_id": "eng_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/primary-prefix432-CTC-v1/input/asr-input/000032-000.wav",
+        "start_s": 0.0,
+        "end_s": 6.54,
+        "sha256": "1510839b8eebd802eb259e14b3a2ef93245d88278d95dcbfbe64631e7e4bcda7"
+      }
+    ],
+    "duration_s": 6.54,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.707977294921875,
+      "rms": 0.09867996722459793,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-01191f1b71c13fadb501d419456334384acce85ee9370cd731e3f8a048cb1003",
+      "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/8f4292b9cb5a124a8ef1f3cb932c01c78edfeaba566fd14a38be81095922db09.wav",
+      "sha256": "8f4292b9cb5a124a8ef1f3cb932c01c78edfeaba566fd14a38be81095922db09",
+      "lang_id": "eng_Latn",
+      "omnilingual_language": "eng_Latn",
+      "language": "en",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::en-aoede-prefix17"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-12275d254000313a117a8c55c0aedfe86573570c272339bd8c1e725e1767757d",
+    "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/2763a7444bf6f0ec794052b828e4a9192580e53448953c8993b3a3dab4e159bb.wav",
+    "sha256": "2763a7444bf6f0ec794052b828e4a9192580e53448953c8993b3a3dab4e159bb",
+    "text": "",
+    "language": "en",
+    "lang_id": "eng_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/primary-prefix432-CTC-v1/input/asr-input/000034-000.wav",
+        "start_s": 0.0,
+        "end_s": 6.74,
+        "sha256": "b0982856a8a30d58c12d2e4f6597afcc8386ea3fb498cdfc2f79f249d0325127"
+      }
+    ],
+    "duration_s": 6.74,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.935516357421875,
+      "rms": 0.13686774671077728,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-12275d254000313a117a8c55c0aedfe86573570c272339bd8c1e725e1767757d",
+      "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/2763a7444bf6f0ec794052b828e4a9192580e53448953c8993b3a3dab4e159bb.wav",
+      "sha256": "2763a7444bf6f0ec794052b828e4a9192580e53448953c8993b3a3dab4e159bb",
+      "lang_id": "eng_Latn",
+      "omnilingual_language": "eng_Latn",
+      "language": "en",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::en-charon-prefix17"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-3c99b9b1201e07b2583a19da9ce482d8e327c5d4113015e11d0f8334a6874f5e",
+    "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/46896103fc6065849e6d7ebd1e2910acf7548218d5005dff146551a06422c99b.wav",
+    "sha256": "46896103fc6065849e6d7ebd1e2910acf7548218d5005dff146551a06422c99b",
+    "text": "",
+    "language": "en",
+    "lang_id": "eng_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/primary-prefix432-CTC-v1/input/asr-input/000038-000.wav",
+        "start_s": 0.0,
+        "end_s": 4.04,
+        "sha256": "6ae50f70dee8c8351eafc383c6e84dec6e2560151753f6218abaa0cfdce8aeba"
+      }
+    ],
+    "duration_s": 4.04,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.978485107421875,
+      "rms": 0.10420729964971542,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-3c99b9b1201e07b2583a19da9ce482d8e327c5d4113015e11d0f8334a6874f5e",
+      "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/46896103fc6065849e6d7ebd1e2910acf7548218d5005dff146551a06422c99b.wav",
+      "sha256": "46896103fc6065849e6d7ebd1e2910acf7548218d5005dff146551a06422c99b",
+      "lang_id": "eng_Latn",
+      "omnilingual_language": "eng_Latn",
+      "language": "en",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::en-kore-prefix10"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-5cbce7af63a9ccfa7fcdc5e59ee34f212d4a132a33fa627ae05e04ff93d0b15a",
+    "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/a565164b011303a8e0d78488e1711705ee3b71aa2d84aea9376c31df4247c1af.wav",
+    "sha256": "a565164b011303a8e0d78488e1711705ee3b71aa2d84aea9376c31df4247c1af",
+    "text": "",
+    "language": "en",
+    "lang_id": "eng_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/primary-prefix432-CTC-v1/input/asr-input/000042-000.wav",
+        "start_s": 0.0,
+        "end_s": 7.12,
+        "sha256": "441900f577853cd6cfbf228bfbd2630436b62ee6636af997da38c17b17a68b60"
+      }
+    ],
+    "duration_s": 7.12,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.566375732421875,
+      "rms": 0.08911018073558807,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-5cbce7af63a9ccfa7fcdc5e59ee34f212d4a132a33fa627ae05e04ff93d0b15a",
+      "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/a565164b011303a8e0d78488e1711705ee3b71aa2d84aea9376c31df4247c1af.wav",
+      "sha256": "a565164b011303a8e0d78488e1711705ee3b71aa2d84aea9376c31df4247c1af",
+      "lang_id": "eng_Latn",
+      "omnilingual_language": "eng_Latn",
+      "language": "en",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::en-umbriel-prefix17"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-5d69b4f7f369ebd79d54e293658dd978c2dffef10488fc655ee326f07fbc4e34",
+    "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/9a31da2ec83fb84b839a787564f4694afe09e10da48782a3ec09624d6f1e7bc5.wav",
+    "sha256": "9a31da2ec83fb84b839a787564f4694afe09e10da48782a3ec09624d6f1e7bc5",
+    "text": "",
+    "language": "en",
+    "lang_id": "eng_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/primary-prefix432-CTC-v1/input/asr-input/000043-000.wav",
+        "start_s": 0.0,
+        "end_s": 4.54,
+        "sha256": "a1c908ad83d9037925c238e79c69ef747aa8de1b5fc218ac74ee39f5691f85a7"
+      }
+    ],
+    "duration_s": 4.54,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.914031982421875,
+      "rms": 0.10426286607980728,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-5d69b4f7f369ebd79d54e293658dd978c2dffef10488fc655ee326f07fbc4e34",
+      "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/9a31da2ec83fb84b839a787564f4694afe09e10da48782a3ec09624d6f1e7bc5.wav",
+      "sha256": "9a31da2ec83fb84b839a787564f4694afe09e10da48782a3ec09624d6f1e7bc5",
+      "lang_id": "eng_Latn",
+      "omnilingual_language": "eng_Latn",
+      "language": "en",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::en-despina-prefix10"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-74c73a874acc2271f4d03b40910077947590f7f77364ce0383b6a4aeca7a1092",
+    "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/812ffc2c15977d699278e94e8bbc4369ee00f64741b912ac1278be5d3e8e6290.wav",
+    "sha256": "812ffc2c15977d699278e94e8bbc4369ee00f64741b912ac1278be5d3e8e6290",
+    "text": "",
+    "language": "en",
+    "lang_id": "eng_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/primary-prefix432-CTC-v1/input/asr-input/000044-000.wav",
+        "start_s": 0.0,
+        "end_s": 7.22,
+        "sha256": "cecc54f2e428d708c8d864d8878814a01bc9e37bc84a3ef1867e2aafcb8d92eb"
+      }
+    ],
+    "duration_s": 7.22,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.544891357421875,
+      "rms": 0.10289599746465683,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-74c73a874acc2271f4d03b40910077947590f7f77364ce0383b6a4aeca7a1092",
+      "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/812ffc2c15977d699278e94e8bbc4369ee00f64741b912ac1278be5d3e8e6290.wav",
+      "sha256": "812ffc2c15977d699278e94e8bbc4369ee00f64741b912ac1278be5d3e8e6290",
+      "lang_id": "eng_Latn",
+      "omnilingual_language": "eng_Latn",
+      "language": "en",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::en-iapetus-prefix17"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-8c5f8827bcb4db18b9c26b3aa453ae2697aec0c3f0deb7481792569c828c5815",
+    "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/325a88bbc02cfe39bd01a934568793e46f1717b165dd5e5af73f04bc0ee44ea1.wav",
+    "sha256": "325a88bbc02cfe39bd01a934568793e46f1717b165dd5e5af73f04bc0ee44ea1",
+    "text": "",
+    "language": "en",
+    "lang_id": "eng_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/primary-prefix432-CTC-v1/input/asr-input/000045-000.wav",
+        "start_s": 0.0,
+        "end_s": 7.52,
+        "sha256": "f67a8e274b6f6c02844c9934116159dec4553a0a9b8bd0fd4bbc54244bcbcffc"
+      }
+    ],
+    "duration_s": 7.52,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.697235107421875,
+      "rms": 0.08929338306188583,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-8c5f8827bcb4db18b9c26b3aa453ae2697aec0c3f0deb7481792569c828c5815",
+      "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/325a88bbc02cfe39bd01a934568793e46f1717b165dd5e5af73f04bc0ee44ea1.wav",
+      "sha256": "325a88bbc02cfe39bd01a934568793e46f1717b165dd5e5af73f04bc0ee44ea1",
+      "lang_id": "eng_Latn",
+      "omnilingual_language": "eng_Latn",
+      "language": "en",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::en-zephyr-prefix17"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-9731a658dbbd89e6c1a5f16aa5a5c8092db8014c26dae963d898f4b75a04b29b",
+    "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/4492f22e2625aa46beb97ec5fbbd5eebbdfad518b0664a0df3b30735b6bdba18.wav",
+    "sha256": "4492f22e2625aa46beb97ec5fbbd5eebbdfad518b0664a0df3b30735b6bdba18",
+    "text": "",
+    "language": "en",
+    "lang_id": "eng_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/primary-prefix432-CTC-v1/input/asr-input/000046-000.wav",
+        "start_s": 0.0,
+        "end_s": 3.96,
+        "sha256": "1079814f8f6f197a9d731e0b0a559dce2a8a42000cbabee759ea642bf26865aa"
+      }
+    ],
+    "duration_s": 3.96,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.849578857421875,
+      "rms": 0.14919501543045044,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-9731a658dbbd89e6c1a5f16aa5a5c8092db8014c26dae963d898f4b75a04b29b",
+      "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/4492f22e2625aa46beb97ec5fbbd5eebbdfad518b0664a0df3b30735b6bdba18.wav",
+      "sha256": "4492f22e2625aa46beb97ec5fbbd5eebbdfad518b0664a0df3b30735b6bdba18",
+      "lang_id": "eng_Latn",
+      "omnilingual_language": "eng_Latn",
+      "language": "en",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::en-charon-prefix10"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-b5b86bdafc346b7e54e80def0300ec19719667285d0d441ddc17c39b2e412423",
+    "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/7a396ca2a5958ce34d8ab1c50be664048b46e9ad178a1f5ba4013a973172a147.wav",
+    "sha256": "7a396ca2a5958ce34d8ab1c50be664048b46e9ad178a1f5ba4013a973172a147",
+    "text": "",
+    "language": "en",
+    "lang_id": "eng_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/primary-prefix432-CTC-v1/input/asr-input/000047-000.wav",
+        "start_s": 0.0,
+        "end_s": 4.36,
+        "sha256": "b4e9fa272f6f942989e8968c06225af24eba0e04015f3a9dff5dfe3af51d4cda"
+      }
+    ],
+    "duration_s": 4.36,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.697235107421875,
+      "rms": 0.09796047955751419,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-b5b86bdafc346b7e54e80def0300ec19719667285d0d441ddc17c39b2e412423",
+      "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/7a396ca2a5958ce34d8ab1c50be664048b46e9ad178a1f5ba4013a973172a147.wav",
+      "sha256": "7a396ca2a5958ce34d8ab1c50be664048b46e9ad178a1f5ba4013a973172a147",
+      "lang_id": "eng_Latn",
+      "omnilingual_language": "eng_Latn",
+      "language": "en",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::en-zephyr-prefix10"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-ce68b40348bb2114033c72d1b51e60f5fff4408c5e497f6d39050458e5acf38e",
+    "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/f613c6cfd56c4a251bdd29d86ee25e97d9580a8dcd78acff2aeffdeff75ce5e2.wav",
+    "sha256": "f613c6cfd56c4a251bdd29d86ee25e97d9580a8dcd78acff2aeffdeff75ce5e2",
+    "text": "",
+    "language": "en",
+    "lang_id": "eng_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/primary-prefix432-CTC-v1/input/asr-input/000048-000.wav",
+        "start_s": 0.0,
+        "end_s": 4.14,
+        "sha256": "b8b63a798499d32eb62745532c44b9f25e8447b0fcb4d082c7b501917c82f29c"
+      }
+    ],
+    "duration_s": 4.14,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.671844482421875,
+      "rms": 0.12713144719600677,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-ce68b40348bb2114033c72d1b51e60f5fff4408c5e497f6d39050458e5acf38e",
+      "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/f613c6cfd56c4a251bdd29d86ee25e97d9580a8dcd78acff2aeffdeff75ce5e2.wav",
+      "sha256": "f613c6cfd56c4a251bdd29d86ee25e97d9580a8dcd78acff2aeffdeff75ce5e2",
+      "lang_id": "eng_Latn",
+      "omnilingual_language": "eng_Latn",
+      "language": "en",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::en-fenrir-prefix10"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-d4a06edcb181a14b252e4d559be0791e696dade328ed20ec316676810c1e6167",
+    "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/cb1397e27563b6e0c2594c7dd67cf6cec1f8357888da4aa056dffa3812aad8dc.wav",
+    "sha256": "cb1397e27563b6e0c2594c7dd67cf6cec1f8357888da4aa056dffa3812aad8dc",
+    "text": "",
+    "language": "en",
+    "lang_id": "eng_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/primary-prefix432-CTC-v1/input/asr-input/000049-000.wav",
+        "start_s": 0.0,
+        "end_s": 6.76,
+        "sha256": "cddf81c7b1de816da0b566c6c61e7978e2d14da42c050b6ab1d10b4ffecec8f3"
+      }
+    ],
+    "duration_s": 6.76,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.978485107421875,
+      "rms": 0.09896384924650192,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-d4a06edcb181a14b252e4d559be0791e696dade328ed20ec316676810c1e6167",
+      "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/cb1397e27563b6e0c2594c7dd67cf6cec1f8357888da4aa056dffa3812aad8dc.wav",
+      "sha256": "cb1397e27563b6e0c2594c7dd67cf6cec1f8357888da4aa056dffa3812aad8dc",
+      "lang_id": "eng_Latn",
+      "omnilingual_language": "eng_Latn",
+      "language": "en",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::en-kore-prefix17"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-dc528ca5c0b3d6114d84f78aa6bd7954eaa48a40b3e3124d0b127d1e361f8127",
+    "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/2f4550457211bbfcc53933b04a539afc7d0e1a2793bec078406e9e898ed56b10.wav",
+    "sha256": "2f4550457211bbfcc53933b04a539afc7d0e1a2793bec078406e9e898ed56b10",
+    "text": "",
+    "language": "en",
+    "lang_id": "eng_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/primary-prefix432-CTC-v1/input/asr-input/000051-000.wav",
+        "start_s": 0.0,
+        "end_s": 3.92,
+        "sha256": "414f3cf9b264cad6bad02e6382d4f20e64658a75a100235ec9609522736b9a2f"
+      }
+    ],
+    "duration_s": 3.92,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.707977294921875,
+      "rms": 0.10375756025314331,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-dc528ca5c0b3d6114d84f78aa6bd7954eaa48a40b3e3124d0b127d1e361f8127",
+      "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/2f4550457211bbfcc53933b04a539afc7d0e1a2793bec078406e9e898ed56b10.wav",
+      "sha256": "2f4550457211bbfcc53933b04a539afc7d0e1a2793bec078406e9e898ed56b10",
+      "lang_id": "eng_Latn",
+      "omnilingual_language": "eng_Latn",
+      "language": "en",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::en-aoede-prefix10"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-f50107ad507a605f4dfbc3d6e4854ce4216b2c6f0cd14364cf5b8f2af0c94d9b",
+    "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/6329737ebd5bd40bafa95e1bcb1fd69d889d866721fe3908f0603f32842942f0.wav",
+    "sha256": "6329737ebd5bd40bafa95e1bcb1fd69d889d866721fe3908f0603f32842942f0",
+    "text": "",
+    "language": "en",
+    "lang_id": "eng_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/primary-prefix432-CTC-v1/input/asr-input/000052-000.wav",
+        "start_s": 0.0,
+        "end_s": 7.7,
+        "sha256": "6a3a70a6e736a0e8b8e76682f01b1258dd2ea78abb6d1a7847f9f79d9f9850fe"
+      }
+    ],
+    "duration_s": 7.7,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.914031982421875,
+      "rms": 0.1009703278541565,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-f50107ad507a605f4dfbc3d6e4854ce4216b2c6f0cd14364cf5b8f2af0c94d9b",
+      "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/6329737ebd5bd40bafa95e1bcb1fd69d889d866721fe3908f0603f32842942f0.wav",
+      "sha256": "6329737ebd5bd40bafa95e1bcb1fd69d889d866721fe3908f0603f32842942f0",
+      "lang_id": "eng_Latn",
+      "omnilingual_language": "eng_Latn",
+      "language": "en",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::en-despina-prefix17"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-f5fe60cf1a8fda4f8629b2703678bc2799c7f1190ac3902cd489f98ed94af7b7",
+    "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/46793826147a8d6b6d96296295f1bd8f8801aa205959827b95fb24389a144309.wav",
+    "sha256": "46793826147a8d6b6d96296295f1bd8f8801aa205959827b95fb24389a144309",
+    "text": "",
+    "language": "en",
+    "lang_id": "eng_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/primary-prefix432-CTC-v1/input/asr-input/000053-000.wav",
+        "start_s": 0.0,
+        "end_s": 6.94,
+        "sha256": "466ff4a6cbd1cb07a82922a41ff3123868a5f2b2502edbdcea0044c917b1472f"
+      }
+    ],
+    "duration_s": 6.94,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.671844482421875,
+      "rms": 0.12210620194673538,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-f5fe60cf1a8fda4f8629b2703678bc2799c7f1190ac3902cd489f98ed94af7b7",
+      "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/46793826147a8d6b6d96296295f1bd8f8801aa205959827b95fb24389a144309.wav",
+      "sha256": "46793826147a8d6b6d96296295f1bd8f8801aa205959827b95fb24389a144309",
+      "lang_id": "eng_Latn",
+      "omnilingual_language": "eng_Latn",
+      "language": "en",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::en-fenrir-prefix17"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-fe3e10072dca7144b585f120cf77b3ae547cd00091fef4c2a5675ebc897df194",
+    "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/b968200d45587db96d4835971f0c5632aa893d84678cc02be13236749a99d81d.wav",
+    "sha256": "b968200d45587db96d4835971f0c5632aa893d84678cc02be13236749a99d81d",
+    "text": "",
+    "language": "en",
+    "lang_id": "eng_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/primary-prefix432-CTC-v1/input/asr-input/000054-000.wav",
+        "start_s": 0.0,
+        "end_s": 4.12,
+        "sha256": "2707b813eca5f09091a02d11673a059cceb00a8c32601e2f8511ef8bc86a7562"
+      }
+    ],
+    "duration_s": 4.12,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.544891357421875,
+      "rms": 0.10937527567148209,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-fe3e10072dca7144b585f120cf77b3ae547cd00091fef4c2a5675ebc897df194",
+      "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/b968200d45587db96d4835971f0c5632aa893d84678cc02be13236749a99d81d.wav",
+      "sha256": "b968200d45587db96d4835971f0c5632aa893d84678cc02be13236749a99d81d",
+      "lang_id": "eng_Latn",
+      "omnilingual_language": "eng_Latn",
+      "language": "en",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::en-iapetus-prefix10"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  },
+  {
+    "id": "audio-ff30a1cc5d45cfcf4241b92b7fd4e5fe8edd0a2b8caaedff6edd8aeabade9da1",
+    "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/7484bb3cb37b2e664770924c8ba86d69649fb3761f862a5123b45d460004bc33.wav",
+    "sha256": "7484bb3cb37b2e664770924c8ba86d69649fb3761f862a5123b45d460004bc33",
+    "text": "",
+    "language": "en",
+    "lang_id": "eng_Latn",
+    "chunks": [
+      {
+        "path": "/workspace/omnivoice-max-concurency/asr-results/primary-prefix432-CTC-v1/input/asr-input/000055-000.wav",
+        "start_s": 0.0,
+        "end_s": 4.14,
+        "sha256": "558c814b1a789b626894f6d8d3ddffc5fba8ce7d87a3d8076e7a9ffd40cfcf52"
+      }
+    ],
+    "duration_s": 4.14,
+    "audio": {
+      "sample_rate": 24000,
+      "peak": 0.566375732421875,
+      "rms": 0.09361284226179123,
+      "clipped_sample_fraction": 0.0
+    },
+    "run": "reference-controls",
+    "phase": "reference-controls",
+    "source": {
+      "id": "audio-ff30a1cc5d45cfcf4241b92b7fd4e5fe8edd0a2b8caaedff6edd8aeabade9da1",
+      "path": "/workspace/omnivoice-max-concurency/quality/relay-prefix432-v1/audio/7484bb3cb37b2e664770924c8ba86d69649fb3761f862a5123b45d460004bc33.wav",
+      "sha256": "7484bb3cb37b2e664770924c8ba86d69649fb3761f862a5123b45d460004bc33",
+      "lang_id": "eng_Latn",
+      "omnilingual_language": "eng_Latn",
+      "language": "en",
+      "run": "reference-controls",
+      "phase": "reference-controls",
+      "logical_ids": [
+        "reference-controls::en-umbriel-prefix10"
+      ],
+      "text": "",
+      "expected": ""
+    }
+  }
+]

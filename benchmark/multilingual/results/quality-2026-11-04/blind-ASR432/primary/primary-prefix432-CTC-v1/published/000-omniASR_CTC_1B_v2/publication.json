@@ -1,0 +1,8 @@
+{
+  "raw_attempt": "/workspace/omnivoice-max-concurency/asr-results/primary-prefix432-CTC-v1/raw/000-omniASR_CTC_1B_v2",
+  "raw_output_sha256": "87a45d03b3971b29c019f3cc21debc85701178898bd7afdea1208c9c1702205e",
+  "validated_complete_transcript_rows": 352,
+  "asr_protocol_config_id": "legacy-batch1",
+  "issues": [],
+  "note": "Only complete records are published; raw evidence is unchanged."
+}

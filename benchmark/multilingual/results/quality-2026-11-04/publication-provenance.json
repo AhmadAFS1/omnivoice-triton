@@ -1,0 +1,519 @@
+{
+  "at": "2026-11-04T11:28:22.823892+00:00",
+  "kind": "CPU-only packaging of retained evidence; no new inference",
+  "files": [
+    {
+      "source": "quality/report-priority402-v1/origin-propagation.json",
+      "target": "results/quality-2026-11-04/report-priority402-v1/origin-propagation.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/report-priority402-v1/paired-before-after.jsonl",
+      "target": "results/quality-2026-11-04/report-priority402-v1/paired-before-after.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/report-priority402-v1/per-configuration.json",
+      "target": "results/quality-2026-11-04/report-priority402-v1/per-configuration.json",
+      "sha256": "6f59514a08a74b94078da0524ab58c0d88931eae1ff5aa0a491c4c7e10b8cb57",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/report-priority402-v1/per-route.csv",
+      "target": "results/quality-2026-11-04/report-priority402-v1/per-route.csv",
+      "sha256": "994ab56f7285a1a29fba6373e3d075e8148dabd95f43c777a9d068c4156a2ca6",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/report-priority402-v1/per-route.json",
+      "target": "results/quality-2026-11-04/report-priority402-v1/per-route.json",
+      "sha256": "fa7d4009b9a7f42a6f0ae8db1698ec6970d94080b179cb137a85390b8f2631e3",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/report-priority402-v1/report.md",
+      "target": "results/quality-2026-11-04/report-priority402-v1/report.md",
+      "sha256": "c50f89a6192f149b8813cc086a7d9df871cead9fb886b6cdbb8be07f74ba1c55",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/report-priority402-v1/scored-logical-cases.jsonl",
+      "target": "results/quality-2026-11-04/report-priority402-v1/scored-logical-cases.jsonl",
+      "sha256": "674183bbbd5428b3a144b62216e8840608b7d9d68ca9ce7b41964fd6478f20ab",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/report-priority402-v1/summary.json",
+      "target": "results/quality-2026-11-04/report-priority402-v1/summary.json",
+      "sha256": "c76054ebd7071e2779fbf5c9c6ebdd8fff5ec514e5001358ba801730dcaaece8",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/report-priority402-v1/validation-checks.jsonl",
+      "target": "results/quality-2026-11-04/report-priority402-v1/validation-checks.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/report-prefix396-v1/origin-propagation.json",
+      "target": "results/quality-2026-11-04/report-prefix396-v1/origin-propagation.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/report-prefix396-v1/paired-before-after.jsonl",
+      "target": "results/quality-2026-11-04/report-prefix396-v1/paired-before-after.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/report-prefix396-v1/per-configuration.json",
+      "target": "results/quality-2026-11-04/report-prefix396-v1/per-configuration.json",
+      "sha256": "17765faba4910d45155c7d3605122a50fb7567fa8d89390c0cd2cf6665ec384c",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/report-prefix396-v1/per-route.csv",
+      "target": "results/quality-2026-11-04/report-prefix396-v1/per-route.csv",
+      "sha256": "245b10c9208c5c8269dc2a46c9936e8326959184309de9326a9804fc6dece531",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/report-prefix396-v1/per-route.json",
+      "target": "results/quality-2026-11-04/report-prefix396-v1/per-route.json",
+      "sha256": "28e0a5173acf808c0459c14277f49e388ec0555601efe718dc79e37c67d7f347",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/report-prefix396-v1/report.md",
+      "target": "results/quality-2026-11-04/report-prefix396-v1/report.md",
+      "sha256": "f8f03b5e540dd94a741f47d1ae982445c28ba9c74cae4df93b9ab8ddefc56198",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/report-prefix396-v1/scored-logical-cases.jsonl",
+      "target": "results/quality-2026-11-04/report-prefix396-v1/scored-logical-cases.jsonl",
+      "sha256": "626d13b8666152b367994d5a5dd107603861fd2a453b0db0cfc984e1becfc74f",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/report-prefix396-v1/summary.json",
+      "target": "results/quality-2026-11-04/report-prefix396-v1/summary.json",
+      "sha256": "ab371816972a889151b236f1e4388c429c66b631c6caa992b6ee397b9e368a87",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/report-prefix396-v1/validation-checks.jsonl",
+      "target": "results/quality-2026-11-04/report-prefix396-v1/validation-checks.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/reference-prefix-analysis-v1/analyze-source.py",
+      "target": "results/quality-2026-11-04/reference-prefix-analysis-v1/analyze-source.py",
+      "sha256": "63afaa98651647aa4f8f9e8e434152ea39dbdfeebe6334af80918eb08034b870",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/reference-prefix-analysis-v1/artifacts-sha256.json",
+      "target": "results/quality-2026-11-04/reference-prefix-analysis-v1/artifacts-sha256.json",
+      "sha256": "edf69a3473b0235ab98c1d2eb68cc45e6d64578f1daf009d8000c0cb7c2e75d1",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/reference-prefix-analysis-v1/paired132.jsonl",
+      "target": "results/quality-2026-11-04/reference-prefix-analysis-v1/paired132.jsonl",
+      "sha256": "4c5745470846e63216939a75fcc812f1997c2b701c57f7821900739b844bb489",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/reference-prefix-analysis-v1/reference-audit80.json",
+      "target": "results/quality-2026-11-04/reference-prefix-analysis-v1/reference-audit80.json",
+      "sha256": "112dc6fa505c26b4d226e8ef2ee36eda92b1aef247f1c5627f739e2ea53139d3",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/reference-prefix-analysis-v1/report.md",
+      "target": "results/quality-2026-11-04/reference-prefix-analysis-v1/report.md",
+      "sha256": "e0e0f79f9d085464637ecc1f47f6c8cf34462a340c4f21c9eb51a2bac9cfb02d",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/reference-prefix-analysis-v1/summary.json",
+      "target": "results/quality-2026-11-04/reference-prefix-analysis-v1/summary.json",
+      "sha256": "ab67b37553e8613b30609b53315667d237ca84a0035d14d780829aa5490b13aa",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/reference-prefix-analysis-v1/verified-audio396.jsonl",
+      "target": "results/quality-2026-11-04/reference-prefix-analysis-v1/verified-audio396.jsonl",
+      "sha256": "95267192ffa68ef9c4d2c059908301fc83648fd7ef29138370681d77e4d054d9",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/reference-prefix-word-analysis-v1/paired132.jsonl",
+      "target": "results/quality-2026-11-04/reference-prefix-word-analysis-v1/paired132.jsonl",
+      "sha256": "1b99d47ceadfba96d143e44c4e9e7ce0bfe037f569186465ed69440416d52124",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/reference-prefix-word-analysis-v1/summary.json",
+      "target": "results/quality-2026-11-04/reference-prefix-word-analysis-v1/summary.json",
+      "sha256": "180be800c2d1a34892f064cf9edd4c5f1550547e2f380dae2453c9bf8e2e1e41",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-prefix396-v1/embeddings.jsonl",
+      "target": "results/quality-2026-11-04/speaker-prefix396-v1/embeddings.jsonl",
+      "sha256": "9e3a045e061f50f52050fe94cda485a2147cc4021734aa120096813358f9063f",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-prefix396-v1/generated-scores.json",
+      "target": "results/quality-2026-11-04/speaker-prefix396-v1/generated-scores.json",
+      "sha256": "1cc2452f7b566ce94c87d9595097659d6386b7d7ad7acc99209bb8a9958f18bc",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-prefix396-v1/metadata.json",
+      "target": "results/quality-2026-11-04/speaker-prefix396-v1/metadata.json",
+      "sha256": "acea2bc36a22a0c112d1bd1959100930e5f58a36834b6dfcb34a58bc4b4ef296",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-prefix396-v1/paired-deltas.json",
+      "target": "results/quality-2026-11-04/speaker-prefix396-v1/paired-deltas.json",
+      "sha256": "f3be3ac33971d4bbd8785117e0c20e4539baf7c447c98aaa31e91f77cde98e5f",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-prefix396-v1/reference-controls.json",
+      "target": "results/quality-2026-11-04/speaker-prefix396-v1/reference-controls.json",
+      "sha256": "db5244e19bc5a80ab482260058f5d49063ce68b2c71f563b93167ca3dee94a00",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-prefix396-v1/summary.json",
+      "target": "results/quality-2026-11-04/speaker-prefix396-v1/summary.json",
+      "sha256": "b927b20d30b1dfd4e664dac92ce277e6809531bd937131d4aca76cfe8c454575",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-prefix396-independent-v1/AB-review-manifest.json",
+      "target": "results/quality-2026-11-04/speaker-prefix396-independent-v1/AB-review-manifest.json",
+      "sha256": "d00607df760e85c4ae07d3d89aa8d8c9421755347d3bd32dcc53543730bac31f",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-prefix396-independent-v1/artifacts-sha256.json",
+      "target": "results/quality-2026-11-04/speaker-prefix396-independent-v1/artifacts-sha256.json",
+      "sha256": "fcf647407efbd6a2b42944d24cc2d549bf9ef8130dae12c5be0ff8da3d3a5bc3",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-prefix396-independent-v1/paired-recomputed264.jsonl",
+      "target": "results/quality-2026-11-04/speaker-prefix396-independent-v1/paired-recomputed264.jsonl",
+      "sha256": "6b716eb1766dadb517b3a3ce0525b042c92760fb55e75268d1e28327179704b5",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-prefix396-independent-v1/provenance.json",
+      "target": "results/quality-2026-11-04/speaker-prefix396-independent-v1/provenance.json",
+      "sha256": "550babe053fe31b50502e5e28e115edaf3e2d33aebc97d607995702a45a9c2af",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-prefix396-independent-v1/reference-controls-recomputed.json",
+      "target": "results/quality-2026-11-04/speaker-prefix396-independent-v1/reference-controls-recomputed.json",
+      "sha256": "ed8ab85e6bebb5289090d2f09f2eedff8a9139ac510fd9239fb1d7e72dff289c",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-prefix396-independent-v1/report.md",
+      "target": "results/quality-2026-11-04/speaker-prefix396-independent-v1/report.md",
+      "sha256": "c9315ff224f2d972e108f12f370bd1f56579219e7c1191928977d7023bcdaa22",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-prefix396-independent-v1/summary.json",
+      "target": "results/quality-2026-11-04/speaker-prefix396-independent-v1/summary.json",
+      "sha256": "4f581e219b3043c68ae00e6edc47a06659307cc91ab876985454ef0049656706",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-word-prefix396-joint-v1/AB-review-manifest.json",
+      "target": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/AB-review-manifest.json",
+      "sha256": "2996ff50513388f412f0db17eb4aad7136465526a77b1d749926a6afec176b38",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-word-prefix396-joint-v1/CPU-joint-validation.json",
+      "target": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/CPU-joint-validation.json",
+      "sha256": "b3a22066ef40dce917ad57d84d77573c0778af097b9ab5e4563d91f8b8f352f1",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-word-prefix396-joint-v1/artifacts-sha256.json",
+      "target": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/artifacts-sha256.json",
+      "sha256": "f00a97ec5db261830de1069bbc96e538da6859b40dbc2d115efa63c2cf6ac739",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-word-prefix396-joint-v1/audio-tokenizer-config.json",
+      "target": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/audio-tokenizer-config.json",
+      "sha256": "eefb20806f7104e77c9a5277c9df0f9bb8826b08eb1d4e8ab2b9829b6ef9fac1",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-word-prefix396-joint-v1/configuration_higgs_audio_v2_tokenizer.py",
+      "target": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/configuration_higgs_audio_v2_tokenizer.py",
+      "sha256": "2fbb4894d3ea6237a429f62c9893d343bb95be3accb78db63b8fbef25711ad8d",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-word-prefix396-joint-v1/duration-source-provenance.json",
+      "target": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/duration-source-provenance.json",
+      "sha256": "3877f6c796b9d222a2dcd172051647175536b381594805cdd8459942b55b7237",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-word-prefix396-joint-v1/fixed-duration-readonly-audit.json",
+      "target": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/fixed-duration-readonly-audit.json",
+      "sha256": "18850b7f3039d4cf9b5f07fd0c762469907847c6cda10584aaa8c04003ebfc03",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-word-prefix396-joint-v1/joint-artifacts-sha256.json",
+      "target": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/joint-artifacts-sha256.json",
+      "sha256": "d2a51ebb9ac9f67c6f286c7ead4a683247d45d3b5c253511fab6b7d7793bfffd",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-word-prefix396-joint-v1/joint-report.md",
+      "target": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/joint-report.md",
+      "sha256": "67cd8cc2003a39eb83cde63be6e35c06c15b7598305716aea926b7a70e8df604",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-word-prefix396-joint-v1/joint-review-manifest.json",
+      "target": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/joint-review-manifest.json",
+      "sha256": "801514b3ebe77d41aafd7fbb12a5be39c61a5d3fd229edde95365113b239a833",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-word-prefix396-joint-v1/joint-source-provenance.json",
+      "target": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/joint-source-provenance.json",
+      "sha256": "53bb163d17043dbe47341e7e6fc0ca1d9d8c7cabe7f91454d73f2e67acc22a2b",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-word-prefix396-joint-v1/joint-summary.json",
+      "target": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/joint-summary.json",
+      "sha256": "55f742763586e846b77cdfcdb874e92c23fe7bc27f2731ade75bb63cf0ccc7d0",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-word-prefix396-joint-v1/omnivoice-0.1.4-audio-source.py",
+      "target": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/omnivoice-0.1.4-audio-source.py",
+      "sha256": "3a29ad8a2e294c61a8f60aa127aff0bb738c4432eae3cc4adbc6dc42d115d3a0",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-word-prefix396-joint-v1/paired-recomputed264.jsonl",
+      "target": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/paired-recomputed264.jsonl",
+      "sha256": "cbd4184eb7d9ef235b92aac995034bea672c3897b13f77621e080d4d2f53ef9e",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-word-prefix396-joint-v1/provenance.json",
+      "target": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/provenance.json",
+      "sha256": "80a81a8f35a0de113863b815d5e7693ea4ba57cf78d03db45bd99c2aafc89241",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-word-prefix396-joint-v1/reference-controls-recomputed.json",
+      "target": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/reference-controls-recomputed.json",
+      "sha256": "ed8ab85e6bebb5289090d2f09f2eedff8a9139ac510fd9239fb1d7e72dff289c",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-word-prefix396-joint-v1/report.md",
+      "target": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/report.md",
+      "sha256": "f4f881b628e7100023dfcee9eaa0264b2296e617d2a6342e157ad5d62f1531b0",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-word-prefix396-joint-v1/summary.json",
+      "target": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/summary.json",
+      "sha256": "3876fb145ce46df29a18032ed7288e56eb75935fa0acadbfde8f07046ba2b3d4",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/speaker-word-prefix396-joint-v1/word-review22.json",
+      "target": "results/quality-2026-11-04/speaker-word-prefix396-joint-v1/word-review22.json",
+      "sha256": "0e23e54fe427393e6281fa083b40bb572cea90317aacd965b32d044c8e077503",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/candidate47-core-retention-audit-v1/summary.json",
+      "target": "results/quality-2026-11-04/candidate47-core-retention-audit-v1/summary.json",
+      "sha256": "89513a10a8c36c752eed6379ae799f7b9bc95a07f3f7b3b924659219fdbf5669",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "quality/candidate47-core-retention-audit-v1/verified-audio.jsonl",
+      "target": "results/quality-2026-11-04/candidate47-core-retention-audit-v1/verified-audio.jsonl",
+      "sha256": "65fcf42b7013d31c9e1eff446c9eb28f23aed8c69b600401c2ad8ed46427cc8b",
+      "adaptation": "none; historical absolute paths remain provenance"
+    },
+    {
+      "source": "load/asr/prefix432-retained/modern/asr-results/modern-prefix432-LLM-v1/published/000-omniASR_LLM_Unlimited_1B_v2/omniASR_LLM_Unlimited_1B_v2-metadata.json",
+      "target": "results/quality-2026-11-04/blind-ASR432/modern/modern-prefix432-LLM-v1/published/000-omniASR_LLM_Unlimited_1B_v2/omniASR_LLM_Unlimited_1B_v2-metadata.json",
+      "sha256": "2afb8f4ffb6c6a94ad45cea24186490c0f3e20ca9300804dd7469964704aabec",
+      "adaptation": "none"
+    },
+    {
+      "source": "load/asr/prefix432-retained/modern/asr-results/modern-prefix432-LLM-v1/published/000-omniASR_LLM_Unlimited_1B_v2/omniASR_LLM_Unlimited_1B_v2.jsonl",
+      "target": "results/quality-2026-11-04/blind-ASR432/modern/modern-prefix432-LLM-v1/published/000-omniASR_LLM_Unlimited_1B_v2/omniASR_LLM_Unlimited_1B_v2.jsonl",
+      "sha256": "c181d2bcee5253b7c898e6753f8a82a4498a99c32193ec8a438f8dd35c6e404d",
+      "adaptation": "none"
+    },
+    {
+      "source": "load/asr/prefix432-retained/modern/asr-results/modern-prefix432-LLM-v1/published/000-omniASR_LLM_Unlimited_1B_v2/prepared.json",
+      "target": "results/quality-2026-11-04/blind-ASR432/modern/modern-prefix432-LLM-v1/published/000-omniASR_LLM_Unlimited_1B_v2/prepared.json",
+      "sha256": "a9fb854c429a319628b243ef21b2d1818445a71751de784c455c51f7bb43a15f",
+      "adaptation": "none"
+    },
+    {
+      "source": "load/asr/prefix432-retained/modern/asr-results/modern-prefix432-LLM-v1/published/000-omniASR_LLM_Unlimited_1B_v2/publication.json",
+      "target": "results/quality-2026-11-04/blind-ASR432/modern/modern-prefix432-LLM-v1/published/000-omniASR_LLM_Unlimited_1B_v2/publication.json",
+      "sha256": "87f5f6221775b9a7c81a2cf523c28c4251566f80ad7f7c06e4f40e714b6903d3",
+      "adaptation": "none"
+    },
+    {
+      "source": "load/asr/prefix432-retained/modern/asr-results/modern-prefix432-LLM-v1/published/import-0fc22ff44bafee7c54f4-omniASR_LLM_Unlimited_1B_v2/omniASR_LLM_Unlimited_1B_v2-metadata.json",
+      "target": "results/quality-2026-11-04/blind-ASR432/modern/modern-prefix432-LLM-v1/published/import-0fc22ff44bafee7c54f4-omniASR_LLM_Unlimited_1B_v2/omniASR_LLM_Unlimited_1B_v2-metadata.json",
+      "sha256": "ba421101cc7a5eacb3ec72c472432724a368d247a03aef0deee40c2fc90b33b9",
+      "adaptation": "none"
+    },
+    {
+      "source": "load/asr/prefix432-retained/modern/asr-results/modern-prefix432-LLM-v1/published/import-0fc22ff44bafee7c54f4-omniASR_LLM_Unlimited_1B_v2/omniASR_LLM_Unlimited_1B_v2.jsonl",
+      "target": "results/quality-2026-11-04/blind-ASR432/modern/modern-prefix432-LLM-v1/published/import-0fc22ff44bafee7c54f4-omniASR_LLM_Unlimited_1B_v2/omniASR_LLM_Unlimited_1B_v2.jsonl",
+      "sha256": "ea7fe78203914684183ff553e017e09a4329010826f5fea39e56d4ec03fdcadd",
+      "adaptation": "none"
+    },
+    {
+      "source": "load/asr/prefix432-retained/modern/asr-results/modern-prefix432-LLM-v1/published/import-0fc22ff44bafee7c54f4-omniASR_LLM_Unlimited_1B_v2/prepared.json",
+      "target": "results/quality-2026-11-04/blind-ASR432/modern/modern-prefix432-LLM-v1/published/import-0fc22ff44bafee7c54f4-omniASR_LLM_Unlimited_1B_v2/prepared.json",
+      "sha256": "49f2db1f8ce581121e107fb8a82f589021469e20adb9566dacbd493c15005cf4",
+      "adaptation": "none"
+    },
+    {
+      "source": "load/asr/prefix432-retained/modern/asr-results/modern-prefix432-LLM-v1/published/import-0fc22ff44bafee7c54f4-omniASR_LLM_Unlimited_1B_v2/publication.json",
+      "target": "results/quality-2026-11-04/blind-ASR432/modern/modern-prefix432-LLM-v1/published/import-0fc22ff44bafee7c54f4-omniASR_LLM_Unlimited_1B_v2/publication.json",
+      "sha256": "e106bd8b0a7d0bab4dec405f81f905f82338f7a685b2f43a20c4720b272df0dc",
+      "adaptation": "none"
+    },
+    {
+      "source": "load/asr/prefix432-retained/modern/asr-results/modern-prefix432-LLM-v1/published/import-52b6890097a3e0915747-omniASR_LLM_Unlimited_1B_v2/omniASR_LLM_Unlimited_1B_v2-metadata.json",
+      "target": "results/quality-2026-11-04/blind-ASR432/modern/modern-prefix432-LLM-v1/published/import-52b6890097a3e0915747-omniASR_LLM_Unlimited_1B_v2/omniASR_LLM_Unlimited_1B_v2-metadata.json",
+      "sha256": "89cfade3b09d8421a3c1231bbc291fe7dc2a6c5247ebff3aa3b39e93ab6b7a4c",
+      "adaptation": "none"
+    },
+    {
+      "source": "load/asr/prefix432-retained/modern/asr-results/modern-prefix432-LLM-v1/published/import-52b6890097a3e0915747-omniASR_LLM_Unlimited_1B_v2/omniASR_LLM_Unlimited_1B_v2.jsonl",
+      "target": "results/quality-2026-11-04/blind-ASR432/modern/modern-prefix432-LLM-v1/published/import-52b6890097a3e0915747-omniASR_LLM_Unlimited_1B_v2/omniASR_LLM_Unlimited_1B_v2.jsonl",
+      "sha256": "170307d987b79797560cb9d5cffd02269f5e6d5e37b74d024635ddc30781480e",
+      "adaptation": "none"
+    },
+    {
+      "source": "load/asr/prefix432-retained/modern/asr-results/modern-prefix432-LLM-v1/published/import-52b6890097a3e0915747-omniASR_LLM_Unlimited_1B_v2/prepared.json",
+      "target": "results/quality-2026-11-04/blind-ASR432/modern/modern-prefix432-LLM-v1/published/import-52b6890097a3e0915747-omniASR_LLM_Unlimited_1B_v2/prepared.json",
+      "sha256": "a25b8f0bb08374cf8e56c02b06b813ebdc89372321f576fe741f3c63075d25f1",
+      "adaptation": "none"
+    },
+    {
+      "source": "load/asr/prefix432-retained/modern/asr-results/modern-prefix432-LLM-v1/published/import-52b6890097a3e0915747-omniASR_LLM_Unlimited_1B_v2/publication.json",
+      "target": "results/quality-2026-11-04/blind-ASR432/modern/modern-prefix432-LLM-v1/published/import-52b6890097a3e0915747-omniASR_LLM_Unlimited_1B_v2/publication.json",
+      "sha256": "0c1a25c3695530583c92f87df040ac9bdb027e3651a8c3ecb25f06a8be457ea8",
+      "adaptation": "none"
+    },
+    {
+      "source": "load/asr/prefix432-retained/primary/asr-results/primary-prefix432-CTC-v1/published/000-omniASR_CTC_1B_v2/omniASR_CTC_1B_v2-metadata.json",
+      "target": "results/quality-2026-11-04/blind-ASR432/primary/primary-prefix432-CTC-v1/published/000-omniASR_CTC_1B_v2/omniASR_CTC_1B_v2-metadata.json",
+      "sha256": "a5cff34a2ea23de817e34f34579008af336ce9c570f2ec26296abb9d56d3a625",
+      "adaptation": "none"
+    },
+    {
+      "source": "load/asr/prefix432-retained/primary/asr-results/primary-prefix432-CTC-v1/published/000-omniASR_CTC_1B_v2/omniASR_CTC_1B_v2.jsonl",
+      "target": "results/quality-2026-11-04/blind-ASR432/primary/primary-prefix432-CTC-v1/published/000-omniASR_CTC_1B_v2/omniASR_CTC_1B_v2.jsonl",
+      "sha256": "f31d31ee087a725318fffe5c6404f38121107bc7389f539ce4a7b6298766652b",
+      "adaptation": "none"
+    },
+    {
+      "source": "load/asr/prefix432-retained/primary/asr-results/primary-prefix432-CTC-v1/published/000-omniASR_CTC_1B_v2/prepared.json",
+      "target": "results/quality-2026-11-04/blind-ASR432/primary/primary-prefix432-CTC-v1/published/000-omniASR_CTC_1B_v2/prepared.json",
+      "sha256": "49b31dbaf32b450cab92f8c654f5002fae7d0924c722dad77f361b1a30b027cf",
+      "adaptation": "none"
+    },
+    {
+      "source": "load/asr/prefix432-retained/primary/asr-results/primary-prefix432-CTC-v1/published/000-omniASR_CTC_1B_v2/publication.json",
+      "target": "results/quality-2026-11-04/blind-ASR432/primary/primary-prefix432-CTC-v1/published/000-omniASR_CTC_1B_v2/publication.json",
+      "sha256": "edf1a8e3eea2fa9284067615ddf1b3a7bcf8d93275aa85339dce4d24c7632855",
+      "adaptation": "none"
+    },
+    {
+      "source": "load/asr/prefix432-retained/primary/asr-results/primary-prefix432-CTC-v1/published/import-07bb295431ce43ba66d8-omniASR_CTC_1B_v2/omniASR_CTC_1B_v2-metadata.json",
+      "target": "results/quality-2026-11-04/blind-ASR432/primary/primary-prefix432-CTC-v1/published/import-07bb295431ce43ba66d8-omniASR_CTC_1B_v2/omniASR_CTC_1B_v2-metadata.json",
+      "sha256": "77344ade1e85e3e665d8923f28c90599d72fd05a7708379a5d57cdd36a9ef54b",
+      "adaptation": "none"
+    },
+    {
+      "source": "load/asr/prefix432-retained/primary/asr-results/primary-prefix432-CTC-v1/published/import-07bb295431ce43ba66d8-omniASR_CTC_1B_v2/omniASR_CTC_1B_v2.jsonl",
+      "target": "results/quality-2026-11-04/blind-ASR432/primary/primary-prefix432-CTC-v1/published/import-07bb295431ce43ba66d8-omniASR_CTC_1B_v2/omniASR_CTC_1B_v2.jsonl",
+      "sha256": "8f77c77acb1c6b7fd0056af4294a985f16716b4625d427764571299924cc1927",
+      "adaptation": "none"
+    },
+    {
+      "source": "load/asr/prefix432-retained/primary/asr-results/primary-prefix432-CTC-v1/published/import-07bb295431ce43ba66d8-omniASR_CTC_1B_v2/prepared.json",
+      "target": "results/quality-2026-11-04/blind-ASR432/primary/primary-prefix432-CTC-v1/published/import-07bb295431ce43ba66d8-omniASR_CTC_1B_v2/prepared.json",
+      "sha256": "600ae5a174c475087825cdbe8057eb24ea898b4ca66a6ac157550fc1dc329686",
+      "adaptation": "none"
+    },
+    {
+      "source": "load/asr/prefix432-retained/primary/asr-results/primary-prefix432-CTC-v1/published/import-07bb295431ce43ba66d8-omniASR_CTC_1B_v2/publication.json",
+      "target": "results/quality-2026-11-04/blind-ASR432/primary/primary-prefix432-CTC-v1/published/import-07bb295431ce43ba66d8-omniASR_CTC_1B_v2/publication.json",
+      "sha256": "ed8aebfcd0ecb2d9008d3c8b00bc61a503cb6d38bea1f6423ddda14507df6dcb",
+      "adaptation": "none"
+    },
+    {
+      "source": "load/asr/prefix432-retained/primary/asr-results/primary-prefix432-CTC-v1/published/import-9fc76731bcfedd38269b-omniASR_CTC_1B_v2/omniASR_CTC_1B_v2-metadata.json",
+      "target": "results/quality-2026-11-04/blind-ASR432/primary/primary-prefix432-CTC-v1/published/import-9fc76731bcfedd38269b-omniASR_CTC_1B_v2/omniASR_CTC_1B_v2-metadata.json",
+      "sha256": "c4a28f78a7360aa54075c621f8afd2d347d5a96ee12e6872e4a0868b2ec7f1b3",
+      "adaptation": "none"
+    },
+    {
+      "source": "load/asr/prefix432-retained/primary/asr-results/primary-prefix432-CTC-v1/published/import-9fc76731bcfedd38269b-omniASR_CTC_1B_v2/omniASR_CTC_1B_v2.jsonl",
+      "target": "results/quality-2026-11-04/blind-ASR432/primary/primary-prefix432-CTC-v1/published/import-9fc76731bcfedd38269b-omniASR_CTC_1B_v2/omniASR_CTC_1B_v2.jsonl",
+      "sha256": "f207eb0745dd56060d7705cb1ac2b1ca1ec4144a01aa248a34c0c2b6800aaea6",
+      "adaptation": "none"
+    },
+    {
+      "source": "load/asr/prefix432-retained/primary/asr-results/primary-prefix432-CTC-v1/published/import-9fc76731bcfedd38269b-omniASR_CTC_1B_v2/prepared.json",
+      "target": "results/quality-2026-11-04/blind-ASR432/primary/primary-prefix432-CTC-v1/published/import-9fc76731bcfedd38269b-omniASR_CTC_1B_v2/prepared.json",
+      "sha256": "56908bc14eedb5020d538156ea873aa5d691ebad3268b20e97bae2fe28c98638",
+      "adaptation": "none"
+    },
+    {
+      "source": "load/asr/prefix432-retained/primary/asr-results/primary-prefix432-CTC-v1/published/import-9fc76731bcfedd38269b-omniASR_CTC_1B_v2/publication.json",
+      "target": "results/quality-2026-11-04/blind-ASR432/primary/primary-prefix432-CTC-v1/published/import-9fc76731bcfedd38269b-omniASR_CTC_1B_v2/publication.json",
+      "sha256": "643dbc2ba9053ac14882ebf0501b1d48182e6ebcb0d074204cd8315fe496bfa6",
+      "adaptation": "none"
+    }
+  ],
+  "publisher_source_sha256": "adaa6e45437f4e3dc1b5ea8f2b9bcc0001f2c5c235accf66d9610ff7dde9bd26",
+  "sample_manifest": "samples/rtx4070ti-reference-prefix-2026-11-04/manifest.json",
+  "sample_manifest_sha256": "dd358597e2be73d491515a9c7dcc742f14efe9e329c38159ced724b0f372c1fa"
+}

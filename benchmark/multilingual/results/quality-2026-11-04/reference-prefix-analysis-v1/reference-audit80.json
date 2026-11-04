@@ -1,0 +1,642 @@
+[
+  {
+    "id": "ar-despina",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/ar-despina.wav",
+    "sha256": "f1a2435eb726d151fbb399bcd8b34647c4bf8099a14184570207f8ebbfa5cd52",
+    "frames": 419783,
+    "sample_rate": 24000,
+    "duration_s": 17.49095833333333
+  },
+  {
+    "id": "ar-aoede",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/ar-aoede.wav",
+    "sha256": "dfb87da4364e14ed0e2117944eeaf6a425975670cbd6df874c9c5aec25e5c933",
+    "frames": 364103,
+    "sample_rate": 24000,
+    "duration_s": 15.170958333333333
+  },
+  {
+    "id": "ar-zephyr",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/ar-zephyr.wav",
+    "sha256": "13645fd95e724ed9b7fd41daa3a4ef71df025a4141c335f8567fbdf47e048e14",
+    "frames": 356423,
+    "sample_rate": 24000,
+    "duration_s": 14.850958333333333
+  },
+  {
+    "id": "ar-kore",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/ar-kore.wav",
+    "sha256": "0b10e76249fb6cb90dd063ff56874f9a5e18eb5b4d8daa0474a8fc0fc7da3caf",
+    "frames": 402503,
+    "sample_rate": 24000,
+    "duration_s": 16.770958333333333
+  },
+  {
+    "id": "ar-charon",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/ar-charon.wav",
+    "sha256": "9d238a0ff5d668951261b0544fbbc591ab9c485e433bb2878d9e42d423399f69",
+    "frames": 361223,
+    "sample_rate": 24000,
+    "duration_s": 15.050958333333334
+  },
+  {
+    "id": "ar-iapetus",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/ar-iapetus.wav",
+    "sha256": "7f6ebd16d219ab3677e2dd21f578d49442e41c84b6ad9aaae1964bf8100a95e9",
+    "frames": 397703,
+    "sample_rate": 24000,
+    "duration_s": 16.570958333333333
+  },
+  {
+    "id": "ar-fenrir",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/ar-fenrir.wav",
+    "sha256": "41222406ec050fd7ac216d10a909653f49cbf275f4a2f06c830dcf8c9aa3e591",
+    "frames": 375623,
+    "sample_rate": 24000,
+    "duration_s": 15.650958333333334
+  },
+  {
+    "id": "ar-umbriel",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/ar-umbriel.wav",
+    "sha256": "5b24ad11e606e4874ba2b3aa3264e23501a1347d3a42a0d18a13dae59ca80d1c",
+    "frames": 372743,
+    "sample_rate": 24000,
+    "duration_s": 15.530958333333333
+  },
+  {
+    "id": "da-despina",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/da-despina.wav",
+    "sha256": "b4839a534ba13db2b3f0ba5c9d747643882fe10af377ec267784fb0789b91d00",
+    "frames": 247943,
+    "sample_rate": 24000,
+    "duration_s": 10.330958333333333
+  },
+  {
+    "id": "da-aoede",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/da-aoede.wav",
+    "sha256": "901703970b23d3e204d7a523eb90da6325ecd09a609f5ccd17a303765813cf83",
+    "frames": 228743,
+    "sample_rate": 24000,
+    "duration_s": 9.530958333333333
+  },
+  {
+    "id": "da-zephyr",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/da-zephyr.wav",
+    "sha256": "cafb455766d805cf155296006fa16190ce7ce8bd72557c94bebb46d41b564a9c",
+    "frames": 284423,
+    "sample_rate": 24000,
+    "duration_s": 11.850958333333333
+  },
+  {
+    "id": "da-kore",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/da-kore.wav",
+    "sha256": "a21351b5671e1a721006ef68754d472e2e762d898dd3cc0dd146855fa40f0d88",
+    "frames": 294023,
+    "sample_rate": 24000,
+    "duration_s": 12.250958333333333
+  },
+  {
+    "id": "da-charon",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/da-charon.wav",
+    "sha256": "ca80d715c7e0340c88f31c75e702c5dcb3f0338c8a9d32fa95773f3eb97d1360",
+    "frames": 240263,
+    "sample_rate": 24000,
+    "duration_s": 10.010958333333333
+  },
+  {
+    "id": "da-iapetus",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/da-iapetus.wav",
+    "sha256": "fcb9367eea531624253ec7ca6cc17bcaabf8a449fcf2046e5dbd9ef82e49f7fc",
+    "frames": 259463,
+    "sample_rate": 24000,
+    "duration_s": 10.810958333333334
+  },
+  {
+    "id": "da-fenrir",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/da-fenrir.wav",
+    "sha256": "7ecd0667cfe42d57cc5315a5ebf3b10e2e39bb0df423ec91d9b01b2d1889caa0",
+    "frames": 292103,
+    "sample_rate": 24000,
+    "duration_s": 12.170958333333333
+  },
+  {
+    "id": "da-umbriel",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/da-umbriel.wav",
+    "sha256": "2db9a2781cde1956a655353bc93b68d8c690f7e988307698661205d9071b477d",
+    "frames": 328583,
+    "sample_rate": 24000,
+    "duration_s": 13.690958333333333
+  },
+  {
+    "id": "de-despina",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/de-despina.wav",
+    "sha256": "8e8ef1c347ba110f04f9ad6c2d75474cee19c32985dd8748fd644d9dd6322665",
+    "frames": 288263,
+    "sample_rate": 24000,
+    "duration_s": 12.010958333333333
+  },
+  {
+    "id": "de-aoede",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/de-aoede.wav",
+    "sha256": "8c79b7fec00d0072ea12343d39aa13b3ca315dbb5e62155afcbd048ebc8640e8",
+    "frames": 291143,
+    "sample_rate": 24000,
+    "duration_s": 12.130958333333334
+  },
+  {
+    "id": "de-zephyr",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/de-zephyr.wav",
+    "sha256": "157b32266e25ed6ecbf4dc5009ea3fbf933135c60d1e21f0f75318b91e307ce0",
+    "frames": 275783,
+    "sample_rate": 24000,
+    "duration_s": 11.490958333333333
+  },
+  {
+    "id": "de-kore",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/de-kore.wav",
+    "sha256": "58ff55e0dfd300b08eb57e7a8fdbb9a62381f51cbcf688eeefd17829f7b6abf1",
+    "frames": 311303,
+    "sample_rate": 24000,
+    "duration_s": 12.970958333333334
+  },
+  {
+    "id": "de-charon",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/de-charon.wav",
+    "sha256": "54eca78af64bb6325c06b5aced8bed577f8482e35b76e5a022d9f737daf1f6ab",
+    "frames": 297863,
+    "sample_rate": 24000,
+    "duration_s": 12.410958333333333
+  },
+  {
+    "id": "de-iapetus",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/de-iapetus.wav",
+    "sha256": "516df535e3f9690c256061475c8745716dddb18c7c36b0e235208011b4d66178",
+    "frames": 288263,
+    "sample_rate": 24000,
+    "duration_s": 12.010958333333333
+  },
+  {
+    "id": "de-fenrir",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/de-fenrir.wav",
+    "sha256": "d628f70df0e52429f6995922f7b721e58853238b0b87b0091fd8c80b5a6ebe45",
+    "frames": 274823,
+    "sample_rate": 24000,
+    "duration_s": 11.450958333333332
+  },
+  {
+    "id": "de-umbriel",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/de-umbriel.wav",
+    "sha256": "7e0450e040551f640352b193eeca5675708ea506a978882ea3f5416952e122d0",
+    "frames": 263303,
+    "sample_rate": 24000,
+    "duration_s": 10.970958333333334
+  },
+  {
+    "id": "el-despina",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/el-despina.wav",
+    "sha256": "439e3978d6601119c8511f71697304d06c6644bfec16ab59940ff05670b08955",
+    "frames": 280583,
+    "sample_rate": 24000,
+    "duration_s": 11.690958333333333
+  },
+  {
+    "id": "el-aoede",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/el-aoede.wav",
+    "sha256": "42f0dbdb2bce862c5d0b5bd0d131776b6ea53167d9961e8aea3db2b9fbde2838",
+    "frames": 267143,
+    "sample_rate": 24000,
+    "duration_s": 11.130958333333334
+  },
+  {
+    "id": "el-zephyr",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/el-zephyr.wav",
+    "sha256": "4f73dea477b5767fd24e871181540dc3bea2cca5619c68cbf018e62f75341f4a",
+    "frames": 260423,
+    "sample_rate": 24000,
+    "duration_s": 10.850958333333333
+  },
+  {
+    "id": "el-kore",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/el-kore.wav",
+    "sha256": "f9e9a239a64d82eef2b072fb8782927e8b972655070dc2ab2ee2d95e477a2d04",
+    "frames": 288263,
+    "sample_rate": 24000,
+    "duration_s": 12.010958333333333
+  },
+  {
+    "id": "el-charon",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/el-charon.wav",
+    "sha256": "2b36d8ae50a231b32ef524960e6cf96d9b138a00f7044953a162f8a403054376",
+    "frames": 251783,
+    "sample_rate": 24000,
+    "duration_s": 10.490958333333333
+  },
+  {
+    "id": "el-iapetus",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/el-iapetus.wav",
+    "sha256": "ba700f96517f50611179e0420e6d4a064a7b17ea035cbd376d31c2c8271fd718",
+    "frames": 297863,
+    "sample_rate": 24000,
+    "duration_s": 12.410958333333333
+  },
+  {
+    "id": "el-fenrir",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/el-fenrir.wav",
+    "sha256": "8e3b818d92f1acaa8fc28f95f17d076f8471082c19213898044cfb384a2f3767",
+    "frames": 260423,
+    "sample_rate": 24000,
+    "duration_s": 10.850958333333333
+  },
+  {
+    "id": "el-umbriel",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/el-umbriel.wav",
+    "sha256": "6a944e9ef01d4888e1cc2f74ae52220a7be84e1b12a28bcd5ecef03398ca5ada",
+    "frames": 274823,
+    "sample_rate": 24000,
+    "duration_s": 11.450958333333332
+  },
+  {
+    "id": "en-despina",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/en-despina.wav",
+    "sha256": "f216bedf1e369c87fae145ee87334659dfd389ad182026ac5ebd39432bfc5a47",
+    "frames": 389063,
+    "sample_rate": 24000,
+    "duration_s": 16.210958333333334
+  },
+  {
+    "id": "en-aoede",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/en-aoede.wav",
+    "sha256": "d0adc9563e1c71781c87d163b80e9fa27859529ba9b5c7bf28a88ee6ae641e66",
+    "frames": 334343,
+    "sample_rate": 24000,
+    "duration_s": 13.930958333333333
+  },
+  {
+    "id": "en-zephyr",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/en-zephyr.wav",
+    "sha256": "d7fb4097b88d0d2eba6d85bffb8515195404f3636a88a0a0feeb4689af3c5703",
+    "frames": 371783,
+    "sample_rate": 24000,
+    "duration_s": 15.490958333333333
+  },
+  {
+    "id": "en-kore",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/en-kore.wav",
+    "sha256": "6141d9a3c5cbc635b8950700111347105f0e7afb7416088fdc14ad896c9ef34c",
+    "frames": 341063,
+    "sample_rate": 24000,
+    "duration_s": 14.210958333333334
+  },
+  {
+    "id": "en-charon",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/en-charon.wav",
+    "sha256": "bb2556892a0c1e58971d08f3330e5c3e32ee532e5cd480cd52544bdff9889f85",
+    "frames": 342983,
+    "sample_rate": 24000,
+    "duration_s": 14.290958333333334
+  },
+  {
+    "id": "en-iapetus",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/en-iapetus.wav",
+    "sha256": "d23dcc8a00af5c2c99da48cb0b7b2bd26a182f055660e3f0948b6483a5917299",
+    "frames": 355463,
+    "sample_rate": 24000,
+    "duration_s": 14.810958333333334
+  },
+  {
+    "id": "en-fenrir",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/en-fenrir.wav",
+    "sha256": "4a37e171c755322dfa22db6a4ef351655239b8ecdfaaad642735faf4bfd484e4",
+    "frames": 338183,
+    "sample_rate": 24000,
+    "duration_s": 14.090958333333333
+  },
+  {
+    "id": "en-umbriel",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/en-umbriel.wav",
+    "sha256": "49137e70bd5019dc56362b238b4a9ae8a1923f1767a971e2684b160cea09b908",
+    "frames": 352583,
+    "sample_rate": 24000,
+    "duration_s": 14.690958333333333
+  },
+  {
+    "id": "es-despina",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/es-despina.wav",
+    "sha256": "898c91402ef11cb27b82fafb995189708dc5833dc28c22b870b0d0dd53291727",
+    "frames": 340103,
+    "sample_rate": 24000,
+    "duration_s": 14.170958333333333
+  },
+  {
+    "id": "es-aoede",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/es-aoede.wav",
+    "sha256": "4206e6da660b66548d8a185ca36f86f58830edf2e1e143f0b718180b68d0ce36",
+    "frames": 294983,
+    "sample_rate": 24000,
+    "duration_s": 12.290958333333334
+  },
+  {
+    "id": "es-zephyr",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/es-zephyr.wav",
+    "sha256": "324b1ecbb15453aa2654136b3b0852936d31cd5d4f53a6fd4d7d6d794b3f663d",
+    "frames": 346823,
+    "sample_rate": 24000,
+    "duration_s": 14.450958333333332
+  },
+  {
+    "id": "es-kore",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/es-kore.wav",
+    "sha256": "09b9c2c4fca3aec1bb8494b5ca9ddaa48257de59e740b2aae969bbaccb409578",
+    "frames": 327623,
+    "sample_rate": 24000,
+    "duration_s": 13.650958333333334
+  },
+  {
+    "id": "es-charon",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/es-charon.wav",
+    "sha256": "b589296ab2df931a7ded938578f165f19d81d34e0c7ac6582a9385cf330c076d",
+    "frames": 327623,
+    "sample_rate": 24000,
+    "duration_s": 13.650958333333334
+  },
+  {
+    "id": "es-iapetus",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/es-iapetus.wav",
+    "sha256": "4e1b8a651c24921305e007603a63e3456547cbc72537a17da6e450655bfe536c",
+    "frames": 328583,
+    "sample_rate": 24000,
+    "duration_s": 13.690958333333333
+  },
+  {
+    "id": "es-fenrir",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/es-fenrir.wav",
+    "sha256": "fc526e3445f59cfd318b75f85c56128ed0737aa8c16e1da9cb996ee4365f259d",
+    "frames": 343943,
+    "sample_rate": 24000,
+    "duration_s": 14.330958333333333
+  },
+  {
+    "id": "es-umbriel",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/es-umbriel.wav",
+    "sha256": "117bd50fc03c6b39d16c71f3bfdec13fd68f1f32c30f9e0b0c7d608e0a58d3b7",
+    "frames": 311303,
+    "sample_rate": 24000,
+    "duration_s": 12.970958333333334
+  },
+  {
+    "id": "fi-despina",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/fi-despina.wav",
+    "sha256": "888161b439279e21a2ea2197a47f37a6d6c49bc2a0c09f6ab7754bb2f162d3a6",
+    "frames": 372743,
+    "sample_rate": 24000,
+    "duration_s": 15.530958333333333
+  },
+  {
+    "id": "fi-aoede",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/fi-aoede.wav",
+    "sha256": "bf34be8df7c7626599ea98086af75b960543d6c2361896aa0ca48acf26dacb6b",
+    "frames": 351623,
+    "sample_rate": 24000,
+    "duration_s": 14.650958333333334
+  },
+  {
+    "id": "fi-zephyr",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/fi-zephyr.wav",
+    "sha256": "33fbd839fd90b76d3e7d6c766747ffdd8659ee54da8dbe0fec43ca4d5a09aa8e",
+    "frames": 370823,
+    "sample_rate": 24000,
+    "duration_s": 15.450958333333332
+  },
+  {
+    "id": "fi-kore",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/fi-kore.wav",
+    "sha256": "9f96487586d55171164a42c37837cc5d9d87afb364e1c9fe92936abcb39098b5",
+    "frames": 350663,
+    "sample_rate": 24000,
+    "duration_s": 14.610958333333333
+  },
+  {
+    "id": "fi-charon",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/fi-charon.wav",
+    "sha256": "7447cf2b52ead6e8c5269a1aa556fa403b15048cc1b4cd7c86e93a50468a5013",
+    "frames": 332423,
+    "sample_rate": 24000,
+    "duration_s": 13.850958333333333
+  },
+  {
+    "id": "fi-iapetus",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/fi-iapetus.wav",
+    "sha256": "b353ea23604b2217b295d7ddd77ba5daf47e7e4633d2c404fae59adc3463d951",
+    "frames": 370823,
+    "sample_rate": 24000,
+    "duration_s": 15.450958333333332
+  },
+  {
+    "id": "fi-fenrir",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/fi-fenrir.wav",
+    "sha256": "7d9a6df43fc3d26bd8878314e40688e1f048b32ac80bf4178879e559fcb9f1a4",
+    "frames": 357383,
+    "sample_rate": 24000,
+    "duration_s": 14.890958333333334
+  },
+  {
+    "id": "fi-umbriel",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/fi-umbriel.wav",
+    "sha256": "46afbbdf4baadc64453a23555c7a446ea399cd0397339c72361f7f0eaab84b50",
+    "frames": 367943,
+    "sample_rate": 24000,
+    "duration_s": 15.330958333333333
+  },
+  {
+    "id": "fr-despina",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/fr-despina.wav",
+    "sha256": "f8cfccd98f27f34dfe94196202c283297bb4d02ed9fdf25a06ff73cd5a319b2f",
+    "frames": 281543,
+    "sample_rate": 24000,
+    "duration_s": 11.730958333333334
+  },
+  {
+    "id": "fr-aoede",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/fr-aoede.wav",
+    "sha256": "b8810d1e5a27a325308e1b35a986d89a6db5608d1a47bc12dc5d89321a8d76c1",
+    "frames": 263303,
+    "sample_rate": 24000,
+    "duration_s": 10.970958333333334
+  },
+  {
+    "id": "fr-zephyr",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/fr-zephyr.wav",
+    "sha256": "9eacf09fba32aea5da6fe696591f172bea38a2caa32e49a5e9329f42fe08b33c",
+    "frames": 296903,
+    "sample_rate": 24000,
+    "duration_s": 12.370958333333334
+  },
+  {
+    "id": "fr-kore",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/fr-kore.wav",
+    "sha256": "1963d902ee1bbecbafcc6bd6229f202886597c892ad5414b6e67eb4ef313f9d7",
+    "frames": 296903,
+    "sample_rate": 24000,
+    "duration_s": 12.370958333333334
+  },
+  {
+    "id": "fr-charon",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/fr-charon.wav",
+    "sha256": "ff4caf0e0d2972eddf2ac6381026c251083851a18ff7620aa7857f558b2ce5c6",
+    "frames": 261383,
+    "sample_rate": 24000,
+    "duration_s": 10.890958333333334
+  },
+  {
+    "id": "fr-iapetus",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/fr-iapetus.wav",
+    "sha256": "d097864218f516636003b3e32ea45b6e0750651153e4645ade3bc9da49a21bad",
+    "frames": 305543,
+    "sample_rate": 24000,
+    "duration_s": 12.730958333333334
+  },
+  {
+    "id": "ur-aoede",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/ur-aoede.wav",
+    "sha256": "98ad50f96dff772683449bb6a5028b612696146e247924c1a4dbb0a1b4d9005a",
+    "frames": 224903,
+    "sample_rate": 24000,
+    "duration_s": 9.370958333333334
+  },
+  {
+    "id": "ur-charon",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/voice-controls/references/ur-charon.wav",
+    "sha256": "be05583854f826c1b1f554232d0b0759ef0c924c2c8f6a1cf8a39db4b7f12f03",
+    "frames": 228743,
+    "sample_rate": 24000,
+    "duration_s": 9.530958333333333
+  },
+  {
+    "id": "en-despina-prefix10",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/reference-prefix-plans-v1/audio/en-despina-prefix10.wav",
+    "sha256": "9a31da2ec83fb84b839a787564f4694afe09e10da48782a3ec09624d6f1e7bc5",
+    "frames": 108960,
+    "sample_rate": 24000,
+    "duration_s": 4.54
+  },
+  {
+    "id": "en-despina-prefix17",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/reference-prefix-plans-v1/audio/en-despina-prefix17.wav",
+    "sha256": "6329737ebd5bd40bafa95e1bcb1fd69d889d866721fe3908f0603f32842942f0",
+    "frames": 184800,
+    "sample_rate": 24000,
+    "duration_s": 7.7
+  },
+  {
+    "id": "en-aoede-prefix10",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/reference-prefix-plans-v1/audio/en-aoede-prefix10.wav",
+    "sha256": "2f4550457211bbfcc53933b04a539afc7d0e1a2793bec078406e9e898ed56b10",
+    "frames": 94080,
+    "sample_rate": 24000,
+    "duration_s": 3.92
+  },
+  {
+    "id": "en-aoede-prefix17",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/reference-prefix-plans-v1/audio/en-aoede-prefix17.wav",
+    "sha256": "8f4292b9cb5a124a8ef1f3cb932c01c78edfeaba566fd14a38be81095922db09",
+    "frames": 156960,
+    "sample_rate": 24000,
+    "duration_s": 6.54
+  },
+  {
+    "id": "en-zephyr-prefix10",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/reference-prefix-plans-v1/audio/en-zephyr-prefix10.wav",
+    "sha256": "7a396ca2a5958ce34d8ab1c50be664048b46e9ad178a1f5ba4013a973172a147",
+    "frames": 104640,
+    "sample_rate": 24000,
+    "duration_s": 4.36
+  },
+  {
+    "id": "en-zephyr-prefix17",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/reference-prefix-plans-v1/audio/en-zephyr-prefix17.wav",
+    "sha256": "325a88bbc02cfe39bd01a934568793e46f1717b165dd5e5af73f04bc0ee44ea1",
+    "frames": 180480,
+    "sample_rate": 24000,
+    "duration_s": 7.52
+  },
+  {
+    "id": "en-kore-prefix10",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/reference-prefix-plans-v1/audio/en-kore-prefix10.wav",
+    "sha256": "46896103fc6065849e6d7ebd1e2910acf7548218d5005dff146551a06422c99b",
+    "frames": 96960,
+    "sample_rate": 24000,
+    "duration_s": 4.04
+  },
+  {
+    "id": "en-kore-prefix17",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/reference-prefix-plans-v1/audio/en-kore-prefix17.wav",
+    "sha256": "cb1397e27563b6e0c2594c7dd67cf6cec1f8357888da4aa056dffa3812aad8dc",
+    "frames": 162240,
+    "sample_rate": 24000,
+    "duration_s": 6.76
+  },
+  {
+    "id": "en-charon-prefix10",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/reference-prefix-plans-v1/audio/en-charon-prefix10.wav",
+    "sha256": "4492f22e2625aa46beb97ec5fbbd5eebbdfad518b0664a0df3b30735b6bdba18",
+    "frames": 95040,
+    "sample_rate": 24000,
+    "duration_s": 3.96
+  },
+  {
+    "id": "en-charon-prefix17",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/reference-prefix-plans-v1/audio/en-charon-prefix17.wav",
+    "sha256": "2763a7444bf6f0ec794052b828e4a9192580e53448953c8993b3a3dab4e159bb",
+    "frames": 161760,
+    "sample_rate": 24000,
+    "duration_s": 6.74
+  },
+  {
+    "id": "en-iapetus-prefix10",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/reference-prefix-plans-v1/audio/en-iapetus-prefix10.wav",
+    "sha256": "b968200d45587db96d4835971f0c5632aa893d84678cc02be13236749a99d81d",
+    "frames": 98880,
+    "sample_rate": 24000,
+    "duration_s": 4.12
+  },
+  {
+    "id": "en-iapetus-prefix17",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/reference-prefix-plans-v1/audio/en-iapetus-prefix17.wav",
+    "sha256": "812ffc2c15977d699278e94e8bbc4369ee00f64741b912ac1278be5d3e8e6290",
+    "frames": 173280,
+    "sample_rate": 24000,
+    "duration_s": 7.22
+  },
+  {
+    "id": "en-fenrir-prefix10",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/reference-prefix-plans-v1/audio/en-fenrir-prefix10.wav",
+    "sha256": "f613c6cfd56c4a251bdd29d86ee25e97d9580a8dcd78acff2aeffdeff75ce5e2",
+    "frames": 99360,
+    "sample_rate": 24000,
+    "duration_s": 4.14
+  },
+  {
+    "id": "en-fenrir-prefix17",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/reference-prefix-plans-v1/audio/en-fenrir-prefix17.wav",
+    "sha256": "46793826147a8d6b6d96296295f1bd8f8801aa205959827b95fb24389a144309",
+    "frames": 166560,
+    "sample_rate": 24000,
+    "duration_s": 6.94
+  },
+  {
+    "id": "en-umbriel-prefix10",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/reference-prefix-plans-v1/audio/en-umbriel-prefix10.wav",
+    "sha256": "7484bb3cb37b2e664770924c8ba86d69649fb3761f862a5123b45d460004bc33",
+    "frames": 99360,
+    "sample_rate": 24000,
+    "duration_s": 4.14
+  },
+  {
+    "id": "en-umbriel-prefix17",
+    "path": "/Users/ahmadsmacair/code/lingua/lingua/work/omnivoice-max-concurency-2026-11-03/quality/reference-prefix-plans-v1/audio/en-umbriel-prefix17.wav",
+    "sha256": "a565164b011303a8e0d78488e1711705ee3b71aa2d84aea9376c31df4247c1af",
+    "frames": 170880,
+    "sample_rate": 24000,
+    "duration_s": 7.12
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "path": "AB-review-manifest.json",
+    "sha256": "d00607df760e85c4ae07d3d89aa8d8c9421755347d3bd32dcc53543730bac31f",
+    "bytes": 186813
+  },
+  {
+    "path": "paired-recomputed264.jsonl",
+    "sha256": "6b716eb1766dadb517b3a3ce0525b042c92760fb55e75268d1e28327179704b5",
+    "bytes": 1947253
+  },
+  {
+    "path": "provenance.json",
+    "sha256": "550babe053fe31b50502e5e28e115edaf3e2d33aebc97d607995702a45a9c2af",
+    "bytes": 2006
+  },
+  {
+    "path": "reference-controls-recomputed.json",
+    "sha256": "ed8ab85e6bebb5289090d2f09f2eedff8a9139ac510fd9239fb1d7e72dff289c",
+    "bytes": 10866
+  },
+  {
+    "path": "report.md",
+    "sha256": "c9315ff224f2d972e108f12f370bd1f56579219e7c1191928977d7023bcdaa22",
+    "bytes": 4023
+  },
+  {
+    "path": "summary.json",
+    "sha256": "4f581e219b3043c68ae00e6edc47a06659307cc91ab876985454ef0049656706",
+    "bytes": 8453
+  }
+]

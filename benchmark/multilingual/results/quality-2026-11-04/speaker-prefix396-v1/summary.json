@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "at": "2026-11-04T10:35:42.893450+00:00",
+    "measurement_kind": "CPU-only SpeechBrain ECAPA-TDNN embedding extraction and paired cosine comparisons",
+    "GPU": "None; CUDA disabled and device explicitly CPU; Metal not used",
+    "CPU": "Apple M5 Pro",
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "physical_shared_RAM_bytes": 25769803776,
+    "runtime": {
+      "speechbrain": "1.1.2",
+      "torch": "2.8.0",
+      "torchaudio": "2.8.0",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "soundfile": "0.14.0",
+      "huggingface_hub": "2.4.0"
+    },
+    "model_assets": {
+      "at": "2026-11-04T10:27:00.313899+00:00",
+      "measurement_kind": "CPU network/file asset verification; no model inference/GPU",
+      "repository": "speechbrain/spkrec-ecapa-voxceleb",
+      "revision": "0f99f2d0ebe89ac095bcc5903c4dd8f72b367286",
+      "license": "Apache-2.0 model card",
+      "source": "https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb",
+      "purpose": "Relative synthetic-voice speaker similarity, not MOS/native-quality certification",
+      "inference_API_calls": 0,
+      "files": [
+        {
+          "name": "README.md",
+          "bytes": 5377,
+          "sha256": "00f58c3cbd7a7510de9374080da0e82a4c4e8f4df567f7338fe6efe108be705a",
+          "url": "https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb/resolve/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/README.md?download=true"
+        },
+        {
+          "name": "classifier.ckpt",
+          "bytes": 5534328,
+          "sha256": "fd9e3634fe68bd0a427c95e354c0c677374f62b3f434e45b78599950d860d535",
+          "url": "https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb/resolve/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/classifier.ckpt?download=true"
+        },
+        {
+          "name": "config.json",
+          "bytes": 51,
+          "sha256": "15ff7afad09adec0936c31493a7397c13f855914f4579a8393fe82649778a664",
+          "url": "https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb/resolve/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/config.json?download=true"
+        },
+        {
+          "name": "embedding_model.ckpt",
+          "bytes": 83316686,
+          "sha256": "0575cb64845e6b9a10db9bcb74d5ac32b326b8dc90352671d345e2ee3d0126a2",
+          "url": "https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb/resolve/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/embedding_model.ckpt?download=true"
+        },
+        {
+          "name": "hyperparams.yaml",
+          "bytes": 1919,
+          "sha256": "6f78854fa04ba59e761437b76a2575d3aba5e5016de3e9b69f0c9a5077fb1a41",
+          "url": "https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb/resolve/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/hyperparams.yaml?download=true"
+        },
+        {
+          "name": "label_encoder.txt",
+          "bytes": 128619,
+          "sha256": "e13c3a167bb4112685670ee896d20e2b565af16b3a4ceeaa8689fa4d22adb8b9",
+          "url": "https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb/resolve/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/label_encoder.txt?download=true"
+        },
+        {
+          "name": "mean_var_norm_emb.ckpt",
+          "bytes": 1921,
+          "sha256": "cd70225b05b37be64fc5a95e24395d804231d43f74b2e1e5a513db7b69b34c33",
+          "url": "https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb/resolve/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286/mean_var_norm_emb.ckpt?download=true"
+        }
+      ]
+    },
+    "runner_sha256": "3c13a53c20bffe085df9ceecdcc9fba401167452f6af62a3fedb7d298d650aee",
+    "threads": 4,
+    "embedding_normalize_argument": false,
+    "sample_rate": 16000,
+    "amplitude_normalization": "None",
+    "inference_API_calls": 0,
+    "co_load": "Other local CPU activity unmeasured; NVIDIA TTS/ASR runs on separate rented hosts",
+    "interpretation": "Model trained on VoxCeleb; synthetic/multilingual domain is not certified. Compare the same route/text/voice against full-reference baseline and seven other stock voices. No universal threshold, MOS, accent or age/gender certification is inferred."
+  },
+  "unique_embeddings": 376,
+  "reference_controls": 16,
+  "generated": 396,
+  "paired": 264,
+  "quality_certified": false,
+  "variants": {
+    "reference-prefix-v1-prefix10": {
+      "changed_cases": 110,
+      "paired_own_cosine_delta": {
+        "n": 110,
+        "median": -0.051228130211890766,
+        "min": -0.33885483841354724,
+        "max": 0.1492210447864396,
+        "mean": -0.0642179480904357
+      },
+      "before_top1": 108,
+      "after_top1": 108,
+      "lost_top1": 2
+    },
+    "reference-prefix-v1-prefix17": {
+      "changed_cases": 110,
+      "paired_own_cosine_delta": {
+        "n": 110,
+        "median": -0.016873650833064135,
+        "min": -0.2820576788233228,
+        "max": 0.15254793690159818,
+        "mean": -0.02799681264216307
+      },
+      "before_top1": 108,
+      "after_top1": 109,
+      "lost_top1": 1
+    }
+  }
+}

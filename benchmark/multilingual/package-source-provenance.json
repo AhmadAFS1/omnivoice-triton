@@ -517,5 +517,6 @@
     "ASR batch-probe rawlogs/archives"
   ],
   "updated_at": "2026-11-04T10:01:00.270060+00:00",
-  "modern_addition": "Compact immutable3154-WAV CPU verification of completed RTX4070Ti runs; no new ASR quality claim."
+  "modern_addition": "Compact immutable3154-WAV CPU verification of completed RTX4070Ti runs; no new ASR quality claim.",
+  "checkpoint_2026_11_04": "results/quality-2026-11-04/publication-provenance.json"
 }
